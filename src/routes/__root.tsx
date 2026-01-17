@@ -19,7 +19,7 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'TanStack Start Starter',
+        title: 'Standards',
       },
     ],
     links: [
@@ -29,6 +29,23 @@ export const Route = createRootRoute({
       },
     ],
   }),
+
+  notFoundComponent: () => {
+    return (
+      <div className="min-h-screen bg-gray-900 flex items-center justify-center p-6">
+        <div className="text-center">
+          <h1 className="text-6xl font-bold text-white mb-4">404</h1>
+          <p className="text-xl text-gray-400 mb-6">Page not found</p>
+          <a
+            href="/"
+            className="text-blue-400 hover:text-blue-300 underline"
+          >
+            Go back home
+          </a>
+        </div>
+      </div>
+    )
+  },
 
   shellComponent: RootDocument,
 })

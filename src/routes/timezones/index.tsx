@@ -3,17 +3,25 @@ import { createFileRoute } from '@tanstack/react-router'
 import {
   flexRender,
   getCoreRowModel,
+  getPaginationRowModel,
+  getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table'
 import type { ColumnDef } from '@tanstack/react-table'
-import { getTimezones, type Timezone } from '@/data/timezones'
+import { getTimezonesFromIntl, getTimezonesFromIANA, type Timezone } from '@/data/timezones'
 import { fuzzyFilter } from '@/lib/fuzzy-filter'
 
 export const Route = createFileRoute('/timezones/')({
   component: Timezones,
   loader: async () => {
-    const timezones = await getTimezones()
-    return { timezones }
+    const [timezonesIntl, timezonesIANA] = await Promise.all([
+      getTimezonesFromIntl(),
+      getTimezonesFromIANA()
+    ])
+    return {
+      timezonesIntl,
+      timezonesIANA
+    }
   },
   head: () => ({
     meta: [
@@ -25,7 +33,7 @@ export const Route = createFileRoute('/timezones/')({
 })
 
 function Timezones() {
-  const { timezones } = Route.useLoaderData()
+  const { timezonesIntl, timezonesIANA } = Route.useLoaderData()
 
   const columns = React.useMemo<ColumnDef<Timezone>[]>(
     () => [
@@ -49,10 +57,33 @@ function Timezones() {
     []
   )
 
-  const table = useReactTable({
-    data: timezones,
+  const tableIntl = useReactTable({
+    data: timezonesIntl,
     columns,
     getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+    initialState: {
+      pagination: {
+        pageSize: 20,
+      },
+    },
+    filterFns: {
+      fuzzy: fuzzyFilter,
+    },
+  })
+
+  const tableIANA = useReactTable({
+    data: timezonesIANA,
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+    initialState: {
+      pagination: {
+        pageSize: 20,
+      },
+    },
     filterFns: {
       fuzzy: fuzzyFilter,
     },
@@ -62,30 +93,55 @@ function Timezones() {
     <div className="min-h-screen bg-gray-900 p-6">
       <h1 className="text-3xl font-bold text-white mb-6">Timezones</h1>
 
-      <div className="grid grid-cols-2 gap-6">
-        {/* TanStack Table */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Left: Intl API (Option A) */}
         <div>
-          <h2 className="text-xl font-semibold text-white mb-4">TanStack Table</h2>
+          <h2 className="text-xl font-semibold text-white mb-2">
+            Intl API (Built-in)
+          </h2>
+          <ul className="text-xs text-gray-400 mb-3 space-y-1">
+            <li>• Source: JavaScript runtime's built-in database</li>
+            <li>• Updates: Tied to Node.js version updates</li>
+            <li>• Coverage: Only timezones supported by runtime</li>
+            <li>• Performance: Instant (no network call)</li>
+            <li>• Includes canonical zones + common aliases</li>
+          </ul>
+          <p className="text-sm text-gray-400 mb-4">
+            Total: {timezonesIntl.length} timezones
+          </p>
           <div className="overflow-x-auto rounded-lg border border-gray-700">
             <table className="w-full text-sm text-gray-200">
               <thead className="bg-gray-800 text-gray-100">
-                {table.getHeaderGroups().map((headerGroup) => (
+                {tableIntl.getHeaderGroups().map((headerGroup) => (
                   <tr key={headerGroup.id}>
                     {headerGroup.headers.map((header) => (
                       <th key={header.id} className="px-4 py-3 text-left">
-                        {header.isPlaceholder
-                          ? null
-                          : flexRender(
+                        {header.isPlaceholder ? null : (
+                          <div
+                            className={
+                              header.column.getCanSort()
+                                ? 'cursor-pointer select-none flex items-center gap-2'
+                                : ''
+                            }
+                            onClick={header.column.getToggleSortingHandler()}
+                          >
+                            {flexRender(
                               header.column.columnDef.header,
                               header.getContext()
                             )}
+                            {{
+                              asc: ' 🔼',
+                              desc: ' 🔽',
+                            }[header.column.getIsSorted() as string] ?? null}
+                          </div>
+                        )}
                       </th>
                     ))}
                   </tr>
                 ))}
               </thead>
               <tbody className="divide-y divide-gray-700">
-                {table.getRowModel().rows.map((row) => (
+                {tableIntl.getRowModel().rows.map((row) => (
                   <tr key={row.id} className="hover:bg-gray-800 transition-colors">
                     {row.getVisibleCells().map((cell) => (
                       <td key={cell.id} className="px-4 py-3">
@@ -100,32 +156,165 @@ function Timezones() {
               </tbody>
             </table>
           </div>
+
+          {/* Pagination Controls */}
+          <div className="flex items-center justify-between mt-4">
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => tableIntl.setPageIndex(0)}
+                disabled={!tableIntl.getCanPreviousPage()}
+                className="px-3 py-1 bg-gray-700 text-white rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-600"
+              >
+                {'<<'}
+              </button>
+              <button
+                onClick={() => tableIntl.previousPage()}
+                disabled={!tableIntl.getCanPreviousPage()}
+                className="px-3 py-1 bg-gray-700 text-white rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-600"
+              >
+                {'<'}
+              </button>
+              <button
+                onClick={() => tableIntl.nextPage()}
+                disabled={!tableIntl.getCanNextPage()}
+                className="px-3 py-1 bg-gray-700 text-white rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-600"
+              >
+                {'>'}
+              </button>
+              <button
+                onClick={() => tableIntl.setPageIndex(tableIntl.getPageCount() - 1)}
+                disabled={!tableIntl.getCanNextPage()}
+                className="px-3 py-1 bg-gray-700 text-white rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-600"
+              >
+                {'>>'}
+              </button>
+            </div>
+            <span className="text-sm text-gray-400">
+              {tableIntl.getState().pagination.pageIndex + 1}/{tableIntl.getPageCount()}
+            </span>
+            <select
+              value={tableIntl.getState().pagination.pageSize}
+              onChange={e => tableIntl.setPageSize(Number(e.target.value))}
+              className="px-3 py-1 bg-gray-700 text-white rounded"
+            >
+              {[10, 20, 50, 100, timezonesIntl.length].map(pageSize => (
+                <option key={pageSize} value={pageSize}>
+                  {pageSize === timezonesIntl.length ? 'Show All' : `Show ${pageSize}`}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
 
-        {/* Custom Table */}
+        {/* Right: IANA Official (Option B) */}
         <div>
-          <h2 className="text-xl font-semibold text-white mb-4">Custom Table</h2>
+          <h2 className="text-xl font-semibold text-white mb-2">
+            IANA Official Data
+          </h2>
+          <ul className="text-xs text-gray-400 mb-3 space-y-1">
+            <li>• Source: Official IANA tzdata repository</li>
+            <li>• Updates: Real-time from authoritative source</li>
+            <li>• Coverage: All canonical zones (inhabited since 1970)</li>
+            <li>• Performance: Requires network fetch</li>
+            <li>• Only canonical zones (no aliases)</li>
+          </ul>
+          <p className="text-sm text-gray-400 mb-4">
+            Total: {timezonesIANA.length} timezones
+          </p>
           <div className="overflow-x-auto rounded-lg border border-gray-700">
             <table className="w-full text-sm text-gray-200">
               <thead className="bg-gray-800 text-gray-100">
-                <tr>
-                  <th className="px-4 py-3 text-left">ID</th>
-                  <th className="px-4 py-3 text-left">Name</th>
-                  <th className="px-4 py-3 text-left">Offset</th>
-                  <th className="px-4 py-3 text-left">Region</th>
-                </tr>
+                {tableIANA.getHeaderGroups().map((headerGroup) => (
+                  <tr key={headerGroup.id}>
+                    {headerGroup.headers.map((header) => (
+                      <th key={header.id} className="px-4 py-3 text-left">
+                        {header.isPlaceholder ? null : (
+                          <div
+                            className={
+                              header.column.getCanSort()
+                                ? 'cursor-pointer select-none flex items-center gap-2'
+                                : ''
+                            }
+                            onClick={header.column.getToggleSortingHandler()}
+                          >
+                            {flexRender(
+                              header.column.columnDef.header,
+                              header.getContext()
+                            )}
+                            {{
+                              asc: ' 🔼',
+                              desc: ' 🔽',
+                            }[header.column.getIsSorted() as string] ?? null}
+                          </div>
+                        )}
+                      </th>
+                    ))}
+                  </tr>
+                ))}
               </thead>
               <tbody className="divide-y divide-gray-700">
-                {timezones.map((timezone) => (
-                  <tr key={timezone.id} className="hover:bg-gray-800 transition-colors">
-                    <td className="px-4 py-3 font-medium">{timezone.id}</td>
-                    <td className="px-4 py-3">{timezone.name}</td>
-                    <td className="px-4 py-3">{timezone.offset}</td>
-                    <td className="px-4 py-3">{timezone.region}</td>
+                {tableIANA.getRowModel().rows.map((row) => (
+                  <tr key={row.id} className="hover:bg-gray-800 transition-colors">
+                    {row.getVisibleCells().map((cell) => (
+                      <td key={cell.id} className="px-4 py-3">
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )}
+                      </td>
+                    ))}
                   </tr>
                 ))}
               </tbody>
             </table>
+          </div>
+
+          {/* Pagination Controls */}
+          <div className="flex items-center justify-between mt-4">
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => tableIANA.setPageIndex(0)}
+                disabled={!tableIANA.getCanPreviousPage()}
+                className="px-3 py-1 bg-gray-700 text-white rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-600"
+              >
+                {'<<'}
+              </button>
+              <button
+                onClick={() => tableIANA.previousPage()}
+                disabled={!tableIANA.getCanPreviousPage()}
+                className="px-3 py-1 bg-gray-700 text-white rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-600"
+              >
+                {'<'}
+              </button>
+              <button
+                onClick={() => tableIANA.nextPage()}
+                disabled={!tableIANA.getCanNextPage()}
+                className="px-3 py-1 bg-gray-700 text-white rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-600"
+              >
+                {'>'}
+              </button>
+              <button
+                onClick={() => tableIANA.setPageIndex(tableIANA.getPageCount() - 1)}
+                disabled={!tableIANA.getCanNextPage()}
+                className="px-3 py-1 bg-gray-700 text-white rounded disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-600"
+              >
+                {'>>'}
+              </button>
+            </div>
+            <span className="text-sm text-gray-400">
+              {tableIANA.getState().pagination.pageIndex + 1}/{tableIANA.getPageCount()}
+            </span>
+            <select
+              value={tableIANA.getState().pagination.pageSize}
+              onChange={e => tableIANA.setPageSize(Number(e.target.value))}
+              className="px-3 py-1 bg-gray-700 text-white rounded"
+            >
+              {[10, 20, 50, 100, timezonesIANA.length].map(pageSize => (
+                <option key={pageSize} value={pageSize}>
+                  {pageSize === timezonesIANA.length ? 'Show All' : `Show ${pageSize}`}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
       </div>

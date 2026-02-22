@@ -1,0 +1,19 @@
+[
+  { "code": "KZ-10", "type": "region", "names": { "ru": "Алматинская область" } },
+  { "code": "KZ-11", "type": "region", "names": { "ru": "Акмолинская область" } },
+  { "code": "KZ-15", "type": "region", "names": { "ru": "Актюбинская область" } },
+  { "code": "KZ-19", "type": "city", "names": { "ru": "Алматы" } },
+  { "code": "KZ-23", "type": "region", "names": { "ru": "Атырауская область" } },
+  { "code": "KZ-27", "type": "region", "names": { "ru": "Западно-Казахстанская область" } },
+  { "code": "KZ-31", "type": "region", "names": { "ru": "Жамбылская область" } },
+  { "code": "KZ-33", "type": "region", "names": { "ru": "Карагандинская область" } },
+  { "code": "KZ-35", "type": "region", "names": { "ru": "Костанайская область" } },
+  { "code": "KZ-39", "type": "region", "names": { "ru": "Кызылординская область" } },
+  { "code": "KZ-43", "type": "region", "names": { "ru": "Мангистауская область" } },
+  { "code": "KZ-47", "type": "region", "names": { "ru": "Павлодарская область" } },
+  { "code": "KZ-55", "type": "region", "names": { "ru": "Северо-Казахстанская область" } },
+  { "code": "KZ-59", "type": "region", "names": { "ru": "Туркестанская область" } },
+  { "code": "KZ-61", "type": "region", "names": { "ru": "Восточно-Казахстанская область" } },
+  { "code": "KZ-63", "type": "city", "names": { "ru": "Астана" } },
+  { "code": "KZ-79", "type": "city", "names": { "ru": "Шымкент" } }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "code": "LU-CA",
+    "type": "canton",
+    "names": {
+      "fr": "Capellen",
+      "lb": "Kapellen",
+      "de": "Capellen"
+    }
+  },
+  {
+    "code": "LU-CL",
+    "type": "canton",
+    "names": {
+      "fr": "Clervaux",
+      "lb": "Klierf",
+      "de": "Clerf"
+    }
+  },
+  {
+    "code": "LU-DI",
+    "type": "canton",
+    "names": {
+      "fr": "Diekirch",
+      "lb": "Dikrech",
+      "de": "Diekirch"
+    }
+  },
+  {
+    "code": "LU-EC",
+    "type": "canton",
+    "names": {
+      "fr": "Echternach",
+      "lb": "Iechternach",
+      "de": "Echternach"
+    }
+  },
+  {
+    "code": "LU-ES",
+    "type": "canton",
+    "names": {
+      "fr": "Esch-sur-Alzette",
+      "lb": "Esch-Uelzecht",
+      "de": "Esch an der Alzette"
+    }
+  },
+  {
+    "code": "LU-GR",
+    "type": "canton",
+    "names": {
+      "fr": "Grevenmacher",
+      "lb": "Gréivemaacher",
+      "de": "Grevenmacher"
+    }
+  },
+  {
+    "code": "LU-LU",
+    "type": "canton",
+    "names": {
+      "fr": "Luxembourg",
+      "lb": "Lëtzebuerg",
+      "de": "Luxemburg"
+    }
+  },
+  {
+    "code": "LU-ME",
+    "type": "canton",
+    "names": {
+      "fr": "Mersch",
+      "lb": "Miersch",
+      "de": "Mersch"
+    }
+  },
+  {
+    "code": "LU-RD",
+    "type": "canton",
+    "names": {
+      "fr": "Redange",
+      "lb": "Réiden",
+      "de": "Redingen"
+    }
+  },
+  {
+    "code": "LU-RM",
+    "type": "canton",
+    "names": {
+      "fr": "Remich",
+      "lb": "Réimech",
+      "de": "Remich"
+    }
+  },
+  {
+    "code": "LU-VD",
+    "type": "canton",
+    "names": {
+      "fr": "Vianden",
+      "lb": "Veianen",
+      "de": "Vianden"
+    }
+  },
+  {
+    "code": "LU-WI",
+    "type": "canton",
+    "names": {
+      "fr": "Wiltz",
+      "lb": "Wolz",
+      "de": "Wiltz"
+    }
+  }
+]

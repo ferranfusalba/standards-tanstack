@@ -1,0 +1,7 @@
+[
+  { "code": "TJ-DU", "type": "capital territory", "names": { "tg": "Dushanbe" } },
+  { "code": "TJ-GB", "type": "autonomous region", "names": { "tg": "Viloyati Mukhtori Kuhistoni Badakhshon" } },
+  { "code": "TJ-KT", "type": "region", "names": { "tg": "Viloyati Khatlon" } },
+  { "code": "TJ-RA", "type": "district", "names": { "tg": "Nohiyahoi tobei jumhuri" } },
+  { "code": "TJ-SU", "type": "region", "names": { "tg": "Viloyati Sughd" } }
+]

@@ -1,0 +1,178 @@
+[
+  {
+    "code": "CU-01",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Pinar del Río"
+    }
+  },
+  {
+    "code": "CU-03",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "La Habana"
+    }
+  },
+  {
+    "code": "CU-04",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Matanzas"
+    }
+  },
+  {
+    "code": "CU-05",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Villa Clara"
+    }
+  },
+  {
+    "code": "CU-06",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Cienfuegos"
+    }
+  },
+  {
+    "code": "CU-07",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Sancti Spíritus"
+    }
+  },
+  {
+    "code": "CU-08",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Ciego de Ávila"
+    }
+  },
+  {
+    "code": "CU-09",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Camagüey"
+    }
+  },
+  {
+    "code": "CU-10",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Las Tunas"
+    }
+  },
+  {
+    "code": "CU-11",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Holguín"
+    }
+  },
+  {
+    "code": "CU-12",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Granma"
+    }
+  },
+  {
+    "code": "CU-13",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Santiago de Cuba"
+    }
+  },
+  {
+    "code": "CU-14",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Guantánamo"
+    }
+  },
+  {
+    "code": "CU-15",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Artemisa"
+    }
+  },
+  {
+    "code": "CU-16",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Mayabeque"
+    }
+  },
+  {
+    "code": "CU-99",
+    "type": {
+      "en": "special municipality",
+      "fr": "municipalité spéciale",
+      "es": "municipio especial"
+    },
+    "names": {
+      "es": "Isla de la Juventud"
+    }
+  }
+]

@@ -1,0 +1,8 @@
+[
+  { "code": "IL-D", "type": "district", "names": { "he": "הדרום", "ar": "الجنوب" } },
+  { "code": "IL-HA", "type": "district", "names": { "he": "חיפה", "ar": "حيفا" } },
+  { "code": "IL-JM", "type": "district", "names": { "he": "ירושלים", "ar": "القدس" } },
+  { "code": "IL-M", "type": "district", "names": { "he": "המרכז", "ar": "المركز" } },
+  { "code": "IL-TA", "type": "district", "names": { "he": "תל אביב", "ar": "تل أبيب" } },
+  { "code": "IL-Z", "type": "district", "names": { "he": "הצפון", "ar": "الشمال" } }
+]

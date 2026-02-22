@@ -1,0 +1,74 @@
+[
+  {
+    "code": "DJ-AR",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "minţaqah"
+    },
+    "names": {
+      "fr": "Arta",
+      "ar": "'Artā"
+    }
+  },
+  {
+    "code": "DJ-AS",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "minţaqah"
+    },
+    "names": {
+      "fr": "Ali Sabieh",
+      "ar": "'Alī Şabīḩ"
+    }
+  },
+  {
+    "code": "DJ-DI",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "minţaqah"
+    },
+    "names": {
+      "fr": "Dikhil",
+      "ar": "Dikhīl"
+    }
+  },
+  {
+    "code": "DJ-DJ",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "ar": "madīnah"
+    },
+    "names": {
+      "fr": "Djibouti",
+      "ar": "Jībūtī"
+    }
+  },
+  {
+    "code": "DJ-OB",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "minţaqah"
+    },
+    "names": {
+      "fr": "Obock",
+      "ar": "Awbūk"
+    }
+  },
+  {
+    "code": "DJ-TA",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "minţaqah"
+    },
+    "names": {
+      "fr": "Tadjourah",
+      "ar": "Tājūrah"
+    }
+  }
+]

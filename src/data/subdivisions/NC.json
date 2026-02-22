@@ -1,0 +1,5 @@
+[
+  { "code": "NC-01", "type": "province", "names": { "fr": "Province Sud" } },
+  { "code": "NC-02", "type": "province", "names": { "fr": "Province Nord" } },
+  { "code": "NC-03", "type": "province", "names": { "fr": "Province des îles Loyauté" } }
+]

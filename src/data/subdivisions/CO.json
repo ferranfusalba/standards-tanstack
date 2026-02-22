@@ -1,0 +1,365 @@
+[
+  {
+    "code": "CO-AMA",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Amazonas"
+    }
+  },
+  {
+    "code": "CO-ANT",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Antioquia"
+    }
+  },
+  {
+    "code": "CO-ARA",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Arauca"
+    }
+  },
+  {
+    "code": "CO-ATL",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Atlántico"
+    }
+  },
+  {
+    "code": "CO-BOL",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Bolívar"
+    }
+  },
+  {
+    "code": "CO-BOY",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Boyacá"
+    }
+  },
+  {
+    "code": "CO-CAL",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Caldas"
+    }
+  },
+  {
+    "code": "CO-CAQ",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Caquetá"
+    }
+  },
+  {
+    "code": "CO-CAS",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Casanare"
+    }
+  },
+  {
+    "code": "CO-CAU",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Cauca"
+    }
+  },
+  {
+    "code": "CO-CES",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Cesar"
+    }
+  },
+  {
+    "code": "CO-CHO",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Chocó"
+    }
+  },
+  {
+    "code": "CO-COR",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Córdoba"
+    }
+  },
+  {
+    "code": "CO-CUN",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Cundinamarca"
+    }
+  },
+  {
+    "code": "CO-DC",
+    "type": {
+      "en": "capital district",
+      "fr": "district capital",
+      "es": "distrito capital"
+    },
+    "names": {
+      "es": "Distrito Capital de Bogotá"
+    }
+  },
+  {
+    "code": "CO-GUA",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Guainía"
+    }
+  },
+  {
+    "code": "CO-GUV",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Guaviare"
+    }
+  },
+  {
+    "code": "CO-HUI",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Huila"
+    }
+  },
+  {
+    "code": "CO-LAG",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "La Guajira"
+    }
+  },
+  {
+    "code": "CO-MAG",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Magdalena"
+    }
+  },
+  {
+    "code": "CO-MET",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Meta"
+    }
+  },
+  {
+    "code": "CO-NAR",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Nariño"
+    }
+  },
+  {
+    "code": "CO-NSA",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Norte de Santander"
+    }
+  },
+  {
+    "code": "CO-PUT",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Putumayo"
+    }
+  },
+  {
+    "code": "CO-QUI",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Quindío"
+    }
+  },
+  {
+    "code": "CO-RIS",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Risaralda"
+    }
+  },
+  {
+    "code": "CO-SAN",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Santander"
+    }
+  },
+  {
+    "code": "CO-SAP",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "San Andrés, Providencia y Santa Catalina"
+    }
+  },
+  {
+    "code": "CO-SUC",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Sucre"
+    }
+  },
+  {
+    "code": "CO-TOL",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Tolima"
+    }
+  },
+  {
+    "code": "CO-VAC",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Valle del Cauca"
+    }
+  },
+  {
+    "code": "CO-VAU",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Vaupés"
+    }
+  },
+  {
+    "code": "CO-VID",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Vichada"
+    }
+  }
+]

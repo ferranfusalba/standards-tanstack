@@ -1,0 +1,8 @@
+[
+  { "code": "KW-AH", "type": "governorate", "names": { "ar": "الأحمدي" } },
+  { "code": "KW-FA", "type": "governorate", "names": { "ar": "الفروانية" } },
+  { "code": "KW-HA", "type": "governorate", "names": { "ar": "حولي" } },
+  { "code": "KW-JA", "type": "governorate", "names": { "ar": "الجهراء" } },
+  { "code": "KW-KU", "type": "governorate", "names": { "ar": "العاصمة" } },
+  { "code": "KW-MU", "type": "governorate", "names": { "ar": "مبارك الكبير" } }
+]

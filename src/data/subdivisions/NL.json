@@ -1,0 +1,87 @@
+[
+  {
+    "code": "NL-DR",
+    "type": "province",
+    "names": {
+      "nl": "Drenthe"
+    }
+  },
+  {
+    "code": "NL-FL",
+    "type": "province",
+    "names": {
+      "nl": "Flevoland"
+    }
+  },
+  {
+    "code": "NL-FR",
+    "type": "province",
+    "names": {
+      "nl": "Fryslân",
+      "fy": "Fryslân"
+    }
+  },
+  {
+    "code": "NL-GE",
+    "type": "province",
+    "names": {
+      "nl": "Gelderland"
+    }
+  },
+  {
+    "code": "NL-GR",
+    "type": "province",
+    "names": {
+      "nl": "Groningen"
+    }
+  },
+  {
+    "code": "NL-LI",
+    "type": "province",
+    "names": {
+      "nl": "Limburg"
+    }
+  },
+  {
+    "code": "NL-NB",
+    "type": "province",
+    "names": {
+      "nl": "Noord-Brabant"
+    }
+  },
+  {
+    "code": "NL-NH",
+    "type": "province",
+    "names": {
+      "nl": "Noord-Holland"
+    }
+  },
+  {
+    "code": "NL-OV",
+    "type": "province",
+    "names": {
+      "nl": "Overijssel"
+    }
+  },
+  {
+    "code": "NL-UT",
+    "type": "province",
+    "names": {
+      "nl": "Utrecht"
+    }
+  },
+  {
+    "code": "NL-ZE",
+    "type": "province",
+    "names": {
+      "nl": "Zeeland"
+    }
+  },
+  {
+    "code": "NL-ZH",
+    "type": "province",
+    "names": {
+      "nl": "Zuid-Holland"
+    }
+  }
+]

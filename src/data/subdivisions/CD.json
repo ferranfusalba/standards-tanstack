@@ -1,0 +1,262 @@
+[
+  {
+    "code": "CD-BC",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Kongo Central"
+    }
+  },
+  {
+    "code": "CD-BU",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Bas-Uélé"
+    }
+  },
+  {
+    "code": "CD-EQ",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Équateur"
+    }
+  },
+  {
+    "code": "CD-HK",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Haut-Katanga"
+    }
+  },
+  {
+    "code": "CD-HL",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Haut-Lomami"
+    }
+  },
+  {
+    "code": "CD-HU",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Haut-Uélé"
+    }
+  },
+  {
+    "code": "CD-IT",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Ituri"
+    }
+  },
+  {
+    "code": "CD-KA",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Kasaï"
+    }
+  },
+  {
+    "code": "CD-KC",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Kasaï Central"
+    }
+  },
+  {
+    "code": "CD-KE",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Kasaï Oriental"
+    }
+  },
+  {
+    "code": "CD-KG",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Kwango"
+    }
+  },
+  {
+    "code": "CD-KL",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Kwilu"
+    }
+  },
+  {
+    "code": "CD-KN",
+    "type": {
+      "en": "city",
+      "fr": "ville"
+    },
+    "names": {
+      "fr": "Kinshasa"
+    }
+  },
+  {
+    "code": "CD-KS",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Sankuru"
+    }
+  },
+  {
+    "code": "CD-LO",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Lomami"
+    }
+  },
+  {
+    "code": "CD-LU",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Lualaba"
+    }
+  },
+  {
+    "code": "CD-MA",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Maniema"
+    }
+  },
+  {
+    "code": "CD-MN",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Mai-Ndombe"
+    }
+  },
+  {
+    "code": "CD-MO",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Mongala"
+    }
+  },
+  {
+    "code": "CD-NK",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Nord-Kivu"
+    }
+  },
+  {
+    "code": "CD-NU",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Nord-Ubangi"
+    }
+  },
+  {
+    "code": "CD-SK",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Sud-Kivu"
+    }
+  },
+  {
+    "code": "CD-SU",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Sud-Ubangi"
+    }
+  },
+  {
+    "code": "CD-TA",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Tanganyika"
+    }
+  },
+  {
+    "code": "CD-TO",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Tshopo"
+    }
+  },
+  {
+    "code": "CD-TU",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Tshuapa"
+    }
+  }
+]

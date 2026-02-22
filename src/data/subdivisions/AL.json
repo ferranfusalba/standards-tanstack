@@ -1,0 +1,134 @@
+[
+  {
+    "code": "AL-01",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "sq": "qark"
+    },
+    "names": {
+      "sq": "Berat"
+    }
+  },
+  {
+    "code": "AL-02",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "sq": "qark"
+    },
+    "names": {
+      "sq": "Durrës"
+    }
+  },
+  {
+    "code": "AL-03",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "sq": "qark"
+    },
+    "names": {
+      "sq": "Elbasan"
+    }
+  },
+  {
+    "code": "AL-04",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "sq": "qark"
+    },
+    "names": {
+      "sq": "Fier"
+    }
+  },
+  {
+    "code": "AL-05",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "sq": "qark"
+    },
+    "names": {
+      "sq": "Gjirokastër"
+    }
+  },
+  {
+    "code": "AL-06",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "sq": "qark"
+    },
+    "names": {
+      "sq": "Korçë"
+    }
+  },
+  {
+    "code": "AL-07",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "sq": "qark"
+    },
+    "names": {
+      "sq": "Kukës"
+    }
+  },
+  {
+    "code": "AL-08",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "sq": "qark"
+    },
+    "names": {
+      "sq": "Lezhë"
+    }
+  },
+  {
+    "code": "AL-09",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "sq": "qark"
+    },
+    "names": {
+      "sq": "Dibër"
+    }
+  },
+  {
+    "code": "AL-10",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "sq": "qark"
+    },
+    "names": {
+      "sq": "Shkodër"
+    }
+  },
+  {
+    "code": "AL-11",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "sq": "qark"
+    },
+    "names": {
+      "sq": "Tiranë"
+    }
+  },
+  {
+    "code": "AL-12",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "sq": "qark"
+    },
+    "names": {
+      "sq": "Vlorë"
+    }
+  }
+]

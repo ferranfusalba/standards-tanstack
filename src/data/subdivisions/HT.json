@@ -1,0 +1,12 @@
+[
+  { "code": "HT-AR", "type": "department", "names": { "fr": "Artibonite", "ht": "Latibonit" } },
+  { "code": "HT-CE", "type": "department", "names": { "fr": "Centre", "ht": "Sant" } },
+  { "code": "HT-GA", "type": "department", "names": { "fr": "Grande'Anse", "ht": "Grandans" } },
+  { "code": "HT-NI", "type": "department", "names": { "fr": "Nippes", "ht": "Nip" } },
+  { "code": "HT-ND", "type": "department", "names": { "fr": "Nord", "ht": "Nò" } },
+  { "code": "HT-NE", "type": "department", "names": { "fr": "Nord-Est", "ht": "Nòdès" } },
+  { "code": "HT-NO", "type": "department", "names": { "fr": "Nord-Ouest", "ht": "Nòdwès" } },
+  { "code": "HT-OU", "type": "department", "names": { "fr": "Ouest", "ht": "Lwès" } },
+  { "code": "HT-SD", "type": "department", "names": { "fr": "Sud", "ht": "Sid" } },
+  { "code": "HT-SE", "type": "department", "names": { "fr": "Sud-Est", "ht": "Sidès" } }
+]

@@ -1,0 +1,18 @@
+[
+  { "code": "PS-BTH", "type": "governorate", "names": { "ar": "بيت لحم" } },
+  { "code": "PS-DEB", "type": "governorate", "names": { "ar": "دير البلح" } },
+  { "code": "PS-GZA", "type": "governorate", "names": { "ar": "غزة" } },
+  { "code": "PS-HBN", "type": "governorate", "names": { "ar": "الخليل" } },
+  { "code": "PS-JEM", "type": "governorate", "names": { "ar": "القدس" } },
+  { "code": "PS-JEN", "type": "governorate", "names": { "ar": "جنين" } },
+  { "code": "PS-JRH", "type": "governorate", "names": { "ar": "أريحا والأغوار" } },
+  { "code": "PS-KYS", "type": "governorate", "names": { "ar": "خان يونس" } },
+  { "code": "PS-NBS", "type": "governorate", "names": { "ar": "نابلس" } },
+  { "code": "PS-NGZ", "type": "governorate", "names": { "ar": "شمال غزة" } },
+  { "code": "PS-QQA", "type": "governorate", "names": { "ar": "قلقيلية" } },
+  { "code": "PS-RBH", "type": "governorate", "names": { "ar": "رام الله والبيرة" } },
+  { "code": "PS-RFH", "type": "governorate", "names": { "ar": "رفح" } },
+  { "code": "PS-SLT", "type": "governorate", "names": { "ar": "سلفيت" } },
+  { "code": "PS-TBS", "type": "governorate", "names": { "ar": "طوباس والأغوار الشمالية" } },
+  { "code": "PS-TKM", "type": "governorate", "names": { "ar": "طولكرم" } }
+]

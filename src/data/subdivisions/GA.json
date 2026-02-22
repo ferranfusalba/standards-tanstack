@@ -1,0 +1,11 @@
+[
+  { "code": "GA-1", "type": "province", "names": { "fr": "Estuaire" } },
+  { "code": "GA-2", "type": "province", "names": { "fr": "Haut-Ogooué" } },
+  { "code": "GA-3", "type": "province", "names": { "fr": "Moyen-Ogooué" } },
+  { "code": "GA-4", "type": "province", "names": { "fr": "Ngounié" } },
+  { "code": "GA-5", "type": "province", "names": { "fr": "Nyanga" } },
+  { "code": "GA-6", "type": "province", "names": { "fr": "Ogooué-Ivindo" } },
+  { "code": "GA-7", "type": "province", "names": { "fr": "Ogooué-Lolo" } },
+  { "code": "GA-8", "type": "province", "names": { "fr": "Ogooué-Maritime" } },
+  { "code": "GA-9", "type": "province", "names": { "fr": "Woleu-Ntem" } }
+]

@@ -1,0 +1,10 @@
+[
+  { "code": "QA-DA", "type": "municipality", "names": { "ar": "الدوحة" } },
+  { "code": "QA-KH", "type": "municipality", "names": { "ar": "الخور والذخيرة" } },
+  { "code": "QA-KN", "type": "municipality", "names": { "ar": "الشمال" } },
+  { "code": "QA-MS", "type": "municipality", "names": { "ar": "الشحانية" } },
+  { "code": "QA-RA", "type": "municipality", "names": { "ar": "الريان" } },
+  { "code": "QA-US", "type": "municipality", "names": { "ar": "أم صلال" } },
+  { "code": "QA-WA", "type": "municipality", "names": { "ar": "الوكرة" } },
+  { "code": "QA-ZA", "type": "municipality", "names": { "ar": "الظعاين" } }
+]

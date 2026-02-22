@@ -1,0 +1,266 @@
+[
+  {
+    "code": "EC-A",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Azuay"
+    }
+  },
+  {
+    "code": "EC-B",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Bolívar"
+    }
+  },
+  {
+    "code": "EC-C",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Carchi"
+    }
+  },
+  {
+    "code": "EC-D",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Orellana"
+    }
+  },
+  {
+    "code": "EC-E",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Esmeraldas"
+    }
+  },
+  {
+    "code": "EC-F",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Cañar"
+    }
+  },
+  {
+    "code": "EC-G",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Guayas"
+    }
+  },
+  {
+    "code": "EC-H",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Chimborazo"
+    }
+  },
+  {
+    "code": "EC-I",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Imbabura"
+    }
+  },
+  {
+    "code": "EC-L",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Loja"
+    }
+  },
+  {
+    "code": "EC-M",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Manabí"
+    }
+  },
+  {
+    "code": "EC-N",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Napo"
+    }
+  },
+  {
+    "code": "EC-O",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "El Oro"
+    }
+  },
+  {
+    "code": "EC-P",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Pichincha"
+    }
+  },
+  {
+    "code": "EC-R",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Los Ríos"
+    }
+  },
+  {
+    "code": "EC-S",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Morona Santiago"
+    }
+  },
+  {
+    "code": "EC-SD",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Santo Domingo de los Tsáchilas"
+    }
+  },
+  {
+    "code": "EC-SE",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Santa Elena"
+    }
+  },
+  {
+    "code": "EC-T",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Tungurahua"
+    }
+  },
+  {
+    "code": "EC-U",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Sucumbíos"
+    }
+  },
+  {
+    "code": "EC-W",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Galápagos"
+    }
+  },
+  {
+    "code": "EC-X",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Cotopaxi"
+    }
+  },
+  {
+    "code": "EC-Y",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Pastaza"
+    }
+  },
+  {
+    "code": "EC-Z",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Zamora Chinchipe"
+    }
+  }
+]

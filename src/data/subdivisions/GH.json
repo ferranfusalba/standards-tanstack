@@ -1,0 +1,18 @@
+[
+  { "code": "GH-AA", "type": "region", "names": { "en": "Greater Accra" } },
+  { "code": "GH-AF", "type": "region", "names": { "en": "Ahafo" } },
+  { "code": "GH-AH", "type": "region", "names": { "en": "Ashanti" } },
+  { "code": "GH-BE", "type": "region", "names": { "en": "Bono East" } },
+  { "code": "GH-BO", "type": "region", "names": { "en": "Bono" } },
+  { "code": "GH-CP", "type": "region", "names": { "en": "Central" } },
+  { "code": "GH-EP", "type": "region", "names": { "en": "Eastern" } },
+  { "code": "GH-NE", "type": "region", "names": { "en": "North East" } },
+  { "code": "GH-NP", "type": "region", "names": { "en": "Northern" } },
+  { "code": "GH-OT", "type": "region", "names": { "en": "Oti" } },
+  { "code": "GH-SV", "type": "region", "names": { "en": "Savannah" } },
+  { "code": "GH-TV", "type": "region", "names": { "en": "Volta" } },
+  { "code": "GH-UE", "type": "region", "names": { "en": "Upper East" } },
+  { "code": "GH-UW", "type": "region", "names": { "en": "Upper West" } },
+  { "code": "GH-WN", "type": "region", "names": { "en": "Western North" } },
+  { "code": "GH-WP", "type": "region", "names": { "en": "Western" } }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "code": "AU-ACT",
+    "type": {
+      "en": "territory",
+      "fr": "territoire"
+    },
+    "names": {
+      "en": "Australian Capital Territory"
+    }
+  },
+  {
+    "code": "AU-NSW",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "New South Wales"
+    }
+  },
+  {
+    "code": "AU-NT",
+    "type": {
+      "en": "territory",
+      "fr": "territoire"
+    },
+    "names": {
+      "en": "Northern Territory"
+    }
+  },
+  {
+    "code": "AU-QLD",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Queensland"
+    }
+  },
+  {
+    "code": "AU-SA",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "South Australia"
+    }
+  },
+  {
+    "code": "AU-TAS",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Tasmania"
+    }
+  },
+  {
+    "code": "AU-VIC",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Victoria"
+    }
+  },
+  {
+    "code": "AU-WA",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Western Australia"
+    }
+  }
+]

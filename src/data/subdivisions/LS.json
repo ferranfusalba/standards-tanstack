@@ -1,0 +1,12 @@
+[
+  { "code": "LS-A", "type": "district", "names": { "en": "Maseru" } },
+  { "code": "LS-B", "type": "district", "names": { "en": "Butha-Buthe" } },
+  { "code": "LS-C", "type": "district", "names": { "en": "Leribe" } },
+  { "code": "LS-D", "type": "district", "names": { "en": "Berea" } },
+  { "code": "LS-E", "type": "district", "names": { "en": "Mafeteng" } },
+  { "code": "LS-F", "type": "district", "names": { "en": "Mohale's Hoek" } },
+  { "code": "LS-G", "type": "district", "names": { "en": "Quthing" } },
+  { "code": "LS-H", "type": "district", "names": { "en": "Qacha's Nek" } },
+  { "code": "LS-J", "type": "district", "names": { "en": "Mokhotlong" } },
+  { "code": "LS-K", "type": "district", "names": { "en": "Thaba-Tseka" } }
+]

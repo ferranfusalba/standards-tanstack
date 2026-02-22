@@ -1,0 +1,7 @@
+[
+  { "code": "SL-E", "type": "province", "names": { "en": "Eastern" } },
+  { "code": "SL-N", "type": "province", "names": { "en": "Northern" } },
+  { "code": "SL-NW", "type": "province", "names": { "en": "North Western" } },
+  { "code": "SL-S", "type": "province", "names": { "en": "Southern" } },
+  { "code": "SL-W", "type": "area", "names": { "en": "Western Area" } }
+]

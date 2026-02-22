@@ -1,0 +1,23 @@
+[
+  { "code": "MV-00", "type": "province", "names": { "dv": "ސ.އަތޮޅު" } },
+  { "code": "MV-01", "type": "province", "names": { "dv": "ހ.އ.އަތޮޅު" } },
+  { "code": "MV-02", "type": "province", "names": { "dv": "ހ.ދ.އަތޮޅު" } },
+  { "code": "MV-03", "type": "province", "names": { "dv": "ށ.އަތޮޅު" } },
+  { "code": "MV-04", "type": "province", "names": { "dv": "ނ.އަތޮޅު" } },
+  { "code": "MV-05", "type": "province", "names": { "dv": "ރ.އަތޮޅު" } },
+  { "code": "MV-07", "type": "province", "names": { "dv": "ޅ.އަތޮޅު" } },
+  { "code": "MV-08", "type": "province", "names": { "dv": "ކ.އަތޮޅު" } },
+  { "code": "MV-12", "type": "province", "names": { "dv": "އ.އ.އަތޮޅު" } },
+  { "code": "MV-13", "type": "province", "names": { "dv": "އ.ދ.އަތޮޅު" } },
+  { "code": "MV-14", "type": "province", "names": { "dv": "ވ.އަތޮޅު" } },
+  { "code": "MV-17", "type": "province", "names": { "dv": "ދ.އަތޮޅު" } },
+  { "code": "MV-20", "type": "province", "names": { "dv": "ބ.އަތޮޅު" } },
+  { "code": "MV-23", "type": "province", "names": { "dv": "ފ.އަތޮޅު" } },
+  { "code": "MV-24", "type": "province", "names": { "dv": "މ.އަތޮޅު" } },
+  { "code": "MV-25", "type": "province", "names": { "dv": "ތ.އަތޮޅު" } },
+  { "code": "MV-26", "type": "province", "names": { "dv": "ލ.އަތޮޅު" } },
+  { "code": "MV-27", "type": "province", "names": { "dv": "ގ.އ.އަތޮޅު" } },
+  { "code": "MV-28", "type": "province", "names": { "dv": "ގ.ދ.އަތޮޅު" } },
+  { "code": "MV-29", "type": "province", "names": { "dv": "ޏ.އަތޮޅު" } },
+  { "code": "MV-MLE", "type": "city", "names": { "dv": "މާލެ" } }
+]

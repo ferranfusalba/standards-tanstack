@@ -1,0 +1,34 @@
+[
+  {
+    "code": "IE-C",
+    "type": "province",
+    "names": {
+      "en": "Connacht",
+      "ga": "Connachta"
+    }
+  },
+  {
+    "code": "IE-L",
+    "type": "province",
+    "names": {
+      "en": "Leinster",
+      "ga": "Laighin"
+    }
+  },
+  {
+    "code": "IE-M",
+    "type": "province",
+    "names": {
+      "en": "Munster",
+      "ga": "An Mhumhain"
+    }
+  },
+  {
+    "code": "IE-U",
+    "type": "province",
+    "names": {
+      "en": "Ulster",
+      "ga": "Ulaidh"
+    }
+  }
+]

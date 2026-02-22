@@ -1,0 +1,22 @@
+[
+  { "code": "BT-11", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Paro" } },
+  { "code": "BT-12", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Chhukha" } },
+  { "code": "BT-13", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Haa" } },
+  { "code": "BT-14", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Samtse" } },
+  { "code": "BT-15", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Thimphu" } },
+  { "code": "BT-21", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Tsirang" } },
+  { "code": "BT-22", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Dagana" } },
+  { "code": "BT-23", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Punakha" } },
+  { "code": "BT-24", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Wangdue Phodrang" } },
+  { "code": "BT-31", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Sarpang" } },
+  { "code": "BT-32", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Trongsa" } },
+  { "code": "BT-33", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Bumthang" } },
+  { "code": "BT-34", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Zhemgang" } },
+  { "code": "BT-41", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Trashigang" } },
+  { "code": "BT-42", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Monggar" } },
+  { "code": "BT-43", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Pema Gatshel" } },
+  { "code": "BT-44", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Lhuentse" } },
+  { "code": "BT-45", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Samdrup Jongkhar" } },
+  { "code": "BT-GA", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Gasa" } },
+  { "code": "BT-TY", "type": { "en": "district", "fr": "district", "dz": "dzongkhag" }, "names": { "dz": "Trashi Yangtse" } }
+]

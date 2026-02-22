@@ -1,0 +1,12 @@
+[
+  { "code": "SB-CE", "type": "province", "names": { "en": "Central" } },
+  { "code": "SB-CH", "type": "province", "names": { "en": "Choiseul" } },
+  { "code": "SB-CT", "type": "capital territory", "names": { "en": "Honiara" } },
+  { "code": "SB-GU", "type": "province", "names": { "en": "Guadalcanal" } },
+  { "code": "SB-IS", "type": "province", "names": { "en": "Isabel" } },
+  { "code": "SB-MK", "type": "province", "names": { "en": "Makira-Ulawa" } },
+  { "code": "SB-ML", "type": "province", "names": { "en": "Malaita" } },
+  { "code": "SB-RB", "type": "province", "names": { "en": "Rennell and Bellona" } },
+  { "code": "SB-TE", "type": "province", "names": { "en": "Temotu" } },
+  { "code": "SB-WE", "type": "province", "names": { "en": "Western" } }
+]

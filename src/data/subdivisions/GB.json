@@ -1,0 +1,36 @@
+[
+  {
+    "code": "GB-ENG",
+    "type": "country",
+    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "names": {
+      "en": "England"
+    }
+  },
+  {
+    "code": "GB-NIR",
+    "type": "province",
+    "names": {
+      "en": "Northern Ireland",
+      "ga": "Tuaisceart Éireann"
+    }
+  },
+  {
+    "code": "GB-SCT",
+    "type": "country",
+    "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+    "names": {
+      "en": "Scotland",
+      "gd": "Alba"
+    }
+  },
+  {
+    "code": "GB-WLS",
+    "type": "country",
+    "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+    "names": {
+      "en": "Wales",
+      "cy": "Cymru"
+    }
+  }
+]

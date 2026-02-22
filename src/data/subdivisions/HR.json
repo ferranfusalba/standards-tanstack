@@ -1,0 +1,149 @@
+[
+  {
+    "code": "HR-01",
+    "type": "county",
+    "names": {
+      "hr": "Zagrebačka županija"
+    }
+  },
+  {
+    "code": "HR-02",
+    "type": "county",
+    "names": {
+      "hr": "Krapinsko-zagorska županija"
+    }
+  },
+  {
+    "code": "HR-03",
+    "type": "county",
+    "names": {
+      "hr": "Sisačko-moslavačka županija"
+    }
+  },
+  {
+    "code": "HR-04",
+    "type": "county",
+    "names": {
+      "hr": "Karlovačka županija"
+    }
+  },
+  {
+    "code": "HR-05",
+    "type": "county",
+    "names": {
+      "hr": "Varaždinska županija"
+    }
+  },
+  {
+    "code": "HR-06",
+    "type": "county",
+    "names": {
+      "hr": "Koprivničko-križevačka županija"
+    }
+  },
+  {
+    "code": "HR-07",
+    "type": "county",
+    "names": {
+      "hr": "Bjelovarsko-bilogorska županija"
+    }
+  },
+  {
+    "code": "HR-08",
+    "type": "county",
+    "names": {
+      "hr": "Primorsko-goranska županija"
+    }
+  },
+  {
+    "code": "HR-09",
+    "type": "county",
+    "names": {
+      "hr": "Ličko-senjska županija"
+    }
+  },
+  {
+    "code": "HR-10",
+    "type": "county",
+    "names": {
+      "hr": "Virovitičko-podravska županija"
+    }
+  },
+  {
+    "code": "HR-11",
+    "type": "county",
+    "names": {
+      "hr": "Požeško-slavonska županija"
+    }
+  },
+  {
+    "code": "HR-12",
+    "type": "county",
+    "names": {
+      "hr": "Brodsko-posavska županija"
+    }
+  },
+  {
+    "code": "HR-13",
+    "type": "county",
+    "names": {
+      "hr": "Zadarska županija"
+    }
+  },
+  {
+    "code": "HR-14",
+    "type": "county",
+    "names": {
+      "hr": "Osječko-baranjska županija"
+    }
+  },
+  {
+    "code": "HR-15",
+    "type": "county",
+    "names": {
+      "hr": "Šibensko-kninska županija"
+    }
+  },
+  {
+    "code": "HR-16",
+    "type": "county",
+    "names": {
+      "hr": "Vukovarsko-srijemska županija"
+    }
+  },
+  {
+    "code": "HR-17",
+    "type": "county",
+    "names": {
+      "hr": "Splitsko-dalmatinska županija"
+    }
+  },
+  {
+    "code": "HR-18",
+    "type": "county",
+    "names": {
+      "hr": "Istarska županija"
+    }
+  },
+  {
+    "code": "HR-19",
+    "type": "county",
+    "names": {
+      "hr": "Dubrovačko-neretvanska županija"
+    }
+  },
+  {
+    "code": "HR-20",
+    "type": "county",
+    "names": {
+      "hr": "Međimurska županija"
+    }
+  },
+  {
+    "code": "HR-21",
+    "type": "city",
+    "names": {
+      "hr": "Grad Zagreb"
+    }
+  }
+]

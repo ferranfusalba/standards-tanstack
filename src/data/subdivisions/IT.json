@@ -1,0 +1,144 @@
+[
+  {
+    "code": "IT-21",
+    "type": "autonomous region",
+    "names": {
+      "it": "Piemonte"
+    }
+  },
+  {
+    "code": "IT-23",
+    "type": "autonomous region",
+    "names": {
+      "it": "Valle d'Aosta",
+      "fr": "Vallée d'Aoste"
+    }
+  },
+  {
+    "code": "IT-25",
+    "type": "region",
+    "names": {
+      "it": "Lombardia"
+    }
+  },
+  {
+    "code": "IT-32",
+    "type": "autonomous region",
+    "names": {
+      "it": "Trentino-Alto Adige",
+      "de": "Trentino-Südtirol"
+    }
+  },
+  {
+    "code": "IT-34",
+    "type": "region",
+    "names": {
+      "it": "Veneto"
+    }
+  },
+  {
+    "code": "IT-36",
+    "type": "autonomous region",
+    "names": {
+      "it": "Friuli Venezia Giulia"
+    }
+  },
+  {
+    "code": "IT-42",
+    "type": "region",
+    "names": {
+      "it": "Liguria"
+    }
+  },
+  {
+    "code": "IT-45",
+    "type": "region",
+    "names": {
+      "it": "Emilia-Romagna"
+    }
+  },
+  {
+    "code": "IT-52",
+    "type": "region",
+    "names": {
+      "it": "Toscana"
+    }
+  },
+  {
+    "code": "IT-55",
+    "type": "region",
+    "names": {
+      "it": "Umbria"
+    }
+  },
+  {
+    "code": "IT-57",
+    "type": "region",
+    "names": {
+      "it": "Marche"
+    }
+  },
+  {
+    "code": "IT-62",
+    "type": "region",
+    "names": {
+      "it": "Lazio"
+    }
+  },
+  {
+    "code": "IT-65",
+    "type": "region",
+    "names": {
+      "it": "Abruzzo"
+    }
+  },
+  {
+    "code": "IT-67",
+    "type": "region",
+    "names": {
+      "it": "Molise"
+    }
+  },
+  {
+    "code": "IT-72",
+    "type": "region",
+    "names": {
+      "it": "Campania"
+    }
+  },
+  {
+    "code": "IT-75",
+    "type": "region",
+    "names": {
+      "it": "Puglia"
+    }
+  },
+  {
+    "code": "IT-77",
+    "type": "region",
+    "names": {
+      "it": "Basilicata"
+    }
+  },
+  {
+    "code": "IT-78",
+    "type": "region",
+    "names": {
+      "it": "Calabria"
+    }
+  },
+  {
+    "code": "IT-82",
+    "type": "autonomous region",
+    "names": {
+      "it": "Sicilia"
+    }
+  },
+  {
+    "code": "IT-88",
+    "type": "autonomous region",
+    "names": {
+      "it": "Sardegna"
+    }
+  }
+]

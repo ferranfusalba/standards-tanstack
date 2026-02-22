@@ -1,0 +1,8 @@
+[
+  { "code": "TM-A", "type": "region", "names": { "tk": "Ahal" } },
+  { "code": "TM-B", "type": "region", "names": { "tk": "Balkan" } },
+  { "code": "TM-D", "type": "region", "names": { "tk": "Dashoguz" } },
+  { "code": "TM-L", "type": "region", "names": { "tk": "Lebap" } },
+  { "code": "TM-M", "type": "region", "names": { "tk": "Mary" } },
+  { "code": "TM-S", "type": "city", "names": { "tk": "Ashgabat" } }
+]

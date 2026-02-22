@@ -1,0 +1,82 @@
+[
+  {
+    "code": "AG-03",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint George"
+    }
+  },
+  {
+    "code": "AG-04",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint John"
+    }
+  },
+  {
+    "code": "AG-05",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Mary"
+    }
+  },
+  {
+    "code": "AG-06",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Paul"
+    }
+  },
+  {
+    "code": "AG-07",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Peter"
+    }
+  },
+  {
+    "code": "AG-08",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Philip"
+    }
+  },
+  {
+    "code": "AG-10",
+    "type": {
+      "en": "dependency",
+      "fr": "dépendance"
+    },
+    "names": {
+      "en": "Barbuda"
+    }
+  },
+  {
+    "code": "AG-11",
+    "type": {
+      "en": "dependency",
+      "fr": "dépendance"
+    },
+    "names": {
+      "en": "Redonda"
+    }
+  }
+]

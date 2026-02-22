@@ -1,0 +1,142 @@
+[
+  {
+    "code": "PT-01",
+    "type": "district",
+    "names": {
+      "pt": "Aveiro"
+    }
+  },
+  {
+    "code": "PT-02",
+    "type": "district",
+    "names": {
+      "pt": "Beja"
+    }
+  },
+  {
+    "code": "PT-03",
+    "type": "district",
+    "names": {
+      "pt": "Braga"
+    }
+  },
+  {
+    "code": "PT-04",
+    "type": "district",
+    "names": {
+      "pt": "Bragança"
+    }
+  },
+  {
+    "code": "PT-05",
+    "type": "district",
+    "names": {
+      "pt": "Castelo Branco"
+    }
+  },
+  {
+    "code": "PT-06",
+    "type": "district",
+    "names": {
+      "pt": "Coimbra"
+    }
+  },
+  {
+    "code": "PT-07",
+    "type": "district",
+    "names": {
+      "pt": "Évora"
+    }
+  },
+  {
+    "code": "PT-08",
+    "type": "district",
+    "names": {
+      "pt": "Faro"
+    }
+  },
+  {
+    "code": "PT-09",
+    "type": "district",
+    "names": {
+      "pt": "Guarda"
+    }
+  },
+  {
+    "code": "PT-10",
+    "type": "district",
+    "names": {
+      "pt": "Leiria"
+    }
+  },
+  {
+    "code": "PT-11",
+    "type": "district",
+    "names": {
+      "pt": "Lisboa"
+    }
+  },
+  {
+    "code": "PT-12",
+    "type": "district",
+    "names": {
+      "pt": "Portalegre"
+    }
+  },
+  {
+    "code": "PT-13",
+    "type": "district",
+    "names": {
+      "pt": "Porto"
+    }
+  },
+  {
+    "code": "PT-14",
+    "type": "district",
+    "names": {
+      "pt": "Santarém"
+    }
+  },
+  {
+    "code": "PT-15",
+    "type": "district",
+    "names": {
+      "pt": "Setúbal"
+    }
+  },
+  {
+    "code": "PT-16",
+    "type": "district",
+    "names": {
+      "pt": "Viana do Castelo"
+    }
+  },
+  {
+    "code": "PT-17",
+    "type": "district",
+    "names": {
+      "pt": "Vila Real"
+    }
+  },
+  {
+    "code": "PT-18",
+    "type": "district",
+    "names": {
+      "pt": "Viseu"
+    }
+  },
+  {
+    "code": "PT-20",
+    "type": "autonomous region",
+    "names": {
+      "pt": "Região Autónoma dos Açores"
+    }
+  },
+  {
+    "code": "PT-30",
+    "type": "autonomous region",
+    "names": {
+      "pt": "Região Autónoma da Madeira"
+    }
+  }
+]

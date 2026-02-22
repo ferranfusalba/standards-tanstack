@@ -1,0 +1,58 @@
+[
+  {
+    "code": "MK-101",
+    "type": "statistical region",
+    "names": {
+      "mk": "Вардарски"
+    }
+  },
+  {
+    "code": "MK-201",
+    "type": "statistical region",
+    "names": {
+      "mk": "Источен"
+    }
+  },
+  {
+    "code": "MK-301",
+    "type": "statistical region",
+    "names": {
+      "mk": "Југозападен"
+    }
+  },
+  {
+    "code": "MK-401",
+    "type": "statistical region",
+    "names": {
+      "mk": "Југоисточен"
+    }
+  },
+  {
+    "code": "MK-501",
+    "type": "statistical region",
+    "names": {
+      "mk": "Пелагониски"
+    }
+  },
+  {
+    "code": "MK-601",
+    "type": "statistical region",
+    "names": {
+      "mk": "Полошки"
+    }
+  },
+  {
+    "code": "MK-701",
+    "type": "statistical region",
+    "names": {
+      "mk": "Североисточен"
+    }
+  },
+  {
+    "code": "MK-801",
+    "type": "statistical region",
+    "names": {
+      "mk": "Скопски"
+    }
+  }
+]

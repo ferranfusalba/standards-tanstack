@@ -1,0 +1,640 @@
+[
+  {
+    "code": "DZ-01",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Adrar"
+    }
+  },
+  {
+    "code": "DZ-02",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Chlef"
+    }
+  },
+  {
+    "code": "DZ-03",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Laghouat"
+    }
+  },
+  {
+    "code": "DZ-04",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Oum el Bouaghi"
+    }
+  },
+  {
+    "code": "DZ-05",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Batna"
+    }
+  },
+  {
+    "code": "DZ-06",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Béjaïa"
+    }
+  },
+  {
+    "code": "DZ-07",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Biskra"
+    }
+  },
+  {
+    "code": "DZ-08",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Béchar"
+    }
+  },
+  {
+    "code": "DZ-09",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Blida"
+    }
+  },
+  {
+    "code": "DZ-10",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Bouira"
+    }
+  },
+  {
+    "code": "DZ-11",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Tamanrasset"
+    }
+  },
+  {
+    "code": "DZ-12",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Tébessa"
+    }
+  },
+  {
+    "code": "DZ-13",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Tlemcen"
+    }
+  },
+  {
+    "code": "DZ-14",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Tiaret"
+    }
+  },
+  {
+    "code": "DZ-15",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Tizi Ouzou"
+    }
+  },
+  {
+    "code": "DZ-16",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Alger"
+    }
+  },
+  {
+    "code": "DZ-17",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Djelfa"
+    }
+  },
+  {
+    "code": "DZ-18",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Jijel"
+    }
+  },
+  {
+    "code": "DZ-19",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Sétif"
+    }
+  },
+  {
+    "code": "DZ-20",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Saïda"
+    }
+  },
+  {
+    "code": "DZ-21",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Skikda"
+    }
+  },
+  {
+    "code": "DZ-22",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Sidi Bel Abbès"
+    }
+  },
+  {
+    "code": "DZ-23",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Annaba"
+    }
+  },
+  {
+    "code": "DZ-24",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Guelma"
+    }
+  },
+  {
+    "code": "DZ-25",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Constantine"
+    }
+  },
+  {
+    "code": "DZ-26",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Médéa"
+    }
+  },
+  {
+    "code": "DZ-27",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Mostaganem"
+    }
+  },
+  {
+    "code": "DZ-28",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "M'sila"
+    }
+  },
+  {
+    "code": "DZ-29",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Mascara"
+    }
+  },
+  {
+    "code": "DZ-30",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Ouargla"
+    }
+  },
+  {
+    "code": "DZ-31",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Oran"
+    }
+  },
+  {
+    "code": "DZ-32",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "El Bayadh"
+    }
+  },
+  {
+    "code": "DZ-33",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Illizi"
+    }
+  },
+  {
+    "code": "DZ-34",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Bordj Bou Arréridj"
+    }
+  },
+  {
+    "code": "DZ-35",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Boumerdès"
+    }
+  },
+  {
+    "code": "DZ-36",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "El Tarf"
+    }
+  },
+  {
+    "code": "DZ-37",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Tindouf"
+    }
+  },
+  {
+    "code": "DZ-38",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Tissemsilt"
+    }
+  },
+  {
+    "code": "DZ-39",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "El Oued"
+    }
+  },
+  {
+    "code": "DZ-40",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Khenchela"
+    }
+  },
+  {
+    "code": "DZ-41",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Souk Ahras"
+    }
+  },
+  {
+    "code": "DZ-42",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Tipaza"
+    }
+  },
+  {
+    "code": "DZ-43",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Mila"
+    }
+  },
+  {
+    "code": "DZ-44",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Aïn Defla"
+    }
+  },
+  {
+    "code": "DZ-45",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Naama"
+    }
+  },
+  {
+    "code": "DZ-46",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Aïn Témouchent"
+    }
+  },
+  {
+    "code": "DZ-47",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Ghardaïa"
+    }
+  },
+  {
+    "code": "DZ-48",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Relizane"
+    }
+  },
+  {
+    "code": "DZ-49",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Timimoun"
+    }
+  },
+  {
+    "code": "DZ-50",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Bordj Badji Mokhtar"
+    }
+  },
+  {
+    "code": "DZ-51",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Ouled Djellal"
+    }
+  },
+  {
+    "code": "DZ-52",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Béni Abbès"
+    }
+  },
+  {
+    "code": "DZ-53",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "In Salah"
+    }
+  },
+  {
+    "code": "DZ-54",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "In Guezzam"
+    }
+  },
+  {
+    "code": "DZ-55",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Touggourt"
+    }
+  },
+  {
+    "code": "DZ-56",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Djanet"
+    }
+  },
+  {
+    "code": "DZ-57",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "El Meghaier"
+    }
+  },
+  {
+    "code": "DZ-58",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "El Meniaa"
+    }
+  }
+]

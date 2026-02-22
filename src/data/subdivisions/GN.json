@@ -1,0 +1,10 @@
+[
+  { "code": "GN-B", "type": "region", "names": { "fr": "Boké" } },
+  { "code": "GN-C", "type": "governorate", "names": { "fr": "Conakry" } },
+  { "code": "GN-D", "type": "region", "names": { "fr": "Kindia" } },
+  { "code": "GN-F", "type": "region", "names": { "fr": "Faranah" } },
+  { "code": "GN-K", "type": "region", "names": { "fr": "Kankan" } },
+  { "code": "GN-L", "type": "region", "names": { "fr": "Labé" } },
+  { "code": "GN-M", "type": "region", "names": { "fr": "Mamou" } },
+  { "code": "GN-N", "type": "region", "names": { "fr": "Nzérékoré" } }
+]

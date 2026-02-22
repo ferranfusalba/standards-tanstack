@@ -1,0 +1,5 @@
+[
+  { "code": "KM-A", "type": "island", "names": { "fr": "Anjouan", "ar": "أنجوان" } },
+  { "code": "KM-G", "type": "island", "names": { "fr": "Grande Comore", "ar": "القمر الكبرى" } },
+  { "code": "KM-M", "type": "island", "names": { "fr": "Mohéli", "ar": "موهيلي" } }
+]

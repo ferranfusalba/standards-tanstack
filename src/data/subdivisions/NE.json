@@ -1,0 +1,10 @@
+[
+  { "code": "NE-1", "type": "region", "names": { "fr": "Agadez" } },
+  { "code": "NE-2", "type": "region", "names": { "fr": "Diffa" } },
+  { "code": "NE-3", "type": "region", "names": { "fr": "Dosso" } },
+  { "code": "NE-4", "type": "region", "names": { "fr": "Maradi" } },
+  { "code": "NE-5", "type": "region", "names": { "fr": "Tahoua" } },
+  { "code": "NE-6", "type": "region", "names": { "fr": "Tillabéri" } },
+  { "code": "NE-7", "type": "region", "names": { "fr": "Zinder" } },
+  { "code": "NE-8", "type": "urban community", "names": { "fr": "Niamey" } }
+]

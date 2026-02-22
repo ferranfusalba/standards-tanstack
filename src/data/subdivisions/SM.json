@@ -1,0 +1,11 @@
+[
+  { "code": "SM-01", "type": "municipality", "names": { "it": "Acquaviva" } },
+  { "code": "SM-02", "type": "municipality", "names": { "it": "Chiesanuova" } },
+  { "code": "SM-03", "type": "municipality", "names": { "it": "Domagnano" } },
+  { "code": "SM-04", "type": "municipality", "names": { "it": "Faetano" } },
+  { "code": "SM-05", "type": "municipality", "names": { "it": "Fiorentino" } },
+  { "code": "SM-06", "type": "municipality", "names": { "it": "Borgo Maggiore" } },
+  { "code": "SM-07", "type": "municipality", "names": { "it": "Città di San Marino" } },
+  { "code": "SM-08", "type": "municipality", "names": { "it": "Montegiardino" } },
+  { "code": "SM-09", "type": "municipality", "names": { "it": "Serravalle" } }
+]

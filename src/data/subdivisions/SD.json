@@ -1,0 +1,20 @@
+[
+  { "code": "SD-DC", "type": "state", "names": { "ar": "وسط دارفور" } },
+  { "code": "SD-DE", "type": "state", "names": { "ar": "شرق دارفور" } },
+  { "code": "SD-DN", "type": "state", "names": { "ar": "شمال دارفور" } },
+  { "code": "SD-DS", "type": "state", "names": { "ar": "جنوب دارفور" } },
+  { "code": "SD-DW", "type": "state", "names": { "ar": "غرب دارفور" } },
+  { "code": "SD-GD", "type": "state", "names": { "ar": "القضارف" } },
+  { "code": "SD-GK", "type": "state", "names": { "ar": "غرب كردفان" } },
+  { "code": "SD-GZ", "type": "state", "names": { "ar": "الجزيرة" } },
+  { "code": "SD-KA", "type": "state", "names": { "ar": "كسلا" } },
+  { "code": "SD-KH", "type": "state", "names": { "ar": "الخرطوم" } },
+  { "code": "SD-KN", "type": "state", "names": { "ar": "شمال كردفان" } },
+  { "code": "SD-KS", "type": "state", "names": { "ar": "جنوب كردفان" } },
+  { "code": "SD-NB", "type": "state", "names": { "ar": "النيل الأزرق" } },
+  { "code": "SD-NO", "type": "state", "names": { "ar": "الشمالية" } },
+  { "code": "SD-NR", "type": "state", "names": { "ar": "نهر النيل" } },
+  { "code": "SD-NW", "type": "state", "names": { "ar": "النيل الأبيض" } },
+  { "code": "SD-RS", "type": "state", "names": { "ar": "البحر الأحمر" } },
+  { "code": "SD-SI", "type": "state", "names": { "ar": "سنار" } }
+]

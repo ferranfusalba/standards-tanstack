@@ -1,0 +1,9 @@
+[
+  { "code": "PK-BA", "type": "province", "names": { "ur": "بلوچستان", "en": "Balochistan" } },
+  { "code": "PK-GB", "type": "area", "names": { "ur": "گلگت-بلتستان", "en": "Gilgit-Baltistan" } },
+  { "code": "PK-IS", "type": "federal capital territory", "names": { "ur": "اسلام آباد", "en": "Islamabad" } },
+  { "code": "PK-JK", "type": "territory", "names": { "ur": "آزاد جموں و کشمیر", "en": "Azad Jammu and Kashmir" } },
+  { "code": "PK-KP", "type": "province", "names": { "ur": "خیبر پختونخوا", "en": "Khyber Pakhtunkhwa" } },
+  { "code": "PK-PB", "type": "province", "names": { "ur": "پنجاب", "en": "Punjab" } },
+  { "code": "PK-SD", "type": "province", "names": { "ur": "سندھ", "en": "Sindh" } }
+]

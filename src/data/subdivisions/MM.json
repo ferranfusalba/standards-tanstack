@@ -1,0 +1,17 @@
+[
+  { "code": "MM-01", "type": "region", "names": { "my": "စစ်ကိုင်းတိုင်းဒေသကြီး" } },
+  { "code": "MM-02", "type": "region", "names": { "my": "ပဲခူးတိုင်းဒေသကြီး" } },
+  { "code": "MM-03", "type": "region", "names": { "my": "မကွေးတိုင်းဒေသကြီး" } },
+  { "code": "MM-04", "type": "region", "names": { "my": "မန္တလေးတိုင်းဒေသကြီး" } },
+  { "code": "MM-05", "type": "region", "names": { "my": "တနင်္သာရီတိုင်းဒေသကြီး" } },
+  { "code": "MM-06", "type": "region", "names": { "my": "ရန်ကုန်တိုင်းဒေသကြီး" } },
+  { "code": "MM-07", "type": "region", "names": { "my": "ဧရာဝတီတိုင်းဒေသကြီး" } },
+  { "code": "MM-11", "type": "state", "names": { "my": "ကချင်ပြည်နယ်" } },
+  { "code": "MM-12", "type": "state", "names": { "my": "ကယားပြည်နယ်" } },
+  { "code": "MM-13", "type": "state", "names": { "my": "ကရင်ပြည်နယ်" } },
+  { "code": "MM-14", "type": "state", "names": { "my": "ချင်းပြည်နယ်" } },
+  { "code": "MM-15", "type": "state", "names": { "my": "မွန်ပြည်နယ်" } },
+  { "code": "MM-16", "type": "state", "names": { "my": "ရခိုင်ပြည်နယ်" } },
+  { "code": "MM-17", "type": "state", "names": { "my": "ရှမ်းပြည်နယ်" } },
+  { "code": "MM-18", "type": "union territory", "names": { "my": "နေပြည်တော် ပြည်ထောင်စုနယ်မြေ" } }
+]

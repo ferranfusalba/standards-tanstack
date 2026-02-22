@@ -1,0 +1,17 @@
+[
+  { "code": "MR-01", "type": "region", "names": { "ar": "الحوض الشرقي" } },
+  { "code": "MR-02", "type": "region", "names": { "ar": "الحوض الغربي" } },
+  { "code": "MR-03", "type": "region", "names": { "ar": "العصابة" } },
+  { "code": "MR-04", "type": "region", "names": { "ar": "كوركول" } },
+  { "code": "MR-05", "type": "region", "names": { "ar": "البراكنة" } },
+  { "code": "MR-06", "type": "region", "names": { "ar": "الترارزة" } },
+  { "code": "MR-07", "type": "region", "names": { "ar": "آدرار" } },
+  { "code": "MR-08", "type": "region", "names": { "ar": "داخلت نواذيبو" } },
+  { "code": "MR-09", "type": "region", "names": { "ar": "تكانت" } },
+  { "code": "MR-10", "type": "region", "names": { "ar": "كيدي ماغا" } },
+  { "code": "MR-11", "type": "region", "names": { "ar": "تيرس زمور" } },
+  { "code": "MR-12", "type": "region", "names": { "ar": "إنشيري" } },
+  { "code": "MR-13", "type": "district", "names": { "ar": "نواكشوط الغربية" } },
+  { "code": "MR-14", "type": "district", "names": { "ar": "نواكشوط الشمالية" } },
+  { "code": "MR-15", "type": "district", "names": { "ar": "نواكشوط الجنوبية" } }
+]

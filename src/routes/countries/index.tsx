@@ -3,6 +3,8 @@ import { createFileRoute } from '@tanstack/react-router'
 import {
   flexRender,
   getCoreRowModel,
+  getExpandedRowModel,
+  getFilteredRowModel,
   getPaginationRowModel,
   getSortedRowModel,
   useReactTable,
@@ -34,8 +36,73 @@ export const Route = createFileRoute('/countries/')({
   }),
 })
 
+type Subdivision = NonNullable<Country['subdivisions']>[number]
+
+function toFlag(alpha2: string): string {
+  return [...alpha2.toUpperCase()].map(c => String.fromCodePoint(0x1F1E6 + c.charCodeAt(0) - 65)).join('')
+}
+
+function SubdivisionsExpandedRow({ subs, colSpan }: { subs: Subdivision[]; colSpan: number }) {
+  const langCodes = [...new Set(subs.flatMap(sub => Object.keys(sub.names)))]
+  const hasType = subs.some(sub => sub.type !== undefined)
+  return (
+    <tr className="bg-gray-800/50">
+      <td colSpan={colSpan} className="px-6 py-3">
+        <table className="text-xs text-gray-300 w-auto">
+          <thead>
+            <tr className="text-gray-500">
+              <th className="pr-4 pb-1 text-left font-normal">Flag</th>
+              <th className="pr-6 pb-1 text-left font-normal">Code</th>
+              {hasType && <th className="pr-6 pb-1 text-left font-normal">Type</th>}
+              {langCodes.map(lang => (
+                <th key={lang} className="pr-6 pb-1 text-left font-normal">{lang}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {subs.map((sub) => {
+              const flag = sub.flag ?? (sub.iso1 ? toFlag(sub.iso1) : undefined)
+              return (
+                <tr key={sub.code}>
+                  <td className="pr-4 py-0.5">{flag ?? ''}</td>
+                  <td className="pr-6 py-0.5 font-mono">
+                    {sub.code}
+                    {sub.iso1 && (
+                      <span className="ml-2 px-1.5 py-0.5 bg-blue-900 text-blue-300 rounded">{sub.iso1}</span>
+                    )}
+                  </td>
+                  {hasType && <td className="pr-6 py-0.5 text-gray-400">{sub.type ? Object.entries(sub.type).map(([lang, name]) => `${name} (${lang})`).join(', ') : ''}</td>}
+                  {langCodes.map(lang => (
+                    <td key={lang} className="pr-6 py-0.5">{sub.names[lang] ?? ''}</td>
+                  ))}
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  )
+}
+
+function getCellHighlight(colId: string, original: Country): string {
+  if (colId === 'icaoCode' && original.icaoCode && original.icaoCode !== original.alpha3Code) return 'bg-red-950 text-red-300'
+  if (colId === 'dsitCode' && original.dsitCode && original.dsitCode !== original.alpha2Code && original.dsitCode !== original.alpha3Code) return 'bg-red-950 text-red-300'
+  if (colId === 'iocCode' && original.iocCode && original.iocCode !== original.alpha3Code) return 'bg-red-950 text-red-300'
+  if (colId === 'unMembership') {
+    if (original.unMembership === 'member') return 'bg-green-950 text-green-300'
+    if (original.unMembership === 'observer') return 'bg-blue-950 text-blue-300'
+    if (original.unMembership === 'non-member') return 'bg-red-950 text-red-300'
+    if (original.sovereignState) return 'bg-gray-800 text-gray-400'
+  }
+  if (colId === 'euMember' && original.euMember) return 'bg-green-950 text-green-300'
+  return ''
+}
+
 function Countries() {
   const { countriesIntl, countriesUN, countriesMissing } = Route.useLoaderData()
+  const [intlGlobalFilter, setIntlGlobalFilter] = React.useState('')
+  const [unGlobalFilter, setUnGlobalFilter] = React.useState('')
 
   const columnsIntl = React.useMemo<ColumnDef<Country>[]>(
     () => [
@@ -45,12 +112,13 @@ function Countries() {
         cell: (info) => <span className="text-2xl">{info.getValue<string>()}</span>,
         size: 60,
         maxSize: 60,
+        enableGlobalFilter: false,
       },
       {
-        accessorKey: 'code',
-        header: 'A2',
-        size: 60,
-        maxSize: 60,
+        accessorKey: 'alpha2Code',
+        header: 'Alpha-2',
+        size: 80,
+        maxSize: 80,
       },
       {
         accessorKey: 'name',
@@ -68,24 +136,83 @@ function Countries() {
         cell: (info) => <span className="text-2xl">{info.getValue<string>()}</span>,
         size: 60,
         maxSize: 60,
+        enableGlobalFilter: false,
       },
       {
-        accessorKey: 'code',
-        header: 'A2',
-        size: 60,
-        maxSize: 60,
-      },
-      {
-        accessorKey: 'code3',
-        header: 'A3',
-        size: 70,
-        maxSize: 70,
-      },
-      {
-        accessorKey: 'vehicleCode',
-        header: 'Vehicle',
+        accessorKey: 'alpha2Code',
+        header: 'Alpha-2',
         size: 80,
         maxSize: 80,
+      },
+      {
+        accessorKey: 'alpha3Code',
+        header: 'Alpha-3',
+        size: 80,
+        maxSize: 80,
+      },
+      {
+        accessorKey: 'subdivisions',
+        header: '3166-2',
+        size: 70,
+        maxSize: 70,
+        cell: ({ row }) => {
+          const subs = row.original.subdivisions
+          if (!subs?.length) return <span className="text-gray-600">-</span>
+          return (
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); row.toggleExpanded() }}
+              className="cursor-pointer hover:bg-gray-700 px-2 py-1 rounded flex items-center gap-1"
+            >
+              <span>{subs.length}</span>
+              <span className="text-xs">{row.getIsExpanded() ? '▼' : '▶'}</span>
+            </button>
+          )
+        },
+        enableGlobalFilter: false,
+      },
+      {
+        accessorKey: 'icaoCode',
+        header: 'ICAO',
+        size: 90,
+        maxSize: 90,
+        cell: (info) => info.getValue<string>() ?? '-',
+      },
+      {
+        accessorKey: 'dsitCode',
+        header: 'DSIT',
+        size: 80,
+        maxSize: 80,
+        cell: (info) => info.getValue<string>() ?? '-',
+      },
+      {
+        accessorKey: 'iocCode',
+        header: 'IOC',
+        size: 70,
+        maxSize: 70,
+        cell: (info) => info.getValue<string>() ?? '-',
+      },
+      {
+        accessorKey: 'unMembership',
+        header: '🇺🇳',
+        size: 50,
+        maxSize: 50,
+        cell: (info) => info.row.original.sovereignState ?? '',
+        enableGlobalFilter: false,
+      },
+      {
+        accessorKey: 'euMember',
+        header: '🇪🇺',
+        size: 50,
+        maxSize: 50,
+        cell: () => '',
+        enableGlobalFilter: false,
+      },
+      {
+        accessorKey: 'region',
+        header: 'Region',
+        size: 100,
+        maxSize: 100,
       },
       {
         accessorKey: 'name',
@@ -99,32 +226,38 @@ function Countries() {
     data: countriesIntl,
     columns: columnsIntl,
     getCoreRowModel: getCoreRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
+    globalFilterFn: 'includesString',
+    state: { globalFilter: intlGlobalFilter },
+    onGlobalFilterChange: setIntlGlobalFilter,
     initialState: {
       pagination: {
         pageSize: 20,
       },
     },
-    filterFns: {
-      fuzzy: fuzzyFilter,
-    },
+    filterFns: { fuzzy: fuzzyFilter },
   })
 
   const tableUN = useReactTable({
     data: countriesUN,
     columns: columnsUN,
     getCoreRowModel: getCoreRowModel(),
+    getExpandedRowModel: getExpandedRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
+    getRowCanExpand: (row) => !!(row.original.subdivisions?.length),
+    globalFilterFn: 'includesString',
+    state: { globalFilter: unGlobalFilter },
+    onGlobalFilterChange: setUnGlobalFilter,
     initialState: {
       pagination: {
         pageSize: 20,
       },
     },
-    filterFns: {
-      fuzzy: fuzzyFilter,
-    },
+    filterFns: { fuzzy: fuzzyFilter },
   })
 
   const columnsMissing = React.useMemo<ColumnDef<Country>[]>(
@@ -135,28 +268,71 @@ function Countries() {
         cell: (info) => <span className="text-2xl">{info.getValue<string>()}</span>,
         size: 60,
         maxSize: 60,
+        enableGlobalFilter: false,
       },
       {
-        accessorKey: 'code',
-        header: 'A2',
-        size: 60,
-        maxSize: 60,
-      },
-      {
-        accessorKey: 'code3',
-        header: 'A3',
-        size: 70,
-        maxSize: 70,
-      },
-      {
-        accessorKey: 'vehicleCode',
-        header: 'Vehicle',
+        accessorKey: 'alpha2Code',
+        header: 'Alpha-2',
         size: 80,
         maxSize: 80,
       },
       {
+        accessorKey: 'alpha3Code',
+        header: 'Alpha-3',
+        size: 80,
+        maxSize: 80,
+      },
+      {
+        accessorKey: 'icaoCode',
+        header: 'ICAO',
+        size: 90,
+        maxSize: 90,
+        cell: (info) => info.getValue<string>() ?? '-',
+      },
+      {
+        accessorKey: 'dsitCode',
+        header: 'DSIT',
+        size: 80,
+        maxSize: 80,
+        cell: (info) => info.getValue<string>() ?? '-',
+      },
+      {
+        accessorKey: 'iocCode',
+        header: 'IOC',
+        size: 70,
+        maxSize: 70,
+        cell: (info) => info.getValue<string>() ?? '-',
+      },
+      {
+        accessorKey: 'unMembership',
+        header: '🇺🇳',
+        size: 50,
+        maxSize: 50,
+        cell: (info) => info.row.original.sovereignState ?? '',
+        enableGlobalFilter: false,
+      },
+      {
+        accessorKey: 'euMember',
+        header: '🇪🇺',
+        size: 50,
+        maxSize: 50,
+        cell: () => '',
+        enableGlobalFilter: false,
+      },
+      {
+        accessorKey: 'region',
+        header: 'Region',
+        size: 100,
+        maxSize: 100,
+      },
+      {
         accessorKey: 'name',
         header: 'Name',
+      },
+      {
+        accessorKey: 'notes',
+        header: 'Notes',
+        cell: (info) => info.getValue<string>() ?? '',
       },
     ],
     []
@@ -173,18 +349,16 @@ function Countries() {
         pageSize: 20,
       },
     },
-    filterFns: {
-      fuzzy: fuzzyFilter,
-    },
+    filterFns: { fuzzy: fuzzyFilter },
   })
 
   return (
     <div className="min-h-screen bg-gray-900 p-6">
       <h1 className="text-3xl font-bold text-white mb-6">Countries</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {/* Left: Intl API */}
-        <div>
+        <div className="md:col-span-1">
           <h2 className="text-xl font-semibold text-white mb-2">
             Intl API (Built-in)
           </h2>
@@ -195,6 +369,13 @@ function Countries() {
             <li>• Coverage: All ISO country codes</li>
             <li>• Addons: None</li>
           </ul>
+          <input
+            type="text"
+            value={intlGlobalFilter}
+            onChange={e => setIntlGlobalFilter(e.target.value)}
+            placeholder="Search by name or code…"
+            className="w-full px-3 py-2 mb-3 bg-gray-800 border border-gray-600 rounded text-white text-sm placeholder-gray-500 focus:outline-none focus:border-gray-400"
+          />
           <p className="text-sm text-gray-400 mb-4">
             Total: {countriesIntl.length} countries
           </p>
@@ -312,7 +493,7 @@ function Countries() {
         </div>
 
         {/* Right: UN M49 */}
-        <div>
+        <div className="md:col-span-3">
           <h2 className="text-xl font-semibold text-white mb-2">
             UN M49 Standard (Official)
           </h2>
@@ -321,8 +502,15 @@ function Countries() {
             <li>• Standard: ISO 3166-1 Alpha-2/Alpha-3 + UN M49 numeric codes</li>
             <li>• Updates: Manually updated from official UN source</li>
             <li>• Coverage: All 249 officially assigned countries and territories</li>
-            <li>• Addons: Vienna Convention vehicle plate codes (UNECE)</li>
+            <li>• Addons: ICAO 9303 passport codes, DSIT vehicle codes, IOC Olympic codes, UN &amp; EU membership</li>
           </ul>
+          <input
+            type="text"
+            value={unGlobalFilter}
+            onChange={e => setUnGlobalFilter(e.target.value)}
+            placeholder="Search by name or code…"
+            className="w-full px-3 py-2 mb-3 bg-gray-800 border border-gray-600 rounded text-white text-sm placeholder-gray-500 focus:outline-none focus:border-gray-400"
+          />
           <p className="text-sm text-gray-400 mb-4">
             Total: {countriesUN.length} countries
           </p>
@@ -367,24 +555,32 @@ function Countries() {
               </thead>
               <tbody className="divide-y divide-gray-700">
                 {tableUN.getRowModel().rows.map((row) => (
-                  <tr key={row.id} className="hover:bg-gray-800 transition-colors">
-                    {row.getVisibleCells().map((cell) => (
-                      <td
-                        key={cell.id}
-                        className="px-4 py-3 whitespace-nowrap"
-                        style={{
-                          width: cell.column.getSize(),
-                          minWidth: cell.column.getSize(),
-                          maxWidth: cell.column.getSize()
-                        }}
-                      >
-                        {flexRender(
-                          cell.column.columnDef.cell,
-                          cell.getContext()
-                        )}
-                      </td>
-                    ))}
-                  </tr>
+                  <React.Fragment key={row.id}>
+                    <tr className="hover:bg-gray-800 transition-colors">
+                      {row.getVisibleCells().map((cell) => (
+                        <td
+                          key={cell.id}
+                          className={`px-4 py-3 whitespace-nowrap ${getCellHighlight(cell.column.id, cell.row.original)}`}
+                          style={{
+                            width: cell.column.getSize(),
+                            minWidth: cell.column.getSize(),
+                            maxWidth: cell.column.getSize()
+                          }}
+                        >
+                          {flexRender(
+                            cell.column.columnDef.cell,
+                            cell.getContext()
+                          )}
+                        </td>
+                      ))}
+                    </tr>
+                    {row.getIsExpanded() && (
+                      <SubdivisionsExpandedRow
+                        subs={row.original.subdivisions ?? []}
+                        colSpan={row.getVisibleCells().length}
+                      />
+                    )}
+                  </React.Fragment>
                 ))}
               </tbody>
             </table>
@@ -445,11 +641,6 @@ function Countries() {
         <h2 className="text-2xl font-semibold text-white mb-4">
           Missing Countries (Not in Official Standards)
         </h2>
-        <ul className="text-xs text-gray-400 mb-3 space-y-1">
-          <li>• Kosovo: User-assigned code (XK) used by EU, IMF, SWIFT</li>
-          <li>• Taiwan: Listed in UN M49 but not a UN member state</li>
-          <li>• Note: These have emoji flags and ISO codes but special status</li>
-        </ul>
         <p className="text-sm text-gray-400 mb-4">
           Total: {countriesMissing.length} countries
         </p>
@@ -494,7 +685,7 @@ function Countries() {
                   {row.getVisibleCells().map((cell) => (
                     <td
                       key={cell.id}
-                      className="px-4 py-3"
+                      className={`px-4 py-3 ${getCellHighlight(cell.column.id, cell.row.original)}`}
                       style={{ width: cell.column.getSize() }}
                     >
                       {flexRender(

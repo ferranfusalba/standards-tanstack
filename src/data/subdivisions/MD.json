@@ -1,0 +1,30 @@
+[
+  {
+    "code": "MD-GA",
+    "type": "autonomous territorial unit",
+    "names": {
+      "ro": "Găgăuzia"
+    }
+  },
+  {
+    "code": "MD-CU",
+    "type": "municipality",
+    "names": {
+      "ro": "Chișinău"
+    }
+  },
+  {
+    "code": "MD-BA",
+    "type": "municipality",
+    "names": {
+      "ro": "Bălți"
+    }
+  },
+  {
+    "code": "MD-SN",
+    "type": "territorial unit",
+    "names": {
+      "ro": "Stînga Nistrului"
+    }
+  }
+]

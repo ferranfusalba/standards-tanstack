@@ -1,0 +1,379 @@
+[
+  {
+    "code": "CN-AH",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Anhui"
+    }
+  },
+  {
+    "code": "CN-BJ",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "zh": "zhíxiáshì"
+    },
+    "names": {
+      "zh": "Beijing"
+    }
+  },
+  {
+    "code": "CN-CQ",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "zh": "zhíxiáshì"
+    },
+    "names": {
+      "zh": "Chongqing"
+    }
+  },
+  {
+    "code": "CN-FJ",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Fujian"
+    }
+  },
+  {
+    "code": "CN-GD",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Guangdong"
+    }
+  },
+  {
+    "code": "CN-GS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Gansu"
+    }
+  },
+  {
+    "code": "CN-GX",
+    "type": {
+      "en": "autonomous region",
+      "fr": "région autonome",
+      "zh": "zìzhìqū"
+    },
+    "names": {
+      "zh": "Guangxi Zhuangzu"
+    }
+  },
+  {
+    "code": "CN-GZ",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Guizhou"
+    }
+  },
+  {
+    "code": "CN-HA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Henan"
+    }
+  },
+  {
+    "code": "CN-HB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Hubei"
+    }
+  },
+  {
+    "code": "CN-HE",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Hebei"
+    }
+  },
+  {
+    "code": "CN-HI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Hainan"
+    }
+  },
+  {
+    "code": "CN-HK",
+    "type": {
+      "en": "special administrative region",
+      "fr": "région administrative spéciale",
+      "zh": "tèbiéxíngzhèngqū"
+    },
+    "names": {
+      "zh": "Xianggang"
+    },
+    "iso1": "HK"
+  },
+  {
+    "code": "CN-HL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Heilongjiang"
+    }
+  },
+  {
+    "code": "CN-HN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Hunan"
+    }
+  },
+  {
+    "code": "CN-JL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Jilin"
+    }
+  },
+  {
+    "code": "CN-JS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Jiangsu"
+    }
+  },
+  {
+    "code": "CN-JX",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Jiangxi"
+    }
+  },
+  {
+    "code": "CN-LN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Liaoning"
+    }
+  },
+  {
+    "code": "CN-MO",
+    "type": {
+      "en": "special administrative region",
+      "fr": "région administrative spéciale",
+      "zh": "tèbiéxíngzhèngqū"
+    },
+    "names": {
+      "zh": "Aomen"
+    },
+    "iso1": "MO"
+  },
+  {
+    "code": "CN-NM",
+    "type": {
+      "en": "autonomous region",
+      "fr": "région autonome",
+      "zh": "zìzhìqū"
+    },
+    "names": {
+      "zh": "Nei Mongol"
+    }
+  },
+  {
+    "code": "CN-NX",
+    "type": {
+      "en": "autonomous region",
+      "fr": "région autonome",
+      "zh": "zìzhìqū"
+    },
+    "names": {
+      "zh": "Ningxia Huizu"
+    }
+  },
+  {
+    "code": "CN-QH",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Qinghai"
+    }
+  },
+  {
+    "code": "CN-SC",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Sichuan"
+    }
+  },
+  {
+    "code": "CN-SD",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Shandong"
+    }
+  },
+  {
+    "code": "CN-SH",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "zh": "zhíxiáshì"
+    },
+    "names": {
+      "zh": "Shanghai"
+    }
+  },
+  {
+    "code": "CN-SN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Shaanxi"
+    }
+  },
+  {
+    "code": "CN-SX",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Shanxi"
+    }
+  },
+  {
+    "code": "CN-TJ",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "zh": "zhíxiáshì"
+    },
+    "names": {
+      "zh": "Tianjin"
+    }
+  },
+  {
+    "code": "CN-TW",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Taiwan"
+    },
+    "iso1": "TW"
+  },
+  {
+    "code": "CN-XJ",
+    "type": {
+      "en": "autonomous region",
+      "fr": "région autonome",
+      "zh": "zìzhìqū"
+    },
+    "names": {
+      "zh": "Xinjiang Uygur"
+    }
+  },
+  {
+    "code": "CN-XZ",
+    "type": {
+      "en": "autonomous region",
+      "fr": "région autonome",
+      "zh": "zìzhìqū"
+    },
+    "names": {
+      "zh": "Xizang"
+    }
+  },
+  {
+    "code": "CN-YN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Yunnan"
+    }
+  },
+  {
+    "code": "CN-ZJ",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "zh": "shěng"
+    },
+    "names": {
+      "zh": "Zhejiang"
+    }
+  }
+]

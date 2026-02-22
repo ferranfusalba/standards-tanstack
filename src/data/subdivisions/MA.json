@@ -1,0 +1,14 @@
+[
+  { "code": "MA-01", "type": "region", "names": { "ar": "طنجة-تطوان-الحسيمة", "fr": "Tanger-Tétouan-Al Hoceïma" } },
+  { "code": "MA-02", "type": "region", "names": { "ar": "الشرق", "fr": "L'Oriental" } },
+  { "code": "MA-03", "type": "region", "names": { "ar": "فاس-مكناس", "fr": "Fès-Meknès" } },
+  { "code": "MA-04", "type": "region", "names": { "ar": "الرباط-سلا-القنيطرة", "fr": "Rabat-Salé-Kénitra" } },
+  { "code": "MA-05", "type": "region", "names": { "ar": "بني ملال-خنيفرة", "fr": "Béni Mellal-Khénifra" } },
+  { "code": "MA-06", "type": "region", "names": { "ar": "الدار البيضاء-سطات", "fr": "Casablanca-Settat" } },
+  { "code": "MA-07", "type": "region", "names": { "ar": "مراكش-آسفي", "fr": "Marrakech-Safi" } },
+  { "code": "MA-08", "type": "region", "names": { "ar": "درعة-تافيلالت", "fr": "Drâa-Tafilalet" } },
+  { "code": "MA-09", "type": "region", "names": { "ar": "سوس-ماسة", "fr": "Souss-Massa" } },
+  { "code": "MA-10", "type": "region", "names": { "ar": "كلميم-واد نون", "fr": "Guelmim-Oued Noun" } },
+  { "code": "MA-11", "type": "region", "names": { "ar": "العيون-الساقية الحمراء", "fr": "Laâyoune-Sakia El Hamra" } },
+  { "code": "MA-12", "type": "region", "names": { "ar": "الداخلة-وادي الذهب", "fr": "Dakhla-Oued Ed-Dahab" } }
+]

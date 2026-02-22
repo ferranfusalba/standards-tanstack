@@ -1,0 +1,14 @@
+[
+  { "code": "MU-AG", "type": "dependency", "names": { "en": "Agalega Islands" } },
+  { "code": "MU-BL", "type": "district", "names": { "en": "Black River" } },
+  { "code": "MU-CC", "type": "dependency", "names": { "en": "Cargados Carajos Shoals" } },
+  { "code": "MU-FL", "type": "district", "names": { "en": "Flacq" } },
+  { "code": "MU-GP", "type": "district", "names": { "en": "Grand Port" } },
+  { "code": "MU-MO", "type": "district", "names": { "en": "Moka" } },
+  { "code": "MU-PA", "type": "district", "names": { "en": "Pamplemousses" } },
+  { "code": "MU-PL", "type": "district", "names": { "en": "Port Louis" } },
+  { "code": "MU-PW", "type": "district", "names": { "en": "Plaines Wilhems" } },
+  { "code": "MU-RO", "type": "dependency", "names": { "en": "Rodrigues" } },
+  { "code": "MU-RR", "type": "district", "names": { "en": "Rivière du Rempart" } },
+  { "code": "MU-SA", "type": "district", "names": { "en": "Savanne" } }
+]

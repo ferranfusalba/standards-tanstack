@@ -1,0 +1,12 @@
+[
+  { "code": "LT-AL", "type": "county", "names": { "lt": "Alytaus apskritis" } },
+  { "code": "LT-KU", "type": "county", "names": { "lt": "Kauno apskritis" } },
+  { "code": "LT-KL", "type": "county", "names": { "lt": "Klaipėdos apskritis" } },
+  { "code": "LT-MR", "type": "county", "names": { "lt": "Marijampolės apskritis" } },
+  { "code": "LT-PN", "type": "county", "names": { "lt": "Panevėžio apskritis" } },
+  { "code": "LT-SA", "type": "county", "names": { "lt": "Šiaulių apskritis" } },
+  { "code": "LT-TA", "type": "county", "names": { "lt": "Tauragės apskritis" } },
+  { "code": "LT-TE", "type": "county", "names": { "lt": "Telšių apskritis" } },
+  { "code": "LT-UT", "type": "county", "names": { "lt": "Utenos apskritis" } },
+  { "code": "LT-VL", "type": "county", "names": { "lt": "Vilniaus apskritis" } }
+]

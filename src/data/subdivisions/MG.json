@@ -1,0 +1,8 @@
+[
+  { "code": "MG-A", "type": "province", "names": { "mg": "Antsiranana", "fr": "Antsiranana" } },
+  { "code": "MG-D", "type": "province", "names": { "mg": "Antananarivo", "fr": "Antananarivo" } },
+  { "code": "MG-F", "type": "province", "names": { "mg": "Fianarantsoa", "fr": "Fianarantsoa" } },
+  { "code": "MG-M", "type": "province", "names": { "mg": "Mahajanga", "fr": "Mahajanga" } },
+  { "code": "MG-T", "type": "province", "names": { "mg": "Toamasina", "fr": "Toamasina" } },
+  { "code": "MG-U", "type": "province", "names": { "mg": "Toliara", "fr": "Toliara" } }
+]

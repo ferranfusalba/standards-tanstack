@@ -1,0 +1,178 @@
+[
+  {
+    "code": "DE-BB",
+    "type": {
+      "en": "Land",
+      "fr": "land",
+      "de": "Land"
+    },
+    "names": {
+      "de": "Brandenburg"
+    }
+  },
+  {
+    "code": "DE-BE",
+    "type": {
+      "en": "Land",
+      "fr": "land",
+      "de": "Land"
+    },
+    "names": {
+      "de": "Berlin"
+    }
+  },
+  {
+    "code": "DE-BW",
+    "type": {
+      "en": "Land",
+      "fr": "land",
+      "de": "Land"
+    },
+    "names": {
+      "de": "Baden-Württemberg"
+    }
+  },
+  {
+    "code": "DE-BY",
+    "type": {
+      "en": "Land",
+      "fr": "land",
+      "de": "Land"
+    },
+    "names": {
+      "de": "Bayern"
+    }
+  },
+  {
+    "code": "DE-HB",
+    "type": {
+      "en": "Land",
+      "fr": "land",
+      "de": "Land"
+    },
+    "names": {
+      "de": "Bremen"
+    }
+  },
+  {
+    "code": "DE-HE",
+    "type": {
+      "en": "Land",
+      "fr": "land",
+      "de": "Land"
+    },
+    "names": {
+      "de": "Hessen"
+    }
+  },
+  {
+    "code": "DE-HH",
+    "type": {
+      "en": "Land",
+      "fr": "land",
+      "de": "Land"
+    },
+    "names": {
+      "de": "Hamburg"
+    }
+  },
+  {
+    "code": "DE-MV",
+    "type": {
+      "en": "Land",
+      "fr": "land",
+      "de": "Land"
+    },
+    "names": {
+      "de": "Mecklenburg-Vorpommern"
+    }
+  },
+  {
+    "code": "DE-NI",
+    "type": {
+      "en": "Land",
+      "fr": "land",
+      "de": "Land"
+    },
+    "names": {
+      "de": "Niedersachsen"
+    }
+  },
+  {
+    "code": "DE-NW",
+    "type": {
+      "en": "Land",
+      "fr": "land",
+      "de": "Land"
+    },
+    "names": {
+      "de": "Nordrhein-Westfalen"
+    }
+  },
+  {
+    "code": "DE-RP",
+    "type": {
+      "en": "Land",
+      "fr": "land",
+      "de": "Land"
+    },
+    "names": {
+      "de": "Rheinland-Pfalz"
+    }
+  },
+  {
+    "code": "DE-SH",
+    "type": {
+      "en": "Land",
+      "fr": "land",
+      "de": "Land"
+    },
+    "names": {
+      "de": "Schleswig-Holstein"
+    }
+  },
+  {
+    "code": "DE-SL",
+    "type": {
+      "en": "Land",
+      "fr": "land",
+      "de": "Land"
+    },
+    "names": {
+      "de": "Saarland"
+    }
+  },
+  {
+    "code": "DE-SN",
+    "type": {
+      "en": "Land",
+      "fr": "land",
+      "de": "Land"
+    },
+    "names": {
+      "de": "Sachsen"
+    }
+  },
+  {
+    "code": "DE-ST",
+    "type": {
+      "en": "Land",
+      "fr": "land",
+      "de": "Land"
+    },
+    "names": {
+      "de": "Sachsen-Anhalt"
+    }
+  },
+  {
+    "code": "DE-TH",
+    "type": {
+      "en": "Land",
+      "fr": "land",
+      "de": "Land"
+    },
+    "names": {
+      "de": "Thüringen"
+    }
+  }
+]

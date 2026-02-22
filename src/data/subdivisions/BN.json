@@ -1,0 +1,6 @@
+[
+  { "code": "BN-BE", "type": { "en": "district", "fr": "district", "ms": "daerah" }, "names": { "en": "Belait", "ms": "Belait" } },
+  { "code": "BN-BM", "type": { "en": "district", "fr": "district", "ms": "daerah" }, "names": { "en": "Brunei-Muara", "ms": "Brunei dan Muara" } },
+  { "code": "BN-TE", "type": { "en": "district", "fr": "district", "ms": "daerah" }, "names": { "en": "Temburong", "ms": "Temburong" } },
+  { "code": "BN-TU", "type": { "en": "district", "fr": "district", "ms": "daerah" }, "names": { "en": "Tutong", "ms": "Tutong" } }
+]

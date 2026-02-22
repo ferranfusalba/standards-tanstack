@@ -1,0 +1,303 @@
+[
+  {
+    "code": "HU-BA",
+    "type": "county",
+    "names": {
+      "hu": "Baranya"
+    }
+  },
+  {
+    "code": "HU-BC",
+    "type": "county",
+    "names": {
+      "hu": "Békéscsaba"
+    }
+  },
+  {
+    "code": "HU-BE",
+    "type": "county",
+    "names": {
+      "hu": "Békés"
+    }
+  },
+  {
+    "code": "HU-BK",
+    "type": "county",
+    "names": {
+      "hu": "Bács-Kiskun"
+    }
+  },
+  {
+    "code": "HU-BU",
+    "type": "capital city",
+    "names": {
+      "hu": "Budapest"
+    }
+  },
+  {
+    "code": "HU-BZ",
+    "type": "county",
+    "names": {
+      "hu": "Borsod-Abaúj-Zemplén"
+    }
+  },
+  {
+    "code": "HU-CS",
+    "type": "county",
+    "names": {
+      "hu": "Csongrád-Csanád"
+    }
+  },
+  {
+    "code": "HU-DE",
+    "type": "county",
+    "names": {
+      "hu": "Debrecen"
+    }
+  },
+  {
+    "code": "HU-DU",
+    "type": "county",
+    "names": {
+      "hu": "Dunaújváros"
+    }
+  },
+  {
+    "code": "HU-EG",
+    "type": "county",
+    "names": {
+      "hu": "Eger"
+    }
+  },
+  {
+    "code": "HU-ER",
+    "type": "county",
+    "names": {
+      "hu": "Érd"
+    }
+  },
+  {
+    "code": "HU-FE",
+    "type": "county",
+    "names": {
+      "hu": "Fejér"
+    }
+  },
+  {
+    "code": "HU-GS",
+    "type": "county",
+    "names": {
+      "hu": "Győr-Moson-Sopron"
+    }
+  },
+  {
+    "code": "HU-GY",
+    "type": "county",
+    "names": {
+      "hu": "Győr"
+    }
+  },
+  {
+    "code": "HU-HB",
+    "type": "county",
+    "names": {
+      "hu": "Hajdú-Bihar"
+    }
+  },
+  {
+    "code": "HU-HE",
+    "type": "county",
+    "names": {
+      "hu": "Heves"
+    }
+  },
+  {
+    "code": "HU-HV",
+    "type": "county",
+    "names": {
+      "hu": "Hódmezővásárhely"
+    }
+  },
+  {
+    "code": "HU-JN",
+    "type": "county",
+    "names": {
+      "hu": "Jász-Nagykun-Szolnok"
+    }
+  },
+  {
+    "code": "HU-KE",
+    "type": "county",
+    "names": {
+      "hu": "Komárom-Esztergom"
+    }
+  },
+  {
+    "code": "HU-KM",
+    "type": "county",
+    "names": {
+      "hu": "Kecskemét"
+    }
+  },
+  {
+    "code": "HU-KV",
+    "type": "county",
+    "names": {
+      "hu": "Kaposvár"
+    }
+  },
+  {
+    "code": "HU-MI",
+    "type": "county",
+    "names": {
+      "hu": "Miskolc"
+    }
+  },
+  {
+    "code": "HU-NK",
+    "type": "county",
+    "names": {
+      "hu": "Nagykanizsa"
+    }
+  },
+  {
+    "code": "HU-NO",
+    "type": "county",
+    "names": {
+      "hu": "Nógrád"
+    }
+  },
+  {
+    "code": "HU-NY",
+    "type": "county",
+    "names": {
+      "hu": "Nyíregyháza"
+    }
+  },
+  {
+    "code": "HU-PE",
+    "type": "county",
+    "names": {
+      "hu": "Pest"
+    }
+  },
+  {
+    "code": "HU-PS",
+    "type": "county",
+    "names": {
+      "hu": "Pécs"
+    }
+  },
+  {
+    "code": "HU-SD",
+    "type": "county",
+    "names": {
+      "hu": "Szeged"
+    }
+  },
+  {
+    "code": "HU-SF",
+    "type": "county",
+    "names": {
+      "hu": "Székesfehérvár"
+    }
+  },
+  {
+    "code": "HU-SH",
+    "type": "county",
+    "names": {
+      "hu": "Szombathely"
+    }
+  },
+  {
+    "code": "HU-SK",
+    "type": "county",
+    "names": {
+      "hu": "Szolnok"
+    }
+  },
+  {
+    "code": "HU-SN",
+    "type": "county",
+    "names": {
+      "hu": "Sopron"
+    }
+  },
+  {
+    "code": "HU-SO",
+    "type": "county",
+    "names": {
+      "hu": "Somogy"
+    }
+  },
+  {
+    "code": "HU-SS",
+    "type": "county",
+    "names": {
+      "hu": "Szekszárd"
+    }
+  },
+  {
+    "code": "HU-ST",
+    "type": "county",
+    "names": {
+      "hu": "Salgótarján"
+    }
+  },
+  {
+    "code": "HU-SZ",
+    "type": "county",
+    "names": {
+      "hu": "Szabolcs-Szatmár-Bereg"
+    }
+  },
+  {
+    "code": "HU-TB",
+    "type": "county",
+    "names": {
+      "hu": "Tatabánya"
+    }
+  },
+  {
+    "code": "HU-TO",
+    "type": "county",
+    "names": {
+      "hu": "Tolna"
+    }
+  },
+  {
+    "code": "HU-VA",
+    "type": "county",
+    "names": {
+      "hu": "Vas"
+    }
+  },
+  {
+    "code": "HU-VE",
+    "type": "county",
+    "names": {
+      "hu": "Veszprém"
+    }
+  },
+  {
+    "code": "HU-VM",
+    "type": "county",
+    "names": {
+      "hu": "Veszprém city"
+    }
+  },
+  {
+    "code": "HU-ZA",
+    "type": "county",
+    "names": {
+      "hu": "Zala"
+    }
+  },
+  {
+    "code": "HU-ZE",
+    "type": "county",
+    "names": {
+      "hu": "Zalaegerszeg"
+    }
+  }
+]

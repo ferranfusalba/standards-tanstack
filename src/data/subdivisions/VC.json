@@ -1,0 +1,8 @@
+[
+  { "code": "VC-01", "type": "parish", "names": { "en": "Charlotte" } },
+  { "code": "VC-02", "type": "parish", "names": { "en": "Saint Andrew" } },
+  { "code": "VC-03", "type": "parish", "names": { "en": "Saint David" } },
+  { "code": "VC-04", "type": "parish", "names": { "en": "Saint George" } },
+  { "code": "VC-05", "type": "parish", "names": { "en": "Saint Patrick" } },
+  { "code": "VC-06", "type": "parish", "names": { "en": "Grenadines" } }
+]

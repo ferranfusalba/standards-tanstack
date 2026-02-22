@@ -1,0 +1,10 @@
+[
+  { "code": "GQ-AN", "type": "province", "names": { "es": "Annobón" } },
+  { "code": "GQ-BN", "type": "province", "names": { "es": "Bioko Norte" } },
+  { "code": "GQ-BS", "type": "province", "names": { "es": "Bioko Sur" } },
+  { "code": "GQ-CS", "type": "province", "names": { "es": "Centro Sur" } },
+  { "code": "GQ-DJ", "type": "province", "names": { "es": "Djibloho" } },
+  { "code": "GQ-KN", "type": "province", "names": { "es": "Kié-Ntem" } },
+  { "code": "GQ-LI", "type": "province", "names": { "es": "Litoral" } },
+  { "code": "GQ-WN", "type": "province", "names": { "es": "Wele-Nzas" } }
+]

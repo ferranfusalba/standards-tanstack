@@ -1,0 +1,860 @@
+[
+  {
+    "code": "AZ-ABS",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Abşeron"
+    }
+  },
+  {
+    "code": "AZ-AGA",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Ağstafa"
+    }
+  },
+  {
+    "code": "AZ-AGC",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Ağcabədi"
+    }
+  },
+  {
+    "code": "AZ-AGM",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Ağdam"
+    }
+  },
+  {
+    "code": "AZ-AGS",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Ağdaş"
+    }
+  },
+  {
+    "code": "AZ-AGU",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Ağsu"
+    }
+  },
+  {
+    "code": "AZ-AST",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Astara"
+    }
+  },
+  {
+    "code": "AZ-BA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "az": "şəhər"
+    },
+    "names": {
+      "az": "Bakı"
+    }
+  },
+  {
+    "code": "AZ-BAB",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Babək"
+    }
+  },
+  {
+    "code": "AZ-BAL",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Balakən"
+    }
+  },
+  {
+    "code": "AZ-BAR",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Bərdə"
+    }
+  },
+  {
+    "code": "AZ-BEY",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Beyləqan"
+    }
+  },
+  {
+    "code": "AZ-BIL",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Biləsuvar"
+    }
+  },
+  {
+    "code": "AZ-CAB",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Cəbrayıl"
+    }
+  },
+  {
+    "code": "AZ-CAL",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Cəlilabad"
+    }
+  },
+  {
+    "code": "AZ-CUL",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Culfa"
+    }
+  },
+  {
+    "code": "AZ-DAS",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Daşkəsən"
+    }
+  },
+  {
+    "code": "AZ-FUZ",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Füzuli"
+    }
+  },
+  {
+    "code": "AZ-GA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "az": "şəhər"
+    },
+    "names": {
+      "az": "Gəncə"
+    }
+  },
+  {
+    "code": "AZ-GAD",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Gədəbəy"
+    }
+  },
+  {
+    "code": "AZ-GOR",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Goranboy"
+    }
+  },
+  {
+    "code": "AZ-GOY",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Göyçay"
+    }
+  },
+  {
+    "code": "AZ-GYG",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Göygöl"
+    }
+  },
+  {
+    "code": "AZ-HAC",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Hacıqabul"
+    }
+  },
+  {
+    "code": "AZ-IMI",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "İmişli"
+    }
+  },
+  {
+    "code": "AZ-ISM",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "İsmayıllı"
+    }
+  },
+  {
+    "code": "AZ-KAL",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Kəlbəcər"
+    }
+  },
+  {
+    "code": "AZ-KAN",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Kəngərli"
+    }
+  },
+  {
+    "code": "AZ-KUR",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Kürdəmir"
+    }
+  },
+  {
+    "code": "AZ-LA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "az": "şəhər"
+    },
+    "names": {
+      "az": "Lənkəran"
+    }
+  },
+  {
+    "code": "AZ-LAC",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Laçın"
+    }
+  },
+  {
+    "code": "AZ-LAN",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Lənkəran"
+    }
+  },
+  {
+    "code": "AZ-LER",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Lerik"
+    }
+  },
+  {
+    "code": "AZ-MAS",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Masallı"
+    }
+  },
+  {
+    "code": "AZ-MI",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "az": "şəhər"
+    },
+    "names": {
+      "az": "Mingəçevir"
+    }
+  },
+  {
+    "code": "AZ-NA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "az": "şəhər"
+    },
+    "names": {
+      "az": "Naftalan"
+    }
+  },
+  {
+    "code": "AZ-NEF",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Neftçala"
+    }
+  },
+  {
+    "code": "AZ-NV",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "az": "şəhər"
+    },
+    "names": {
+      "az": "Naxçıvan"
+    }
+  },
+  {
+    "code": "AZ-NX",
+    "type": {
+      "en": "autonomous republic",
+      "fr": "république autonome",
+      "az": "muxtar respublika"
+    },
+    "names": {
+      "az": "Naxçıvan"
+    }
+  },
+  {
+    "code": "AZ-OGU",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Oğuz"
+    }
+  },
+  {
+    "code": "AZ-ORD",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Ordubad"
+    }
+  },
+  {
+    "code": "AZ-QAB",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Qəbələ"
+    }
+  },
+  {
+    "code": "AZ-QAX",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Qax"
+    }
+  },
+  {
+    "code": "AZ-QAZ",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Qazax"
+    }
+  },
+  {
+    "code": "AZ-QBA",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Quba"
+    }
+  },
+  {
+    "code": "AZ-QBI",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Qubadlı"
+    }
+  },
+  {
+    "code": "AZ-QOB",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Qobustan"
+    }
+  },
+  {
+    "code": "AZ-QUS",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Qusar"
+    }
+  },
+  {
+    "code": "AZ-SA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "az": "şəhər"
+    },
+    "names": {
+      "az": "Şəki"
+    }
+  },
+  {
+    "code": "AZ-SAB",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Sabirabad"
+    }
+  },
+  {
+    "code": "AZ-SAD",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Sədərək"
+    }
+  },
+  {
+    "code": "AZ-SAH",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Şahbuz"
+    }
+  },
+  {
+    "code": "AZ-SAK",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Şəki"
+    }
+  },
+  {
+    "code": "AZ-SAL",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Salyan"
+    }
+  },
+  {
+    "code": "AZ-SAR",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Şərur"
+    }
+  },
+  {
+    "code": "AZ-SAT",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Saatlı"
+    }
+  },
+  {
+    "code": "AZ-SBN",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Şabran"
+    }
+  },
+  {
+    "code": "AZ-SIY",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Siyəzən"
+    }
+  },
+  {
+    "code": "AZ-SKR",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Şəmkir"
+    }
+  },
+  {
+    "code": "AZ-SM",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "az": "şəhər"
+    },
+    "names": {
+      "az": "Sumqayıt"
+    }
+  },
+  {
+    "code": "AZ-SMI",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Şamaxı"
+    }
+  },
+  {
+    "code": "AZ-SMX",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Samux"
+    }
+  },
+  {
+    "code": "AZ-SR",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "az": "şəhər"
+    },
+    "names": {
+      "az": "Şirvan"
+    }
+  },
+  {
+    "code": "AZ-SUS",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Şuşa"
+    }
+  },
+  {
+    "code": "AZ-TAR",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Tərtər"
+    }
+  },
+  {
+    "code": "AZ-TOV",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Tovuz"
+    }
+  },
+  {
+    "code": "AZ-UCA",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Ucar"
+    }
+  },
+  {
+    "code": "AZ-XA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "az": "şəhər"
+    },
+    "names": {
+      "az": "Xankəndi"
+    }
+  },
+  {
+    "code": "AZ-XAC",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Xaçmaz"
+    }
+  },
+  {
+    "code": "AZ-XCI",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Xocalı"
+    }
+  },
+  {
+    "code": "AZ-XVD",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Xocavənd"
+    }
+  },
+  {
+    "code": "AZ-XIZ",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Xızı"
+    }
+  },
+  {
+    "code": "AZ-YAR",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Yardımlı"
+    }
+  },
+  {
+    "code": "AZ-YE",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "az": "şəhər"
+    },
+    "names": {
+      "az": "Yevlax"
+    }
+  },
+  {
+    "code": "AZ-YEV",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Yevlax"
+    }
+  },
+  {
+    "code": "AZ-ZAN",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Zəngilan"
+    }
+  },
+  {
+    "code": "AZ-ZAQ",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Zaqatala"
+    }
+  },
+  {
+    "code": "AZ-ZAR",
+    "type": {
+      "en": "rayon",
+      "fr": "district",
+      "az": "rayon"
+    },
+    "names": {
+      "az": "Zərdab"
+    }
+  }
+]

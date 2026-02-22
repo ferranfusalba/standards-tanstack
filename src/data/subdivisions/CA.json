@@ -1,0 +1,145 @@
+[
+  {
+    "code": "CA-AB",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Alberta",
+      "fr": "Alberta"
+    }
+  },
+  {
+    "code": "CA-BC",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "British Columbia",
+      "fr": "Colombie-Britannique"
+    }
+  },
+  {
+    "code": "CA-MB",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Manitoba",
+      "fr": "Manitoba"
+    }
+  },
+  {
+    "code": "CA-NB",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "New Brunswick",
+      "fr": "Nouveau-Brunswick"
+    }
+  },
+  {
+    "code": "CA-NL",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Newfoundland and Labrador",
+      "fr": "Terre-Neuve-et-Labrador"
+    }
+  },
+  {
+    "code": "CA-NS",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Nova Scotia",
+      "fr": "Nouvelle-Écosse"
+    }
+  },
+  {
+    "code": "CA-NT",
+    "type": {
+      "en": "territory",
+      "fr": "territoire"
+    },
+    "names": {
+      "en": "Northwest Territories",
+      "fr": "Territoires du Nord-Ouest"
+    }
+  },
+  {
+    "code": "CA-NU",
+    "type": {
+      "en": "territory",
+      "fr": "territoire"
+    },
+    "names": {
+      "en": "Nunavut",
+      "fr": "Nunavut"
+    }
+  },
+  {
+    "code": "CA-ON",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Ontario",
+      "fr": "Ontario"
+    }
+  },
+  {
+    "code": "CA-PE",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Prince Edward Island",
+      "fr": "Île-du-Prince-Édouard"
+    }
+  },
+  {
+    "code": "CA-QC",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Quebec",
+      "fr": "Québec"
+    }
+  },
+  {
+    "code": "CA-SK",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Saskatchewan",
+      "fr": "Saskatchewan"
+    }
+  },
+  {
+    "code": "CA-YT",
+    "type": {
+      "en": "territory",
+      "fr": "territoire"
+    },
+    "names": {
+      "en": "Yukon",
+      "fr": "Yukon"
+    }
+  }
+]

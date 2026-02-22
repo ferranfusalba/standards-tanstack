@@ -1,0 +1,10 @@
+[
+  { "code": "LB-AK", "type": "governorate", "names": { "ar": "عكار" } },
+  { "code": "LB-AS", "type": "governorate", "names": { "ar": "لبنان الشمالي" } },
+  { "code": "LB-BA", "type": "governorate", "names": { "ar": "بيروت" } },
+  { "code": "LB-BH", "type": "governorate", "names": { "ar": "بعلبك-الهرمل" } },
+  { "code": "LB-BI", "type": "governorate", "names": { "ar": "البقاع" } },
+  { "code": "LB-JA", "type": "governorate", "names": { "ar": "جنوب لبنان" } },
+  { "code": "LB-JL", "type": "governorate", "names": { "ar": "جبل لبنان" } },
+  { "code": "LB-NA", "type": "governorate", "names": { "ar": "النبطية" } }
+]

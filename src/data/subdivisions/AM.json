@@ -1,0 +1,123 @@
+[
+  {
+    "code": "AM-AG",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "hy": "marz"
+    },
+    "names": {
+      "hy": "Aragatsotn"
+    }
+  },
+  {
+    "code": "AM-AR",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "hy": "marz"
+    },
+    "names": {
+      "hy": "Ararat"
+    }
+  },
+  {
+    "code": "AM-AV",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "hy": "marz"
+    },
+    "names": {
+      "hy": "Armavir"
+    }
+  },
+  {
+    "code": "AM-ER",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "hy": "k'aġak'"
+    },
+    "names": {
+      "hy": "Yerevan"
+    }
+  },
+  {
+    "code": "AM-GR",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "hy": "marz"
+    },
+    "names": {
+      "hy": "Gegharkunik"
+    }
+  },
+  {
+    "code": "AM-KT",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "hy": "marz"
+    },
+    "names": {
+      "hy": "Kotayk"
+    }
+  },
+  {
+    "code": "AM-LO",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "hy": "marz"
+    },
+    "names": {
+      "hy": "Lori"
+    }
+  },
+  {
+    "code": "AM-SH",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "hy": "marz"
+    },
+    "names": {
+      "hy": "Shirak"
+    }
+  },
+  {
+    "code": "AM-SU",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "hy": "marz"
+    },
+    "names": {
+      "hy": "Syunik"
+    }
+  },
+  {
+    "code": "AM-TV",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "hy": "marz"
+    },
+    "names": {
+      "hy": "Tavush"
+    }
+  },
+  {
+    "code": "AM-VD",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "hy": "marz"
+    },
+    "names": {
+      "hy": "Vayots Dzor"
+    }
+  }
+]

@@ -1,0 +1,17 @@
+[
+  { "code": "LR-BG", "type": "county", "names": { "en": "Bong" } },
+  { "code": "LR-BM", "type": "county", "names": { "en": "Bomi" } },
+  { "code": "LR-CM", "type": "county", "names": { "en": "Grand Cape Mount" } },
+  { "code": "LR-GB", "type": "county", "names": { "en": "Grand Bassa" } },
+  { "code": "LR-GG", "type": "county", "names": { "en": "Grand Gedeh" } },
+  { "code": "LR-GK", "type": "county", "names": { "en": "Grand Kru" } },
+  { "code": "LR-GP", "type": "county", "names": { "en": "Gbarpolu" } },
+  { "code": "LR-LO", "type": "county", "names": { "en": "Lofa" } },
+  { "code": "LR-MG", "type": "county", "names": { "en": "Margibi" } },
+  { "code": "LR-MO", "type": "county", "names": { "en": "Montserrado" } },
+  { "code": "LR-MY", "type": "county", "names": { "en": "Maryland" } },
+  { "code": "LR-NI", "type": "county", "names": { "en": "Nimba" } },
+  { "code": "LR-RI", "type": "county", "names": { "en": "River Cess" } },
+  { "code": "LR-RG", "type": "county", "names": { "en": "River Gee" } },
+  { "code": "LR-SI", "type": "county", "names": { "en": "Sinoe" } }
+]

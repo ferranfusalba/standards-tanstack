@@ -1,0 +1,7 @@
+[
+  { "code": "RW-01", "type": "province", "names": { "rw": "Kigali", "fr": "Kigali" } },
+  { "code": "RW-02", "type": "province", "names": { "rw": "Amajyepfo", "fr": "Sud" } },
+  { "code": "RW-03", "type": "province", "names": { "rw": "Amajyaruguru", "fr": "Nord" } },
+  { "code": "RW-04", "type": "province", "names": { "rw": "Uburasirazuba", "fr": "Est" } },
+  { "code": "RW-05", "type": "province", "names": { "rw": "Uburengerazuba", "fr": "Ouest" } }
+]

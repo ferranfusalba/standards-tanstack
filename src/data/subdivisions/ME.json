@@ -1,0 +1,170 @@
+[
+  {
+    "code": "ME-01",
+    "type": "municipality",
+    "names": {
+      "sr": "Andrijevica"
+    }
+  },
+  {
+    "code": "ME-02",
+    "type": "municipality",
+    "names": {
+      "sr": "Bar"
+    }
+  },
+  {
+    "code": "ME-03",
+    "type": "municipality",
+    "names": {
+      "sr": "Berane"
+    }
+  },
+  {
+    "code": "ME-04",
+    "type": "municipality",
+    "names": {
+      "sr": "Bijelo Polje"
+    }
+  },
+  {
+    "code": "ME-05",
+    "type": "municipality",
+    "names": {
+      "sr": "Budva"
+    }
+  },
+  {
+    "code": "ME-06",
+    "type": "municipality",
+    "names": {
+      "sr": "Cetinje"
+    }
+  },
+  {
+    "code": "ME-07",
+    "type": "municipality",
+    "names": {
+      "sr": "Danilovgrad"
+    }
+  },
+  {
+    "code": "ME-08",
+    "type": "municipality",
+    "names": {
+      "sr": "Herceg-Novi"
+    }
+  },
+  {
+    "code": "ME-09",
+    "type": "municipality",
+    "names": {
+      "sr": "Kolašin"
+    }
+  },
+  {
+    "code": "ME-10",
+    "type": "municipality",
+    "names": {
+      "sr": "Kotor"
+    }
+  },
+  {
+    "code": "ME-11",
+    "type": "municipality",
+    "names": {
+      "sr": "Mojkovac"
+    }
+  },
+  {
+    "code": "ME-12",
+    "type": "municipality",
+    "names": {
+      "sr": "Nikšić"
+    }
+  },
+  {
+    "code": "ME-13",
+    "type": "municipality",
+    "names": {
+      "sr": "Plav"
+    }
+  },
+  {
+    "code": "ME-14",
+    "type": "municipality",
+    "names": {
+      "sr": "Pljevlja"
+    }
+  },
+  {
+    "code": "ME-15",
+    "type": "municipality",
+    "names": {
+      "sr": "Plužine"
+    }
+  },
+  {
+    "code": "ME-16",
+    "type": "municipality",
+    "names": {
+      "sr": "Podgorica"
+    }
+  },
+  {
+    "code": "ME-17",
+    "type": "municipality",
+    "names": {
+      "sr": "Rožaje"
+    }
+  },
+  {
+    "code": "ME-18",
+    "type": "municipality",
+    "names": {
+      "sr": "Šavnik"
+    }
+  },
+  {
+    "code": "ME-19",
+    "type": "municipality",
+    "names": {
+      "sr": "Tivat"
+    }
+  },
+  {
+    "code": "ME-20",
+    "type": "municipality",
+    "names": {
+      "sr": "Ulcinj"
+    }
+  },
+  {
+    "code": "ME-21",
+    "type": "municipality",
+    "names": {
+      "sr": "Žabljak"
+    }
+  },
+  {
+    "code": "ME-22",
+    "type": "municipality",
+    "names": {
+      "sr": "Gusinje"
+    }
+  },
+  {
+    "code": "ME-23",
+    "type": "municipality",
+    "names": {
+      "sr": "Petnjica"
+    }
+  },
+  {
+    "code": "ME-24",
+    "type": "municipality",
+    "names": {
+      "sr": "Tuzi"
+    }
+  }
+]

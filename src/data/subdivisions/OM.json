@@ -1,0 +1,13 @@
+[
+  { "code": "OM-BJ", "type": "governorate", "names": { "ar": "جنوب الباطنة" } },
+  { "code": "OM-BS", "type": "governorate", "names": { "ar": "شمال الباطنة" } },
+  { "code": "OM-BU", "type": "governorate", "names": { "ar": "البريمي" } },
+  { "code": "OM-DA", "type": "governorate", "names": { "ar": "الداخلية" } },
+  { "code": "OM-MA", "type": "governorate", "names": { "ar": "مسقط" } },
+  { "code": "OM-MU", "type": "governorate", "names": { "ar": "مسندم" } },
+  { "code": "OM-SJ", "type": "governorate", "names": { "ar": "جنوب الشرقية" } },
+  { "code": "OM-SS", "type": "governorate", "names": { "ar": "شمال الشرقية" } },
+  { "code": "OM-WU", "type": "governorate", "names": { "ar": "الوسطى" } },
+  { "code": "OM-ZA", "type": "governorate", "names": { "ar": "الظاهرة" } },
+  { "code": "OM-ZU", "type": "governorate", "names": { "ar": "ظفار" } }
+]

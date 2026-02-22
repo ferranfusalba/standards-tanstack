@@ -1,0 +1,9 @@
+[
+  { "code": "NP-P1", "type": "province", "names": { "ne": "कोशी प्रदेश" } },
+  { "code": "NP-P2", "type": "province", "names": { "ne": "मधेश प्रदेश" } },
+  { "code": "NP-P3", "type": "province", "names": { "ne": "बागमती प्रदेश" } },
+  { "code": "NP-P4", "type": "province", "names": { "ne": "गण्डकी प्रदेश" } },
+  { "code": "NP-P5", "type": "province", "names": { "ne": "लुम्बिनी प्रदेश" } },
+  { "code": "NP-P6", "type": "province", "names": { "ne": "कर्णाली प्रदेश" } },
+  { "code": "NP-P7", "type": "province", "names": { "ne": "सुदूरपश्चिम प्रदेश" } }
+]

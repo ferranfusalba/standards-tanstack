@@ -1,0 +1,1036 @@
+[
+  {
+    "code": "EE-37",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "et": "maakond"
+    },
+    "names": {
+      "et": "Harju maakond"
+    }
+  },
+  {
+    "code": "EE-39",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "et": "maakond"
+    },
+    "names": {
+      "et": "Hiiu maakond"
+    }
+  },
+  {
+    "code": "EE-45",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "et": "maakond"
+    },
+    "names": {
+      "et": "Ida-Viru maakond"
+    }
+  },
+  {
+    "code": "EE-50",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "et": "maakond"
+    },
+    "names": {
+      "et": "Jõgeva maakond"
+    }
+  },
+  {
+    "code": "EE-52",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "et": "maakond"
+    },
+    "names": {
+      "et": "Järva maakond"
+    }
+  },
+  {
+    "code": "EE-56",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "et": "maakond"
+    },
+    "names": {
+      "et": "Lääne maakond"
+    }
+  },
+  {
+    "code": "EE-60",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "et": "maakond"
+    },
+    "names": {
+      "et": "Lääne-Viru maakond"
+    }
+  },
+  {
+    "code": "EE-64",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "et": "maakond"
+    },
+    "names": {
+      "et": "Põlva maakond"
+    }
+  },
+  {
+    "code": "EE-68",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "et": "maakond"
+    },
+    "names": {
+      "et": "Pärnu maakond"
+    }
+  },
+  {
+    "code": "EE-71",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "et": "maakond"
+    },
+    "names": {
+      "et": "Rapla maakond"
+    }
+  },
+  {
+    "code": "EE-74",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "et": "maakond"
+    },
+    "names": {
+      "et": "Saare maakond"
+    }
+  },
+  {
+    "code": "EE-79",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "et": "maakond"
+    },
+    "names": {
+      "et": "Tartu maakond"
+    }
+  },
+  {
+    "code": "EE-81",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "et": "maakond"
+    },
+    "names": {
+      "et": "Valga maakond"
+    }
+  },
+  {
+    "code": "EE-84",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "et": "maakond"
+    },
+    "names": {
+      "et": "Viljandi maakond"
+    }
+  },
+  {
+    "code": "EE-87",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "et": "maakond"
+    },
+    "names": {
+      "et": "Võru maakond"
+    }
+  },
+  {
+    "code": "EE-130",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Alutaguse"
+    }
+  },
+  {
+    "code": "EE-141",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Anija"
+    }
+  },
+  {
+    "code": "EE-142",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Antsla"
+    }
+  },
+  {
+    "code": "EE-171",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Elva"
+    }
+  },
+  {
+    "code": "EE-184",
+    "type": {
+      "en": "urban municipality",
+      "fr": "municipalité urbaine",
+      "et": "linn"
+    },
+    "names": {
+      "et": "Haapsalu"
+    }
+  },
+  {
+    "code": "EE-191",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Haljala"
+    }
+  },
+  {
+    "code": "EE-198",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Harku"
+    }
+  },
+  {
+    "code": "EE-205",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Hiiumaa"
+    }
+  },
+  {
+    "code": "EE-214",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Häädemeeste"
+    }
+  },
+  {
+    "code": "EE-245",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Jõelähtme"
+    }
+  },
+  {
+    "code": "EE-247",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Jõgeva"
+    }
+  },
+  {
+    "code": "EE-251",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Jõhvi"
+    }
+  },
+  {
+    "code": "EE-255",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Järva"
+    }
+  },
+  {
+    "code": "EE-272",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Kadrina"
+    }
+  },
+  {
+    "code": "EE-283",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Kambja"
+    }
+  },
+  {
+    "code": "EE-284",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Kanepi"
+    }
+  },
+  {
+    "code": "EE-291",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Kastre"
+    }
+  },
+  {
+    "code": "EE-293",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Kehtna"
+    }
+  },
+  {
+    "code": "EE-296",
+    "type": {
+      "en": "urban municipality",
+      "fr": "municipalité urbaine",
+      "et": "linn"
+    },
+    "names": {
+      "et": "Keila"
+    }
+  },
+  {
+    "code": "EE-303",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Kihnu"
+    }
+  },
+  {
+    "code": "EE-305",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Kiili"
+    }
+  },
+  {
+    "code": "EE-317",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Kohila"
+    }
+  },
+  {
+    "code": "EE-321",
+    "type": {
+      "en": "urban municipality",
+      "fr": "municipalité urbaine",
+      "et": "linn"
+    },
+    "names": {
+      "et": "Kohtla-Järve"
+    }
+  },
+  {
+    "code": "EE-338",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Kose"
+    }
+  },
+  {
+    "code": "EE-353",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Kuusalu"
+    }
+  },
+  {
+    "code": "EE-424",
+    "type": {
+      "en": "urban municipality",
+      "fr": "municipalité urbaine",
+      "et": "linn"
+    },
+    "names": {
+      "et": "Loksa"
+    }
+  },
+  {
+    "code": "EE-430",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Lääneranna"
+    }
+  },
+  {
+    "code": "EE-431",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Lääne-Harju"
+    }
+  },
+  {
+    "code": "EE-432",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Luunja"
+    }
+  },
+  {
+    "code": "EE-441",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Lääne-Nigula"
+    }
+  },
+  {
+    "code": "EE-442",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Lüganuse"
+    }
+  },
+  {
+    "code": "EE-446",
+    "type": {
+      "en": "urban municipality",
+      "fr": "municipalité urbaine",
+      "et": "linn"
+    },
+    "names": {
+      "et": "Maardu"
+    }
+  },
+  {
+    "code": "EE-478",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Muhu"
+    }
+  },
+  {
+    "code": "EE-480",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Mulgi"
+    }
+  },
+  {
+    "code": "EE-486",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Mustvee"
+    }
+  },
+  {
+    "code": "EE-503",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Märjamaa"
+    }
+  },
+  {
+    "code": "EE-511",
+    "type": {
+      "en": "urban municipality",
+      "fr": "municipalité urbaine",
+      "et": "linn"
+    },
+    "names": {
+      "et": "Narva"
+    }
+  },
+  {
+    "code": "EE-514",
+    "type": {
+      "en": "urban municipality",
+      "fr": "municipalité urbaine",
+      "et": "linn"
+    },
+    "names": {
+      "et": "Narva-Jõesuu"
+    }
+  },
+  {
+    "code": "EE-528",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Nõo"
+    }
+  },
+  {
+    "code": "EE-557",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Otepää"
+    }
+  },
+  {
+    "code": "EE-567",
+    "type": {
+      "en": "urban municipality",
+      "fr": "municipalité urbaine",
+      "et": "linn"
+    },
+    "names": {
+      "et": "Paide"
+    }
+  },
+  {
+    "code": "EE-586",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Peipsiääre"
+    }
+  },
+  {
+    "code": "EE-615",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Põhja-Sakala"
+    }
+  },
+  {
+    "code": "EE-618",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Põltsamaa"
+    }
+  },
+  {
+    "code": "EE-622",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Põlva"
+    }
+  },
+  {
+    "code": "EE-624",
+    "type": {
+      "en": "urban municipality",
+      "fr": "municipalité urbaine",
+      "et": "linn"
+    },
+    "names": {
+      "et": "Pärnu"
+    }
+  },
+  {
+    "code": "EE-638",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Põhja-Pärnumaa"
+    }
+  },
+  {
+    "code": "EE-651",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Raasiku"
+    }
+  },
+  {
+    "code": "EE-653",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Rae"
+    }
+  },
+  {
+    "code": "EE-661",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Rakvere"
+    }
+  },
+  {
+    "code": "EE-663",
+    "type": {
+      "en": "urban municipality",
+      "fr": "municipalité urbaine",
+      "et": "linn"
+    },
+    "names": {
+      "et": "Rakvere"
+    }
+  },
+  {
+    "code": "EE-668",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Rapla"
+    }
+  },
+  {
+    "code": "EE-689",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Ruhnu"
+    }
+  },
+  {
+    "code": "EE-698",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Rõuge"
+    }
+  },
+  {
+    "code": "EE-708",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Räpina"
+    }
+  },
+  {
+    "code": "EE-712",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Saarde"
+    }
+  },
+  {
+    "code": "EE-714",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Saaremaa"
+    }
+  },
+  {
+    "code": "EE-719",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Saku"
+    }
+  },
+  {
+    "code": "EE-726",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Saue"
+    }
+  },
+  {
+    "code": "EE-732",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Setomaa"
+    }
+  },
+  {
+    "code": "EE-735",
+    "type": {
+      "en": "urban municipality",
+      "fr": "municipalité urbaine",
+      "et": "linn"
+    },
+    "names": {
+      "et": "Sillamäe"
+    }
+  },
+  {
+    "code": "EE-784",
+    "type": {
+      "en": "urban municipality",
+      "fr": "municipalité urbaine",
+      "et": "linn"
+    },
+    "names": {
+      "et": "Tallinn"
+    }
+  },
+  {
+    "code": "EE-792",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Tapa"
+    }
+  },
+  {
+    "code": "EE-793",
+    "type": {
+      "en": "urban municipality",
+      "fr": "municipalité urbaine",
+      "et": "linn"
+    },
+    "names": {
+      "et": "Tartu"
+    }
+  },
+  {
+    "code": "EE-796",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Tartu"
+    }
+  },
+  {
+    "code": "EE-803",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Toila"
+    }
+  },
+  {
+    "code": "EE-809",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Tori"
+    }
+  },
+  {
+    "code": "EE-824",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Tõrva"
+    }
+  },
+  {
+    "code": "EE-834",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Türi"
+    }
+  },
+  {
+    "code": "EE-855",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Valga"
+    }
+  },
+  {
+    "code": "EE-890",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Viimsi"
+    }
+  },
+  {
+    "code": "EE-897",
+    "type": {
+      "en": "urban municipality",
+      "fr": "municipalité urbaine",
+      "et": "linn"
+    },
+    "names": {
+      "et": "Viljandi"
+    }
+  },
+  {
+    "code": "EE-899",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Viljandi"
+    }
+  },
+  {
+    "code": "EE-901",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Vinni"
+    }
+  },
+  {
+    "code": "EE-903",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Viru-Nigula"
+    }
+  },
+  {
+    "code": "EE-907",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Vormsi"
+    }
+  },
+  {
+    "code": "EE-917",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Võru"
+    }
+  },
+  {
+    "code": "EE-919",
+    "type": {
+      "en": "urban municipality",
+      "fr": "municipalité urbaine",
+      "et": "linn"
+    },
+    "names": {
+      "et": "Võru"
+    }
+  },
+  {
+    "code": "EE-928",
+    "type": {
+      "en": "rural municipality",
+      "fr": "municipalité rurale",
+      "et": "vald"
+    },
+    "names": {
+      "et": "Väike-Maarja"
+    }
+  }
+]

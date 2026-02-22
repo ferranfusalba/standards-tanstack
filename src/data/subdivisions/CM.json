@@ -1,0 +1,112 @@
+[
+  {
+    "code": "CM-AD",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Adamaoua",
+      "en": "Adamawa"
+    }
+  },
+  {
+    "code": "CM-CE",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Centre",
+      "en": "Centre"
+    }
+  },
+  {
+    "code": "CM-EN",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Extrême-Nord",
+      "en": "Far North"
+    }
+  },
+  {
+    "code": "CM-ES",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Est",
+      "en": "East"
+    }
+  },
+  {
+    "code": "CM-LT",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Littoral",
+      "en": "Littoral"
+    }
+  },
+  {
+    "code": "CM-NO",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Nord",
+      "en": "North"
+    }
+  },
+  {
+    "code": "CM-NW",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Nord-Ouest",
+      "en": "North-West"
+    }
+  },
+  {
+    "code": "CM-OU",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Ouest",
+      "en": "West"
+    }
+  },
+  {
+    "code": "CM-SU",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Sud",
+      "en": "South"
+    }
+  },
+  {
+    "code": "CM-SW",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Sud-Ouest",
+      "en": "South-West"
+    }
+  }
+]

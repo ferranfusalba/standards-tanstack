@@ -1,0 +1,14 @@
+[
+  { "code": "BJ-AL", "type": { "en": "department", "fr": "département" }, "names": { "fr": "Alibori" } },
+  { "code": "BJ-AK", "type": { "en": "department", "fr": "département" }, "names": { "fr": "Atacora" } },
+  { "code": "BJ-AQ", "type": { "en": "department", "fr": "département" }, "names": { "fr": "Atlantique" } },
+  { "code": "BJ-BO", "type": { "en": "department", "fr": "département" }, "names": { "fr": "Borgou" } },
+  { "code": "BJ-CO", "type": { "en": "department", "fr": "département" }, "names": { "fr": "Collines" } },
+  { "code": "BJ-KO", "type": { "en": "department", "fr": "département" }, "names": { "fr": "Couffo" } },
+  { "code": "BJ-DO", "type": { "en": "department", "fr": "département" }, "names": { "fr": "Donga" } },
+  { "code": "BJ-LI", "type": { "en": "department", "fr": "département" }, "names": { "fr": "Littoral" } },
+  { "code": "BJ-MO", "type": { "en": "department", "fr": "département" }, "names": { "fr": "Mono" } },
+  { "code": "BJ-OU", "type": { "en": "department", "fr": "département" }, "names": { "fr": "Ouémé" } },
+  { "code": "BJ-PL", "type": { "en": "department", "fr": "département" }, "names": { "fr": "Plateau" } },
+  { "code": "BJ-ZO", "type": { "en": "department", "fr": "département" }, "names": { "fr": "Zou" } }
+]

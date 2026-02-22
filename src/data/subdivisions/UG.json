@@ -1,0 +1,6 @@
+[
+  { "code": "UG-C", "type": "geographical region", "names": { "en": "Central" } },
+  { "code": "UG-E", "type": "geographical region", "names": { "en": "Eastern" } },
+  { "code": "UG-N", "type": "geographical region", "names": { "en": "Northern" } },
+  { "code": "UG-W", "type": "geographical region", "names": { "en": "Western" } }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "code": "CI-AB",
+    "type": {
+      "en": "autonomous district",
+      "fr": "district autonome"
+    },
+    "names": {
+      "fr": "Abidjan"
+    }
+  },
+  {
+    "code": "CI-BS",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "fr": "Bas-Sassandra"
+    }
+  },
+  {
+    "code": "CI-CM",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "fr": "Comoé"
+    }
+  },
+  {
+    "code": "CI-DN",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "fr": "Denguélé"
+    }
+  },
+  {
+    "code": "CI-GD",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "fr": "Gôh-Djiboua"
+    }
+  },
+  {
+    "code": "CI-LC",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "fr": "Lacs"
+    }
+  },
+  {
+    "code": "CI-LG",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "fr": "Lagunes"
+    }
+  },
+  {
+    "code": "CI-MG",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "fr": "Montagnes"
+    }
+  },
+  {
+    "code": "CI-SM",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "fr": "Sassandra-Marahoué"
+    }
+  },
+  {
+    "code": "CI-SV",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "fr": "Savanes"
+    }
+  },
+  {
+    "code": "CI-VB",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "fr": "Vallée du Bandama"
+    }
+  },
+  {
+    "code": "CI-WR",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "fr": "Woroba"
+    }
+  },
+  {
+    "code": "CI-YM",
+    "type": {
+      "en": "autonomous district",
+      "fr": "district autonome"
+    },
+    "names": {
+      "fr": "Yamoussoukro"
+    }
+  },
+  {
+    "code": "CI-ZZ",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "fr": "Zanzan"
+    }
+  }
+]

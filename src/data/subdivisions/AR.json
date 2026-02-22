@@ -1,0 +1,266 @@
+[
+  {
+    "code": "AR-A",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Salta"
+    }
+  },
+  {
+    "code": "AR-B",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Buenos Aires"
+    }
+  },
+  {
+    "code": "AR-C",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "es": "ciudad"
+    },
+    "names": {
+      "es": "Ciudad Autónoma de Buenos Aires"
+    }
+  },
+  {
+    "code": "AR-D",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "San Luis"
+    }
+  },
+  {
+    "code": "AR-E",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Entre Ríos"
+    }
+  },
+  {
+    "code": "AR-F",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "La Rioja"
+    }
+  },
+  {
+    "code": "AR-G",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Santiago del Estero"
+    }
+  },
+  {
+    "code": "AR-H",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Chaco"
+    }
+  },
+  {
+    "code": "AR-J",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "San Juan"
+    }
+  },
+  {
+    "code": "AR-K",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Catamarca"
+    }
+  },
+  {
+    "code": "AR-L",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "La Pampa"
+    }
+  },
+  {
+    "code": "AR-M",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Mendoza"
+    }
+  },
+  {
+    "code": "AR-N",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Misiones"
+    }
+  },
+  {
+    "code": "AR-P",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Formosa"
+    }
+  },
+  {
+    "code": "AR-Q",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Neuquén"
+    }
+  },
+  {
+    "code": "AR-R",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Río Negro"
+    }
+  },
+  {
+    "code": "AR-S",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Santa Fe"
+    }
+  },
+  {
+    "code": "AR-T",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Tucumán"
+    }
+  },
+  {
+    "code": "AR-U",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Chubut"
+    }
+  },
+  {
+    "code": "AR-V",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Tierra del Fuego"
+    }
+  },
+  {
+    "code": "AR-W",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Corrientes"
+    }
+  },
+  {
+    "code": "AR-X",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Córdoba"
+    }
+  },
+  {
+    "code": "AR-Y",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Jujuy"
+    }
+  },
+  {
+    "code": "AR-Z",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Santa Cruz"
+    }
+  }
+]

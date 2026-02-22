@@ -1,0 +1,345 @@
+[
+  {
+    "code": "CH-AG",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Aargau"
+    }
+  },
+  {
+    "code": "CH-AI",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Appenzell Innerrhoden"
+    }
+  },
+  {
+    "code": "CH-AR",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Appenzell Ausserrhoden"
+    }
+  },
+  {
+    "code": "CH-BE",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Bern",
+      "fr": "Berne"
+    }
+  },
+  {
+    "code": "CH-BL",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Basel-Landschaft"
+    }
+  },
+  {
+    "code": "CH-BS",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Basel-Stadt"
+    }
+  },
+  {
+    "code": "CH-FR",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "fr": "Fribourg",
+      "de": "Freiburg"
+    }
+  },
+  {
+    "code": "CH-GE",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "fr": "Genève"
+    }
+  },
+  {
+    "code": "CH-GL",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Glarus"
+    }
+  },
+  {
+    "code": "CH-GR",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Graubünden",
+      "rm": "Grischun",
+      "it": "Grigioni"
+    }
+  },
+  {
+    "code": "CH-JU",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "fr": "Jura"
+    }
+  },
+  {
+    "code": "CH-LU",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Luzern"
+    }
+  },
+  {
+    "code": "CH-NE",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "fr": "Neuchâtel"
+    }
+  },
+  {
+    "code": "CH-NW",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Nidwalden"
+    }
+  },
+  {
+    "code": "CH-OW",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Obwalden"
+    }
+  },
+  {
+    "code": "CH-SG",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Sankt Gallen"
+    }
+  },
+  {
+    "code": "CH-SH",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Schaffhausen"
+    }
+  },
+  {
+    "code": "CH-SO",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Solothurn"
+    }
+  },
+  {
+    "code": "CH-SZ",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Schwyz"
+    }
+  },
+  {
+    "code": "CH-TG",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Thurgau"
+    }
+  },
+  {
+    "code": "CH-TI",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "it": "Ticino"
+    }
+  },
+  {
+    "code": "CH-UR",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Uri"
+    }
+  },
+  {
+    "code": "CH-VD",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "fr": "Vaud"
+    }
+  },
+  {
+    "code": "CH-VS",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "fr": "Valais",
+      "de": "Wallis"
+    }
+  },
+  {
+    "code": "CH-ZG",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Zug"
+    }
+  },
+  {
+    "code": "CH-ZH",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "de": "Kanton",
+      "it": "cantone",
+      "rm": "chantun"
+    },
+    "names": {
+      "de": "Zürich"
+    }
+  }
+]

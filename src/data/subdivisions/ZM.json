@@ -1,0 +1,12 @@
+[
+  { "code": "ZM-01", "type": "province", "names": { "en": "Western" } },
+  { "code": "ZM-02", "type": "province", "names": { "en": "Central" } },
+  { "code": "ZM-03", "type": "province", "names": { "en": "Eastern" } },
+  { "code": "ZM-04", "type": "province", "names": { "en": "Luapula" } },
+  { "code": "ZM-05", "type": "province", "names": { "en": "Northern" } },
+  { "code": "ZM-06", "type": "province", "names": { "en": "North-Western" } },
+  { "code": "ZM-07", "type": "province", "names": { "en": "Southern" } },
+  { "code": "ZM-08", "type": "province", "names": { "en": "Copperbelt" } },
+  { "code": "ZM-09", "type": "province", "names": { "en": "Lusaka" } },
+  { "code": "ZM-10", "type": "province", "names": { "en": "Muchinga" } }
+]

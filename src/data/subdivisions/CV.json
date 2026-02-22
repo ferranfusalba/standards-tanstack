@@ -1,0 +1,266 @@
+[
+  {
+    "code": "CV-B",
+    "type": {
+      "en": "geographical region",
+      "fr": "région géographique",
+      "pt": "região geográfica"
+    },
+    "names": {
+      "pt": "Ilhas de Barlavento"
+    }
+  },
+  {
+    "code": "CV-S",
+    "type": {
+      "en": "geographical region",
+      "fr": "région géographique",
+      "pt": "região geográfica"
+    },
+    "names": {
+      "pt": "Ilhas de Sotavento"
+    }
+  },
+  {
+    "code": "CV-BV",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "Boa Vista"
+    }
+  },
+  {
+    "code": "CV-BR",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "Brava"
+    }
+  },
+  {
+    "code": "CV-CA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "Santa Catarina"
+    }
+  },
+  {
+    "code": "CV-CF",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "Santa Catarina do Fogo"
+    }
+  },
+  {
+    "code": "CV-CR",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "Santa Cruz"
+    }
+  },
+  {
+    "code": "CV-MA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "Maio"
+    }
+  },
+  {
+    "code": "CV-MO",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "Mosteiros"
+    }
+  },
+  {
+    "code": "CV-PA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "Paul"
+    }
+  },
+  {
+    "code": "CV-PN",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "Porto Novo"
+    }
+  },
+  {
+    "code": "CV-PR",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "Praia"
+    }
+  },
+  {
+    "code": "CV-RB",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "Ribeira Brava"
+    }
+  },
+  {
+    "code": "CV-RG",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "Ribeira Grande"
+    }
+  },
+  {
+    "code": "CV-RS",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "Ribeira Grande de Santiago"
+    }
+  },
+  {
+    "code": "CV-SD",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "São Domingos"
+    }
+  },
+  {
+    "code": "CV-SF",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "São Filipe"
+    }
+  },
+  {
+    "code": "CV-SL",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "Sal"
+    }
+  },
+  {
+    "code": "CV-SM",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "São Miguel"
+    }
+  },
+  {
+    "code": "CV-SO",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "São Lourenço dos Órgãos"
+    }
+  },
+  {
+    "code": "CV-SS",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "São Salvador do Mundo"
+    }
+  },
+  {
+    "code": "CV-SV",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "São Vicente"
+    }
+  },
+  {
+    "code": "CV-TA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "Tarrafal"
+    }
+  },
+  {
+    "code": "CV-TS",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "pt": "concelho"
+    },
+    "names": {
+      "pt": "Tarrafal de São Nicolau"
+    }
+  }
+]

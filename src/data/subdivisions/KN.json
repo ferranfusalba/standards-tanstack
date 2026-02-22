@@ -1,0 +1,16 @@
+[
+  { "code": "KN-01", "type": "parish", "names": { "en": "Christ Church Nichola Town" } },
+  { "code": "KN-02", "type": "parish", "names": { "en": "Saint Anne Sandy Point" } },
+  { "code": "KN-03", "type": "parish", "names": { "en": "Saint George Basseterre" } },
+  { "code": "KN-04", "type": "parish", "names": { "en": "Saint George Gingerland" } },
+  { "code": "KN-05", "type": "parish", "names": { "en": "Saint James Windward" } },
+  { "code": "KN-06", "type": "parish", "names": { "en": "Saint John Capisterre" } },
+  { "code": "KN-07", "type": "parish", "names": { "en": "Saint John Figtree" } },
+  { "code": "KN-08", "type": "parish", "names": { "en": "Saint Mary Cayon" } },
+  { "code": "KN-09", "type": "parish", "names": { "en": "Saint Paul Capisterre" } },
+  { "code": "KN-10", "type": "parish", "names": { "en": "Saint Paul Charlestown" } },
+  { "code": "KN-11", "type": "parish", "names": { "en": "Saint Peter Basseterre" } },
+  { "code": "KN-12", "type": "parish", "names": { "en": "Saint Thomas Lowland" } },
+  { "code": "KN-13", "type": "parish", "names": { "en": "Saint Thomas Middle Island" } },
+  { "code": "KN-15", "type": "parish", "names": { "en": "Trinity Palmetto Point" } }
+]

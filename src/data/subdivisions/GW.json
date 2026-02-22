@@ -1,0 +1,11 @@
+[
+  { "code": "GW-BA", "type": "region", "names": { "pt": "Bafatá" } },
+  { "code": "GW-BL", "type": "region", "names": { "pt": "Bolama-Bijagós" } },
+  { "code": "GW-BM", "type": "region", "names": { "pt": "Biombo" } },
+  { "code": "GW-BS", "type": "autonomous sector", "names": { "pt": "Bissau" } },
+  { "code": "GW-CA", "type": "region", "names": { "pt": "Cacheu" } },
+  { "code": "GW-GA", "type": "region", "names": { "pt": "Gabú" } },
+  { "code": "GW-OI", "type": "region", "names": { "pt": "Oio" } },
+  { "code": "GW-QU", "type": "region", "names": { "pt": "Quinara" } },
+  { "code": "GW-TO", "type": "region", "names": { "pt": "Tombali" } }
+]

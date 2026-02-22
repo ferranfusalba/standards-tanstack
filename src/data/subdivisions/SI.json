@@ -1,0 +1,86 @@
+[
+  {
+    "code": "SI-001",
+    "type": "statistical region",
+    "names": {
+      "sl": "Pomurska"
+    }
+  },
+  {
+    "code": "SI-002",
+    "type": "statistical region",
+    "names": {
+      "sl": "Podravska"
+    }
+  },
+  {
+    "code": "SI-003",
+    "type": "statistical region",
+    "names": {
+      "sl": "Koroška"
+    }
+  },
+  {
+    "code": "SI-004",
+    "type": "statistical region",
+    "names": {
+      "sl": "Savinjska"
+    }
+  },
+  {
+    "code": "SI-005",
+    "type": "statistical region",
+    "names": {
+      "sl": "Zasavska"
+    }
+  },
+  {
+    "code": "SI-006",
+    "type": "statistical region",
+    "names": {
+      "sl": "Posavska"
+    }
+  },
+  {
+    "code": "SI-007",
+    "type": "statistical region",
+    "names": {
+      "sl": "Jugovzhodna Slovenija"
+    }
+  },
+  {
+    "code": "SI-008",
+    "type": "statistical region",
+    "names": {
+      "sl": "Primorsko-notranjska"
+    }
+  },
+  {
+    "code": "SI-009",
+    "type": "statistical region",
+    "names": {
+      "sl": "Osrednjeslovenska"
+    }
+  },
+  {
+    "code": "SI-010",
+    "type": "statistical region",
+    "names": {
+      "sl": "Gorenjska"
+    }
+  },
+  {
+    "code": "SI-011",
+    "type": "statistical region",
+    "names": {
+      "sl": "Goriška"
+    }
+  },
+  {
+    "code": "SI-012",
+    "type": "statistical region",
+    "names": {
+      "sl": "Obalno-kraška"
+    }
+  }
+]

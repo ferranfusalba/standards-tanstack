@@ -1,0 +1,5 @@
+[
+  { "code": "MW-C", "type": "region", "names": { "en": "Central" } },
+  { "code": "MW-N", "type": "region", "names": { "en": "Northern" } },
+  { "code": "MW-S", "type": "region", "names": { "en": "Southern" } }
+]

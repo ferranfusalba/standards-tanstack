@@ -1,0 +1,464 @@
+[
+  {
+    "code": "DO-01",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "es": "distrito"
+    },
+    "names": {
+      "es": "Distrito Nacional (Santo Domingo)"
+    }
+  },
+  {
+    "code": "DO-02",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Azua"
+    }
+  },
+  {
+    "code": "DO-03",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Baoruco"
+    }
+  },
+  {
+    "code": "DO-04",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Barahona"
+    }
+  },
+  {
+    "code": "DO-05",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Dajabón"
+    }
+  },
+  {
+    "code": "DO-06",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Duarte"
+    }
+  },
+  {
+    "code": "DO-07",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Elías Piña"
+    }
+  },
+  {
+    "code": "DO-08",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "El Seibo"
+    }
+  },
+  {
+    "code": "DO-09",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Espaillat"
+    }
+  },
+  {
+    "code": "DO-10",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Independencia"
+    }
+  },
+  {
+    "code": "DO-11",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "La Altagracia"
+    }
+  },
+  {
+    "code": "DO-12",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "La Romana"
+    }
+  },
+  {
+    "code": "DO-13",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "La Vega"
+    }
+  },
+  {
+    "code": "DO-14",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "María Trinidad Sánchez"
+    }
+  },
+  {
+    "code": "DO-15",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Monte Cristi"
+    }
+  },
+  {
+    "code": "DO-16",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Pedernales"
+    }
+  },
+  {
+    "code": "DO-17",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Peravia"
+    }
+  },
+  {
+    "code": "DO-18",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Puerto Plata"
+    }
+  },
+  {
+    "code": "DO-19",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Hermanas Mirabal"
+    }
+  },
+  {
+    "code": "DO-20",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Samaná"
+    }
+  },
+  {
+    "code": "DO-21",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "San Cristóbal"
+    }
+  },
+  {
+    "code": "DO-22",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "San Juan"
+    }
+  },
+  {
+    "code": "DO-23",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "San Pedro de Macorís"
+    }
+  },
+  {
+    "code": "DO-24",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Sánchez Ramírez"
+    }
+  },
+  {
+    "code": "DO-25",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Santiago"
+    }
+  },
+  {
+    "code": "DO-26",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Santiago Rodríguez"
+    }
+  },
+  {
+    "code": "DO-27",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Valverde"
+    }
+  },
+  {
+    "code": "DO-28",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Monseñor Nouel"
+    }
+  },
+  {
+    "code": "DO-29",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Monte Plata"
+    }
+  },
+  {
+    "code": "DO-30",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Hato Mayor"
+    }
+  },
+  {
+    "code": "DO-31",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "San José de Ocoa"
+    }
+  },
+  {
+    "code": "DO-32",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Santo Domingo"
+    }
+  },
+  {
+    "code": "DO-33",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Cibao Nordeste"
+    }
+  },
+  {
+    "code": "DO-34",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Cibao Noroeste"
+    }
+  },
+  {
+    "code": "DO-35",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Cibao Norte"
+    }
+  },
+  {
+    "code": "DO-36",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Cibao Sur"
+    }
+  },
+  {
+    "code": "DO-37",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "El Valle"
+    }
+  },
+  {
+    "code": "DO-38",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Enriquillo"
+    }
+  },
+  {
+    "code": "DO-39",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Higuamo"
+    }
+  },
+  {
+    "code": "DO-40",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Ozama"
+    }
+  },
+  {
+    "code": "DO-41",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Valdesia"
+    }
+  },
+  {
+    "code": "DO-42",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Yuma"
+    }
+  }
+]

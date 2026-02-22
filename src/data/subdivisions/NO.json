@@ -1,0 +1,95 @@
+[
+  {
+    "code": "NO-03",
+    "type": "county",
+    "names": {
+      "no": "Oslo"
+    }
+  },
+  {
+    "code": "NO-11",
+    "type": "county",
+    "names": {
+      "no": "Rogaland"
+    }
+  },
+  {
+    "code": "NO-15",
+    "type": "county",
+    "names": {
+      "no": "Møre og Romsdal"
+    }
+  },
+  {
+    "code": "NO-18",
+    "type": "county",
+    "names": {
+      "no": "Nordland"
+    }
+  },
+  {
+    "code": "NO-21",
+    "type": "arctic territory",
+    "names": {
+      "no": "Svalbard"
+    },
+    "iso1": "SJ"
+  },
+  {
+    "code": "NO-22",
+    "type": "arctic territory",
+    "names": {
+      "no": "Jan Mayen"
+    },
+    "iso1": "SJ"
+  },
+  {
+    "code": "NO-30",
+    "type": "county",
+    "names": {
+      "no": "Viken"
+    }
+  },
+  {
+    "code": "NO-34",
+    "type": "county",
+    "names": {
+      "no": "Innlandet"
+    }
+  },
+  {
+    "code": "NO-38",
+    "type": "county",
+    "names": {
+      "no": "Vestfold og Telemark"
+    }
+  },
+  {
+    "code": "NO-42",
+    "type": "county",
+    "names": {
+      "no": "Agder"
+    }
+  },
+  {
+    "code": "NO-46",
+    "type": "county",
+    "names": {
+      "no": "Vestland"
+    }
+  },
+  {
+    "code": "NO-50",
+    "type": "county",
+    "names": {
+      "no": "Trøndelag"
+    }
+  },
+  {
+    "code": "NO-54",
+    "type": "county",
+    "names": {
+      "no": "Troms og Finnmark"
+    }
+  }
+]

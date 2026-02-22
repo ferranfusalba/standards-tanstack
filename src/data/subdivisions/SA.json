@@ -1,0 +1,15 @@
+[
+  { "code": "SA-01", "type": "region", "names": { "ar": "منطقة الرياض" } },
+  { "code": "SA-02", "type": "region", "names": { "ar": "منطقة مكة المكرمة" } },
+  { "code": "SA-03", "type": "region", "names": { "ar": "منطقة المدينة المنورة" } },
+  { "code": "SA-04", "type": "region", "names": { "ar": "المنطقة الشرقية" } },
+  { "code": "SA-05", "type": "region", "names": { "ar": "منطقة القصيم" } },
+  { "code": "SA-06", "type": "region", "names": { "ar": "منطقة حائل" } },
+  { "code": "SA-07", "type": "region", "names": { "ar": "منطقة تبوك" } },
+  { "code": "SA-08", "type": "region", "names": { "ar": "منطقة الحدود الشمالية" } },
+  { "code": "SA-09", "type": "region", "names": { "ar": "منطقة جازان" } },
+  { "code": "SA-10", "type": "region", "names": { "ar": "منطقة نجران" } },
+  { "code": "SA-11", "type": "region", "names": { "ar": "منطقة الباحة" } },
+  { "code": "SA-12", "type": "region", "names": { "ar": "منطقة الجوف" } },
+  { "code": "SA-14", "type": "region", "names": { "ar": "منطقة عسير" } }
+]

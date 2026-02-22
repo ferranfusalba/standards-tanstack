@@ -1,0 +1,149 @@
+[
+  {
+    "code": "SE-AB",
+    "type": "county",
+    "names": {
+      "sv": "Stockholms län"
+    }
+  },
+  {
+    "code": "SE-AC",
+    "type": "county",
+    "names": {
+      "sv": "Västerbottens län"
+    }
+  },
+  {
+    "code": "SE-BD",
+    "type": "county",
+    "names": {
+      "sv": "Norrbottens län"
+    }
+  },
+  {
+    "code": "SE-C",
+    "type": "county",
+    "names": {
+      "sv": "Uppsala län"
+    }
+  },
+  {
+    "code": "SE-D",
+    "type": "county",
+    "names": {
+      "sv": "Södermanlands län"
+    }
+  },
+  {
+    "code": "SE-E",
+    "type": "county",
+    "names": {
+      "sv": "Östergötlands län"
+    }
+  },
+  {
+    "code": "SE-F",
+    "type": "county",
+    "names": {
+      "sv": "Jönköpings län"
+    }
+  },
+  {
+    "code": "SE-G",
+    "type": "county",
+    "names": {
+      "sv": "Kronobergs län"
+    }
+  },
+  {
+    "code": "SE-H",
+    "type": "county",
+    "names": {
+      "sv": "Kalmar län"
+    }
+  },
+  {
+    "code": "SE-I",
+    "type": "county",
+    "names": {
+      "sv": "Gotlands län"
+    }
+  },
+  {
+    "code": "SE-K",
+    "type": "county",
+    "names": {
+      "sv": "Blekinge län"
+    }
+  },
+  {
+    "code": "SE-M",
+    "type": "county",
+    "names": {
+      "sv": "Skåne län"
+    }
+  },
+  {
+    "code": "SE-N",
+    "type": "county",
+    "names": {
+      "sv": "Hallands län"
+    }
+  },
+  {
+    "code": "SE-O",
+    "type": "county",
+    "names": {
+      "sv": "Västra Götalands län"
+    }
+  },
+  {
+    "code": "SE-S",
+    "type": "county",
+    "names": {
+      "sv": "Värmlands län"
+    }
+  },
+  {
+    "code": "SE-T",
+    "type": "county",
+    "names": {
+      "sv": "Örebro län"
+    }
+  },
+  {
+    "code": "SE-U",
+    "type": "county",
+    "names": {
+      "sv": "Västmanlands län"
+    }
+  },
+  {
+    "code": "SE-W",
+    "type": "county",
+    "names": {
+      "sv": "Dalarnas län"
+    }
+  },
+  {
+    "code": "SE-X",
+    "type": "county",
+    "names": {
+      "sv": "Gävleborgs län"
+    }
+  },
+  {
+    "code": "SE-Y",
+    "type": "county",
+    "names": {
+      "sv": "Västernorrlands län"
+    }
+  },
+  {
+    "code": "SE-Z",
+    "type": "county",
+    "names": {
+      "sv": "Jämtlands län"
+    }
+  }
+]

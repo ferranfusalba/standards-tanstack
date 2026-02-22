@@ -1,0 +1,102 @@
+[
+  {
+    "code": "DM-02",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Andrew"
+    }
+  },
+  {
+    "code": "DM-03",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint David"
+    }
+  },
+  {
+    "code": "DM-04",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint George"
+    }
+  },
+  {
+    "code": "DM-05",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint John"
+    }
+  },
+  {
+    "code": "DM-06",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Joseph"
+    }
+  },
+  {
+    "code": "DM-07",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Luke"
+    }
+  },
+  {
+    "code": "DM-08",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Mark"
+    }
+  },
+  {
+    "code": "DM-09",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Patrick"
+    }
+  },
+  {
+    "code": "DM-10",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Paul"
+    }
+  },
+  {
+    "code": "DM-11",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Peter"
+    }
+  }
+]

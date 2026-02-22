@@ -1,0 +1,79 @@
+[
+  {
+    "code": "AD-02",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse",
+      "ca": "parròquia"
+    },
+    "names": {
+      "ca": "Canillo"
+    }
+  },
+  {
+    "code": "AD-03",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse",
+      "ca": "parròquia"
+    },
+    "names": {
+      "ca": "Encamp"
+    }
+  },
+  {
+    "code": "AD-04",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse",
+      "ca": "parròquia"
+    },
+    "names": {
+      "ca": "La Massana"
+    }
+  },
+  {
+    "code": "AD-05",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse",
+      "ca": "parròquia"
+    },
+    "names": {
+      "ca": "Ordino"
+    }
+  },
+  {
+    "code": "AD-06",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse",
+      "ca": "parròquia"
+    },
+    "names": {
+      "ca": "Sant Julià de Lòria"
+    }
+  },
+  {
+    "code": "AD-07",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse",
+      "ca": "parròquia"
+    },
+    "names": {
+      "ca": "Andorra la Vella"
+    }
+  },
+  {
+    "code": "AD-08",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse",
+      "ca": "parròquia"
+    },
+    "names": {
+      "ca": "Escaldes-Engordany"
+    }
+  }
+]

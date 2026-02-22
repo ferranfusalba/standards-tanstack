@@ -1,0 +1,100 @@
+[
+  {
+    "code": "GR-A",
+    "type": "decentralized administration",
+    "names": {
+      "el": "Ανατολική Μακεδονία και Θράκη"
+    }
+  },
+  {
+    "code": "GR-B",
+    "type": "decentralized administration",
+    "names": {
+      "el": "Κεντρική Μακεδονία"
+    }
+  },
+  {
+    "code": "GR-C",
+    "type": "decentralized administration",
+    "names": {
+      "el": "Δυτική Μακεδονία"
+    }
+  },
+  {
+    "code": "GR-D",
+    "type": "decentralized administration",
+    "names": {
+      "el": "Ήπειρος"
+    }
+  },
+  {
+    "code": "GR-E",
+    "type": "decentralized administration",
+    "names": {
+      "el": "Θεσσαλία"
+    }
+  },
+  {
+    "code": "GR-F",
+    "type": "decentralized administration",
+    "names": {
+      "el": "Ιόνια Νησιά"
+    }
+  },
+  {
+    "code": "GR-G",
+    "type": "decentralized administration",
+    "names": {
+      "el": "Δυτική Ελλάδα"
+    }
+  },
+  {
+    "code": "GR-H",
+    "type": "decentralized administration",
+    "names": {
+      "el": "Στερεά Ελλάδα"
+    }
+  },
+  {
+    "code": "GR-I",
+    "type": "decentralized administration",
+    "names": {
+      "el": "Αττική"
+    }
+  },
+  {
+    "code": "GR-J",
+    "type": "decentralized administration",
+    "names": {
+      "el": "Πελοπόννησος"
+    }
+  },
+  {
+    "code": "GR-K",
+    "type": "decentralized administration",
+    "names": {
+      "el": "Βόρειο Αιγαίο"
+    }
+  },
+  {
+    "code": "GR-L",
+    "type": "decentralized administration",
+    "names": {
+      "el": "Νότιο Αιγαίο"
+    }
+  },
+  {
+    "code": "GR-M",
+    "type": "decentralized administration",
+    "names": {
+      "el": "Κρήτη"
+    }
+  },
+  {
+    "code": "GR-69",
+    "type": "self-governed part",
+    "names": {
+      "el": "Άγιον Όρος"
+    }
+  }
+]

@@ -1,0 +1,5 @@
+[
+  { "code": "BA-BIH", "type": { "en": "entity", "fr": "entité", "bs": "entitet", "hr": "entitet", "sr": "entitet" }, "names": { "bs": "Federacija Bosne i Hercegovine", "hr": "Federacija Bosne i Hercegovine", "sr": "Federacija Bosne i Hercegovine" } },
+  { "code": "BA-BRC", "type": { "en": "district with special status", "fr": "district", "bs": "distrikt", "hr": "distrikt", "sr": "distrikt" }, "names": { "bs": "Brčko distrikt", "hr": "Brčko distrikt", "sr": "Brčko distrikt" } },
+  { "code": "BA-SRP", "type": { "en": "entity", "fr": "entité", "bs": "entitet", "hr": "entitet", "sr": "entitet" }, "names": { "bs": "Republika Srpska", "hr": "Republika Srpska", "sr": "Republika Srpska" } }
+]

@@ -1,0 +1,299 @@
+[
+  {
+    "code": "EG-ALX",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Iskandarīyah"
+    }
+  },
+  {
+    "code": "EG-ASN",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Aswān"
+    }
+  },
+  {
+    "code": "EG-AST",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Asyūţ"
+    }
+  },
+  {
+    "code": "EG-BA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Baḩr al Aḩmar"
+    }
+  },
+  {
+    "code": "EG-BH",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Buḩayrah"
+    }
+  },
+  {
+    "code": "EG-BNS",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Banī Suwayf"
+    }
+  },
+  {
+    "code": "EG-C",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Qāhirah"
+    }
+  },
+  {
+    "code": "EG-DK",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Ad Daqahlīyah"
+    }
+  },
+  {
+    "code": "EG-DT",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Dumyāţ"
+    }
+  },
+  {
+    "code": "EG-FYM",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Fayyūm"
+    }
+  },
+  {
+    "code": "EG-GH",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Gharbīyah"
+    }
+  },
+  {
+    "code": "EG-GZ",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Jīzah"
+    }
+  },
+  {
+    "code": "EG-IS",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Ismā'īlīyah"
+    }
+  },
+  {
+    "code": "EG-JS",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Janūb Sīnā'"
+    }
+  },
+  {
+    "code": "EG-KB",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Qalyūbīyah"
+    }
+  },
+  {
+    "code": "EG-KFS",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Kafr ash Shaykh"
+    }
+  },
+  {
+    "code": "EG-KN",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Qinā"
+    }
+  },
+  {
+    "code": "EG-LX",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Uqşur"
+    }
+  },
+  {
+    "code": "EG-MN",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Minyā"
+    }
+  },
+  {
+    "code": "EG-MNF",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Minūfīyah"
+    }
+  },
+  {
+    "code": "EG-MT",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Maţrūḩ"
+    }
+  },
+  {
+    "code": "EG-PTS",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Būr Sa'īd"
+    }
+  },
+  {
+    "code": "EG-SHG",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Sūhāj"
+    }
+  },
+  {
+    "code": "EG-SHR",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Ash Sharqīyah"
+    }
+  },
+  {
+    "code": "EG-SIN",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Shamāl Sīnā'"
+    }
+  },
+  {
+    "code": "EG-SUZ",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "As Suways"
+    }
+  },
+  {
+    "code": "EG-WAD",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Wādī al Jadīd"
+    }
+  }
+]

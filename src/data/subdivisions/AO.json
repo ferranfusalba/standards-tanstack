@@ -1,0 +1,200 @@
+[
+  {
+    "code": "AO-BGO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Bengo"
+    }
+  },
+  {
+    "code": "AO-BGU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Benguela"
+    }
+  },
+  {
+    "code": "AO-BIE",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Bié"
+    }
+  },
+  {
+    "code": "AO-CAB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Cabinda"
+    }
+  },
+  {
+    "code": "AO-CCU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Cuando Cubango"
+    }
+  },
+  {
+    "code": "AO-CNO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Cuanza Norte"
+    }
+  },
+  {
+    "code": "AO-CUS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Cuanza Sul"
+    }
+  },
+  {
+    "code": "AO-CNN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Cunene"
+    }
+  },
+  {
+    "code": "AO-HUA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Huambo"
+    }
+  },
+  {
+    "code": "AO-HUI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Huíla"
+    }
+  },
+  {
+    "code": "AO-LUA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Luanda"
+    }
+  },
+  {
+    "code": "AO-LNO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Lunda Norte"
+    }
+  },
+  {
+    "code": "AO-LSU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Lunda Sul"
+    }
+  },
+  {
+    "code": "AO-MAL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Malanje"
+    }
+  },
+  {
+    "code": "AO-MOX",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Moxico"
+    }
+  },
+  {
+    "code": "AO-NAM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Namibe"
+    }
+  },
+  {
+    "code": "AO-UIG",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Uíge"
+    }
+  },
+  {
+    "code": "AO-ZAI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Zaire"
+    }
+  }
+]

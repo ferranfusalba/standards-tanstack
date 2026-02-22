@@ -1,0 +1,20 @@
+[
+  { "code": "SO-AW", "type": "region", "names": { "so": "Awdal" } },
+  { "code": "SO-BK", "type": "region", "names": { "so": "Bakool" } },
+  { "code": "SO-BN", "type": "region", "names": { "so": "Banaadir" } },
+  { "code": "SO-BR", "type": "region", "names": { "so": "Bari" } },
+  { "code": "SO-BY", "type": "region", "names": { "so": "Bay" } },
+  { "code": "SO-GA", "type": "region", "names": { "so": "Galguduud" } },
+  { "code": "SO-GE", "type": "region", "names": { "so": "Gedo" } },
+  { "code": "SO-HI", "type": "region", "names": { "so": "Hiiraan" } },
+  { "code": "SO-JD", "type": "region", "names": { "so": "Jubbada Dhexe" } },
+  { "code": "SO-JH", "type": "region", "names": { "so": "Jubbada Hoose" } },
+  { "code": "SO-MU", "type": "region", "names": { "so": "Mudug" } },
+  { "code": "SO-NU", "type": "region", "names": { "so": "Nugaal" } },
+  { "code": "SO-SA", "type": "region", "names": { "so": "Sanaag" } },
+  { "code": "SO-SD", "type": "region", "names": { "so": "Shabeellaha Dhexe" } },
+  { "code": "SO-SH", "type": "region", "names": { "so": "Shabeellaha Hoose" } },
+  { "code": "SO-SO", "type": "region", "names": { "so": "Sool" } },
+  { "code": "SO-TO", "type": "region", "names": { "so": "Togdheer" } },
+  { "code": "SO-WO", "type": "region", "names": { "so": "Woqooyi Galbeed" } }
+]

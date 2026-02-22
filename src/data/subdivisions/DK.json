@@ -1,0 +1,57 @@
+[
+  {
+    "code": "DK-81",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "da": "region"
+    },
+    "names": {
+      "da": "Nordjylland"
+    }
+  },
+  {
+    "code": "DK-82",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "da": "region"
+    },
+    "names": {
+      "da": "Midtjylland"
+    }
+  },
+  {
+    "code": "DK-83",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "da": "region"
+    },
+    "names": {
+      "da": "Syddanmark"
+    }
+  },
+  {
+    "code": "DK-84",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "da": "region"
+    },
+    "names": {
+      "da": "Hovedstaden"
+    }
+  },
+  {
+    "code": "DK-85",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "da": "region"
+    },
+    "names": {
+      "da": "Sjælland"
+    }
+  }
+]

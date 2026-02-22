@@ -1,0 +1,158 @@
+[
+  {
+    "code": "ET-AA",
+    "type": {
+      "en": "administration",
+      "fr": "administration",
+      "am": "āstedader"
+    },
+    "names": {
+      "en": "Addis Ababa",
+      "am": "Ādīs Ābeba"
+    }
+  },
+  {
+    "code": "ET-AF",
+    "type": {
+      "en": "regional state",
+      "fr": "État régional",
+      "am": "kilil"
+    },
+    "names": {
+      "en": "Afar",
+      "am": "Āfar"
+    }
+  },
+  {
+    "code": "ET-AM",
+    "type": {
+      "en": "regional state",
+      "fr": "État régional",
+      "am": "kilil"
+    },
+    "names": {
+      "en": "Amara",
+      "am": "Āmara"
+    }
+  },
+  {
+    "code": "ET-BE",
+    "type": {
+      "en": "regional state",
+      "fr": "État régional",
+      "am": "kilil"
+    },
+    "names": {
+      "en": "Benshangul-Gumaz",
+      "am": "Bīnshangul Gumuz"
+    }
+  },
+  {
+    "code": "ET-DD",
+    "type": {
+      "en": "administration",
+      "fr": "administration",
+      "am": "āstedader"
+    },
+    "names": {
+      "en": "Dire Dawa",
+      "am": "Dirē Dawa"
+    }
+  },
+  {
+    "code": "ET-GA",
+    "type": {
+      "en": "regional state",
+      "fr": "État régional",
+      "am": "kilil"
+    },
+    "names": {
+      "en": "Gambela Peoples",
+      "am": "Gambēla Hizboch"
+    }
+  },
+  {
+    "code": "ET-HA",
+    "type": {
+      "en": "regional state",
+      "fr": "État régional",
+      "am": "kilil"
+    },
+    "names": {
+      "en": "Harari People",
+      "am": "Hārerī Hizb"
+    }
+  },
+  {
+    "code": "ET-OR",
+    "type": {
+      "en": "regional state",
+      "fr": "État régional",
+      "am": "kilil"
+    },
+    "names": {
+      "en": "Oromia",
+      "am": "Oromīya"
+    }
+  },
+  {
+    "code": "ET-SI",
+    "type": {
+      "en": "regional state",
+      "fr": "État régional",
+      "am": "kilil"
+    },
+    "names": {
+      "en": "Sidama",
+      "am": "Sīdama"
+    }
+  },
+  {
+    "code": "ET-SN",
+    "type": {
+      "en": "regional state",
+      "fr": "État régional",
+      "am": "kilil"
+    },
+    "names": {
+      "en": "Southern Nations, Nationalities and Peoples",
+      "am": "YeDebub Bihēroch Bihēreseboch na Hizboch"
+    }
+  },
+  {
+    "code": "ET-SO",
+    "type": {
+      "en": "regional state",
+      "fr": "État régional",
+      "am": "kilil"
+    },
+    "names": {
+      "en": "Somali",
+      "am": "Sumalē"
+    }
+  },
+  {
+    "code": "ET-SW",
+    "type": {
+      "en": "regional state",
+      "fr": "État régional",
+      "am": "kilil"
+    },
+    "names": {
+      "en": "Southwest Ethiopia Peoples",
+      "am": "YeDebub M'irab Ītyop'iya Hizboch"
+    }
+  },
+  {
+    "code": "ET-TI",
+    "type": {
+      "en": "regional state",
+      "fr": "État régional",
+      "am": "kilil"
+    },
+    "names": {
+      "en": "Tigrai",
+      "am": "Tigray"
+    }
+  }
+]

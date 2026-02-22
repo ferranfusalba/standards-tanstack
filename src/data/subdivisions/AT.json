@@ -1,0 +1,101 @@
+[
+  {
+    "code": "AT-1",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "de": "Bundesland"
+    },
+    "names": {
+      "de": "Burgenland"
+    }
+  },
+  {
+    "code": "AT-2",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "de": "Bundesland"
+    },
+    "names": {
+      "de": "Kärnten"
+    }
+  },
+  {
+    "code": "AT-3",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "de": "Bundesland"
+    },
+    "names": {
+      "de": "Niederösterreich"
+    }
+  },
+  {
+    "code": "AT-4",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "de": "Bundesland"
+    },
+    "names": {
+      "de": "Oberösterreich"
+    }
+  },
+  {
+    "code": "AT-5",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "de": "Bundesland"
+    },
+    "names": {
+      "de": "Salzburg"
+    }
+  },
+  {
+    "code": "AT-6",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "de": "Bundesland"
+    },
+    "names": {
+      "de": "Steiermark"
+    }
+  },
+  {
+    "code": "AT-7",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "de": "Bundesland"
+    },
+    "names": {
+      "de": "Tirol"
+    }
+  },
+  {
+    "code": "AT-8",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "de": "Bundesland"
+    },
+    "names": {
+      "de": "Vorarlberg"
+    }
+  },
+  {
+    "code": "AT-9",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "de": "Bundesland"
+    },
+    "names": {
+      "de": "Wien"
+    }
+  }
+]

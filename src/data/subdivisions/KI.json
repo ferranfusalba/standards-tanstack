@@ -1,0 +1,5 @@
+[
+  { "code": "KI-G", "type": "island group", "names": { "en": "Gilbert Islands" } },
+  { "code": "KI-L", "type": "island group", "names": { "en": "Line Islands" } },
+  { "code": "KI-P", "type": "island group", "names": { "en": "Phoenix Islands" } }
+]

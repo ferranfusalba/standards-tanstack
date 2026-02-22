@@ -1,0 +1,19 @@
+[
+  { "code": "PH-00", "type": "region", "names": { "en": "National Capital Region" } },
+  { "code": "PH-01", "type": "region", "names": { "en": "Ilocos" } },
+  { "code": "PH-02", "type": "region", "names": { "en": "Cagayan Valley" } },
+  { "code": "PH-03", "type": "region", "names": { "en": "Central Luzon" } },
+  { "code": "PH-05", "type": "region", "names": { "en": "Bicol" } },
+  { "code": "PH-06", "type": "region", "names": { "en": "Western Visayas" } },
+  { "code": "PH-07", "type": "region", "names": { "en": "Central Visayas" } },
+  { "code": "PH-08", "type": "region", "names": { "en": "Eastern Visayas" } },
+  { "code": "PH-09", "type": "region", "names": { "en": "Zamboanga Peninsula" } },
+  { "code": "PH-10", "type": "region", "names": { "en": "Northern Mindanao" } },
+  { "code": "PH-11", "type": "region", "names": { "en": "Davao" } },
+  { "code": "PH-12", "type": "region", "names": { "en": "Soccsksargen" } },
+  { "code": "PH-13", "type": "region", "names": { "en": "Caraga" } },
+  { "code": "PH-14", "type": "autonomous region", "names": { "en": "Bangsamoro" } },
+  { "code": "PH-15", "type": "region", "names": { "en": "Cordillera Administrative Region" } },
+  { "code": "PH-40", "type": "region", "names": { "en": "Calabarzon" } },
+  { "code": "PH-41", "type": "region", "names": { "en": "Mimaropa" } }
+]

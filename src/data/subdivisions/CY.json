@@ -1,0 +1,80 @@
+[
+  {
+    "code": "CY-01",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "el": "eparchia",
+      "tr": "kaza"
+    },
+    "names": {
+      "el": "Lefkosia",
+      "tr": "Lefkoşa"
+    }
+  },
+  {
+    "code": "CY-02",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "el": "eparchia",
+      "tr": "kaza"
+    },
+    "names": {
+      "el": "Lemesos",
+      "tr": "Leymasun"
+    }
+  },
+  {
+    "code": "CY-03",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "el": "eparchia",
+      "tr": "kaza"
+    },
+    "names": {
+      "el": "Larnaka",
+      "tr": "Larnaka"
+    }
+  },
+  {
+    "code": "CY-04",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "el": "eparchia",
+      "tr": "kaza"
+    },
+    "names": {
+      "el": "Ammochostos",
+      "tr": "Mağusa"
+    }
+  },
+  {
+    "code": "CY-05",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "el": "eparchia",
+      "tr": "kaza"
+    },
+    "names": {
+      "el": "Pafos",
+      "tr": "Baf"
+    }
+  },
+  {
+    "code": "CY-06",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "el": "eparchia",
+      "tr": "kaza"
+    },
+    "names": {
+      "el": "Keryneia",
+      "tr": "Girne"
+    }
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "code": "AE-AJ",
+    "type": {
+      "en": "emirate",
+      "fr": "émirat",
+      "ar": "imārah"
+    },
+    "names": {
+      "ar": "'Ajmān"
+    }
+  },
+  {
+    "code": "AE-AZ",
+    "type": {
+      "en": "emirate",
+      "fr": "émirat",
+      "ar": "imārah"
+    },
+    "names": {
+      "ar": "Abū Z̧aby"
+    }
+  },
+  {
+    "code": "AE-DU",
+    "type": {
+      "en": "emirate",
+      "fr": "émirat",
+      "ar": "imārah"
+    },
+    "names": {
+      "ar": "Dubayy"
+    }
+  },
+  {
+    "code": "AE-FU",
+    "type": {
+      "en": "emirate",
+      "fr": "émirat",
+      "ar": "imārah"
+    },
+    "names": {
+      "ar": "Al Fujayrah"
+    }
+  },
+  {
+    "code": "AE-RK",
+    "type": {
+      "en": "emirate",
+      "fr": "émirat",
+      "ar": "imārah"
+    },
+    "names": {
+      "ar": "Ra's al Khaymah"
+    }
+  },
+  {
+    "code": "AE-SH",
+    "type": {
+      "en": "emirate",
+      "fr": "émirat",
+      "ar": "imārah"
+    },
+    "names": {
+      "ar": "Ash Shāriqah"
+    }
+  },
+  {
+    "code": "AE-UQ",
+    "type": {
+      "en": "emirate",
+      "fr": "émirat",
+      "ar": "imārah"
+    },
+    "names": {
+      "ar": "Umm al Qaywayn"
+    }
+  }
+]

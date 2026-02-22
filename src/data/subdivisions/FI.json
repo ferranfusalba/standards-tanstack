@@ -1,0 +1,250 @@
+[
+  {
+    "code": "FI-01",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Ahvenanmaan maakunta",
+      "sv": "Landskapet Åland"
+    },
+    "iso1": "AX"
+  },
+  {
+    "code": "FI-02",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Etelä-Karjala",
+      "sv": "Södra Karelen"
+    }
+  },
+  {
+    "code": "FI-03",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Etelä-Pohjanmaa",
+      "sv": "Södra Österbotten"
+    }
+  },
+  {
+    "code": "FI-04",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Etelä-Savo",
+      "sv": "Södra Savolax"
+    }
+  },
+  {
+    "code": "FI-05",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Kainuu",
+      "sv": "Kajanaland"
+    }
+  },
+  {
+    "code": "FI-06",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Kanta-Häme",
+      "sv": "Egentliga Tavastland"
+    }
+  },
+  {
+    "code": "FI-07",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Keski-Pohjanmaa",
+      "sv": "Mellersta Österbotten"
+    }
+  },
+  {
+    "code": "FI-08",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Keski-Suomi",
+      "sv": "Mellersta Finland"
+    }
+  },
+  {
+    "code": "FI-09",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Kymenlaakso",
+      "sv": "Kymmenedalen"
+    }
+  },
+  {
+    "code": "FI-10",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Lappi",
+      "sv": "Lappland"
+    }
+  },
+  {
+    "code": "FI-11",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Pirkanmaa",
+      "sv": "Birkaland"
+    }
+  },
+  {
+    "code": "FI-12",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Pohjanmaa",
+      "sv": "Österbotten"
+    }
+  },
+  {
+    "code": "FI-13",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Pohjois-Karjala",
+      "sv": "Norra Karelen"
+    }
+  },
+  {
+    "code": "FI-14",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Pohjois-Pohjanmaa",
+      "sv": "Norra Österbotten"
+    }
+  },
+  {
+    "code": "FI-15",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Pohjois-Savo",
+      "sv": "Norra Savolax"
+    }
+  },
+  {
+    "code": "FI-16",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Päijät-Häme",
+      "sv": "Päijänne-Tavastland"
+    }
+  },
+  {
+    "code": "FI-17",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Satakunta",
+      "sv": "Satakunta"
+    }
+  },
+  {
+    "code": "FI-18",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Uusimaa",
+      "sv": "Nyland"
+    }
+  },
+  {
+    "code": "FI-19",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "fi": "maakunta",
+      "sv": "landskap"
+    },
+    "names": {
+      "fi": "Varsinais-Suomi",
+      "sv": "Egentliga Finland"
+    }
+  }
+]

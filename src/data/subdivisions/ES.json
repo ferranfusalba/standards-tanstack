@@ -1,0 +1,779 @@
+[
+  {
+    "code": "ES-AN",
+    "type": {
+      "en": "autonomous community",
+      "fr": "communauté autonome",
+      "es": "comunidad autónoma"
+    },
+    "names": {
+      "es": "Andalucía"
+    }
+  },
+  {
+    "code": "ES-AR",
+    "type": {
+      "en": "autonomous community",
+      "fr": "communauté autonome",
+      "es": "comunidad autónoma"
+    },
+    "names": {
+      "es": "Aragón"
+    }
+  },
+  {
+    "code": "ES-AS",
+    "type": {
+      "en": "autonomous community",
+      "fr": "communauté autonome",
+      "es": "comunidad autónoma"
+    },
+    "names": {
+      "es": "Principado de Asturias"
+    }
+  },
+  {
+    "code": "ES-CB",
+    "type": {
+      "en": "autonomous community",
+      "fr": "communauté autonome",
+      "es": "comunidad autónoma"
+    },
+    "names": {
+      "es": "Cantabria"
+    }
+  },
+  {
+    "code": "ES-CE",
+    "type": {
+      "en": "autonomous city in North Africa",
+      "fr": "ville autonome d'Afrique du Nord",
+      "es": "ciudad autónoma en África del Norte"
+    },
+    "names": {
+      "es": "Ceuta"
+    }
+  },
+  {
+    "code": "ES-CL",
+    "type": {
+      "en": "autonomous community",
+      "fr": "communauté autonome",
+      "es": "comunidad autónoma"
+    },
+    "names": {
+      "es": "Castilla y León"
+    }
+  },
+  {
+    "code": "ES-CM",
+    "type": {
+      "en": "autonomous community",
+      "fr": "communauté autonome",
+      "es": "comunidad autónoma"
+    },
+    "names": {
+      "es": "Castilla-La Mancha"
+    }
+  },
+  {
+    "code": "ES-CN",
+    "type": {
+      "en": "autonomous community",
+      "fr": "communauté autonome",
+      "es": "comunidad autónoma"
+    },
+    "names": {
+      "es": "Canarias"
+    }
+  },
+  {
+    "code": "ES-CT",
+    "type": {
+      "en": "autonomous community",
+      "fr": "communauté autonome",
+      "es": "comunidad autónoma"
+    },
+    "names": {
+      "es": "Cataluña",
+      "ca": "Catalunya"
+    }
+  },
+  {
+    "code": "ES-EX",
+    "type": {
+      "en": "autonomous community",
+      "fr": "communauté autonome",
+      "es": "comunidad autónoma"
+    },
+    "names": {
+      "es": "Extremadura"
+    }
+  },
+  {
+    "code": "ES-GA",
+    "type": {
+      "en": "autonomous community",
+      "fr": "communauté autonome",
+      "es": "comunidad autónoma"
+    },
+    "names": {
+      "es": "Galicia",
+      "gl": "Galicia"
+    }
+  },
+  {
+    "code": "ES-IB",
+    "type": {
+      "en": "autonomous community",
+      "fr": "communauté autonome",
+      "es": "comunidad autónoma"
+    },
+    "names": {
+      "es": "Islas Baleares",
+      "ca": "Illes Balears"
+    }
+  },
+  {
+    "code": "ES-MC",
+    "type": {
+      "en": "autonomous community",
+      "fr": "communauté autonome",
+      "es": "comunidad autónoma"
+    },
+    "names": {
+      "es": "Región de Murcia"
+    }
+  },
+  {
+    "code": "ES-MD",
+    "type": {
+      "en": "autonomous community",
+      "fr": "communauté autonome",
+      "es": "comunidad autónoma"
+    },
+    "names": {
+      "es": "Comunidad de Madrid"
+    }
+  },
+  {
+    "code": "ES-ML",
+    "type": {
+      "en": "autonomous city in North Africa",
+      "fr": "ville autonome d'Afrique du Nord",
+      "es": "ciudad autónoma en África del Norte"
+    },
+    "names": {
+      "es": "Melilla"
+    }
+  },
+  {
+    "code": "ES-NC",
+    "type": {
+      "en": "autonomous community",
+      "fr": "communauté autonome",
+      "es": "comunidad autónoma"
+    },
+    "names": {
+      "es": "Comunidad Foral de Navarra",
+      "eu": "Nafarroako Foru Komunitatea"
+    }
+  },
+  {
+    "code": "ES-PV",
+    "type": {
+      "en": "autonomous community",
+      "fr": "communauté autonome",
+      "es": "comunidad autónoma"
+    },
+    "names": {
+      "es": "País Vasco",
+      "eu": "Euskadi"
+    }
+  },
+  {
+    "code": "ES-RI",
+    "type": {
+      "en": "autonomous community",
+      "fr": "communauté autonome",
+      "es": "comunidad autónoma"
+    },
+    "names": {
+      "es": "La Rioja"
+    }
+  },
+  {
+    "code": "ES-VC",
+    "type": {
+      "en": "autonomous community",
+      "fr": "communauté autonome",
+      "es": "comunidad autónoma"
+    },
+    "names": {
+      "es": "Comunidad Valenciana",
+      "ca": "Comunitat Valenciana"
+    }
+  },
+  {
+    "code": "ES-A",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Alicante",
+      "ca": "Alacant"
+    }
+  },
+  {
+    "code": "ES-AB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Albacete"
+    }
+  },
+  {
+    "code": "ES-AL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Almería"
+    }
+  },
+  {
+    "code": "ES-AV",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Ávila"
+    }
+  },
+  {
+    "code": "ES-B",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Barcelona"
+    }
+  },
+  {
+    "code": "ES-BA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Badajoz"
+    }
+  },
+  {
+    "code": "ES-BI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Vizcaya",
+      "eu": "Bizkaia"
+    }
+  },
+  {
+    "code": "ES-BU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Burgos"
+    }
+  },
+  {
+    "code": "ES-C",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "La Coruña",
+      "gl": "A Coruña"
+    }
+  },
+  {
+    "code": "ES-CA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Cádiz"
+    }
+  },
+  {
+    "code": "ES-CC",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Cáceres"
+    }
+  },
+  {
+    "code": "ES-CO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Córdoba"
+    }
+  },
+  {
+    "code": "ES-CR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Ciudad Real"
+    }
+  },
+  {
+    "code": "ES-CS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Castellón",
+      "ca": "Castelló"
+    }
+  },
+  {
+    "code": "ES-CU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Cuenca"
+    }
+  },
+  {
+    "code": "ES-GC",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Las Palmas"
+    }
+  },
+  {
+    "code": "ES-GI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Gerona",
+      "ca": "Girona"
+    }
+  },
+  {
+    "code": "ES-GR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Granada"
+    }
+  },
+  {
+    "code": "ES-GU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Guadalajara"
+    }
+  },
+  {
+    "code": "ES-H",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Huelva"
+    }
+  },
+  {
+    "code": "ES-HU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Huesca"
+    }
+  },
+  {
+    "code": "ES-J",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Jaén"
+    }
+  },
+  {
+    "code": "ES-L",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Lérida",
+      "ca": "Lleida"
+    }
+  },
+  {
+    "code": "ES-LE",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "León"
+    }
+  },
+  {
+    "code": "ES-LO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "La Rioja"
+    }
+  },
+  {
+    "code": "ES-LU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Lugo"
+    }
+  },
+  {
+    "code": "ES-M",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Madrid"
+    }
+  },
+  {
+    "code": "ES-MA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Málaga"
+    }
+  },
+  {
+    "code": "ES-MU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Murcia"
+    }
+  },
+  {
+    "code": "ES-NA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Navarra",
+      "eu": "Nafarroa"
+    }
+  },
+  {
+    "code": "ES-O",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Asturias"
+    }
+  },
+  {
+    "code": "ES-OR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Orense",
+      "gl": "Ourense"
+    }
+  },
+  {
+    "code": "ES-P",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Palencia"
+    }
+  },
+  {
+    "code": "ES-PM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Islas Baleares",
+      "ca": "Illes Balears"
+    }
+  },
+  {
+    "code": "ES-PO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Pontevedra"
+    }
+  },
+  {
+    "code": "ES-S",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Cantabria"
+    }
+  },
+  {
+    "code": "ES-SA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Salamanca"
+    }
+  },
+  {
+    "code": "ES-SE",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Sevilla"
+    }
+  },
+  {
+    "code": "ES-SG",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Segovia"
+    }
+  },
+  {
+    "code": "ES-SO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Soria"
+    }
+  },
+  {
+    "code": "ES-SS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Guipúzcoa",
+      "eu": "Gipuzkoa"
+    }
+  },
+  {
+    "code": "ES-T",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Tarragona"
+    }
+  },
+  {
+    "code": "ES-TE",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Teruel"
+    }
+  },
+  {
+    "code": "ES-TF",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Santa Cruz de Tenerife"
+    }
+  },
+  {
+    "code": "ES-TO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Toledo"
+    }
+  },
+  {
+    "code": "ES-V",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Valencia",
+      "ca": "València"
+    }
+  },
+  {
+    "code": "ES-VA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Valladolid"
+    }
+  },
+  {
+    "code": "ES-VI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Álava",
+      "eu": "Araba"
+    }
+  },
+  {
+    "code": "ES-Z",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Zaragoza"
+    }
+  },
+  {
+    "code": "ES-ZA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Zamora"
+    }
+  }
+]

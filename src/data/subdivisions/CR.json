@@ -1,0 +1,79 @@
+[
+  {
+    "code": "CR-A",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Alajuela"
+    }
+  },
+  {
+    "code": "CR-C",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Cartago"
+    }
+  },
+  {
+    "code": "CR-G",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Guanacaste"
+    }
+  },
+  {
+    "code": "CR-H",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Heredia"
+    }
+  },
+  {
+    "code": "CR-L",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Limón"
+    }
+  },
+  {
+    "code": "CR-P",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Puntarenas"
+    }
+  },
+  {
+    "code": "CR-SJ",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "San José"
+    }
+  }
+]

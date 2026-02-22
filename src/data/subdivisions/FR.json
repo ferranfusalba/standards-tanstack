@@ -1,0 +1,1254 @@
+[
+  {
+    "code": "FR-ARA",
+    "type": {
+      "en": "metropolitan region",
+      "fr": "région métropolitaine"
+    },
+    "names": {
+      "fr": "Auvergne-Rhône-Alpes"
+    }
+  },
+  {
+    "code": "FR-BFC",
+    "type": {
+      "en": "metropolitan region",
+      "fr": "région métropolitaine"
+    },
+    "names": {
+      "fr": "Bourgogne-Franche-Comté"
+    }
+  },
+  {
+    "code": "FR-BRE",
+    "type": {
+      "en": "metropolitan region",
+      "fr": "région métropolitaine"
+    },
+    "names": {
+      "fr": "Bretagne"
+    }
+  },
+  {
+    "code": "FR-CVL",
+    "type": {
+      "en": "metropolitan region",
+      "fr": "région métropolitaine"
+    },
+    "names": {
+      "fr": "Centre-Val de Loire"
+    }
+  },
+  {
+    "code": "FR-GES",
+    "type": {
+      "en": "metropolitan region",
+      "fr": "région métropolitaine"
+    },
+    "names": {
+      "fr": "Grand-Est"
+    }
+  },
+  {
+    "code": "FR-HDF",
+    "type": {
+      "en": "metropolitan region",
+      "fr": "région métropolitaine"
+    },
+    "names": {
+      "fr": "Hauts-de-France"
+    }
+  },
+  {
+    "code": "FR-IDF",
+    "type": {
+      "en": "metropolitan region",
+      "fr": "région métropolitaine"
+    },
+    "names": {
+      "fr": "Île-de-France"
+    }
+  },
+  {
+    "code": "FR-NAQ",
+    "type": {
+      "en": "metropolitan region",
+      "fr": "région métropolitaine"
+    },
+    "names": {
+      "fr": "Nouvelle-Aquitaine"
+    }
+  },
+  {
+    "code": "FR-NOR",
+    "type": {
+      "en": "metropolitan region",
+      "fr": "région métropolitaine"
+    },
+    "names": {
+      "fr": "Normandie"
+    }
+  },
+  {
+    "code": "FR-OCC",
+    "type": {
+      "en": "metropolitan region",
+      "fr": "région métropolitaine"
+    },
+    "names": {
+      "fr": "Occitanie"
+    }
+  },
+  {
+    "code": "FR-PAC",
+    "type": {
+      "en": "metropolitan region",
+      "fr": "région métropolitaine"
+    },
+    "names": {
+      "fr": "Provence-Alpes-Côte-d'Azur"
+    }
+  },
+  {
+    "code": "FR-PDL",
+    "type": {
+      "en": "metropolitan region",
+      "fr": "région métropolitaine"
+    },
+    "names": {
+      "fr": "Pays-de-la-Loire"
+    }
+  },
+  {
+    "code": "FR-20R",
+    "type": {
+      "en": "metropolitan collectivity with special status",
+      "fr": "collectivité métropolitaine à statut particulier"
+    },
+    "names": {
+      "fr": "Corse"
+    }
+  },
+  {
+    "code": "FR-69M",
+    "type": {
+      "en": "metropolitan collectivity with special status",
+      "fr": "collectivité métropolitaine à statut particulier"
+    },
+    "names": {
+      "fr": "Métropole de Lyon"
+    }
+  },
+  {
+    "code": "FR-75C",
+    "type": {
+      "en": "metropolitan collectivity with special status",
+      "fr": "collectivité métropolitaine à statut particulier"
+    },
+    "names": {
+      "fr": "Paris"
+    }
+  },
+  {
+    "code": "FR-6AE",
+    "type": {
+      "en": "European collectivity",
+      "fr": "collectivité européenne"
+    },
+    "names": {
+      "fr": "Alsace"
+    }
+  },
+  {
+    "code": "FR-01",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Ain"
+    }
+  },
+  {
+    "code": "FR-02",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Aisne"
+    }
+  },
+  {
+    "code": "FR-03",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Allier"
+    }
+  },
+  {
+    "code": "FR-04",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Alpes-de-Haute-Provence"
+    }
+  },
+  {
+    "code": "FR-05",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Hautes-Alpes"
+    }
+  },
+  {
+    "code": "FR-06",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Alpes-Maritimes"
+    }
+  },
+  {
+    "code": "FR-07",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Ardèche"
+    }
+  },
+  {
+    "code": "FR-08",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Ardennes"
+    }
+  },
+  {
+    "code": "FR-09",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Ariège"
+    }
+  },
+  {
+    "code": "FR-10",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Aube"
+    }
+  },
+  {
+    "code": "FR-11",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Aude"
+    }
+  },
+  {
+    "code": "FR-12",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Aveyron"
+    }
+  },
+  {
+    "code": "FR-13",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Bouches-du-Rhône"
+    }
+  },
+  {
+    "code": "FR-14",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Calvados"
+    }
+  },
+  {
+    "code": "FR-15",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Cantal"
+    }
+  },
+  {
+    "code": "FR-16",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Charente"
+    }
+  },
+  {
+    "code": "FR-17",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Charente-Maritime"
+    }
+  },
+  {
+    "code": "FR-18",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Cher"
+    }
+  },
+  {
+    "code": "FR-19",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Corrèze"
+    }
+  },
+  {
+    "code": "FR-2A",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Corse-du-Sud"
+    }
+  },
+  {
+    "code": "FR-2B",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Haute-Corse"
+    }
+  },
+  {
+    "code": "FR-21",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Côte-d'Or"
+    }
+  },
+  {
+    "code": "FR-22",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Côtes-d'Armor"
+    }
+  },
+  {
+    "code": "FR-23",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Creuse"
+    }
+  },
+  {
+    "code": "FR-24",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Dordogne"
+    }
+  },
+  {
+    "code": "FR-25",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Doubs"
+    }
+  },
+  {
+    "code": "FR-26",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Drôme"
+    }
+  },
+  {
+    "code": "FR-27",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Eure"
+    }
+  },
+  {
+    "code": "FR-28",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Eure-et-Loir"
+    }
+  },
+  {
+    "code": "FR-29",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Finistère"
+    }
+  },
+  {
+    "code": "FR-30",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Gard"
+    }
+  },
+  {
+    "code": "FR-31",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Haute-Garonne"
+    }
+  },
+  {
+    "code": "FR-32",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Gers"
+    }
+  },
+  {
+    "code": "FR-33",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Gironde"
+    }
+  },
+  {
+    "code": "FR-34",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Hérault"
+    }
+  },
+  {
+    "code": "FR-35",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Ille-et-Vilaine"
+    }
+  },
+  {
+    "code": "FR-36",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Indre"
+    }
+  },
+  {
+    "code": "FR-37",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Indre-et-Loire"
+    }
+  },
+  {
+    "code": "FR-38",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Isère"
+    }
+  },
+  {
+    "code": "FR-39",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Jura"
+    }
+  },
+  {
+    "code": "FR-40",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Landes"
+    }
+  },
+  {
+    "code": "FR-41",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Loir-et-Cher"
+    }
+  },
+  {
+    "code": "FR-42",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Loire"
+    }
+  },
+  {
+    "code": "FR-43",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Haute-Loire"
+    }
+  },
+  {
+    "code": "FR-44",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Loire-Atlantique"
+    }
+  },
+  {
+    "code": "FR-45",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Loiret"
+    }
+  },
+  {
+    "code": "FR-46",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Lot"
+    }
+  },
+  {
+    "code": "FR-47",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Lot-et-Garonne"
+    }
+  },
+  {
+    "code": "FR-48",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Lozère"
+    }
+  },
+  {
+    "code": "FR-49",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Maine-et-Loire"
+    }
+  },
+  {
+    "code": "FR-50",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Manche"
+    }
+  },
+  {
+    "code": "FR-51",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Marne"
+    }
+  },
+  {
+    "code": "FR-52",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Haute-Marne"
+    }
+  },
+  {
+    "code": "FR-53",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Mayenne"
+    }
+  },
+  {
+    "code": "FR-54",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Meurthe-et-Moselle"
+    }
+  },
+  {
+    "code": "FR-55",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Meuse"
+    }
+  },
+  {
+    "code": "FR-56",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Morbihan"
+    }
+  },
+  {
+    "code": "FR-57",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Moselle"
+    }
+  },
+  {
+    "code": "FR-58",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Nièvre"
+    }
+  },
+  {
+    "code": "FR-59",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Nord"
+    }
+  },
+  {
+    "code": "FR-60",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Oise"
+    }
+  },
+  {
+    "code": "FR-61",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Orne"
+    }
+  },
+  {
+    "code": "FR-62",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Pas-de-Calais"
+    }
+  },
+  {
+    "code": "FR-63",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Puy-de-Dôme"
+    }
+  },
+  {
+    "code": "FR-64",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Pyrénées-Atlantiques"
+    }
+  },
+  {
+    "code": "FR-65",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Hautes-Pyrénées"
+    }
+  },
+  {
+    "code": "FR-66",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Pyrénées-Orientales"
+    }
+  },
+  {
+    "code": "FR-67",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Bas-Rhin"
+    }
+  },
+  {
+    "code": "FR-68",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Haut-Rhin"
+    }
+  },
+  {
+    "code": "FR-69",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Rhône"
+    }
+  },
+  {
+    "code": "FR-70",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Haute-Saône"
+    }
+  },
+  {
+    "code": "FR-71",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Saône-et-Loire"
+    }
+  },
+  {
+    "code": "FR-72",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Sarthe"
+    }
+  },
+  {
+    "code": "FR-73",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Savoie"
+    }
+  },
+  {
+    "code": "FR-74",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Haute-Savoie"
+    }
+  },
+  {
+    "code": "FR-76",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Seine-Maritime"
+    }
+  },
+  {
+    "code": "FR-77",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Seine-et-Marne"
+    }
+  },
+  {
+    "code": "FR-78",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Yvelines"
+    }
+  },
+  {
+    "code": "FR-79",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Deux-Sèvres"
+    }
+  },
+  {
+    "code": "FR-80",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Somme"
+    }
+  },
+  {
+    "code": "FR-81",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Tarn"
+    }
+  },
+  {
+    "code": "FR-82",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Tarn-et-Garonne"
+    }
+  },
+  {
+    "code": "FR-83",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Var"
+    }
+  },
+  {
+    "code": "FR-84",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Vaucluse"
+    }
+  },
+  {
+    "code": "FR-85",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Vendée"
+    }
+  },
+  {
+    "code": "FR-86",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Vienne"
+    }
+  },
+  {
+    "code": "FR-87",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Haute-Vienne"
+    }
+  },
+  {
+    "code": "FR-88",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Vosges"
+    }
+  },
+  {
+    "code": "FR-89",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Yonne"
+    }
+  },
+  {
+    "code": "FR-90",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Territoire de Belfort"
+    }
+  },
+  {
+    "code": "FR-91",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Essonne"
+    }
+  },
+  {
+    "code": "FR-92",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Hauts-de-Seine"
+    }
+  },
+  {
+    "code": "FR-93",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Seine-Saint-Denis"
+    }
+  },
+  {
+    "code": "FR-94",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Val-de-Marne"
+    }
+  },
+  {
+    "code": "FR-95",
+    "type": {
+      "en": "metropolitan department",
+      "fr": "département métropolitain"
+    },
+    "names": {
+      "fr": "Val-d'Oise"
+    }
+  },
+  {
+    "code": "FR-971",
+    "type": {
+      "en": "overseas departmental collectivity",
+      "fr": "collectivité départementale d'outre-mer"
+    },
+    "names": {
+      "fr": "Guadeloupe"
+    },
+    "iso1": "GP"
+  },
+  {
+    "code": "FR-972",
+    "type": {
+      "en": "overseas unique territorial collectivity",
+      "fr": "collectivité territoriale unique d'outre-mer"
+    },
+    "names": {
+      "fr": "Martinique"
+    },
+    "iso1": "MQ"
+  },
+  {
+    "code": "FR-973",
+    "type": {
+      "en": "overseas unique territorial collectivity",
+      "fr": "collectivité territoriale unique d'outre-mer"
+    },
+    "names": {
+      "fr": "Guyane (française)"
+    },
+    "iso1": "GF"
+  },
+  {
+    "code": "FR-974",
+    "type": {
+      "en": "overseas departmental collectivity",
+      "fr": "collectivité départementale d'outre-mer"
+    },
+    "names": {
+      "fr": "La Réunion"
+    },
+    "iso1": "RE"
+  },
+  {
+    "code": "FR-976",
+    "type": {
+      "en": "overseas departmental collectivity",
+      "fr": "collectivité départementale d'outre-mer"
+    },
+    "names": {
+      "fr": "Mayotte"
+    },
+    "iso1": "YT"
+  },
+  {
+    "code": "FR-BL",
+    "type": {
+      "en": "overseas collectivity",
+      "fr": "collectivité d'outre-mer"
+    },
+    "names": {
+      "fr": "Saint-Barthélemy"
+    },
+    "iso1": "BL"
+  },
+  {
+    "code": "FR-CP",
+    "type": {
+      "en": "dependency",
+      "fr": "dépendance"
+    },
+    "names": {
+      "fr": "Clipperton"
+    }
+  },
+  {
+    "code": "FR-MF",
+    "type": {
+      "en": "overseas collectivity",
+      "fr": "collectivité d'outre-mer"
+    },
+    "names": {
+      "fr": "Saint-Martin"
+    },
+    "iso1": "MF"
+  },
+  {
+    "code": "FR-NC",
+    "type": {
+      "en": "overseas collectivity with special status",
+      "fr": "collectivité d'outre-mer à statut particulier"
+    },
+    "names": {
+      "fr": "Nouvelle-Calédonie"
+    },
+    "iso1": "NC"
+  },
+  {
+    "code": "FR-PF",
+    "type": {
+      "en": "overseas collectivity",
+      "fr": "collectivité d'outre-mer"
+    },
+    "names": {
+      "fr": "Polynésie française"
+    },
+    "iso1": "PF"
+  },
+  {
+    "code": "FR-PM",
+    "type": {
+      "en": "overseas collectivity",
+      "fr": "collectivité d'outre-mer"
+    },
+    "names": {
+      "fr": "Saint-Pierre-et-Miquelon"
+    },
+    "iso1": "PM"
+  },
+  {
+    "code": "FR-TF",
+    "type": {
+      "en": "overseas territory",
+      "fr": "territoire d'outre-mer"
+    },
+    "names": {
+      "fr": "Terres australes françaises"
+    },
+    "iso1": "TF"
+  },
+  {
+    "code": "FR-WF",
+    "type": {
+      "en": "overseas collectivity",
+      "fr": "collectivité d'outre-mer"
+    },
+    "names": {
+      "fr": "Wallis-et-Futuna"
+    },
+    "iso1": "WF"
+  }
+]

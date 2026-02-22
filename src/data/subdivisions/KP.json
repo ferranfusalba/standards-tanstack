@@ -1,0 +1,14 @@
+[
+  { "code": "KP-01", "type": "capital city", "names": { "ko": "평양직할시" } },
+  { "code": "KP-02", "type": "province", "names": { "ko": "평안남도" } },
+  { "code": "KP-03", "type": "province", "names": { "ko": "평안북도" } },
+  { "code": "KP-04", "type": "province", "names": { "ko": "자강도" } },
+  { "code": "KP-05", "type": "province", "names": { "ko": "황해남도" } },
+  { "code": "KP-06", "type": "province", "names": { "ko": "황해북도" } },
+  { "code": "KP-07", "type": "province", "names": { "ko": "강원도" } },
+  { "code": "KP-08", "type": "province", "names": { "ko": "함경남도" } },
+  { "code": "KP-09", "type": "province", "names": { "ko": "함경북도" } },
+  { "code": "KP-10", "type": "province", "names": { "ko": "량강도" } },
+  { "code": "KP-13", "type": "special city", "names": { "ko": "남포특별시" } },
+  { "code": "KP-14", "type": "special city", "names": { "ko": "개성특별시" } }
+]

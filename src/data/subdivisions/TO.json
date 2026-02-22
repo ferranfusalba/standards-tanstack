@@ -1,0 +1,7 @@
+[
+  { "code": "TO-01", "type": "division", "names": { "to": "'Eua", "en": "'Eua" } },
+  { "code": "TO-02", "type": "division", "names": { "to": "Ha'apai", "en": "Ha'apai" } },
+  { "code": "TO-03", "type": "division", "names": { "to": "Niuas", "en": "Niuas" } },
+  { "code": "TO-04", "type": "division", "names": { "to": "Tongatapu", "en": "Tongatapu" } },
+  { "code": "TO-05", "type": "division", "names": { "to": "Vava'u", "en": "Vava'u" } }
+]

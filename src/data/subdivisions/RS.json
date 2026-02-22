@@ -1,0 +1,16 @@
+[
+  {
+    "code": "RS-KM",
+    "type": "autonomous province",
+    "names": {
+      "sr": "Косово и Метохија"
+    }
+  },
+  {
+    "code": "RS-VO",
+    "type": "autonomous province",
+    "names": {
+      "sr": "Војводина"
+    }
+  }
+]

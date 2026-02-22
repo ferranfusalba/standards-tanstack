@@ -1,0 +1,80 @@
+[
+  {
+    "code": "ER-AN",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ti": "zoba",
+      "ar": "minţaqah"
+    },
+    "names": {
+      "ti": "'Anseba",
+      "ar": "Ansabā"
+    }
+  },
+  {
+    "code": "ER-DK",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ti": "zoba",
+      "ar": "minţaqah"
+    },
+    "names": {
+      "ti": "Debubawi K'eyyĭḥ Baḥri",
+      "ar": "Janūbī al Baḩrī al Aḩmar"
+    }
+  },
+  {
+    "code": "ER-DU",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ti": "zoba",
+      "ar": "minţaqah"
+    },
+    "names": {
+      "ti": "Debub",
+      "ar": "Al Janūbī"
+    }
+  },
+  {
+    "code": "ER-GB",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ti": "zoba",
+      "ar": "minţaqah"
+    },
+    "names": {
+      "ti": "Gash-Barka",
+      "ar": "Qāsh-Barkah"
+    }
+  },
+  {
+    "code": "ER-MA",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ti": "zoba",
+      "ar": "minţaqah"
+    },
+    "names": {
+      "ti": "Ma'ĭkel",
+      "ar": "Al Awsaţ"
+    }
+  },
+  {
+    "code": "ER-SK",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ti": "zoba",
+      "ar": "minţaqah"
+    },
+    "names": {
+      "ti": "Semienawi K'eyyĭḥ Baḥri",
+      "ar": "Shimālī al Baḩrī al Aḩmar"
+    }
+  }
+]

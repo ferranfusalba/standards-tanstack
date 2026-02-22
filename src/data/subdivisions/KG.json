@@ -1,0 +1,11 @@
+[
+  { "code": "KG-B", "type": "region", "names": { "ky": "Batken" } },
+  { "code": "KG-C", "type": "region", "names": { "ky": "Chuy" } },
+  { "code": "KG-GB", "type": "city", "names": { "ky": "Bishkek" } },
+  { "code": "KG-GO", "type": "city", "names": { "ky": "Osh" } },
+  { "code": "KG-J", "type": "region", "names": { "ky": "Jalal-Abad" } },
+  { "code": "KG-N", "type": "region", "names": { "ky": "Naryn" } },
+  { "code": "KG-O", "type": "region", "names": { "ky": "Osh" } },
+  { "code": "KG-T", "type": "region", "names": { "ky": "Talas" } },
+  { "code": "KG-Y", "type": "region", "names": { "ky": "Issyk-Kul" } }
+]

@@ -1,0 +1,8 @@
+[
+  { "code": "GM-B", "type": "city", "names": { "en": "Banjul" } },
+  { "code": "GM-L", "type": "division", "names": { "en": "Lower River" } },
+  { "code": "GM-M", "type": "division", "names": { "en": "Central River" } },
+  { "code": "GM-N", "type": "division", "names": { "en": "North Bank" } },
+  { "code": "GM-U", "type": "division", "names": { "en": "Upper River" } },
+  { "code": "GM-W", "type": "division", "names": { "en": "Western" } }
+]

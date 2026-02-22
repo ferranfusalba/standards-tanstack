@@ -1,0 +1,16 @@
+[
+  { "code": "UZ-AN", "type": "region", "names": { "uz": "Andijon" } },
+  { "code": "UZ-BU", "type": "region", "names": { "uz": "Buxoro" } },
+  { "code": "UZ-FA", "type": "region", "names": { "uz": "Fargona" } },
+  { "code": "UZ-JI", "type": "region", "names": { "uz": "Jizzax" } },
+  { "code": "UZ-NG", "type": "region", "names": { "uz": "Namangan" } },
+  { "code": "UZ-NW", "type": "region", "names": { "uz": "Navoiy" } },
+  { "code": "UZ-QA", "type": "region", "names": { "uz": "Qashqadaryo" } },
+  { "code": "UZ-QR", "type": "republic", "names": { "uz": "Qoraqalpogiston Respublikasi" } },
+  { "code": "UZ-SA", "type": "region", "names": { "uz": "Samarqand" } },
+  { "code": "UZ-SI", "type": "region", "names": { "uz": "Sirdaryo" } },
+  { "code": "UZ-SU", "type": "region", "names": { "uz": "Surxondaryo" } },
+  { "code": "UZ-TK", "type": "city", "names": { "uz": "Toshkent" } },
+  { "code": "UZ-TO", "type": "region", "names": { "uz": "Toshkent" } },
+  { "code": "UZ-XO", "type": "region", "names": { "uz": "Xorazm" } }
+]

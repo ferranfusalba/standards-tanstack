@@ -1,0 +1,11 @@
+[
+  { "code": "ZA-EC", "type": "province", "names": { "en": "Eastern Cape" } },
+  { "code": "ZA-FS", "type": "province", "names": { "en": "Free State" } },
+  { "code": "ZA-GP", "type": "province", "names": { "en": "Gauteng" } },
+  { "code": "ZA-KZN", "type": "province", "names": { "en": "KwaZulu-Natal" } },
+  { "code": "ZA-LP", "type": "province", "names": { "en": "Limpopo" } },
+  { "code": "ZA-MP", "type": "province", "names": { "en": "Mpumalanga" } },
+  { "code": "ZA-NC", "type": "province", "names": { "en": "Northern Cape" } },
+  { "code": "ZA-NW", "type": "province", "names": { "en": "North West" } },
+  { "code": "ZA-WC", "type": "province", "names": { "en": "Western Cape" } }
+]

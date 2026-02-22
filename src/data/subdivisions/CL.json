@@ -1,0 +1,178 @@
+[
+  {
+    "code": "CL-AI",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Aisén del General Carlos Ibáñez del Campo"
+    }
+  },
+  {
+    "code": "CL-AN",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Antofagasta"
+    }
+  },
+  {
+    "code": "CL-AP",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Arica y Parinacota"
+    }
+  },
+  {
+    "code": "CL-AR",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "La Araucanía"
+    }
+  },
+  {
+    "code": "CL-AT",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Atacama"
+    }
+  },
+  {
+    "code": "CL-BI",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Biobío"
+    }
+  },
+  {
+    "code": "CL-CO",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Coquimbo"
+    }
+  },
+  {
+    "code": "CL-LI",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Libertador General Bernardo O'Higgins"
+    }
+  },
+  {
+    "code": "CL-LL",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Los Lagos"
+    }
+  },
+  {
+    "code": "CL-LR",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Los Ríos"
+    }
+  },
+  {
+    "code": "CL-MA",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Magallanes y de la Antártica Chilena"
+    }
+  },
+  {
+    "code": "CL-ML",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Maule"
+    }
+  },
+  {
+    "code": "CL-NB",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Ñuble"
+    }
+  },
+  {
+    "code": "CL-RM",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Región Metropolitana de Santiago"
+    }
+  },
+  {
+    "code": "CL-TA",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Tarapacá"
+    }
+  },
+  {
+    "code": "CL-VS",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región"
+    },
+    "names": {
+      "es": "Valparaíso"
+    }
+  }
+]

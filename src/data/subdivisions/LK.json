@@ -1,0 +1,11 @@
+[
+  { "code": "LK-1", "type": "province", "names": { "si": "බස්නාහිර පළාත", "ta": "மேல் மாகாணம்" } },
+  { "code": "LK-2", "type": "province", "names": { "si": "මධ්‍යම පළාත", "ta": "மத்திய மாகாணம்" } },
+  { "code": "LK-3", "type": "province", "names": { "si": "දකුණු පළාත", "ta": "தென் மாகாணம்" } },
+  { "code": "LK-4", "type": "province", "names": { "si": "උතුරු පළාත", "ta": "வட மாகாணம்" } },
+  { "code": "LK-5", "type": "province", "names": { "si": "නැගෙනහිර පළාත", "ta": "கிழக்கு மாகாணம்" } },
+  { "code": "LK-6", "type": "province", "names": { "si": "වයඹ පළාත", "ta": "வடமேல் மாகாணம்" } },
+  { "code": "LK-7", "type": "province", "names": { "si": "උතුරු මැද පළාත", "ta": "வடமத்திய மாகாணம்" } },
+  { "code": "LK-8", "type": "province", "names": { "si": "ඌව පළාත", "ta": "ஊவா மாகாணம்" } },
+  { "code": "LK-9", "type": "province", "names": { "si": "සබරගමුව පළාත", "ta": "சப்ரகமுவ மாகாணம்" } }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "code": "IS-1",
+    "type": "region",
+    "names": {
+      "is": "Höfuðborgarsvæði"
+    }
+  },
+  {
+    "code": "IS-2",
+    "type": "region",
+    "names": {
+      "is": "Suðurnes"
+    }
+  },
+  {
+    "code": "IS-3",
+    "type": "region",
+    "names": {
+      "is": "Vesturland"
+    }
+  },
+  {
+    "code": "IS-4",
+    "type": "region",
+    "names": {
+      "is": "Vestfirðir"
+    }
+  },
+  {
+    "code": "IS-5",
+    "type": "region",
+    "names": {
+      "is": "Norðurland vestra"
+    }
+  },
+  {
+    "code": "IS-6",
+    "type": "region",
+    "names": {
+      "is": "Norðurland eystra"
+    }
+  },
+  {
+    "code": "IS-7",
+    "type": "region",
+    "names": {
+      "is": "Austurland"
+    }
+  },
+  {
+    "code": "IS-8",
+    "type": "region",
+    "names": {
+      "is": "Suðurland"
+    }
+  }
+]

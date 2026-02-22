@@ -1,0 +1,192 @@
+[
+  {
+    "code": "FJ-01",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Ba"
+    }
+  },
+  {
+    "code": "FJ-02",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Bua"
+    }
+  },
+  {
+    "code": "FJ-03",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Cakaudrove"
+    }
+  },
+  {
+    "code": "FJ-04",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Kadavu"
+    }
+  },
+  {
+    "code": "FJ-05",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Lau"
+    }
+  },
+  {
+    "code": "FJ-06",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Lomaiviti"
+    }
+  },
+  {
+    "code": "FJ-07",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Macuata"
+    }
+  },
+  {
+    "code": "FJ-08",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Nadroga and Navosa"
+    }
+  },
+  {
+    "code": "FJ-09",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Naitasiri"
+    }
+  },
+  {
+    "code": "FJ-10",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Namosi"
+    }
+  },
+  {
+    "code": "FJ-11",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Ra"
+    }
+  },
+  {
+    "code": "FJ-12",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Rewa"
+    }
+  },
+  {
+    "code": "FJ-13",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Serua"
+    }
+  },
+  {
+    "code": "FJ-14",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Tailevu"
+    }
+  },
+  {
+    "code": "FJ-C",
+    "type": {
+      "en": "division",
+      "fr": "division"
+    },
+    "names": {
+      "en": "Central"
+    }
+  },
+  {
+    "code": "FJ-E",
+    "type": {
+      "en": "division",
+      "fr": "division"
+    },
+    "names": {
+      "en": "Eastern"
+    }
+  },
+  {
+    "code": "FJ-N",
+    "type": {
+      "en": "division",
+      "fr": "division"
+    },
+    "names": {
+      "en": "Northern"
+    }
+  },
+  {
+    "code": "FJ-R",
+    "type": {
+      "en": "dependency",
+      "fr": "dépendance"
+    },
+    "names": {
+      "en": "Rotuma"
+    }
+  },
+  {
+    "code": "FJ-W",
+    "type": {
+      "en": "division",
+      "fr": "division"
+    },
+    "names": {
+      "en": "Western"
+    }
+  }
+]

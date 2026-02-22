@@ -1,0 +1,444 @@
+[
+  {
+    "code": "AF-BAL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Balkh",
+      "ps": "Balkh"
+    }
+  },
+  {
+    "code": "AF-BAM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Bāmyān",
+      "ps": "Bāmyān"
+    }
+  },
+  {
+    "code": "AF-BDG",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Bādghīs",
+      "ps": "Bādghīs"
+    }
+  },
+  {
+    "code": "AF-BDS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Badakhshān",
+      "ps": "Badakhshān"
+    }
+  },
+  {
+    "code": "AF-BGL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Baghlān",
+      "ps": "Baghlān"
+    }
+  },
+  {
+    "code": "AF-DAY",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Dāykundī",
+      "ps": "Dāykundī"
+    }
+  },
+  {
+    "code": "AF-FRA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Farāh",
+      "ps": "Farāh"
+    }
+  },
+  {
+    "code": "AF-FYB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Fāryāb",
+      "ps": "Fāryāb"
+    }
+  },
+  {
+    "code": "AF-GHA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Ghaznī",
+      "ps": "Ghaznī"
+    }
+  },
+  {
+    "code": "AF-GHO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Ghōr",
+      "ps": "Ghōr"
+    }
+  },
+  {
+    "code": "AF-HEL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Helmand",
+      "ps": "Helmand"
+    }
+  },
+  {
+    "code": "AF-HER",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Herāt",
+      "ps": "Herāt"
+    }
+  },
+  {
+    "code": "AF-JOW",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Jowzjān",
+      "ps": "Jowzjān"
+    }
+  },
+  {
+    "code": "AF-KAB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Kābul",
+      "ps": "Kābul"
+    }
+  },
+  {
+    "code": "AF-KAN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Kandahār",
+      "ps": "Kandahār"
+    }
+  },
+  {
+    "code": "AF-KAP",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Kāpīsā",
+      "ps": "Kāpīsā"
+    }
+  },
+  {
+    "code": "AF-KDZ",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Kunduz",
+      "ps": "Kunduz"
+    }
+  },
+  {
+    "code": "AF-KHO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Khōst",
+      "ps": "Khōst"
+    }
+  },
+  {
+    "code": "AF-KNR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Kunaṟ",
+      "ps": "Kunaṟ"
+    }
+  },
+  {
+    "code": "AF-LAG",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Laghmān",
+      "ps": "Laghmān"
+    }
+  },
+  {
+    "code": "AF-LOG",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Lōgar",
+      "ps": "Lōgar"
+    }
+  },
+  {
+    "code": "AF-NAN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Nangarhār",
+      "ps": "Nangarhār"
+    }
+  },
+  {
+    "code": "AF-NIM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Nīmrōz",
+      "ps": "Nīmrōz"
+    }
+  },
+  {
+    "code": "AF-NUR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Nūristān",
+      "ps": "Nūristān"
+    }
+  },
+  {
+    "code": "AF-PAN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Panjshayr",
+      "ps": "Panjshayr"
+    }
+  },
+  {
+    "code": "AF-PAR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Parwān",
+      "ps": "Parwān"
+    }
+  },
+  {
+    "code": "AF-PIA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Paktiyā",
+      "ps": "Paktiyā"
+    }
+  },
+  {
+    "code": "AF-PKA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Paktīkā",
+      "ps": "Paktīkā"
+    }
+  },
+  {
+    "code": "AF-SAM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Samangān",
+      "ps": "Samangān"
+    }
+  },
+  {
+    "code": "AF-SAR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Sar-e Pul",
+      "ps": "Sar-e Pul"
+    }
+  },
+  {
+    "code": "AF-TAK",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Takhār",
+      "ps": "Takhār"
+    }
+  },
+  {
+    "code": "AF-URU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Uruzgān",
+      "ps": "Uruzgān"
+    }
+  },
+  {
+    "code": "AF-WAR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Wardak",
+      "ps": "Wardak"
+    }
+  },
+  {
+    "code": "AF-ZAB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "fa": "wilāyat",
+      "ps": "wilāyat"
+    },
+    "names": {
+      "fa": "Zābul",
+      "ps": "Zābul"
+    }
+  }
+]

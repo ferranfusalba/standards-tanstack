@@ -1,0 +1,7 @@
+[
+  { "code": "TG-C", "type": "region", "names": { "fr": "Centrale" } },
+  { "code": "TG-K", "type": "region", "names": { "fr": "Kara" } },
+  { "code": "TG-M", "type": "region", "names": { "fr": "Maritime" } },
+  { "code": "TG-P", "type": "region", "names": { "fr": "Plateaux" } },
+  { "code": "TG-S", "type": "region", "names": { "fr": "Savanes" } }
+]

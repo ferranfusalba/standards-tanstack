@@ -1,0 +1,114 @@
+[
+  {
+    "code": "PL-02",
+    "type": "voivodeship",
+    "names": {
+      "pl": "dolnośląskie"
+    }
+  },
+  {
+    "code": "PL-04",
+    "type": "voivodeship",
+    "names": {
+      "pl": "kujawsko-pomorskie"
+    }
+  },
+  {
+    "code": "PL-06",
+    "type": "voivodeship",
+    "names": {
+      "pl": "lubelskie"
+    }
+  },
+  {
+    "code": "PL-08",
+    "type": "voivodeship",
+    "names": {
+      "pl": "lubuskie"
+    }
+  },
+  {
+    "code": "PL-10",
+    "type": "voivodeship",
+    "names": {
+      "pl": "łódzkie"
+    }
+  },
+  {
+    "code": "PL-12",
+    "type": "voivodeship",
+    "names": {
+      "pl": "małopolskie"
+    }
+  },
+  {
+    "code": "PL-14",
+    "type": "voivodeship",
+    "names": {
+      "pl": "mazowieckie"
+    }
+  },
+  {
+    "code": "PL-16",
+    "type": "voivodeship",
+    "names": {
+      "pl": "opolskie"
+    }
+  },
+  {
+    "code": "PL-18",
+    "type": "voivodeship",
+    "names": {
+      "pl": "podkarpackie"
+    }
+  },
+  {
+    "code": "PL-20",
+    "type": "voivodeship",
+    "names": {
+      "pl": "podlaskie"
+    }
+  },
+  {
+    "code": "PL-22",
+    "type": "voivodeship",
+    "names": {
+      "pl": "pomorskie"
+    }
+  },
+  {
+    "code": "PL-24",
+    "type": "voivodeship",
+    "names": {
+      "pl": "śląskie"
+    }
+  },
+  {
+    "code": "PL-26",
+    "type": "voivodeship",
+    "names": {
+      "pl": "świętokrzyskie"
+    }
+  },
+  {
+    "code": "PL-28",
+    "type": "voivodeship",
+    "names": {
+      "pl": "warmińsko-mazurskie"
+    }
+  },
+  {
+    "code": "PL-30",
+    "type": "voivodeship",
+    "names": {
+      "pl": "wielkopolskie"
+    }
+  },
+  {
+    "code": "PL-32",
+    "type": "voivodeship",
+    "names": {
+      "pl": "zachodniopomorskie"
+    }
+  }
+]

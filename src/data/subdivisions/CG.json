@@ -1,0 +1,122 @@
+[
+  {
+    "code": "CG-2",
+    "type": {
+      "en": "department",
+      "fr": "département"
+    },
+    "names": {
+      "fr": "Lékoumou"
+    }
+  },
+  {
+    "code": "CG-5",
+    "type": {
+      "en": "department",
+      "fr": "département"
+    },
+    "names": {
+      "fr": "Kouilou"
+    }
+  },
+  {
+    "code": "CG-7",
+    "type": {
+      "en": "department",
+      "fr": "département"
+    },
+    "names": {
+      "fr": "Likouala"
+    }
+  },
+  {
+    "code": "CG-8",
+    "type": {
+      "en": "department",
+      "fr": "département"
+    },
+    "names": {
+      "fr": "Cuvette"
+    }
+  },
+  {
+    "code": "CG-9",
+    "type": {
+      "en": "department",
+      "fr": "département"
+    },
+    "names": {
+      "fr": "Niari"
+    }
+  },
+  {
+    "code": "CG-11",
+    "type": {
+      "en": "department",
+      "fr": "département"
+    },
+    "names": {
+      "fr": "Bouenza"
+    }
+  },
+  {
+    "code": "CG-12",
+    "type": {
+      "en": "department",
+      "fr": "département"
+    },
+    "names": {
+      "fr": "Pool"
+    }
+  },
+  {
+    "code": "CG-13",
+    "type": {
+      "en": "department",
+      "fr": "département"
+    },
+    "names": {
+      "fr": "Sangha"
+    }
+  },
+  {
+    "code": "CG-14",
+    "type": {
+      "en": "department",
+      "fr": "département"
+    },
+    "names": {
+      "fr": "Plateaux"
+    }
+  },
+  {
+    "code": "CG-15",
+    "type": {
+      "en": "department",
+      "fr": "département"
+    },
+    "names": {
+      "fr": "Cuvette-Ouest"
+    }
+  },
+  {
+    "code": "CG-16",
+    "type": {
+      "en": "department",
+      "fr": "département"
+    },
+    "names": {
+      "fr": "Pointe-Noire"
+    }
+  },
+  {
+    "code": "CG-BZV",
+    "type": {
+      "en": "department",
+      "fr": "département"
+    },
+    "names": {
+      "fr": "Brazzaville"
+    }
+  }
+]

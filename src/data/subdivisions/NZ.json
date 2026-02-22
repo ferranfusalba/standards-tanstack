@@ -1,0 +1,19 @@
+[
+  { "code": "NZ-AUK", "type": "region", "names": { "en": "Auckland" } },
+  { "code": "NZ-BOP", "type": "region", "names": { "en": "Bay of Plenty" } },
+  { "code": "NZ-CAN", "type": "region", "names": { "en": "Canterbury" } },
+  { "code": "NZ-CIT", "type": "unitary authority", "names": { "en": "Chatham Islands Territory" } },
+  { "code": "NZ-GIS", "type": "region", "names": { "en": "Gisborne" } },
+  { "code": "NZ-HKB", "type": "region", "names": { "en": "Hawke's Bay" } },
+  { "code": "NZ-MBH", "type": "region", "names": { "en": "Marlborough" } },
+  { "code": "NZ-MWT", "type": "region", "names": { "en": "Manawatū-Whanganui" } },
+  { "code": "NZ-NSN", "type": "unitary authority", "names": { "en": "Nelson" } },
+  { "code": "NZ-NTL", "type": "region", "names": { "en": "Northland" } },
+  { "code": "NZ-OTA", "type": "region", "names": { "en": "Otago" } },
+  { "code": "NZ-STL", "type": "region", "names": { "en": "Southland" } },
+  { "code": "NZ-TAS", "type": "region", "names": { "en": "Tasman" } },
+  { "code": "NZ-TKI", "type": "region", "names": { "en": "Taranaki" } },
+  { "code": "NZ-WKO", "type": "region", "names": { "en": "Waikato" } },
+  { "code": "NZ-WGN", "type": "region", "names": { "en": "Wellington" } },
+  { "code": "NZ-WTC", "type": "region", "names": { "en": "West Coast" } }
+]

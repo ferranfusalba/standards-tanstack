@@ -1,0 +1,172 @@
+[
+  {
+    "code": "CF-AC",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Ouham"
+    }
+  },
+  {
+    "code": "CF-BB",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Bamingui-Bangoran"
+    }
+  },
+  {
+    "code": "CF-BGF",
+    "type": {
+      "en": "commune",
+      "fr": "commune"
+    },
+    "names": {
+      "fr": "Bangui"
+    }
+  },
+  {
+    "code": "CF-BK",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Basse-Kotto"
+    }
+  },
+  {
+    "code": "CF-HK",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Haute-Kotto"
+    }
+  },
+  {
+    "code": "CF-HM",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Haut-Mbomou"
+    }
+  },
+  {
+    "code": "CF-HS",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Mambéré-Kadéï"
+    }
+  },
+  {
+    "code": "CF-KB",
+    "type": {
+      "en": "economic prefecture",
+      "fr": "préfecture économique"
+    },
+    "names": {
+      "fr": "Nana-Grébizi"
+    }
+  },
+  {
+    "code": "CF-KG",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Kémo"
+    }
+  },
+  {
+    "code": "CF-LB",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Lobaye"
+    }
+  },
+  {
+    "code": "CF-MB",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Mbomou"
+    }
+  },
+  {
+    "code": "CF-MP",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Ombella-M'Poko"
+    }
+  },
+  {
+    "code": "CF-NM",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Nana-Mambéré"
+    }
+  },
+  {
+    "code": "CF-OP",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Ouham-Pendé"
+    }
+  },
+  {
+    "code": "CF-SE",
+    "type": {
+      "en": "economic prefecture",
+      "fr": "préfecture économique"
+    },
+    "names": {
+      "fr": "Sangha-Mbaéré"
+    }
+  },
+  {
+    "code": "CF-UK",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Ouaka"
+    }
+  },
+  {
+    "code": "CF-VK",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Vakaga"
+    }
+  }
+]

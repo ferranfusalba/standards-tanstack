@@ -1,0 +1,58 @@
+[
+  {
+    "code": "XK-01",
+    "type": "district",
+    "names": {
+      "sq": "Prishtinë",
+      "sr": "Приштина"
+    }
+  },
+  {
+    "code": "XK-02",
+    "type": "district",
+    "names": {
+      "sq": "Mitrovicë",
+      "sr": "Косовска Митровица"
+    }
+  },
+  {
+    "code": "XK-03",
+    "type": "district",
+    "names": {
+      "sq": "Pejë",
+      "sr": "Пећ"
+    }
+  },
+  {
+    "code": "XK-04",
+    "type": "district",
+    "names": {
+      "sq": "Prizren",
+      "sr": "Призрен"
+    }
+  },
+  {
+    "code": "XK-05",
+    "type": "district",
+    "names": {
+      "sq": "Ferizaj",
+      "sr": "Урошевац"
+    }
+  },
+  {
+    "code": "XK-06",
+    "type": "district",
+    "names": {
+      "sq": "Gjakovë",
+      "sr": "Ђаковица"
+    }
+  },
+  {
+    "code": "XK-07",
+    "type": "district",
+    "names": {
+      "sq": "Gjilan",
+      "sr": "Гњилане"
+    }
+  }
+]

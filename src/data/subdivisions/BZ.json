@@ -1,0 +1,8 @@
+[
+  { "code": "BZ-BZ", "type": { "en": "district", "fr": "district" }, "names": { "en": "Belize" } },
+  { "code": "BZ-CY", "type": { "en": "district", "fr": "district" }, "names": { "en": "Cayo" } },
+  { "code": "BZ-CZL", "type": { "en": "district", "fr": "district" }, "names": { "en": "Corozal" } },
+  { "code": "BZ-OW", "type": { "en": "district", "fr": "district" }, "names": { "en": "Orange Walk" } },
+  { "code": "BZ-SC", "type": { "en": "district", "fr": "district" }, "names": { "en": "Stann Creek" } },
+  { "code": "BZ-TOL", "type": { "en": "district", "fr": "district" }, "names": { "en": "Toledo" } }
+]

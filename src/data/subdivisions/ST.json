@@ -1,0 +1,9 @@
+[
+  { "code": "ST-01", "type": "district", "names": { "pt": "Água Grande" } },
+  { "code": "ST-02", "type": "district", "names": { "pt": "Cantagalo" } },
+  { "code": "ST-03", "type": "district", "names": { "pt": "Caué" } },
+  { "code": "ST-04", "type": "district", "names": { "pt": "Lembá" } },
+  { "code": "ST-05", "type": "district", "names": { "pt": "Lobata" } },
+  { "code": "ST-06", "type": "district", "names": { "pt": "Mé-Zóchi" } },
+  { "code": "ST-P", "type": "autonomous region", "names": { "pt": "Príncipe" } }
+]

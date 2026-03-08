@@ -1,10 +1,90 @@
 [
-  { "code": "QA-DA", "type": "municipality", "names": { "ar": "الدوحة" } },
-  { "code": "QA-KH", "type": "municipality", "names": { "ar": "الخور والذخيرة" } },
-  { "code": "QA-KN", "type": "municipality", "names": { "ar": "الشمال" } },
-  { "code": "QA-MS", "type": "municipality", "names": { "ar": "الشحانية" } },
-  { "code": "QA-RA", "type": "municipality", "names": { "ar": "الريان" } },
-  { "code": "QA-US", "type": "municipality", "names": { "ar": "أم صلال" } },
-  { "code": "QA-WA", "type": "municipality", "names": { "ar": "الوكرة" } },
-  { "code": "QA-ZA", "type": "municipality", "names": { "ar": "الظعاين" } }
+  {
+    "code": "QA-DA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "ar": "baladīyah"
+    },
+    "names": {
+      "ar": "Ad Dawḩah"
+    }
+  },
+  {
+    "code": "QA-KH",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "ar": "baladīyah"
+    },
+    "names": {
+      "ar": "Al Khawr wa adh Dhakhīrah"
+    }
+  },
+  {
+    "code": "QA-MS",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "ar": "baladīyah"
+    },
+    "names": {
+      "ar": "Ash Shamāl"
+    }
+  },
+  {
+    "code": "QA-RA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "ar": "baladīyah"
+    },
+    "names": {
+      "ar": "Ar Rayyān"
+    }
+  },
+  {
+    "code": "QA-SH",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "ar": "baladīyah"
+    },
+    "names": {
+      "ar": "Ash Shīḩānīyah"
+    }
+  },
+  {
+    "code": "QA-US",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "ar": "baladīyah"
+    },
+    "names": {
+      "ar": "Umm Şalāl"
+    }
+  },
+  {
+    "code": "QA-WA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "ar": "baladīyah"
+    },
+    "names": {
+      "ar": "Al Wakrah"
+    }
+  },
+  {
+    "code": "QA-ZA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "ar": "baladīyah"
+    },
+    "names": {
+      "ar": "Az̧ Z̧a'āyin"
+    }
+  }
 ]

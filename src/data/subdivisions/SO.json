@@ -1,20 +1,200 @@
 [
-  { "code": "SO-AW", "type": "region", "names": { "so": "Awdal" } },
-  { "code": "SO-BK", "type": "region", "names": { "so": "Bakool" } },
-  { "code": "SO-BN", "type": "region", "names": { "so": "Banaadir" } },
-  { "code": "SO-BR", "type": "region", "names": { "so": "Bari" } },
-  { "code": "SO-BY", "type": "region", "names": { "so": "Bay" } },
-  { "code": "SO-GA", "type": "region", "names": { "so": "Galguduud" } },
-  { "code": "SO-GE", "type": "region", "names": { "so": "Gedo" } },
-  { "code": "SO-HI", "type": "region", "names": { "so": "Hiiraan" } },
-  { "code": "SO-JD", "type": "region", "names": { "so": "Jubbada Dhexe" } },
-  { "code": "SO-JH", "type": "region", "names": { "so": "Jubbada Hoose" } },
-  { "code": "SO-MU", "type": "region", "names": { "so": "Mudug" } },
-  { "code": "SO-NU", "type": "region", "names": { "so": "Nugaal" } },
-  { "code": "SO-SA", "type": "region", "names": { "so": "Sanaag" } },
-  { "code": "SO-SD", "type": "region", "names": { "so": "Shabeellaha Dhexe" } },
-  { "code": "SO-SH", "type": "region", "names": { "so": "Shabeellaha Hoose" } },
-  { "code": "SO-SO", "type": "region", "names": { "so": "Sool" } },
-  { "code": "SO-TO", "type": "region", "names": { "so": "Togdheer" } },
-  { "code": "SO-WO", "type": "region", "names": { "so": "Woqooyi Galbeed" } }
+  {
+    "code": "SO-AW",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Awdal"
+    }
+  },
+  {
+    "code": "SO-BK",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Bakool"
+    }
+  },
+  {
+    "code": "SO-BN",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Banaadir"
+    }
+  },
+  {
+    "code": "SO-BR",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Bari"
+    }
+  },
+  {
+    "code": "SO-BY",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Bay"
+    }
+  },
+  {
+    "code": "SO-GA",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Galguduud"
+    }
+  },
+  {
+    "code": "SO-GE",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Gedo"
+    }
+  },
+  {
+    "code": "SO-HI",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Hiiraan"
+    }
+  },
+  {
+    "code": "SO-JD",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Jubbada Dhexe"
+    }
+  },
+  {
+    "code": "SO-JH",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Jubbada Hoose"
+    }
+  },
+  {
+    "code": "SO-MU",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Mudug"
+    }
+  },
+  {
+    "code": "SO-NU",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Nugaal"
+    }
+  },
+  {
+    "code": "SO-SA",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Sanaag"
+    }
+  },
+  {
+    "code": "SO-SD",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Shabeellaha Dhexe"
+    }
+  },
+  {
+    "code": "SO-SH",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Shabeellaha Hoose"
+    }
+  },
+  {
+    "code": "SO-SO",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Sool"
+    }
+  },
+  {
+    "code": "SO-TO",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Togdheer"
+    }
+  },
+  {
+    "code": "SO-WO",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "so": "gobol"
+    },
+    "names": {
+      "so": "Woqooyi Galbeed"
+    }
+  }
 ]

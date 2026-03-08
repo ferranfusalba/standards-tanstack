@@ -1,20 +1,200 @@
 [
-  { "code": "HN-AT", "type": "department", "names": { "es": "Atlántida" } },
-  { "code": "HN-CH", "type": "department", "names": { "es": "Choluteca" } },
-  { "code": "HN-CL", "type": "department", "names": { "es": "Colón" } },
-  { "code": "HN-CM", "type": "department", "names": { "es": "Comayagua" } },
-  { "code": "HN-CP", "type": "department", "names": { "es": "Copán" } },
-  { "code": "HN-CR", "type": "department", "names": { "es": "Cortés" } },
-  { "code": "HN-EP", "type": "department", "names": { "es": "El Paraíso" } },
-  { "code": "HN-FM", "type": "department", "names": { "es": "Francisco Morazán" } },
-  { "code": "HN-GD", "type": "department", "names": { "es": "Gracias a Dios" } },
-  { "code": "HN-IB", "type": "department", "names": { "es": "Islas de la Bahía" } },
-  { "code": "HN-IN", "type": "department", "names": { "es": "Intibucá" } },
-  { "code": "HN-LE", "type": "department", "names": { "es": "Lempira" } },
-  { "code": "HN-LP", "type": "department", "names": { "es": "La Paz" } },
-  { "code": "HN-OC", "type": "department", "names": { "es": "Ocotepeque" } },
-  { "code": "HN-OL", "type": "department", "names": { "es": "Olancho" } },
-  { "code": "HN-SB", "type": "department", "names": { "es": "Santa Bárbara" } },
-  { "code": "HN-VA", "type": "department", "names": { "es": "Valle" } },
-  { "code": "HN-YO", "type": "department", "names": { "es": "Yoro" } }
+  {
+    "code": "HN-AT",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Atlántida"
+    }
+  },
+  {
+    "code": "HN-CH",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Choluteca"
+    }
+  },
+  {
+    "code": "HN-CL",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Colón"
+    }
+  },
+  {
+    "code": "HN-CM",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Comayagua"
+    }
+  },
+  {
+    "code": "HN-CP",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Copán"
+    }
+  },
+  {
+    "code": "HN-CR",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Cortés"
+    }
+  },
+  {
+    "code": "HN-EP",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "El Paraíso"
+    }
+  },
+  {
+    "code": "HN-FM",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Francisco Morazán"
+    }
+  },
+  {
+    "code": "HN-GD",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Gracias a Dios"
+    }
+  },
+  {
+    "code": "HN-IB",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Islas de la Bahía"
+    }
+  },
+  {
+    "code": "HN-IN",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Intibucá"
+    }
+  },
+  {
+    "code": "HN-LE",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Lempira"
+    }
+  },
+  {
+    "code": "HN-LP",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "La Paz"
+    }
+  },
+  {
+    "code": "HN-OC",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Ocotepeque"
+    }
+  },
+  {
+    "code": "HN-OL",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Olancho"
+    }
+  },
+  {
+    "code": "HN-SB",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Santa Bárbara"
+    }
+  },
+  {
+    "code": "HN-VA",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Valle"
+    }
+  },
+  {
+    "code": "HN-YO",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Yoro"
+    }
+  }
 ]

@@ -1,28 +1,383 @@
 [
-  { "code": "PE-AMA", "type": "region", "names": { "es": "Amazonas" } },
-  { "code": "PE-ANC", "type": "region", "names": { "es": "Áncash" } },
-  { "code": "PE-APU", "type": "region", "names": { "es": "Apurímac" } },
-  { "code": "PE-ARE", "type": "region", "names": { "es": "Arequipa" } },
-  { "code": "PE-AYA", "type": "region", "names": { "es": "Ayacucho" } },
-  { "code": "PE-CAJ", "type": "region", "names": { "es": "Cajamarca" } },
-  { "code": "PE-CAL", "type": "constitutional province", "names": { "es": "El Callao" } },
-  { "code": "PE-CUS", "type": "region", "names": { "es": "Cusco" } },
-  { "code": "PE-HUC", "type": "region", "names": { "es": "Huánuco" } },
-  { "code": "PE-HUV", "type": "region", "names": { "es": "Huancavelica" } },
-  { "code": "PE-ICA", "type": "region", "names": { "es": "Ica" } },
-  { "code": "PE-JUN", "type": "region", "names": { "es": "Junín" } },
-  { "code": "PE-LAL", "type": "region", "names": { "es": "La Libertad" } },
-  { "code": "PE-LAM", "type": "region", "names": { "es": "Lambayeque" } },
-  { "code": "PE-LIM", "type": "region", "names": { "es": "Lima" } },
-  { "code": "PE-LMA", "type": "municipality", "names": { "es": "Municipalidad Metropolitana de Lima" } },
-  { "code": "PE-LOR", "type": "region", "names": { "es": "Loreto" } },
-  { "code": "PE-MDD", "type": "region", "names": { "es": "Madre de Dios" } },
-  { "code": "PE-MOQ", "type": "region", "names": { "es": "Moquegua" } },
-  { "code": "PE-PAS", "type": "region", "names": { "es": "Pasco" } },
-  { "code": "PE-PIU", "type": "region", "names": { "es": "Piura" } },
-  { "code": "PE-PUN", "type": "region", "names": { "es": "Puno" } },
-  { "code": "PE-SAM", "type": "region", "names": { "es": "San Martín" } },
-  { "code": "PE-TAC", "type": "region", "names": { "es": "Tacna" } },
-  { "code": "PE-TUM", "type": "region", "names": { "es": "Tumbes" } },
-  { "code": "PE-UCA", "type": "region", "names": { "es": "Ucayali" } }
+  {
+    "code": "PE-AMA",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Amazonas",
+      "ay": "Amasunu",
+      "qu": "Amarumayu"
+    }
+  },
+  {
+    "code": "PE-ANC",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Ancash",
+      "ay": "Ankashu",
+      "qu": "Anqash"
+    }
+  },
+  {
+    "code": "PE-APU",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Apurímac",
+      "ay": "Apurimaq",
+      "qu": "Apurimaq"
+    }
+  },
+  {
+    "code": "PE-ARE",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Arequipa",
+      "ay": "Arikipa",
+      "qu": "Ariqipa"
+    }
+  },
+  {
+    "code": "PE-AYA",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Ayacucho",
+      "ay": "Ayaquchu",
+      "qu": "Ayakuchu"
+    }
+  },
+  {
+    "code": "PE-CAJ",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Cajamarca",
+      "ay": "Qajamarka",
+      "qu": "Kashamarka"
+    }
+  },
+  {
+    "code": "PE-CAL",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "El Callao",
+      "ay": "Kallao",
+      "qu": "Qallaw"
+    }
+  },
+  {
+    "code": "PE-CUS",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Cusco",
+      "ay": "Kusku",
+      "qu": "Qusqu"
+    }
+  },
+  {
+    "code": "PE-HUC",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Huánuco",
+      "ay": "Wanuku",
+      "qu": "Wanuku"
+    }
+  },
+  {
+    "code": "PE-HUV",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Huancavelica",
+      "ay": "Wankawelika",
+      "qu": "Wankawillka"
+    }
+  },
+  {
+    "code": "PE-ICA",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Ica",
+      "ay": "Ika",
+      "qu": "Ika"
+    }
+  },
+  {
+    "code": "PE-JUN",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Junín",
+      "ay": "Junin",
+      "qu": "Hunin"
+    }
+  },
+  {
+    "code": "PE-LAL",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "La Libertad",
+      "qu": "Qispi kay"
+    }
+  },
+  {
+    "code": "PE-LAM",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Lambayeque",
+      "qu": "Lampalliqi"
+    }
+  },
+  {
+    "code": "PE-LIM",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Lima"
+    }
+  },
+  {
+    "code": "PE-LMA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "ay": "hatun llaqta",
+      "es": "municipalidad",
+      "qu": "llaqta suyu"
+    },
+    "names": {
+      "es": "Municipalidad Metropolitana de Lima",
+      "ay": "Lima hatun llaqta",
+      "qu": "Lima llaqta suyu"
+    }
+  },
+  {
+    "code": "PE-LOR",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Loreto",
+      "ay": "Luritu",
+      "qu": "Luritu"
+    }
+  },
+  {
+    "code": "PE-MDD",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Madre de Dios",
+      "qu": "Mayutata"
+    }
+  },
+  {
+    "code": "PE-MOQ",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Moquegua",
+      "ay": "Moqwegwa",
+      "qu": "Muqiwa"
+    }
+  },
+  {
+    "code": "PE-PAS",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Pasco",
+      "ay": "Pasqu",
+      "qu": "Pasqu"
+    }
+  },
+  {
+    "code": "PE-PIU",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Piura",
+      "qu": "Piwra"
+    }
+  },
+  {
+    "code": "PE-PUN",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Puno",
+      "qu": "Punu"
+    }
+  },
+  {
+    "code": "PE-SAM",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "San Martín",
+      "qu": "San Martin"
+    }
+  },
+  {
+    "code": "PE-TAC",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Tacna",
+      "ay": "Takna",
+      "qu": "Taqna"
+    }
+  },
+  {
+    "code": "PE-TUM",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Tumbes",
+      "qu": "Tumpis"
+    }
+  },
+  {
+    "code": "PE-UCA",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ay": "jach'a suyu",
+      "es": "región",
+      "qu": "suyu"
+    },
+    "names": {
+      "es": "Ucayali",
+      "ay": "Ukayali",
+      "qu": "Ukayali"
+    }
+  }
 ]

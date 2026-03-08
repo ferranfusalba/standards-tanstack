@@ -1,12 +1,102 @@
 [
-  { "code": "LC-01", "type": "district", "names": { "en": "Anse la Raye" } },
-  { "code": "LC-02", "type": "district", "names": { "en": "Castries" } },
-  { "code": "LC-03", "type": "district", "names": { "en": "Choiseul" } },
-  { "code": "LC-05", "type": "district", "names": { "en": "Dennery" } },
-  { "code": "LC-06", "type": "district", "names": { "en": "Gros Islet" } },
-  { "code": "LC-07", "type": "district", "names": { "en": "Laborie" } },
-  { "code": "LC-08", "type": "district", "names": { "en": "Micoud" } },
-  { "code": "LC-10", "type": "district", "names": { "en": "Soufrière" } },
-  { "code": "LC-11", "type": "district", "names": { "en": "Vieux Fort" } },
-  { "code": "LC-12", "type": "district", "names": { "en": "Canaries" } }
+  {
+    "code": "LC-01",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Anse la Raye"
+    }
+  },
+  {
+    "code": "LC-02",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Castries"
+    }
+  },
+  {
+    "code": "LC-03",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Choiseul"
+    }
+  },
+  {
+    "code": "LC-05",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Dennery"
+    }
+  },
+  {
+    "code": "LC-06",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Gros Islet"
+    }
+  },
+  {
+    "code": "LC-07",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Laborie"
+    }
+  },
+  {
+    "code": "LC-08",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Micoud"
+    }
+  },
+  {
+    "code": "LC-10",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Soufrière"
+    }
+  },
+  {
+    "code": "LC-11",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Vieux Fort"
+    }
+  },
+  {
+    "code": "LC-12",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Canaries"
+    }
+  }
 ]

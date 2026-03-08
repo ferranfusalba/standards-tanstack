@@ -1,30 +1,409 @@
 [
   {
-    "code": "MD-GA",
-    "type": "autonomous territorial unit",
+    "code": "MD-AN",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
     "names": {
-      "ro": "Găgăuzia"
-    }
-  },
-  {
-    "code": "MD-CU",
-    "type": "municipality",
-    "names": {
-      "ro": "Chișinău"
+      "ro": "Anenii Noi"
     }
   },
   {
     "code": "MD-BA",
-    "type": "municipality",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "ro": "municipiu"
+    },
     "names": {
       "ro": "Bălți"
     }
   },
   {
-    "code": "MD-SN",
-    "type": "territorial unit",
+    "code": "MD-BD",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "ro": "municipiu"
+    },
     "names": {
-      "ro": "Stînga Nistrului"
+      "ro": "Bender [Tighina]"
+    }
+  },
+  {
+    "code": "MD-BR",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Briceni"
+    }
+  },
+  {
+    "code": "MD-BS",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Basarabeasca"
+    }
+  },
+  {
+    "code": "MD-CA",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Cahul"
+    }
+  },
+  {
+    "code": "MD-CL",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Călărași"
+    }
+  },
+  {
+    "code": "MD-CM",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Cimișlia"
+    }
+  },
+  {
+    "code": "MD-CR",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Criuleni"
+    }
+  },
+  {
+    "code": "MD-CS",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Căușeni"
+    }
+  },
+  {
+    "code": "MD-CT",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Cantemir"
+    }
+  },
+  {
+    "code": "MD-CU",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "ro": "municipiu"
+    },
+    "names": {
+      "ro": "Chișinău"
+    }
+  },
+  {
+    "code": "MD-DO",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Dondușeni"
+    }
+  },
+  {
+    "code": "MD-DR",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Drochia"
+    }
+  },
+  {
+    "code": "MD-DU",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Dubăsari"
+    }
+  },
+  {
+    "code": "MD-ED",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Edineț"
+    }
+  },
+  {
+    "code": "MD-FA",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Fălești"
+    }
+  },
+  {
+    "code": "MD-FL",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Florești"
+    }
+  },
+  {
+    "code": "MD-GA",
+    "type": {
+      "en": "autonomous territorial unit",
+      "fr": "unité territoriale autonome",
+      "ro": "unitatea teritorială autonomă"
+    },
+    "names": {
+      "ro": "Găgăuzia, Unitatea teritorială autonomă (UTAG)"
+    }
+  },
+  {
+    "code": "MD-GL",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Glodeni"
+    }
+  },
+  {
+    "code": "MD-HI",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Hîncești"
+    }
+  },
+  {
+    "code": "MD-IA",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Ialoveni"
+    }
+  },
+  {
+    "code": "MD-LE",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Leova"
+    }
+  },
+  {
+    "code": "MD-NI",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Nisporeni"
+    }
+  },
+  {
+    "code": "MD-OC",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Ocnița"
+    }
+  },
+  {
+    "code": "MD-OR",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Orhei"
+    }
+  },
+  {
+    "code": "MD-RE",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Rezina"
+    }
+  },
+  {
+    "code": "MD-RI",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Rîșcani"
+    }
+  },
+  {
+    "code": "MD-SD",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Șoldănești"
+    }
+  },
+  {
+    "code": "MD-SI",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Sîngerei"
+    }
+  },
+  {
+    "code": "MD-SN",
+    "type": {
+      "en": "territorial unit",
+      "fr": "unité territoriale",
+      "ro": "unitatea teritorială"
+    },
+    "names": {
+      "ro": "Stînga Nistrului, unitatea teritorială din"
+    }
+  },
+  {
+    "code": "MD-SO",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Soroca"
+    }
+  },
+  {
+    "code": "MD-ST",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Strășeni"
+    }
+  },
+  {
+    "code": "MD-SV",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Ștefan Vodă"
+    }
+  },
+  {
+    "code": "MD-TA",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Taraclia"
+    }
+  },
+  {
+    "code": "MD-TE",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Telenești"
+    }
+  },
+  {
+    "code": "MD-UN",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ro": "raion"
+    },
+    "names": {
+      "ro": "Ungheni"
     }
   }
 ]

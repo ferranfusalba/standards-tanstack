@@ -1,12 +1,102 @@
 [
-  { "code": "SS-BN", "type": "state", "names": { "en": "Northern Bahr el Ghazal" } },
-  { "code": "SS-BW", "type": "state", "names": { "en": "Western Bahr el Ghazal" } },
-  { "code": "SS-EC", "type": "state", "names": { "en": "Central Equatoria" } },
-  { "code": "SS-EE", "type": "state", "names": { "en": "Eastern Equatoria" } },
-  { "code": "SS-EW", "type": "state", "names": { "en": "Western Equatoria" } },
-  { "code": "SS-JG", "type": "state", "names": { "en": "Jonglei" } },
-  { "code": "SS-LK", "type": "state", "names": { "en": "Lakes" } },
-  { "code": "SS-NU", "type": "state", "names": { "en": "Upper Nile" } },
-  { "code": "SS-UY", "type": "state", "names": { "en": "Unity" } },
-  { "code": "SS-WR", "type": "state", "names": { "en": "Warrap" } }
+  {
+    "code": "SS-BN",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Northern Bahr el Ghazal"
+    }
+  },
+  {
+    "code": "SS-BW",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Western Bahr el Ghazal"
+    }
+  },
+  {
+    "code": "SS-EC",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Central Equatoria"
+    }
+  },
+  {
+    "code": "SS-EE",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Eastern Equatoria"
+    }
+  },
+  {
+    "code": "SS-EW",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Western Equatoria"
+    }
+  },
+  {
+    "code": "SS-JG",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Jonglei"
+    }
+  },
+  {
+    "code": "SS-LK",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Lakes"
+    }
+  },
+  {
+    "code": "SS-NU",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Upper Nile"
+    }
+  },
+  {
+    "code": "SS-UY",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Unity"
+    }
+  },
+  {
+    "code": "SS-WR",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Warrap"
+    }
+  }
 ]

@@ -1,95 +1,162 @@
 [
   {
     "code": "NO-03",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "nb": "fylke",
+      "nn": "fylke"
+    },
     "names": {
-      "no": "Oslo"
+      "nb": "Oslo"
     }
   },
   {
     "code": "NO-11",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "nb": "fylke",
+      "nn": "fylke"
+    },
     "names": {
-      "no": "Rogaland"
+      "nb": "Rogaland"
     }
   },
   {
     "code": "NO-15",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "nb": "fylke",
+      "nn": "fylke"
+    },
     "names": {
-      "no": "Møre og Romsdal"
+      "nb": "Møre og Romsdal"
     }
   },
   {
     "code": "NO-18",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "nb": "fylke",
+      "nn": "fylke"
+    },
     "names": {
-      "no": "Nordland"
+      "nb": "Nordland"
     }
   },
   {
     "code": "NO-21",
-    "type": "arctic territory",
+    "type": {
+      "en": "arctic region",
+      "fr": "région arctique",
+      "nb": "arktisk område",
+      "nn": "arktisk område"
+    },
     "names": {
-      "no": "Svalbard"
+      "nb": "Svalbard"
     },
     "iso1": "SJ"
   },
   {
     "code": "NO-22",
-    "type": "arctic territory",
+    "type": {
+      "en": "arctic region",
+      "fr": "région arctique",
+      "nb": "arktisk område",
+      "nn": "arktisk område"
+    },
     "names": {
-      "no": "Jan Mayen"
+      "nb": "Jan Mayen"
     },
     "iso1": "SJ"
   },
   {
     "code": "NO-30",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "nb": "fylke",
+      "nn": "fylke"
+    },
     "names": {
-      "no": "Viken"
+      "nb": "Viken"
     }
   },
   {
     "code": "NO-34",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "nb": "fylke",
+      "nn": "fylke"
+    },
     "names": {
-      "no": "Innlandet"
+      "nb": "Innlandet"
     }
   },
   {
     "code": "NO-38",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "nb": "fylke",
+      "nn": "fylke"
+    },
     "names": {
-      "no": "Vestfold og Telemark"
+      "nb": "Vestfold og Telemark"
     }
   },
   {
     "code": "NO-42",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "nb": "fylke",
+      "nn": "fylke"
+    },
     "names": {
-      "no": "Agder"
+      "nb": "Agder"
     }
   },
   {
     "code": "NO-46",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "nb": "fylke",
+      "nn": "fylke"
+    },
     "names": {
-      "no": "Vestland"
+      "nb": "Vestland"
     }
   },
   {
     "code": "NO-50",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "nb": "fylke",
+      "nn": "fylke"
+    },
     "names": {
-      "no": "Trøndelag"
+      "nb": "Trøndelag",
+      "sma": "Trööndelage"
     }
   },
   {
     "code": "NO-54",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "nb": "fylke",
+      "nn": "fylke"
+    },
     "names": {
-      "no": "Troms og Finnmark"
+      "nb": "Troms og Finnmark",
+      "se": "Romssa ja Finnmárkku"
     }
   }
 ]

@@ -1,10 +1,412 @@
 [
-  { "code": "GN-B", "type": "region", "names": { "fr": "Boké" } },
-  { "code": "GN-C", "type": "governorate", "names": { "fr": "Conakry" } },
-  { "code": "GN-D", "type": "region", "names": { "fr": "Kindia" } },
-  { "code": "GN-F", "type": "region", "names": { "fr": "Faranah" } },
-  { "code": "GN-K", "type": "region", "names": { "fr": "Kankan" } },
-  { "code": "GN-L", "type": "region", "names": { "fr": "Labé" } },
-  { "code": "GN-M", "type": "region", "names": { "fr": "Mamou" } },
-  { "code": "GN-N", "type": "region", "names": { "fr": "Nzérékoré" } }
+  {
+    "code": "GN-B",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative"
+    },
+    "names": {
+      "fr": "Boké"
+    }
+  },
+  {
+    "code": "GN-BE",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Beyla"
+    }
+  },
+  {
+    "code": "GN-BF",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Boffa"
+    }
+  },
+  {
+    "code": "GN-BK",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Boké"
+    }
+  },
+  {
+    "code": "GN-C",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat"
+    },
+    "names": {
+      "fr": "Conakry"
+    }
+  },
+  {
+    "code": "GN-CO",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Coyah"
+    }
+  },
+  {
+    "code": "GN-D",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative"
+    },
+    "names": {
+      "fr": "Kindia"
+    }
+  },
+  {
+    "code": "GN-DB",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Dabola"
+    }
+  },
+  {
+    "code": "GN-DI",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Dinguiraye"
+    }
+  },
+  {
+    "code": "GN-DL",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Dalaba"
+    }
+  },
+  {
+    "code": "GN-DU",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Dubréka"
+    }
+  },
+  {
+    "code": "GN-F",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative"
+    },
+    "names": {
+      "fr": "Faranah"
+    }
+  },
+  {
+    "code": "GN-FA",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Faranah"
+    }
+  },
+  {
+    "code": "GN-FO",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Forécariah"
+    }
+  },
+  {
+    "code": "GN-FR",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Fria"
+    }
+  },
+  {
+    "code": "GN-GA",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Gaoual"
+    }
+  },
+  {
+    "code": "GN-GU",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Guékédou"
+    }
+  },
+  {
+    "code": "GN-K",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative"
+    },
+    "names": {
+      "fr": "Kankan"
+    }
+  },
+  {
+    "code": "GN-KA",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Kankan"
+    }
+  },
+  {
+    "code": "GN-KB",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Koubia"
+    }
+  },
+  {
+    "code": "GN-KD",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Kindia"
+    }
+  },
+  {
+    "code": "GN-KE",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Kérouané"
+    }
+  },
+  {
+    "code": "GN-KN",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Koundara"
+    }
+  },
+  {
+    "code": "GN-KO",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Kouroussa"
+    }
+  },
+  {
+    "code": "GN-KS",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Kissidougou"
+    }
+  },
+  {
+    "code": "GN-L",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative"
+    },
+    "names": {
+      "fr": "Labé"
+    }
+  },
+  {
+    "code": "GN-LA",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Labé"
+    }
+  },
+  {
+    "code": "GN-LE",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Lélouma"
+    }
+  },
+  {
+    "code": "GN-LO",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Lola"
+    }
+  },
+  {
+    "code": "GN-M",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative"
+    },
+    "names": {
+      "fr": "Mamou"
+    }
+  },
+  {
+    "code": "GN-MC",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Macenta"
+    }
+  },
+  {
+    "code": "GN-MD",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Mandiana"
+    }
+  },
+  {
+    "code": "GN-ML",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Mali"
+    }
+  },
+  {
+    "code": "GN-MM",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Mamou"
+    }
+  },
+  {
+    "code": "GN-N",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative"
+    },
+    "names": {
+      "fr": "Nzérékoré"
+    }
+  },
+  {
+    "code": "GN-NZ",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Nzérékoré"
+    }
+  },
+  {
+    "code": "GN-PI",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Pita"
+    }
+  },
+  {
+    "code": "GN-SI",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Siguiri"
+    }
+  },
+  {
+    "code": "GN-TE",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Télimélé"
+    }
+  },
+  {
+    "code": "GN-TO",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Tougué"
+    }
+  },
+  {
+    "code": "GN-YO",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture"
+    },
+    "names": {
+      "fr": "Yomou"
+    }
+  }
 ]

@@ -1,6 +1,42 @@
 [
-  { "code": "SZ-HH", "type": "region", "names": { "en": "Hhohho" } },
-  { "code": "SZ-LU", "type": "region", "names": { "en": "Lubombo" } },
-  { "code": "SZ-MA", "type": "region", "names": { "en": "Manzini" } },
-  { "code": "SZ-SH", "type": "region", "names": { "en": "Shiselweni" } }
+  {
+    "code": "SZ-HH",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Hhohho"
+    }
+  },
+  {
+    "code": "SZ-LU",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Lubombo"
+    }
+  },
+  {
+    "code": "SZ-MA",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Manzini"
+    }
+  },
+  {
+    "code": "SZ-SH",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Shiselweni"
+    }
+  }
 ]

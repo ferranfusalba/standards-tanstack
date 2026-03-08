@@ -1,114 +1,178 @@
 [
   {
     "code": "PL-02",
-    "type": "voivodeship",
+    "type": {
+      "en": "voivodship",
+      "fr": "voïvodie",
+      "pl": "województwo"
+    },
     "names": {
-      "pl": "dolnośląskie"
+      "pl": "Dolnośląskie"
     }
   },
   {
     "code": "PL-04",
-    "type": "voivodeship",
+    "type": {
+      "en": "voivodship",
+      "fr": "voïvodie",
+      "pl": "województwo"
+    },
     "names": {
-      "pl": "kujawsko-pomorskie"
+      "pl": "Kujawsko-Pomorskie"
     }
   },
   {
     "code": "PL-06",
-    "type": "voivodeship",
+    "type": {
+      "en": "voivodship",
+      "fr": "voïvodie",
+      "pl": "województwo"
+    },
     "names": {
-      "pl": "lubelskie"
+      "pl": "Lubelskie"
     }
   },
   {
     "code": "PL-08",
-    "type": "voivodeship",
+    "type": {
+      "en": "voivodship",
+      "fr": "voïvodie",
+      "pl": "województwo"
+    },
     "names": {
-      "pl": "lubuskie"
+      "pl": "Lubuskie"
     }
   },
   {
     "code": "PL-10",
-    "type": "voivodeship",
+    "type": {
+      "en": "voivodship",
+      "fr": "voïvodie",
+      "pl": "województwo"
+    },
     "names": {
-      "pl": "łódzkie"
+      "pl": "Łódzkie"
     }
   },
   {
     "code": "PL-12",
-    "type": "voivodeship",
+    "type": {
+      "en": "voivodship",
+      "fr": "voïvodie",
+      "pl": "województwo"
+    },
     "names": {
-      "pl": "małopolskie"
+      "pl": "Małopolskie"
     }
   },
   {
     "code": "PL-14",
-    "type": "voivodeship",
+    "type": {
+      "en": "voivodship",
+      "fr": "voïvodie",
+      "pl": "województwo"
+    },
     "names": {
-      "pl": "mazowieckie"
+      "pl": "Mazowieckie"
     }
   },
   {
     "code": "PL-16",
-    "type": "voivodeship",
+    "type": {
+      "en": "voivodship",
+      "fr": "voïvodie",
+      "pl": "województwo"
+    },
     "names": {
-      "pl": "opolskie"
+      "pl": "Opolskie"
     }
   },
   {
     "code": "PL-18",
-    "type": "voivodeship",
+    "type": {
+      "en": "voivodship",
+      "fr": "voïvodie",
+      "pl": "województwo"
+    },
     "names": {
-      "pl": "podkarpackie"
+      "pl": "Podkarpackie"
     }
   },
   {
     "code": "PL-20",
-    "type": "voivodeship",
+    "type": {
+      "en": "voivodship",
+      "fr": "voïvodie",
+      "pl": "województwo"
+    },
     "names": {
-      "pl": "podlaskie"
+      "pl": "Podlaskie"
     }
   },
   {
     "code": "PL-22",
-    "type": "voivodeship",
+    "type": {
+      "en": "voivodship",
+      "fr": "voïvodie",
+      "pl": "województwo"
+    },
     "names": {
-      "pl": "pomorskie"
+      "pl": "Pomorskie"
     }
   },
   {
     "code": "PL-24",
-    "type": "voivodeship",
+    "type": {
+      "en": "voivodship",
+      "fr": "voïvodie",
+      "pl": "województwo"
+    },
     "names": {
-      "pl": "śląskie"
+      "pl": "Śląskie"
     }
   },
   {
     "code": "PL-26",
-    "type": "voivodeship",
+    "type": {
+      "en": "voivodship",
+      "fr": "voïvodie",
+      "pl": "województwo"
+    },
     "names": {
-      "pl": "świętokrzyskie"
+      "pl": "Świętokrzyskie"
     }
   },
   {
     "code": "PL-28",
-    "type": "voivodeship",
+    "type": {
+      "en": "voivodship",
+      "fr": "voïvodie",
+      "pl": "województwo"
+    },
     "names": {
-      "pl": "warmińsko-mazurskie"
+      "pl": "Warmińsko-Mazurskie"
     }
   },
   {
     "code": "PL-30",
-    "type": "voivodeship",
+    "type": {
+      "en": "voivodship",
+      "fr": "voïvodie",
+      "pl": "województwo"
+    },
     "names": {
-      "pl": "wielkopolskie"
+      "pl": "Wielkopolskie"
     }
   },
   {
     "code": "PL-32",
-    "type": "voivodeship",
+    "type": {
+      "en": "voivodship",
+      "fr": "voïvodie",
+      "pl": "województwo"
+    },
     "names": {
-      "pl": "zachodniopomorskie"
+      "pl": "Zachodniopomorskie"
     }
   }
 ]

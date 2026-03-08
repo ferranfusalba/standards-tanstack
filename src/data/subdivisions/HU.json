@@ -1,301 +1,473 @@
 [
   {
     "code": "HU-BA",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Baranya"
     }
   },
   {
     "code": "HU-BC",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Békéscsaba"
     }
   },
   {
     "code": "HU-BE",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Békés"
     }
   },
   {
     "code": "HU-BK",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Bács-Kiskun"
     }
   },
   {
     "code": "HU-BU",
-    "type": "capital city",
+    "type": {
+      "en": "capital city",
+      "fr": "ville capitale",
+      "hu": "főváros"
+    },
     "names": {
       "hu": "Budapest"
     }
   },
   {
     "code": "HU-BZ",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Borsod-Abaúj-Zemplén"
     }
   },
   {
     "code": "HU-CS",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Csongrád-Csanád"
     }
   },
   {
     "code": "HU-DE",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Debrecen"
     }
   },
   {
     "code": "HU-DU",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Dunaújváros"
     }
   },
   {
     "code": "HU-EG",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Eger"
     }
   },
   {
     "code": "HU-ER",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Érd"
     }
   },
   {
     "code": "HU-FE",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Fejér"
     }
   },
   {
     "code": "HU-GS",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Győr-Moson-Sopron"
     }
   },
   {
     "code": "HU-GY",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Győr"
     }
   },
   {
     "code": "HU-HB",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Hajdú-Bihar"
     }
   },
   {
     "code": "HU-HE",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Heves"
     }
   },
   {
     "code": "HU-HV",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Hódmezővásárhely"
     }
   },
   {
     "code": "HU-JN",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Jász-Nagykun-Szolnok"
     }
   },
   {
     "code": "HU-KE",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Komárom-Esztergom"
     }
   },
   {
     "code": "HU-KM",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Kecskemét"
     }
   },
   {
     "code": "HU-KV",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Kaposvár"
     }
   },
   {
     "code": "HU-MI",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Miskolc"
     }
   },
   {
     "code": "HU-NK",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Nagykanizsa"
     }
   },
   {
     "code": "HU-NO",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Nógrád"
     }
   },
   {
     "code": "HU-NY",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Nyíregyháza"
     }
   },
   {
     "code": "HU-PE",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Pest"
     }
   },
   {
     "code": "HU-PS",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Pécs"
     }
   },
   {
     "code": "HU-SD",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Szeged"
     }
   },
   {
     "code": "HU-SF",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Székesfehérvár"
     }
   },
   {
     "code": "HU-SH",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Szombathely"
     }
   },
   {
     "code": "HU-SK",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Szolnok"
     }
   },
   {
     "code": "HU-SN",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Sopron"
     }
   },
   {
     "code": "HU-SO",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Somogy"
     }
   },
   {
     "code": "HU-SS",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Szekszárd"
     }
   },
   {
     "code": "HU-ST",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Salgótarján"
     }
   },
   {
     "code": "HU-SZ",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Szabolcs-Szatmár-Bereg"
     }
   },
   {
     "code": "HU-TB",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Tatabánya"
     }
   },
   {
     "code": "HU-TO",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Tolna"
     }
   },
   {
     "code": "HU-VA",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Vas"
     }
   },
   {
     "code": "HU-VE",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Veszprém"
     }
   },
   {
     "code": "HU-VM",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
-      "hu": "Veszprém city"
+      "hu": "Veszprém"
     }
   },
   {
     "code": "HU-ZA",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "comitat",
+      "hu": "megye"
+    },
     "names": {
       "hu": "Zala"
     }
   },
   {
     "code": "HU-ZE",
-    "type": "county",
+    "type": {
+      "en": "city with county rights",
+      "fr": "ville ayant un rang de comitat",
+      "hu": "megyei jogú város"
+    },
     "names": {
       "hu": "Zalaegerszeg"
     }

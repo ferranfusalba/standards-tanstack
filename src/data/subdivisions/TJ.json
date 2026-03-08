@@ -1,7 +1,57 @@
 [
-  { "code": "TJ-DU", "type": "capital territory", "names": { "tg": "Dushanbe" } },
-  { "code": "TJ-GB", "type": "autonomous region", "names": { "tg": "Viloyati Mukhtori Kuhistoni Badakhshon" } },
-  { "code": "TJ-KT", "type": "region", "names": { "tg": "Viloyati Khatlon" } },
-  { "code": "TJ-RA", "type": "district", "names": { "tg": "Nohiyahoi tobei jumhuri" } },
-  { "code": "TJ-SU", "type": "region", "names": { "tg": "Viloyati Sughd" } }
+  {
+    "code": "TJ-DU",
+    "type": {
+      "en": "capital territory",
+      "fr": "territoire de la capitale",
+      "tg": "viloyati poytakht"
+    },
+    "names": {
+      "tg": "Dushanbe"
+    }
+  },
+  {
+    "code": "TJ-GB",
+    "type": {
+      "en": "autonomous region",
+      "fr": "région autonome",
+      "tg": "viloyati mukhtor"
+    },
+    "names": {
+      "tg": "Kŭhistoni Badakhshon"
+    }
+  },
+  {
+    "code": "TJ-KT",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tg": "viloyat"
+    },
+    "names": {
+      "tg": "Khatlon"
+    }
+  },
+  {
+    "code": "TJ-RA",
+    "type": {
+      "en": "districts under republic administration",
+      "fr": "Districts sous l'administration de la République",
+      "tg": "nohiyahoi tobei jumhurí"
+    },
+    "names": {
+      "tg": "nohiyahoi tobei jumhurí"
+    }
+  },
+  {
+    "code": "TJ-SU",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tg": "viloyat"
+    },
+    "names": {
+      "tg": "Sughd"
+    }
+  }
 ]

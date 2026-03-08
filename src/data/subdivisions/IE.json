@@ -1,34 +1,362 @@
 [
   {
     "code": "IE-C",
-    "type": "province",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ga": "cúige"
+    },
     "names": {
-      "en": "Connacht",
-      "ga": "Connachta"
+      "en": "Connaught",
+      "ga": "Connacht"
+    }
+  },
+  {
+    "code": "IE-CE",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Clare",
+      "ga": "An Clár"
+    }
+  },
+  {
+    "code": "IE-CN",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Cavan",
+      "ga": "An Cabhán"
+    }
+  },
+  {
+    "code": "IE-CO",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Cork",
+      "ga": "Corcaigh"
+    }
+  },
+  {
+    "code": "IE-CW",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Carlow",
+      "ga": "Ceatharlach"
+    }
+  },
+  {
+    "code": "IE-D",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Dublin",
+      "ga": "Baile Átha Cliath"
+    }
+  },
+  {
+    "code": "IE-DL",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Donegal",
+      "ga": "Dún na nGall"
+    }
+  },
+  {
+    "code": "IE-G",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Galway",
+      "ga": "Gaillimh"
+    }
+  },
+  {
+    "code": "IE-KE",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Kildare",
+      "ga": "Cill Dara"
+    }
+  },
+  {
+    "code": "IE-KK",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Kilkenny",
+      "ga": "Cill Chainnigh"
+    }
+  },
+  {
+    "code": "IE-KY",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Kerry",
+      "ga": "Ciarraí"
     }
   },
   {
     "code": "IE-L",
-    "type": "province",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ga": "cúige"
+    },
     "names": {
       "en": "Leinster",
       "ga": "Laighin"
     }
   },
   {
+    "code": "IE-LD",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Longford",
+      "ga": "An Longfort"
+    }
+  },
+  {
+    "code": "IE-LH",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Louth",
+      "ga": "Lú"
+    }
+  },
+  {
+    "code": "IE-LK",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Limerick",
+      "ga": "Luimneach"
+    }
+  },
+  {
+    "code": "IE-LM",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Leitrim",
+      "ga": "Liatroim"
+    }
+  },
+  {
+    "code": "IE-LS",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Laois",
+      "ga": "Laois"
+    }
+  },
+  {
     "code": "IE-M",
-    "type": "province",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ga": "cúige"
+    },
     "names": {
       "en": "Munster",
       "ga": "An Mhumhain"
     }
   },
   {
+    "code": "IE-MH",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Meath",
+      "ga": "An Mhí"
+    }
+  },
+  {
+    "code": "IE-MN",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Monaghan",
+      "ga": "Muineachán"
+    }
+  },
+  {
+    "code": "IE-MO",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Mayo",
+      "ga": "Maigh Eo"
+    }
+  },
+  {
+    "code": "IE-OY",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Offaly",
+      "ga": "Uíbh Fhailí"
+    }
+  },
+  {
+    "code": "IE-RN",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Roscommon",
+      "ga": "Ros Comáin"
+    }
+  },
+  {
+    "code": "IE-SO",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Sligo",
+      "ga": "Sligeach"
+    }
+  },
+  {
+    "code": "IE-TA",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Tipperary",
+      "ga": "Tiobraid Árann"
+    }
+  },
+  {
     "code": "IE-U",
-    "type": "province",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ga": "cúige"
+    },
     "names": {
       "en": "Ulster",
       "ga": "Ulaidh"
+    }
+  },
+  {
+    "code": "IE-WD",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Waterford",
+      "ga": "Port Láirge"
+    }
+  },
+  {
+    "code": "IE-WH",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Westmeath",
+      "ga": "An Iarmhí"
+    }
+  },
+  {
+    "code": "IE-WW",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Wicklow",
+      "ga": "Cill Mhantáin"
+    }
+  },
+  {
+    "code": "IE-WX",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "ga": "contae"
+    },
+    "names": {
+      "en": "Wexford",
+      "ga": "Loch Garman"
     }
   }
 ]

@@ -1,17 +1,156 @@
 [
-  { "code": "PA-1", "type": "province", "names": { "es": "Bocas del Toro" } },
-  { "code": "PA-2", "type": "province", "names": { "es": "Coclé" } },
-  { "code": "PA-3", "type": "province", "names": { "es": "Colón" } },
-  { "code": "PA-4", "type": "province", "names": { "es": "Chiriquí" } },
-  { "code": "PA-5", "type": "province", "names": { "es": "Darién" } },
-  { "code": "PA-6", "type": "province", "names": { "es": "Herrera" } },
-  { "code": "PA-7", "type": "province", "names": { "es": "Los Santos" } },
-  { "code": "PA-8", "type": "province", "names": { "es": "Panamá" } },
-  { "code": "PA-9", "type": "province", "names": { "es": "Veraguas" } },
-  { "code": "PA-10", "type": "province", "names": { "es": "Panamá Oeste" } },
-  { "code": "PA-EM", "type": "indigenous region", "names": { "es": "Emberá-Wounaan" } },
-  { "code": "PA-KY", "type": "indigenous region", "names": { "es": "Guna Yala" } },
-  { "code": "PA-NB", "type": "indigenous region", "names": { "es": "Ngäbe-Buglé" } },
-  { "code": "PA-NT", "type": "indigenous region", "names": { "es": "Naso Tjër Di" } },
-  { "code": "PA-GD", "type": "indigenous region", "names": { "es": "Guna de Madungandí" } }
+  {
+    "code": "PA-1",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Bocas del Toro"
+    }
+  },
+  {
+    "code": "PA-2",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Coclé"
+    }
+  },
+  {
+    "code": "PA-3",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Colón"
+    }
+  },
+  {
+    "code": "PA-4",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Chiriquí"
+    }
+  },
+  {
+    "code": "PA-5",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Darién"
+    }
+  },
+  {
+    "code": "PA-6",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Herrera"
+    }
+  },
+  {
+    "code": "PA-7",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Los Santos"
+    }
+  },
+  {
+    "code": "PA-8",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Panamá"
+    }
+  },
+  {
+    "code": "PA-9",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Veraguas"
+    }
+  },
+  {
+    "code": "PA-10",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia"
+    },
+    "names": {
+      "es": "Panamá Oeste"
+    }
+  },
+  {
+    "code": "PA-EM",
+    "type": {
+      "en": "indigenous region",
+      "fr": "région indigène",
+      "es": "comarca indígena"
+    },
+    "names": {
+      "es": "Emberá"
+    }
+  },
+  {
+    "code": "PA-KY",
+    "type": {
+      "en": "indigenous region",
+      "fr": "région indigène",
+      "es": "comarca indígena"
+    },
+    "names": {
+      "es": "Guna Yala"
+    }
+  },
+  {
+    "code": "PA-NB",
+    "type": {
+      "en": "indigenous region",
+      "fr": "région indigène",
+      "es": "comarca indígena"
+    },
+    "names": {
+      "es": "Ngäbe-Buglé"
+    }
+  },
+  {
+    "code": "PA-NT",
+    "type": {
+      "en": "indigenous region",
+      "fr": "région indigène",
+      "es": "comarca indígena"
+    },
+    "names": {
+      "es": "Naso Tjër Di"
+    }
+  }
 ]

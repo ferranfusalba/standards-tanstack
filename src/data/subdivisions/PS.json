@@ -1,18 +1,194 @@
 [
-  { "code": "PS-BTH", "type": "governorate", "names": { "ar": "بيت لحم" } },
-  { "code": "PS-DEB", "type": "governorate", "names": { "ar": "دير البلح" } },
-  { "code": "PS-GZA", "type": "governorate", "names": { "ar": "غزة" } },
-  { "code": "PS-HBN", "type": "governorate", "names": { "ar": "الخليل" } },
-  { "code": "PS-JEM", "type": "governorate", "names": { "ar": "القدس" } },
-  { "code": "PS-JEN", "type": "governorate", "names": { "ar": "جنين" } },
-  { "code": "PS-JRH", "type": "governorate", "names": { "ar": "أريحا والأغوار" } },
-  { "code": "PS-KYS", "type": "governorate", "names": { "ar": "خان يونس" } },
-  { "code": "PS-NBS", "type": "governorate", "names": { "ar": "نابلس" } },
-  { "code": "PS-NGZ", "type": "governorate", "names": { "ar": "شمال غزة" } },
-  { "code": "PS-QQA", "type": "governorate", "names": { "ar": "قلقيلية" } },
-  { "code": "PS-RBH", "type": "governorate", "names": { "ar": "رام الله والبيرة" } },
-  { "code": "PS-RFH", "type": "governorate", "names": { "ar": "رفح" } },
-  { "code": "PS-SLT", "type": "governorate", "names": { "ar": "سلفيت" } },
-  { "code": "PS-TBS", "type": "governorate", "names": { "ar": "طوباس والأغوار الشمالية" } },
-  { "code": "PS-TKM", "type": "governorate", "names": { "ar": "طولكرم" } }
+  {
+    "code": "PS-BTH",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Bayt Laḩm",
+      "en": "Bethlehem"
+    }
+  },
+  {
+    "code": "PS-DEB",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Dayr al Balaḩ",
+      "en": "Deir El Balah"
+    }
+  },
+  {
+    "code": "PS-GZA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Ghazzah",
+      "en": "Gaza"
+    }
+  },
+  {
+    "code": "PS-HBN",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Khalīl",
+      "en": "Hebron"
+    }
+  },
+  {
+    "code": "PS-JEM",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Quds",
+      "en": "Jerusalem"
+    }
+  },
+  {
+    "code": "PS-JEN",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Janīn",
+      "en": "Jenin"
+    }
+  },
+  {
+    "code": "PS-JRH",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Arīḩā wal Aghwār",
+      "en": "Jericho and Al Aghwar"
+    }
+  },
+  {
+    "code": "PS-KYS",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Khān Yūnis",
+      "en": "Khan Yunis"
+    }
+  },
+  {
+    "code": "PS-NBS",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Nāblus",
+      "en": "Nablus"
+    }
+  },
+  {
+    "code": "PS-NGZ",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Shamāl Ghazzah",
+      "en": "North Gaza"
+    }
+  },
+  {
+    "code": "PS-QQA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Qalqīlyah",
+      "en": "Qalqilya"
+    }
+  },
+  {
+    "code": "PS-RBH",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Rām Allāh wal Bīrah",
+      "en": "Ramallah"
+    }
+  },
+  {
+    "code": "PS-RFH",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Rafaḩ",
+      "en": "Rafah"
+    }
+  },
+  {
+    "code": "PS-SLT",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Salfīt",
+      "en": "Salfit"
+    }
+  },
+  {
+    "code": "PS-TBS",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Ţūbās",
+      "en": "Tubas"
+    }
+  },
+  {
+    "code": "PS-TKM",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Ţūlkarm",
+      "en": "Tulkarm"
+    }
+  }
 ]

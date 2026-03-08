@@ -1,29 +1,351 @@
 [
-  { "code": "SC-01", "type": "district", "names": { "en": "Anse aux Pins" } },
-  { "code": "SC-02", "type": "district", "names": { "en": "Anse Boileau" } },
-  { "code": "SC-03", "type": "district", "names": { "en": "Anse Etoile" } },
-  { "code": "SC-04", "type": "district", "names": { "en": "Au Cap" } },
-  { "code": "SC-05", "type": "district", "names": { "en": "Anse Royale" } },
-  { "code": "SC-06", "type": "district", "names": { "en": "Baie Lazare" } },
-  { "code": "SC-07", "type": "district", "names": { "en": "Baie Sainte Anne" } },
-  { "code": "SC-08", "type": "district", "names": { "en": "Beau Vallon" } },
-  { "code": "SC-09", "type": "district", "names": { "en": "Bel Air" } },
-  { "code": "SC-10", "type": "district", "names": { "en": "Bel Ombre" } },
-  { "code": "SC-11", "type": "district", "names": { "en": "Cascade" } },
-  { "code": "SC-12", "type": "district", "names": { "en": "Glacis" } },
-  { "code": "SC-13", "type": "district", "names": { "en": "Grand Anse Mahé" } },
-  { "code": "SC-14", "type": "district", "names": { "en": "Grand Anse Praslin" } },
-  { "code": "SC-15", "type": "district", "names": { "en": "La Digue" } },
-  { "code": "SC-16", "type": "district", "names": { "en": "English River" } },
-  { "code": "SC-17", "type": "district", "names": { "en": "Mont Buxton" } },
-  { "code": "SC-18", "type": "district", "names": { "en": "Mont Fleuri" } },
-  { "code": "SC-19", "type": "district", "names": { "en": "Plaisance" } },
-  { "code": "SC-20", "type": "district", "names": { "en": "Pointe Larue" } },
-  { "code": "SC-21", "type": "district", "names": { "en": "Port Glaud" } },
-  { "code": "SC-22", "type": "district", "names": { "en": "Saint Louis" } },
-  { "code": "SC-23", "type": "district", "names": { "en": "Takamaka" } },
-  { "code": "SC-24", "type": "district", "names": { "en": "Les Mamelles" } },
-  { "code": "SC-25", "type": "district", "names": { "en": "Roche Caiman" } },
-  { "code": "SC-26", "type": "district", "names": { "en": "Ile Perseverance I" } },
-  { "code": "SC-27", "type": "district", "names": { "en": "Ile Perseverance II" } }
+  {
+    "code": "SC-01",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Anse aux Pins",
+      "fr": "Anse aux Pins",
+      "crs": "Ans o Pen"
+    }
+  },
+  {
+    "code": "SC-02",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Anse Boileau",
+      "fr": "Anse Boileau",
+      "crs": "Ans Bwalo"
+    }
+  },
+  {
+    "code": "SC-03",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Anse Etoile",
+      "fr": "Anse Étoile",
+      "crs": "Ans Etwal"
+    }
+  },
+  {
+    "code": "SC-04",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Au Cap",
+      "fr": "Au Cap",
+      "crs": "O Kap"
+    }
+  },
+  {
+    "code": "SC-05",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Anse Royale",
+      "fr": "Anse Royale",
+      "crs": "Ans Royal"
+    }
+  },
+  {
+    "code": "SC-06",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Baie Lazare",
+      "fr": "Baie Lazare",
+      "crs": "Be Lazar"
+    }
+  },
+  {
+    "code": "SC-07",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Baie Sainte Anne",
+      "fr": "Baie Sainte-Anne",
+      "crs": "Be Sent Ann"
+    }
+  },
+  {
+    "code": "SC-08",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Beau Vallon",
+      "fr": "Beau Vallon",
+      "crs": "Bovalon"
+    }
+  },
+  {
+    "code": "SC-09",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Bel Air",
+      "fr": "Bel Air",
+      "crs": "Beler"
+    }
+  },
+  {
+    "code": "SC-10",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Bel Ombre",
+      "fr": "Bel Ombre",
+      "crs": "Belonm"
+    }
+  },
+  {
+    "code": "SC-11",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Cascade",
+      "fr": "Cascade",
+      "crs": "Kaskad"
+    }
+  },
+  {
+    "code": "SC-12",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Glacis",
+      "fr": "Glacis",
+      "crs": "Glasi"
+    }
+  },
+  {
+    "code": "SC-13",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Grand Anse Mahe",
+      "fr": "Grand'Anse Mahé",
+      "crs": "Grand Ans Mae"
+    }
+  },
+  {
+    "code": "SC-14",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Grand Anse Praslin",
+      "fr": "Grand'Anse Praslin",
+      "crs": "Grand Ans Pralen"
+    }
+  },
+  {
+    "code": "SC-15",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "La Digue",
+      "fr": "La Digue",
+      "crs": "Ladig"
+    }
+  },
+  {
+    "code": "SC-16",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "English River",
+      "fr": "La Rivière Anglaise",
+      "crs": "Larivyer Anglez"
+    }
+  },
+  {
+    "code": "SC-17",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Mont Buxton",
+      "fr": "Mont Buxton",
+      "crs": "Mon Bikston"
+    }
+  },
+  {
+    "code": "SC-18",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Mont Fleuri",
+      "fr": "Mont Fleuri",
+      "crs": "Mon Fleri"
+    }
+  },
+  {
+    "code": "SC-19",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Plaisance",
+      "fr": "Plaisance",
+      "crs": "Plezans"
+    }
+  },
+  {
+    "code": "SC-20",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Pointe Larue",
+      "fr": "Pointe La Rue",
+      "crs": "Pwent Lari"
+    }
+  },
+  {
+    "code": "SC-21",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Port Glaud",
+      "fr": "Port Glaud",
+      "crs": "Porglo"
+    }
+  },
+  {
+    "code": "SC-22",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Saint Louis",
+      "fr": "Saint-Louis",
+      "crs": "Sen Lwi"
+    }
+  },
+  {
+    "code": "SC-23",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Takamaka",
+      "fr": "Takamaka",
+      "crs": "Takamaka"
+    }
+  },
+  {
+    "code": "SC-24",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Les Mamelles",
+      "fr": "Les Mamelles",
+      "crs": "Lemamel"
+    }
+  },
+  {
+    "code": "SC-25",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Roche Caiman",
+      "fr": "Roche Caïman",
+      "crs": "Ros Kaiman"
+    }
+  },
+  {
+    "code": "SC-26",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Ile Perseverance I",
+      "fr": "Île Persévérance I"
+    }
+  },
+  {
+    "code": "SC-27",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "crs": "distrik"
+    },
+    "names": {
+      "en": "Ile Perseverance II",
+      "fr": "Île Persévérance II"
+    }
+  }
 ]

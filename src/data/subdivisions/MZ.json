@@ -1,13 +1,123 @@
 [
-  { "code": "MZ-A", "type": "province", "names": { "pt": "Niassa" } },
-  { "code": "MZ-B", "type": "province", "names": { "pt": "Manica" } },
-  { "code": "MZ-G", "type": "province", "names": { "pt": "Gaza" } },
-  { "code": "MZ-I", "type": "province", "names": { "pt": "Inhambane" } },
-  { "code": "MZ-L", "type": "province", "names": { "pt": "Maputo" } },
-  { "code": "MZ-MPM", "type": "city", "names": { "pt": "Maputo" } },
-  { "code": "MZ-N", "type": "province", "names": { "pt": "Nampula" } },
-  { "code": "MZ-P", "type": "province", "names": { "pt": "Cabo Delgado" } },
-  { "code": "MZ-Q", "type": "province", "names": { "pt": "Zambezia" } },
-  { "code": "MZ-S", "type": "province", "names": { "pt": "Sofala" } },
-  { "code": "MZ-T", "type": "province", "names": { "pt": "Tete" } }
+  {
+    "code": "MZ-A",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Niassa"
+    }
+  },
+  {
+    "code": "MZ-B",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Manica"
+    }
+  },
+  {
+    "code": "MZ-G",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Gaza"
+    }
+  },
+  {
+    "code": "MZ-I",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Inhambane"
+    }
+  },
+  {
+    "code": "MZ-L",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Maputo"
+    }
+  },
+  {
+    "code": "MZ-MPM",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "pt": "cidade"
+    },
+    "names": {
+      "pt": "Maputo"
+    }
+  },
+  {
+    "code": "MZ-N",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Nampula"
+    }
+  },
+  {
+    "code": "MZ-P",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Cabo Delgado"
+    }
+  },
+  {
+    "code": "MZ-Q",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Zambézia"
+    }
+  },
+  {
+    "code": "MZ-S",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Sofala"
+    }
+  },
+  {
+    "code": "MZ-T",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "pt": "província"
+    },
+    "names": {
+      "pt": "Tete"
+    }
+  }
 ]

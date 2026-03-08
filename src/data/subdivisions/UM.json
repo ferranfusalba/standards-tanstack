@@ -1,0 +1,92 @@
+[
+  {
+    "code": "UM-67",
+    "type": {
+      "en": "islands, groups of islands",
+      "fr": "île, groupe d'îles"
+    },
+    "names": {
+      "en": "Johnston Atoll"
+    }
+  },
+  {
+    "code": "UM-71",
+    "type": {
+      "en": "islands, groups of islands",
+      "fr": "île, groupe d'îles"
+    },
+    "names": {
+      "en": "Midway Islands"
+    }
+  },
+  {
+    "code": "UM-76",
+    "type": {
+      "en": "islands, groups of islands",
+      "fr": "île, groupe d'îles"
+    },
+    "names": {
+      "en": "Navassa Island"
+    }
+  },
+  {
+    "code": "UM-79",
+    "type": {
+      "en": "islands, groups of islands",
+      "fr": "île, groupe d'îles"
+    },
+    "names": {
+      "en": "Wake Island"
+    }
+  },
+  {
+    "code": "UM-81",
+    "type": {
+      "en": "islands, groups of islands",
+      "fr": "île, groupe d'îles"
+    },
+    "names": {
+      "en": "Baker Island"
+    }
+  },
+  {
+    "code": "UM-84",
+    "type": {
+      "en": "islands, groups of islands",
+      "fr": "île, groupe d'îles"
+    },
+    "names": {
+      "en": "Howland Island"
+    }
+  },
+  {
+    "code": "UM-86",
+    "type": {
+      "en": "islands, groups of islands",
+      "fr": "île, groupe d'îles"
+    },
+    "names": {
+      "en": "Jarvis Island"
+    }
+  },
+  {
+    "code": "UM-89",
+    "type": {
+      "en": "islands, groups of islands",
+      "fr": "île, groupe d'îles"
+    },
+    "names": {
+      "en": "Kingman Reef"
+    }
+  },
+  {
+    "code": "UM-95",
+    "type": {
+      "en": "islands, groups of islands",
+      "fr": "île, groupe d'îles"
+    },
+    "names": {
+      "en": "Palmyra Atoll"
+    }
+  }
+]

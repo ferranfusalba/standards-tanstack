@@ -1,25 +1,278 @@
 [
-  { "code": "TD-BA", "type": "province", "names": { "fr": "Batha", "ar": "باتها" } },
-  { "code": "TD-BG", "type": "province", "names": { "fr": "Barh El Gazel", "ar": "بحر الغزال" } },
-  { "code": "TD-BO", "type": "province", "names": { "fr": "Borkou", "ar": "بوركو" } },
-  { "code": "TD-CB", "type": "province", "names": { "fr": "Chari-Baguirmi", "ar": "شاري باقرمي" } },
-  { "code": "TD-EE", "type": "province", "names": { "fr": "Ennedi-Est" } },
-  { "code": "TD-EO", "type": "province", "names": { "fr": "Ennedi-Ouest" } },
-  { "code": "TD-GR", "type": "province", "names": { "fr": "Guéra" } },
-  { "code": "TD-HL", "type": "province", "names": { "fr": "Hadjer-Lamis" } },
-  { "code": "TD-KA", "type": "province", "names": { "fr": "Kanem" } },
-  { "code": "TD-LC", "type": "province", "names": { "fr": "Lac" } },
-  { "code": "TD-LO", "type": "province", "names": { "fr": "Logone Occidental" } },
-  { "code": "TD-LR", "type": "province", "names": { "fr": "Logone Oriental" } },
-  { "code": "TD-MA", "type": "province", "names": { "fr": "Mandoul" } },
-  { "code": "TD-MC", "type": "province", "names": { "fr": "Moyen-Chari" } },
-  { "code": "TD-ME", "type": "province", "names": { "fr": "Mayo-Kebbi Est" } },
-  { "code": "TD-MO", "type": "province", "names": { "fr": "Mayo-Kebbi Ouest" } },
-  { "code": "TD-ND", "type": "province", "names": { "fr": "N'Djamena" } },
-  { "code": "TD-OD", "type": "province", "names": { "fr": "Ouaddaï" } },
-  { "code": "TD-SA", "type": "province", "names": { "fr": "Salamat" } },
-  { "code": "TD-SI", "type": "province", "names": { "fr": "Sila" } },
-  { "code": "TD-TA", "type": "province", "names": { "fr": "Tandjilé" } },
-  { "code": "TD-TI", "type": "province", "names": { "fr": "Tibesti" } },
-  { "code": "TD-WF", "type": "province", "names": { "fr": "Wadi Fira" } }
+  {
+    "code": "TD-BA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Batha",
+      "ar": "Al Baţḩā'"
+    }
+  },
+  {
+    "code": "TD-BG",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Bahr el Ghazal",
+      "ar": "Baḩr al Ghazāl"
+    }
+  },
+  {
+    "code": "TD-BO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Borkou",
+      "ar": "Būrkū"
+    }
+  },
+  {
+    "code": "TD-CB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Chari-Baguirmi",
+      "ar": "Shārī Bāqirmī"
+    }
+  },
+  {
+    "code": "TD-EE",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Ennedi-Est",
+      "ar": "Inīdī ash Sharqī"
+    }
+  },
+  {
+    "code": "TD-EO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Ennedi-Ouest",
+      "ar": "Inīdī al Gharbī"
+    }
+  },
+  {
+    "code": "TD-GR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Guéra",
+      "ar": "Qīrā"
+    }
+  },
+  {
+    "code": "TD-HL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Hadjer Lamis",
+      "ar": "Ḩajjar Lamīs"
+    }
+  },
+  {
+    "code": "TD-KA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Kanem",
+      "ar": "Kānim"
+    }
+  },
+  {
+    "code": "TD-LC",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Lac",
+      "ar": "Al Buḩayrah"
+    }
+  },
+  {
+    "code": "TD-LO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Logone-Occidental",
+      "ar": "Lūghūn al Gharbī"
+    }
+  },
+  {
+    "code": "TD-LR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Logone-Oriental",
+      "ar": "Lūghūn ash Sharqī"
+    }
+  },
+  {
+    "code": "TD-MA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Mandoul",
+      "ar": "Māndūl"
+    }
+  },
+  {
+    "code": "TD-MC",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Moyen-Chari",
+      "ar": "Shārī al Awsaţ"
+    }
+  },
+  {
+    "code": "TD-ME",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Mayo-Kebbi-Est",
+      "ar": "Māyū Kībbī ash Sharqī"
+    }
+  },
+  {
+    "code": "TD-MO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Mayo-Kebbi-Ouest",
+      "ar": "Māyū Kībbī al Gharbī"
+    }
+  },
+  {
+    "code": "TD-ND",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Ville de Ndjamena",
+      "ar": "Madīnat Injamīnā"
+    }
+  },
+  {
+    "code": "TD-OD",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Ouaddaï",
+      "ar": "Waddāy"
+    }
+  },
+  {
+    "code": "TD-SA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Salamat",
+      "ar": "Salāmāt"
+    }
+  },
+  {
+    "code": "TD-SI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Sila",
+      "ar": "Sīlā"
+    }
+  },
+  {
+    "code": "TD-TA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Tandjilé",
+      "ar": "Tānjīlī"
+    }
+  },
+  {
+    "code": "TD-TI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Tibesti",
+      "ar": "Tibastī"
+    }
+  },
+  {
+    "code": "TD-WF",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "wilāyah"
+    },
+    "names": {
+      "fr": "Wadi Fira",
+      "ar": "Wādī Fīrā'"
+    }
+  }
 ]

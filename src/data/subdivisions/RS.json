@@ -1,16 +1,354 @@
 [
   {
-    "code": "RS-KM",
-    "type": "autonomous province",
+    "code": "RS-00",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "sr": "grad"
+    },
     "names": {
-      "sr": "Косово и Метохија"
+      "sr": "Beograd"
+    }
+  },
+  {
+    "code": "RS-01",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Severnobački okrug"
+    }
+  },
+  {
+    "code": "RS-02",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Srednjebanatski okrug"
+    }
+  },
+  {
+    "code": "RS-03",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Severnobanatski okrug"
+    }
+  },
+  {
+    "code": "RS-04",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Južnobanatski okrug"
+    }
+  },
+  {
+    "code": "RS-05",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Zapadnobački okrug"
+    }
+  },
+  {
+    "code": "RS-06",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Južnobački okrug"
+    }
+  },
+  {
+    "code": "RS-07",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Sremski okrug"
+    }
+  },
+  {
+    "code": "RS-08",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Mačvanski okrug"
+    }
+  },
+  {
+    "code": "RS-09",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Kolubarski okrug"
+    }
+  },
+  {
+    "code": "RS-10",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Podunavski okrug"
+    }
+  },
+  {
+    "code": "RS-11",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Braničevski okrug"
+    }
+  },
+  {
+    "code": "RS-12",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Šumadijski okrug"
+    }
+  },
+  {
+    "code": "RS-13",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Pomoravski okrug"
+    }
+  },
+  {
+    "code": "RS-14",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Borski okrug"
+    }
+  },
+  {
+    "code": "RS-15",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Zaječarski okrug"
+    }
+  },
+  {
+    "code": "RS-16",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Zlatiborski okrug"
+    }
+  },
+  {
+    "code": "RS-17",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Moravički okrug"
+    }
+  },
+  {
+    "code": "RS-18",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Raški okrug"
+    }
+  },
+  {
+    "code": "RS-19",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Rasinski okrug"
+    }
+  },
+  {
+    "code": "RS-20",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Nišavski okrug"
+    }
+  },
+  {
+    "code": "RS-21",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Toplički okrug"
+    }
+  },
+  {
+    "code": "RS-22",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Pirotski okrug"
+    }
+  },
+  {
+    "code": "RS-23",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Jablanički okrug"
+    }
+  },
+  {
+    "code": "RS-24",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Pčinjski okrug"
+    }
+  },
+  {
+    "code": "RS-25",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Kosovski okrug"
+    }
+  },
+  {
+    "code": "RS-26",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Pećki okrug"
+    }
+  },
+  {
+    "code": "RS-27",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Prizrenski okrug"
+    }
+  },
+  {
+    "code": "RS-28",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Kosovsko-Mitrovački okrug"
+    }
+  },
+  {
+    "code": "RS-29",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "sr": "okrug"
+    },
+    "names": {
+      "sr": "Kosovsko-Pomoravski okrug"
+    }
+  },
+  {
+    "code": "RS-KM",
+    "type": {
+      "en": "autonomous province",
+      "fr": "province autonome",
+      "sr": "autonomna pokrajina"
+    },
+    "names": {
+      "sr": "Kosovo-Metohija"
     }
   },
   {
     "code": "RS-VO",
-    "type": "autonomous province",
+    "type": {
+      "en": "autonomous province",
+      "fr": "province autonome",
+      "sr": "autonomna pokrajina"
+    },
     "names": {
-      "sr": "Војводина"
+      "sr": "Vojvodina"
     }
   }
 ]

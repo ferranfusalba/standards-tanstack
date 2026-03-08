@@ -1,7 +1,57 @@
 [
-  { "code": "GL-AV", "type": "municipality", "names": { "kl": "Avannaata Kommunia" } },
-  { "code": "GL-KU", "type": "municipality", "names": { "kl": "Kommune Kujalleq" } },
-  { "code": "GL-QE", "type": "municipality", "names": { "kl": "Qeqqata Kommunia" } },
-  { "code": "GL-QT", "type": "municipality", "names": { "kl": "Kommune Qeqertalik" } },
-  { "code": "GL-SM", "type": "municipality", "names": { "kl": "Kommuneqarfik Sermersooq" } }
+  {
+    "code": "GL-AV",
+    "type": {
+      "en": "municipality",
+      "fr": "commune",
+      "kl": "kommunia"
+    },
+    "names": {
+      "kl": "Avannaata Kommunia"
+    }
+  },
+  {
+    "code": "GL-KU",
+    "type": {
+      "en": "municipality",
+      "fr": "commune",
+      "kl": "kommunia"
+    },
+    "names": {
+      "kl": "Kommune Kujalleq"
+    }
+  },
+  {
+    "code": "GL-QE",
+    "type": {
+      "en": "municipality",
+      "fr": "commune",
+      "kl": "kommunia"
+    },
+    "names": {
+      "kl": "Qeqqata Kommunia"
+    }
+  },
+  {
+    "code": "GL-QT",
+    "type": {
+      "en": "municipality",
+      "fr": "commune",
+      "kl": "kommunia"
+    },
+    "names": {
+      "kl": "Kommune Qeqertalik"
+    }
+  },
+  {
+    "code": "GL-SM",
+    "type": {
+      "en": "municipality",
+      "fr": "commune",
+      "kl": "kommunia"
+    },
+    "names": {
+      "kl": "Kommuneqarfik Sermersooq"
+    }
+  }
 ]

@@ -1,80 +1,859 @@
 [
-  { "code": "TH-10", "type": "special administrative area", "names": { "th": "กรุงเทพมหานคร" } },
-  { "code": "TH-11", "type": "province", "names": { "th": "สมุทรปราการ" } },
-  { "code": "TH-12", "type": "province", "names": { "th": "นนทบุรี" } },
-  { "code": "TH-13", "type": "province", "names": { "th": "ปทุมธานี" } },
-  { "code": "TH-14", "type": "province", "names": { "th": "พระนครศรีอยุธยา" } },
-  { "code": "TH-15", "type": "province", "names": { "th": "อ่างทอง" } },
-  { "code": "TH-16", "type": "province", "names": { "th": "ลพบุรี" } },
-  { "code": "TH-17", "type": "province", "names": { "th": "สิงห์บุรี" } },
-  { "code": "TH-18", "type": "province", "names": { "th": "ชัยนาท" } },
-  { "code": "TH-19", "type": "province", "names": { "th": "สระบุรี" } },
-  { "code": "TH-20", "type": "province", "names": { "th": "ชลบุรี" } },
-  { "code": "TH-21", "type": "province", "names": { "th": "ระยอง" } },
-  { "code": "TH-22", "type": "province", "names": { "th": "จันทบุรี" } },
-  { "code": "TH-23", "type": "province", "names": { "th": "ตราด" } },
-  { "code": "TH-24", "type": "province", "names": { "th": "ฉะเชิงเทรา" } },
-  { "code": "TH-25", "type": "province", "names": { "th": "ปราจีนบุรี" } },
-  { "code": "TH-26", "type": "province", "names": { "th": "นครนายก" } },
-  { "code": "TH-27", "type": "province", "names": { "th": "สระแก้ว" } },
-  { "code": "TH-30", "type": "province", "names": { "th": "นครราชสีมา" } },
-  { "code": "TH-31", "type": "province", "names": { "th": "บุรีรัมย์" } },
-  { "code": "TH-32", "type": "province", "names": { "th": "สุรินทร์" } },
-  { "code": "TH-33", "type": "province", "names": { "th": "ศรีสะเกษ" } },
-  { "code": "TH-34", "type": "province", "names": { "th": "อุบลราชธานี" } },
-  { "code": "TH-35", "type": "province", "names": { "th": "ยโสธร" } },
-  { "code": "TH-36", "type": "province", "names": { "th": "ชัยภูมิ" } },
-  { "code": "TH-37", "type": "province", "names": { "th": "อำนาจเจริญ" } },
-  { "code": "TH-38", "type": "province", "names": { "th": "บึงกาฬ" } },
-  { "code": "TH-39", "type": "province", "names": { "th": "หนองบัวลำภู" } },
-  { "code": "TH-40", "type": "province", "names": { "th": "ขอนแก่น" } },
-  { "code": "TH-41", "type": "province", "names": { "th": "อุดรธานี" } },
-  { "code": "TH-42", "type": "province", "names": { "th": "เลย" } },
-  { "code": "TH-43", "type": "province", "names": { "th": "หนองคาย" } },
-  { "code": "TH-44", "type": "province", "names": { "th": "มหาสารคาม" } },
-  { "code": "TH-45", "type": "province", "names": { "th": "ร้อยเอ็ด" } },
-  { "code": "TH-46", "type": "province", "names": { "th": "กาฬสินธุ์" } },
-  { "code": "TH-47", "type": "province", "names": { "th": "สกลนคร" } },
-  { "code": "TH-48", "type": "province", "names": { "th": "นครพนม" } },
-  { "code": "TH-49", "type": "province", "names": { "th": "มุกดาหาร" } },
-  { "code": "TH-50", "type": "province", "names": { "th": "เชียงใหม่" } },
-  { "code": "TH-51", "type": "province", "names": { "th": "ลำพูน" } },
-  { "code": "TH-52", "type": "province", "names": { "th": "ลำปาง" } },
-  { "code": "TH-53", "type": "province", "names": { "th": "อุตรดิตถ์" } },
-  { "code": "TH-54", "type": "province", "names": { "th": "แพร่" } },
-  { "code": "TH-55", "type": "province", "names": { "th": "น่าน" } },
-  { "code": "TH-56", "type": "province", "names": { "th": "พะเยา" } },
-  { "code": "TH-57", "type": "province", "names": { "th": "เชียงราย" } },
-  { "code": "TH-58", "type": "province", "names": { "th": "แม่ฮ่องสอน" } },
-  { "code": "TH-60", "type": "province", "names": { "th": "นครสวรรค์" } },
-  { "code": "TH-61", "type": "province", "names": { "th": "อุทัยธานี" } },
-  { "code": "TH-62", "type": "province", "names": { "th": "กำแพงเพชร" } },
-  { "code": "TH-63", "type": "province", "names": { "th": "ตาก" } },
-  { "code": "TH-64", "type": "province", "names": { "th": "สุโขทัย" } },
-  { "code": "TH-65", "type": "province", "names": { "th": "พิษณุโลก" } },
-  { "code": "TH-66", "type": "province", "names": { "th": "พิจิตร" } },
-  { "code": "TH-67", "type": "province", "names": { "th": "เพชรบูรณ์" } },
-  { "code": "TH-70", "type": "province", "names": { "th": "ราชบุรี" } },
-  { "code": "TH-71", "type": "province", "names": { "th": "กาญจนบุรี" } },
-  { "code": "TH-72", "type": "province", "names": { "th": "สุพรรณบุรี" } },
-  { "code": "TH-73", "type": "province", "names": { "th": "นครปฐม" } },
-  { "code": "TH-74", "type": "province", "names": { "th": "สมุทรสาคร" } },
-  { "code": "TH-75", "type": "province", "names": { "th": "สมุทรสงคราม" } },
-  { "code": "TH-76", "type": "province", "names": { "th": "เพชรบุรี" } },
-  { "code": "TH-77", "type": "province", "names": { "th": "ประจวบคีรีขันธ์" } },
-  { "code": "TH-80", "type": "province", "names": { "th": "นครศรีธรรมราช" } },
-  { "code": "TH-81", "type": "province", "names": { "th": "กระบี่" } },
-  { "code": "TH-82", "type": "province", "names": { "th": "พังงา" } },
-  { "code": "TH-83", "type": "province", "names": { "th": "ภูเก็ต" } },
-  { "code": "TH-84", "type": "province", "names": { "th": "สุราษฎร์ธานี" } },
-  { "code": "TH-85", "type": "province", "names": { "th": "ระนอง" } },
-  { "code": "TH-86", "type": "province", "names": { "th": "ชุมพร" } },
-  { "code": "TH-90", "type": "province", "names": { "th": "สงขลา" } },
-  { "code": "TH-91", "type": "province", "names": { "th": "สตูล" } },
-  { "code": "TH-92", "type": "province", "names": { "th": "ตรัง" } },
-  { "code": "TH-93", "type": "province", "names": { "th": "พัทลุง" } },
-  { "code": "TH-94", "type": "province", "names": { "th": "ปัตตานี" } },
-  { "code": "TH-95", "type": "province", "names": { "th": "ยะลา" } },
-  { "code": "TH-96", "type": "province", "names": { "th": "นราธิวาส" } },
-  { "code": "TH-S", "type": "special administrative area", "names": { "th": "พัทยา" } }
+  {
+    "code": "TH-10",
+    "type": {
+      "en": "metropolitan administration",
+      "fr": "administration métropolitaine"
+    },
+    "names": {
+      "th": "Krung Thep Maha Nakhon",
+      "en": "Bangkok"
+    }
+  },
+  {
+    "code": "TH-11",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Samut Prakan"
+    }
+  },
+  {
+    "code": "TH-12",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Nonthaburi"
+    }
+  },
+  {
+    "code": "TH-13",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Pathum Thani"
+    }
+  },
+  {
+    "code": "TH-14",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Phra Nakhon Si Ayutthaya"
+    }
+  },
+  {
+    "code": "TH-15",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Ang Thong"
+    }
+  },
+  {
+    "code": "TH-16",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Lop Buri"
+    }
+  },
+  {
+    "code": "TH-17",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Sing Buri"
+    }
+  },
+  {
+    "code": "TH-18",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Chai Nat"
+    }
+  },
+  {
+    "code": "TH-19",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Saraburi"
+    }
+  },
+  {
+    "code": "TH-20",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Chon Buri"
+    }
+  },
+  {
+    "code": "TH-21",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Rayong"
+    }
+  },
+  {
+    "code": "TH-22",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Chanthaburi"
+    }
+  },
+  {
+    "code": "TH-23",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Trat"
+    }
+  },
+  {
+    "code": "TH-24",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Chachoengsao"
+    }
+  },
+  {
+    "code": "TH-25",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Prachin Buri"
+    }
+  },
+  {
+    "code": "TH-26",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Nakhon Nayok"
+    }
+  },
+  {
+    "code": "TH-27",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Sa Kaeo"
+    }
+  },
+  {
+    "code": "TH-30",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Nakhon Ratchasima"
+    }
+  },
+  {
+    "code": "TH-31",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Buri Ram"
+    }
+  },
+  {
+    "code": "TH-32",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Surin"
+    }
+  },
+  {
+    "code": "TH-33",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Si Sa Ket"
+    }
+  },
+  {
+    "code": "TH-34",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Ubon Ratchathani"
+    }
+  },
+  {
+    "code": "TH-35",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Yasothon"
+    }
+  },
+  {
+    "code": "TH-36",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Chaiyaphum"
+    }
+  },
+  {
+    "code": "TH-37",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Amnat Charoen"
+    }
+  },
+  {
+    "code": "TH-38",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Bueng Kan"
+    }
+  },
+  {
+    "code": "TH-39",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Nong Bua Lam Phu"
+    }
+  },
+  {
+    "code": "TH-40",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Khon Kaen"
+    }
+  },
+  {
+    "code": "TH-41",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Udon Thani"
+    }
+  },
+  {
+    "code": "TH-42",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Loei"
+    }
+  },
+  {
+    "code": "TH-43",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Nong Khai"
+    }
+  },
+  {
+    "code": "TH-44",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Maha Sarakham"
+    }
+  },
+  {
+    "code": "TH-45",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Roi Et"
+    }
+  },
+  {
+    "code": "TH-46",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Kalasin"
+    }
+  },
+  {
+    "code": "TH-47",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Sakon Nakhon"
+    }
+  },
+  {
+    "code": "TH-48",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Nakhon Phanom"
+    }
+  },
+  {
+    "code": "TH-49",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Mukdahan"
+    }
+  },
+  {
+    "code": "TH-50",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Chiang Mai"
+    }
+  },
+  {
+    "code": "TH-51",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Lamphun"
+    }
+  },
+  {
+    "code": "TH-52",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Lampang"
+    }
+  },
+  {
+    "code": "TH-53",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Uttaradit"
+    }
+  },
+  {
+    "code": "TH-54",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Phrae"
+    }
+  },
+  {
+    "code": "TH-55",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Nan"
+    }
+  },
+  {
+    "code": "TH-56",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Phayao"
+    }
+  },
+  {
+    "code": "TH-57",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Chiang Rai"
+    }
+  },
+  {
+    "code": "TH-58",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Mae Hong Son"
+    }
+  },
+  {
+    "code": "TH-60",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Nakhon Sawan"
+    }
+  },
+  {
+    "code": "TH-61",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Uthai Thani"
+    }
+  },
+  {
+    "code": "TH-62",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Kamphaeng Phet"
+    }
+  },
+  {
+    "code": "TH-63",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Tak"
+    }
+  },
+  {
+    "code": "TH-64",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Sukhothai"
+    }
+  },
+  {
+    "code": "TH-65",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Phitsanulok"
+    }
+  },
+  {
+    "code": "TH-66",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Phichit"
+    }
+  },
+  {
+    "code": "TH-67",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Phetchabun"
+    }
+  },
+  {
+    "code": "TH-70",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Ratchaburi"
+    }
+  },
+  {
+    "code": "TH-71",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Kanchanaburi"
+    }
+  },
+  {
+    "code": "TH-72",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Suphan Buri"
+    }
+  },
+  {
+    "code": "TH-73",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Nakhon Pathom"
+    }
+  },
+  {
+    "code": "TH-74",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Samut Sakhon"
+    }
+  },
+  {
+    "code": "TH-75",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Samut Songkhram"
+    }
+  },
+  {
+    "code": "TH-76",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Phetchaburi"
+    }
+  },
+  {
+    "code": "TH-77",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Prachuap Khiri Khan"
+    }
+  },
+  {
+    "code": "TH-80",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Nakhon Si Thammarat"
+    }
+  },
+  {
+    "code": "TH-81",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Krabi"
+    }
+  },
+  {
+    "code": "TH-82",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Phangnga"
+    }
+  },
+  {
+    "code": "TH-83",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Phuket"
+    }
+  },
+  {
+    "code": "TH-84",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Surat Thani"
+    }
+  },
+  {
+    "code": "TH-85",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Ranong"
+    }
+  },
+  {
+    "code": "TH-86",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Chumphon"
+    }
+  },
+  {
+    "code": "TH-90",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Songkhla"
+    }
+  },
+  {
+    "code": "TH-91",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Satun"
+    }
+  },
+  {
+    "code": "TH-92",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Trang"
+    }
+  },
+  {
+    "code": "TH-93",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Phatthalung"
+    }
+  },
+  {
+    "code": "TH-94",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Pattani"
+    }
+  },
+  {
+    "code": "TH-95",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Yala"
+    }
+  },
+  {
+    "code": "TH-96",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "th": "changwat"
+    },
+    "names": {
+      "th": "Narathiwat"
+    }
+  },
+  {
+    "code": "TH-S",
+    "type": {
+      "en": "special administrative city",
+      "fr": "ville administrative spéciale"
+    },
+    "names": {
+      "th": "Phatthaya"
+    }
+  }
 ]

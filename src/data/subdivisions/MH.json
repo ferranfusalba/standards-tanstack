@@ -1,28 +1,310 @@
 [
-  { "code": "MH-L", "type": "chain", "names": { "en": "Ralik Chain" } },
-  { "code": "MH-T", "type": "chain", "names": { "en": "Ratak Chain" } },
-  { "code": "MH-ALL", "type": "municipality", "names": { "en": "Ailinglaplap" } },
-  { "code": "MH-ALK", "type": "municipality", "names": { "en": "Ailuk" } },
-  { "code": "MH-ARN", "type": "municipality", "names": { "en": "Arno" } },
-  { "code": "MH-AUR", "type": "municipality", "names": { "en": "Aur" } },
-  { "code": "MH-EBO", "type": "municipality", "names": { "en": "Ebon" } },
-  { "code": "MH-ENI", "type": "municipality", "names": { "en": "Enewetak & Ujelang" } },
-  { "code": "MH-JAB", "type": "municipality", "names": { "en": "Jabat" } },
-  { "code": "MH-JAL", "type": "municipality", "names": { "en": "Jaluit" } },
-  { "code": "MH-KIL", "type": "municipality", "names": { "en": "Bikini & Kili" } },
-  { "code": "MH-KWA", "type": "municipality", "names": { "en": "Kwajalein" } },
-  { "code": "MH-LAE", "type": "municipality", "names": { "en": "Lae" } },
-  { "code": "MH-LIB", "type": "municipality", "names": { "en": "Lib" } },
-  { "code": "MH-LIK", "type": "municipality", "names": { "en": "Likiep" } },
-  { "code": "MH-MAJ", "type": "municipality", "names": { "en": "Majuro" } },
-  { "code": "MH-MAL", "type": "municipality", "names": { "en": "Maloelap" } },
-  { "code": "MH-MEJ", "type": "municipality", "names": { "en": "Mejit" } },
-  { "code": "MH-MIL", "type": "municipality", "names": { "en": "Mili" } },
-  { "code": "MH-NMK", "type": "municipality", "names": { "en": "Namorik" } },
-  { "code": "MH-NMU", "type": "municipality", "names": { "en": "Namu" } },
-  { "code": "MH-RON", "type": "municipality", "names": { "en": "Rongelap" } },
-  { "code": "MH-UJA", "type": "municipality", "names": { "en": "Ujae" } },
-  { "code": "MH-UTI", "type": "municipality", "names": { "en": "Utrik" } },
-  { "code": "MH-WTH", "type": "municipality", "names": { "en": "Wotho" } },
-  { "code": "MH-WTJ", "type": "municipality", "names": { "en": "Wotje" } }
+  {
+    "code": "MH-L",
+    "type": {
+      "en": "chain (of islands)",
+      "fr": "chaîne d'îles"
+    },
+    "names": {
+      "en": "Ralik chain"
+    }
+  },
+  {
+    "code": "MH-T",
+    "type": {
+      "en": "chain (of islands)",
+      "fr": "chaîne d'îles"
+    },
+    "names": {
+      "en": "Ratak chain"
+    }
+  },
+  {
+    "code": "MH-ALK",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Ailuk",
+      "mh": "Aelok"
+    }
+  },
+  {
+    "code": "MH-ALL",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Ailinglaplap",
+      "mh": "Aelōn̄ḷapḷap"
+    }
+  },
+  {
+    "code": "MH-ARN",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Arno",
+      "mh": "Arṇo"
+    }
+  },
+  {
+    "code": "MH-AUR",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Aur",
+      "mh": "Aur"
+    }
+  },
+  {
+    "code": "MH-EBO",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Ebon",
+      "mh": "Epoon"
+    }
+  },
+  {
+    "code": "MH-ENI",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Enewetak & Ujelang",
+      "mh": "Ānewetak & Wūjlan̄"
+    }
+  },
+  {
+    "code": "MH-JAB",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Jabat",
+      "mh": "Jebat"
+    }
+  },
+  {
+    "code": "MH-JAL",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Jaluit",
+      "mh": "Jālwōj"
+    }
+  },
+  {
+    "code": "MH-KIL",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Bikini & Kili",
+      "mh": "Pikinni & Kōle"
+    }
+  },
+  {
+    "code": "MH-KWA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Kwajalein",
+      "mh": "Kuwajleen"
+    }
+  },
+  {
+    "code": "MH-LAE",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Lae",
+      "mh": "Lae"
+    }
+  },
+  {
+    "code": "MH-LIB",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Lib",
+      "mh": "Ellep"
+    }
+  },
+  {
+    "code": "MH-LIK",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Likiep",
+      "mh": "Likiep"
+    }
+  },
+  {
+    "code": "MH-MAJ",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Majuro",
+      "mh": "Mājro"
+    }
+  },
+  {
+    "code": "MH-MAL",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Maloelap",
+      "mh": "Ṃaḷoeḷap"
+    }
+  },
+  {
+    "code": "MH-MEJ",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Mejit",
+      "mh": "Mājej"
+    }
+  },
+  {
+    "code": "MH-MIL",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Mili",
+      "mh": "Mile"
+    }
+  },
+  {
+    "code": "MH-NMK",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Namdrik",
+      "mh": "Naṃdik"
+    }
+  },
+  {
+    "code": "MH-NMU",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Namu",
+      "mh": "Naṃo"
+    }
+  },
+  {
+    "code": "MH-RON",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Rongelap",
+      "mh": "Ron̄ḷap"
+    }
+  },
+  {
+    "code": "MH-UJA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Ujae",
+      "mh": "Ujae"
+    }
+  },
+  {
+    "code": "MH-UTI",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Utrik",
+      "mh": "Utrōk"
+    }
+  },
+  {
+    "code": "MH-WTH",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Wotho",
+      "mh": "Wōtto"
+    }
+  },
+  {
+    "code": "MH-WTJ",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "mh": "jukjuk"
+    },
+    "names": {
+      "en": "Wotje",
+      "mh": "Wōjjā"
+    }
+  }
 ]

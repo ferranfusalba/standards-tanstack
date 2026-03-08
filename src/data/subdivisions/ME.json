@@ -1,170 +1,277 @@
 [
   {
     "code": "ME-01",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Andrijevica"
+      "cnr": "Andrijevica"
     }
   },
   {
     "code": "ME-02",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Bar"
+      "cnr": "Bar"
     }
   },
   {
     "code": "ME-03",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Berane"
+      "cnr": "Berane"
     }
   },
   {
     "code": "ME-04",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Bijelo Polje"
+      "cnr": "Bijelo Polje"
     }
   },
   {
     "code": "ME-05",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Budva"
+      "cnr": "Budva"
     }
   },
   {
     "code": "ME-06",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Cetinje"
+      "cnr": "Cetinje"
     }
   },
   {
     "code": "ME-07",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Danilovgrad"
+      "cnr": "Danilovgrad"
     }
   },
   {
     "code": "ME-08",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Herceg-Novi"
+      "cnr": "Herceg-Novi"
     }
   },
   {
     "code": "ME-09",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Kolašin"
+      "cnr": "Kolašin"
     }
   },
   {
     "code": "ME-10",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Kotor"
+      "cnr": "Kotor"
     }
   },
   {
     "code": "ME-11",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Mojkovac"
+      "cnr": "Mojkovac"
     }
   },
   {
     "code": "ME-12",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Nikšić"
+      "cnr": "Nikšić"
     }
   },
   {
     "code": "ME-13",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Plav"
+      "cnr": "Plav"
     }
   },
   {
     "code": "ME-14",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Pljevlja"
+      "cnr": "Pljevlja"
     }
   },
   {
     "code": "ME-15",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Plužine"
+      "cnr": "Plužine"
     }
   },
   {
     "code": "ME-16",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Podgorica"
+      "cnr": "Podgorica"
     }
   },
   {
     "code": "ME-17",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Rožaje"
+      "cnr": "Rožaje"
     }
   },
   {
     "code": "ME-18",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Šavnik"
+      "cnr": "Šavnik"
     }
   },
   {
     "code": "ME-19",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Tivat"
+      "cnr": "Tivat"
     }
   },
   {
     "code": "ME-20",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Ulcinj"
+      "cnr": "Ulcinj"
     }
   },
   {
     "code": "ME-21",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Žabljak"
+      "cnr": "Žabljak"
     }
   },
   {
     "code": "ME-22",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Gusinje"
+      "cnr": "Gusinje"
     }
   },
   {
     "code": "ME-23",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Petnjica"
+      "cnr": "Petnjica"
     }
   },
   {
     "code": "ME-24",
-    "type": "municipality",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
     "names": {
-      "sr": "Tuzi"
+      "cnr": "Tuzi"
+    }
+  },
+  {
+    "code": "ME-25",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "cnr": "opština"
+    },
+    "names": {
+      "cnr": "Zeta"
     }
   }
 ]

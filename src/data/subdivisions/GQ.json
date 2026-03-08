@@ -1,10 +1,142 @@
 [
-  { "code": "GQ-AN", "type": "province", "names": { "es": "Annobón" } },
-  { "code": "GQ-BN", "type": "province", "names": { "es": "Bioko Norte" } },
-  { "code": "GQ-BS", "type": "province", "names": { "es": "Bioko Sur" } },
-  { "code": "GQ-CS", "type": "province", "names": { "es": "Centro Sur" } },
-  { "code": "GQ-DJ", "type": "province", "names": { "es": "Djibloho" } },
-  { "code": "GQ-KN", "type": "province", "names": { "es": "Kié-Ntem" } },
-  { "code": "GQ-LI", "type": "province", "names": { "es": "Litoral" } },
-  { "code": "GQ-WN", "type": "province", "names": { "es": "Wele-Nzas" } }
+  {
+    "code": "GQ-AN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia",
+      "pt": "província"
+    },
+    "names": {
+      "fr": "Annobon",
+      "es": "Annobón",
+      "pt": "Ano Bom"
+    }
+  },
+  {
+    "code": "GQ-BN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia",
+      "pt": "província"
+    },
+    "names": {
+      "fr": "Bioko Nord",
+      "es": "Bioko Norte",
+      "pt": "Bioko Norte"
+    }
+  },
+  {
+    "code": "GQ-BS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia",
+      "pt": "província"
+    },
+    "names": {
+      "fr": "Bioko Sud",
+      "es": "Bioko Sur",
+      "pt": "Bioko Sul"
+    }
+  },
+  {
+    "code": "GQ-C",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región",
+      "pt": "região"
+    },
+    "names": {
+      "fr": "Région Continentale",
+      "es": "Región Continental",
+      "pt": "Região Continental"
+    }
+  },
+  {
+    "code": "GQ-CS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia",
+      "pt": "província"
+    },
+    "names": {
+      "fr": "Centro Sud",
+      "es": "Centro Sur",
+      "pt": "Centro Sul"
+    }
+  },
+  {
+    "code": "GQ-DJ",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia",
+      "pt": "província"
+    },
+    "names": {
+      "fr": "Djibloho",
+      "es": "Djibloho",
+      "pt": "Djibloho"
+    }
+  },
+  {
+    "code": "GQ-I",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "es": "región",
+      "pt": "região"
+    },
+    "names": {
+      "fr": "Région Insulaire",
+      "es": "Región Insular",
+      "pt": "Região Insular"
+    }
+  },
+  {
+    "code": "GQ-KN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia",
+      "pt": "província"
+    },
+    "names": {
+      "fr": "Kié-Ntem",
+      "es": "Kié-Ntem",
+      "pt": "Kié-Ntem"
+    }
+  },
+  {
+    "code": "GQ-LI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia",
+      "pt": "província"
+    },
+    "names": {
+      "fr": "Littoral",
+      "es": "Litoral",
+      "pt": "Litoral"
+    }
+  },
+  {
+    "code": "GQ-WN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "es": "provincia",
+      "pt": "província"
+    },
+    "names": {
+      "fr": "Wele-Nzas",
+      "es": "Wele-Nzas",
+      "pt": "Wele-Nzas"
+    }
+  }
 ]

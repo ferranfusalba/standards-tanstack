@@ -1,17 +1,182 @@
 [
-  { "code": "MR-01", "type": "region", "names": { "ar": "الحوض الشرقي" } },
-  { "code": "MR-02", "type": "region", "names": { "ar": "الحوض الغربي" } },
-  { "code": "MR-03", "type": "region", "names": { "ar": "العصابة" } },
-  { "code": "MR-04", "type": "region", "names": { "ar": "كوركول" } },
-  { "code": "MR-05", "type": "region", "names": { "ar": "البراكنة" } },
-  { "code": "MR-06", "type": "region", "names": { "ar": "الترارزة" } },
-  { "code": "MR-07", "type": "region", "names": { "ar": "آدرار" } },
-  { "code": "MR-08", "type": "region", "names": { "ar": "داخلت نواذيبو" } },
-  { "code": "MR-09", "type": "region", "names": { "ar": "تكانت" } },
-  { "code": "MR-10", "type": "region", "names": { "ar": "كيدي ماغا" } },
-  { "code": "MR-11", "type": "region", "names": { "ar": "تيرس زمور" } },
-  { "code": "MR-12", "type": "region", "names": { "ar": "إنشيري" } },
-  { "code": "MR-13", "type": "district", "names": { "ar": "نواكشوط الغربية" } },
-  { "code": "MR-14", "type": "district", "names": { "ar": "نواكشوط الشمالية" } },
-  { "code": "MR-15", "type": "district", "names": { "ar": "نواكشوط الجنوبية" } }
+  {
+    "code": "MR-01",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "wilaya"
+    },
+    "names": {
+      "fr": "Hodh ech Chargui",
+      "ar": "الحوض الشرقي"
+    }
+  },
+  {
+    "code": "MR-02",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "wilaya"
+    },
+    "names": {
+      "fr": "Hodh el Gharbi",
+      "ar": "الحوض الغربي"
+    }
+  },
+  {
+    "code": "MR-03",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "wilaya"
+    },
+    "names": {
+      "fr": "Assaba",
+      "ar": "العصابة"
+    }
+  },
+  {
+    "code": "MR-04",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "wilaya"
+    },
+    "names": {
+      "fr": "Gorgol",
+      "ar": "كوركول"
+    }
+  },
+  {
+    "code": "MR-05",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "wilaya"
+    },
+    "names": {
+      "fr": "Brakna",
+      "ar": "البراكنة"
+    }
+  },
+  {
+    "code": "MR-06",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "wilaya"
+    },
+    "names": {
+      "fr": "Trarza",
+      "ar": "الترارزة"
+    }
+  },
+  {
+    "code": "MR-07",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "wilaya"
+    },
+    "names": {
+      "fr": "Adrar",
+      "ar": "آدرار"
+    }
+  },
+  {
+    "code": "MR-08",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "wilaya"
+    },
+    "names": {
+      "fr": "Dakhlet Nouâdhibou",
+      "ar": "داخلت نواذيبو"
+    }
+  },
+  {
+    "code": "MR-09",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "wilaya"
+    },
+    "names": {
+      "fr": "Tagant",
+      "ar": "تكانت"
+    }
+  },
+  {
+    "code": "MR-10",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "wilaya"
+    },
+    "names": {
+      "fr": "Guidimaka",
+      "ar": "كيدي ماغا"
+    }
+  },
+  {
+    "code": "MR-11",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "wilaya"
+    },
+    "names": {
+      "fr": "Tiris Zemmour",
+      "ar": "تيرس زمور"
+    }
+  },
+  {
+    "code": "MR-12",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "wilaya"
+    },
+    "names": {
+      "fr": "Inchiri",
+      "ar": "إنشيري"
+    }
+  },
+  {
+    "code": "MR-13",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "wilaya"
+    },
+    "names": {
+      "fr": "Nouakchott Ouest",
+      "ar": "نواكشوط الغربية"
+    }
+  },
+  {
+    "code": "MR-14",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "wilaya"
+    },
+    "names": {
+      "fr": "Nouakchott Nord",
+      "ar": "نواكشوط الشمالية"
+    }
+  },
+  {
+    "code": "MR-15",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "wilaya"
+    },
+    "names": {
+      "fr": "Nouakchott Sud",
+      "ar": "نواكشوط الجنوبية"
+    }
+  }
 ]

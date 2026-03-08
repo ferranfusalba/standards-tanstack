@@ -1,5 +1,44 @@
 [
-  { "code": "BQ-BO", "type": { "en": "special municipality", "fr": "commune speciale", "nl": "bijzondere gemeente" }, "names": { "en": "Bonaire", "nl": "Bonaire", "pap": "Boneiru" } },
-  { "code": "BQ-SA", "type": { "en": "special municipality", "fr": "commune speciale", "nl": "bijzondere gemeente" }, "names": { "en": "Saba", "nl": "Saba", "pap": "Saba" } },
-  { "code": "BQ-SE", "type": { "en": "special municipality", "fr": "commune speciale", "nl": "bijzondere gemeente" }, "names": { "en": "Sint Eustatius", "nl": "Sint Eustatius", "pap": "Sint Eustatius" } }
+  {
+    "code": "BQ-BO",
+    "type": {
+      "en": "special municipality",
+      "fr": "commune speciale",
+      "nl": "bijzondere gemeente",
+      "pap": "munisipio spesial"
+    },
+    "names": {
+      "en": "Bonaire",
+      "nl": "Bonaire",
+      "pap": "Boneiru"
+    }
+  },
+  {
+    "code": "BQ-SA",
+    "type": {
+      "en": "special municipality",
+      "fr": "commune speciale",
+      "nl": "bijzondere gemeente",
+      "pap": "munisipio spesial"
+    },
+    "names": {
+      "en": "Saba",
+      "nl": "Saba",
+      "pap": "Saba"
+    }
+  },
+  {
+    "code": "BQ-SE",
+    "type": {
+      "en": "special municipality",
+      "fr": "commune speciale",
+      "nl": "bijzondere gemeente",
+      "pap": "munisipio spesial"
+    },
+    "names": {
+      "en": "Sint Eustatius",
+      "nl": "Sint Eustatius",
+      "pap": "Sint Eustatius"
+    }
+  }
 ]

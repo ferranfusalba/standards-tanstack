@@ -1,147 +1,231 @@
 [
   {
     "code": "SE-AB",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Stockholms län"
     }
   },
   {
     "code": "SE-AC",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Västerbottens län"
     }
   },
   {
     "code": "SE-BD",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Norrbottens län"
     }
   },
   {
     "code": "SE-C",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Uppsala län"
     }
   },
   {
     "code": "SE-D",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Södermanlands län"
     }
   },
   {
     "code": "SE-E",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Östergötlands län"
     }
   },
   {
     "code": "SE-F",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Jönköpings län"
     }
   },
   {
     "code": "SE-G",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Kronobergs län"
     }
   },
   {
     "code": "SE-H",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Kalmar län"
     }
   },
   {
     "code": "SE-I",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Gotlands län"
     }
   },
   {
     "code": "SE-K",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Blekinge län"
     }
   },
   {
     "code": "SE-M",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Skåne län"
     }
   },
   {
     "code": "SE-N",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Hallands län"
     }
   },
   {
     "code": "SE-O",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Västra Götalands län"
     }
   },
   {
     "code": "SE-S",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Värmlands län"
     }
   },
   {
     "code": "SE-T",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Örebro län"
     }
   },
   {
     "code": "SE-U",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Västmanlands län"
     }
   },
   {
     "code": "SE-W",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Dalarnas län"
     }
   },
   {
     "code": "SE-X",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Gävleborgs län"
     }
   },
   {
     "code": "SE-Y",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Västernorrlands län"
     }
   },
   {
     "code": "SE-Z",
-    "type": "county",
+    "type": {
+      "en": "county",
+      "fr": "département",
+      "sv": "län"
+    },
     "names": {
       "sv": "Jämtlands län"
     }

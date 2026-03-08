@@ -1,19 +1,202 @@
 [
-  { "code": "NZ-AUK", "type": "region", "names": { "en": "Auckland" } },
-  { "code": "NZ-BOP", "type": "region", "names": { "en": "Bay of Plenty" } },
-  { "code": "NZ-CAN", "type": "region", "names": { "en": "Canterbury" } },
-  { "code": "NZ-CIT", "type": "unitary authority", "names": { "en": "Chatham Islands Territory" } },
-  { "code": "NZ-GIS", "type": "region", "names": { "en": "Gisborne" } },
-  { "code": "NZ-HKB", "type": "region", "names": { "en": "Hawke's Bay" } },
-  { "code": "NZ-MBH", "type": "region", "names": { "en": "Marlborough" } },
-  { "code": "NZ-MWT", "type": "region", "names": { "en": "Manawatū-Whanganui" } },
-  { "code": "NZ-NSN", "type": "unitary authority", "names": { "en": "Nelson" } },
-  { "code": "NZ-NTL", "type": "region", "names": { "en": "Northland" } },
-  { "code": "NZ-OTA", "type": "region", "names": { "en": "Otago" } },
-  { "code": "NZ-STL", "type": "region", "names": { "en": "Southland" } },
-  { "code": "NZ-TAS", "type": "region", "names": { "en": "Tasman" } },
-  { "code": "NZ-TKI", "type": "region", "names": { "en": "Taranaki" } },
-  { "code": "NZ-WKO", "type": "region", "names": { "en": "Waikato" } },
-  { "code": "NZ-WGN", "type": "region", "names": { "en": "Wellington" } },
-  { "code": "NZ-WTC", "type": "region", "names": { "en": "West Coast" } }
+  {
+    "code": "NZ-AUK",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "mi": "rohe"
+    },
+    "names": {
+      "en": "Auckland",
+      "mi": "Tāmaki-Makaurau"
+    }
+  },
+  {
+    "code": "NZ-BOP",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "mi": "rohe"
+    },
+    "names": {
+      "en": "Bay of Plenty",
+      "mi": "Toi Moana"
+    }
+  },
+  {
+    "code": "NZ-CAN",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "mi": "rohe"
+    },
+    "names": {
+      "en": "Canterbury",
+      "mi": "Waitaha"
+    }
+  },
+  {
+    "code": "NZ-CIT",
+    "type": {
+      "en": "special island authority",
+      "fr": "territoire insulaire"
+    },
+    "names": {
+      "en": "Chatham Islands Territory",
+      "mi": "Wharekauri"
+    }
+  },
+  {
+    "code": "NZ-GIS",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "mi": "rohe"
+    },
+    "names": {
+      "en": "Gisborne",
+      "mi": "Te Tairāwhiti"
+    }
+  },
+  {
+    "code": "NZ-HKB",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "mi": "rohe"
+    },
+    "names": {
+      "en": "Hawke's Bay",
+      "mi": "Te Matau-a-Māui"
+    }
+  },
+  {
+    "code": "NZ-MBH",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "mi": "rohe"
+    },
+    "names": {
+      "en": "Marlborough"
+    }
+  },
+  {
+    "code": "NZ-MWT",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "mi": "rohe"
+    },
+    "names": {
+      "en": "Manawatū-Whanganui",
+      "mi": "Manawatū Whanganui"
+    }
+  },
+  {
+    "code": "NZ-NSN",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "mi": "rohe"
+    },
+    "names": {
+      "en": "Nelson",
+      "mi": "Whakatū"
+    }
+  },
+  {
+    "code": "NZ-NTL",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "mi": "rohe"
+    },
+    "names": {
+      "en": "Northland",
+      "mi": "Te Taitokerau"
+    }
+  },
+  {
+    "code": "NZ-OTA",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "mi": "rohe"
+    },
+    "names": {
+      "en": "Otago",
+      "mi": "Ō Tākou"
+    }
+  },
+  {
+    "code": "NZ-STL",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "mi": "rohe"
+    },
+    "names": {
+      "en": "Southland",
+      "mi": "Te Taiao Tonga"
+    }
+  },
+  {
+    "code": "NZ-TAS",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "mi": "rohe"
+    },
+    "names": {
+      "en": "Tasman",
+      "mi": "Te tai o Aorere"
+    }
+  },
+  {
+    "code": "NZ-TKI",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "mi": "rohe"
+    },
+    "names": {
+      "en": "Taranaki"
+    }
+  },
+  {
+    "code": "NZ-WGN",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "mi": "rohe"
+    },
+    "names": {
+      "en": "Greater Wellington",
+      "mi": "Te Pane Matua Taiao"
+    }
+  },
+  {
+    "code": "NZ-WKO",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "mi": "rohe"
+    },
+    "names": {
+      "en": "Waikato"
+    }
+  },
+  {
+    "code": "NZ-WTC",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "mi": "rohe"
+    },
+    "names": {
+      "en": "West Coast",
+      "mi": "Te Tai o Poutini"
+    }
+  }
 ]

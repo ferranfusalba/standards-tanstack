@@ -1,13 +1,112 @@
 [
-  { "code": "BB-01", "type": { "en": "parish", "fr": "paroisse" }, "names": { "en": "Christ Church" } },
-  { "code": "BB-02", "type": { "en": "parish", "fr": "paroisse" }, "names": { "en": "Saint Andrew" } },
-  { "code": "BB-03", "type": { "en": "parish", "fr": "paroisse" }, "names": { "en": "Saint George" } },
-  { "code": "BB-04", "type": { "en": "parish", "fr": "paroisse" }, "names": { "en": "Saint James" } },
-  { "code": "BB-05", "type": { "en": "parish", "fr": "paroisse" }, "names": { "en": "Saint John" } },
-  { "code": "BB-06", "type": { "en": "parish", "fr": "paroisse" }, "names": { "en": "Saint Joseph" } },
-  { "code": "BB-07", "type": { "en": "parish", "fr": "paroisse" }, "names": { "en": "Saint Lucy" } },
-  { "code": "BB-08", "type": { "en": "parish", "fr": "paroisse" }, "names": { "en": "Saint Michael" } },
-  { "code": "BB-09", "type": { "en": "parish", "fr": "paroisse" }, "names": { "en": "Saint Peter" } },
-  { "code": "BB-10", "type": { "en": "parish", "fr": "paroisse" }, "names": { "en": "Saint Philip" } },
-  { "code": "BB-11", "type": { "en": "parish", "fr": "paroisse" }, "names": { "en": "Saint Thomas" } }
+  {
+    "code": "BB-01",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Christ Church"
+    }
+  },
+  {
+    "code": "BB-02",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Andrew"
+    }
+  },
+  {
+    "code": "BB-03",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint George"
+    }
+  },
+  {
+    "code": "BB-04",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint James"
+    }
+  },
+  {
+    "code": "BB-05",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint John"
+    }
+  },
+  {
+    "code": "BB-06",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Joseph"
+    }
+  },
+  {
+    "code": "BB-07",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Lucy"
+    }
+  },
+  {
+    "code": "BB-08",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Michael"
+    }
+  },
+  {
+    "code": "BB-09",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Peter"
+    }
+  },
+  {
+    "code": "BB-10",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Philip"
+    }
+  },
+  {
+    "code": "BB-11",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Thomas"
+    }
+  }
 ]

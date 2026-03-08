@@ -1,20 +1,218 @@
 [
-  { "code": "BI-BB", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Bubanza", "rn": "Bubanza" } },
-  { "code": "BI-BL", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Bujumbura Rural", "rn": "Bujumbura Rural" } },
-  { "code": "BI-BM", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Bujumbura Mairie", "rn": "Bujumbura Mairie" } },
-  { "code": "BI-BR", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Bururi", "rn": "Bururi" } },
-  { "code": "BI-CA", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Cankuzo", "rn": "Cankuzo" } },
-  { "code": "BI-CI", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Cibitoke", "rn": "Cibitoke" } },
-  { "code": "BI-GI", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Gitega", "rn": "Gitega" } },
-  { "code": "BI-KR", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Karuzi", "rn": "Karuzi" } },
-  { "code": "BI-KY", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Kayanza", "rn": "Kayanza" } },
-  { "code": "BI-KI", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Kirundo", "rn": "Kirundo" } },
-  { "code": "BI-MA", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Makamba", "rn": "Makamba" } },
-  { "code": "BI-MU", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Muramvya", "rn": "Muramvya" } },
-  { "code": "BI-MW", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Mwaro", "rn": "Mwaro" } },
-  { "code": "BI-MY", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Muyinga", "rn": "Muyinga" } },
-  { "code": "BI-NG", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Ngozi", "rn": "Ngozi" } },
-  { "code": "BI-RM", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Rumonge", "rn": "Rumonge" } },
-  { "code": "BI-RT", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Rutana", "rn": "Rutana" } },
-  { "code": "BI-RY", "type": { "en": "province", "fr": "province", "rn": "iprovense" }, "names": { "fr": "Ruyigi", "rn": "Ruyigi" } }
+  {
+    "code": "BI-BB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Bubanza",
+      "rn": "Bubanza"
+    }
+  },
+  {
+    "code": "BI-BL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Bujumbura Rural",
+      "rn": "Bujumbura Rural"
+    }
+  },
+  {
+    "code": "BI-BM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Bujumbura Mairie",
+      "rn": "Bujumbura Mairie"
+    }
+  },
+  {
+    "code": "BI-BR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Bururi",
+      "rn": "Bururi"
+    }
+  },
+  {
+    "code": "BI-CA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Cankuzo",
+      "rn": "Cankuzo"
+    }
+  },
+  {
+    "code": "BI-CI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Cibitoke",
+      "rn": "Cibitoke"
+    }
+  },
+  {
+    "code": "BI-GI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Gitega",
+      "rn": "Gitega"
+    }
+  },
+  {
+    "code": "BI-KR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Karuzi",
+      "rn": "Karuzi"
+    }
+  },
+  {
+    "code": "BI-KY",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Kayanza",
+      "rn": "Kayanza"
+    }
+  },
+  {
+    "code": "BI-KI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Kirundo",
+      "rn": "Kirundo"
+    }
+  },
+  {
+    "code": "BI-MA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Makamba",
+      "rn": "Makamba"
+    }
+  },
+  {
+    "code": "BI-MU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Muramvya",
+      "rn": "Muramvya"
+    }
+  },
+  {
+    "code": "BI-MW",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Mwaro",
+      "rn": "Mwaro"
+    }
+  },
+  {
+    "code": "BI-MY",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Muyinga",
+      "rn": "Muyinga"
+    }
+  },
+  {
+    "code": "BI-NG",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Ngozi",
+      "rn": "Ngozi"
+    }
+  },
+  {
+    "code": "BI-RM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Rumonge",
+      "rn": "Rumonge"
+    }
+  },
+  {
+    "code": "BI-RT",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Rutana",
+      "rn": "Rutana"
+    }
+  },
+  {
+    "code": "BI-RY",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rn": "iprovense"
+    },
+    "names": {
+      "fr": "Ruyigi",
+      "rn": "Ruyigi"
+    }
+  }
 ]

@@ -1,19 +1,242 @@
 [
-  { "code": "KZ-10", "type": "region", "names": { "ru": "Алматинская область" } },
-  { "code": "KZ-11", "type": "region", "names": { "ru": "Акмолинская область" } },
-  { "code": "KZ-15", "type": "region", "names": { "ru": "Актюбинская область" } },
-  { "code": "KZ-19", "type": "city", "names": { "ru": "Алматы" } },
-  { "code": "KZ-23", "type": "region", "names": { "ru": "Атырауская область" } },
-  { "code": "KZ-27", "type": "region", "names": { "ru": "Западно-Казахстанская область" } },
-  { "code": "KZ-31", "type": "region", "names": { "ru": "Жамбылская область" } },
-  { "code": "KZ-33", "type": "region", "names": { "ru": "Карагандинская область" } },
-  { "code": "KZ-35", "type": "region", "names": { "ru": "Костанайская область" } },
-  { "code": "KZ-39", "type": "region", "names": { "ru": "Кызылординская область" } },
-  { "code": "KZ-43", "type": "region", "names": { "ru": "Мангистауская область" } },
-  { "code": "KZ-47", "type": "region", "names": { "ru": "Павлодарская область" } },
-  { "code": "KZ-55", "type": "region", "names": { "ru": "Северо-Казахстанская область" } },
-  { "code": "KZ-59", "type": "region", "names": { "ru": "Туркестанская область" } },
-  { "code": "KZ-61", "type": "region", "names": { "ru": "Восточно-Казахстанская область" } },
-  { "code": "KZ-63", "type": "city", "names": { "ru": "Астана" } },
-  { "code": "KZ-79", "type": "city", "names": { "ru": "Шымкент" } }
+  {
+    "code": "KZ-10",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "kk": "oblys",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Абайская область"
+    }
+  },
+  {
+    "code": "KZ-11",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "kk": "oblys",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Акмолинская область"
+    }
+  },
+  {
+    "code": "KZ-15",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "kk": "oblys",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Актюбинская область"
+    }
+  },
+  {
+    "code": "KZ-19",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "kk": "oblys",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Алматинская область"
+    }
+  },
+  {
+    "code": "KZ-23",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "kk": "oblys",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Атырауская область"
+    }
+  },
+  {
+    "code": "KZ-27",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "kk": "oblys",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Западно-Казахстанская область"
+    }
+  },
+  {
+    "code": "KZ-31",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "kk": "oblys",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Жамбылская область"
+    }
+  },
+  {
+    "code": "KZ-33",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "kk": "oblys",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Жетысуская область"
+    }
+  },
+  {
+    "code": "KZ-35",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "kk": "oblys",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Карагандинская область"
+    }
+  },
+  {
+    "code": "KZ-39",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "kk": "oblys",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Костанайская область"
+    }
+  },
+  {
+    "code": "KZ-43",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "kk": "oblys",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Кызылординская область"
+    }
+  },
+  {
+    "code": "KZ-47",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "kk": "oblys",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Мангистауская область"
+    }
+  },
+  {
+    "code": "KZ-55",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "kk": "oblys",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Павлодарская область"
+    }
+  },
+  {
+    "code": "KZ-59",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "kk": "oblys",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Северо-Казахстанская область"
+    }
+  },
+  {
+    "code": "KZ-61",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "kk": "oblys",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Туркестанская область"
+    }
+  },
+  {
+    "code": "KZ-62",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "kk": "oblys",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Улытауская область"
+    }
+  },
+  {
+    "code": "KZ-63",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "kk": "oblys",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Восточно-Казахстанская область"
+    }
+  },
+  {
+    "code": "KZ-71",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "kk": "qala",
+      "ru": "gorod"
+    },
+    "names": {
+      "ru": "Астана"
+    }
+  },
+  {
+    "code": "KZ-75",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "kk": "qala",
+      "ru": "gorod"
+    },
+    "names": {
+      "ru": "Алматы"
+    }
+  },
+  {
+    "code": "KZ-79",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "kk": "qala",
+      "ru": "gorod"
+    },
+    "names": {
+      "ru": "Шымкент"
+    }
+  }
 ]

@@ -1,24 +1,266 @@
 [
-  { "code": "MN-1", "type": "capital city", "names": { "mn": "Улаанбаатар" } },
-  { "code": "MN-035", "type": "province", "names": { "mn": "Орхон" } },
-  { "code": "MN-037", "type": "province", "names": { "mn": "Дархан-Уул" } },
-  { "code": "MN-039", "type": "province", "names": { "mn": "Хэнтий" } },
-  { "code": "MN-041", "type": "province", "names": { "mn": "Хөвсгөл" } },
-  { "code": "MN-043", "type": "province", "names": { "mn": "Ховд" } },
-  { "code": "MN-046", "type": "province", "names": { "mn": "Увс" } },
-  { "code": "MN-047", "type": "province", "names": { "mn": "Төв" } },
-  { "code": "MN-049", "type": "province", "names": { "mn": "Сэлэнгэ" } },
-  { "code": "MN-051", "type": "province", "names": { "mn": "Сүхбаатар" } },
-  { "code": "MN-053", "type": "province", "names": { "mn": "Өмнөговь" } },
-  { "code": "MN-055", "type": "province", "names": { "mn": "Өвөрхангай" } },
-  { "code": "MN-057", "type": "province", "names": { "mn": "Завхан" } },
-  { "code": "MN-059", "type": "province", "names": { "mn": "Дундговь" } },
-  { "code": "MN-061", "type": "province", "names": { "mn": "Дорнод" } },
-  { "code": "MN-063", "type": "province", "names": { "mn": "Дорноговь" } },
-  { "code": "MN-064", "type": "province", "names": { "mn": "Говьсүмбэр" } },
-  { "code": "MN-065", "type": "province", "names": { "mn": "Говь-Алтай" } },
-  { "code": "MN-067", "type": "province", "names": { "mn": "Булган" } },
-  { "code": "MN-069", "type": "province", "names": { "mn": "Баянхонгор" } },
-  { "code": "MN-071", "type": "province", "names": { "mn": "Баян-Өлгий" } },
-  { "code": "MN-073", "type": "province", "names": { "mn": "Архангай" } }
+  {
+    "code": "MN-1",
+    "type": {
+      "en": "capital city",
+      "fr": "capitale",
+      "mn": "hot"
+    },
+    "names": {
+      "en": "Ulaanbaatar",
+      "mn": "Улаанбаатар"
+    }
+  },
+  {
+    "code": "MN-035",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Orhon",
+      "mn": "Орхон"
+    }
+  },
+  {
+    "code": "MN-037",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Darhan uul",
+      "mn": "Дархан-Уул"
+    }
+  },
+  {
+    "code": "MN-039",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Hentiy",
+      "mn": "Хэнтий"
+    }
+  },
+  {
+    "code": "MN-041",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Hövsgöl",
+      "mn": "Хөвсгөл"
+    }
+  },
+  {
+    "code": "MN-043",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Hovd",
+      "mn": "Ховд"
+    }
+  },
+  {
+    "code": "MN-046",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Uvs",
+      "mn": "Увс"
+    }
+  },
+  {
+    "code": "MN-047",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Töv",
+      "mn": "Төв"
+    }
+  },
+  {
+    "code": "MN-049",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Selenge",
+      "mn": "Сэлэнгэ"
+    }
+  },
+  {
+    "code": "MN-051",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Sühbaatar",
+      "mn": "Сүхбаатар"
+    }
+  },
+  {
+    "code": "MN-053",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Ömnögovĭ",
+      "mn": "Өмнөговь"
+    }
+  },
+  {
+    "code": "MN-055",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Övörhangay",
+      "mn": "Өвөрхангай"
+    }
+  },
+  {
+    "code": "MN-057",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Dzavhan",
+      "mn": "Завхан"
+    }
+  },
+  {
+    "code": "MN-059",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Dundgovĭ",
+      "mn": "Дундговь"
+    }
+  },
+  {
+    "code": "MN-061",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Dornod",
+      "mn": "Дорнод"
+    }
+  },
+  {
+    "code": "MN-063",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Dornogovĭ",
+      "mn": "Дорноговь"
+    }
+  },
+  {
+    "code": "MN-064",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Govĭ-Sümber",
+      "mn": "Говьсүмбэр"
+    }
+  },
+  {
+    "code": "MN-065",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Govĭ-Altay",
+      "mn": "Говь-Алтай"
+    }
+  },
+  {
+    "code": "MN-067",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Bulgan",
+      "mn": "Булган"
+    }
+  },
+  {
+    "code": "MN-069",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Bayanhongor",
+      "mn": "Баянхонгор"
+    }
+  },
+  {
+    "code": "MN-071",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Bayan-Ölgiy",
+      "mn": "Баян-Өлгий"
+    }
+  },
+  {
+    "code": "MN-073",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mn": "aymag"
+    },
+    "names": {
+      "en": "Arhangay",
+      "mn": "Архангай"
+    }
+  }
 ]

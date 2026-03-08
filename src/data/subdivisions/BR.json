@@ -1,29 +1,299 @@
 [
-  { "code": "BR-AC", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Acre" } },
-  { "code": "BR-AL", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Alagoas" } },
-  { "code": "BR-AM", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Amazonas" } },
-  { "code": "BR-AP", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Amapá" } },
-  { "code": "BR-BA", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Bahia" } },
-  { "code": "BR-CE", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Ceará" } },
-  { "code": "BR-DF", "type": { "en": "federal district", "fr": "district fédéral", "pt": "distrito federal" }, "names": { "pt": "Distrito Federal" } },
-  { "code": "BR-ES", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Espírito Santo" } },
-  { "code": "BR-GO", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Goiás" } },
-  { "code": "BR-MA", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Maranhão" } },
-  { "code": "BR-MG", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Minas Gerais" } },
-  { "code": "BR-MS", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Mato Grosso do Sul" } },
-  { "code": "BR-MT", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Mato Grosso" } },
-  { "code": "BR-PA", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Pará" } },
-  { "code": "BR-PB", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Paraíba" } },
-  { "code": "BR-PE", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Pernambuco" } },
-  { "code": "BR-PI", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Piauí" } },
-  { "code": "BR-PR", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Paraná" } },
-  { "code": "BR-RJ", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Rio de Janeiro" } },
-  { "code": "BR-RN", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Rio Grande do Norte" } },
-  { "code": "BR-RO", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Rondônia" } },
-  { "code": "BR-RR", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Roraima" } },
-  { "code": "BR-RS", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Rio Grande do Sul" } },
-  { "code": "BR-SC", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Santa Catarina" } },
-  { "code": "BR-SE", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Sergipe" } },
-  { "code": "BR-SP", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "São Paulo" } },
-  { "code": "BR-TO", "type": { "en": "state", "fr": "État", "pt": "estado" }, "names": { "pt": "Tocantins" } }
+  {
+    "code": "BR-AC",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Acre"
+    }
+  },
+  {
+    "code": "BR-AL",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Alagoas"
+    }
+  },
+  {
+    "code": "BR-AM",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Amazonas"
+    }
+  },
+  {
+    "code": "BR-AP",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Amapá"
+    }
+  },
+  {
+    "code": "BR-BA",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Bahia"
+    }
+  },
+  {
+    "code": "BR-CE",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Ceará"
+    }
+  },
+  {
+    "code": "BR-DF",
+    "type": {
+      "en": "federal district",
+      "fr": "district fédéral",
+      "pt": "distrito federal"
+    },
+    "names": {
+      "pt": "Distrito Federal"
+    }
+  },
+  {
+    "code": "BR-ES",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Espírito Santo"
+    }
+  },
+  {
+    "code": "BR-GO",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Goiás"
+    }
+  },
+  {
+    "code": "BR-MA",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Maranhão"
+    }
+  },
+  {
+    "code": "BR-MG",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Minas Gerais"
+    }
+  },
+  {
+    "code": "BR-MS",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Mato Grosso do Sul"
+    }
+  },
+  {
+    "code": "BR-MT",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Mato Grosso"
+    }
+  },
+  {
+    "code": "BR-PA",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Pará"
+    }
+  },
+  {
+    "code": "BR-PB",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Paraíba"
+    }
+  },
+  {
+    "code": "BR-PE",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Pernambuco"
+    }
+  },
+  {
+    "code": "BR-PI",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Piauí"
+    }
+  },
+  {
+    "code": "BR-PR",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Paraná"
+    }
+  },
+  {
+    "code": "BR-RJ",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Rio de Janeiro"
+    }
+  },
+  {
+    "code": "BR-RN",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Rio Grande do Norte"
+    }
+  },
+  {
+    "code": "BR-RO",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Rondônia"
+    }
+  },
+  {
+    "code": "BR-RR",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Roraima"
+    }
+  },
+  {
+    "code": "BR-RS",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Rio Grande do Sul"
+    }
+  },
+  {
+    "code": "BR-SC",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Santa Catarina"
+    }
+  },
+  {
+    "code": "BR-SE",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Sergipe"
+    }
+  },
+  {
+    "code": "BR-SP",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "São Paulo"
+    }
+  },
+  {
+    "code": "BR-TO",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "pt": "estado"
+    },
+    "names": {
+      "pt": "Tocantins"
+    }
+  }
 ]

@@ -1,0 +1,172 @@
+[
+  {
+    "code": "MC-CL",
+    "type": {
+      "en": "quarter",
+      "fr": "quartier"
+    },
+    "names": {
+      "fr": "La Colle"
+    }
+  },
+  {
+    "code": "MC-CO",
+    "type": {
+      "en": "quarter",
+      "fr": "quartier"
+    },
+    "names": {
+      "fr": "La Condamine"
+    }
+  },
+  {
+    "code": "MC-FO",
+    "type": {
+      "en": "quarter",
+      "fr": "quartier"
+    },
+    "names": {
+      "fr": "Fontvieille"
+    }
+  },
+  {
+    "code": "MC-GA",
+    "type": {
+      "en": "quarter",
+      "fr": "quartier"
+    },
+    "names": {
+      "fr": "La Gare"
+    }
+  },
+  {
+    "code": "MC-JE",
+    "type": {
+      "en": "quarter",
+      "fr": "quartier"
+    },
+    "names": {
+      "fr": "Jardin Exotique"
+    }
+  },
+  {
+    "code": "MC-LA",
+    "type": {
+      "en": "quarter",
+      "fr": "quartier"
+    },
+    "names": {
+      "fr": "Larvotto"
+    }
+  },
+  {
+    "code": "MC-MA",
+    "type": {
+      "en": "quarter",
+      "fr": "quartier"
+    },
+    "names": {
+      "fr": "Malbousquet"
+    }
+  },
+  {
+    "code": "MC-MC",
+    "type": {
+      "en": "quarter",
+      "fr": "quartier"
+    },
+    "names": {
+      "fr": "Monte-Carlo"
+    }
+  },
+  {
+    "code": "MC-MG",
+    "type": {
+      "en": "quarter",
+      "fr": "quartier"
+    },
+    "names": {
+      "fr": "Moneghetti"
+    }
+  },
+  {
+    "code": "MC-MO",
+    "type": {
+      "en": "quarter",
+      "fr": "quartier"
+    },
+    "names": {
+      "fr": "Monaco-Ville"
+    }
+  },
+  {
+    "code": "MC-MU",
+    "type": {
+      "en": "quarter",
+      "fr": "quartier"
+    },
+    "names": {
+      "fr": "Moulins"
+    }
+  },
+  {
+    "code": "MC-PH",
+    "type": {
+      "en": "quarter",
+      "fr": "quartier"
+    },
+    "names": {
+      "fr": "Port-Hercule"
+    }
+  },
+  {
+    "code": "MC-SD",
+    "type": {
+      "en": "quarter",
+      "fr": "quartier"
+    },
+    "names": {
+      "fr": "Sainte-Dévote"
+    }
+  },
+  {
+    "code": "MC-SO",
+    "type": {
+      "en": "quarter",
+      "fr": "quartier"
+    },
+    "names": {
+      "fr": "La Source"
+    }
+  },
+  {
+    "code": "MC-SP",
+    "type": {
+      "en": "quarter",
+      "fr": "quartier"
+    },
+    "names": {
+      "fr": "Spélugues"
+    }
+  },
+  {
+    "code": "MC-SR",
+    "type": {
+      "en": "quarter",
+      "fr": "quartier"
+    },
+    "names": {
+      "fr": "Saint-Roman"
+    }
+  },
+  {
+    "code": "MC-VR",
+    "type": {
+      "en": "quarter",
+      "fr": "quartier"
+    },
+    "names": {
+      "fr": "Vallon de la Rousse"
+    }
+  }
+]

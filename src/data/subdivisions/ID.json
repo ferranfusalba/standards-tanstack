@@ -1,40 +1,490 @@
 [
-  { "code": "ID-AC", "type": "special region", "names": { "id": "Aceh" } },
-  { "code": "ID-BA", "type": "province", "names": { "id": "Bali" } },
-  { "code": "ID-BB", "type": "province", "names": { "id": "Kepulauan Bangka Belitung" } },
-  { "code": "ID-BE", "type": "province", "names": { "id": "Bengkulu" } },
-  { "code": "ID-BT", "type": "province", "names": { "id": "Banten" } },
-  { "code": "ID-GO", "type": "province", "names": { "id": "Gorontalo" } },
-  { "code": "ID-JA", "type": "province", "names": { "id": "Jambi" } },
-  { "code": "ID-JB", "type": "province", "names": { "id": "Jawa Barat" } },
-  { "code": "ID-JI", "type": "province", "names": { "id": "Jawa Timur" } },
-  { "code": "ID-JK", "type": "special capital region", "names": { "id": "DKI Jakarta" } },
-  { "code": "ID-JT", "type": "province", "names": { "id": "Jawa Tengah" } },
-  { "code": "ID-KB", "type": "province", "names": { "id": "Kalimantan Barat" } },
-  { "code": "ID-KI", "type": "province", "names": { "id": "Kalimantan Timur" } },
-  { "code": "ID-KR", "type": "province", "names": { "id": "Kepulauan Riau" } },
-  { "code": "ID-KS", "type": "province", "names": { "id": "Kalimantan Selatan" } },
-  { "code": "ID-KT", "type": "province", "names": { "id": "Kalimantan Tengah" } },
-  { "code": "ID-KU", "type": "province", "names": { "id": "Kalimantan Utara" } },
-  { "code": "ID-LA", "type": "province", "names": { "id": "Lampung" } },
-  { "code": "ID-MA", "type": "province", "names": { "id": "Maluku" } },
-  { "code": "ID-MU", "type": "province", "names": { "id": "Maluku Utara" } },
-  { "code": "ID-NB", "type": "province", "names": { "id": "Nusa Tenggara Barat" } },
-  { "code": "ID-NT", "type": "province", "names": { "id": "Nusa Tenggara Timur" } },
-  { "code": "ID-PA", "type": "province", "names": { "id": "Papua" } },
-  { "code": "ID-PB", "type": "province", "names": { "id": "Papua Barat" } },
-  { "code": "ID-PD", "type": "province", "names": { "id": "Papua Barat Daya" } },
-  { "code": "ID-PE", "type": "province", "names": { "id": "Papua Pegunungan" } },
-  { "code": "ID-PS", "type": "province", "names": { "id": "Papua Selatan" } },
-  { "code": "ID-PT", "type": "province", "names": { "id": "Papua Tengah" } },
-  { "code": "ID-RI", "type": "province", "names": { "id": "Riau" } },
-  { "code": "ID-SA", "type": "province", "names": { "id": "Sulawesi Utara" } },
-  { "code": "ID-SB", "type": "province", "names": { "id": "Sumatera Barat" } },
-  { "code": "ID-SG", "type": "province", "names": { "id": "Sulawesi Tenggara" } },
-  { "code": "ID-SN", "type": "province", "names": { "id": "Sulawesi Selatan" } },
-  { "code": "ID-SR", "type": "province", "names": { "id": "Sulawesi Barat" } },
-  { "code": "ID-SS", "type": "province", "names": { "id": "Sumatera Selatan" } },
-  { "code": "ID-ST", "type": "province", "names": { "id": "Sulawesi Tengah" } },
-  { "code": "ID-SU", "type": "province", "names": { "id": "Sumatera Utara" } },
-  { "code": "ID-YO", "type": "special region", "names": { "id": "Yogyakarta" } }
+  {
+    "code": "ID-AC",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Aceh"
+    }
+  },
+  {
+    "code": "ID-BA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Bali"
+    }
+  },
+  {
+    "code": "ID-BB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Kepulauan Bangka Belitung"
+    }
+  },
+  {
+    "code": "ID-BE",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Bengkulu"
+    }
+  },
+  {
+    "code": "ID-BT",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Banten"
+    }
+  },
+  {
+    "code": "ID-GO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Gorontalo"
+    }
+  },
+  {
+    "code": "ID-JA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Jambi"
+    }
+  },
+  {
+    "code": "ID-JB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Jawa Barat"
+    }
+  },
+  {
+    "code": "ID-JI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Jawa Timur"
+    }
+  },
+  {
+    "code": "ID-JK",
+    "type": {
+      "en": "capital district",
+      "fr": "district de la capitale",
+      "id": "daerah khusus ibukota"
+    },
+    "names": {
+      "id": "Jakarta Raya"
+    }
+  },
+  {
+    "code": "ID-JT",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Jawa Tengah"
+    }
+  },
+  {
+    "code": "ID-JW",
+    "type": {
+      "en": "geographical unit",
+      "fr": "unité géographique"
+    },
+    "names": {
+      "id": "Jawa"
+    }
+  },
+  {
+    "code": "ID-KA",
+    "type": {
+      "en": "geographical unit",
+      "fr": "unité géographique"
+    },
+    "names": {
+      "id": "Kalimantan"
+    }
+  },
+  {
+    "code": "ID-KB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Kalimantan Barat"
+    }
+  },
+  {
+    "code": "ID-KI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Kalimantan Timur"
+    }
+  },
+  {
+    "code": "ID-KR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Kepulauan Riau"
+    }
+  },
+  {
+    "code": "ID-KS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Kalimantan Selatan"
+    }
+  },
+  {
+    "code": "ID-KT",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Kalimantan Tengah"
+    }
+  },
+  {
+    "code": "ID-KU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Kalimantan Utara"
+    }
+  },
+  {
+    "code": "ID-LA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Lampung"
+    }
+  },
+  {
+    "code": "ID-MA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Maluku"
+    }
+  },
+  {
+    "code": "ID-ML",
+    "type": {
+      "en": "geographical unit",
+      "fr": "unité géographique"
+    },
+    "names": {
+      "id": "Maluku"
+    }
+  },
+  {
+    "code": "ID-MU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Maluku Utara"
+    }
+  },
+  {
+    "code": "ID-NB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Nusa Tenggara Barat"
+    }
+  },
+  {
+    "code": "ID-NT",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Nusa Tenggara Timur"
+    }
+  },
+  {
+    "code": "ID-NU",
+    "type": {
+      "en": "geographical unit",
+      "fr": "unité géographique"
+    },
+    "names": {
+      "id": "Nusa Tenggara"
+    }
+  },
+  {
+    "code": "ID-PA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Papua"
+    }
+  },
+  {
+    "code": "ID-PB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Papua Barat"
+    }
+  },
+  {
+    "code": "ID-PD",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Papua Barat Daya"
+    }
+  },
+  {
+    "code": "ID-PE",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Papua Pegunungan"
+    }
+  },
+  {
+    "code": "ID-PP",
+    "type": {
+      "en": "geographical unit",
+      "fr": "unité géographique"
+    },
+    "names": {
+      "id": "Papua"
+    }
+  },
+  {
+    "code": "ID-PS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Papua Selatan"
+    }
+  },
+  {
+    "code": "ID-PT",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Papua Tengah"
+    }
+  },
+  {
+    "code": "ID-RI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Riau"
+    }
+  },
+  {
+    "code": "ID-SA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Sulawesi Utara"
+    }
+  },
+  {
+    "code": "ID-SB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Sumatera Barat"
+    }
+  },
+  {
+    "code": "ID-SG",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Sulawesi Tenggara"
+    }
+  },
+  {
+    "code": "ID-SL",
+    "type": {
+      "en": "geographical unit",
+      "fr": "unité géographique"
+    },
+    "names": {
+      "id": "Sulawesi"
+    }
+  },
+  {
+    "code": "ID-SM",
+    "type": {
+      "en": "geographical unit",
+      "fr": "unité géographique"
+    },
+    "names": {
+      "id": "Sumatera"
+    }
+  },
+  {
+    "code": "ID-SN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Sulawesi Selatan"
+    }
+  },
+  {
+    "code": "ID-SR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Sulawesi Barat"
+    }
+  },
+  {
+    "code": "ID-SS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Sumatera Selatan"
+    }
+  },
+  {
+    "code": "ID-ST",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Sulawesi Tengah"
+    }
+  },
+  {
+    "code": "ID-SU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "id": "provinsi"
+    },
+    "names": {
+      "id": "Sumatera Utara"
+    }
+  },
+  {
+    "code": "ID-YO",
+    "type": {
+      "en": "special region",
+      "fr": "région spéciale",
+      "id": "daerah istimewa"
+    },
+    "names": {
+      "id": "Yogyakarta"
+    }
+  }
 ]

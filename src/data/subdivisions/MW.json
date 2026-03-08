@@ -1,5 +1,346 @@
 [
-  { "code": "MW-C", "type": "region", "names": { "en": "Central" } },
-  { "code": "MW-N", "type": "region", "names": { "en": "Northern" } },
-  { "code": "MW-S", "type": "region", "names": { "en": "Southern" } }
+  {
+    "code": "MW-C",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ny": "mchigawo"
+    },
+    "names": {
+      "en": "Central Region",
+      "ny": "Chapakati"
+    }
+  },
+  {
+    "code": "MW-N",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ny": "mchigawo"
+    },
+    "names": {
+      "en": "Northern Region",
+      "ny": "Chakumpoto"
+    }
+  },
+  {
+    "code": "MW-S",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ny": "mchigawo"
+    },
+    "names": {
+      "en": "Southern Region",
+      "ny": "Chakumwera"
+    }
+  },
+  {
+    "code": "MW-BA",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Balaka"
+    }
+  },
+  {
+    "code": "MW-BL",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Blantyre"
+    }
+  },
+  {
+    "code": "MW-CK",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Chikwawa"
+    }
+  },
+  {
+    "code": "MW-CR",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Chiradzulu"
+    }
+  },
+  {
+    "code": "MW-CT",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Chitipa"
+    }
+  },
+  {
+    "code": "MW-DE",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Dedza"
+    }
+  },
+  {
+    "code": "MW-DO",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Dowa"
+    }
+  },
+  {
+    "code": "MW-KR",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Karonga"
+    }
+  },
+  {
+    "code": "MW-KS",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Kasungu"
+    }
+  },
+  {
+    "code": "MW-LI",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Lilongwe"
+    }
+  },
+  {
+    "code": "MW-LK",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Likoma"
+    }
+  },
+  {
+    "code": "MW-MC",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Mchinji"
+    }
+  },
+  {
+    "code": "MW-MG",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Mangochi"
+    }
+  },
+  {
+    "code": "MW-MH",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Machinga"
+    }
+  },
+  {
+    "code": "MW-MU",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Mulanje"
+    }
+  },
+  {
+    "code": "MW-MW",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Mwanza"
+    }
+  },
+  {
+    "code": "MW-MZ",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Mzimba"
+    }
+  },
+  {
+    "code": "MW-NB",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Nkhata Bay"
+    }
+  },
+  {
+    "code": "MW-NE",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Neno"
+    }
+  },
+  {
+    "code": "MW-NI",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Ntchisi"
+    }
+  },
+  {
+    "code": "MW-NK",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Nkhotakota"
+    }
+  },
+  {
+    "code": "MW-NS",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Nsanje"
+    }
+  },
+  {
+    "code": "MW-NU",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Ntcheu"
+    }
+  },
+  {
+    "code": "MW-PH",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Phalombe"
+    }
+  },
+  {
+    "code": "MW-RU",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Rumphi"
+    }
+  },
+  {
+    "code": "MW-SA",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Salima"
+    }
+  },
+  {
+    "code": "MW-TH",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Thyolo"
+    }
+  },
+  {
+    "code": "MW-ZO",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "ny": "boma"
+    },
+    "names": {
+      "en": "Zomba"
+    }
+  }
 ]

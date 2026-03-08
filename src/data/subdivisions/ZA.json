@@ -1,11 +1,241 @@
 [
-  { "code": "ZA-EC", "type": "province", "names": { "en": "Eastern Cape" } },
-  { "code": "ZA-FS", "type": "province", "names": { "en": "Free State" } },
-  { "code": "ZA-GP", "type": "province", "names": { "en": "Gauteng" } },
-  { "code": "ZA-KZN", "type": "province", "names": { "en": "KwaZulu-Natal" } },
-  { "code": "ZA-LP", "type": "province", "names": { "en": "Limpopo" } },
-  { "code": "ZA-MP", "type": "province", "names": { "en": "Mpumalanga" } },
-  { "code": "ZA-NC", "type": "province", "names": { "en": "Northern Cape" } },
-  { "code": "ZA-NW", "type": "province", "names": { "en": "North West" } },
-  { "code": "ZA-WC", "type": "province", "names": { "en": "Western Cape" } }
+  {
+    "code": "ZA-EC",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "af": "provinsie",
+      "nr": "iProvinsi",
+      "nso": "profense",
+      "ss": "fundzeni",
+      "st": "provense",
+      "tn": "porofense",
+      "ts": "fundzankulu",
+      "ve": "vundu",
+      "xh": "phondo",
+      "zu": "fundazwe"
+    },
+    "names": {
+      "en": "Eastern Cape",
+      "af": "Oos-Kaap",
+      "nr": "iPumalanga-Kapa",
+      "nso": "Kapa Bohlabela",
+      "st": "Kapa Botjhabela",
+      "tn": "Kapa Botlhaba",
+      "ts": "Kapa-Vuxa",
+      "ve": "Kapa Vhubvaḓuvha",
+      "xh": "Mpuma-Koloni",
+      "zu": "Mpumalanga-Kapa"
+    }
+  },
+  {
+    "code": "ZA-FS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "af": "provinsie",
+      "nr": "iProvinsi",
+      "nso": "profense",
+      "ss": "fundzeni",
+      "st": "provense",
+      "tn": "porofense",
+      "ts": "fundzankulu",
+      "ve": "vundu",
+      "xh": "phondo",
+      "zu": "fundazwe"
+    },
+    "names": {
+      "en": "Free State",
+      "af": "Vrystaat",
+      "nr": "iFreyistata",
+      "nso": "Freistata",
+      "st": "Freistata",
+      "tn": "Foreisetata",
+      "ts": "Free State",
+      "ve": "Fureisitata",
+      "xh": "Freyistata",
+      "zu": "Fuleyisitata"
+    }
+  },
+  {
+    "code": "ZA-GP",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "af": "provinsie",
+      "nr": "iProvinsi",
+      "nso": "profense",
+      "ss": "fundzeni",
+      "st": "provense",
+      "tn": "porofense",
+      "ts": "fundzankulu",
+      "ve": "vundu",
+      "xh": "phondo",
+      "zu": "fundazwe"
+    },
+    "names": {
+      "en": "Gauteng",
+      "nr": "iGauteng",
+      "st": "Kgauteng",
+      "xh": "Rhawuti"
+    }
+  },
+  {
+    "code": "ZA-KZN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "af": "provinsie",
+      "nr": "iProvinsi",
+      "nso": "profense",
+      "ss": "fundzeni",
+      "st": "provense",
+      "tn": "porofense",
+      "ts": "fundzankulu",
+      "ve": "vundu",
+      "xh": "phondo",
+      "zu": "fundazwe"
+    },
+    "names": {
+      "en": "Kwazulu-Natal",
+      "af": "KwaZulu-Natal",
+      "nr": "iKwaZulu-Natal",
+      "nso": "GaZulu-Natala",
+      "st": "Hazolo-Natala",
+      "ss": "KwaZulu-Natali",
+      "tn": "KwaZulu-Natal",
+      "ts": "Kwazulu-Natal",
+      "ve": "HaZulu-Natal",
+      "xh": "KwaZulu-Natala",
+      "zu": "KwaZulu-Natali"
+    }
+  },
+  {
+    "code": "ZA-LP",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "af": "provinsie",
+      "nr": "iProvinsi",
+      "nso": "profense",
+      "ss": "fundzeni",
+      "st": "provense",
+      "tn": "porofense",
+      "ts": "fundzankulu",
+      "ve": "vundu",
+      "xh": "phondo",
+      "zu": "fundazwe"
+    },
+    "names": {
+      "en": "Limpopo",
+      "ve": "Vhembe"
+    }
+  },
+  {
+    "code": "ZA-MP",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "af": "provinsie",
+      "nr": "iProvinsi",
+      "nso": "profense",
+      "ss": "fundzeni",
+      "st": "provense",
+      "tn": "porofense",
+      "ts": "fundzankulu",
+      "ve": "vundu",
+      "xh": "phondo",
+      "zu": "fundazwe"
+    },
+    "names": {
+      "en": "Mpumalanga",
+      "nr": "iMpumalanga"
+    }
+  },
+  {
+    "code": "ZA-NC",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "af": "provinsie",
+      "nr": "iProvinsi",
+      "nso": "profense",
+      "ss": "fundzeni",
+      "st": "provense",
+      "tn": "porofense",
+      "ts": "fundzankulu",
+      "ve": "vundu",
+      "xh": "phondo",
+      "zu": "fundazwe"
+    },
+    "names": {
+      "en": "Northern Cape",
+      "af": "Noord-Kaap",
+      "nr": "iTlhagwini-Kapa",
+      "nso": "Kapa Leboya",
+      "st": "Kapa Leboya",
+      "tn": "Kapa Bokone",
+      "ts": "Kapa-N'walungu",
+      "ve": "Kapa Devhula",
+      "xh": "Mntla-Koloni",
+      "zu": "Nyakatho-Kapa"
+    }
+  },
+  {
+    "code": "ZA-NW",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "af": "provinsie",
+      "nr": "iProvinsi",
+      "nso": "profense",
+      "ss": "fundzeni",
+      "st": "provense",
+      "tn": "porofense",
+      "ts": "fundzankulu",
+      "ve": "vundu",
+      "xh": "phondo",
+      "zu": "fundazwe"
+    },
+    "names": {
+      "en": "North-West",
+      "af": "Noordwes",
+      "nr": "iTlhagwini-Tjhingalanga",
+      "nso": "Lebowa Bodikela",
+      "st": "Leboya (le) Bophirima",
+      "tn": "Bokone Bophirima",
+      "ts": "N'walungu-Vupeladyambu",
+      "xh": "Mntla-Ntshona",
+      "zu": "Nyakatho-Ntshonalanga"
+    }
+  },
+  {
+    "code": "ZA-WC",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "af": "provinsie",
+      "nr": "iProvinsi",
+      "nso": "profense",
+      "ss": "fundzeni",
+      "st": "provense",
+      "tn": "porofense",
+      "ts": "fundzankulu",
+      "ve": "vundu",
+      "xh": "phondo",
+      "zu": "fundazwe"
+    },
+    "names": {
+      "en": "Western Cape",
+      "af": "Wes-Kaap",
+      "nr": "iTjhingalanga-Kapa",
+      "nso": "Kapa Bodikela",
+      "st": "Kapa Bophirimela",
+      "tn": "Kapa Bophirima",
+      "ts": "Kapa-Vupeladyambu",
+      "ve": "Kapa Vhukovhela",
+      "xh": "Ntshona-Koloni",
+      "zu": "Ntshonalanga-Kapa"
+    }
+  }
 ]

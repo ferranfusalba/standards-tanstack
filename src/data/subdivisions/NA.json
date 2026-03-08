@@ -1,16 +1,142 @@
 [
-  { "code": "NA-CA", "type": "region", "names": { "en": "Zambezi" } },
-  { "code": "NA-ER", "type": "region", "names": { "en": "Erongo" } },
-  { "code": "NA-HA", "type": "region", "names": { "en": "Hardap" } },
-  { "code": "NA-KA", "type": "region", "names": { "en": "Karas" } },
-  { "code": "NA-KE", "type": "region", "names": { "en": "Kavango East" } },
-  { "code": "NA-KH", "type": "region", "names": { "en": "Khomas" } },
-  { "code": "NA-KU", "type": "region", "names": { "en": "Kunene" } },
-  { "code": "NA-KW", "type": "region", "names": { "en": "Kavango West" } },
-  { "code": "NA-OD", "type": "region", "names": { "en": "Otjozondjupa" } },
-  { "code": "NA-OH", "type": "region", "names": { "en": "Omaheke" } },
-  { "code": "NA-ON", "type": "region", "names": { "en": "Oshana" } },
-  { "code": "NA-OS", "type": "region", "names": { "en": "Omusati" } },
-  { "code": "NA-OT", "type": "region", "names": { "en": "Oshikoto" } },
-  { "code": "NA-OW", "type": "region", "names": { "en": "Ohangwena" } }
+  {
+    "code": "NA-CA",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Zambezi"
+    }
+  },
+  {
+    "code": "NA-ER",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Erongo"
+    }
+  },
+  {
+    "code": "NA-HA",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Hardap"
+    }
+  },
+  {
+    "code": "NA-KA",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "//Karas"
+    }
+  },
+  {
+    "code": "NA-KE",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Kavango East"
+    }
+  },
+  {
+    "code": "NA-KH",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Khomas"
+    }
+  },
+  {
+    "code": "NA-KU",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Kunene"
+    }
+  },
+  {
+    "code": "NA-KW",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Kavango West"
+    }
+  },
+  {
+    "code": "NA-OD",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Otjozondjupa"
+    }
+  },
+  {
+    "code": "NA-OH",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Omaheke"
+    }
+  },
+  {
+    "code": "NA-ON",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Oshana"
+    }
+  },
+  {
+    "code": "NA-OS",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Omusati"
+    }
+  },
+  {
+    "code": "NA-OT",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Oshikoto"
+    }
+  },
+  {
+    "code": "NA-OW",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Ohangwena"
+    }
+  }
 ]

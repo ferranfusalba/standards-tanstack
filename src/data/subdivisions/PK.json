@@ -1,9 +1,85 @@
 [
-  { "code": "PK-BA", "type": "province", "names": { "ur": "بلوچستان", "en": "Balochistan" } },
-  { "code": "PK-GB", "type": "area", "names": { "ur": "گلگت-بلتستان", "en": "Gilgit-Baltistan" } },
-  { "code": "PK-IS", "type": "federal capital territory", "names": { "ur": "اسلام آباد", "en": "Islamabad" } },
-  { "code": "PK-JK", "type": "territory", "names": { "ur": "آزاد جموں و کشمیر", "en": "Azad Jammu and Kashmir" } },
-  { "code": "PK-KP", "type": "province", "names": { "ur": "خیبر پختونخوا", "en": "Khyber Pakhtunkhwa" } },
-  { "code": "PK-PB", "type": "province", "names": { "ur": "پنجاب", "en": "Punjab" } },
-  { "code": "PK-SD", "type": "province", "names": { "ur": "سندھ", "en": "Sindh" } }
+  {
+    "code": "PK-BA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ur": "sūbah"
+    },
+    "names": {
+      "en": "Balochistan",
+      "ur": "Balōchistān"
+    }
+  },
+  {
+    "code": "PK-GB",
+    "type": {
+      "en": "Pakistan administered area",
+      "fr": "zone administrée par le Pakistan",
+      "ur": "Pakistan kay zair-i-intezam ilaqay"
+    },
+    "names": {
+      "en": "Gilgit-Baltistan",
+      "ur": "Gilgit-Baltistān"
+    }
+  },
+  {
+    "code": "PK-IS",
+    "type": {
+      "en": "federal capital territory",
+      "fr": "territoire de la capitale fédérale",
+      "ur": "wafāqī dār al ḩikūmat 'alāqah"
+    },
+    "names": {
+      "en": "Islamabad",
+      "ur": "Islāmābād"
+    }
+  },
+  {
+    "code": "PK-JK",
+    "type": {
+      "en": "Pakistan administered area",
+      "fr": "zone administrée par le Pakistan",
+      "ur": "Pakistan kay zair-i-intezam ilaqay"
+    },
+    "names": {
+      "en": "Azad Jammu and Kashmir",
+      "ur": "Āzād Jammūñ o Kashmīr"
+    }
+  },
+  {
+    "code": "PK-KP",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ur": "sūbah"
+    },
+    "names": {
+      "en": "Khyber Pakhtunkhwa",
+      "ur": "Khaībar Pakhtūnkhwā"
+    }
+  },
+  {
+    "code": "PK-PB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ur": "sūbah"
+    },
+    "names": {
+      "en": "Punjab",
+      "ur": "Panjāb"
+    }
+  },
+  {
+    "code": "PK-SD",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ur": "sūbah"
+    },
+    "names": {
+      "en": "Sindh"
+    }
+  }
 ]

@@ -1,12 +1,102 @@
 [
-  { "code": "ZW-BU", "type": "province", "names": { "en": "Bulawayo" } },
-  { "code": "ZW-HA", "type": "province", "names": { "en": "Harare" } },
-  { "code": "ZW-MA", "type": "province", "names": { "en": "Manicaland" } },
-  { "code": "ZW-MC", "type": "province", "names": { "en": "Mashonaland Central" } },
-  { "code": "ZW-ME", "type": "province", "names": { "en": "Mashonaland East" } },
-  { "code": "ZW-MI", "type": "province", "names": { "en": "Midlands" } },
-  { "code": "ZW-MN", "type": "province", "names": { "en": "Matabeleland North" } },
-  { "code": "ZW-MS", "type": "province", "names": { "en": "Matabeleland South" } },
-  { "code": "ZW-MV", "type": "province", "names": { "en": "Masvingo" } },
-  { "code": "ZW-MW", "type": "province", "names": { "en": "Mashonaland West" } }
+  {
+    "code": "ZW-BU",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Bulawayo"
+    }
+  },
+  {
+    "code": "ZW-HA",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Harare"
+    }
+  },
+  {
+    "code": "ZW-MA",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Manicaland"
+    }
+  },
+  {
+    "code": "ZW-MC",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Mashonaland Central"
+    }
+  },
+  {
+    "code": "ZW-ME",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Mashonaland East"
+    }
+  },
+  {
+    "code": "ZW-MW",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Mashonaland West"
+    }
+  },
+  {
+    "code": "ZW-MV",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Masvingo"
+    }
+  },
+  {
+    "code": "ZW-MN",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Matabeleland North"
+    }
+  },
+  {
+    "code": "ZW-MS",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Matabeleland South"
+    }
+  },
+  {
+    "code": "ZW-MI",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Midlands"
+    }
+  }
 ]

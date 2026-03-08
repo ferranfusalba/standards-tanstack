@@ -1,20 +1,218 @@
 [
-  { "code": "SD-DC", "type": "state", "names": { "ar": "وسط دارفور" } },
-  { "code": "SD-DE", "type": "state", "names": { "ar": "شرق دارفور" } },
-  { "code": "SD-DN", "type": "state", "names": { "ar": "شمال دارفور" } },
-  { "code": "SD-DS", "type": "state", "names": { "ar": "جنوب دارفور" } },
-  { "code": "SD-DW", "type": "state", "names": { "ar": "غرب دارفور" } },
-  { "code": "SD-GD", "type": "state", "names": { "ar": "القضارف" } },
-  { "code": "SD-GK", "type": "state", "names": { "ar": "غرب كردفان" } },
-  { "code": "SD-GZ", "type": "state", "names": { "ar": "الجزيرة" } },
-  { "code": "SD-KA", "type": "state", "names": { "ar": "كسلا" } },
-  { "code": "SD-KH", "type": "state", "names": { "ar": "الخرطوم" } },
-  { "code": "SD-KN", "type": "state", "names": { "ar": "شمال كردفان" } },
-  { "code": "SD-KS", "type": "state", "names": { "ar": "جنوب كردفان" } },
-  { "code": "SD-NB", "type": "state", "names": { "ar": "النيل الأزرق" } },
-  { "code": "SD-NO", "type": "state", "names": { "ar": "الشمالية" } },
-  { "code": "SD-NR", "type": "state", "names": { "ar": "نهر النيل" } },
-  { "code": "SD-NW", "type": "state", "names": { "ar": "النيل الأبيض" } },
-  { "code": "SD-RS", "type": "state", "names": { "ar": "البحر الأحمر" } },
-  { "code": "SD-SI", "type": "state", "names": { "ar": "سنار" } }
+  {
+    "code": "SD-DC",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "Central Darfur",
+      "ar": "Wasaţ Dārfūr"
+    }
+  },
+  {
+    "code": "SD-DE",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "East Darfur",
+      "ar": "Sharq Dārfūr"
+    }
+  },
+  {
+    "code": "SD-DN",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "North Darfur",
+      "ar": "Shamāl Dārfūr"
+    }
+  },
+  {
+    "code": "SD-DS",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "South Darfur",
+      "ar": "Janūb Dārfūr"
+    }
+  },
+  {
+    "code": "SD-DW",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "West Darfur",
+      "ar": "Gharb Dārfūr"
+    }
+  },
+  {
+    "code": "SD-GD",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "Gedaref",
+      "ar": "Al Qaḑārif"
+    }
+  },
+  {
+    "code": "SD-GK",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "West Kordofan",
+      "ar": "Gharb Kurdufān"
+    }
+  },
+  {
+    "code": "SD-GZ",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "Gezira",
+      "ar": "Al Jazīrah"
+    }
+  },
+  {
+    "code": "SD-KA",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "Kassala",
+      "ar": "Kassalā"
+    }
+  },
+  {
+    "code": "SD-KH",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "Khartoum",
+      "ar": "Al Kharţūm"
+    }
+  },
+  {
+    "code": "SD-KN",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "North Kordofan",
+      "ar": "Shamāl Kurdufān"
+    }
+  },
+  {
+    "code": "SD-KS",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "South Kordofan",
+      "ar": "Janūb Kurdufān"
+    }
+  },
+  {
+    "code": "SD-NB",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "Blue Nile",
+      "ar": "An Nīl al Azraq"
+    }
+  },
+  {
+    "code": "SD-NO",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "Northern",
+      "ar": "Ash Shamālīyah"
+    }
+  },
+  {
+    "code": "SD-NR",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "River Nile",
+      "ar": "Nahr an Nīl"
+    }
+  },
+  {
+    "code": "SD-NW",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "White Nile",
+      "ar": "An Nīl al Abyaḑ"
+    }
+  },
+  {
+    "code": "SD-RS",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "Red Sea",
+      "ar": "Al Baḩr al Aḩmar"
+    }
+  },
+  {
+    "code": "SD-SI",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ar": "wilayah"
+    },
+    "names": {
+      "en": "Sennar",
+      "ar": "Sinnār"
+    }
+  }
 ]

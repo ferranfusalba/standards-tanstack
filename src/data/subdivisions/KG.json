@@ -1,11 +1,110 @@
 [
-  { "code": "KG-B", "type": "region", "names": { "ky": "Batken" } },
-  { "code": "KG-C", "type": "region", "names": { "ky": "Chuy" } },
-  { "code": "KG-GB", "type": "city", "names": { "ky": "Bishkek" } },
-  { "code": "KG-GO", "type": "city", "names": { "ky": "Osh" } },
-  { "code": "KG-J", "type": "region", "names": { "ky": "Jalal-Abad" } },
-  { "code": "KG-N", "type": "region", "names": { "ky": "Naryn" } },
-  { "code": "KG-O", "type": "region", "names": { "ky": "Osh" } },
-  { "code": "KG-T", "type": "region", "names": { "ky": "Talas" } },
-  { "code": "KG-Y", "type": "region", "names": { "ky": "Issyk-Kul" } }
+  {
+    "code": "KG-B",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ky": "oblus",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ky": "Batken"
+    }
+  },
+  {
+    "code": "KG-C",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ky": "oblus",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ky": "Chüy"
+    }
+  },
+  {
+    "code": "KG-GB",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "ky": "shaar",
+      "ru": "gorod"
+    },
+    "names": {
+      "ky": "Bishkek Shaary"
+    }
+  },
+  {
+    "code": "KG-GO",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "ky": "shaar",
+      "ru": "gorod"
+    },
+    "names": {
+      "ky": "Osh Shaary"
+    }
+  },
+  {
+    "code": "KG-J",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ky": "oblus",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ky": "Jalal-Abad"
+    }
+  },
+  {
+    "code": "KG-N",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ky": "oblus",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ky": "Naryn"
+    }
+  },
+  {
+    "code": "KG-O",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ky": "oblus",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ky": "Osh"
+    }
+  },
+  {
+    "code": "KG-T",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ky": "oblus",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ky": "Talas"
+    }
+  },
+  {
+    "code": "KG-Y",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ky": "oblus",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ky": "Ysyk-Köl"
+    }
+  }
 ]

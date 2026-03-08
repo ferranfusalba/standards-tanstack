@@ -1,16 +1,156 @@
 [
-  { "code": "SY-DI", "type": "governorate", "names": { "ar": "دمشق" } },
-  { "code": "SY-DR", "type": "governorate", "names": { "ar": "درعا" } },
-  { "code": "SY-DY", "type": "governorate", "names": { "ar": "دير الزور" } },
-  { "code": "SY-HA", "type": "governorate", "names": { "ar": "الحسكة" } },
-  { "code": "SY-HI", "type": "governorate", "names": { "ar": "حمص" } },
-  { "code": "SY-HL", "type": "governorate", "names": { "ar": "حلب" } },
-  { "code": "SY-HM", "type": "governorate", "names": { "ar": "حماة" } },
-  { "code": "SY-ID", "type": "governorate", "names": { "ar": "إدلب" } },
-  { "code": "SY-LA", "type": "governorate", "names": { "ar": "اللاذقية" } },
-  { "code": "SY-QU", "type": "governorate", "names": { "ar": "القنيطرة" } },
-  { "code": "SY-RA", "type": "governorate", "names": { "ar": "الرقة" } },
-  { "code": "SY-RD", "type": "governorate", "names": { "ar": "ريف دمشق" } },
-  { "code": "SY-SU", "type": "governorate", "names": { "ar": "السويداء" } },
-  { "code": "SY-TA", "type": "governorate", "names": { "ar": "طرطوس" } }
+  {
+    "code": "SY-DI",
+    "type": {
+      "en": "province",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Dimashq"
+    }
+  },
+  {
+    "code": "SY-DR",
+    "type": {
+      "en": "province",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Dar'ā"
+    }
+  },
+  {
+    "code": "SY-DY",
+    "type": {
+      "en": "province",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Dayr az Zawr"
+    }
+  },
+  {
+    "code": "SY-HA",
+    "type": {
+      "en": "province",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Ḩasakah"
+    }
+  },
+  {
+    "code": "SY-HI",
+    "type": {
+      "en": "province",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Ḩimş"
+    }
+  },
+  {
+    "code": "SY-HL",
+    "type": {
+      "en": "province",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Ḩalab"
+    }
+  },
+  {
+    "code": "SY-HM",
+    "type": {
+      "en": "province",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Ḩamāh"
+    }
+  },
+  {
+    "code": "SY-ID",
+    "type": {
+      "en": "province",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Idlib"
+    }
+  },
+  {
+    "code": "SY-LA",
+    "type": {
+      "en": "province",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Lādhiqīyah"
+    }
+  },
+  {
+    "code": "SY-QU",
+    "type": {
+      "en": "province",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Qunayţirah"
+    }
+  },
+  {
+    "code": "SY-RA",
+    "type": {
+      "en": "province",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Ar Raqqah"
+    }
+  },
+  {
+    "code": "SY-RD",
+    "type": {
+      "en": "province",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Rīf Dimashq"
+    }
+  },
+  {
+    "code": "SY-SU",
+    "type": {
+      "en": "province",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "As Suwaydā'"
+    }
+  },
+  {
+    "code": "SY-TA",
+    "type": {
+      "en": "province",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Ţarţūs"
+    }
+  }
 ]

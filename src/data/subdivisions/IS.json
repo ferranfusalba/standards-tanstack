@@ -1,58 +1,794 @@
 [
   {
     "code": "IS-1",
-    "type": "region",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "is": "landsvæði"
+    },
     "names": {
       "is": "Höfuðborgarsvæði"
     }
   },
   {
     "code": "IS-2",
-    "type": "region",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "is": "landsvæði"
+    },
     "names": {
       "is": "Suðurnes"
     }
   },
   {
     "code": "IS-3",
-    "type": "region",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "is": "landsvæði"
+    },
     "names": {
       "is": "Vesturland"
     }
   },
   {
     "code": "IS-4",
-    "type": "region",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "is": "landsvæði"
+    },
     "names": {
       "is": "Vestfirðir"
     }
   },
   {
     "code": "IS-5",
-    "type": "region",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "is": "landsvæði"
+    },
     "names": {
       "is": "Norðurland vestra"
     }
   },
   {
     "code": "IS-6",
-    "type": "region",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "is": "landsvæði"
+    },
     "names": {
       "is": "Norðurland eystra"
     }
   },
   {
     "code": "IS-7",
-    "type": "region",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "is": "landsvæði"
+    },
     "names": {
       "is": "Austurland"
     }
   },
   {
     "code": "IS-8",
-    "type": "region",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "is": "landsvæði"
+    },
     "names": {
       "is": "Suðurland"
+    }
+  },
+  {
+    "code": "IS-AKN",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Akraneskaupstaður"
+    }
+  },
+  {
+    "code": "IS-AKU",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Akureyrarbær"
+    }
+  },
+  {
+    "code": "IS-ARN",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Árneshreppur"
+    }
+  },
+  {
+    "code": "IS-ASA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Ásahreppur"
+    }
+  },
+  {
+    "code": "IS-BLA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Bláskógabyggð"
+    }
+  },
+  {
+    "code": "IS-BOG",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Borgarbyggð"
+    }
+  },
+  {
+    "code": "IS-BOL",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Bolungarvíkurkaupstaður"
+    }
+  },
+  {
+    "code": "IS-DAB",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Dalabyggð"
+    }
+  },
+  {
+    "code": "IS-DAV",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Dalvíkurbyggð"
+    }
+  },
+  {
+    "code": "IS-EOM",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Eyja- og Miklaholtshreppur"
+    }
+  },
+  {
+    "code": "IS-EYF",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Eyjafjarðarsveit"
+    }
+  },
+  {
+    "code": "IS-FJD",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Fjarðabyggð"
+    }
+  },
+  {
+    "code": "IS-FJL",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Fjallabyggð"
+    }
+  },
+  {
+    "code": "IS-FLA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Flóahreppur"
+    }
+  },
+  {
+    "code": "IS-FLR",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Fljótsdalshreppur"
+    }
+  },
+  {
+    "code": "IS-GAR",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Garðabær"
+    }
+  },
+  {
+    "code": "IS-GOG",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Grímsnes- og Grafningshreppur"
+    }
+  },
+  {
+    "code": "IS-GRN",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Grindavíkurbær"
+    }
+  },
+  {
+    "code": "IS-GRU",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Grundarfjarðarbær"
+    }
+  },
+  {
+    "code": "IS-GRY",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Grýtubakkahreppur"
+    }
+  },
+  {
+    "code": "IS-HAF",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Hafnarfjarðarkaupstaður"
+    }
+  },
+  {
+    "code": "IS-HRG",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Hörgársveit"
+    }
+  },
+  {
+    "code": "IS-HRU",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Hrunamannahreppur"
+    }
+  },
+  {
+    "code": "IS-HUG",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Húnabyggð"
+    }
+  },
+  {
+    "code": "IS-HUV",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Húnaþing vestra"
+    }
+  },
+  {
+    "code": "IS-HVA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Hvalfjarðarsveit"
+    }
+  },
+  {
+    "code": "IS-HVE",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Hveragerðisbær"
+    }
+  },
+  {
+    "code": "IS-ISA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Ísafjarðarbær"
+    }
+  },
+  {
+    "code": "IS-KAL",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Kaldrananeshreppur"
+    }
+  },
+  {
+    "code": "IS-KJO",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Kjósarhreppur"
+    }
+  },
+  {
+    "code": "IS-KOP",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Kópavogsbær"
+    }
+  },
+  {
+    "code": "IS-LAN",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Langanesbyggð"
+    }
+  },
+  {
+    "code": "IS-MOS",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Mosfellsbær"
+    }
+  },
+  {
+    "code": "IS-MUL",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Múlaþing"
+    }
+  },
+  {
+    "code": "IS-MYR",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Mýrdalshreppur"
+    }
+  },
+  {
+    "code": "IS-NOR",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Norðurþing"
+    }
+  },
+  {
+    "code": "IS-RGE",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Rangárþing eystra"
+    }
+  },
+  {
+    "code": "IS-RGY",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Rangárþing ytra"
+    }
+  },
+  {
+    "code": "IS-RHH",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Reykhólahreppur"
+    }
+  },
+  {
+    "code": "IS-RKN",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Reykjanesbær"
+    }
+  },
+  {
+    "code": "IS-RKV",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Reykjavíkurborg"
+    }
+  },
+  {
+    "code": "IS-SBT",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Svalbarðsstrandarhreppur"
+    }
+  },
+  {
+    "code": "IS-SDN",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Suðurnesjabær"
+    }
+  },
+  {
+    "code": "IS-SDV",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Súðavíkurhreppur"
+    }
+  },
+  {
+    "code": "IS-SEL",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Seltjarnarnesbær"
+    }
+  },
+  {
+    "code": "IS-SFA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Sveitarfélagið Árborg"
+    }
+  },
+  {
+    "code": "IS-SHF",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Sveitarfélagið Hornafjörður"
+    }
+  },
+  {
+    "code": "IS-SKF",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Skaftárhreppur"
+    }
+  },
+  {
+    "code": "IS-SKG",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Skagabyggð"
+    }
+  },
+  {
+    "code": "IS-SKO",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Skorradalshreppur"
+    }
+  },
+  {
+    "code": "IS-SKR",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Skagafjörður"
+    }
+  },
+  {
+    "code": "IS-SNF",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Snæfellsbær"
+    }
+  },
+  {
+    "code": "IS-SOG",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Skeiða- og Gnúpverjahreppur"
+    }
+  },
+  {
+    "code": "IS-SOL",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Sveitarfélagið Ölfus"
+    }
+  },
+  {
+    "code": "IS-SSS",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Sveitarfélagið Skagaströnd"
+    }
+  },
+  {
+    "code": "IS-STR",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Strandabyggð"
+    }
+  },
+  {
+    "code": "IS-STY",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Stykkishólmsbær"
+    }
+  },
+  {
+    "code": "IS-SVG",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Sveitarfélagið Vogar"
+    }
+  },
+  {
+    "code": "IS-TAL",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Tálknafjarðarhreppur"
+    }
+  },
+  {
+    "code": "IS-THG",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Þingeyjarsveit"
+    }
+  },
+  {
+    "code": "IS-TJO",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Tjörneshreppur"
+    }
+  },
+  {
+    "code": "IS-VEM",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Vestmannaeyjabær"
+    }
+  },
+  {
+    "code": "IS-VER",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Vesturbyggð"
+    }
+  },
+  {
+    "code": "IS-VOP",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité",
+      "is": "sveitarfélagið"
+    },
+    "names": {
+      "is": "Vopnafjarðarhreppur"
     }
   }
 ]

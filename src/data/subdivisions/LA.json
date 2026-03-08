@@ -1,20 +1,200 @@
 [
-  { "code": "LA-AT", "type": "province", "names": { "lo": "ອັດຕະປື" } },
-  { "code": "LA-BK", "type": "province", "names": { "lo": "ບໍ່ແກ້ວ" } },
-  { "code": "LA-BL", "type": "province", "names": { "lo": "ບໍລິຄຳໄຊ" } },
-  { "code": "LA-CH", "type": "province", "names": { "lo": "ຈຳປາສັກ" } },
-  { "code": "LA-HO", "type": "province", "names": { "lo": "ຫົວພັນ" } },
-  { "code": "LA-KH", "type": "province", "names": { "lo": "ຄຳມ່ວນ" } },
-  { "code": "LA-LM", "type": "province", "names": { "lo": "ຫລວງນ້ຳທາ" } },
-  { "code": "LA-LP", "type": "province", "names": { "lo": "ຫລວງພະບາງ" } },
-  { "code": "LA-OU", "type": "province", "names": { "lo": "ອຸດົມໄຊ" } },
-  { "code": "LA-PH", "type": "province", "names": { "lo": "ຜົ້ງສາລີ" } },
-  { "code": "LA-SL", "type": "province", "names": { "lo": "ສາລະວັນ" } },
-  { "code": "LA-SV", "type": "province", "names": { "lo": "ສະຫວັນນະເຂດ" } },
-  { "code": "LA-VI", "type": "province", "names": { "lo": "ວຽງຈັນ" } },
-  { "code": "LA-VT", "type": "prefecture", "names": { "lo": "ນະຄອນຫລວງວຽງຈັນ" } },
-  { "code": "LA-XA", "type": "province", "names": { "lo": "ໄຊຍະບູລີ" } },
-  { "code": "LA-XE", "type": "province", "names": { "lo": "ເຊກອງ" } },
-  { "code": "LA-XI", "type": "province", "names": { "lo": "ຊຽງຂວາງ" } },
-  { "code": "LA-XS", "type": "province", "names": { "lo": "ໄຊສົມບູນ" } }
+  {
+    "code": "LA-AT",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "lo": "khouèng"
+    },
+    "names": {
+      "lo": "ອັດຕະປື"
+    }
+  },
+  {
+    "code": "LA-BK",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "lo": "khouèng"
+    },
+    "names": {
+      "lo": "ບໍ່ແກ້ວ"
+    }
+  },
+  {
+    "code": "LA-BL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "lo": "khouèng"
+    },
+    "names": {
+      "lo": "ບໍລິຄຳໄຊ"
+    }
+  },
+  {
+    "code": "LA-CH",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "lo": "khouèng"
+    },
+    "names": {
+      "lo": "ຈຳປາສັກ"
+    }
+  },
+  {
+    "code": "LA-HO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "lo": "khouèng"
+    },
+    "names": {
+      "lo": "ຫົວພັນ"
+    }
+  },
+  {
+    "code": "LA-KH",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "lo": "khouèng"
+    },
+    "names": {
+      "lo": "ຄຳມ່ວນ"
+    }
+  },
+  {
+    "code": "LA-LM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "lo": "khouèng"
+    },
+    "names": {
+      "lo": "ຫລວງນ້ຳທາ"
+    }
+  },
+  {
+    "code": "LA-LP",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "lo": "khouèng"
+    },
+    "names": {
+      "lo": "ຫລວງພະບາງ"
+    }
+  },
+  {
+    "code": "LA-OU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "lo": "khouèng"
+    },
+    "names": {
+      "lo": "ອຸດົມໄຊ"
+    }
+  },
+  {
+    "code": "LA-PH",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "lo": "khouèng"
+    },
+    "names": {
+      "lo": "ຜົ້ງສາລີ"
+    }
+  },
+  {
+    "code": "LA-SL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "lo": "khouèng"
+    },
+    "names": {
+      "lo": "ສາລະວັນ"
+    }
+  },
+  {
+    "code": "LA-SV",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "lo": "khouèng"
+    },
+    "names": {
+      "lo": "ສະຫວັນນະເຂດ"
+    }
+  },
+  {
+    "code": "LA-VI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "lo": "khouèng"
+    },
+    "names": {
+      "lo": "ວຽງຈັນ"
+    }
+  },
+  {
+    "code": "LA-VT",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture",
+      "lo": "kampèng nakhon"
+    },
+    "names": {
+      "lo": "ນະຄອນຫລວງວຽງຈັນ"
+    }
+  },
+  {
+    "code": "LA-XA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "lo": "khouèng"
+    },
+    "names": {
+      "lo": "ໄຊຍະບູລີ"
+    }
+  },
+  {
+    "code": "LA-XE",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "lo": "khouèng"
+    },
+    "names": {
+      "lo": "ເຊກອງ"
+    }
+  },
+  {
+    "code": "LA-XI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "lo": "khouèng"
+    },
+    "names": {
+      "lo": "ຊຽງຂວາງ"
+    }
+  },
+  {
+    "code": "LA-XS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "lo": "khouèng"
+    },
+    "names": {
+      "lo": "ໄຊສົມບູນ"
+    }
+  }
 ]

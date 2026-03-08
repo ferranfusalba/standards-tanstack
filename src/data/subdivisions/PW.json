@@ -1,18 +1,162 @@
 [
-  { "code": "PW-002", "type": "state", "names": { "en": "Aimeliik" } },
-  { "code": "PW-004", "type": "state", "names": { "en": "Airai" } },
-  { "code": "PW-010", "type": "state", "names": { "en": "Angaur" } },
-  { "code": "PW-050", "type": "state", "names": { "en": "Hatohobei" } },
-  { "code": "PW-100", "type": "state", "names": { "en": "Kayangel" } },
-  { "code": "PW-150", "type": "state", "names": { "en": "Koror" } },
-  { "code": "PW-212", "type": "state", "names": { "en": "Melekeok" } },
-  { "code": "PW-214", "type": "state", "names": { "en": "Ngaraard" } },
-  { "code": "PW-218", "type": "state", "names": { "en": "Ngarchelong" } },
-  { "code": "PW-222", "type": "state", "names": { "en": "Ngardmau" } },
-  { "code": "PW-224", "type": "state", "names": { "en": "Ngatpang" } },
-  { "code": "PW-226", "type": "state", "names": { "en": "Ngchesar" } },
-  { "code": "PW-227", "type": "state", "names": { "en": "Ngeremlengui" } },
-  { "code": "PW-228", "type": "state", "names": { "en": "Ngiwal" } },
-  { "code": "PW-350", "type": "state", "names": { "en": "Peleliu" } },
-  { "code": "PW-370", "type": "state", "names": { "en": "Sonsorol" } }
+  {
+    "code": "PW-002",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Aimeliik"
+    }
+  },
+  {
+    "code": "PW-004",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Airai"
+    }
+  },
+  {
+    "code": "PW-010",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Angaur"
+    }
+  },
+  {
+    "code": "PW-050",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Hatohobei"
+    }
+  },
+  {
+    "code": "PW-100",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Kayangel"
+    }
+  },
+  {
+    "code": "PW-150",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Koror"
+    }
+  },
+  {
+    "code": "PW-212",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Melekeok"
+    }
+  },
+  {
+    "code": "PW-214",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Ngaraard"
+    }
+  },
+  {
+    "code": "PW-218",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Ngarchelong"
+    }
+  },
+  {
+    "code": "PW-222",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Ngardmau"
+    }
+  },
+  {
+    "code": "PW-224",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Ngatpang"
+    }
+  },
+  {
+    "code": "PW-226",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Ngchesar"
+    }
+  },
+  {
+    "code": "PW-227",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Ngeremlengui"
+    }
+  },
+  {
+    "code": "PW-228",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Ngiwal"
+    }
+  },
+  {
+    "code": "PW-350",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Peleliu"
+    }
+  },
+  {
+    "code": "PW-370",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Sonsorol"
+    }
+  }
 ]

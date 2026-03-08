@@ -1,16 +1,142 @@
 [
-  { "code": "SN-DB", "type": "region", "names": { "fr": "Diourbel" } },
-  { "code": "SN-DK", "type": "region", "names": { "fr": "Dakar" } },
-  { "code": "SN-FK", "type": "region", "names": { "fr": "Fatick" } },
-  { "code": "SN-KA", "type": "region", "names": { "fr": "Kaffrine" } },
-  { "code": "SN-KD", "type": "region", "names": { "fr": "Kolda" } },
-  { "code": "SN-KE", "type": "region", "names": { "fr": "Kédougou" } },
-  { "code": "SN-KL", "type": "region", "names": { "fr": "Kaolack" } },
-  { "code": "SN-LG", "type": "region", "names": { "fr": "Louga" } },
-  { "code": "SN-MT", "type": "region", "names": { "fr": "Matam" } },
-  { "code": "SN-SE", "type": "region", "names": { "fr": "Sédhiou" } },
-  { "code": "SN-SL", "type": "region", "names": { "fr": "Saint-Louis" } },
-  { "code": "SN-TC", "type": "region", "names": { "fr": "Tambacounda" } },
-  { "code": "SN-TH", "type": "region", "names": { "fr": "Thiès" } },
-  { "code": "SN-ZG", "type": "region", "names": { "fr": "Ziguinchor" } }
+  {
+    "code": "SN-DB",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Diourbel"
+    }
+  },
+  {
+    "code": "SN-DK",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Dakar"
+    }
+  },
+  {
+    "code": "SN-FK",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Fatick"
+    }
+  },
+  {
+    "code": "SN-KA",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Kaffrine"
+    }
+  },
+  {
+    "code": "SN-KD",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Kolda"
+    }
+  },
+  {
+    "code": "SN-KE",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Kédougou"
+    }
+  },
+  {
+    "code": "SN-KL",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Kaolack"
+    }
+  },
+  {
+    "code": "SN-LG",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Louga"
+    }
+  },
+  {
+    "code": "SN-MT",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Matam"
+    }
+  },
+  {
+    "code": "SN-SE",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Sédhiou"
+    }
+  },
+  {
+    "code": "SN-SL",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Saint-Louis"
+    }
+  },
+  {
+    "code": "SN-TC",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Tambacounda"
+    }
+  },
+  {
+    "code": "SN-TH",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Thiès"
+    }
+  },
+  {
+    "code": "SN-ZG",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Ziguinchor"
+    }
+  }
 ]

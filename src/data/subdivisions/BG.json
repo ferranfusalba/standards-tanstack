@@ -1,30 +1,310 @@
 [
-  { "code": "BG-01", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Blagoevgrad" } },
-  { "code": "BG-02", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Burgas" } },
-  { "code": "BG-03", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Varna" } },
-  { "code": "BG-04", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Veliko Tarnovo" } },
-  { "code": "BG-05", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Vidin" } },
-  { "code": "BG-06", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Vratsa" } },
-  { "code": "BG-07", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Gabrovo" } },
-  { "code": "BG-08", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Dobrich" } },
-  { "code": "BG-09", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Kardzhali" } },
-  { "code": "BG-10", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Kyustendil" } },
-  { "code": "BG-11", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Lovech" } },
-  { "code": "BG-12", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Montana" } },
-  { "code": "BG-13", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Pazardzhik" } },
-  { "code": "BG-14", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Pernik" } },
-  { "code": "BG-15", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Pleven" } },
-  { "code": "BG-16", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Plovdiv" } },
-  { "code": "BG-17", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Razgrad" } },
-  { "code": "BG-18", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Ruse" } },
-  { "code": "BG-19", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Silistra" } },
-  { "code": "BG-20", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Sliven" } },
-  { "code": "BG-21", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Smolyan" } },
-  { "code": "BG-22", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Sofia (stolitsa)" } },
-  { "code": "BG-23", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Sofia" } },
-  { "code": "BG-24", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Stara Zagora" } },
-  { "code": "BG-25", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Targovishte" } },
-  { "code": "BG-26", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Haskovo" } },
-  { "code": "BG-27", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Shumen" } },
-  { "code": "BG-28", "type": { "en": "district", "fr": "district", "bg": "oblast" }, "names": { "bg": "Yambol" } }
+  {
+    "code": "BG-01",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Blagoevgrad"
+    }
+  },
+  {
+    "code": "BG-02",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Burgas"
+    }
+  },
+  {
+    "code": "BG-03",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Varna"
+    }
+  },
+  {
+    "code": "BG-04",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Veliko Tarnovo"
+    }
+  },
+  {
+    "code": "BG-05",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Vidin"
+    }
+  },
+  {
+    "code": "BG-06",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Vratsa"
+    }
+  },
+  {
+    "code": "BG-07",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Gabrovo"
+    }
+  },
+  {
+    "code": "BG-08",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Dobrich"
+    }
+  },
+  {
+    "code": "BG-09",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Kardzhali"
+    }
+  },
+  {
+    "code": "BG-10",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Kyustendil"
+    }
+  },
+  {
+    "code": "BG-11",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Lovech"
+    }
+  },
+  {
+    "code": "BG-12",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Montana"
+    }
+  },
+  {
+    "code": "BG-13",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Pazardzhik"
+    }
+  },
+  {
+    "code": "BG-14",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Pernik"
+    }
+  },
+  {
+    "code": "BG-15",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Pleven"
+    }
+  },
+  {
+    "code": "BG-16",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Plovdiv"
+    }
+  },
+  {
+    "code": "BG-17",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Razgrad"
+    }
+  },
+  {
+    "code": "BG-18",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Ruse"
+    }
+  },
+  {
+    "code": "BG-19",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Silistra"
+    }
+  },
+  {
+    "code": "BG-20",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Sliven"
+    }
+  },
+  {
+    "code": "BG-21",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Smolyan"
+    }
+  },
+  {
+    "code": "BG-22",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Sofia (stolitsa)"
+    }
+  },
+  {
+    "code": "BG-23",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Sofia"
+    }
+  },
+  {
+    "code": "BG-24",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Stara Zagora"
+    }
+  },
+  {
+    "code": "BG-25",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Targovishte"
+    }
+  },
+  {
+    "code": "BG-26",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Haskovo"
+    }
+  },
+  {
+    "code": "BG-27",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Shumen"
+    }
+  },
+  {
+    "code": "BG-28",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bg": "oblast"
+    },
+    "names": {
+      "bg": "Yambol"
+    }
+  }
 ]

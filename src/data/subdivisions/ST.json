@@ -1,9 +1,79 @@
 [
-  { "code": "ST-01", "type": "district", "names": { "pt": "Água Grande" } },
-  { "code": "ST-02", "type": "district", "names": { "pt": "Cantagalo" } },
-  { "code": "ST-03", "type": "district", "names": { "pt": "Caué" } },
-  { "code": "ST-04", "type": "district", "names": { "pt": "Lembá" } },
-  { "code": "ST-05", "type": "district", "names": { "pt": "Lobata" } },
-  { "code": "ST-06", "type": "district", "names": { "pt": "Mé-Zóchi" } },
-  { "code": "ST-P", "type": "autonomous region", "names": { "pt": "Príncipe" } }
+  {
+    "code": "ST-01",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
+    "names": {
+      "pt": "Água Grande"
+    }
+  },
+  {
+    "code": "ST-02",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
+    "names": {
+      "pt": "Cantagalo"
+    }
+  },
+  {
+    "code": "ST-03",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
+    "names": {
+      "pt": "Caué"
+    }
+  },
+  {
+    "code": "ST-04",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
+    "names": {
+      "pt": "Lembá"
+    }
+  },
+  {
+    "code": "ST-05",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
+    "names": {
+      "pt": "Lobata"
+    }
+  },
+  {
+    "code": "ST-06",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
+    "names": {
+      "pt": "Mé-Zóchi"
+    }
+  },
+  {
+    "code": "ST-P",
+    "type": {
+      "en": "autonomous region",
+      "fr": "région autonome",
+      "pt": "região autónoma"
+    },
+    "names": {
+      "pt": "Príncipe"
+    }
+  }
 ]

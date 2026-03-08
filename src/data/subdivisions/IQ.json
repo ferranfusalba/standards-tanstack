@@ -1,20 +1,216 @@
 [
-  { "code": "IQ-AN", "type": "governorate", "names": { "ar": "الأنبار" } },
-  { "code": "IQ-AR", "type": "region", "names": { "ar": "إقليم كردستان", "ku": "هەرێمی کوردستان" } },
-  { "code": "IQ-BA", "type": "governorate", "names": { "ar": "البصرة" } },
-  { "code": "IQ-BB", "type": "governorate", "names": { "ar": "بابل" } },
-  { "code": "IQ-BG", "type": "governorate", "names": { "ar": "بغداد" } },
-  { "code": "IQ-DA", "type": "governorate", "names": { "ar": "دهوك", "ku": "دهۆک" } },
-  { "code": "IQ-DI", "type": "governorate", "names": { "ar": "ديالى" } },
-  { "code": "IQ-DQ", "type": "governorate", "names": { "ar": "ذي قار" } },
-  { "code": "IQ-KA", "type": "governorate", "names": { "ar": "كربلاء" } },
-  { "code": "IQ-KI", "type": "governorate", "names": { "ar": "كركوك" } },
-  { "code": "IQ-MA", "type": "governorate", "names": { "ar": "ميسان" } },
-  { "code": "IQ-MU", "type": "governorate", "names": { "ar": "المثنى" } },
-  { "code": "IQ-NA", "type": "governorate", "names": { "ar": "النجف" } },
-  { "code": "IQ-NI", "type": "governorate", "names": { "ar": "نينوى" } },
-  { "code": "IQ-QA", "type": "governorate", "names": { "ar": "القادسية" } },
-  { "code": "IQ-SD", "type": "governorate", "names": { "ar": "صلاح الدين" } },
-  { "code": "IQ-SU", "type": "governorate", "names": { "ar": "السليمانية", "ku": "سلێمانی" } },
-  { "code": "IQ-WA", "type": "governorate", "names": { "ar": "واسط" } }
+  {
+    "code": "IQ-AN",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "الأنبار"
+    }
+  },
+  {
+    "code": "IQ-AR",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "أربيل",
+      "ku": "هەولێر"
+    }
+  },
+  {
+    "code": "IQ-BA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "البصرة"
+    }
+  },
+  {
+    "code": "IQ-BB",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "بابل"
+    }
+  },
+  {
+    "code": "IQ-BG",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "بغداد"
+    }
+  },
+  {
+    "code": "IQ-DA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "دهوك",
+      "ku": "دهۆک"
+    }
+  },
+  {
+    "code": "IQ-DI",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "ديالى"
+    }
+  },
+  {
+    "code": "IQ-DQ",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "ذي قار"
+    }
+  },
+  {
+    "code": "IQ-KA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "كربلاء"
+    }
+  },
+  {
+    "code": "IQ-KI",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "كركوك"
+    }
+  },
+  {
+    "code": "IQ-KR",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "iqlīm",
+      "ku": "herêm"
+    },
+    "names": {
+      "ar": "إقليم كردستان",
+      "ku": "هەرێمی کوردستان"
+    }
+  },
+  {
+    "code": "IQ-MA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "ميسان"
+    }
+  },
+  {
+    "code": "IQ-MU",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "المثنى"
+    }
+  },
+  {
+    "code": "IQ-NA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "النجف"
+    }
+  },
+  {
+    "code": "IQ-NI",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "نينوى"
+    }
+  },
+  {
+    "code": "IQ-QA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "القادسية"
+    }
+  },
+  {
+    "code": "IQ-SD",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "صلاح الدين"
+    }
+  },
+  {
+    "code": "IQ-SU",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "السليمانية",
+      "ku": "سلێمانی"
+    }
+  },
+  {
+    "code": "IQ-WA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "واسط"
+    }
+  }
 ]

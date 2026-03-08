@@ -1,18 +1,162 @@
 [
-  { "code": "BW-CE", "type": { "en": "district", "fr": "district" }, "names": { "en": "Central" } },
-  { "code": "BW-CH", "type": { "en": "district", "fr": "district" }, "names": { "en": "Chobe" } },
-  { "code": "BW-FR", "type": { "en": "city", "fr": "ville" }, "names": { "en": "Francistown" } },
-  { "code": "BW-GA", "type": { "en": "city", "fr": "ville" }, "names": { "en": "Gaborone" } },
-  { "code": "BW-GH", "type": { "en": "district", "fr": "district" }, "names": { "en": "Ghanzi" } },
-  { "code": "BW-JW", "type": { "en": "town", "fr": "chef-lieu" }, "names": { "en": "Jwaneng" } },
-  { "code": "BW-KG", "type": { "en": "district", "fr": "district" }, "names": { "en": "Kgalagadi" } },
-  { "code": "BW-KL", "type": { "en": "district", "fr": "district" }, "names": { "en": "Kgatleng" } },
-  { "code": "BW-KW", "type": { "en": "district", "fr": "district" }, "names": { "en": "Kweneng" } },
-  { "code": "BW-LO", "type": { "en": "town", "fr": "chef-lieu" }, "names": { "en": "Lobatse" } },
-  { "code": "BW-NE", "type": { "en": "district", "fr": "district" }, "names": { "en": "North East" } },
-  { "code": "BW-NW", "type": { "en": "district", "fr": "district" }, "names": { "en": "North West" } },
-  { "code": "BW-SE", "type": { "en": "district", "fr": "district" }, "names": { "en": "South East" } },
-  { "code": "BW-SO", "type": { "en": "district", "fr": "district" }, "names": { "en": "Southern" } },
-  { "code": "BW-SP", "type": { "en": "town", "fr": "chef-lieu" }, "names": { "en": "Selibe Phikwe" } },
-  { "code": "BW-ST", "type": { "en": "town", "fr": "chef-lieu" }, "names": { "en": "Sowa Town" } }
+  {
+    "code": "BW-CE",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Central"
+    }
+  },
+  {
+    "code": "BW-CH",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Chobe"
+    }
+  },
+  {
+    "code": "BW-FR",
+    "type": {
+      "en": "city",
+      "fr": "ville"
+    },
+    "names": {
+      "en": "Francistown"
+    }
+  },
+  {
+    "code": "BW-GA",
+    "type": {
+      "en": "city",
+      "fr": "ville"
+    },
+    "names": {
+      "en": "Gaborone"
+    }
+  },
+  {
+    "code": "BW-GH",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Ghanzi"
+    }
+  },
+  {
+    "code": "BW-JW",
+    "type": {
+      "en": "town",
+      "fr": "chef-lieu"
+    },
+    "names": {
+      "en": "Jwaneng"
+    }
+  },
+  {
+    "code": "BW-KG",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Kgalagadi"
+    }
+  },
+  {
+    "code": "BW-KL",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Kgatleng"
+    }
+  },
+  {
+    "code": "BW-KW",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Kweneng"
+    }
+  },
+  {
+    "code": "BW-LO",
+    "type": {
+      "en": "town",
+      "fr": "chef-lieu"
+    },
+    "names": {
+      "en": "Lobatse"
+    }
+  },
+  {
+    "code": "BW-NE",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "North East"
+    }
+  },
+  {
+    "code": "BW-NW",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "North West"
+    }
+  },
+  {
+    "code": "BW-SE",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "South East"
+    }
+  },
+  {
+    "code": "BW-SO",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Southern"
+    }
+  },
+  {
+    "code": "BW-SP",
+    "type": {
+      "en": "town",
+      "fr": "chef-lieu"
+    },
+    "names": {
+      "en": "Selibe Phikwe"
+    }
+  },
+  {
+    "code": "BW-ST",
+    "type": {
+      "en": "town",
+      "fr": "chef-lieu"
+    },
+    "names": {
+      "en": "Sowa Town"
+    }
+  }
 ]

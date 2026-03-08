@@ -1,15 +1,167 @@
 [
-  { "code": "TL-AL", "type": "municipality", "names": { "pt": "Aileu" } },
-  { "code": "TL-AN", "type": "municipality", "names": { "pt": "Ainaro" } },
-  { "code": "TL-BA", "type": "municipality", "names": { "pt": "Baucau" } },
-  { "code": "TL-BO", "type": "municipality", "names": { "pt": "Bobonaro" } },
-  { "code": "TL-CO", "type": "municipality", "names": { "pt": "Cova Lima" } },
-  { "code": "TL-DI", "type": "municipality", "names": { "pt": "Díli" } },
-  { "code": "TL-ER", "type": "municipality", "names": { "pt": "Ermera" } },
-  { "code": "TL-LA", "type": "municipality", "names": { "pt": "Lautém" } },
-  { "code": "TL-LI", "type": "municipality", "names": { "pt": "Liquiçá" } },
-  { "code": "TL-MF", "type": "municipality", "names": { "pt": "Manufahi" } },
-  { "code": "TL-MT", "type": "municipality", "names": { "pt": "Manatuto" } },
-  { "code": "TL-OE", "type": "municipality", "names": { "pt": "Oecusse" } },
-  { "code": "TL-VI", "type": "municipality", "names": { "pt": "Viqueque" } }
+  {
+    "code": "TL-AL",
+    "type": {
+      "en": "municipality",
+      "fr": "commune",
+      "pt": "município",
+      "tet": "munisípiu"
+    },
+    "names": {
+      "pt": "Aileu"
+    }
+  },
+  {
+    "code": "TL-AN",
+    "type": {
+      "en": "municipality",
+      "fr": "commune",
+      "pt": "município",
+      "tet": "munisípiu"
+    },
+    "names": {
+      "pt": "Ainaro",
+      "tet": "Ainaru"
+    }
+  },
+  {
+    "code": "TL-BA",
+    "type": {
+      "en": "municipality",
+      "fr": "commune",
+      "pt": "município",
+      "tet": "munisípiu"
+    },
+    "names": {
+      "pt": "Baucau",
+      "tet": "Baukau"
+    }
+  },
+  {
+    "code": "TL-BO",
+    "type": {
+      "en": "municipality",
+      "fr": "commune",
+      "pt": "município",
+      "tet": "munisípiu"
+    },
+    "names": {
+      "pt": "Bobonaro",
+      "tet": "Bobonaru"
+    }
+  },
+  {
+    "code": "TL-CO",
+    "type": {
+      "en": "municipality",
+      "fr": "commune",
+      "pt": "município",
+      "tet": "munisípiu"
+    },
+    "names": {
+      "pt": "Cova Lima",
+      "tet": "Kovalima"
+    }
+  },
+  {
+    "code": "TL-DI",
+    "type": {
+      "en": "municipality",
+      "fr": "commune",
+      "pt": "município",
+      "tet": "munisípiu"
+    },
+    "names": {
+      "pt": "Díli"
+    }
+  },
+  {
+    "code": "TL-ER",
+    "type": {
+      "en": "municipality",
+      "fr": "commune",
+      "pt": "município",
+      "tet": "munisípiu"
+    },
+    "names": {
+      "pt": "Ermera"
+    }
+  },
+  {
+    "code": "TL-LA",
+    "type": {
+      "en": "municipality",
+      "fr": "commune",
+      "pt": "município",
+      "tet": "munisípiu"
+    },
+    "names": {
+      "pt": "Lautém",
+      "tet": "Lautein"
+    }
+  },
+  {
+    "code": "TL-LI",
+    "type": {
+      "en": "municipality",
+      "fr": "commune",
+      "pt": "município",
+      "tet": "munisípiu"
+    },
+    "names": {
+      "pt": "Liquiça",
+      "tet": "Likisá"
+    }
+  },
+  {
+    "code": "TL-MF",
+    "type": {
+      "en": "municipality",
+      "fr": "commune",
+      "pt": "município",
+      "tet": "munisípiu"
+    },
+    "names": {
+      "pt": "Manufahi"
+    }
+  },
+  {
+    "code": "TL-MT",
+    "type": {
+      "en": "municipality",
+      "fr": "commune",
+      "pt": "município",
+      "tet": "munisípiu"
+    },
+    "names": {
+      "pt": "Manatuto",
+      "tet": "Manatutu"
+    }
+  },
+  {
+    "code": "TL-OE",
+    "type": {
+      "en": "special administrative region",
+      "fr": "région administrative spéciale",
+      "pt": "região administrativa especial",
+      "tet": "rejiaun administrativa espesiál"
+    },
+    "names": {
+      "pt": "Oé-Cusse Ambeno",
+      "tet": "Oekusi-Ambenu"
+    }
+  },
+  {
+    "code": "TL-VI",
+    "type": {
+      "en": "municipality",
+      "fr": "commune",
+      "pt": "município",
+      "tet": "munisípiu"
+    },
+    "names": {
+      "pt": "Viqueque",
+      "tet": "Vikeke"
+    }
+  }
 ]

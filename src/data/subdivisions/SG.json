@@ -1,62 +1,52 @@
 [
   {
-    "code": "BZ-BZ",
+    "code": "SG-01",
     "type": {
       "en": "district",
       "fr": "district"
     },
     "names": {
-      "en": "Belize"
+      "en": "Central Singapore"
     }
   },
   {
-    "code": "BZ-CY",
+    "code": "SG-02",
     "type": {
       "en": "district",
       "fr": "district"
     },
     "names": {
-      "en": "Cayo"
+      "en": "North East"
     }
   },
   {
-    "code": "BZ-CZL",
+    "code": "SG-03",
     "type": {
       "en": "district",
       "fr": "district"
     },
     "names": {
-      "en": "Corozal"
+      "en": "North West"
     }
   },
   {
-    "code": "BZ-OW",
+    "code": "SG-04",
     "type": {
       "en": "district",
       "fr": "district"
     },
     "names": {
-      "en": "Orange Walk"
+      "en": "South East"
     }
   },
   {
-    "code": "BZ-SC",
+    "code": "SG-05",
     "type": {
       "en": "district",
       "fr": "district"
     },
     "names": {
-      "en": "Stann Creek"
-    }
-  },
-  {
-    "code": "BZ-TOL",
-    "type": {
-      "en": "district",
-      "fr": "district"
-    },
-    "names": {
-      "en": "Toledo"
+      "en": "South West"
     }
   }
 ]

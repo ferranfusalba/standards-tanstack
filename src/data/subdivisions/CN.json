@@ -4,7 +4,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Anhui"
@@ -15,7 +15,7 @@
     "type": {
       "en": "municipality",
       "fr": "municipalité",
-      "zh": "zhíxiáshì"
+      "zh": "shi"
     },
     "names": {
       "zh": "Beijing"
@@ -26,7 +26,7 @@
     "type": {
       "en": "municipality",
       "fr": "municipalité",
-      "zh": "zhíxiáshì"
+      "zh": "shi"
     },
     "names": {
       "zh": "Chongqing"
@@ -37,7 +37,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Fujian"
@@ -48,7 +48,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Guangdong"
@@ -59,7 +59,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Gansu"
@@ -70,7 +70,7 @@
     "type": {
       "en": "autonomous region",
       "fr": "région autonome",
-      "zh": "zìzhìqū"
+      "zh": "zizhiqu"
     },
     "names": {
       "zh": "Guangxi Zhuangzu"
@@ -81,7 +81,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Guizhou"
@@ -92,7 +92,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Henan"
@@ -103,7 +103,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Hubei"
@@ -114,7 +114,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Hebei"
@@ -125,7 +125,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Hainan"
@@ -136,10 +136,11 @@
     "type": {
       "en": "special administrative region",
       "fr": "région administrative spéciale",
-      "zh": "tèbiéxíngzhèngqū"
+      "zh": "tebie xingzhengqu"
     },
     "names": {
-      "zh": "Xianggang"
+      "zh": "Xianggang",
+      "en": "Hong Kong SAR"
     },
     "iso1": "HK"
   },
@@ -148,7 +149,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Heilongjiang"
@@ -159,7 +160,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Hunan"
@@ -170,7 +171,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Jilin"
@@ -181,7 +182,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Jiangsu"
@@ -192,7 +193,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Jiangxi"
@@ -203,7 +204,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Liaoning"
@@ -214,10 +215,12 @@
     "type": {
       "en": "special administrative region",
       "fr": "région administrative spéciale",
-      "zh": "tèbiéxíngzhèngqū"
+      "zh": "tebie xingzhengqu"
     },
     "names": {
-      "zh": "Aomen"
+      "zh": "Aomen",
+      "en": "Macao SAR",
+      "pt": "Macau SAR"
     },
     "iso1": "MO"
   },
@@ -226,7 +229,7 @@
     "type": {
       "en": "autonomous region",
       "fr": "région autonome",
-      "zh": "zìzhìqū"
+      "zh": "zizhiqu"
     },
     "names": {
       "zh": "Nei Mongol"
@@ -237,7 +240,7 @@
     "type": {
       "en": "autonomous region",
       "fr": "région autonome",
-      "zh": "zìzhìqū"
+      "zh": "zizhiqu"
     },
     "names": {
       "zh": "Ningxia Huizu"
@@ -248,7 +251,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Qinghai"
@@ -259,7 +262,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Sichuan"
@@ -270,7 +273,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Shandong"
@@ -281,7 +284,7 @@
     "type": {
       "en": "municipality",
       "fr": "municipalité",
-      "zh": "zhíxiáshì"
+      "zh": "shi"
     },
     "names": {
       "zh": "Shanghai"
@@ -292,7 +295,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Shaanxi"
@@ -303,7 +306,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Shanxi"
@@ -314,7 +317,7 @@
     "type": {
       "en": "municipality",
       "fr": "municipalité",
-      "zh": "zhíxiáshì"
+      "zh": "shi"
     },
     "names": {
       "zh": "Tianjin"
@@ -325,7 +328,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Taiwan"
@@ -337,7 +340,7 @@
     "type": {
       "en": "autonomous region",
       "fr": "région autonome",
-      "zh": "zìzhìqū"
+      "zh": "zizhiqu"
     },
     "names": {
       "zh": "Xinjiang Uygur"
@@ -348,7 +351,7 @@
     "type": {
       "en": "autonomous region",
       "fr": "région autonome",
-      "zh": "zìzhìqū"
+      "zh": "zizhiqu"
     },
     "names": {
       "zh": "Xizang"
@@ -359,7 +362,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Yunnan"
@@ -370,7 +373,7 @@
     "type": {
       "en": "province",
       "fr": "province",
-      "zh": "shěng"
+      "zh": "sheng"
     },
     "names": {
       "zh": "Zhejiang"

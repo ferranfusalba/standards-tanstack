@@ -1,23 +1,1666 @@
 [
   {
+    "code": "GB-ABC",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Armagh City, Banbridge and Craigavon"
+    }
+  },
+  {
+    "code": "GB-ABD",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Aberdeenshire"
+    }
+  },
+  {
+    "code": "GB-ABE",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Aberdeen City"
+    }
+  },
+  {
+    "code": "GB-AGB",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Argyll and Bute"
+    }
+  },
+  {
+    "code": "GB-AGY",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Isle of Anglesey",
+      "cy": "Sir Ynys Môn"
+    }
+  },
+  {
+    "code": "GB-AND",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Ards and North Down"
+    }
+  },
+  {
+    "code": "GB-ANN",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Antrim and Newtownabbey"
+    }
+  },
+  {
+    "code": "GB-ANS",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Angus"
+    }
+  },
+  {
+    "code": "GB-BAS",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Bath and North East Somerset"
+    }
+  },
+  {
+    "code": "GB-BBD",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Blackburn with Darwen"
+    }
+  },
+  {
+    "code": "GB-BCP",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Bournemouth, Christchurch and Poole"
+    }
+  },
+  {
+    "code": "GB-BDF",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Bedford"
+    }
+  },
+  {
+    "code": "GB-BDG",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Barking and Dagenham"
+    }
+  },
+  {
+    "code": "GB-BEN",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Brent"
+    }
+  },
+  {
+    "code": "GB-BEX",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Bexley"
+    }
+  },
+  {
+    "code": "GB-BFS",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Belfast City"
+    }
+  },
+  {
+    "code": "GB-BGE",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Bridgend",
+      "cy": "Pen-y-bont ar Ogwr"
+    }
+  },
+  {
+    "code": "GB-BGW",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Blaenau Gwent"
+    }
+  },
+  {
+    "code": "GB-BIR",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Birmingham"
+    }
+  },
+  {
+    "code": "GB-BKM",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Buckinghamshire"
+    }
+  },
+  {
+    "code": "GB-BNE",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Barnet"
+    }
+  },
+  {
+    "code": "GB-BNH",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Brighton and Hove"
+    }
+  },
+  {
+    "code": "GB-BNS",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Barnsley"
+    }
+  },
+  {
+    "code": "GB-BOL",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Bolton"
+    }
+  },
+  {
+    "code": "GB-BPL",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Blackpool"
+    }
+  },
+  {
+    "code": "GB-BRC",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Bracknell Forest"
+    }
+  },
+  {
+    "code": "GB-BRD",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Bradford"
+    }
+  },
+  {
+    "code": "GB-BRY",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Bromley"
+    }
+  },
+  {
+    "code": "GB-BST",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Bristol, City of"
+    }
+  },
+  {
+    "code": "GB-BUR",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Bury"
+    }
+  },
+  {
+    "code": "GB-CAM",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Cambridgeshire"
+    }
+  },
+  {
+    "code": "GB-CAY",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Caerphilly",
+      "cy": "Caerffili"
+    }
+  },
+  {
+    "code": "GB-CBF",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Central Bedfordshire"
+    }
+  },
+  {
+    "code": "GB-CCG",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Causeway Coast and Glens"
+    }
+  },
+  {
+    "code": "GB-CGN",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Ceredigion",
+      "cy": "Sir Ceredigion"
+    }
+  },
+  {
+    "code": "GB-CHE",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Cheshire East"
+    }
+  },
+  {
+    "code": "GB-CHW",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Cheshire West and Chester"
+    }
+  },
+  {
+    "code": "GB-CLD",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Calderdale"
+    }
+  },
+  {
+    "code": "GB-CLK",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Clackmannanshire"
+    }
+  },
+  {
+    "code": "GB-CMA",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Cumbria"
+    }
+  },
+  {
+    "code": "GB-CMD",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Camden"
+    }
+  },
+  {
+    "code": "GB-CMN",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Carmarthenshire",
+      "cy": "Sir Gaerfyrddin"
+    }
+  },
+  {
+    "code": "GB-CON",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Cornwall"
+    }
+  },
+  {
+    "code": "GB-COV",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Coventry"
+    }
+  },
+  {
+    "code": "GB-CRF",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Cardiff",
+      "cy": "Caerdydd"
+    }
+  },
+  {
+    "code": "GB-CRY",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Croydon"
+    }
+  },
+  {
+    "code": "GB-CWY",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Conwy"
+    }
+  },
+  {
+    "code": "GB-DAL",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Darlington"
+    }
+  },
+  {
+    "code": "GB-DBY",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Derbyshire"
+    }
+  },
+  {
+    "code": "GB-DEN",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Denbighshire",
+      "cy": "Sir Ddinbych"
+    }
+  },
+  {
+    "code": "GB-DER",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Derby"
+    }
+  },
+  {
+    "code": "GB-DEV",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Devon"
+    }
+  },
+  {
+    "code": "GB-DGY",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Dumfries and Galloway"
+    }
+  },
+  {
+    "code": "GB-DNC",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Doncaster"
+    }
+  },
+  {
+    "code": "GB-DND",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Dundee City"
+    }
+  },
+  {
+    "code": "GB-DOR",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Dorset"
+    }
+  },
+  {
+    "code": "GB-DRS",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Derry and Strabane"
+    }
+  },
+  {
+    "code": "GB-DUD",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Dudley"
+    }
+  },
+  {
+    "code": "GB-DUR",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Durham, County"
+    }
+  },
+  {
+    "code": "GB-EAL",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Ealing"
+    }
+  },
+  {
+    "code": "GB-EAY",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "East Ayrshire"
+    }
+  },
+  {
+    "code": "GB-EDH",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Edinburgh, City of"
+    }
+  },
+  {
+    "code": "GB-EDU",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "East Dunbartonshire"
+    }
+  },
+  {
+    "code": "GB-ELN",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "East Lothian"
+    }
+  },
+  {
+    "code": "GB-ELS",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Eilean Siar"
+    }
+  },
+  {
     "code": "GB-ENG",
-    "type": "country",
+    "type": {
+      "en": "country",
+      "fr": "pays"
+    },
     "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
     "names": {
       "en": "England"
     }
   },
   {
+    "code": "GB-ENF",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Enfield"
+    }
+  },
+  {
+    "code": "GB-ERW",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "East Renfrewshire"
+    }
+  },
+  {
+    "code": "GB-ERY",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "East Riding of Yorkshire"
+    }
+  },
+  {
+    "code": "GB-ESS",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Essex"
+    }
+  },
+  {
+    "code": "GB-ESX",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "East Sussex"
+    }
+  },
+  {
+    "code": "GB-FAL",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Falkirk"
+    }
+  },
+  {
+    "code": "GB-FIF",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Fife"
+    }
+  },
+  {
+    "code": "GB-FLN",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Flintshire",
+      "cy": "Sir y Fflint"
+    }
+  },
+  {
+    "code": "GB-FMO",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Fermanagh and Omagh"
+    }
+  },
+  {
+    "code": "GB-GAT",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Gateshead"
+    }
+  },
+  {
+    "code": "GB-GLG",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Glasgow City"
+    }
+  },
+  {
+    "code": "GB-GLS",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Gloucestershire"
+    }
+  },
+  {
+    "code": "GB-GRE",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Greenwich"
+    }
+  },
+  {
+    "code": "GB-GWN",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Gwynedd"
+    }
+  },
+  {
+    "code": "GB-HCK",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Hackney"
+    }
+  },
+  {
+    "code": "GB-HAL",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Halton"
+    }
+  },
+  {
+    "code": "GB-HAM",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Hampshire"
+    }
+  },
+  {
+    "code": "GB-HAV",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Havering"
+    }
+  },
+  {
+    "code": "GB-HEF",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Herefordshire"
+    }
+  },
+  {
+    "code": "GB-HIL",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Hillingdon"
+    }
+  },
+  {
+    "code": "GB-HLD",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Highland"
+    }
+  },
+  {
+    "code": "GB-HMF",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Hammersmith and Fulham"
+    }
+  },
+  {
+    "code": "GB-HNS",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Hounslow"
+    }
+  },
+  {
+    "code": "GB-HPL",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Hartlepool"
+    }
+  },
+  {
+    "code": "GB-HRT",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Hertfordshire"
+    }
+  },
+  {
+    "code": "GB-HRW",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Harrow"
+    }
+  },
+  {
+    "code": "GB-HRY",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Haringey"
+    }
+  },
+  {
+    "code": "GB-IOW",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Isle of Wight"
+    }
+  },
+  {
+    "code": "GB-IOS",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Isles of Scilly"
+    }
+  },
+  {
+    "code": "GB-ISL",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Islington"
+    }
+  },
+  {
+    "code": "GB-IVC",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Inverclyde"
+    }
+  },
+  {
+    "code": "GB-KEC",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Kensington and Chelsea"
+    }
+  },
+  {
+    "code": "GB-KEN",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Kent"
+    }
+  },
+  {
+    "code": "GB-KHL",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Kingston upon Hull"
+    }
+  },
+  {
+    "code": "GB-KIR",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Kirklees"
+    }
+  },
+  {
+    "code": "GB-KTT",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Kingston upon Thames"
+    }
+  },
+  {
+    "code": "GB-KWL",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Knowsley"
+    }
+  },
+  {
+    "code": "GB-LAN",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Lancashire"
+    }
+  },
+  {
+    "code": "GB-LBC",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Lisburn and Castlereagh"
+    }
+  },
+  {
+    "code": "GB-LBH",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Lambeth"
+    }
+  },
+  {
+    "code": "GB-LCE",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Leicester"
+    }
+  },
+  {
+    "code": "GB-LDS",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Leeds"
+    }
+  },
+  {
+    "code": "GB-LEC",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Leicestershire"
+    }
+  },
+  {
+    "code": "GB-LEW",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Lewisham"
+    }
+  },
+  {
+    "code": "GB-LIN",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Lincolnshire"
+    }
+  },
+  {
+    "code": "GB-LIV",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Liverpool"
+    }
+  },
+  {
+    "code": "GB-LND",
+    "type": {
+      "en": "city corporation",
+      "fr": "corporation urbaine"
+    },
+    "names": {
+      "en": "London, City of"
+    }
+  },
+  {
+    "code": "GB-LUT",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Luton"
+    }
+  },
+  {
+    "code": "GB-MAN",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Manchester"
+    }
+  },
+  {
+    "code": "GB-MDB",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Middlesbrough"
+    }
+  },
+  {
+    "code": "GB-MDW",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Medway"
+    }
+  },
+  {
+    "code": "GB-MEA",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Mid and East Antrim"
+    }
+  },
+  {
+    "code": "GB-MIK",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Milton Keynes"
+    }
+  },
+  {
+    "code": "GB-MLN",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Midlothian"
+    }
+  },
+  {
+    "code": "GB-MON",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Monmouthshire",
+      "cy": "Sir Fynwy"
+    }
+  },
+  {
+    "code": "GB-MRT",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Merton"
+    }
+  },
+  {
+    "code": "GB-MRY",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Moray"
+    }
+  },
+  {
+    "code": "GB-MTY",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Merthyr Tydfil",
+      "cy": "Merthyr Tudful"
+    }
+  },
+  {
+    "code": "GB-MUL",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Mid-Ulster"
+    }
+  },
+  {
+    "code": "GB-NAY",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "North Ayrshire"
+    }
+  },
+  {
+    "code": "GB-NBL",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Northumberland"
+    }
+  },
+  {
+    "code": "GB-NEL",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "North East Lincolnshire"
+    }
+  },
+  {
+    "code": "GB-NET",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Newcastle upon Tyne"
+    }
+  },
+  {
+    "code": "GB-NFK",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Norfolk"
+    }
+  },
+  {
+    "code": "GB-NGM",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Nottingham"
+    }
+  },
+  {
     "code": "GB-NIR",
-    "type": "province",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
     "names": {
       "en": "Northern Ireland",
       "ga": "Tuaisceart Éireann"
     }
   },
   {
+    "code": "GB-NLK",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "North Lanarkshire"
+    }
+  },
+  {
+    "code": "GB-NLN",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "North Lincolnshire"
+    }
+  },
+  {
+    "code": "GB-NMD",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "en": "Newry, Mourne and Down"
+    }
+  },
+  {
+    "code": "GB-NNH",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "North Northamptonshire"
+    }
+  },
+  {
+    "code": "GB-NSM",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "North Somerset"
+    }
+  },
+  {
+    "code": "GB-NTL",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Neath Port Talbot",
+      "cy": "Castell-nedd Port Talbot"
+    }
+  },
+  {
+    "code": "GB-NTT",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Nottinghamshire"
+    }
+  },
+  {
+    "code": "GB-NTY",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "North Tyneside"
+    }
+  },
+  {
+    "code": "GB-NWM",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Newham"
+    }
+  },
+  {
+    "code": "GB-NWP",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Newport",
+      "cy": "Casnewydd"
+    }
+  },
+  {
+    "code": "GB-NYK",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "North Yorkshire"
+    }
+  },
+  {
+    "code": "GB-OLD",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Oldham"
+    }
+  },
+  {
+    "code": "GB-ORK",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Orkney Islands"
+    }
+  },
+  {
+    "code": "GB-OXF",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Oxfordshire"
+    }
+  },
+  {
+    "code": "GB-PEM",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Pembrokeshire",
+      "cy": "Sir Benfro"
+    }
+  },
+  {
+    "code": "GB-PKN",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Perth and Kinross"
+    }
+  },
+  {
+    "code": "GB-PLY",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Plymouth"
+    }
+  },
+  {
+    "code": "GB-POR",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Portsmouth"
+    }
+  },
+  {
+    "code": "GB-POW",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Powys"
+    }
+  },
+  {
+    "code": "GB-PTE",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Peterborough"
+    }
+  },
+  {
+    "code": "GB-RCC",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Redcar and Cleveland"
+    }
+  },
+  {
+    "code": "GB-RCH",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Rochdale"
+    }
+  },
+  {
+    "code": "GB-RCT",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Rhondda Cynon Taff",
+      "cy": "Rhondda CynonTaf"
+    }
+  },
+  {
+    "code": "GB-RDB",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Redbridge"
+    }
+  },
+  {
+    "code": "GB-RDG",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Reading"
+    }
+  },
+  {
+    "code": "GB-RFW",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Renfrewshire"
+    }
+  },
+  {
+    "code": "GB-RIC",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Richmond upon Thames"
+    }
+  },
+  {
+    "code": "GB-ROT",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Rotherham"
+    }
+  },
+  {
+    "code": "GB-RUT",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Rutland"
+    }
+  },
+  {
+    "code": "GB-SAW",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Sandwell"
+    }
+  },
+  {
+    "code": "GB-SAY",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "South Ayrshire"
+    }
+  },
+  {
+    "code": "GB-SCB",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Scottish Borders"
+    }
+  },
+  {
     "code": "GB-SCT",
-    "type": "country",
+    "type": {
+      "en": "country",
+      "fr": "pays"
+    },
     "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
     "names": {
       "en": "Scotland",
@@ -25,12 +1668,569 @@
     }
   },
   {
+    "code": "GB-SFK",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Suffolk"
+    }
+  },
+  {
+    "code": "GB-SFT",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Sefton"
+    }
+  },
+  {
+    "code": "GB-SGC",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "South Gloucestershire"
+    }
+  },
+  {
+    "code": "GB-SHF",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Sheffield"
+    }
+  },
+  {
+    "code": "GB-SHN",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "St. Helens"
+    }
+  },
+  {
+    "code": "GB-SHR",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Shropshire"
+    }
+  },
+  {
+    "code": "GB-SKP",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Stockport"
+    }
+  },
+  {
+    "code": "GB-SLF",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Salford"
+    }
+  },
+  {
+    "code": "GB-SLG",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Slough"
+    }
+  },
+  {
+    "code": "GB-SLK",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "South Lanarkshire"
+    }
+  },
+  {
+    "code": "GB-SND",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Sunderland"
+    }
+  },
+  {
+    "code": "GB-SOL",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Solihull"
+    }
+  },
+  {
+    "code": "GB-SOM",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Somerset"
+    }
+  },
+  {
+    "code": "GB-SOS",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Southend-on-Sea"
+    }
+  },
+  {
+    "code": "GB-SRY",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Surrey"
+    }
+  },
+  {
+    "code": "GB-STE",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Stoke-on-Trent"
+    }
+  },
+  {
+    "code": "GB-STG",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Stirling"
+    }
+  },
+  {
+    "code": "GB-STH",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Southampton"
+    }
+  },
+  {
+    "code": "GB-STN",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Sutton"
+    }
+  },
+  {
+    "code": "GB-STS",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Staffordshire"
+    }
+  },
+  {
+    "code": "GB-STT",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Stockton-on-Tees"
+    }
+  },
+  {
+    "code": "GB-STY",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "South Tyneside"
+    }
+  },
+  {
+    "code": "GB-SWA",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Swansea",
+      "cy": "Abertawe"
+    }
+  },
+  {
+    "code": "GB-SWD",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Swindon"
+    }
+  },
+  {
+    "code": "GB-SWK",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Southwark"
+    }
+  },
+  {
+    "code": "GB-TAM",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Tameside"
+    }
+  },
+  {
+    "code": "GB-TFW",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Telford and Wrekin"
+    }
+  },
+  {
+    "code": "GB-THR",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Thurrock"
+    }
+  },
+  {
+    "code": "GB-TOB",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Torbay"
+    }
+  },
+  {
+    "code": "GB-TOF",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Torfaen",
+      "cy": "Tor-faen"
+    }
+  },
+  {
+    "code": "GB-TRF",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Trafford"
+    }
+  },
+  {
+    "code": "GB-TWH",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Tower Hamlets"
+    }
+  },
+  {
+    "code": "GB-VGL",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Vale of Glamorgan, The",
+      "cy": "Bro Morgannwg"
+    }
+  },
+  {
+    "code": "GB-WAR",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Warwickshire"
+    }
+  },
+  {
+    "code": "GB-WBK",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "West Berkshire"
+    }
+  },
+  {
+    "code": "GB-WDU",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "West Dunbartonshire"
+    }
+  },
+  {
+    "code": "GB-WFT",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Waltham Forest"
+    }
+  },
+  {
+    "code": "GB-WGN",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Wigan"
+    }
+  },
+  {
+    "code": "GB-WIL",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Wiltshire"
+    }
+  },
+  {
+    "code": "GB-WKF",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Wakefield"
+    }
+  },
+  {
+    "code": "GB-WLL",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Walsall"
+    }
+  },
+  {
+    "code": "GB-WLN",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "West Lothian"
+    }
+  },
+  {
     "code": "GB-WLS",
-    "type": "country",
+    "type": {
+      "en": "country",
+      "fr": "pays"
+    },
     "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
     "names": {
       "en": "Wales",
       "cy": "Cymru"
+    }
+  },
+  {
+    "code": "GB-WLV",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Wolverhampton"
+    }
+  },
+  {
+    "code": "GB-WND",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Wandsworth"
+    }
+  },
+  {
+    "code": "GB-WNH",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "West Northamptonshire"
+    }
+  },
+  {
+    "code": "GB-WNM",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Windsor and Maidenhead"
+    }
+  },
+  {
+    "code": "GB-WOK",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Wokingham"
+    }
+  },
+  {
+    "code": "GB-WOR",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "Worcestershire"
+    }
+  },
+  {
+    "code": "GB-WRL",
+    "type": {
+      "en": "metropolitan district",
+      "fr": "district métropolitain"
+    },
+    "names": {
+      "en": "Wirral"
+    }
+  },
+  {
+    "code": "GB-WRT",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Warrington"
+    }
+  },
+  {
+    "code": "GB-WRX",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "Wrexham",
+      "cy": "Wrecsam"
+    }
+  },
+  {
+    "code": "GB-WSM",
+    "type": {
+      "en": "London borough",
+      "fr": "arrondissement de Londres"
+    },
+    "names": {
+      "en": "Westminster"
+    }
+  },
+  {
+    "code": "GB-WSX",
+    "type": {
+      "en": "two-tier county",
+      "fr": "comté à 2 niveaux"
+    },
+    "names": {
+      "en": "West Sussex"
+    }
+  },
+  {
+    "code": "GB-YOR",
+    "type": {
+      "en": "unitary authority",
+      "fr": "autorité unitaire"
+    },
+    "names": {
+      "en": "York"
+    }
+  },
+  {
+    "code": "GB-ZET",
+    "type": {
+      "en": "council area",
+      "fr": "zone de conseil"
+    },
+    "names": {
+      "en": "Shetland Islands"
     }
   }
 ]

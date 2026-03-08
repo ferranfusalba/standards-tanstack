@@ -1,85 +1,198 @@
 [
   {
+    "code": "NL-AW",
+    "type": {
+      "en": "country",
+      "nl": "land",
+      "pap": "pais"
+    },
+    "names": {
+      "nl": "Aruba"
+    }
+  },
+  {
+    "code": "NL-BQ1",
+    "type": {
+      "en": "special municipality",
+      "nl": "bijzondere gemeente",
+      "pap": "municipio special"
+    },
+    "names": {
+      "nl": "Bonaire"
+    }
+  },
+  {
+    "code": "NL-BQ2",
+    "type": {
+      "en": "special municipality",
+      "nl": "bijzondere gemeente",
+      "pap": "municipio special"
+    },
+    "names": {
+      "nl": "Saba"
+    }
+  },
+  {
+    "code": "NL-BQ3",
+    "type": {
+      "en": "special municipality",
+      "nl": "bijzondere gemeente",
+      "pap": "municipio special"
+    },
+    "names": {
+      "nl": "Sint Eustatius"
+    }
+  },
+  {
+    "code": "NL-CW",
+    "type": {
+      "en": "country",
+      "nl": "land",
+      "pap": "pais"
+    },
+    "names": {
+      "nl": "Curaçao"
+    }
+  },
+  {
     "code": "NL-DR",
-    "type": "province",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "nl": "provincie"
+    },
     "names": {
       "nl": "Drenthe"
     }
   },
   {
     "code": "NL-FL",
-    "type": "province",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "nl": "provincie"
+    },
     "names": {
       "nl": "Flevoland"
     }
   },
   {
     "code": "NL-FR",
-    "type": "province",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "nl": "provincie"
+    },
     "names": {
-      "nl": "Fryslân",
       "fy": "Fryslân"
     }
   },
   {
     "code": "NL-GE",
-    "type": "province",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "nl": "provincie"
+    },
     "names": {
       "nl": "Gelderland"
     }
   },
   {
     "code": "NL-GR",
-    "type": "province",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "nl": "provincie"
+    },
     "names": {
       "nl": "Groningen"
     }
   },
   {
     "code": "NL-LI",
-    "type": "province",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "nl": "provincie"
+    },
     "names": {
       "nl": "Limburg"
     }
   },
   {
     "code": "NL-NB",
-    "type": "province",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "nl": "provincie"
+    },
     "names": {
       "nl": "Noord-Brabant"
     }
   },
   {
     "code": "NL-NH",
-    "type": "province",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "nl": "provincie"
+    },
     "names": {
       "nl": "Noord-Holland"
     }
   },
   {
     "code": "NL-OV",
-    "type": "province",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "nl": "provincie"
+    },
     "names": {
       "nl": "Overijssel"
     }
   },
   {
+    "code": "NL-SX",
+    "type": {
+      "en": "country",
+      "nl": "land",
+      "pap": "pais"
+    },
+    "names": {
+      "nl": "Sint Maarten"
+    }
+  },
+  {
     "code": "NL-UT",
-    "type": "province",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "nl": "provincie"
+    },
     "names": {
       "nl": "Utrecht"
     }
   },
   {
     "code": "NL-ZE",
-    "type": "province",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "nl": "provincie"
+    },
     "names": {
       "nl": "Zeeland"
     }
   },
   {
     "code": "NL-ZH",
-    "type": "province",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "nl": "provincie"
+    },
     "names": {
       "nl": "Zuid-Holland"
     }

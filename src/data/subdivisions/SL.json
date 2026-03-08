@@ -1,7 +1,52 @@
 [
-  { "code": "SL-E", "type": "province", "names": { "en": "Eastern" } },
-  { "code": "SL-N", "type": "province", "names": { "en": "Northern" } },
-  { "code": "SL-NW", "type": "province", "names": { "en": "North Western" } },
-  { "code": "SL-S", "type": "province", "names": { "en": "Southern" } },
-  { "code": "SL-W", "type": "area", "names": { "en": "Western Area" } }
+  {
+    "code": "SL-E",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Eastern"
+    }
+  },
+  {
+    "code": "SL-N",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Northern"
+    }
+  },
+  {
+    "code": "SL-NW",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "North Western"
+    }
+  },
+  {
+    "code": "SL-S",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Southern"
+    }
+  },
+  {
+    "code": "SL-W",
+    "type": {
+      "en": "area",
+      "fr": "zone"
+    },
+    "names": {
+      "en": "Western Area (Freetown)"
+    }
+  }
 ]

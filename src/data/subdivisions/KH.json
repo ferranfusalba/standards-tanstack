@@ -1,27 +1,276 @@
 [
-  { "code": "KH-1", "type": "province", "names": { "km": "បន្ទាយមានជ័យ" } },
-  { "code": "KH-2", "type": "province", "names": { "km": "បាត់ដំបង" } },
-  { "code": "KH-3", "type": "province", "names": { "km": "កំពង់ចាម" } },
-  { "code": "KH-4", "type": "province", "names": { "km": "កំពង់ឆ្នាំង" } },
-  { "code": "KH-5", "type": "province", "names": { "km": "កំពង់ស្ពឺ" } },
-  { "code": "KH-6", "type": "province", "names": { "km": "កំពង់ធំ" } },
-  { "code": "KH-7", "type": "province", "names": { "km": "កំពត" } },
-  { "code": "KH-8", "type": "province", "names": { "km": "កណ្ដាល" } },
-  { "code": "KH-9", "type": "province", "names": { "km": "កោះកុង" } },
-  { "code": "KH-10", "type": "province", "names": { "km": "ក្រចេះ" } },
-  { "code": "KH-11", "type": "province", "names": { "km": "មណ្ឌលគីរី" } },
-  { "code": "KH-12", "type": "autonomous municipality", "names": { "km": "ភ្នំពេញ" } },
-  { "code": "KH-13", "type": "province", "names": { "km": "ព្រះវិហារ" } },
-  { "code": "KH-14", "type": "province", "names": { "km": "ព្រៃវែង" } },
-  { "code": "KH-15", "type": "province", "names": { "km": "ពោធិ៍សាត់" } },
-  { "code": "KH-16", "type": "province", "names": { "km": "រតនគីរី" } },
-  { "code": "KH-17", "type": "province", "names": { "km": "សៀមរាប" } },
-  { "code": "KH-18", "type": "province", "names": { "km": "ព្រះសីហនុ" } },
-  { "code": "KH-19", "type": "province", "names": { "km": "ស្ទឹងត្រែង" } },
-  { "code": "KH-20", "type": "province", "names": { "km": "ស្វាយរៀង" } },
-  { "code": "KH-21", "type": "province", "names": { "km": "តាកែវ" } },
-  { "code": "KH-22", "type": "province", "names": { "km": "ឧត្ដរមានជ័យ" } },
-  { "code": "KH-23", "type": "province", "names": { "km": "កែប" } },
-  { "code": "KH-24", "type": "province", "names": { "km": "ប៉ៃលិន" } },
-  { "code": "KH-25", "type": "province", "names": { "km": "ត្បូងឃ្មុំ" } }
+  {
+    "code": "KH-1",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "បន្ទាយមានជ័យ"
+    }
+  },
+  {
+    "code": "KH-2",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "បាត់ដំបង"
+    }
+  },
+  {
+    "code": "KH-3",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "កំពង់ចាម"
+    }
+  },
+  {
+    "code": "KH-4",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "កំពង់ឆ្នាំង"
+    }
+  },
+  {
+    "code": "KH-5",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "កំពង់ស្ពឺ"
+    }
+  },
+  {
+    "code": "KH-6",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "កំពង់ធំ"
+    }
+  },
+  {
+    "code": "KH-7",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "កំពត"
+    }
+  },
+  {
+    "code": "KH-8",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "កណ្ដាល"
+    }
+  },
+  {
+    "code": "KH-9",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "កោះកុង"
+    }
+  },
+  {
+    "code": "KH-10",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "ក្រចេះ"
+    }
+  },
+  {
+    "code": "KH-11",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "មណ្ឌលគីរី"
+    }
+  },
+  {
+    "code": "KH-12",
+    "type": {
+      "en": "autonomous municipality",
+      "fr": "municipalité autonome"
+    },
+    "names": {
+      "km": "ភ្នំពេញ"
+    }
+  },
+  {
+    "code": "KH-13",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "ព្រះវិហារ"
+    }
+  },
+  {
+    "code": "KH-14",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "ព្រៃវែង"
+    }
+  },
+  {
+    "code": "KH-15",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "ពោធិ៍សាត់"
+    }
+  },
+  {
+    "code": "KH-16",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "រតនគីរី"
+    }
+  },
+  {
+    "code": "KH-17",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "សៀមរាប"
+    }
+  },
+  {
+    "code": "KH-18",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "ព្រះសីហនុ"
+    }
+  },
+  {
+    "code": "KH-19",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "ស្ទឹងត្រែង"
+    }
+  },
+  {
+    "code": "KH-20",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "ស្វាយរៀង"
+    }
+  },
+  {
+    "code": "KH-21",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "តាកែវ"
+    }
+  },
+  {
+    "code": "KH-22",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "ឧត្ដរមានជ័យ"
+    }
+  },
+  {
+    "code": "KH-23",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "កែប"
+    }
+  },
+  {
+    "code": "KH-24",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "ប៉ៃលិន"
+    }
+  },
+  {
+    "code": "KH-25",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "km": "khet"
+    },
+    "names": {
+      "km": "ត្បូងឃ្មុំ"
+    }
+  }
 ]

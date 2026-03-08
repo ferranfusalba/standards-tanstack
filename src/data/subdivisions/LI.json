@@ -1,13 +1,123 @@
 [
-  { "code": "LI-01", "type": "commune", "names": { "de": "Balzers" } },
-  { "code": "LI-02", "type": "commune", "names": { "de": "Eschen" } },
-  { "code": "LI-03", "type": "commune", "names": { "de": "Gamprin" } },
-  { "code": "LI-04", "type": "commune", "names": { "de": "Mauren" } },
-  { "code": "LI-05", "type": "commune", "names": { "de": "Planken" } },
-  { "code": "LI-06", "type": "commune", "names": { "de": "Ruggell" } },
-  { "code": "LI-07", "type": "commune", "names": { "de": "Schaan" } },
-  { "code": "LI-08", "type": "commune", "names": { "de": "Schellenberg" } },
-  { "code": "LI-09", "type": "commune", "names": { "de": "Triesen" } },
-  { "code": "LI-10", "type": "commune", "names": { "de": "Triesenberg" } },
-  { "code": "LI-11", "type": "commune", "names": { "de": "Vaduz" } }
+  {
+    "code": "LI-01",
+    "type": {
+      "en": "commune",
+      "fr": "commune",
+      "de": "Gemeinde"
+    },
+    "names": {
+      "de": "Balzers"
+    }
+  },
+  {
+    "code": "LI-02",
+    "type": {
+      "en": "commune",
+      "fr": "commune",
+      "de": "Gemeinde"
+    },
+    "names": {
+      "de": "Eschen"
+    }
+  },
+  {
+    "code": "LI-03",
+    "type": {
+      "en": "commune",
+      "fr": "commune",
+      "de": "Gemeinde"
+    },
+    "names": {
+      "de": "Gamprin"
+    }
+  },
+  {
+    "code": "LI-04",
+    "type": {
+      "en": "commune",
+      "fr": "commune",
+      "de": "Gemeinde"
+    },
+    "names": {
+      "de": "Mauren"
+    }
+  },
+  {
+    "code": "LI-05",
+    "type": {
+      "en": "commune",
+      "fr": "commune",
+      "de": "Gemeinde"
+    },
+    "names": {
+      "de": "Planken"
+    }
+  },
+  {
+    "code": "LI-06",
+    "type": {
+      "en": "commune",
+      "fr": "commune",
+      "de": "Gemeinde"
+    },
+    "names": {
+      "de": "Ruggell"
+    }
+  },
+  {
+    "code": "LI-07",
+    "type": {
+      "en": "commune",
+      "fr": "commune",
+      "de": "Gemeinde"
+    },
+    "names": {
+      "de": "Schaan"
+    }
+  },
+  {
+    "code": "LI-08",
+    "type": {
+      "en": "commune",
+      "fr": "commune",
+      "de": "Gemeinde"
+    },
+    "names": {
+      "de": "Schellenberg"
+    }
+  },
+  {
+    "code": "LI-09",
+    "type": {
+      "en": "commune",
+      "fr": "commune",
+      "de": "Gemeinde"
+    },
+    "names": {
+      "de": "Triesen"
+    }
+  },
+  {
+    "code": "LI-10",
+    "type": {
+      "en": "commune",
+      "fr": "commune",
+      "de": "Gemeinde"
+    },
+    "names": {
+      "de": "Triesenberg"
+    }
+  },
+  {
+    "code": "LI-11",
+    "type": {
+      "en": "commune",
+      "fr": "commune",
+      "de": "Gemeinde"
+    },
+    "names": {
+      "de": "Vaduz"
+    }
+  }
 ]

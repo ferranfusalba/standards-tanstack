@@ -1,191 +1,299 @@
 [
   {
     "code": "UA-05",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Вінницька область"
+      "uk": "Vinnytska oblast"
     }
   },
   {
     "code": "UA-07",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Волинська область"
+      "uk": "Volynska oblast"
     }
   },
   {
     "code": "UA-09",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Луганська область"
+      "uk": "Luhanska oblast"
     }
   },
   {
     "code": "UA-12",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Дніпропетровська область"
+      "uk": "Dnipropetrovska oblast"
     }
   },
   {
     "code": "UA-14",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Донецька область"
+      "uk": "Donetska oblast"
     }
   },
   {
     "code": "UA-18",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Житомирська область"
+      "uk": "Zhytomyrska oblast"
     }
   },
   {
     "code": "UA-21",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Закарпатська область"
+      "uk": "Zakarpatska oblast"
     }
   },
   {
     "code": "UA-23",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Запорізька область"
+      "uk": "Zaporizka oblast"
     }
   },
   {
     "code": "UA-26",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Івано-Франківська область"
+      "uk": "Ivano-Frankivska oblast"
     }
   },
   {
     "code": "UA-30",
-    "type": "city",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "uk": "misto"
+    },
     "names": {
-      "uk": "Київ"
+      "uk": "Kyiv"
     }
   },
   {
     "code": "UA-32",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Київська область"
+      "uk": "Kyivska oblast"
     }
   },
   {
     "code": "UA-35",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Кіровоградська область"
+      "uk": "Kirovohradska oblast"
     }
   },
   {
     "code": "UA-40",
-    "type": "city",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "uk": "misto"
+    },
     "names": {
-      "uk": "Севастополь"
+      "uk": "Sevastopol"
     }
   },
   {
     "code": "UA-43",
-    "type": "autonomous republic",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "uk": "respublika"
+    },
     "names": {
-      "uk": "Автономна Республіка Крим"
+      "uk": "Avtonomna Respublika Krym"
     }
   },
   {
     "code": "UA-46",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Львівська область"
+      "uk": "Lvivska oblast"
     }
   },
   {
     "code": "UA-48",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Миколаївська область"
+      "uk": "Mykolaivska oblast"
     }
   },
   {
     "code": "UA-51",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Одеська область"
+      "uk": "Odeska oblast"
     }
   },
   {
     "code": "UA-53",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Полтавська область"
+      "uk": "Poltavska oblast"
     }
   },
   {
     "code": "UA-56",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Рівненська область"
+      "uk": "Rivnenska oblast"
     }
   },
   {
     "code": "UA-59",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Сумська область"
+      "uk": "Sumska oblast"
     }
   },
   {
     "code": "UA-61",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Тернопільська область"
+      "uk": "Ternopilska oblast"
     }
   },
   {
     "code": "UA-63",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Харківська область"
+      "uk": "Kharkivska oblast"
     }
   },
   {
     "code": "UA-65",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Херсонська область"
+      "uk": "Khersonska oblast"
     }
   },
   {
     "code": "UA-68",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Хмельницька область"
+      "uk": "Khmelnytska oblast"
     }
   },
   {
     "code": "UA-71",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Черкаська область"
+      "uk": "Cherkaska oblast"
     }
   },
   {
     "code": "UA-74",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Чернігівська область"
+      "uk": "Chernihivska oblast"
     }
   },
   {
     "code": "UA-77",
-    "type": "oblast",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uk": "oblast'"
+    },
     "names": {
-      "uk": "Чернівецька область"
+      "uk": "Chernivetska oblast"
     }
   }
 ]

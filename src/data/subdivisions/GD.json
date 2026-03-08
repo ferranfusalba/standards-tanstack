@@ -1,9 +1,72 @@
 [
-  { "code": "GD-01", "type": "parish", "names": { "en": "Saint Andrew" } },
-  { "code": "GD-02", "type": "parish", "names": { "en": "Saint David" } },
-  { "code": "GD-03", "type": "parish", "names": { "en": "Saint George" } },
-  { "code": "GD-04", "type": "parish", "names": { "en": "Saint John" } },
-  { "code": "GD-05", "type": "parish", "names": { "en": "Saint Mark" } },
-  { "code": "GD-06", "type": "parish", "names": { "en": "Saint Patrick" } },
-  { "code": "GD-10", "type": "dependency", "names": { "en": "Southern Grenadine Islands" } }
+  {
+    "code": "GD-01",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Andrew"
+    }
+  },
+  {
+    "code": "GD-02",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint David"
+    }
+  },
+  {
+    "code": "GD-03",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint George"
+    }
+  },
+  {
+    "code": "GD-04",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint John"
+    }
+  },
+  {
+    "code": "GD-05",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Mark"
+    }
+  },
+  {
+    "code": "GD-06",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Patrick"
+    }
+  },
+  {
+    "code": "GD-10",
+    "type": {
+      "en": "dependency",
+      "fr": "dépendance"
+    },
+    "names": {
+      "en": "Southern Grenadine Islands"
+    }
+  }
 ]

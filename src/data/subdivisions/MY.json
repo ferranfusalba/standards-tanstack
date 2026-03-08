@@ -1,18 +1,178 @@
 [
-  { "code": "MY-01", "type": "state", "names": { "ms": "Johor" } },
-  { "code": "MY-02", "type": "state", "names": { "ms": "Kedah" } },
-  { "code": "MY-03", "type": "state", "names": { "ms": "Kelantan" } },
-  { "code": "MY-04", "type": "state", "names": { "ms": "Melaka" } },
-  { "code": "MY-05", "type": "state", "names": { "ms": "Negeri Sembilan" } },
-  { "code": "MY-06", "type": "state", "names": { "ms": "Pahang" } },
-  { "code": "MY-07", "type": "state", "names": { "ms": "Pulau Pinang" } },
-  { "code": "MY-08", "type": "state", "names": { "ms": "Perak" } },
-  { "code": "MY-09", "type": "state", "names": { "ms": "Perlis" } },
-  { "code": "MY-10", "type": "state", "names": { "ms": "Selangor" } },
-  { "code": "MY-11", "type": "state", "names": { "ms": "Terengganu" } },
-  { "code": "MY-12", "type": "state", "names": { "ms": "Sabah" } },
-  { "code": "MY-13", "type": "state", "names": { "ms": "Sarawak" } },
-  { "code": "MY-14", "type": "federal territory", "names": { "ms": "Wilayah Persekutuan Kuala Lumpur" } },
-  { "code": "MY-15", "type": "federal territory", "names": { "ms": "Wilayah Persekutuan Labuan" } },
-  { "code": "MY-16", "type": "federal territory", "names": { "ms": "Wilayah Persekutuan Putrajaya" } }
+  {
+    "code": "MY-01",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ms": "negeri"
+    },
+    "names": {
+      "ms": "Johor"
+    }
+  },
+  {
+    "code": "MY-02",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ms": "negeri"
+    },
+    "names": {
+      "ms": "Kedah"
+    }
+  },
+  {
+    "code": "MY-03",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ms": "negeri"
+    },
+    "names": {
+      "ms": "Kelantan"
+    }
+  },
+  {
+    "code": "MY-04",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ms": "negeri"
+    },
+    "names": {
+      "ms": "Melaka"
+    }
+  },
+  {
+    "code": "MY-05",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ms": "negeri"
+    },
+    "names": {
+      "ms": "Negeri Sembilan"
+    }
+  },
+  {
+    "code": "MY-06",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ms": "negeri"
+    },
+    "names": {
+      "ms": "Pahang"
+    }
+  },
+  {
+    "code": "MY-07",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ms": "negeri"
+    },
+    "names": {
+      "ms": "Pulau Pinang"
+    }
+  },
+  {
+    "code": "MY-08",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ms": "negeri"
+    },
+    "names": {
+      "ms": "Perak"
+    }
+  },
+  {
+    "code": "MY-09",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ms": "negeri"
+    },
+    "names": {
+      "ms": "Perlis"
+    }
+  },
+  {
+    "code": "MY-10",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ms": "negeri"
+    },
+    "names": {
+      "ms": "Selangor"
+    }
+  },
+  {
+    "code": "MY-11",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ms": "negeri"
+    },
+    "names": {
+      "ms": "Terengganu"
+    }
+  },
+  {
+    "code": "MY-12",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ms": "negeri"
+    },
+    "names": {
+      "ms": "Sabah"
+    }
+  },
+  {
+    "code": "MY-13",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "ms": "negeri"
+    },
+    "names": {
+      "ms": "Sarawak"
+    }
+  },
+  {
+    "code": "MY-14",
+    "type": {
+      "en": "federal territory",
+      "fr": "territoire fédéral",
+      "ms": "wilayah persekutuan"
+    },
+    "names": {
+      "ms": "Wilayah Persekutuan Kuala Lumpur"
+    }
+  },
+  {
+    "code": "MY-15",
+    "type": {
+      "en": "federal territory",
+      "fr": "territoire fédéral",
+      "ms": "wilayah persekutuan"
+    },
+    "names": {
+      "ms": "Wilayah Persekutuan Labuan"
+    }
+  },
+  {
+    "code": "MY-16",
+    "type": {
+      "en": "federal territory",
+      "fr": "territoire fédéral",
+      "ms": "wilayah persekutuan"
+    },
+    "names": {
+      "ms": "Wilayah Persekutuan Putrajaya"
+    }
+  }
 ]

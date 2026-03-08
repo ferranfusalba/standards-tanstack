@@ -1,6 +1,1527 @@
 [
-  { "code": "UG-C", "type": "geographical region", "names": { "en": "Central" } },
-  { "code": "UG-E", "type": "geographical region", "names": { "en": "Eastern" } },
-  { "code": "UG-N", "type": "geographical region", "names": { "en": "Northern" } },
-  { "code": "UG-W", "type": "geographical region", "names": { "en": "Western" } }
+  {
+    "code": "UG-C",
+    "type": {
+      "en": "geographical region",
+      "fr": "région géographique"
+    },
+    "names": {
+      "en": "Central"
+    }
+  },
+  {
+    "code": "UG-E",
+    "type": {
+      "en": "geographical region",
+      "fr": "région géographique"
+    },
+    "names": {
+      "en": "Eastern"
+    }
+  },
+  {
+    "code": "UG-N",
+    "type": {
+      "en": "geographical region",
+      "fr": "région géographique"
+    },
+    "names": {
+      "en": "Northern"
+    }
+  },
+  {
+    "code": "UG-W",
+    "type": {
+      "en": "geographical region",
+      "fr": "région géographique"
+    },
+    "names": {
+      "en": "Western"
+    }
+  },
+  {
+    "code": "UG-101",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Kalangala"
+    }
+  },
+  {
+    "code": "UG-102",
+    "type": {
+      "en": "city",
+      "fr": "ville"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Kampala"
+    }
+  },
+  {
+    "code": "UG-103",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Kiboga"
+    }
+  },
+  {
+    "code": "UG-104",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Luwero"
+    }
+  },
+  {
+    "code": "UG-105",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Masaka"
+    }
+  },
+  {
+    "code": "UG-106",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Mpigi"
+    }
+  },
+  {
+    "code": "UG-107",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Mubende"
+    }
+  },
+  {
+    "code": "UG-108",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Mukono"
+    }
+  },
+  {
+    "code": "UG-109",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Nakasongola"
+    }
+  },
+  {
+    "code": "UG-110",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Rakai"
+    }
+  },
+  {
+    "code": "UG-111",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Sembabule"
+    }
+  },
+  {
+    "code": "UG-112",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Kayunga"
+    }
+  },
+  {
+    "code": "UG-113",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Wakiso"
+    }
+  },
+  {
+    "code": "UG-114",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Lyantonde"
+    }
+  },
+  {
+    "code": "UG-115",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Mityana"
+    }
+  },
+  {
+    "code": "UG-116",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Nakaseke"
+    }
+  },
+  {
+    "code": "UG-117",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Buikwe"
+    }
+  },
+  {
+    "code": "UG-118",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Bukomansibi"
+    }
+  },
+  {
+    "code": "UG-119",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Butambala"
+    }
+  },
+  {
+    "code": "UG-120",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Buvuma"
+    }
+  },
+  {
+    "code": "UG-121",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Gomba"
+    }
+  },
+  {
+    "code": "UG-122",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Kalungu"
+    }
+  },
+  {
+    "code": "UG-123",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Kyankwanzi"
+    }
+  },
+  {
+    "code": "UG-124",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Lwengo"
+    }
+  },
+  {
+    "code": "UG-125",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Kyotera"
+    }
+  },
+  {
+    "code": "UG-126",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-C",
+    "names": {
+      "en": "Kasanda"
+    }
+  },
+  {
+    "code": "UG-201",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Bugiri"
+    }
+  },
+  {
+    "code": "UG-202",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Busia"
+    }
+  },
+  {
+    "code": "UG-203",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Iganga"
+    }
+  },
+  {
+    "code": "UG-204",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Jinja"
+    }
+  },
+  {
+    "code": "UG-205",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Kamuli"
+    }
+  },
+  {
+    "code": "UG-206",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Kapchorwa"
+    }
+  },
+  {
+    "code": "UG-207",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Katakwi"
+    }
+  },
+  {
+    "code": "UG-208",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Kumi"
+    }
+  },
+  {
+    "code": "UG-209",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Mbale"
+    }
+  },
+  {
+    "code": "UG-210",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Pallisa"
+    }
+  },
+  {
+    "code": "UG-211",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Soroti"
+    }
+  },
+  {
+    "code": "UG-212",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Tororo"
+    }
+  },
+  {
+    "code": "UG-213",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Kaberamaido"
+    }
+  },
+  {
+    "code": "UG-214",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Mayuge"
+    }
+  },
+  {
+    "code": "UG-215",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Sironko"
+    }
+  },
+  {
+    "code": "UG-216",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Amuria"
+    }
+  },
+  {
+    "code": "UG-217",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Budaka"
+    }
+  },
+  {
+    "code": "UG-218",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Bududa"
+    }
+  },
+  {
+    "code": "UG-219",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Bukedea"
+    }
+  },
+  {
+    "code": "UG-220",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Bukwo"
+    }
+  },
+  {
+    "code": "UG-221",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Butaleja"
+    }
+  },
+  {
+    "code": "UG-222",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Kaliro"
+    }
+  },
+  {
+    "code": "UG-223",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Manafwa"
+    }
+  },
+  {
+    "code": "UG-224",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Namutumba"
+    }
+  },
+  {
+    "code": "UG-225",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Bulambuli"
+    }
+  },
+  {
+    "code": "UG-226",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Buyende"
+    }
+  },
+  {
+    "code": "UG-227",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Kibuku"
+    }
+  },
+  {
+    "code": "UG-228",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Kween"
+    }
+  },
+  {
+    "code": "UG-229",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Luuka"
+    }
+  },
+  {
+    "code": "UG-230",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Namayingo"
+    }
+  },
+  {
+    "code": "UG-231",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Ngora"
+    }
+  },
+  {
+    "code": "UG-232",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Serere"
+    }
+  },
+  {
+    "code": "UG-233",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Butebo"
+    }
+  },
+  {
+    "code": "UG-234",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Namisindwa"
+    }
+  },
+  {
+    "code": "UG-235",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Bugweri"
+    }
+  },
+  {
+    "code": "UG-236",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Kapelebyong"
+    }
+  },
+  {
+    "code": "UG-237",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-E",
+    "names": {
+      "en": "Kalaki"
+    }
+  },
+  {
+    "code": "UG-301",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Adjumani"
+    }
+  },
+  {
+    "code": "UG-302",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Apac"
+    }
+  },
+  {
+    "code": "UG-303",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Arua"
+    }
+  },
+  {
+    "code": "UG-304",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Gulu"
+    }
+  },
+  {
+    "code": "UG-305",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Kitgum"
+    }
+  },
+  {
+    "code": "UG-306",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Kotido"
+    }
+  },
+  {
+    "code": "UG-307",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Lira"
+    }
+  },
+  {
+    "code": "UG-308",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Moroto"
+    }
+  },
+  {
+    "code": "UG-309",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Moyo"
+    }
+  },
+  {
+    "code": "UG-310",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Nebbi"
+    }
+  },
+  {
+    "code": "UG-311",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Nakapiripirit"
+    }
+  },
+  {
+    "code": "UG-312",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Pader"
+    }
+  },
+  {
+    "code": "UG-313",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Yumbe"
+    }
+  },
+  {
+    "code": "UG-314",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Abim"
+    }
+  },
+  {
+    "code": "UG-315",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Amolatar"
+    }
+  },
+  {
+    "code": "UG-316",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Amuru"
+    }
+  },
+  {
+    "code": "UG-317",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Dokolo"
+    }
+  },
+  {
+    "code": "UG-318",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Kaabong"
+    }
+  },
+  {
+    "code": "UG-319",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Koboko"
+    }
+  },
+  {
+    "code": "UG-320",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Maracha"
+    }
+  },
+  {
+    "code": "UG-321",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Oyam"
+    }
+  },
+  {
+    "code": "UG-322",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Agago"
+    }
+  },
+  {
+    "code": "UG-323",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Alebtong"
+    }
+  },
+  {
+    "code": "UG-324",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Amudat"
+    }
+  },
+  {
+    "code": "UG-325",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Kole"
+    }
+  },
+  {
+    "code": "UG-326",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Lamwo"
+    }
+  },
+  {
+    "code": "UG-327",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Napak"
+    }
+  },
+  {
+    "code": "UG-328",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Nwoya"
+    }
+  },
+  {
+    "code": "UG-329",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Otuke"
+    }
+  },
+  {
+    "code": "UG-330",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Zombo"
+    }
+  },
+  {
+    "code": "UG-331",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Omoro"
+    }
+  },
+  {
+    "code": "UG-332",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Pakwach"
+    }
+  },
+  {
+    "code": "UG-333",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Kwania"
+    }
+  },
+  {
+    "code": "UG-334",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Nabilatuk"
+    }
+  },
+  {
+    "code": "UG-335",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Karenga"
+    }
+  },
+  {
+    "code": "UG-336",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Madi-Okollo"
+    }
+  },
+  {
+    "code": "UG-337",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-N",
+    "names": {
+      "en": "Obongi"
+    }
+  },
+  {
+    "code": "UG-401",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Bundibugyo"
+    }
+  },
+  {
+    "code": "UG-402",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Bushenyi"
+    }
+  },
+  {
+    "code": "UG-403",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Hoima"
+    }
+  },
+  {
+    "code": "UG-404",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Kabale"
+    }
+  },
+  {
+    "code": "UG-405",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Kabarole"
+    }
+  },
+  {
+    "code": "UG-406",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Kasese"
+    }
+  },
+  {
+    "code": "UG-407",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Kibaale"
+    }
+  },
+  {
+    "code": "UG-408",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Kisoro"
+    }
+  },
+  {
+    "code": "UG-409",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Masindi"
+    }
+  },
+  {
+    "code": "UG-410",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Mbarara"
+    }
+  },
+  {
+    "code": "UG-411",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Ntungamo"
+    }
+  },
+  {
+    "code": "UG-412",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Rukungiri"
+    }
+  },
+  {
+    "code": "UG-413",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Kamwenge"
+    }
+  },
+  {
+    "code": "UG-414",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Kanungu"
+    }
+  },
+  {
+    "code": "UG-415",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Kyenjojo"
+    }
+  },
+  {
+    "code": "UG-416",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Buliisa"
+    }
+  },
+  {
+    "code": "UG-417",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Ibanda"
+    }
+  },
+  {
+    "code": "UG-418",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Isingiro"
+    }
+  },
+  {
+    "code": "UG-419",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Kiruhura"
+    }
+  },
+  {
+    "code": "UG-420",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Buhweju"
+    }
+  },
+  {
+    "code": "UG-421",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Kiryandongo"
+    }
+  },
+  {
+    "code": "UG-422",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Kyegegwa"
+    }
+  },
+  {
+    "code": "UG-423",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Mitooma"
+    }
+  },
+  {
+    "code": "UG-424",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Ntoroko"
+    }
+  },
+  {
+    "code": "UG-425",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Rubirizi"
+    }
+  },
+  {
+    "code": "UG-426",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Sheema"
+    }
+  },
+  {
+    "code": "UG-427",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Kagadi"
+    }
+  },
+  {
+    "code": "UG-428",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Kakumiro"
+    }
+  },
+  {
+    "code": "UG-429",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Rubanda"
+    }
+  },
+  {
+    "code": "UG-430",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Bunyangabu"
+    }
+  },
+  {
+    "code": "UG-431",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Rukiga"
+    }
+  },
+  {
+    "code": "UG-432",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Kikuube"
+    }
+  },
+  {
+    "code": "UG-433",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Kazo"
+    }
+  },
+  {
+    "code": "UG-434",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Kitagwenda"
+    }
+  },
+  {
+    "code": "UG-435",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "parent": "UG-W",
+    "names": {
+      "en": "Rwampara"
+    }
+  }
 ]

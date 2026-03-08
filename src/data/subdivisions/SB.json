@@ -1,12 +1,102 @@
 [
-  { "code": "SB-CE", "type": "province", "names": { "en": "Central" } },
-  { "code": "SB-CH", "type": "province", "names": { "en": "Choiseul" } },
-  { "code": "SB-CT", "type": "capital territory", "names": { "en": "Honiara" } },
-  { "code": "SB-GU", "type": "province", "names": { "en": "Guadalcanal" } },
-  { "code": "SB-IS", "type": "province", "names": { "en": "Isabel" } },
-  { "code": "SB-MK", "type": "province", "names": { "en": "Makira-Ulawa" } },
-  { "code": "SB-ML", "type": "province", "names": { "en": "Malaita" } },
-  { "code": "SB-RB", "type": "province", "names": { "en": "Rennell and Bellona" } },
-  { "code": "SB-TE", "type": "province", "names": { "en": "Temotu" } },
-  { "code": "SB-WE", "type": "province", "names": { "en": "Western" } }
+  {
+    "code": "SB-CE",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Central"
+    }
+  },
+  {
+    "code": "SB-CH",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Choiseul"
+    }
+  },
+  {
+    "code": "SB-CT",
+    "type": {
+      "en": "capital territory",
+      "fr": "territoire de la capitale"
+    },
+    "names": {
+      "en": "Capital Territory (Honiara)"
+    }
+  },
+  {
+    "code": "SB-GU",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Guadalcanal"
+    }
+  },
+  {
+    "code": "SB-IS",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Isabel"
+    }
+  },
+  {
+    "code": "SB-MK",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Makira-Ulawa"
+    }
+  },
+  {
+    "code": "SB-ML",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Malaita"
+    }
+  },
+  {
+    "code": "SB-RB",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Rennell and Bellona"
+    }
+  },
+  {
+    "code": "SB-TE",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Temotu"
+    }
+  },
+  {
+    "code": "SB-WE",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Western"
+    }
+  }
 ]

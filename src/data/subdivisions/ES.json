@@ -29,7 +29,7 @@
       "es": "comunidad autónoma"
     },
     "names": {
-      "es": "Principado de Asturias"
+      "es": "Asturias, Principado de"
     }
   },
   {
@@ -47,9 +47,10 @@
     "code": "ES-CE",
     "type": {
       "en": "autonomous city in North Africa",
-      "fr": "ville autonome d'Afrique du Nord",
-      "es": "ciudad autónoma en África del Norte"
+      "fr": "ville autonome en Afrique du Nord",
+      "es": "ciudad autónoma en el Norte de África"
     },
+    "flag": "🇪🇦",
     "names": {
       "es": "Ceuta"
     }
@@ -83,6 +84,7 @@
       "fr": "communauté autonome",
       "es": "comunidad autónoma"
     },
+    "flag": "🇮🇨",
     "names": {
       "es": "Canarias"
     }
@@ -142,7 +144,7 @@
       "es": "comunidad autónoma"
     },
     "names": {
-      "es": "Región de Murcia"
+      "es": "Murcia, Región de"
     }
   },
   {
@@ -153,16 +155,17 @@
       "es": "comunidad autónoma"
     },
     "names": {
-      "es": "Comunidad de Madrid"
+      "es": "Madrid, Comunidad de"
     }
   },
   {
     "code": "ES-ML",
     "type": {
       "en": "autonomous city in North Africa",
-      "fr": "ville autonome d'Afrique du Nord",
-      "es": "ciudad autónoma en África del Norte"
+      "fr": "ville autonome en Afrique du Nord",
+      "es": "ciudad autónoma en el Norte de África"
     },
+    "flag": "🇪🇦",
     "names": {
       "es": "Melilla"
     }
@@ -175,7 +178,7 @@
       "es": "comunidad autónoma"
     },
     "names": {
-      "es": "Comunidad Foral de Navarra",
+      "es": "Navarra, Comunidad Foral de",
       "eu": "Nafarroako Foru Komunitatea"
     }
   },
@@ -188,7 +191,7 @@
     },
     "names": {
       "es": "País Vasco",
-      "eu": "Euskadi"
+      "eu": "Euskal Herria"
     }
   },
   {
@@ -210,8 +213,8 @@
       "es": "comunidad autónoma"
     },
     "names": {
-      "es": "Comunidad Valenciana",
-      "ca": "Comunitat Valenciana"
+      "es": "Valenciana, Comunidad",
+      "ca": "Valenciana, Comunitat"
     }
   },
   {
@@ -221,6 +224,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-VC",
     "names": {
       "es": "Alicante",
       "ca": "Alacant"
@@ -233,6 +237,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CM",
     "names": {
       "es": "Albacete"
     }
@@ -244,6 +249,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-AN",
     "names": {
       "es": "Almería"
     }
@@ -255,6 +261,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CL",
     "names": {
       "es": "Ávila"
     }
@@ -266,6 +273,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CT",
     "names": {
       "es": "Barcelona"
     }
@@ -277,6 +285,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-EX",
     "names": {
       "es": "Badajoz"
     }
@@ -288,8 +297,8 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-PV",
     "names": {
-      "es": "Vizcaya",
       "eu": "Bizkaia"
     }
   },
@@ -300,6 +309,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CL",
     "names": {
       "es": "Burgos"
     }
@@ -311,6 +321,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-GA",
     "names": {
       "es": "La Coruña",
       "gl": "A Coruña"
@@ -323,6 +334,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-AN",
     "names": {
       "es": "Cádiz"
     }
@@ -334,6 +346,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-EX",
     "names": {
       "es": "Cáceres"
     }
@@ -345,6 +358,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-AN",
     "names": {
       "es": "Córdoba"
     }
@@ -356,6 +370,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CM",
     "names": {
       "es": "Ciudad Real"
     }
@@ -367,6 +382,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-VC",
     "names": {
       "es": "Castellón",
       "ca": "Castelló"
@@ -379,6 +395,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CM",
     "names": {
       "es": "Cuenca"
     }
@@ -390,6 +407,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CN",
     "names": {
       "es": "Las Palmas"
     }
@@ -401,6 +419,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CT",
     "names": {
       "es": "Gerona",
       "ca": "Girona"
@@ -413,6 +432,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-AN",
     "names": {
       "es": "Granada"
     }
@@ -424,6 +444,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CM",
     "names": {
       "es": "Guadalajara"
     }
@@ -435,6 +456,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-AN",
     "names": {
       "es": "Huelva"
     }
@@ -446,6 +468,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-AR",
     "names": {
       "es": "Huesca"
     }
@@ -457,6 +480,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-AN",
     "names": {
       "es": "Jaén"
     }
@@ -468,6 +492,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CT",
     "names": {
       "es": "Lérida",
       "ca": "Lleida"
@@ -480,6 +505,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CL",
     "names": {
       "es": "León"
     }
@@ -491,6 +517,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-RI",
     "names": {
       "es": "La Rioja"
     }
@@ -502,8 +529,9 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-GA",
     "names": {
-      "es": "Lugo"
+      "gl": "Lugo"
     }
   },
   {
@@ -513,6 +541,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-MD",
     "names": {
       "es": "Madrid"
     }
@@ -524,6 +553,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-AN",
     "names": {
       "es": "Málaga"
     }
@@ -535,6 +565,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-MC",
     "names": {
       "es": "Murcia"
     }
@@ -546,6 +577,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-NC",
     "names": {
       "es": "Navarra",
       "eu": "Nafarroa"
@@ -558,6 +590,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-AS",
     "names": {
       "es": "Asturias"
     }
@@ -569,6 +602,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-GA",
     "names": {
       "es": "Orense",
       "gl": "Ourense"
@@ -581,6 +615,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CL",
     "names": {
       "es": "Palencia"
     }
@@ -592,6 +627,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-IB",
     "names": {
       "es": "Islas Baleares",
       "ca": "Illes Balears"
@@ -604,8 +640,9 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-GA",
     "names": {
-      "es": "Pontevedra"
+      "gl": "Pontevedra"
     }
   },
   {
@@ -615,6 +652,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CB",
     "names": {
       "es": "Cantabria"
     }
@@ -626,6 +664,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CL",
     "names": {
       "es": "Salamanca"
     }
@@ -637,6 +676,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-AN",
     "names": {
       "es": "Sevilla"
     }
@@ -648,6 +688,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CL",
     "names": {
       "es": "Segovia"
     }
@@ -659,6 +700,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CL",
     "names": {
       "es": "Soria"
     }
@@ -670,8 +712,8 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-PV",
     "names": {
-      "es": "Guipúzcoa",
       "eu": "Gipuzkoa"
     }
   },
@@ -682,8 +724,9 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CT",
     "names": {
-      "es": "Tarragona"
+      "ca": "Tarragona"
     }
   },
   {
@@ -693,6 +736,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-AR",
     "names": {
       "es": "Teruel"
     }
@@ -704,6 +748,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CN",
     "names": {
       "es": "Santa Cruz de Tenerife"
     }
@@ -715,6 +760,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CM",
     "names": {
       "es": "Toledo"
     }
@@ -726,6 +772,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-VC",
     "names": {
       "es": "Valencia",
       "ca": "València"
@@ -738,6 +785,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CL",
     "names": {
       "es": "Valladolid"
     }
@@ -749,6 +797,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-PV",
     "names": {
       "es": "Álava",
       "eu": "Araba"
@@ -761,6 +810,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-AR",
     "names": {
       "es": "Zaragoza"
     }
@@ -772,6 +822,7 @@
       "fr": "province",
       "es": "provincia"
     },
+    "parent": "ES-CL",
     "names": {
       "es": "Zamora"
     }

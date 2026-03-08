@@ -1,19 +1,189 @@
 [
-  { "code": "NI-AN", "type": "autonomous region", "names": { "es": "Costa Caribe Norte" } },
-  { "code": "NI-AS", "type": "autonomous region", "names": { "es": "Costa Caribe Sur" } },
-  { "code": "NI-BO", "type": "department", "names": { "es": "Boaco" } },
-  { "code": "NI-CA", "type": "department", "names": { "es": "Carazo" } },
-  { "code": "NI-CI", "type": "department", "names": { "es": "Chinandega" } },
-  { "code": "NI-CO", "type": "department", "names": { "es": "Chontales" } },
-  { "code": "NI-ES", "type": "department", "names": { "es": "Estelí" } },
-  { "code": "NI-GR", "type": "department", "names": { "es": "Granada" } },
-  { "code": "NI-JI", "type": "department", "names": { "es": "Jinotega" } },
-  { "code": "NI-LE", "type": "department", "names": { "es": "León" } },
-  { "code": "NI-MD", "type": "department", "names": { "es": "Madriz" } },
-  { "code": "NI-MN", "type": "department", "names": { "es": "Managua" } },
-  { "code": "NI-MS", "type": "department", "names": { "es": "Masaya" } },
-  { "code": "NI-MT", "type": "department", "names": { "es": "Matagalpa" } },
-  { "code": "NI-NS", "type": "department", "names": { "es": "Nueva Segovia" } },
-  { "code": "NI-RI", "type": "department", "names": { "es": "Rivas" } },
-  { "code": "NI-SJ", "type": "department", "names": { "es": "Río San Juan" } }
+  {
+    "code": "NI-AN",
+    "type": {
+      "en": "autonomous region",
+      "fr": "région autonome",
+      "es": "región autónoma"
+    },
+    "names": {
+      "es": "Costa Caribe Norte"
+    }
+  },
+  {
+    "code": "NI-AS",
+    "type": {
+      "en": "autonomous region",
+      "fr": "région autonome",
+      "es": "región autónoma"
+    },
+    "names": {
+      "es": "Costa Caribe Sur"
+    }
+  },
+  {
+    "code": "NI-BO",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Boaco"
+    }
+  },
+  {
+    "code": "NI-CA",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Carazo"
+    }
+  },
+  {
+    "code": "NI-CI",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Chinandega"
+    }
+  },
+  {
+    "code": "NI-CO",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Chontales"
+    }
+  },
+  {
+    "code": "NI-ES",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Estelí"
+    }
+  },
+  {
+    "code": "NI-GR",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Granada"
+    }
+  },
+  {
+    "code": "NI-JI",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Jinotega"
+    }
+  },
+  {
+    "code": "NI-LE",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "León"
+    }
+  },
+  {
+    "code": "NI-MD",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Madriz"
+    }
+  },
+  {
+    "code": "NI-MN",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Managua"
+    }
+  },
+  {
+    "code": "NI-MS",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Masaya"
+    }
+  },
+  {
+    "code": "NI-MT",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Matagalpa"
+    }
+  },
+  {
+    "code": "NI-NS",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Nueva Segovia"
+    }
+  },
+  {
+    "code": "NI-RI",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Rivas"
+    }
+  },
+  {
+    "code": "NI-SJ",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Río San Juan"
+    }
+  }
 ]

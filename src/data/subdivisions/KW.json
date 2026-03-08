@@ -1,8 +1,68 @@
 [
-  { "code": "KW-AH", "type": "governorate", "names": { "ar": "الأحمدي" } },
-  { "code": "KW-FA", "type": "governorate", "names": { "ar": "الفروانية" } },
-  { "code": "KW-HA", "type": "governorate", "names": { "ar": "حولي" } },
-  { "code": "KW-JA", "type": "governorate", "names": { "ar": "الجهراء" } },
-  { "code": "KW-KU", "type": "governorate", "names": { "ar": "العاصمة" } },
-  { "code": "KW-MU", "type": "governorate", "names": { "ar": "مبارك الكبير" } }
+  {
+    "code": "KW-AH",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "الأحمدي"
+    }
+  },
+  {
+    "code": "KW-FA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "الفروانية"
+    }
+  },
+  {
+    "code": "KW-HA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "حولي"
+    }
+  },
+  {
+    "code": "KW-JA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "الجهراء"
+    }
+  },
+  {
+    "code": "KW-KU",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "العاصمة"
+    }
+  },
+  {
+    "code": "KW-MU",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "مبارك الكبير"
+    }
+  }
 ]

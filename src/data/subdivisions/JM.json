@@ -1,16 +1,142 @@
 [
-  { "code": "JM-01", "type": "parish", "names": { "en": "Kingston" } },
-  { "code": "JM-02", "type": "parish", "names": { "en": "Saint Andrew" } },
-  { "code": "JM-03", "type": "parish", "names": { "en": "Saint Thomas" } },
-  { "code": "JM-04", "type": "parish", "names": { "en": "Portland" } },
-  { "code": "JM-05", "type": "parish", "names": { "en": "Saint Mary" } },
-  { "code": "JM-06", "type": "parish", "names": { "en": "Saint Ann" } },
-  { "code": "JM-07", "type": "parish", "names": { "en": "Trelawny" } },
-  { "code": "JM-08", "type": "parish", "names": { "en": "Saint James" } },
-  { "code": "JM-09", "type": "parish", "names": { "en": "Hanover" } },
-  { "code": "JM-10", "type": "parish", "names": { "en": "Westmoreland" } },
-  { "code": "JM-11", "type": "parish", "names": { "en": "Saint Elizabeth" } },
-  { "code": "JM-12", "type": "parish", "names": { "en": "Manchester" } },
-  { "code": "JM-13", "type": "parish", "names": { "en": "Clarendon" } },
-  { "code": "JM-14", "type": "parish", "names": { "en": "Saint Catherine" } }
+  {
+    "code": "JM-01",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Kingston"
+    }
+  },
+  {
+    "code": "JM-02",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Andrew"
+    }
+  },
+  {
+    "code": "JM-03",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Thomas"
+    }
+  },
+  {
+    "code": "JM-04",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Portland"
+    }
+  },
+  {
+    "code": "JM-05",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Mary"
+    }
+  },
+  {
+    "code": "JM-06",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Ann"
+    }
+  },
+  {
+    "code": "JM-07",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Trelawny"
+    }
+  },
+  {
+    "code": "JM-08",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint James"
+    }
+  },
+  {
+    "code": "JM-09",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Hanover"
+    }
+  },
+  {
+    "code": "JM-10",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Westmoreland"
+    }
+  },
+  {
+    "code": "JM-11",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Elizabeth"
+    }
+  },
+  {
+    "code": "JM-12",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Manchester"
+    }
+  },
+  {
+    "code": "JM-13",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Clarendon"
+    }
+  },
+  {
+    "code": "JM-14",
+    "type": {
+      "en": "parish",
+      "fr": "paroisse"
+    },
+    "names": {
+      "en": "Saint Catherine"
+    }
+  }
 ]

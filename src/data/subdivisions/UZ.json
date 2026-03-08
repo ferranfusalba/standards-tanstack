@@ -1,16 +1,156 @@
 [
-  { "code": "UZ-AN", "type": "region", "names": { "uz": "Andijon" } },
-  { "code": "UZ-BU", "type": "region", "names": { "uz": "Buxoro" } },
-  { "code": "UZ-FA", "type": "region", "names": { "uz": "Fargona" } },
-  { "code": "UZ-JI", "type": "region", "names": { "uz": "Jizzax" } },
-  { "code": "UZ-NG", "type": "region", "names": { "uz": "Namangan" } },
-  { "code": "UZ-NW", "type": "region", "names": { "uz": "Navoiy" } },
-  { "code": "UZ-QA", "type": "region", "names": { "uz": "Qashqadaryo" } },
-  { "code": "UZ-QR", "type": "republic", "names": { "uz": "Qoraqalpogiston Respublikasi" } },
-  { "code": "UZ-SA", "type": "region", "names": { "uz": "Samarqand" } },
-  { "code": "UZ-SI", "type": "region", "names": { "uz": "Sirdaryo" } },
-  { "code": "UZ-SU", "type": "region", "names": { "uz": "Surxondaryo" } },
-  { "code": "UZ-TK", "type": "city", "names": { "uz": "Toshkent" } },
-  { "code": "UZ-TO", "type": "region", "names": { "uz": "Toshkent" } },
-  { "code": "UZ-XO", "type": "region", "names": { "uz": "Xorazm" } }
+  {
+    "code": "UZ-AN",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uz": "viloyat"
+    },
+    "names": {
+      "uz": "Andijon"
+    }
+  },
+  {
+    "code": "UZ-BU",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uz": "viloyat"
+    },
+    "names": {
+      "uz": "Buxoro"
+    }
+  },
+  {
+    "code": "UZ-FA",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uz": "viloyat"
+    },
+    "names": {
+      "uz": "Farg'ona"
+    }
+  },
+  {
+    "code": "UZ-JI",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uz": "viloyat"
+    },
+    "names": {
+      "uz": "Jizzax"
+    }
+  },
+  {
+    "code": "UZ-NG",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uz": "viloyat"
+    },
+    "names": {
+      "uz": "Namangan"
+    }
+  },
+  {
+    "code": "UZ-NW",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uz": "viloyat"
+    },
+    "names": {
+      "uz": "Navoiy"
+    }
+  },
+  {
+    "code": "UZ-QA",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uz": "viloyat"
+    },
+    "names": {
+      "uz": "Qashqadaryo"
+    }
+  },
+  {
+    "code": "UZ-QR",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "uz": "respublikasi"
+    },
+    "names": {
+      "uz": "Qoraqalpog'iston Respublikasi"
+    }
+  },
+  {
+    "code": "UZ-SA",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uz": "viloyat"
+    },
+    "names": {
+      "uz": "Samarqand"
+    }
+  },
+  {
+    "code": "UZ-SI",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uz": "viloyat"
+    },
+    "names": {
+      "uz": "Sirdaryo"
+    }
+  },
+  {
+    "code": "UZ-SU",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uz": "viloyat"
+    },
+    "names": {
+      "uz": "Surxondaryo"
+    }
+  },
+  {
+    "code": "UZ-TK",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "uz": "shahar"
+    },
+    "names": {
+      "uz": "Toshkent"
+    }
+  },
+  {
+    "code": "UZ-TO",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uz": "viloyat"
+    },
+    "names": {
+      "uz": "Toshkent"
+    }
+  },
+  {
+    "code": "UZ-XO",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "uz": "viloyat"
+    },
+    "names": {
+      "uz": "Xorazm"
+    }
+  }
 ]

@@ -1,11 +1,101 @@
 [
-  { "code": "BO-H", "type": { "en": "department", "fr": "département", "es": "departamento" }, "names": { "es": "Chuquisaca" } },
-  { "code": "BO-C", "type": { "en": "department", "fr": "département", "es": "departamento" }, "names": { "es": "Cochabamba" } },
-  { "code": "BO-B", "type": { "en": "department", "fr": "département", "es": "departamento" }, "names": { "es": "El Beni" } },
-  { "code": "BO-L", "type": { "en": "department", "fr": "département", "es": "departamento" }, "names": { "es": "La Paz" } },
-  { "code": "BO-O", "type": { "en": "department", "fr": "département", "es": "departamento" }, "names": { "es": "Oruro" } },
-  { "code": "BO-N", "type": { "en": "department", "fr": "département", "es": "departamento" }, "names": { "es": "Pando" } },
-  { "code": "BO-P", "type": { "en": "department", "fr": "département", "es": "departamento" }, "names": { "es": "Potosí" } },
-  { "code": "BO-S", "type": { "en": "department", "fr": "département", "es": "departamento" }, "names": { "es": "Santa Cruz" } },
-  { "code": "BO-T", "type": { "en": "department", "fr": "département", "es": "departamento" }, "names": { "es": "Tarija" } }
+  {
+    "code": "BO-H",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Chuquisaca"
+    }
+  },
+  {
+    "code": "BO-C",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Cochabamba"
+    }
+  },
+  {
+    "code": "BO-B",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "El Beni"
+    }
+  },
+  {
+    "code": "BO-L",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "La Paz"
+    }
+  },
+  {
+    "code": "BO-O",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Oruro"
+    }
+  },
+  {
+    "code": "BO-N",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Pando"
+    }
+  },
+  {
+    "code": "BO-P",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Potosí"
+    }
+  },
+  {
+    "code": "BO-S",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Santa Cruz"
+    }
+  },
+  {
+    "code": "BO-T",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Tarija"
+    }
+  }
 ]

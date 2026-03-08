@@ -1,49 +1,566 @@
 [
-  { "code": "JP-01", "type": "prefecture", "names": { "ja": "北海道" } },
-  { "code": "JP-02", "type": "prefecture", "names": { "ja": "青森県" } },
-  { "code": "JP-03", "type": "prefecture", "names": { "ja": "岩手県" } },
-  { "code": "JP-04", "type": "prefecture", "names": { "ja": "宮城県" } },
-  { "code": "JP-05", "type": "prefecture", "names": { "ja": "秋田県" } },
-  { "code": "JP-06", "type": "prefecture", "names": { "ja": "山形県" } },
-  { "code": "JP-07", "type": "prefecture", "names": { "ja": "福島県" } },
-  { "code": "JP-08", "type": "prefecture", "names": { "ja": "茨城県" } },
-  { "code": "JP-09", "type": "prefecture", "names": { "ja": "栃木県" } },
-  { "code": "JP-10", "type": "prefecture", "names": { "ja": "群馬県" } },
-  { "code": "JP-11", "type": "prefecture", "names": { "ja": "埼玉県" } },
-  { "code": "JP-12", "type": "prefecture", "names": { "ja": "千葉県" } },
-  { "code": "JP-13", "type": "prefecture", "names": { "ja": "東京都" } },
-  { "code": "JP-14", "type": "prefecture", "names": { "ja": "神奈川県" } },
-  { "code": "JP-15", "type": "prefecture", "names": { "ja": "新潟県" } },
-  { "code": "JP-16", "type": "prefecture", "names": { "ja": "富山県" } },
-  { "code": "JP-17", "type": "prefecture", "names": { "ja": "石川県" } },
-  { "code": "JP-18", "type": "prefecture", "names": { "ja": "福井県" } },
-  { "code": "JP-19", "type": "prefecture", "names": { "ja": "山梨県" } },
-  { "code": "JP-20", "type": "prefecture", "names": { "ja": "長野県" } },
-  { "code": "JP-21", "type": "prefecture", "names": { "ja": "岐阜県" } },
-  { "code": "JP-22", "type": "prefecture", "names": { "ja": "静岡県" } },
-  { "code": "JP-23", "type": "prefecture", "names": { "ja": "愛知県" } },
-  { "code": "JP-24", "type": "prefecture", "names": { "ja": "三重県" } },
-  { "code": "JP-25", "type": "prefecture", "names": { "ja": "滋賀県" } },
-  { "code": "JP-26", "type": "prefecture", "names": { "ja": "京都府" } },
-  { "code": "JP-27", "type": "prefecture", "names": { "ja": "大阪府" } },
-  { "code": "JP-28", "type": "prefecture", "names": { "ja": "兵庫県" } },
-  { "code": "JP-29", "type": "prefecture", "names": { "ja": "奈良県" } },
-  { "code": "JP-30", "type": "prefecture", "names": { "ja": "和歌山県" } },
-  { "code": "JP-31", "type": "prefecture", "names": { "ja": "鳥取県" } },
-  { "code": "JP-32", "type": "prefecture", "names": { "ja": "島根県" } },
-  { "code": "JP-33", "type": "prefecture", "names": { "ja": "岡山県" } },
-  { "code": "JP-34", "type": "prefecture", "names": { "ja": "広島県" } },
-  { "code": "JP-35", "type": "prefecture", "names": { "ja": "山口県" } },
-  { "code": "JP-36", "type": "prefecture", "names": { "ja": "徳島県" } },
-  { "code": "JP-37", "type": "prefecture", "names": { "ja": "香川県" } },
-  { "code": "JP-38", "type": "prefecture", "names": { "ja": "愛媛県" } },
-  { "code": "JP-39", "type": "prefecture", "names": { "ja": "高知県" } },
-  { "code": "JP-40", "type": "prefecture", "names": { "ja": "福岡県" } },
-  { "code": "JP-41", "type": "prefecture", "names": { "ja": "佐賀県" } },
-  { "code": "JP-42", "type": "prefecture", "names": { "ja": "長崎県" } },
-  { "code": "JP-43", "type": "prefecture", "names": { "ja": "熊本県" } },
-  { "code": "JP-44", "type": "prefecture", "names": { "ja": "大分県" } },
-  { "code": "JP-45", "type": "prefecture", "names": { "ja": "宮崎県" } },
-  { "code": "JP-46", "type": "prefecture", "names": { "ja": "鹿児島県" } },
-  { "code": "JP-47", "type": "prefecture", "names": { "ja": "沖縄県" } }
+  {
+    "code": "JP-01",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Hokkaido",
+      "ja": "北海道"
+    }
+  },
+  {
+    "code": "JP-02",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Aomori",
+      "ja": "青森県"
+    }
+  },
+  {
+    "code": "JP-03",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Iwate",
+      "ja": "岩手県"
+    }
+  },
+  {
+    "code": "JP-04",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Miyagi",
+      "ja": "宮城県"
+    }
+  },
+  {
+    "code": "JP-05",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Akita",
+      "ja": "秋田県"
+    }
+  },
+  {
+    "code": "JP-06",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Yamagata",
+      "ja": "山形県"
+    }
+  },
+  {
+    "code": "JP-07",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Fukushima",
+      "ja": "福島県"
+    }
+  },
+  {
+    "code": "JP-08",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Ibaraki",
+      "ja": "茨城県"
+    }
+  },
+  {
+    "code": "JP-09",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Tochigi",
+      "ja": "栃木県"
+    }
+  },
+  {
+    "code": "JP-10",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Gunma",
+      "ja": "群馬県"
+    }
+  },
+  {
+    "code": "JP-11",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Saitama",
+      "ja": "埼玉県"
+    }
+  },
+  {
+    "code": "JP-12",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Chiba",
+      "ja": "千葉県"
+    }
+  },
+  {
+    "code": "JP-13",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Tokyo",
+      "ja": "東京都"
+    }
+  },
+  {
+    "code": "JP-14",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Kanagawa",
+      "ja": "神奈川県"
+    }
+  },
+  {
+    "code": "JP-15",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Niigata",
+      "ja": "新潟県"
+    }
+  },
+  {
+    "code": "JP-16",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Toyama",
+      "ja": "富山県"
+    }
+  },
+  {
+    "code": "JP-17",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Ishikawa",
+      "ja": "石川県"
+    }
+  },
+  {
+    "code": "JP-18",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Fukui",
+      "ja": "福井県"
+    }
+  },
+  {
+    "code": "JP-19",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Yamanashi",
+      "ja": "山梨県"
+    }
+  },
+  {
+    "code": "JP-20",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Nagano",
+      "ja": "長野県"
+    }
+  },
+  {
+    "code": "JP-21",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Gifu",
+      "ja": "岐阜県"
+    }
+  },
+  {
+    "code": "JP-22",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Shizuoka",
+      "ja": "静岡県"
+    }
+  },
+  {
+    "code": "JP-23",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Aichi",
+      "ja": "愛知県"
+    }
+  },
+  {
+    "code": "JP-24",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Mie",
+      "ja": "三重県"
+    }
+  },
+  {
+    "code": "JP-25",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Shiga",
+      "ja": "滋賀県"
+    }
+  },
+  {
+    "code": "JP-26",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Kyoto",
+      "ja": "京都府"
+    }
+  },
+  {
+    "code": "JP-27",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Osaka",
+      "ja": "大阪府"
+    }
+  },
+  {
+    "code": "JP-28",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Hyogo",
+      "ja": "兵庫県"
+    }
+  },
+  {
+    "code": "JP-29",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Nara",
+      "ja": "奈良県"
+    }
+  },
+  {
+    "code": "JP-30",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Wakayama",
+      "ja": "和歌山県"
+    }
+  },
+  {
+    "code": "JP-31",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Tottori",
+      "ja": "鳥取県"
+    }
+  },
+  {
+    "code": "JP-32",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Shimane",
+      "ja": "島根県"
+    }
+  },
+  {
+    "code": "JP-33",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Okayama",
+      "ja": "岡山県"
+    }
+  },
+  {
+    "code": "JP-34",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Hiroshima",
+      "ja": "広島県"
+    }
+  },
+  {
+    "code": "JP-35",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Yamaguchi",
+      "ja": "山口県"
+    }
+  },
+  {
+    "code": "JP-36",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Tokushima",
+      "ja": "徳島県"
+    }
+  },
+  {
+    "code": "JP-37",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Kagawa",
+      "ja": "香川県"
+    }
+  },
+  {
+    "code": "JP-38",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Ehime",
+      "ja": "愛媛県"
+    }
+  },
+  {
+    "code": "JP-39",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Kochi",
+      "ja": "高知県"
+    }
+  },
+  {
+    "code": "JP-40",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Fukuoka",
+      "ja": "福岡県"
+    }
+  },
+  {
+    "code": "JP-41",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Saga",
+      "ja": "佐賀県"
+    }
+  },
+  {
+    "code": "JP-42",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Nagasaki",
+      "ja": "長崎県"
+    }
+  },
+  {
+    "code": "JP-43",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Kumamoto",
+      "ja": "熊本県"
+    }
+  },
+  {
+    "code": "JP-44",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Oita",
+      "ja": "大分県"
+    }
+  },
+  {
+    "code": "JP-45",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Miyazaki",
+      "ja": "宮崎県"
+    }
+  },
+  {
+    "code": "JP-46",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Kagoshima",
+      "ja": "鹿児島県"
+    }
+  },
+  {
+    "code": "JP-47",
+    "type": {
+      "en": "prefecture",
+      "fr": "département",
+      "ja": "to, dô, hu, ken"
+    },
+    "names": {
+      "en": "Okinawa",
+      "ja": "沖縄県"
+    }
+  }
 ]

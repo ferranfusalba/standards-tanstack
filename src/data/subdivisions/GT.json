@@ -1,24 +1,244 @@
 [
-  { "code": "GT-AV", "type": "department", "names": { "es": "Alta Verapaz" } },
-  { "code": "GT-BV", "type": "department", "names": { "es": "Baja Verapaz" } },
-  { "code": "GT-CM", "type": "department", "names": { "es": "Chimaltenango" } },
-  { "code": "GT-CQ", "type": "department", "names": { "es": "Chiquimula" } },
-  { "code": "GT-ES", "type": "department", "names": { "es": "Escuintla" } },
-  { "code": "GT-GU", "type": "department", "names": { "es": "Guatemala" } },
-  { "code": "GT-HU", "type": "department", "names": { "es": "Huehuetenango" } },
-  { "code": "GT-IZ", "type": "department", "names": { "es": "Izabal" } },
-  { "code": "GT-JA", "type": "department", "names": { "es": "Jalapa" } },
-  { "code": "GT-JU", "type": "department", "names": { "es": "Jutiapa" } },
-  { "code": "GT-PE", "type": "department", "names": { "es": "Petén" } },
-  { "code": "GT-PR", "type": "department", "names": { "es": "El Progreso" } },
-  { "code": "GT-QC", "type": "department", "names": { "es": "Quiché" } },
-  { "code": "GT-QZ", "type": "department", "names": { "es": "Quetzaltenango" } },
-  { "code": "GT-RE", "type": "department", "names": { "es": "Retalhuleu" } },
-  { "code": "GT-SA", "type": "department", "names": { "es": "Sacatepéquez" } },
-  { "code": "GT-SM", "type": "department", "names": { "es": "San Marcos" } },
-  { "code": "GT-SO", "type": "department", "names": { "es": "Sololá" } },
-  { "code": "GT-SR", "type": "department", "names": { "es": "Santa Rosa" } },
-  { "code": "GT-SU", "type": "department", "names": { "es": "Suchitepéquez" } },
-  { "code": "GT-TO", "type": "department", "names": { "es": "Totonicapán" } },
-  { "code": "GT-ZA", "type": "department", "names": { "es": "Zacapa" } }
+  {
+    "code": "GT-01",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Guatemala"
+    }
+  },
+  {
+    "code": "GT-02",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "El Progreso"
+    }
+  },
+  {
+    "code": "GT-03",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Sacatepéquez"
+    }
+  },
+  {
+    "code": "GT-04",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Chimaltenango"
+    }
+  },
+  {
+    "code": "GT-05",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Escuintla"
+    }
+  },
+  {
+    "code": "GT-06",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Santa Rosa"
+    }
+  },
+  {
+    "code": "GT-07",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Sololá"
+    }
+  },
+  {
+    "code": "GT-08",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Totonicapán"
+    }
+  },
+  {
+    "code": "GT-09",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Quetzaltenango"
+    }
+  },
+  {
+    "code": "GT-10",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Suchitepéquez"
+    }
+  },
+  {
+    "code": "GT-11",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Retalhuleu"
+    }
+  },
+  {
+    "code": "GT-12",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "San Marcos"
+    }
+  },
+  {
+    "code": "GT-13",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Huehuetenango"
+    }
+  },
+  {
+    "code": "GT-14",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Quiché"
+    }
+  },
+  {
+    "code": "GT-15",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Baja Verapaz"
+    }
+  },
+  {
+    "code": "GT-16",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Alta Verapaz"
+    }
+  },
+  {
+    "code": "GT-17",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Petén"
+    }
+  },
+  {
+    "code": "GT-18",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Izabal"
+    }
+  },
+  {
+    "code": "GT-19",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Zacapa"
+    }
+  },
+  {
+    "code": "GT-20",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Chiquimula"
+    }
+  },
+  {
+    "code": "GT-21",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Jalapa"
+    }
+  },
+  {
+    "code": "GT-22",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Jutiapa"
+    }
+  }
 ]

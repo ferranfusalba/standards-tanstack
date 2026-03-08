@@ -1,49 +1,472 @@
 [
-  { "code": "KE-01", "type": "county", "names": { "en": "Baringo", "sw": "Baringo" } },
-  { "code": "KE-02", "type": "county", "names": { "en": "Bomet", "sw": "Bomet" } },
-  { "code": "KE-03", "type": "county", "names": { "en": "Bungoma", "sw": "Bungoma" } },
-  { "code": "KE-04", "type": "county", "names": { "en": "Busia", "sw": "Busia" } },
-  { "code": "KE-05", "type": "county", "names": { "en": "Elgeyo-Marakwet", "sw": "Elgeyo-Marakwet" } },
-  { "code": "KE-06", "type": "county", "names": { "en": "Embu", "sw": "Embu" } },
-  { "code": "KE-07", "type": "county", "names": { "en": "Garissa", "sw": "Garissa" } },
-  { "code": "KE-08", "type": "county", "names": { "en": "Homa Bay", "sw": "Homa Bay" } },
-  { "code": "KE-09", "type": "county", "names": { "en": "Isiolo", "sw": "Isiolo" } },
-  { "code": "KE-10", "type": "county", "names": { "en": "Kajiado", "sw": "Kajiado" } },
-  { "code": "KE-11", "type": "county", "names": { "en": "Kakamega", "sw": "Kakamega" } },
-  { "code": "KE-12", "type": "county", "names": { "en": "Kericho", "sw": "Kericho" } },
-  { "code": "KE-13", "type": "county", "names": { "en": "Kiambu", "sw": "Kiambu" } },
-  { "code": "KE-14", "type": "county", "names": { "en": "Kilifi", "sw": "Kilifi" } },
-  { "code": "KE-15", "type": "county", "names": { "en": "Kirinyaga", "sw": "Kirinyaga" } },
-  { "code": "KE-16", "type": "county", "names": { "en": "Kisii", "sw": "Kisii" } },
-  { "code": "KE-17", "type": "county", "names": { "en": "Kisumu", "sw": "Kisumu" } },
-  { "code": "KE-18", "type": "county", "names": { "en": "Kitui", "sw": "Kitui" } },
-  { "code": "KE-19", "type": "county", "names": { "en": "Kwale", "sw": "Kwale" } },
-  { "code": "KE-20", "type": "county", "names": { "en": "Laikipia", "sw": "Laikipia" } },
-  { "code": "KE-21", "type": "county", "names": { "en": "Lamu", "sw": "Lamu" } },
-  { "code": "KE-22", "type": "county", "names": { "en": "Machakos", "sw": "Machakos" } },
-  { "code": "KE-23", "type": "county", "names": { "en": "Makueni", "sw": "Makueni" } },
-  { "code": "KE-24", "type": "county", "names": { "en": "Mandera", "sw": "Mandera" } },
-  { "code": "KE-25", "type": "county", "names": { "en": "Marsabit", "sw": "Marsabit" } },
-  { "code": "KE-26", "type": "county", "names": { "en": "Meru", "sw": "Meru" } },
-  { "code": "KE-27", "type": "county", "names": { "en": "Migori", "sw": "Migori" } },
-  { "code": "KE-28", "type": "county", "names": { "en": "Mombasa", "sw": "Mombasa" } },
-  { "code": "KE-29", "type": "county", "names": { "en": "Murang'a", "sw": "Murang'a" } },
-  { "code": "KE-30", "type": "county", "names": { "en": "Nairobi", "sw": "Nairobi" } },
-  { "code": "KE-31", "type": "county", "names": { "en": "Nakuru", "sw": "Nakuru" } },
-  { "code": "KE-32", "type": "county", "names": { "en": "Nandi", "sw": "Nandi" } },
-  { "code": "KE-33", "type": "county", "names": { "en": "Narok", "sw": "Narok" } },
-  { "code": "KE-34", "type": "county", "names": { "en": "Nyamira", "sw": "Nyamira" } },
-  { "code": "KE-35", "type": "county", "names": { "en": "Nyandarua", "sw": "Nyandarua" } },
-  { "code": "KE-36", "type": "county", "names": { "en": "Nyeri", "sw": "Nyeri" } },
-  { "code": "KE-37", "type": "county", "names": { "en": "Samburu", "sw": "Samburu" } },
-  { "code": "KE-38", "type": "county", "names": { "en": "Siaya", "sw": "Siaya" } },
-  { "code": "KE-39", "type": "county", "names": { "en": "Taita-Taveta", "sw": "Taita-Taveta" } },
-  { "code": "KE-40", "type": "county", "names": { "en": "Tana River", "sw": "Tana River" } },
-  { "code": "KE-41", "type": "county", "names": { "en": "Tharaka-Nithi", "sw": "Tharaka-Nithi" } },
-  { "code": "KE-42", "type": "county", "names": { "en": "Trans-Nzoia", "sw": "Trans-Nzoia" } },
-  { "code": "KE-43", "type": "county", "names": { "en": "Turkana", "sw": "Turkana" } },
-  { "code": "KE-44", "type": "county", "names": { "en": "Uasin Gishu", "sw": "Uasin Gishu" } },
-  { "code": "KE-45", "type": "county", "names": { "en": "Vihiga", "sw": "Vihiga" } },
-  { "code": "KE-46", "type": "county", "names": { "en": "Wajir", "sw": "Wajir" } },
-  { "code": "KE-47", "type": "county", "names": { "en": "West Pokot", "sw": "West Pokot" } }
+  {
+    "code": "KE-01",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Baringo"
+    }
+  },
+  {
+    "code": "KE-02",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Bomet"
+    }
+  },
+  {
+    "code": "KE-03",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Bungoma"
+    }
+  },
+  {
+    "code": "KE-04",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Busia"
+    }
+  },
+  {
+    "code": "KE-05",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Elgeyo/Marakwet"
+    }
+  },
+  {
+    "code": "KE-06",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Embu"
+    }
+  },
+  {
+    "code": "KE-07",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Garissa"
+    }
+  },
+  {
+    "code": "KE-08",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Homa Bay"
+    }
+  },
+  {
+    "code": "KE-09",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Isiolo"
+    }
+  },
+  {
+    "code": "KE-10",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Kajiado"
+    }
+  },
+  {
+    "code": "KE-11",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Kakamega"
+    }
+  },
+  {
+    "code": "KE-12",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Kericho"
+    }
+  },
+  {
+    "code": "KE-13",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Kiambu"
+    }
+  },
+  {
+    "code": "KE-14",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Kilifi"
+    }
+  },
+  {
+    "code": "KE-15",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Kirinyaga"
+    }
+  },
+  {
+    "code": "KE-16",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Kisii"
+    }
+  },
+  {
+    "code": "KE-17",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Kisumu"
+    }
+  },
+  {
+    "code": "KE-18",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Kitui"
+    }
+  },
+  {
+    "code": "KE-19",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Kwale"
+    }
+  },
+  {
+    "code": "KE-20",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Laikipia"
+    }
+  },
+  {
+    "code": "KE-21",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Lamu"
+    }
+  },
+  {
+    "code": "KE-22",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Machakos"
+    }
+  },
+  {
+    "code": "KE-23",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Makueni"
+    }
+  },
+  {
+    "code": "KE-24",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Mandera"
+    }
+  },
+  {
+    "code": "KE-25",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Marsabit"
+    }
+  },
+  {
+    "code": "KE-26",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Meru"
+    }
+  },
+  {
+    "code": "KE-27",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Migori"
+    }
+  },
+  {
+    "code": "KE-28",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Mombasa"
+    }
+  },
+  {
+    "code": "KE-29",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Murang'a"
+    }
+  },
+  {
+    "code": "KE-30",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Nairobi City"
+    }
+  },
+  {
+    "code": "KE-31",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Nakuru"
+    }
+  },
+  {
+    "code": "KE-32",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Nandi"
+    }
+  },
+  {
+    "code": "KE-33",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Narok"
+    }
+  },
+  {
+    "code": "KE-34",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Nyamira"
+    }
+  },
+  {
+    "code": "KE-35",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Nyandarua"
+    }
+  },
+  {
+    "code": "KE-36",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Nyeri"
+    }
+  },
+  {
+    "code": "KE-37",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Samburu"
+    }
+  },
+  {
+    "code": "KE-38",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Siaya"
+    }
+  },
+  {
+    "code": "KE-39",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Taita/Taveta"
+    }
+  },
+  {
+    "code": "KE-40",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Tana River"
+    }
+  },
+  {
+    "code": "KE-41",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Tharaka-Nithi"
+    }
+  },
+  {
+    "code": "KE-42",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Trans Nzoia"
+    }
+  },
+  {
+    "code": "KE-43",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Turkana"
+    }
+  },
+  {
+    "code": "KE-44",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Uasin Gishu"
+    }
+  },
+  {
+    "code": "KE-45",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Vihiga"
+    }
+  },
+  {
+    "code": "KE-46",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "Wajir"
+    }
+  },
+  {
+    "code": "KE-47",
+    "type": {
+      "en": "county",
+      "fr": "comté"
+    },
+    "names": {
+      "en": "West Pokot"
+    }
+  }
 ]

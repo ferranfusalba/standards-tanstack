@@ -1,13 +1,112 @@
 [
-  { "code": "ML-BKO", "type": "district", "names": { "fr": "Bamako" } },
-  { "code": "ML-1", "type": "region", "names": { "fr": "Kayes" } },
-  { "code": "ML-2", "type": "region", "names": { "fr": "Koulikoro" } },
-  { "code": "ML-3", "type": "region", "names": { "fr": "Sikasso" } },
-  { "code": "ML-4", "type": "region", "names": { "fr": "Ségou" } },
-  { "code": "ML-5", "type": "region", "names": { "fr": "Mopti" } },
-  { "code": "ML-6", "type": "region", "names": { "fr": "Tombouctou" } },
-  { "code": "ML-7", "type": "region", "names": { "fr": "Gao" } },
-  { "code": "ML-8", "type": "region", "names": { "fr": "Kidal" } },
-  { "code": "ML-9", "type": "region", "names": { "fr": "Ménaka" } },
-  { "code": "ML-10", "type": "region", "names": { "fr": "Taoudénit" } }
+  {
+    "code": "ML-BKO",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "fr": "Bamako"
+    }
+  },
+  {
+    "code": "ML-1",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Kayes"
+    }
+  },
+  {
+    "code": "ML-2",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Koulikoro"
+    }
+  },
+  {
+    "code": "ML-3",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Sikasso"
+    }
+  },
+  {
+    "code": "ML-4",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Ségou"
+    }
+  },
+  {
+    "code": "ML-5",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Mopti"
+    }
+  },
+  {
+    "code": "ML-6",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Tombouctou"
+    }
+  },
+  {
+    "code": "ML-7",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Gao"
+    }
+  },
+  {
+    "code": "ML-8",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Kidal"
+    }
+  },
+  {
+    "code": "ML-9",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Ménaka"
+    }
+  },
+  {
+    "code": "ML-10",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Taoudénit"
+    }
+  }
 ]

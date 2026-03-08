@@ -1,17 +1,152 @@
 [
-  { "code": "TT-ARI", "type": "borough", "names": { "en": "Arima" } },
-  { "code": "TT-CHA", "type": "borough", "names": { "en": "Chaguanas" } },
-  { "code": "TT-CTT", "type": "region", "names": { "en": "Couva-Tabaquite-Talparo" } },
-  { "code": "TT-DMN", "type": "region", "names": { "en": "Diego Martin" } },
-  { "code": "TT-MRC", "type": "region", "names": { "en": "Mayaro-Rio Claro" } },
-  { "code": "TT-PED", "type": "region", "names": { "en": "Penal-Debe" } },
-  { "code": "TT-POS", "type": "city", "names": { "en": "Port of Spain" } },
-  { "code": "TT-PRT", "type": "region", "names": { "en": "Princes Town" } },
-  { "code": "TT-PTF", "type": "borough", "names": { "en": "Point Fortin" } },
-  { "code": "TT-SFO", "type": "city", "names": { "en": "San Fernando" } },
-  { "code": "TT-SGE", "type": "region", "names": { "en": "Sangre Grande" } },
-  { "code": "TT-SIP", "type": "region", "names": { "en": "Siparia" } },
-  { "code": "TT-SJL", "type": "borough", "names": { "en": "San Juan-Laventille" } },
-  { "code": "TT-TOB", "type": "ward", "names": { "en": "Tobago" } },
-  { "code": "TT-TUP", "type": "region", "names": { "en": "Tunapuna-Piarco" } }
+  {
+    "code": "TT-ARI",
+    "type": {
+      "en": "borough",
+      "fr": "arrondissement"
+    },
+    "names": {
+      "en": "Arima"
+    }
+  },
+  {
+    "code": "TT-CHA",
+    "type": {
+      "en": "borough",
+      "fr": "arrondissement"
+    },
+    "names": {
+      "en": "Chaguanas"
+    }
+  },
+  {
+    "code": "TT-CTT",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Couva-Tabaquite-Talparo"
+    }
+  },
+  {
+    "code": "TT-DMN",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Diego Martin"
+    }
+  },
+  {
+    "code": "TT-MRC",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Mayaro-Rio Claro"
+    }
+  },
+  {
+    "code": "TT-PED",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Penal-Debe"
+    }
+  },
+  {
+    "code": "TT-POS",
+    "type": {
+      "en": "city",
+      "fr": "ville"
+    },
+    "names": {
+      "en": "Port of Spain"
+    }
+  },
+  {
+    "code": "TT-PRT",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Princes Town"
+    }
+  },
+  {
+    "code": "TT-PTF",
+    "type": {
+      "en": "borough",
+      "fr": "arrondissement"
+    },
+    "names": {
+      "en": "Point Fortin"
+    }
+  },
+  {
+    "code": "TT-SFO",
+    "type": {
+      "en": "city",
+      "fr": "ville"
+    },
+    "names": {
+      "en": "San Fernando"
+    }
+  },
+  {
+    "code": "TT-SGE",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Sangre Grande"
+    }
+  },
+  {
+    "code": "TT-SIP",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Siparia"
+    }
+  },
+  {
+    "code": "TT-SJL",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "San Juan-Laventille"
+    }
+  },
+  {
+    "code": "TT-TOB",
+    "type": {
+      "en": "ward",
+      "fr": "circonscription"
+    },
+    "names": {
+      "en": "Tobago"
+    }
+  },
+  {
+    "code": "TT-TUP",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Tunapuna-Piarco"
+    }
+  }
 ]

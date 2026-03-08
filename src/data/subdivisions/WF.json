@@ -1,0 +1,32 @@
+[
+  {
+    "code": "WF-AL",
+    "type": {
+      "en": "administrative precinct",
+      "fr": "circonscription"
+    },
+    "names": {
+      "fr": "Alo"
+    }
+  },
+  {
+    "code": "WF-SG",
+    "type": {
+      "en": "administrative precinct",
+      "fr": "circonscription"
+    },
+    "names": {
+      "fr": "Sigave"
+    }
+  },
+  {
+    "code": "WF-UV",
+    "type": {
+      "en": "administrative precinct",
+      "fr": "circonscription"
+    },
+    "names": {
+      "fr": "Uvea"
+    }
+  }
+]

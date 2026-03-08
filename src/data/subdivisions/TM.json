@@ -1,8 +1,68 @@
 [
-  { "code": "TM-A", "type": "region", "names": { "tk": "Ahal" } },
-  { "code": "TM-B", "type": "region", "names": { "tk": "Balkan" } },
-  { "code": "TM-D", "type": "region", "names": { "tk": "Dashoguz" } },
-  { "code": "TM-L", "type": "region", "names": { "tk": "Lebap" } },
-  { "code": "TM-M", "type": "region", "names": { "tk": "Mary" } },
-  { "code": "TM-S", "type": "city", "names": { "tk": "Ashgabat" } }
+  {
+    "code": "TM-A",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tk": "welaýat"
+    },
+    "names": {
+      "tk": "Ahal"
+    }
+  },
+  {
+    "code": "TM-B",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tk": "welaýat"
+    },
+    "names": {
+      "tk": "Balkan"
+    }
+  },
+  {
+    "code": "TM-D",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tk": "welaýat"
+    },
+    "names": {
+      "tk": "Daşoguz"
+    }
+  },
+  {
+    "code": "TM-L",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tk": "welaýat"
+    },
+    "names": {
+      "tk": "Lebap"
+    }
+  },
+  {
+    "code": "TM-M",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tk": "welaýat"
+    },
+    "names": {
+      "tk": "Mary"
+    }
+  },
+  {
+    "code": "TM-S",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "tk": "şäher"
+    },
+    "names": {
+      "tk": "Aşgabat"
+    }
+  }
 ]

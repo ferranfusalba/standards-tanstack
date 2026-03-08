@@ -1,24 +1,243 @@
 [
-  { "code": "PG-NCD", "type": "district", "names": { "en": "National Capital District" } },
-  { "code": "PG-CPM", "type": "province", "names": { "en": "Central" } },
-  { "code": "PG-CPK", "type": "province", "names": { "en": "Chimbu" } },
-  { "code": "PG-EHG", "type": "province", "names": { "en": "Eastern Highlands" } },
-  { "code": "PG-EBR", "type": "province", "names": { "en": "East New Britain" } },
-  { "code": "PG-ESW", "type": "province", "names": { "en": "East Sepik" } },
-  { "code": "PG-EPW", "type": "province", "names": { "en": "Enga" } },
-  { "code": "PG-GPK", "type": "province", "names": { "en": "Gulf" } },
-  { "code": "PG-HLA", "type": "province", "names": { "en": "Hela" } },
-  { "code": "PG-JWK", "type": "province", "names": { "en": "Jiwaka" } },
-  { "code": "PG-MPM", "type": "province", "names": { "en": "Madang" } },
-  { "code": "PG-MRL", "type": "province", "names": { "en": "Manus" } },
-  { "code": "PG-MBA", "type": "province", "names": { "en": "Milne Bay" } },
-  { "code": "PG-MPL", "type": "province", "names": { "en": "Morobe" } },
-  { "code": "PG-NIK", "type": "province", "names": { "en": "New Ireland" } },
-  { "code": "PG-NPP", "type": "province", "names": { "en": "Northern" } },
-  { "code": "PG-NSB", "type": "autonomous region", "names": { "en": "Bougainville" } },
-  { "code": "PG-SAN", "type": "province", "names": { "en": "Sandaun" } },
-  { "code": "PG-SHM", "type": "province", "names": { "en": "Southern Highlands" } },
-  { "code": "PG-WBK", "type": "province", "names": { "en": "West New Britain" } },
-  { "code": "PG-WHM", "type": "province", "names": { "en": "Western Highlands" } },
-  { "code": "PG-WPD", "type": "province", "names": { "en": "Western" } }
+  {
+    "code": "PG-CPK",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "Chimbu"
+    }
+  },
+  {
+    "code": "PG-CPM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "Central"
+    }
+  },
+  {
+    "code": "PG-EBR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "East New Britain"
+    }
+  },
+  {
+    "code": "PG-EHG",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "Eastern Highlands"
+    }
+  },
+  {
+    "code": "PG-EPW",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "Enga"
+    }
+  },
+  {
+    "code": "PG-ESW",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "East Sepik"
+    }
+  },
+  {
+    "code": "PG-GPK",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "Gulf"
+    }
+  },
+  {
+    "code": "PG-HLA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "Hela"
+    }
+  },
+  {
+    "code": "PG-JWK",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "Jiwaka"
+    }
+  },
+  {
+    "code": "PG-MBA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "Milne Bay"
+    }
+  },
+  {
+    "code": "PG-MPL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "Morobe"
+    }
+  },
+  {
+    "code": "PG-MPM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "Madang"
+    }
+  },
+  {
+    "code": "PG-MRL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "Manus"
+    }
+  },
+  {
+    "code": "PG-NCD",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "tpi": "distrik"
+    },
+    "names": {
+      "en": "National Capital District (Port Moresby)"
+    }
+  },
+  {
+    "code": "PG-NIK",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "New Ireland"
+    }
+  },
+  {
+    "code": "PG-NPP",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "Northern"
+    }
+  },
+  {
+    "code": "PG-NSB",
+    "type": {
+      "en": "autonomous region",
+      "fr": "région autonome"
+    },
+    "names": {
+      "en": "Bougainville"
+    }
+  },
+  {
+    "code": "PG-SAN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "West Sepik"
+    }
+  },
+  {
+    "code": "PG-SHM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "Southern Highlands"
+    }
+  },
+  {
+    "code": "PG-WBK",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "West New Britain"
+    }
+  },
+  {
+    "code": "PG-WHM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "Western Highlands"
+    }
+  },
+  {
+    "code": "PG-WPD",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tpi": "provins"
+    },
+    "names": {
+      "en": "Western"
+    }
+  }
 ]

@@ -1,27 +1,277 @@
 [
-  { "code": "VE-A", "type": "capital district", "names": { "es": "Distrito Capital" } },
-  { "code": "VE-B", "type": "state", "names": { "es": "Anzoátegui" } },
-  { "code": "VE-C", "type": "state", "names": { "es": "Apure" } },
-  { "code": "VE-D", "type": "state", "names": { "es": "Aragua" } },
-  { "code": "VE-E", "type": "state", "names": { "es": "Barinas" } },
-  { "code": "VE-F", "type": "state", "names": { "es": "Bolívar" } },
-  { "code": "VE-G", "type": "state", "names": { "es": "Carabobo" } },
-  { "code": "VE-H", "type": "state", "names": { "es": "Cojedes" } },
-  { "code": "VE-I", "type": "state", "names": { "es": "Falcón" } },
-  { "code": "VE-J", "type": "state", "names": { "es": "Guárico" } },
-  { "code": "VE-K", "type": "state", "names": { "es": "Lara" } },
-  { "code": "VE-L", "type": "state", "names": { "es": "Mérida" } },
-  { "code": "VE-M", "type": "state", "names": { "es": "Miranda" } },
-  { "code": "VE-N", "type": "state", "names": { "es": "Monagas" } },
-  { "code": "VE-O", "type": "state", "names": { "es": "Nueva Esparta" } },
-  { "code": "VE-P", "type": "state", "names": { "es": "Portuguesa" } },
-  { "code": "VE-R", "type": "state", "names": { "es": "Sucre" } },
-  { "code": "VE-S", "type": "state", "names": { "es": "Táchira" } },
-  { "code": "VE-T", "type": "state", "names": { "es": "Trujillo" } },
-  { "code": "VE-U", "type": "state", "names": { "es": "Yaracuy" } },
-  { "code": "VE-V", "type": "state", "names": { "es": "Zulia" } },
-  { "code": "VE-W", "type": "federal dependency", "names": { "es": "Dependencias Federales" } },
-  { "code": "VE-X", "type": "state", "names": { "es": "La Guaira" } },
-  { "code": "VE-Y", "type": "state", "names": { "es": "Delta Amacuro" } },
-  { "code": "VE-Z", "type": "state", "names": { "es": "Amazonas" } }
+  {
+    "code": "VE-A",
+    "type": {
+      "en": "capital district",
+      "fr": "district de la capitale",
+      "es": "distrito capital"
+    },
+    "names": {
+      "es": "Distrito Capital"
+    }
+  },
+  {
+    "code": "VE-B",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Anzoátegui"
+    }
+  },
+  {
+    "code": "VE-C",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Apure"
+    }
+  },
+  {
+    "code": "VE-D",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Aragua"
+    }
+  },
+  {
+    "code": "VE-E",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Barinas"
+    }
+  },
+  {
+    "code": "VE-F",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Bolívar"
+    }
+  },
+  {
+    "code": "VE-G",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Carabobo"
+    }
+  },
+  {
+    "code": "VE-H",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Cojedes"
+    }
+  },
+  {
+    "code": "VE-I",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Falcón"
+    }
+  },
+  {
+    "code": "VE-J",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Guárico"
+    }
+  },
+  {
+    "code": "VE-K",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Lara"
+    }
+  },
+  {
+    "code": "VE-L",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Mérida"
+    }
+  },
+  {
+    "code": "VE-M",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Miranda"
+    }
+  },
+  {
+    "code": "VE-N",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Monagas"
+    }
+  },
+  {
+    "code": "VE-O",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Nueva Esparta"
+    }
+  },
+  {
+    "code": "VE-P",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Portuguesa"
+    }
+  },
+  {
+    "code": "VE-R",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Sucre"
+    }
+  },
+  {
+    "code": "VE-S",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Táchira"
+    }
+  },
+  {
+    "code": "VE-T",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Trujillo"
+    }
+  },
+  {
+    "code": "VE-U",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Yaracuy"
+    }
+  },
+  {
+    "code": "VE-V",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Zulia"
+    }
+  },
+  {
+    "code": "VE-W",
+    "type": {
+      "en": "federal dependency",
+      "fr": "dépendance fédérale",
+      "es": "dependencia federal"
+    },
+    "names": {
+      "es": "Dependencias Federales"
+    }
+  },
+  {
+    "code": "VE-X",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "La Guaira"
+    }
+  },
+  {
+    "code": "VE-Y",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Delta Amacuro"
+    }
+  },
+  {
+    "code": "VE-Z",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "es": "estado"
+    },
+    "names": {
+      "es": "Amazonas"
+    }
+  }
 ]

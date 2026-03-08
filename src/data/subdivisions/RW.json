@@ -1,7 +1,67 @@
 [
-  { "code": "RW-01", "type": "province", "names": { "rw": "Kigali", "fr": "Kigali" } },
-  { "code": "RW-02", "type": "province", "names": { "rw": "Amajyepfo", "fr": "Sud" } },
-  { "code": "RW-03", "type": "province", "names": { "rw": "Amajyaruguru", "fr": "Nord" } },
-  { "code": "RW-04", "type": "province", "names": { "rw": "Uburasirazuba", "fr": "Est" } },
-  { "code": "RW-05", "type": "province", "names": { "rw": "Uburengerazuba", "fr": "Ouest" } }
+  {
+    "code": "RW-01",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "rw": "umujyi"
+    },
+    "names": {
+      "en": "City of Kigali",
+      "fr": "Ville de Kigali",
+      "rw": "Umujyi wa Kigali"
+    }
+  },
+  {
+    "code": "RW-02",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rw": "intara"
+    },
+    "names": {
+      "en": "Eastern",
+      "fr": "Est",
+      "rw": "Iburasirazuba"
+    }
+  },
+  {
+    "code": "RW-03",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rw": "intara"
+    },
+    "names": {
+      "en": "Northern",
+      "fr": "Nord",
+      "rw": "Amajyaruguru"
+    }
+  },
+  {
+    "code": "RW-04",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rw": "intara"
+    },
+    "names": {
+      "en": "Western",
+      "fr": "Ouest",
+      "rw": "Iburengerazuba"
+    }
+  },
+  {
+    "code": "RW-05",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "rw": "intara"
+    },
+    "names": {
+      "en": "Southern",
+      "fr": "Sud",
+      "rw": "Amajyepfo"
+    }
+  }
 ]

@@ -1,13 +1,112 @@
 [
-  { "code": "WS-AA", "type": "district", "names": { "sm": "A'ana" } },
-  { "code": "WS-AL", "type": "district", "names": { "sm": "Aiga-i-le-Tai" } },
-  { "code": "WS-AT", "type": "district", "names": { "sm": "Atua" } },
-  { "code": "WS-FA", "type": "district", "names": { "sm": "Fa'asaleleaga" } },
-  { "code": "WS-GE", "type": "district", "names": { "sm": "Gaga'emauga" } },
-  { "code": "WS-GI", "type": "district", "names": { "sm": "Gagaifomauga" } },
-  { "code": "WS-PA", "type": "district", "names": { "sm": "Palauli" } },
-  { "code": "WS-SA", "type": "district", "names": { "sm": "Satupa'itea" } },
-  { "code": "WS-TU", "type": "district", "names": { "sm": "Tuamasaga" } },
-  { "code": "WS-VF", "type": "district", "names": { "sm": "Va'a-o-Fonoti" } },
-  { "code": "WS-VS", "type": "district", "names": { "sm": "Vaisigano" } }
+  {
+    "code": "WS-AA",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "sm": "A'ana"
+    }
+  },
+  {
+    "code": "WS-AL",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "sm": "Aiga-i-le-Tai"
+    }
+  },
+  {
+    "code": "WS-AT",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "sm": "Atua"
+    }
+  },
+  {
+    "code": "WS-FA",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "sm": "Fa'asaleleaga"
+    }
+  },
+  {
+    "code": "WS-GE",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "sm": "Gaga'emauga"
+    }
+  },
+  {
+    "code": "WS-GI",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "sm": "Gagaifomauga"
+    }
+  },
+  {
+    "code": "WS-PA",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "sm": "Palauli"
+    }
+  },
+  {
+    "code": "WS-SA",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "sm": "Satupa'itea"
+    }
+  },
+  {
+    "code": "WS-TU",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "sm": "Tuamasaga"
+    }
+  },
+  {
+    "code": "WS-VF",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "sm": "Va'a-o-Fonoti"
+    }
+  },
+  {
+    "code": "WS-VS",
+    "type": {
+      "en": "district",
+      "fr": "district"
+    },
+    "names": {
+      "sm": "Vaisigano"
+    }
+  }
 ]

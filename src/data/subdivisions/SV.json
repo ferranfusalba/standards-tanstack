@@ -1,16 +1,156 @@
 [
-  { "code": "SV-AH", "type": "department", "names": { "es": "Ahuachapán" } },
-  { "code": "SV-CA", "type": "department", "names": { "es": "Cabañas" } },
-  { "code": "SV-CH", "type": "department", "names": { "es": "Chalatenango" } },
-  { "code": "SV-CU", "type": "department", "names": { "es": "Cuscatlán" } },
-  { "code": "SV-LI", "type": "department", "names": { "es": "La Libertad" } },
-  { "code": "SV-MO", "type": "department", "names": { "es": "Morazán" } },
-  { "code": "SV-PA", "type": "department", "names": { "es": "La Paz" } },
-  { "code": "SV-SA", "type": "department", "names": { "es": "Santa Ana" } },
-  { "code": "SV-SM", "type": "department", "names": { "es": "San Miguel" } },
-  { "code": "SV-SO", "type": "department", "names": { "es": "Sonsonate" } },
-  { "code": "SV-SS", "type": "department", "names": { "es": "San Salvador" } },
-  { "code": "SV-SV", "type": "department", "names": { "es": "San Vicente" } },
-  { "code": "SV-UN", "type": "department", "names": { "es": "La Unión" } },
-  { "code": "SV-US", "type": "department", "names": { "es": "Usulután" } }
+  {
+    "code": "SV-AH",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Ahuachapán"
+    }
+  },
+  {
+    "code": "SV-CA",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Cabañas"
+    }
+  },
+  {
+    "code": "SV-CH",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Chalatenango"
+    }
+  },
+  {
+    "code": "SV-CU",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Cuscatlán"
+    }
+  },
+  {
+    "code": "SV-LI",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "La Libertad"
+    }
+  },
+  {
+    "code": "SV-MO",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Morazán"
+    }
+  },
+  {
+    "code": "SV-PA",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "La Paz"
+    }
+  },
+  {
+    "code": "SV-SA",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Santa Ana"
+    }
+  },
+  {
+    "code": "SV-SM",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "San Miguel"
+    }
+  },
+  {
+    "code": "SV-SO",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Sonsonate"
+    }
+  },
+  {
+    "code": "SV-SS",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "San Salvador"
+    }
+  },
+  {
+    "code": "SV-SV",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "San Vicente"
+    }
+  },
+  {
+    "code": "SV-UN",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "La Unión"
+    }
+  },
+  {
+    "code": "SV-US",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Usulután"
+    }
+  }
 ]

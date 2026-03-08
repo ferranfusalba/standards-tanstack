@@ -1,7 +1,52 @@
 [
-  { "code": "TG-C", "type": "region", "names": { "fr": "Centrale" } },
-  { "code": "TG-K", "type": "region", "names": { "fr": "Kara" } },
-  { "code": "TG-M", "type": "region", "names": { "fr": "Maritime" } },
-  { "code": "TG-P", "type": "region", "names": { "fr": "Plateaux" } },
-  { "code": "TG-S", "type": "region", "names": { "fr": "Savanes" } }
+  {
+    "code": "TG-C",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Centrale"
+    }
+  },
+  {
+    "code": "TG-K",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Kara"
+    }
+  },
+  {
+    "code": "TG-M",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Maritime (Région)"
+    }
+  },
+  {
+    "code": "TG-P",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Plateaux"
+    }
+  },
+  {
+    "code": "TG-S",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Savanes"
+    }
+  }
 ]

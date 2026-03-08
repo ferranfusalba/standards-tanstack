@@ -1,14 +1,972 @@
 [
-  { "code": "MA-01", "type": "region", "names": { "ar": "طنجة-تطوان-الحسيمة", "fr": "Tanger-Tétouan-Al Hoceïma" } },
-  { "code": "MA-02", "type": "region", "names": { "ar": "الشرق", "fr": "L'Oriental" } },
-  { "code": "MA-03", "type": "region", "names": { "ar": "فاس-مكناس", "fr": "Fès-Meknès" } },
-  { "code": "MA-04", "type": "region", "names": { "ar": "الرباط-سلا-القنيطرة", "fr": "Rabat-Salé-Kénitra" } },
-  { "code": "MA-05", "type": "region", "names": { "ar": "بني ملال-خنيفرة", "fr": "Béni Mellal-Khénifra" } },
-  { "code": "MA-06", "type": "region", "names": { "ar": "الدار البيضاء-سطات", "fr": "Casablanca-Settat" } },
-  { "code": "MA-07", "type": "region", "names": { "ar": "مراكش-آسفي", "fr": "Marrakech-Safi" } },
-  { "code": "MA-08", "type": "region", "names": { "ar": "درعة-تافيلالت", "fr": "Drâa-Tafilalet" } },
-  { "code": "MA-09", "type": "region", "names": { "ar": "سوس-ماسة", "fr": "Souss-Massa" } },
-  { "code": "MA-10", "type": "region", "names": { "ar": "كلميم-واد نون", "fr": "Guelmim-Oued Noun" } },
-  { "code": "MA-11", "type": "region", "names": { "ar": "العيون-الساقية الحمراء", "fr": "Laâyoune-Sakia El Hamra" } },
-  { "code": "MA-12", "type": "region", "names": { "ar": "الداخلة-وادي الذهب", "fr": "Dakhla-Oued Ed-Dahab" } }
+  {
+    "code": "MA-01",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "jihāt"
+    },
+    "names": {
+      "ar": "طنجة-تطوان-الحسيمة",
+      "fr": "Tanger-Tétouan-Al Hoceïma"
+    }
+  },
+  {
+    "code": "MA-02",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "jihāt"
+    },
+    "names": {
+      "ar": "الشرق",
+      "fr": "L'Oriental"
+    }
+  },
+  {
+    "code": "MA-03",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "jihāt"
+    },
+    "names": {
+      "ar": "فاس-مكناس",
+      "fr": "Fès-Meknès"
+    }
+  },
+  {
+    "code": "MA-04",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "jihāt"
+    },
+    "names": {
+      "ar": "الرباط-سلا-القنيطرة",
+      "fr": "Rabat-Salé-Kénitra"
+    }
+  },
+  {
+    "code": "MA-05",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "jihāt"
+    },
+    "names": {
+      "ar": "بني ملال-خنيفرة",
+      "fr": "Béni Mellal-Khénifra"
+    }
+  },
+  {
+    "code": "MA-06",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "jihāt"
+    },
+    "names": {
+      "ar": "الدار البيضاء-سطات",
+      "fr": "Casablanca-Settat"
+    }
+  },
+  {
+    "code": "MA-07",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "jihāt"
+    },
+    "names": {
+      "ar": "مراكش-آسفي",
+      "fr": "Marrakech-Safi"
+    }
+  },
+  {
+    "code": "MA-08",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "jihāt"
+    },
+    "names": {
+      "ar": "درعة-تافيلالت",
+      "fr": "Drâa-Tafilalet"
+    }
+  },
+  {
+    "code": "MA-09",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "jihāt"
+    },
+    "names": {
+      "ar": "سوس-ماسة",
+      "fr": "Souss-Massa"
+    }
+  },
+  {
+    "code": "MA-10",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "jihāt"
+    },
+    "names": {
+      "ar": "كلميم-واد نون",
+      "fr": "Guelmim-Oued Noun"
+    }
+  },
+  {
+    "code": "MA-11",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "jihāt"
+    },
+    "names": {
+      "ar": "العيون-الساقية الحمراء",
+      "fr": "Laâyoune-Sakia El Hamra"
+    }
+  },
+  {
+    "code": "MA-12",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ar": "jihāt"
+    },
+    "names": {
+      "ar": "الداخلة-وادي الذهب",
+      "fr": "Dakhla-Oued Ed-Dahab"
+    }
+  },
+  {
+    "code": "MA-AGD",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture",
+      "ar": "'amālah"
+    },
+    "names": {
+      "fr": "Agadir-Ida-Ou-Tanane"
+    }
+  },
+  {
+    "code": "MA-AOU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Aousserd"
+    }
+  },
+  {
+    "code": "MA-ASZ",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Assa-Zag"
+    }
+  },
+  {
+    "code": "MA-AZI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Azilal"
+    }
+  },
+  {
+    "code": "MA-BEM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Béni Mellal"
+    }
+  },
+  {
+    "code": "MA-BER",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Berkane"
+    }
+  },
+  {
+    "code": "MA-BES",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Benslimane"
+    }
+  },
+  {
+    "code": "MA-BOD",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Boujdour"
+    }
+  },
+  {
+    "code": "MA-BOM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Boulemane"
+    }
+  },
+  {
+    "code": "MA-BRR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Berrechid"
+    }
+  },
+  {
+    "code": "MA-CAS",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture",
+      "ar": "'amālah"
+    },
+    "names": {
+      "fr": "Casablanca",
+      "ar": "Dar el Beïda"
+    }
+  },
+  {
+    "code": "MA-CHE",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Chefchaouen"
+    }
+  },
+  {
+    "code": "MA-CHI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Chichaoua"
+    }
+  },
+  {
+    "code": "MA-CHT",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Chtouka-Ait Baha"
+    }
+  },
+  {
+    "code": "MA-DRI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Driouch"
+    }
+  },
+  {
+    "code": "MA-ERR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Errachidia"
+    }
+  },
+  {
+    "code": "MA-ESI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Essaouira"
+    }
+  },
+  {
+    "code": "MA-ESM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Es-Semara"
+    }
+  },
+  {
+    "code": "MA-FAH",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Fahs-Anjra"
+    }
+  },
+  {
+    "code": "MA-FES",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture",
+      "ar": "'amālah"
+    },
+    "names": {
+      "fr": "Fès"
+    }
+  },
+  {
+    "code": "MA-FIG",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Figuig"
+    }
+  },
+  {
+    "code": "MA-FQH",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Fquih Ben Salah"
+    }
+  },
+  {
+    "code": "MA-GUE",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Guelmim"
+    }
+  },
+  {
+    "code": "MA-GUF",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Guercif"
+    }
+  },
+  {
+    "code": "MA-HAJ",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "El Hajeb"
+    }
+  },
+  {
+    "code": "MA-HAO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Al Haouz"
+    }
+  },
+  {
+    "code": "MA-HOC",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Al Hoceïma"
+    }
+  },
+  {
+    "code": "MA-IFR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Ifrane"
+    }
+  },
+  {
+    "code": "MA-INE",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture",
+      "ar": "'amālah"
+    },
+    "names": {
+      "fr": "Inezgane-Ait Melloul"
+    }
+  },
+  {
+    "code": "MA-JDI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "El Jadida"
+    }
+  },
+  {
+    "code": "MA-JRA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Jerada"
+    }
+  },
+  {
+    "code": "MA-KEN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Kénitra"
+    }
+  },
+  {
+    "code": "MA-KES",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "El Kelâa des Sraghna"
+    }
+  },
+  {
+    "code": "MA-KHE",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Khémisset"
+    }
+  },
+  {
+    "code": "MA-KHN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Khénifra"
+    }
+  },
+  {
+    "code": "MA-KHO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Khouribga"
+    }
+  },
+  {
+    "code": "MA-LAA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Laâyoune"
+    }
+  },
+  {
+    "code": "MA-LAR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Larache"
+    }
+  },
+  {
+    "code": "MA-MAR",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture",
+      "ar": "'amālah"
+    },
+    "names": {
+      "fr": "Marrakech"
+    }
+  },
+  {
+    "code": "MA-MDF",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture",
+      "ar": "'amālah"
+    },
+    "names": {
+      "fr": "M'diq-Fnideq"
+    }
+  },
+  {
+    "code": "MA-MED",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Médiouna"
+    }
+  },
+  {
+    "code": "MA-MEK",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture",
+      "ar": "'amālah"
+    },
+    "names": {
+      "fr": "Meknès"
+    }
+  },
+  {
+    "code": "MA-MID",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Midelt"
+    }
+  },
+  {
+    "code": "MA-MOH",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture",
+      "ar": "'amālah"
+    },
+    "names": {
+      "fr": "Mohammadia"
+    }
+  },
+  {
+    "code": "MA-MOU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Moulay Yacoub"
+    }
+  },
+  {
+    "code": "MA-NAD",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Nador"
+    }
+  },
+  {
+    "code": "MA-NOU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Nouaceur"
+    }
+  },
+  {
+    "code": "MA-OUA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Ouarzazate"
+    }
+  },
+  {
+    "code": "MA-OUD",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Oued Ed-Dahab"
+    }
+  },
+  {
+    "code": "MA-OUJ",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture",
+      "ar": "'amālah"
+    },
+    "names": {
+      "fr": "Oujda-Angad"
+    }
+  },
+  {
+    "code": "MA-OUZ",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Ouezzane"
+    }
+  },
+  {
+    "code": "MA-RAB",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture",
+      "ar": "'amālah"
+    },
+    "names": {
+      "fr": "Rabat"
+    }
+  },
+  {
+    "code": "MA-REH",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Rehamna"
+    }
+  },
+  {
+    "code": "MA-SAF",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Safi"
+    }
+  },
+  {
+    "code": "MA-SAL",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture",
+      "ar": "'amālah"
+    },
+    "names": {
+      "fr": "Salé"
+    }
+  },
+  {
+    "code": "MA-SEF",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Sefrou"
+    }
+  },
+  {
+    "code": "MA-SET",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Settat"
+    }
+  },
+  {
+    "code": "MA-SIB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Sidi Bennour"
+    }
+  },
+  {
+    "code": "MA-SIF",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Sidi Ifni"
+    }
+  },
+  {
+    "code": "MA-SIK",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Sidi Kacem"
+    }
+  },
+  {
+    "code": "MA-SIL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Sidi Slimane"
+    }
+  },
+  {
+    "code": "MA-SKH",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture",
+      "ar": "'amālah"
+    },
+    "names": {
+      "fr": "Skhirate-Témara"
+    }
+  },
+  {
+    "code": "MA-TAF",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Tarfaya"
+    }
+  },
+  {
+    "code": "MA-TAI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Taourirt"
+    }
+  },
+  {
+    "code": "MA-TAO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Taounate"
+    }
+  },
+  {
+    "code": "MA-TAR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Taroudannt"
+    }
+  },
+  {
+    "code": "MA-TAT",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Tata"
+    }
+  },
+  {
+    "code": "MA-TAZ",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Taza"
+    }
+  },
+  {
+    "code": "MA-TET",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Tétouan"
+    }
+  },
+  {
+    "code": "MA-TIN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Tinghir"
+    }
+  },
+  {
+    "code": "MA-TIZ",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Tiznit"
+    }
+  },
+  {
+    "code": "MA-TNG",
+    "type": {
+      "en": "prefecture",
+      "fr": "préfecture",
+      "ar": "'amālah"
+    },
+    "names": {
+      "fr": "Tanger-Assilah"
+    }
+  },
+  {
+    "code": "MA-TNT",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Tan-Tan"
+    }
+  },
+  {
+    "code": "MA-YUS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Youssoufia"
+    }
+  },
+  {
+    "code": "MA-ZAG",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ar": "iqlīm"
+    },
+    "names": {
+      "fr": "Zagora"
+    }
+  }
 ]

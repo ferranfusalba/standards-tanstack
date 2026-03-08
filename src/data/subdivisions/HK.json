@@ -1,20 +1,146 @@
 [
-  { "code": "HK-HCW", "type": "district", "names": { "zh": "中西區", "en": "Central and Western" } },
-  { "code": "HK-HEA", "type": "district", "names": { "zh": "東區", "en": "Eastern" } },
-  { "code": "HK-HSO", "type": "district", "names": { "zh": "南區", "en": "Southern" } },
-  { "code": "HK-HWC", "type": "district", "names": { "zh": "灣仔區", "en": "Wan Chai" } },
-  { "code": "HK-KKC", "type": "district", "names": { "zh": "九龍城區", "en": "Kowloon City" } },
-  { "code": "HK-KKT", "type": "district", "names": { "zh": "觀塘區", "en": "Kwun Tong" } },
-  { "code": "HK-KSS", "type": "district", "names": { "zh": "深水埗區", "en": "Sham Shui Po" } },
-  { "code": "HK-KWT", "type": "district", "names": { "zh": "黃大仙區", "en": "Wong Tai Sin" } },
-  { "code": "HK-KYT", "type": "district", "names": { "zh": "油尖旺區", "en": "Yau Tsim Mong" } },
-  { "code": "HK-NIS", "type": "district", "names": { "zh": "離島區", "en": "Islands" } },
-  { "code": "HK-NKT", "type": "district", "names": { "zh": "葵青區", "en": "Kwai Tsing" } },
-  { "code": "HK-NNO", "type": "district", "names": { "zh": "北區", "en": "North" } },
-  { "code": "HK-NSK", "type": "district", "names": { "zh": "西貢區", "en": "Sai Kung" } },
-  { "code": "HK-NST", "type": "district", "names": { "zh": "沙田區", "en": "Sha Tin" } },
-  { "code": "HK-NTM", "type": "district", "names": { "zh": "屯門區", "en": "Tuen Mun" } },
-  { "code": "HK-NTP", "type": "district", "names": { "zh": "大埔區", "en": "Tai Po" } },
-  { "code": "HK-NTW", "type": "district", "names": { "zh": "荃灣區", "en": "Tsuen Wan" } },
-  { "code": "HK-NYL", "type": "district", "names": { "zh": "元朗區", "en": "Yuen Long" } }
+  {
+    "code": "HK-HCW",
+    "type": "district",
+    "names": {
+      "zh": "中西區",
+      "en": "Central and Western"
+    }
+  },
+  {
+    "code": "HK-HEA",
+    "type": "district",
+    "names": {
+      "zh": "東區",
+      "en": "Eastern"
+    }
+  },
+  {
+    "code": "HK-HSO",
+    "type": "district",
+    "names": {
+      "zh": "南區",
+      "en": "Southern"
+    }
+  },
+  {
+    "code": "HK-HWC",
+    "type": "district",
+    "names": {
+      "zh": "灣仔區",
+      "en": "Wan Chai"
+    }
+  },
+  {
+    "code": "HK-KKC",
+    "type": "district",
+    "names": {
+      "zh": "九龍城區",
+      "en": "Kowloon City"
+    }
+  },
+  {
+    "code": "HK-KKT",
+    "type": "district",
+    "names": {
+      "zh": "觀塘區",
+      "en": "Kwun Tong"
+    }
+  },
+  {
+    "code": "HK-KSS",
+    "type": "district",
+    "names": {
+      "zh": "深水埗區",
+      "en": "Sham Shui Po"
+    }
+  },
+  {
+    "code": "HK-KWT",
+    "type": "district",
+    "names": {
+      "zh": "黃大仙區",
+      "en": "Wong Tai Sin"
+    }
+  },
+  {
+    "code": "HK-KYT",
+    "type": "district",
+    "names": {
+      "zh": "油尖旺區",
+      "en": "Yau Tsim Mong"
+    }
+  },
+  {
+    "code": "HK-NIS",
+    "type": "district",
+    "names": {
+      "zh": "離島區",
+      "en": "Islands"
+    }
+  },
+  {
+    "code": "HK-NKT",
+    "type": "district",
+    "names": {
+      "zh": "葵青區",
+      "en": "Kwai Tsing"
+    }
+  },
+  {
+    "code": "HK-NNO",
+    "type": "district",
+    "names": {
+      "zh": "北區",
+      "en": "North"
+    }
+  },
+  {
+    "code": "HK-NSK",
+    "type": "district",
+    "names": {
+      "zh": "西貢區",
+      "en": "Sai Kung"
+    }
+  },
+  {
+    "code": "HK-NST",
+    "type": "district",
+    "names": {
+      "zh": "沙田區",
+      "en": "Sha Tin"
+    }
+  },
+  {
+    "code": "HK-NTM",
+    "type": "district",
+    "names": {
+      "zh": "屯門區",
+      "en": "Tuen Mun"
+    }
+  },
+  {
+    "code": "HK-NTP",
+    "type": "district",
+    "names": {
+      "zh": "大埔區",
+      "en": "Tai Po"
+    }
+  },
+  {
+    "code": "HK-NTW",
+    "type": "district",
+    "names": {
+      "zh": "荃灣區",
+      "en": "Tsuen Wan"
+    }
+  },
+  {
+    "code": "HK-NYL",
+    "type": "district",
+    "names": {
+      "zh": "元朗區",
+      "en": "Yuen Long"
+    }
+  }
 ]

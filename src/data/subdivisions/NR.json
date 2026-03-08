@@ -1,16 +1,156 @@
 [
-  { "code": "NR-01", "type": "district", "names": { "en": "Aiwo" } },
-  { "code": "NR-02", "type": "district", "names": { "en": "Anabar" } },
-  { "code": "NR-03", "type": "district", "names": { "en": "Anetan" } },
-  { "code": "NR-04", "type": "district", "names": { "en": "Anibare" } },
-  { "code": "NR-05", "type": "district", "names": { "en": "Baitsi" } },
-  { "code": "NR-06", "type": "district", "names": { "en": "Boe" } },
-  { "code": "NR-07", "type": "district", "names": { "en": "Buada" } },
-  { "code": "NR-08", "type": "district", "names": { "en": "Denigomodu" } },
-  { "code": "NR-09", "type": "district", "names": { "en": "Ewa" } },
-  { "code": "NR-10", "type": "district", "names": { "en": "Ijuw" } },
-  { "code": "NR-11", "type": "district", "names": { "en": "Meneng" } },
-  { "code": "NR-12", "type": "district", "names": { "en": "Nibok" } },
-  { "code": "NR-13", "type": "district", "names": { "en": "Uaboe" } },
-  { "code": "NR-14", "type": "district", "names": { "en": "Yaren" } }
+  {
+    "code": "NR-01",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "na": "distric"
+    },
+    "names": {
+      "en": "Aiwo"
+    }
+  },
+  {
+    "code": "NR-02",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "na": "distric"
+    },
+    "names": {
+      "en": "Anabar"
+    }
+  },
+  {
+    "code": "NR-03",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "na": "distric"
+    },
+    "names": {
+      "en": "Anetan"
+    }
+  },
+  {
+    "code": "NR-04",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "na": "distric"
+    },
+    "names": {
+      "en": "Anibare"
+    }
+  },
+  {
+    "code": "NR-05",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "na": "distric"
+    },
+    "names": {
+      "en": "Baitsi"
+    }
+  },
+  {
+    "code": "NR-06",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "na": "distric"
+    },
+    "names": {
+      "en": "Boe"
+    }
+  },
+  {
+    "code": "NR-07",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "na": "distric"
+    },
+    "names": {
+      "en": "Buada"
+    }
+  },
+  {
+    "code": "NR-08",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "na": "distric"
+    },
+    "names": {
+      "en": "Denigomodu"
+    }
+  },
+  {
+    "code": "NR-09",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "na": "distric"
+    },
+    "names": {
+      "en": "Ewa"
+    }
+  },
+  {
+    "code": "NR-10",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "na": "distric"
+    },
+    "names": {
+      "en": "Ijuw"
+    }
+  },
+  {
+    "code": "NR-11",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "na": "distric"
+    },
+    "names": {
+      "en": "Meneng"
+    }
+  },
+  {
+    "code": "NR-12",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "na": "distric"
+    },
+    "names": {
+      "en": "Nibok"
+    }
+  },
+  {
+    "code": "NR-13",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "na": "distric"
+    },
+    "names": {
+      "en": "Uaboe"
+    }
+  },
+  {
+    "code": "NR-14",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "na": "distric"
+    },
+    "names": {
+      "en": "Yaren"
+    }
+  }
 ]

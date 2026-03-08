@@ -1,24 +1,244 @@
 [
-  { "code": "TW-HSZ", "type": "city", "names": { "zh": "新竹市" } },
-  { "code": "TW-KEE", "type": "city", "names": { "zh": "基隆市" } },
-  { "code": "TW-KHH", "type": "special municipality", "names": { "zh": "高雄市" } },
-  { "code": "TW-NWT", "type": "special municipality", "names": { "zh": "新北市" } },
-  { "code": "TW-TAO", "type": "special municipality", "names": { "zh": "桃園市" } },
-  { "code": "TW-TNN", "type": "special municipality", "names": { "zh": "臺南市" } },
-  { "code": "TW-TPE", "type": "special municipality", "names": { "zh": "臺北市" } },
-  { "code": "TW-TXG", "type": "special municipality", "names": { "zh": "臺中市" } },
-  { "code": "TW-CHA", "type": "county", "names": { "zh": "彰化縣" } },
-  { "code": "TW-CYI", "type": "city", "names": { "zh": "嘉義市" } },
-  { "code": "TW-CYQ", "type": "county", "names": { "zh": "嘉義縣" } },
-  { "code": "TW-HSQ", "type": "county", "names": { "zh": "新竹縣" } },
-  { "code": "TW-HUA", "type": "county", "names": { "zh": "花蓮縣" } },
-  { "code": "TW-ILA", "type": "county", "names": { "zh": "宜蘭縣" } },
-  { "code": "TW-KIN", "type": "county", "names": { "zh": "金門縣" } },
-  { "code": "TW-LIE", "type": "county", "names": { "zh": "連江縣" } },
-  { "code": "TW-MIA", "type": "county", "names": { "zh": "苗栗縣" } },
-  { "code": "TW-NAN", "type": "county", "names": { "zh": "南投縣" } },
-  { "code": "TW-PEN", "type": "county", "names": { "zh": "澎湖縣" } },
-  { "code": "TW-PIF", "type": "county", "names": { "zh": "屏東縣" } },
-  { "code": "TW-TTT", "type": "county", "names": { "zh": "臺東縣" } },
-  { "code": "TW-YUN", "type": "county", "names": { "zh": "雲林縣" } }
+  {
+    "code": "TW-CHA",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "zh": "hsien"
+    },
+    "names": {
+      "zh": "Changhua"
+    }
+  },
+  {
+    "code": "TW-CYI",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "zh": "shih"
+    },
+    "names": {
+      "zh": "Chiayi"
+    }
+  },
+  {
+    "code": "TW-CYQ",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "zh": "hsien"
+    },
+    "names": {
+      "zh": "Chiayi"
+    }
+  },
+  {
+    "code": "TW-HSQ",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "zh": "hsien"
+    },
+    "names": {
+      "zh": "Hsinchu"
+    }
+  },
+  {
+    "code": "TW-HSZ",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "zh": "shih"
+    },
+    "names": {
+      "zh": "Hsinchu"
+    }
+  },
+  {
+    "code": "TW-HUA",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "zh": "hsien"
+    },
+    "names": {
+      "zh": "Hualien"
+    }
+  },
+  {
+    "code": "TW-ILA",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "zh": "hsien"
+    },
+    "names": {
+      "zh": "Yilan"
+    }
+  },
+  {
+    "code": "TW-KEE",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "zh": "shih"
+    },
+    "names": {
+      "zh": "Keelung"
+    }
+  },
+  {
+    "code": "TW-KHH",
+    "type": {
+      "en": "special municipality",
+      "fr": "municipalité spéciale",
+      "zh": "chih-hsia-shih"
+    },
+    "names": {
+      "zh": "Kaohsiung"
+    }
+  },
+  {
+    "code": "TW-KIN",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "zh": "hsien"
+    },
+    "names": {
+      "zh": "Kinmen"
+    }
+  },
+  {
+    "code": "TW-LIE",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "zh": "hsien"
+    },
+    "names": {
+      "zh": "Lienchiang"
+    }
+  },
+  {
+    "code": "TW-MIA",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "zh": "hsien"
+    },
+    "names": {
+      "zh": "Miaoli"
+    }
+  },
+  {
+    "code": "TW-NAN",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "zh": "hsien"
+    },
+    "names": {
+      "zh": "Nantou"
+    }
+  },
+  {
+    "code": "TW-NWT",
+    "type": {
+      "en": "special municipality",
+      "fr": "municipalité spéciale",
+      "zh": "chih-hsia-shih"
+    },
+    "names": {
+      "zh": "New Taipei"
+    }
+  },
+  {
+    "code": "TW-PEN",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "zh": "hsien"
+    },
+    "names": {
+      "zh": "Penghu"
+    }
+  },
+  {
+    "code": "TW-PIF",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "zh": "hsien"
+    },
+    "names": {
+      "zh": "Pingtung"
+    }
+  },
+  {
+    "code": "TW-TAO",
+    "type": {
+      "en": "special municipality",
+      "fr": "municipalité spéciale",
+      "zh": "chih-hsia-shih"
+    },
+    "names": {
+      "zh": "Taoyuan"
+    }
+  },
+  {
+    "code": "TW-TNN",
+    "type": {
+      "en": "special municipality",
+      "fr": "municipalité spéciale",
+      "zh": "chih-hsia-shih"
+    },
+    "names": {
+      "zh": "Tainan"
+    }
+  },
+  {
+    "code": "TW-TPE",
+    "type": {
+      "en": "special municipality",
+      "fr": "municipalité spéciale",
+      "zh": "chih-hsia-shih"
+    },
+    "names": {
+      "zh": "Taipei"
+    }
+  },
+  {
+    "code": "TW-TTT",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "zh": "hsien"
+    },
+    "names": {
+      "zh": "Taitung"
+    }
+  },
+  {
+    "code": "TW-TXG",
+    "type": {
+      "en": "special municipality",
+      "fr": "municipalité spéciale",
+      "zh": "chih-hsia-shih"
+    },
+    "names": {
+      "zh": "Taichung"
+    }
+  },
+  {
+    "code": "TW-YUN",
+    "type": {
+      "en": "county",
+      "fr": "comté",
+      "zh": "hsien"
+    },
+    "names": {
+      "zh": "Yunlin"
+    }
+  }
 ]

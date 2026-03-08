@@ -1,9 +1,86 @@
 [
-  { "code": "NP-P1", "type": "province", "names": { "ne": "कोशी प्रदेश" } },
-  { "code": "NP-P2", "type": "province", "names": { "ne": "मधेश प्रदेश" } },
-  { "code": "NP-P3", "type": "province", "names": { "ne": "बागमती प्रदेश" } },
-  { "code": "NP-P4", "type": "province", "names": { "ne": "गण्डकी प्रदेश" } },
-  { "code": "NP-P5", "type": "province", "names": { "ne": "लुम्बिनी प्रदेश" } },
-  { "code": "NP-P6", "type": "province", "names": { "ne": "कर्णाली प्रदेश" } },
-  { "code": "NP-P7", "type": "province", "names": { "ne": "सुदूरपश्चिम प्रदेश" } }
+  {
+    "code": "NP-P1",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ne": "pradesh"
+    },
+    "names": {
+      "en": "Koshi",
+      "ne": "Koshī"
+    }
+  },
+  {
+    "code": "NP-P2",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ne": "pradesh"
+    },
+    "names": {
+      "en": "Madhesh",
+      "ne": "Madhesh"
+    }
+  },
+  {
+    "code": "NP-P3",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ne": "pradesh"
+    },
+    "names": {
+      "en": "Bagmati",
+      "ne": "Bāgmatī"
+    }
+  },
+  {
+    "code": "NP-P4",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ne": "pradesh"
+    },
+    "names": {
+      "en": "Gandaki",
+      "ne": "Gaṇḍakī"
+    }
+  },
+  {
+    "code": "NP-P5",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ne": "pradesh"
+    },
+    "names": {
+      "en": "Lumbini",
+      "ne": "Lumbinī"
+    }
+  },
+  {
+    "code": "NP-P6",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ne": "pradesh"
+    },
+    "names": {
+      "en": "Karnali",
+      "ne": "Karṇālī"
+    }
+  },
+  {
+    "code": "NP-P7",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "ne": "pradesh"
+    },
+    "names": {
+      "en": "Sudurpashchim",
+      "ne": "Sudūrpashchim"
+    }
+  }
 ]

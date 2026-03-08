@@ -1,12 +1,102 @@
 [
-  { "code": "GY-BA", "type": "region", "names": { "en": "Barima-Waini" } },
-  { "code": "GY-CU", "type": "region", "names": { "en": "Cuyuni-Mazaruni" } },
-  { "code": "GY-DE", "type": "region", "names": { "en": "Demerara-Mahaica" } },
-  { "code": "GY-EB", "type": "region", "names": { "en": "East Berbice-Corentyne" } },
-  { "code": "GY-ES", "type": "region", "names": { "en": "Essequibo Islands-West Demerara" } },
-  { "code": "GY-MA", "type": "region", "names": { "en": "Mahaica-Berbice" } },
-  { "code": "GY-PM", "type": "region", "names": { "en": "Pomeroon-Supenaam" } },
-  { "code": "GY-PT", "type": "region", "names": { "en": "Potaro-Siparuni" } },
-  { "code": "GY-UD", "type": "region", "names": { "en": "Upper Demerara-Berbice" } },
-  { "code": "GY-UT", "type": "region", "names": { "en": "Upper Takutu-Upper Essequibo" } }
+  {
+    "code": "GY-BA",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Barima-Waini"
+    }
+  },
+  {
+    "code": "GY-CU",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Cuyuni-Mazaruni"
+    }
+  },
+  {
+    "code": "GY-DE",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Demerara-Mahaica"
+    }
+  },
+  {
+    "code": "GY-EB",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "East Berbice-Corentyne"
+    }
+  },
+  {
+    "code": "GY-ES",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Essequibo Islands-West Demerara"
+    }
+  },
+  {
+    "code": "GY-MA",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Mahaica-Berbice"
+    }
+  },
+  {
+    "code": "GY-PM",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Pomeroon-Supenaam"
+    }
+  },
+  {
+    "code": "GY-PT",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Potaro-Siparuni"
+    }
+  },
+  {
+    "code": "GY-UD",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Upper Demerara-Berbice"
+    }
+  },
+  {
+    "code": "GY-UT",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "en": "Upper Takutu-Upper Essequibo"
+    }
+  }
 ]

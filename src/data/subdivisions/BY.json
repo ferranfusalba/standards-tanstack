@@ -1,9 +1,93 @@
 [
-  { "code": "BY-BR", "type": { "en": "oblast", "fr": "région", "be": "voblasc'", "ru": "oblast'" }, "names": { "be": "Bresckaja voblasć", "ru": "Brestskaja oblast'" } },
-  { "code": "BY-HM", "type": { "en": "city", "fr": "ville", "be": "horad", "ru": "gorod" }, "names": { "be": "Horad Minsk", "ru": "Gorod Minsk" } },
-  { "code": "BY-HO", "type": { "en": "oblast", "fr": "région", "be": "voblasc'", "ru": "oblast'" }, "names": { "be": "Homieĺskaja voblasć", "ru": "Gomel'skaja oblast'" } },
-  { "code": "BY-HR", "type": { "en": "oblast", "fr": "région", "be": "voblasc'", "ru": "oblast'" }, "names": { "be": "Hrodzienskaja voblasć", "ru": "Grodnenskaja oblast'" } },
-  { "code": "BY-MA", "type": { "en": "oblast", "fr": "région", "be": "voblasc'", "ru": "oblast'" }, "names": { "be": "Mahilioŭskaja voblasć", "ru": "Mogilevskaja oblast'" } },
-  { "code": "BY-MI", "type": { "en": "oblast", "fr": "région", "be": "voblasc'", "ru": "oblast'" }, "names": { "be": "Minskaja voblasć", "ru": "Minskaja oblast'" } },
-  { "code": "BY-VI", "type": { "en": "oblast", "fr": "région", "be": "voblasc'", "ru": "oblast'" }, "names": { "be": "Viciebskaja voblasć", "ru": "Vitebskaja oblast'" } }
+  {
+    "code": "BY-BR",
+    "type": {
+      "en": "oblast",
+      "fr": "région",
+      "be": "voblasc'",
+      "ru": "oblast'"
+    },
+    "names": {
+      "be": "Bresckaja voblasć",
+      "ru": "Brestskaja oblast'"
+    }
+  },
+  {
+    "code": "BY-HM",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "be": "horad",
+      "ru": "gorod"
+    },
+    "names": {
+      "be": "Horad Minsk",
+      "ru": "Gorod Minsk"
+    }
+  },
+  {
+    "code": "BY-HO",
+    "type": {
+      "en": "oblast",
+      "fr": "région",
+      "be": "voblasc'",
+      "ru": "oblast'"
+    },
+    "names": {
+      "be": "Homieĺskaja voblasć",
+      "ru": "Gomel'skaja oblast'"
+    }
+  },
+  {
+    "code": "BY-HR",
+    "type": {
+      "en": "oblast",
+      "fr": "région",
+      "be": "voblasc'",
+      "ru": "oblast'"
+    },
+    "names": {
+      "be": "Hrodzienskaja voblasć",
+      "ru": "Grodnenskaja oblast'"
+    }
+  },
+  {
+    "code": "BY-MA",
+    "type": {
+      "en": "oblast",
+      "fr": "région",
+      "be": "voblasc'",
+      "ru": "oblast'"
+    },
+    "names": {
+      "be": "Mahilioŭskaja voblasć",
+      "ru": "Mogilevskaja oblast'"
+    }
+  },
+  {
+    "code": "BY-MI",
+    "type": {
+      "en": "oblast",
+      "fr": "région",
+      "be": "voblasc'",
+      "ru": "oblast'"
+    },
+    "names": {
+      "be": "Minskaja voblasć",
+      "ru": "Minskaja oblast'"
+    }
+  },
+  {
+    "code": "BY-VI",
+    "type": {
+      "en": "oblast",
+      "fr": "région",
+      "be": "voblasc'",
+      "ru": "oblast'"
+    },
+    "names": {
+      "be": "Viciebskaja voblasć",
+      "ru": "Vitebskaja oblast'"
+    }
+  }
 ]

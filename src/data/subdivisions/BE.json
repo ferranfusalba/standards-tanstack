@@ -1,15 +1,159 @@
 [
-  { "code": "BE-BRU", "type": { "en": "region", "fr": "région", "de": "Region", "nl": "gewest" }, "names": { "nl": "Brussels Hoofdstedelijk Gewest", "fr": "Bruxelles-Capitale, Région de" } },
-  { "code": "BE-VLG", "type": { "en": "region", "fr": "région", "de": "Region", "nl": "gewest" }, "names": { "nl": "Vlaams Gewest" } },
-  { "code": "BE-WAL", "type": { "en": "region", "fr": "région", "de": "Region", "nl": "gewest" }, "names": { "fr": "wallonne, Région" } },
-  { "code": "BE-VAN", "type": { "en": "province", "fr": "province", "de": "Provinz", "nl": "provincie" }, "names": { "nl": "Antwerpen" } },
-  { "code": "BE-VBR", "type": { "en": "province", "fr": "province", "de": "Provinz", "nl": "provincie" }, "names": { "nl": "Vlaams-Brabant" } },
-  { "code": "BE-VLI", "type": { "en": "province", "fr": "province", "de": "Provinz", "nl": "provincie" }, "names": { "nl": "Limburg" } },
-  { "code": "BE-VOV", "type": { "en": "province", "fr": "province", "de": "Provinz", "nl": "provincie" }, "names": { "nl": "Oost-Vlaanderen" } },
-  { "code": "BE-VWV", "type": { "en": "province", "fr": "province", "de": "Provinz", "nl": "provincie" }, "names": { "nl": "West-Vlaanderen" } },
-  { "code": "BE-WBR", "type": { "en": "province", "fr": "province", "de": "Provinz", "nl": "provincie" }, "names": { "fr": "Brabant wallon" } },
-  { "code": "BE-WHT", "type": { "en": "province", "fr": "province", "de": "Provinz", "nl": "provincie" }, "names": { "fr": "Hainaut" } },
-  { "code": "BE-WLG", "type": { "en": "province", "fr": "province", "de": "Provinz", "nl": "provincie" }, "names": { "fr": "Liège" } },
-  { "code": "BE-WLX", "type": { "en": "province", "fr": "province", "de": "Provinz", "nl": "provincie" }, "names": { "fr": "Luxembourg" } },
-  { "code": "BE-WNA", "type": { "en": "province", "fr": "province", "de": "Provinz", "nl": "provincie" }, "names": { "fr": "Namur" } }
+  {
+    "code": "BE-BRU",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "de": "Region",
+      "nl": "gewest"
+    },
+    "names": {
+      "nl": "Brussels Hoofdstedelijk Gewest",
+      "fr": "Bruxelles-Capitale, Région de"
+    }
+  },
+  {
+    "code": "BE-VLG",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "de": "Region",
+      "nl": "gewest"
+    },
+    "names": {
+      "nl": "Vlaams Gewest"
+    }
+  },
+  {
+    "code": "BE-WAL",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "de": "Region",
+      "nl": "gewest"
+    },
+    "names": {
+      "fr": "wallonne, Région"
+    }
+  },
+  {
+    "code": "BE-VAN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "de": "Provinz",
+      "nl": "provincie"
+    },
+    "names": {
+      "nl": "Antwerpen"
+    }
+  },
+  {
+    "code": "BE-VBR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "de": "Provinz",
+      "nl": "provincie"
+    },
+    "names": {
+      "nl": "Vlaams-Brabant"
+    }
+  },
+  {
+    "code": "BE-VLI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "de": "Provinz",
+      "nl": "provincie"
+    },
+    "names": {
+      "nl": "Limburg"
+    }
+  },
+  {
+    "code": "BE-VOV",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "de": "Provinz",
+      "nl": "provincie"
+    },
+    "names": {
+      "nl": "Oost-Vlaanderen"
+    }
+  },
+  {
+    "code": "BE-VWV",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "de": "Provinz",
+      "nl": "provincie"
+    },
+    "names": {
+      "nl": "West-Vlaanderen"
+    }
+  },
+  {
+    "code": "BE-WBR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "de": "Provinz",
+      "nl": "provincie"
+    },
+    "names": {
+      "fr": "Brabant wallon"
+    }
+  },
+  {
+    "code": "BE-WHT",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "de": "Provinz",
+      "nl": "provincie"
+    },
+    "names": {
+      "fr": "Hainaut"
+    }
+  },
+  {
+    "code": "BE-WLG",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "de": "Provinz",
+      "nl": "provincie"
+    },
+    "names": {
+      "fr": "Liège"
+    }
+  },
+  {
+    "code": "BE-WLX",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "de": "Provinz",
+      "nl": "provincie"
+    },
+    "names": {
+      "fr": "Luxembourg"
+    }
+  },
+  {
+    "code": "BE-WNA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "de": "Provinz",
+      "nl": "provincie"
+    },
+    "names": {
+      "fr": "Namur"
+    }
+  }
 ]

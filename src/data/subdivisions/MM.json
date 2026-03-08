@@ -1,17 +1,181 @@
 [
-  { "code": "MM-01", "type": "region", "names": { "my": "စစ်ကိုင်းတိုင်းဒေသကြီး" } },
-  { "code": "MM-02", "type": "region", "names": { "my": "ပဲခူးတိုင်းဒေသကြီး" } },
-  { "code": "MM-03", "type": "region", "names": { "my": "မကွေးတိုင်းဒေသကြီး" } },
-  { "code": "MM-04", "type": "region", "names": { "my": "မန္တလေးတိုင်းဒေသကြီး" } },
-  { "code": "MM-05", "type": "region", "names": { "my": "တနင်္သာရီတိုင်းဒေသကြီး" } },
-  { "code": "MM-06", "type": "region", "names": { "my": "ရန်ကုန်တိုင်းဒေသကြီး" } },
-  { "code": "MM-07", "type": "region", "names": { "my": "ဧရာဝတီတိုင်းဒေသကြီး" } },
-  { "code": "MM-11", "type": "state", "names": { "my": "ကချင်ပြည်နယ်" } },
-  { "code": "MM-12", "type": "state", "names": { "my": "ကယားပြည်နယ်" } },
-  { "code": "MM-13", "type": "state", "names": { "my": "ကရင်ပြည်နယ်" } },
-  { "code": "MM-14", "type": "state", "names": { "my": "ချင်းပြည်နယ်" } },
-  { "code": "MM-15", "type": "state", "names": { "my": "မွန်ပြည်နယ်" } },
-  { "code": "MM-16", "type": "state", "names": { "my": "ရခိုင်ပြည်နယ်" } },
-  { "code": "MM-17", "type": "state", "names": { "my": "ရှမ်းပြည်နယ်" } },
-  { "code": "MM-18", "type": "union territory", "names": { "my": "နေပြည်တော် ပြည်ထောင်စုနယ်မြေ" } }
+  {
+    "code": "MM-01",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "my": "taing"
+    },
+    "names": {
+      "en": "Sagaing",
+      "my": "စစ်ကိုင်းတိုင်းဒေသကြီး"
+    }
+  },
+  {
+    "code": "MM-02",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "my": "taing"
+    },
+    "names": {
+      "en": "Bago",
+      "my": "ပဲခူးတိုင်းဒေသကြီး"
+    }
+  },
+  {
+    "code": "MM-03",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "my": "taing"
+    },
+    "names": {
+      "en": "Magway",
+      "my": "မကွေးတိုင်းဒေသကြီး"
+    }
+  },
+  {
+    "code": "MM-04",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "my": "taing"
+    },
+    "names": {
+      "en": "Mandalay",
+      "my": "မန္တလေးတိုင်းဒေသကြီး"
+    }
+  },
+  {
+    "code": "MM-05",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "my": "taing"
+    },
+    "names": {
+      "en": "Tanintharyi",
+      "my": "တနင်္သာရီတိုင်းဒေသကြီး"
+    }
+  },
+  {
+    "code": "MM-06",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "my": "taing"
+    },
+    "names": {
+      "en": "Yangon",
+      "my": "ရန်ကုန်တိုင်းဒေသကြီး"
+    }
+  },
+  {
+    "code": "MM-07",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "my": "taing"
+    },
+    "names": {
+      "en": "Ayeyarwady",
+      "my": "ဧရာဝတီတိုင်းဒေသကြီး"
+    }
+  },
+  {
+    "code": "MM-11",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "my": "pyinè"
+    },
+    "names": {
+      "en": "Kachin",
+      "my": "ကချင်ပြည်နယ်"
+    }
+  },
+  {
+    "code": "MM-12",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "my": "pyinè"
+    },
+    "names": {
+      "en": "Kayah",
+      "my": "ကယားပြည်နယ်"
+    }
+  },
+  {
+    "code": "MM-13",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "my": "pyinè"
+    },
+    "names": {
+      "en": "Kayin",
+      "my": "ကရင်ပြည်နယ်"
+    }
+  },
+  {
+    "code": "MM-14",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "my": "pyinè"
+    },
+    "names": {
+      "en": "Chin",
+      "my": "ချင်းပြည်နယ်"
+    }
+  },
+  {
+    "code": "MM-15",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "my": "pyinè"
+    },
+    "names": {
+      "en": "Mon",
+      "my": "မွန်ပြည်နယ်"
+    }
+  },
+  {
+    "code": "MM-16",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "my": "pyinè"
+    },
+    "names": {
+      "en": "Rakhine",
+      "my": "ရခိုင်ပြည်နယ်"
+    }
+  },
+  {
+    "code": "MM-17",
+    "type": {
+      "en": "state",
+      "fr": "État",
+      "my": "pyinè"
+    },
+    "names": {
+      "en": "Shan",
+      "my": "ရှမ်းပြည်နယ်"
+    }
+  },
+  {
+    "code": "MM-18",
+    "type": {
+      "en": "union territory",
+      "fr": "territoire de l'Union"
+    },
+    "names": {
+      "en": "Nay Pyi Taw",
+      "my": "နေပြည်တော် ပြည်ထောင်စုနယ်မြေ"
+    }
+  }
 ]

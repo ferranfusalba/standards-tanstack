@@ -1,13 +1,125 @@
 [
-  { "code": "OM-BJ", "type": "governorate", "names": { "ar": "جنوب الباطنة" } },
-  { "code": "OM-BS", "type": "governorate", "names": { "ar": "شمال الباطنة" } },
-  { "code": "OM-BU", "type": "governorate", "names": { "ar": "البريمي" } },
-  { "code": "OM-DA", "type": "governorate", "names": { "ar": "الداخلية" } },
-  { "code": "OM-MA", "type": "governorate", "names": { "ar": "مسقط" } },
-  { "code": "OM-MU", "type": "governorate", "names": { "ar": "مسندم" } },
-  { "code": "OM-SJ", "type": "governorate", "names": { "ar": "جنوب الشرقية" } },
-  { "code": "OM-SS", "type": "governorate", "names": { "ar": "شمال الشرقية" } },
-  { "code": "OM-WU", "type": "governorate", "names": { "ar": "الوسطى" } },
-  { "code": "OM-ZA", "type": "governorate", "names": { "ar": "الظاهرة" } },
-  { "code": "OM-ZU", "type": "governorate", "names": { "ar": "ظفار" } }
+  {
+    "code": "OM-BJ",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Janūb al Bāţinah"
+    }
+  },
+  {
+    "code": "OM-BS",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Shamāl al Bāţinah"
+    }
+  },
+  {
+    "code": "OM-BU",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Buraymī"
+    }
+  },
+  {
+    "code": "OM-DA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Ad Dākhilīyah"
+    }
+  },
+  {
+    "code": "OM-MA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Masqaţ",
+      "en": "Muscat"
+    }
+  },
+  {
+    "code": "OM-MU",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Musandam"
+    }
+  },
+  {
+    "code": "OM-SJ",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Janūb ash Sharqīyah"
+    }
+  },
+  {
+    "code": "OM-SS",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Shamāl ash Sharqīyah"
+    }
+  },
+  {
+    "code": "OM-WU",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Wusţá"
+    }
+  },
+  {
+    "code": "OM-ZA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Az̧ Z̧āhirah"
+    }
+  },
+  {
+    "code": "OM-ZU",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Z̧ufār",
+      "en": "Dhofar"
+    }
+  }
 ]

@@ -1,14 +1,134 @@
 [
-  { "code": "GE-AB", "type": "autonomous republic", "names": { "ka": "აფხაზეთი" } },
-  { "code": "GE-AJ", "type": "autonomous republic", "names": { "ka": "აჭარა" } },
-  { "code": "GE-GU", "type": "region", "names": { "ka": "გურია" } },
-  { "code": "GE-IM", "type": "region", "names": { "ka": "იმერეთი" } },
-  { "code": "GE-KA", "type": "region", "names": { "ka": "კახეთი" } },
-  { "code": "GE-KK", "type": "region", "names": { "ka": "ქვემო ქართლი" } },
-  { "code": "GE-MM", "type": "region", "names": { "ka": "მცხეთა-მთიანეთი" } },
-  { "code": "GE-RL", "type": "region", "names": { "ka": "რაჭა-ლეჩხუმი და ქვემო სვანეთი" } },
-  { "code": "GE-SJ", "type": "region", "names": { "ka": "სამცხე-ჯავახეთი" } },
-  { "code": "GE-SK", "type": "region", "names": { "ka": "შიდა ქართლი" } },
-  { "code": "GE-SZ", "type": "region", "names": { "ka": "სამეგრელო-ზემო სვანეთი" } },
-  { "code": "GE-TB", "type": "city", "names": { "ka": "თბილისი" } }
+  {
+    "code": "GE-AB",
+    "type": {
+      "en": "autonomous republic",
+      "fr": "république autonome",
+      "ka": "avt'onomiuri resp'ublik'a"
+    },
+    "names": {
+      "ka": "აფხაზეთი"
+    }
+  },
+  {
+    "code": "GE-AJ",
+    "type": {
+      "en": "autonomous republic",
+      "fr": "république autonome",
+      "ka": "avt'onomiuri resp'ublik'a"
+    },
+    "names": {
+      "ka": "აჭარა"
+    }
+  },
+  {
+    "code": "GE-GU",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ka": "mkhare"
+    },
+    "names": {
+      "ka": "გურია"
+    }
+  },
+  {
+    "code": "GE-IM",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ka": "mkhare"
+    },
+    "names": {
+      "ka": "იმერეთი"
+    }
+  },
+  {
+    "code": "GE-KA",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ka": "mkhare"
+    },
+    "names": {
+      "ka": "კახეთი"
+    }
+  },
+  {
+    "code": "GE-KK",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ka": "mkhare"
+    },
+    "names": {
+      "ka": "ქვემო ქართლი"
+    }
+  },
+  {
+    "code": "GE-MM",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ka": "mkhare"
+    },
+    "names": {
+      "ka": "მცხეთა-მთიანეთი"
+    }
+  },
+  {
+    "code": "GE-RL",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ka": "mkhare"
+    },
+    "names": {
+      "ka": "რაჭა-ლეჩხუმი და ქვემო სვანეთი"
+    }
+  },
+  {
+    "code": "GE-SJ",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ka": "mkhare"
+    },
+    "names": {
+      "ka": "სამცხე-ჯავახეთი"
+    }
+  },
+  {
+    "code": "GE-SK",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ka": "mkhare"
+    },
+    "names": {
+      "ka": "შიდა ქართლი"
+    }
+  },
+  {
+    "code": "GE-SZ",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "ka": "mkhare"
+    },
+    "names": {
+      "ka": "სამეგრელო-ზემო სვანეთი"
+    }
+  },
+  {
+    "code": "GE-TB",
+    "type": {
+      "en": "city",
+      "fr": "ville",
+      "ka": "kalaki"
+    },
+    "names": {
+      "ka": "თბილისი"
+    }
+  }
 ]

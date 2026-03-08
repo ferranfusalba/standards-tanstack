@@ -3,170 +3,204 @@
     "code": "CF-AC",
     "type": {
       "en": "prefecture",
-      "fr": "préfecture"
+      "fr": "préfecture",
+      "sg": "sêse tî kömändâ-kötä"
     },
     "names": {
-      "fr": "Ouham"
+      "fr": "Ouham",
+      "sg": "Wâmo"
     }
   },
   {
     "code": "CF-BB",
     "type": {
       "en": "prefecture",
-      "fr": "préfecture"
+      "fr": "préfecture",
+      "sg": "sêse tî kömändâ-kötä"
     },
     "names": {
-      "fr": "Bamingui-Bangoran"
+      "fr": "Bamingui-Bangoran",
+      "sg": "Bamïngï-Bangoran"
     }
   },
   {
     "code": "CF-BGF",
     "type": {
       "en": "commune",
-      "fr": "commune"
+      "fr": "commune",
+      "sg": "kötä gbätä"
     },
     "names": {
-      "fr": "Bangui"
+      "fr": "Bangui",
+      "sg": "Bangî"
     }
   },
   {
     "code": "CF-BK",
     "type": {
       "en": "prefecture",
-      "fr": "préfecture"
+      "fr": "préfecture",
+      "sg": "sêse tî kömändâ-kötä"
     },
     "names": {
-      "fr": "Basse-Kotto"
+      "fr": "Basse-Kotto",
+      "sg": "Do-Kötö"
     }
   },
   {
     "code": "CF-HK",
     "type": {
       "en": "prefecture",
-      "fr": "préfecture"
+      "fr": "préfecture",
+      "sg": "sêse tî kömändâ-kötä"
     },
     "names": {
-      "fr": "Haute-Kotto"
+      "fr": "Haute-Kotto",
+      "sg": "Tö-Kötö"
     }
   },
   {
     "code": "CF-HM",
     "type": {
       "en": "prefecture",
-      "fr": "préfecture"
+      "fr": "préfecture",
+      "sg": "sêse tî kömändâ-kötä"
     },
     "names": {
-      "fr": "Haut-Mbomou"
+      "fr": "Haut-Mbomou",
+      "sg": "Tö-Mbömü"
     }
   },
   {
     "code": "CF-HS",
     "type": {
       "en": "prefecture",
-      "fr": "préfecture"
+      "fr": "préfecture",
+      "sg": "sêse tî kömändâ-kötä"
     },
     "names": {
-      "fr": "Mambéré-Kadéï"
+      "fr": "Haute-Sangha / Mambéré-Kadéï",
+      "sg": "Tö-Sangä / Mbaere-Kadeï"
     }
   },
   {
     "code": "CF-KB",
     "type": {
       "en": "economic prefecture",
-      "fr": "préfecture économique"
+      "fr": "préfecture économique",
+      "sg": "sêse tî kömändâ-kötä"
     },
     "names": {
-      "fr": "Nana-Grébizi"
+      "fr": "Gribingui",
+      "sg": "Gïrïbïngï"
     }
   },
   {
     "code": "CF-KG",
     "type": {
       "en": "prefecture",
-      "fr": "préfecture"
+      "fr": "préfecture",
+      "sg": "sêse tî kömändâ-kötä"
     },
     "names": {
-      "fr": "Kémo"
+      "fr": "Kémo-Gribingui",
+      "sg": "Kemö-Gïrïbïngï"
     }
   },
   {
     "code": "CF-LB",
     "type": {
       "en": "prefecture",
-      "fr": "préfecture"
+      "fr": "préfecture",
+      "sg": "sêse tî kömändâ-kötä"
     },
     "names": {
-      "fr": "Lobaye"
+      "fr": "Lobaye",
+      "sg": "Lobâye"
     }
   },
   {
     "code": "CF-MB",
     "type": {
       "en": "prefecture",
-      "fr": "préfecture"
+      "fr": "préfecture",
+      "sg": "sêse tî kömändâ-kötä"
     },
     "names": {
-      "fr": "Mbomou"
+      "fr": "Mbomou",
+      "sg": "Mbömü"
     }
   },
   {
     "code": "CF-MP",
     "type": {
       "en": "prefecture",
-      "fr": "préfecture"
+      "fr": "préfecture",
+      "sg": "sêse tî kömändâ-kötä"
     },
     "names": {
-      "fr": "Ombella-M'Poko"
+      "fr": "Ombella-Mpoko",
+      "sg": "Ömbëlä-Pökö"
     }
   },
   {
     "code": "CF-NM",
     "type": {
       "en": "prefecture",
-      "fr": "préfecture"
+      "fr": "préfecture",
+      "sg": "sêse tî kömändâ-kötä"
     },
     "names": {
-      "fr": "Nana-Mambéré"
+      "fr": "Nana-Mambéré",
+      "sg": "Nanä-Mbaere"
     }
   },
   {
     "code": "CF-OP",
     "type": {
       "en": "prefecture",
-      "fr": "préfecture"
+      "fr": "préfecture",
+      "sg": "sêse tî kömändâ-kötä"
     },
     "names": {
-      "fr": "Ouham-Pendé"
+      "fr": "Ouham-Pendé",
+      "sg": "Wâmo-Pendë"
     }
   },
   {
     "code": "CF-SE",
     "type": {
       "en": "economic prefecture",
-      "fr": "préfecture économique"
+      "fr": "préfecture économique",
+      "sg": "sêse tî kömändâ-kötä"
     },
     "names": {
-      "fr": "Sangha-Mbaéré"
+      "fr": "Sangha",
+      "sg": "Sangä"
     }
   },
   {
     "code": "CF-UK",
     "type": {
       "en": "prefecture",
-      "fr": "préfecture"
+      "fr": "préfecture",
+      "sg": "sêse tî kömändâ-kötä"
     },
     "names": {
-      "fr": "Ouaka"
+      "fr": "Ouaka",
+      "sg": "Wäkä"
     }
   },
   {
     "code": "CF-VK",
     "type": {
       "en": "prefecture",
-      "fr": "préfecture"
+      "fr": "préfecture",
+      "sg": "sêse tî kömändâ-kötä"
     },
     "names": {
-      "fr": "Vakaga"
+      "fr": "Vakaga",
+      "sg": "Vakaga"
     }
   }
 ]

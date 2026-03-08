@@ -1,14 +1,134 @@
 [
-  { "code": "JO-AJ", "type": "governorate", "names": { "ar": "عجلون" } },
-  { "code": "JO-AM", "type": "governorate", "names": { "ar": "عمّان" } },
-  { "code": "JO-AQ", "type": "governorate", "names": { "ar": "العقبة" } },
-  { "code": "JO-AT", "type": "governorate", "names": { "ar": "الطفيلة" } },
-  { "code": "JO-AZ", "type": "governorate", "names": { "ar": "الزرقاء" } },
-  { "code": "JO-BA", "type": "governorate", "names": { "ar": "البلقاء" } },
-  { "code": "JO-IR", "type": "governorate", "names": { "ar": "إربد" } },
-  { "code": "JO-JA", "type": "governorate", "names": { "ar": "جرش" } },
-  { "code": "JO-KA", "type": "governorate", "names": { "ar": "الكرك" } },
-  { "code": "JO-MA", "type": "governorate", "names": { "ar": "المفرق" } },
-  { "code": "JO-MD", "type": "governorate", "names": { "ar": "مادبا" } },
-  { "code": "JO-MN", "type": "governorate", "names": { "ar": "معان" } }
+  {
+    "code": "JO-AJ",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "عجلون"
+    }
+  },
+  {
+    "code": "JO-AM",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "عمّان"
+    }
+  },
+  {
+    "code": "JO-AQ",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "العقبة"
+    }
+  },
+  {
+    "code": "JO-AT",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "الطفيلة"
+    }
+  },
+  {
+    "code": "JO-AZ",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "الزرقاء"
+    }
+  },
+  {
+    "code": "JO-BA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "البلقاء"
+    }
+  },
+  {
+    "code": "JO-IR",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "إربد"
+    }
+  },
+  {
+    "code": "JO-JA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "جرش"
+    }
+  },
+  {
+    "code": "JO-KA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "الكرك"
+    }
+  },
+  {
+    "code": "JO-MA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "المفرق"
+    }
+  },
+  {
+    "code": "JO-MD",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "مادبا"
+    }
+  },
+  {
+    "code": "JO-MN",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "معان"
+    }
+  }
 ]

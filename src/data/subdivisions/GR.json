@@ -1,98 +1,154 @@
 [
   {
     "code": "GR-A",
-    "type": "decentralized administration",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "el": "periféreia"
+    },
     "names": {
       "el": "Ανατολική Μακεδονία και Θράκη"
     }
   },
   {
     "code": "GR-B",
-    "type": "decentralized administration",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "el": "periféreia"
+    },
     "names": {
       "el": "Κεντρική Μακεδονία"
     }
   },
   {
     "code": "GR-C",
-    "type": "decentralized administration",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "el": "periféreia"
+    },
     "names": {
       "el": "Δυτική Μακεδονία"
     }
   },
   {
     "code": "GR-D",
-    "type": "decentralized administration",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "el": "periféreia"
+    },
     "names": {
       "el": "Ήπειρος"
     }
   },
   {
     "code": "GR-E",
-    "type": "decentralized administration",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "el": "periféreia"
+    },
     "names": {
       "el": "Θεσσαλία"
     }
   },
   {
     "code": "GR-F",
-    "type": "decentralized administration",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "el": "periféreia"
+    },
     "names": {
       "el": "Ιόνια Νησιά"
     }
   },
   {
     "code": "GR-G",
-    "type": "decentralized administration",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "el": "periféreia"
+    },
     "names": {
       "el": "Δυτική Ελλάδα"
     }
   },
   {
     "code": "GR-H",
-    "type": "decentralized administration",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "el": "periféreia"
+    },
     "names": {
       "el": "Στερεά Ελλάδα"
     }
   },
   {
     "code": "GR-I",
-    "type": "decentralized administration",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "el": "periféreia"
+    },
     "names": {
       "el": "Αττική"
     }
   },
   {
     "code": "GR-J",
-    "type": "decentralized administration",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "el": "periféreia"
+    },
     "names": {
       "el": "Πελοπόννησος"
     }
   },
   {
     "code": "GR-K",
-    "type": "decentralized administration",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "el": "periféreia"
+    },
     "names": {
       "el": "Βόρειο Αιγαίο"
     }
   },
   {
     "code": "GR-L",
-    "type": "decentralized administration",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "el": "periféreia"
+    },
     "names": {
       "el": "Νότιο Αιγαίο"
     }
   },
   {
     "code": "GR-M",
-    "type": "decentralized administration",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "el": "periféreia"
+    },
     "names": {
       "el": "Κρήτη"
     }
   },
   {
     "code": "GR-69",
-    "type": "self-governed part",
+    "type": {
+      "en": "self-governed part",
+      "fr": "partie auto-gouvernée",
+      "el": "aftonomi monastiki politeia"
+    },
     "names": {
       "el": "Άγιον Όρος"
     }

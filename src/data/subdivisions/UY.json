@@ -1,21 +1,211 @@
 [
-  { "code": "UY-AR", "type": "department", "names": { "es": "Artigas" } },
-  { "code": "UY-CA", "type": "department", "names": { "es": "Canelones" } },
-  { "code": "UY-CL", "type": "department", "names": { "es": "Cerro Largo" } },
-  { "code": "UY-CO", "type": "department", "names": { "es": "Colonia" } },
-  { "code": "UY-DU", "type": "department", "names": { "es": "Durazno" } },
-  { "code": "UY-FD", "type": "department", "names": { "es": "Florida" } },
-  { "code": "UY-FS", "type": "department", "names": { "es": "Flores" } },
-  { "code": "UY-LA", "type": "department", "names": { "es": "Lavalleja" } },
-  { "code": "UY-MA", "type": "department", "names": { "es": "Maldonado" } },
-  { "code": "UY-MO", "type": "department", "names": { "es": "Montevideo" } },
-  { "code": "UY-PA", "type": "department", "names": { "es": "Paysandú" } },
-  { "code": "UY-RN", "type": "department", "names": { "es": "Río Negro" } },
-  { "code": "UY-RO", "type": "department", "names": { "es": "Rocha" } },
-  { "code": "UY-RV", "type": "department", "names": { "es": "Rivera" } },
-  { "code": "UY-SA", "type": "department", "names": { "es": "Salto" } },
-  { "code": "UY-SJ", "type": "department", "names": { "es": "San José" } },
-  { "code": "UY-SO", "type": "department", "names": { "es": "Soriano" } },
-  { "code": "UY-TA", "type": "department", "names": { "es": "Tacuarembó" } },
-  { "code": "UY-TT", "type": "department", "names": { "es": "Treinta y Tres" } }
+  {
+    "code": "UY-AR",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Artigas"
+    }
+  },
+  {
+    "code": "UY-CA",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Canelones"
+    }
+  },
+  {
+    "code": "UY-CL",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Cerro Largo"
+    }
+  },
+  {
+    "code": "UY-CO",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Colonia"
+    }
+  },
+  {
+    "code": "UY-DU",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Durazno"
+    }
+  },
+  {
+    "code": "UY-FD",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Florida"
+    }
+  },
+  {
+    "code": "UY-FS",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Flores"
+    }
+  },
+  {
+    "code": "UY-LA",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Lavalleja"
+    }
+  },
+  {
+    "code": "UY-MA",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Maldonado"
+    }
+  },
+  {
+    "code": "UY-MO",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Montevideo"
+    }
+  },
+  {
+    "code": "UY-PA",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Paysandú"
+    }
+  },
+  {
+    "code": "UY-RN",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Río Negro"
+    }
+  },
+  {
+    "code": "UY-RO",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Rocha"
+    }
+  },
+  {
+    "code": "UY-RV",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Rivera"
+    }
+  },
+  {
+    "code": "UY-SA",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Salto"
+    }
+  },
+  {
+    "code": "UY-SJ",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "San José"
+    }
+  },
+  {
+    "code": "UY-SO",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Soriano"
+    }
+  },
+  {
+    "code": "UY-TA",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Tacuarembó"
+    }
+  },
+  {
+    "code": "UY-TT",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Treinta y Tres"
+    }
+  }
 ]

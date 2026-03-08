@@ -1,86 +1,915 @@
 [
-  { "code": "RU-AD", "type": "republic", "names": { "ru": "Адыгея" } },
-  { "code": "RU-AL", "type": "republic", "names": { "ru": "Алтай" } },
-  { "code": "RU-ALT", "type": "krai", "names": { "ru": "Алтайский край" } },
-  { "code": "RU-AMU", "type": "oblast", "names": { "ru": "Амурская область" } },
-  { "code": "RU-ARK", "type": "oblast", "names": { "ru": "Архангельская область" } },
-  { "code": "RU-AST", "type": "oblast", "names": { "ru": "Астраханская область" } },
-  { "code": "RU-BA", "type": "republic", "names": { "ru": "Башкортостан" } },
-  { "code": "RU-BEL", "type": "oblast", "names": { "ru": "Белгородская область" } },
-  { "code": "RU-BRY", "type": "oblast", "names": { "ru": "Брянская область" } },
-  { "code": "RU-BU", "type": "republic", "names": { "ru": "Бурятия" } },
-  { "code": "RU-CE", "type": "republic", "names": { "ru": "Чечня" } },
-  { "code": "RU-CHE", "type": "oblast", "names": { "ru": "Челябинская область" } },
-  { "code": "RU-CHU", "type": "autonomous okrug", "names": { "ru": "Чукотский автономный округ" } },
-  { "code": "RU-CU", "type": "republic", "names": { "ru": "Чувашия" } },
-  { "code": "RU-DA", "type": "republic", "names": { "ru": "Дагестан" } },
-  { "code": "RU-IN", "type": "republic", "names": { "ru": "Ингушетия" } },
-  { "code": "RU-IRK", "type": "oblast", "names": { "ru": "Иркутская область" } },
-  { "code": "RU-IVA", "type": "oblast", "names": { "ru": "Ивановская область" } },
-  { "code": "RU-KAM", "type": "krai", "names": { "ru": "Камчатский край" } },
-  { "code": "RU-KB", "type": "republic", "names": { "ru": "Кабардино-Балкария" } },
-  { "code": "RU-KC", "type": "republic", "names": { "ru": "Карачаево-Черкесия" } },
-  { "code": "RU-KDA", "type": "krai", "names": { "ru": "Краснодарский край" } },
-  { "code": "RU-KEM", "type": "oblast", "names": { "ru": "Кемеровская область" } },
-  { "code": "RU-KGD", "type": "oblast", "names": { "ru": "Калининградская область" } },
-  { "code": "RU-KGN", "type": "oblast", "names": { "ru": "Курганская область" } },
-  { "code": "RU-KHA", "type": "krai", "names": { "ru": "Хабаровский край" } },
-  { "code": "RU-KHM", "type": "autonomous okrug", "names": { "ru": "Ханты-Мансийский автономный округ — Югра" } },
-  { "code": "RU-KIR", "type": "oblast", "names": { "ru": "Кировская область" } },
-  { "code": "RU-KK", "type": "republic", "names": { "ru": "Хакасия" } },
-  { "code": "RU-KL", "type": "republic", "names": { "ru": "Калмыкия" } },
-  { "code": "RU-KLU", "type": "oblast", "names": { "ru": "Калужская область" } },
-  { "code": "RU-KO", "type": "republic", "names": { "ru": "Коми" } },
-  { "code": "RU-KOS", "type": "oblast", "names": { "ru": "Костромская область" } },
-  { "code": "RU-KR", "type": "republic", "names": { "ru": "Карелия" } },
-  { "code": "RU-KRS", "type": "oblast", "names": { "ru": "Курская область" } },
-  { "code": "RU-KYA", "type": "krai", "names": { "ru": "Красноярский край" } },
-  { "code": "RU-LEN", "type": "oblast", "names": { "ru": "Ленинградская область" } },
-  { "code": "RU-LIP", "type": "oblast", "names": { "ru": "Липецкая область" } },
-  { "code": "RU-MAG", "type": "oblast", "names": { "ru": "Магаданская область" } },
-  { "code": "RU-ME", "type": "republic", "names": { "ru": "Марий Эл" } },
-  { "code": "RU-MO", "type": "republic", "names": { "ru": "Мордовия" } },
-  { "code": "RU-MOS", "type": "oblast", "names": { "ru": "Московская область" } },
-  { "code": "RU-MOW", "type": "federal city", "names": { "ru": "Москва" } },
-  { "code": "RU-MUR", "type": "oblast", "names": { "ru": "Мурманская область" } },
-  { "code": "RU-NEN", "type": "autonomous okrug", "names": { "ru": "Ненецкий автономный округ" } },
-  { "code": "RU-NGR", "type": "oblast", "names": { "ru": "Новгородская область" } },
-  { "code": "RU-NIZ", "type": "oblast", "names": { "ru": "Нижегородская область" } },
-  { "code": "RU-NVS", "type": "oblast", "names": { "ru": "Новосибирская область" } },
-  { "code": "RU-OMS", "type": "oblast", "names": { "ru": "Омская область" } },
-  { "code": "RU-ORE", "type": "oblast", "names": { "ru": "Оренбургская область" } },
-  { "code": "RU-ORL", "type": "oblast", "names": { "ru": "Орловская область" } },
-  { "code": "RU-PER", "type": "krai", "names": { "ru": "Пермский край" } },
-  { "code": "RU-PNZ", "type": "oblast", "names": { "ru": "Пензенская область" } },
-  { "code": "RU-PRI", "type": "krai", "names": { "ru": "Приморский край" } },
-  { "code": "RU-PSK", "type": "oblast", "names": { "ru": "Псковская область" } },
-  { "code": "RU-ROS", "type": "oblast", "names": { "ru": "Ростовская область" } },
-  { "code": "RU-RYA", "type": "oblast", "names": { "ru": "Рязанская область" } },
-  { "code": "RU-SA", "type": "republic", "names": { "ru": "Саха (Якутия)" } },
-  { "code": "RU-SAK", "type": "oblast", "names": { "ru": "Сахалинская область" } },
-  { "code": "RU-SAM", "type": "oblast", "names": { "ru": "Самарская область" } },
-  { "code": "RU-SAR", "type": "oblast", "names": { "ru": "Саратовская область" } },
-  { "code": "RU-SE", "type": "republic", "names": { "ru": "Северная Осетия — Алания" } },
-  { "code": "RU-SMO", "type": "oblast", "names": { "ru": "Смоленская область" } },
-  { "code": "RU-SPE", "type": "federal city", "names": { "ru": "Санкт-Петербург" } },
-  { "code": "RU-STA", "type": "krai", "names": { "ru": "Ставропольский край" } },
-  { "code": "RU-SVE", "type": "oblast", "names": { "ru": "Свердловская область" } },
-  { "code": "RU-TA", "type": "republic", "names": { "ru": "Татарстан" } },
-  { "code": "RU-TAM", "type": "oblast", "names": { "ru": "Тамбовская область" } },
-  { "code": "RU-TOM", "type": "oblast", "names": { "ru": "Томская область" } },
-  { "code": "RU-TUL", "type": "oblast", "names": { "ru": "Тульская область" } },
-  { "code": "RU-TVE", "type": "oblast", "names": { "ru": "Тверская область" } },
-  { "code": "RU-TY", "type": "republic", "names": { "ru": "Тыва" } },
-  { "code": "RU-TYU", "type": "oblast", "names": { "ru": "Тюменская область" } },
-  { "code": "RU-UD", "type": "republic", "names": { "ru": "Удмуртия" } },
-  { "code": "RU-ULY", "type": "oblast", "names": { "ru": "Ульяновская область" } },
-  { "code": "RU-VGG", "type": "oblast", "names": { "ru": "Волгоградская область" } },
-  { "code": "RU-VLA", "type": "oblast", "names": { "ru": "Владимирская область" } },
-  { "code": "RU-VLG", "type": "oblast", "names": { "ru": "Вологодская область" } },
-  { "code": "RU-VOR", "type": "oblast", "names": { "ru": "Воронежская область" } },
-  { "code": "RU-YAN", "type": "autonomous okrug", "names": { "ru": "Ямало-Ненецкий автономный округ" } },
-  { "code": "RU-YAR", "type": "oblast", "names": { "ru": "Ярославская область" } },
-  { "code": "RU-YEV", "type": "autonomous oblast", "names": { "ru": "Еврейская автономная область" } },
-  { "code": "RU-ZAB", "type": "krai", "names": { "ru": "Забайкальский край" } },
-  { "code": "RU-SEV", "type": "federal city", "names": { "ru": "Севастополь" } }
+  {
+    "code": "RU-AD",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Adygeya, Respublika"
+    }
+  },
+  {
+    "code": "RU-AL",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Altay, Respublika"
+    }
+  },
+  {
+    "code": "RU-ALT",
+    "type": {
+      "en": "administrative territory",
+      "fr": "territoire administratif",
+      "ru": "kray"
+    },
+    "names": {
+      "ru": "Altayskiy kray"
+    }
+  },
+  {
+    "code": "RU-AMU",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Amurskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-ARK",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Arkhangel'skaya oblast'"
+    }
+  },
+  {
+    "code": "RU-AST",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Astrakhanskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-BA",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Bashkortostan, Respublika"
+    }
+  },
+  {
+    "code": "RU-BEL",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Belgorodskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-BRY",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Bryanskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-BU",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Buryatiya, Respublika"
+    }
+  },
+  {
+    "code": "RU-CE",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Chechenskaya Respublika"
+    }
+  },
+  {
+    "code": "RU-CHE",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Chelyabinskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-CHU",
+    "type": {
+      "en": "autonomous district",
+      "fr": "district autonome",
+      "ru": "avtonomnyy okrug"
+    },
+    "names": {
+      "ru": "Chukotskiy avtonomnyy okrug"
+    }
+  },
+  {
+    "code": "RU-CU",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Chuvashskaya Respublika"
+    }
+  },
+  {
+    "code": "RU-DA",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Dagestan, Respublika"
+    }
+  },
+  {
+    "code": "RU-IN",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Ingushetiya, Respublika"
+    }
+  },
+  {
+    "code": "RU-IRK",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Irkutskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-IVA",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Ivanovskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-KAM",
+    "type": {
+      "en": "administrative territory",
+      "fr": "territoire administratif",
+      "ru": "kray"
+    },
+    "names": {
+      "ru": "Kamchatskiy kray"
+    }
+  },
+  {
+    "code": "RU-KB",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Kabardino-Balkarskaya Respublika"
+    }
+  },
+  {
+    "code": "RU-KC",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Karachayevo-Cherkesskaya Respublika"
+    }
+  },
+  {
+    "code": "RU-KDA",
+    "type": {
+      "en": "administrative territory",
+      "fr": "territoire administratif",
+      "ru": "kray"
+    },
+    "names": {
+      "ru": "Krasnodarskiy kray"
+    }
+  },
+  {
+    "code": "RU-KEM",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Kemerovskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-KGD",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Kaliningradskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-KGN",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Kurganskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-KHA",
+    "type": {
+      "en": "administrative territory",
+      "fr": "territoire administratif",
+      "ru": "kray"
+    },
+    "names": {
+      "ru": "Khabarovskiy kray"
+    }
+  },
+  {
+    "code": "RU-KHM",
+    "type": {
+      "en": "autonomous district",
+      "fr": "district autonome",
+      "ru": "avtonomnyy okrug"
+    },
+    "names": {
+      "ru": "Khanty-Mansiyskiy avtonomnyy okrug"
+    }
+  },
+  {
+    "code": "RU-KIR",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Kirovskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-KK",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Khakasiya, Respublika"
+    }
+  },
+  {
+    "code": "RU-KL",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Kalmykiya, Respublika"
+    }
+  },
+  {
+    "code": "RU-KLU",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Kaluzhskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-KO",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Komi, Respublika"
+    }
+  },
+  {
+    "code": "RU-KOS",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Kostromskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-KR",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Kareliya, Respublika"
+    }
+  },
+  {
+    "code": "RU-KRS",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Kurskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-KYA",
+    "type": {
+      "en": "administrative territory",
+      "fr": "territoire administratif",
+      "ru": "kray"
+    },
+    "names": {
+      "ru": "Krasnoyarskiy kray"
+    }
+  },
+  {
+    "code": "RU-LEN",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Leningradskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-LIP",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Lipetskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-MAG",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Magadanskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-ME",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Mariy El, Respublika"
+    }
+  },
+  {
+    "code": "RU-MO",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Mordoviya, Respublika"
+    }
+  },
+  {
+    "code": "RU-MOS",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Moskovskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-MOW",
+    "type": {
+      "en": "autonomous city",
+      "fr": "ville autonome",
+      "ru": "avtonomnyy gorod"
+    },
+    "names": {
+      "ru": "Moskva"
+    }
+  },
+  {
+    "code": "RU-MUR",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Murmanskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-NEN",
+    "type": {
+      "en": "autonomous district",
+      "fr": "district autonome",
+      "ru": "avtonomnyy okrug"
+    },
+    "names": {
+      "ru": "Nenetskiy avtonomnyy okrug"
+    }
+  },
+  {
+    "code": "RU-NGR",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Novgorodskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-NIZ",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Nizhegorodskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-NVS",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Novosibirskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-OMS",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Omskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-ORE",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Orenburgskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-ORL",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Orlovskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-PER",
+    "type": {
+      "en": "administrative territory",
+      "fr": "territoire administratif",
+      "ru": "kray"
+    },
+    "names": {
+      "ru": "Permskiy kray"
+    }
+  },
+  {
+    "code": "RU-PNZ",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Penzenskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-PRI",
+    "type": {
+      "en": "administrative territory",
+      "fr": "territoire administratif",
+      "ru": "kray"
+    },
+    "names": {
+      "ru": "Primorskiy kray"
+    }
+  },
+  {
+    "code": "RU-PSK",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Pskovskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-ROS",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Rostovskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-RYA",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Ryazanskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-SA",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Saha, Respublika"
+    }
+  },
+  {
+    "code": "RU-SAK",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Sakhalinskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-SAM",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Samarskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-SAR",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Saratovskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-SE",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Severnaya Osetiya, Respublika"
+    }
+  },
+  {
+    "code": "RU-SMO",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Smolenskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-SPE",
+    "type": {
+      "en": "autonomous city",
+      "fr": "ville autonome",
+      "ru": "avtonomnyy gorod"
+    },
+    "names": {
+      "ru": "Sankt-Peterburg"
+    }
+  },
+  {
+    "code": "RU-STA",
+    "type": {
+      "en": "administrative territory",
+      "fr": "territoire administratif",
+      "ru": "kray"
+    },
+    "names": {
+      "ru": "Stavropol'skiy kray"
+    }
+  },
+  {
+    "code": "RU-SVE",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Sverdlovskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-TA",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Tatarstan, Respublika"
+    }
+  },
+  {
+    "code": "RU-TAM",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Tambovskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-TOM",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Tomskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-TUL",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Tul'skaya oblast'"
+    }
+  },
+  {
+    "code": "RU-TVE",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Tverskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-TY",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Tyva, Respublika"
+    }
+  },
+  {
+    "code": "RU-TYU",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Tyumenskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-UD",
+    "type": {
+      "en": "republic",
+      "fr": "république",
+      "ru": "respublika"
+    },
+    "names": {
+      "ru": "Udmurtskaya Respublika"
+    }
+  },
+  {
+    "code": "RU-ULY",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Ul'yanovskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-VGG",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Volgogradskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-VLA",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Vladimirskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-VLG",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Vologodskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-VOR",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Voronezhskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-YAN",
+    "type": {
+      "en": "autonomous district",
+      "fr": "district autonome",
+      "ru": "avtonomnyy okrug"
+    },
+    "names": {
+      "ru": "Yamalo-Nenetskiy avtonomnyy okrug"
+    }
+  },
+  {
+    "code": "RU-YAR",
+    "type": {
+      "en": "administrative region",
+      "fr": "région administrative",
+      "ru": "oblast'"
+    },
+    "names": {
+      "ru": "Yaroslavskaya oblast'"
+    }
+  },
+  {
+    "code": "RU-YEV",
+    "type": {
+      "en": "autonomous region",
+      "fr": "région autonome",
+      "ru": "avtonomnaya oblast'"
+    },
+    "names": {
+      "ru": "Yevreyskaya avtonomnaya oblast'"
+    }
+  },
+  {
+    "code": "RU-ZAB",
+    "type": {
+      "en": "administrative territory",
+      "fr": "territoire administratif",
+      "ru": "kray"
+    },
+    "names": {
+      "ru": "Zabaykal'skiy kray"
+    }
+  }
 ]

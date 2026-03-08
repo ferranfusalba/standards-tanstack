@@ -1,140 +1,220 @@
 [
   {
     "code": "PT-01",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Aveiro"
     }
   },
   {
     "code": "PT-02",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Beja"
     }
   },
   {
     "code": "PT-03",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Braga"
     }
   },
   {
     "code": "PT-04",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Bragança"
     }
   },
   {
     "code": "PT-05",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Castelo Branco"
     }
   },
   {
     "code": "PT-06",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Coimbra"
     }
   },
   {
     "code": "PT-07",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Évora"
     }
   },
   {
     "code": "PT-08",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Faro"
     }
   },
   {
     "code": "PT-09",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Guarda"
     }
   },
   {
     "code": "PT-10",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Leiria"
     }
   },
   {
     "code": "PT-11",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Lisboa"
     }
   },
   {
     "code": "PT-12",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Portalegre"
     }
   },
   {
     "code": "PT-13",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Porto"
     }
   },
   {
     "code": "PT-14",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Santarém"
     }
   },
   {
     "code": "PT-15",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Setúbal"
     }
   },
   {
     "code": "PT-16",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Viana do Castelo"
     }
   },
   {
     "code": "PT-17",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Vila Real"
     }
   },
   {
     "code": "PT-18",
-    "type": "district",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "pt": "distrito"
+    },
     "names": {
       "pt": "Viseu"
     }
   },
   {
     "code": "PT-20",
-    "type": "autonomous region",
+    "type": {
+      "en": "autonomous region",
+      "fr": "région autonome",
+      "pt": "região autónoma"
+    },
     "names": {
       "pt": "Região Autónoma dos Açores"
     }
   },
   {
     "code": "PT-30",
-    "type": "autonomous region",
+    "type": {
+      "en": "autonomous region",
+      "fr": "région autonome",
+      "pt": "região autónoma"
+    },
     "names": {
       "pt": "Região Autónoma da Madeira"
     }

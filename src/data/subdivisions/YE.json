@@ -1,24 +1,243 @@
 [
-  { "code": "YE-AB", "type": "governorate", "names": { "ar": "أبين" } },
-  { "code": "YE-AD", "type": "governorate", "names": { "ar": "عدن" } },
-  { "code": "YE-AM", "type": "governorate", "names": { "ar": "عمران" } },
-  { "code": "YE-BA", "type": "governorate", "names": { "ar": "البيضاء" } },
-  { "code": "YE-DA", "type": "governorate", "names": { "ar": "الضالع" } },
-  { "code": "YE-DH", "type": "governorate", "names": { "ar": "ذمار" } },
-  { "code": "YE-HD", "type": "governorate", "names": { "ar": "حضرموت" } },
-  { "code": "YE-HJ", "type": "governorate", "names": { "ar": "حجة" } },
-  { "code": "YE-HU", "type": "governorate", "names": { "ar": "الحديدة" } },
-  { "code": "YE-IB", "type": "governorate", "names": { "ar": "إب" } },
-  { "code": "YE-JA", "type": "governorate", "names": { "ar": "الجوف" } },
-  { "code": "YE-LA", "type": "governorate", "names": { "ar": "لحج" } },
-  { "code": "YE-MA", "type": "governorate", "names": { "ar": "مأرب" } },
-  { "code": "YE-MR", "type": "governorate", "names": { "ar": "المهرة" } },
-  { "code": "YE-MW", "type": "governorate", "names": { "ar": "المحويت" } },
-  { "code": "YE-RA", "type": "governorate", "names": { "ar": "ريمة" } },
-  { "code": "YE-SA", "type": "municipality", "names": { "ar": "أمانة العاصمة" } },
-  { "code": "YE-SD", "type": "governorate", "names": { "ar": "صعدة" } },
-  { "code": "YE-SH", "type": "governorate", "names": { "ar": "شبوة" } },
-  { "code": "YE-SN", "type": "governorate", "names": { "ar": "صنعاء" } },
-  { "code": "YE-SO", "type": "governorate", "names": { "ar": "سقطرى" } },
-  { "code": "YE-TA", "type": "governorate", "names": { "ar": "تعز" } }
+  {
+    "code": "YE-AB",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Abyan"
+    }
+  },
+  {
+    "code": "YE-AD",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "'Adan"
+    }
+  },
+  {
+    "code": "YE-AM",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "'Amrān"
+    }
+  },
+  {
+    "code": "YE-BA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Bayḑā'"
+    }
+  },
+  {
+    "code": "YE-DA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Aḑ Ḑāli'"
+    }
+  },
+  {
+    "code": "YE-DH",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Dhamār"
+    }
+  },
+  {
+    "code": "YE-HD",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Ḩaḑramawt"
+    }
+  },
+  {
+    "code": "YE-HJ",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Ḩajjah"
+    }
+  },
+  {
+    "code": "YE-HU",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Ḩudaydah"
+    }
+  },
+  {
+    "code": "YE-IB",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Ibb"
+    }
+  },
+  {
+    "code": "YE-JA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Jawf"
+    }
+  },
+  {
+    "code": "YE-LA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Laḩij"
+    }
+  },
+  {
+    "code": "YE-MA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Ma'rib"
+    }
+  },
+  {
+    "code": "YE-MR",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Mahrah"
+    }
+  },
+  {
+    "code": "YE-MW",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Al Maḩwīt"
+    }
+  },
+  {
+    "code": "YE-RA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Raymah"
+    }
+  },
+  {
+    "code": "YE-SA",
+    "type": {
+      "en": "municipality",
+      "fr": "municipalité"
+    },
+    "names": {
+      "ar": "Amānat al 'Āşimah"
+    }
+  },
+  {
+    "code": "YE-SD",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Şāʻdah"
+    }
+  },
+  {
+    "code": "YE-SH",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Shabwah"
+    }
+  },
+  {
+    "code": "YE-SN",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Şanʻā'"
+    }
+  },
+  {
+    "code": "YE-SU",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Arkhabīl Suquţrá"
+    }
+  },
+  {
+    "code": "YE-TA",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "muḩāfaz̧ah"
+    },
+    "names": {
+      "ar": "Tāʻizz"
+    }
+  }
 ]

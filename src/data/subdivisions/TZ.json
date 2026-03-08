@@ -1,33 +1,349 @@
 [
-  { "code": "TZ-01", "type": "region", "names": { "sw": "Arusha" } },
-  { "code": "TZ-02", "type": "region", "names": { "sw": "Dar es Salaam" } },
-  { "code": "TZ-03", "type": "region", "names": { "sw": "Dodoma" } },
-  { "code": "TZ-04", "type": "region", "names": { "sw": "Iringa" } },
-  { "code": "TZ-05", "type": "region", "names": { "sw": "Kagera" } },
-  { "code": "TZ-06", "type": "region", "names": { "sw": "Kaskazini Pemba" } },
-  { "code": "TZ-07", "type": "region", "names": { "sw": "Kaskazini Unguja" } },
-  { "code": "TZ-08", "type": "region", "names": { "sw": "Kigoma" } },
-  { "code": "TZ-09", "type": "region", "names": { "sw": "Kilimanjaro" } },
-  { "code": "TZ-10", "type": "region", "names": { "sw": "Kusini Pemba" } },
-  { "code": "TZ-11", "type": "region", "names": { "sw": "Kusini Unguja" } },
-  { "code": "TZ-12", "type": "region", "names": { "sw": "Lindi" } },
-  { "code": "TZ-13", "type": "region", "names": { "sw": "Manyara" } },
-  { "code": "TZ-14", "type": "region", "names": { "sw": "Mara" } },
-  { "code": "TZ-15", "type": "region", "names": { "sw": "Mbeya" } },
-  { "code": "TZ-16", "type": "region", "names": { "sw": "Mjini Magharibi" } },
-  { "code": "TZ-17", "type": "region", "names": { "sw": "Morogoro" } },
-  { "code": "TZ-18", "type": "region", "names": { "sw": "Mtwara" } },
-  { "code": "TZ-19", "type": "region", "names": { "sw": "Mwanza" } },
-  { "code": "TZ-20", "type": "region", "names": { "sw": "Njombe" } },
-  { "code": "TZ-21", "type": "region", "names": { "sw": "Pwani" } },
-  { "code": "TZ-22", "type": "region", "names": { "sw": "Rukwa" } },
-  { "code": "TZ-23", "type": "region", "names": { "sw": "Ruvuma" } },
-  { "code": "TZ-24", "type": "region", "names": { "sw": "Shinyanga" } },
-  { "code": "TZ-25", "type": "region", "names": { "sw": "Simiyu" } },
-  { "code": "TZ-26", "type": "region", "names": { "sw": "Singida" } },
-  { "code": "TZ-27", "type": "region", "names": { "sw": "Songwe" } },
-  { "code": "TZ-28", "type": "region", "names": { "sw": "Tabora" } },
-  { "code": "TZ-29", "type": "region", "names": { "sw": "Tanga" } },
-  { "code": "TZ-30", "type": "region", "names": { "sw": "Geita" } },
-  { "code": "TZ-31", "type": "region", "names": { "sw": "Katavi" } }
+  {
+    "code": "TZ-01",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Arusha"
+    }
+  },
+  {
+    "code": "TZ-02",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Dar es Salaam"
+    }
+  },
+  {
+    "code": "TZ-03",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Dodoma"
+    }
+  },
+  {
+    "code": "TZ-04",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Iringa"
+    }
+  },
+  {
+    "code": "TZ-05",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Kagera"
+    }
+  },
+  {
+    "code": "TZ-06",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "en": "Pemba North",
+      "sw": "Kaskazini Pemba"
+    }
+  },
+  {
+    "code": "TZ-07",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "en": "Zanzibar North",
+      "sw": "Kaskazini Unguja"
+    }
+  },
+  {
+    "code": "TZ-08",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Kigoma"
+    }
+  },
+  {
+    "code": "TZ-09",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Kilimanjaro"
+    }
+  },
+  {
+    "code": "TZ-10",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "en": "Pemba South",
+      "sw": "Kusini Pemba"
+    }
+  },
+  {
+    "code": "TZ-11",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "en": "Zanzibar South",
+      "sw": "Kusini Unguja"
+    }
+  },
+  {
+    "code": "TZ-12",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Lindi"
+    }
+  },
+  {
+    "code": "TZ-13",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Mara"
+    }
+  },
+  {
+    "code": "TZ-14",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Mbeya"
+    }
+  },
+  {
+    "code": "TZ-15",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "en": "Zanzibar West",
+      "sw": "Mjini Magharibi"
+    }
+  },
+  {
+    "code": "TZ-16",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Morogoro"
+    }
+  },
+  {
+    "code": "TZ-17",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Mtwara"
+    }
+  },
+  {
+    "code": "TZ-18",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Mwanza"
+    }
+  },
+  {
+    "code": "TZ-19",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "en": "Coast",
+      "sw": "Pwani"
+    }
+  },
+  {
+    "code": "TZ-20",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Rukwa"
+    }
+  },
+  {
+    "code": "TZ-21",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Ruvuma"
+    }
+  },
+  {
+    "code": "TZ-22",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Shinyanga"
+    }
+  },
+  {
+    "code": "TZ-23",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Singida"
+    }
+  },
+  {
+    "code": "TZ-24",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Tabora"
+    }
+  },
+  {
+    "code": "TZ-25",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Tanga"
+    }
+  },
+  {
+    "code": "TZ-26",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Manyara"
+    }
+  },
+  {
+    "code": "TZ-27",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Geita"
+    }
+  },
+  {
+    "code": "TZ-28",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Katavi"
+    }
+  },
+  {
+    "code": "TZ-29",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Njombe"
+    }
+  },
+  {
+    "code": "TZ-30",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Simiyu"
+    }
+  },
+  {
+    "code": "TZ-31",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "sw": "mkoa"
+    },
+    "names": {
+      "sw": "Songwe"
+    }
+  }
 ]

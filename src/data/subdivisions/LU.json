@@ -1,7 +1,12 @@
 [
   {
     "code": "LU-CA",
-    "type": "canton",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "lb": "Kanton",
+      "de": "Kanton"
+    },
     "names": {
       "fr": "Capellen",
       "lb": "Kapellen",
@@ -10,7 +15,12 @@
   },
   {
     "code": "LU-CL",
-    "type": "canton",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "lb": "Kanton",
+      "de": "Kanton"
+    },
     "names": {
       "fr": "Clervaux",
       "lb": "Klierf",
@@ -19,16 +29,26 @@
   },
   {
     "code": "LU-DI",
-    "type": "canton",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "lb": "Kanton",
+      "de": "Kanton"
+    },
     "names": {
       "fr": "Diekirch",
-      "lb": "Dikrech",
+      "lb": "Diekrech",
       "de": "Diekirch"
     }
   },
   {
     "code": "LU-EC",
-    "type": "canton",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "lb": "Kanton",
+      "de": "Kanton"
+    },
     "names": {
       "fr": "Echternach",
       "lb": "Iechternach",
@@ -37,7 +57,12 @@
   },
   {
     "code": "LU-ES",
-    "type": "canton",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "lb": "Kanton",
+      "de": "Kanton"
+    },
     "names": {
       "fr": "Esch-sur-Alzette",
       "lb": "Esch-Uelzecht",
@@ -46,7 +71,12 @@
   },
   {
     "code": "LU-GR",
-    "type": "canton",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "lb": "Kanton",
+      "de": "Kanton"
+    },
     "names": {
       "fr": "Grevenmacher",
       "lb": "Gréivemaacher",
@@ -55,7 +85,12 @@
   },
   {
     "code": "LU-LU",
-    "type": "canton",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "lb": "Kanton",
+      "de": "Kanton"
+    },
     "names": {
       "fr": "Luxembourg",
       "lb": "Lëtzebuerg",
@@ -64,7 +99,12 @@
   },
   {
     "code": "LU-ME",
-    "type": "canton",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "lb": "Kanton",
+      "de": "Kanton"
+    },
     "names": {
       "fr": "Mersch",
       "lb": "Miersch",
@@ -73,16 +113,26 @@
   },
   {
     "code": "LU-RD",
-    "type": "canton",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "lb": "Kanton",
+      "de": "Kanton"
+    },
     "names": {
       "fr": "Redange",
-      "lb": "Réiden",
+      "lb": "Réiden-Atert",
       "de": "Redingen"
     }
   },
   {
     "code": "LU-RM",
-    "type": "canton",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "lb": "Kanton",
+      "de": "Kanton"
+    },
     "names": {
       "fr": "Remich",
       "lb": "Réimech",
@@ -91,7 +141,12 @@
   },
   {
     "code": "LU-VD",
-    "type": "canton",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "lb": "Kanton",
+      "de": "Kanton"
+    },
     "names": {
       "fr": "Vianden",
       "lb": "Veianen",
@@ -100,7 +155,12 @@
   },
   {
     "code": "LU-WI",
-    "type": "canton",
+    "type": {
+      "en": "canton",
+      "fr": "canton",
+      "lb": "Kanton",
+      "de": "Kanton"
+    },
     "names": {
       "fr": "Wiltz",
       "lb": "Wolz",

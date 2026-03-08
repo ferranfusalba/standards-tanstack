@@ -1,74 +1,794 @@
 [
-  { "code": "BD-A", "type": { "en": "division", "fr": "division", "bn": "bibhag" }, "names": { "bn": "Barishal" } },
-  { "code": "BD-B", "type": { "en": "division", "fr": "division", "bn": "bibhag" }, "names": { "bn": "Chattogram" } },
-  { "code": "BD-C", "type": { "en": "division", "fr": "division", "bn": "bibhag" }, "names": { "bn": "Dhaka" } },
-  { "code": "BD-D", "type": { "en": "division", "fr": "division", "bn": "bibhag" }, "names": { "bn": "Khulna" } },
-  { "code": "BD-E", "type": { "en": "division", "fr": "division", "bn": "bibhag" }, "names": { "bn": "Rajshahi" } },
-  { "code": "BD-F", "type": { "en": "division", "fr": "division", "bn": "bibhag" }, "names": { "bn": "Rangpur" } },
-  { "code": "BD-G", "type": { "en": "division", "fr": "division", "bn": "bibhag" }, "names": { "bn": "Sylhet" } },
-  { "code": "BD-H", "type": { "en": "division", "fr": "division", "bn": "bibhag" }, "names": { "bn": "Mymensingh" } },
-  { "code": "BD-01", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Bandarban" } },
-  { "code": "BD-02", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Barguna" } },
-  { "code": "BD-03", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Bogura" } },
-  { "code": "BD-04", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Brahmanbaria" } },
-  { "code": "BD-05", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Bagerhat" } },
-  { "code": "BD-06", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Barishal" } },
-  { "code": "BD-07", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Bhola" } },
-  { "code": "BD-08", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Cumilla" } },
-  { "code": "BD-09", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Chandpur" } },
-  { "code": "BD-10", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Chattogram" } },
-  { "code": "BD-11", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Cox's Bazar" } },
-  { "code": "BD-12", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Chuadanga" } },
-  { "code": "BD-13", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Dhaka" } },
-  { "code": "BD-14", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Dinajpur" } },
-  { "code": "BD-15", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Faridpur" } },
-  { "code": "BD-16", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Feni" } },
-  { "code": "BD-17", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Gopalganj" } },
-  { "code": "BD-18", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Gazipur" } },
-  { "code": "BD-19", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Gaibandha" } },
-  { "code": "BD-20", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Habiganj" } },
-  { "code": "BD-21", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Jamalpur" } },
-  { "code": "BD-22", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Jashore" } },
-  { "code": "BD-23", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Jhenaidah" } },
-  { "code": "BD-24", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Joypurhat" } },
-  { "code": "BD-25", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Jhalakathi" } },
-  { "code": "BD-26", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Kishoreganj" } },
-  { "code": "BD-27", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Khulna" } },
-  { "code": "BD-28", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Kurigram" } },
-  { "code": "BD-29", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Khagrachhari" } },
-  { "code": "BD-30", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Kushtia" } },
-  { "code": "BD-31", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Lakshmipur" } },
-  { "code": "BD-32", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Lalmonirhat" } },
-  { "code": "BD-33", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Manikganj" } },
-  { "code": "BD-34", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Mymensingh" } },
-  { "code": "BD-35", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Munshiganj" } },
-  { "code": "BD-36", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Madaripur" } },
-  { "code": "BD-37", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Magura" } },
-  { "code": "BD-38", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Moulvibazar" } },
-  { "code": "BD-39", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Meherpur" } },
-  { "code": "BD-40", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Narayanganj" } },
-  { "code": "BD-41", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Netrakona" } },
-  { "code": "BD-42", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Narsingdi" } },
-  { "code": "BD-43", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Narail" } },
-  { "code": "BD-44", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Natore" } },
-  { "code": "BD-45", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Chapai Nawabganj" } },
-  { "code": "BD-46", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Nilphamari" } },
-  { "code": "BD-47", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Noakhali" } },
-  { "code": "BD-48", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Naogaon" } },
-  { "code": "BD-49", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Pabna" } },
-  { "code": "BD-50", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Pirojpur" } },
-  { "code": "BD-51", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Patuakhali" } },
-  { "code": "BD-52", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Panchagarh" } },
-  { "code": "BD-53", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Rajbari" } },
-  { "code": "BD-54", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Rajshahi" } },
-  { "code": "BD-55", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Rangpur" } },
-  { "code": "BD-56", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Rangamati" } },
-  { "code": "BD-57", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Sherpur" } },
-  { "code": "BD-58", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Satkhira" } },
-  { "code": "BD-59", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Sirajganj" } },
-  { "code": "BD-60", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Sylhet" } },
-  { "code": "BD-61", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Sunamganj" } },
-  { "code": "BD-62", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Shariatpur" } },
-  { "code": "BD-63", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Tangail" } },
-  { "code": "BD-64", "type": { "en": "district", "fr": "district", "bn": "zila" }, "names": { "bn": "Thakurgaon" } }
+  {
+    "code": "BD-A",
+    "type": {
+      "en": "division",
+      "fr": "division",
+      "bn": "bibhag"
+    },
+    "names": {
+      "bn": "Barishal"
+    }
+  },
+  {
+    "code": "BD-B",
+    "type": {
+      "en": "division",
+      "fr": "division",
+      "bn": "bibhag"
+    },
+    "names": {
+      "bn": "Chattogram"
+    }
+  },
+  {
+    "code": "BD-C",
+    "type": {
+      "en": "division",
+      "fr": "division",
+      "bn": "bibhag"
+    },
+    "names": {
+      "bn": "Dhaka"
+    }
+  },
+  {
+    "code": "BD-D",
+    "type": {
+      "en": "division",
+      "fr": "division",
+      "bn": "bibhag"
+    },
+    "names": {
+      "bn": "Khulna"
+    }
+  },
+  {
+    "code": "BD-E",
+    "type": {
+      "en": "division",
+      "fr": "division",
+      "bn": "bibhag"
+    },
+    "names": {
+      "bn": "Rajshahi"
+    }
+  },
+  {
+    "code": "BD-F",
+    "type": {
+      "en": "division",
+      "fr": "division",
+      "bn": "bibhag"
+    },
+    "names": {
+      "bn": "Rangpur"
+    }
+  },
+  {
+    "code": "BD-G",
+    "type": {
+      "en": "division",
+      "fr": "division",
+      "bn": "bibhag"
+    },
+    "names": {
+      "bn": "Sylhet"
+    }
+  },
+  {
+    "code": "BD-H",
+    "type": {
+      "en": "division",
+      "fr": "division",
+      "bn": "bibhag"
+    },
+    "names": {
+      "bn": "Mymensingh"
+    }
+  },
+  {
+    "code": "BD-01",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Bandarban"
+    }
+  },
+  {
+    "code": "BD-02",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Barguna"
+    }
+  },
+  {
+    "code": "BD-03",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Bogura"
+    }
+  },
+  {
+    "code": "BD-04",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Brahmanbaria"
+    }
+  },
+  {
+    "code": "BD-05",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Bagerhat"
+    }
+  },
+  {
+    "code": "BD-06",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Barishal"
+    }
+  },
+  {
+    "code": "BD-07",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Bhola"
+    }
+  },
+  {
+    "code": "BD-08",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Cumilla"
+    }
+  },
+  {
+    "code": "BD-09",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Chandpur"
+    }
+  },
+  {
+    "code": "BD-10",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Chattogram"
+    }
+  },
+  {
+    "code": "BD-11",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Cox's Bazar"
+    }
+  },
+  {
+    "code": "BD-12",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Chuadanga"
+    }
+  },
+  {
+    "code": "BD-13",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Dhaka"
+    }
+  },
+  {
+    "code": "BD-14",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Dinajpur"
+    }
+  },
+  {
+    "code": "BD-15",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Faridpur"
+    }
+  },
+  {
+    "code": "BD-16",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Feni"
+    }
+  },
+  {
+    "code": "BD-17",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Gopalganj"
+    }
+  },
+  {
+    "code": "BD-18",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Gazipur"
+    }
+  },
+  {
+    "code": "BD-19",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Gaibandha"
+    }
+  },
+  {
+    "code": "BD-20",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Habiganj"
+    }
+  },
+  {
+    "code": "BD-21",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Jamalpur"
+    }
+  },
+  {
+    "code": "BD-22",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Jashore"
+    }
+  },
+  {
+    "code": "BD-23",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Jhenaidah"
+    }
+  },
+  {
+    "code": "BD-24",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Joypurhat"
+    }
+  },
+  {
+    "code": "BD-25",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Jhalakathi"
+    }
+  },
+  {
+    "code": "BD-26",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Kishoreganj"
+    }
+  },
+  {
+    "code": "BD-27",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Khulna"
+    }
+  },
+  {
+    "code": "BD-28",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Kurigram"
+    }
+  },
+  {
+    "code": "BD-29",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Khagrachhari"
+    }
+  },
+  {
+    "code": "BD-30",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Kushtia"
+    }
+  },
+  {
+    "code": "BD-31",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Lakshmipur"
+    }
+  },
+  {
+    "code": "BD-32",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Lalmonirhat"
+    }
+  },
+  {
+    "code": "BD-33",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Manikganj"
+    }
+  },
+  {
+    "code": "BD-34",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Mymensingh"
+    }
+  },
+  {
+    "code": "BD-35",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Munshiganj"
+    }
+  },
+  {
+    "code": "BD-36",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Madaripur"
+    }
+  },
+  {
+    "code": "BD-37",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Magura"
+    }
+  },
+  {
+    "code": "BD-38",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Moulvibazar"
+    }
+  },
+  {
+    "code": "BD-39",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Meherpur"
+    }
+  },
+  {
+    "code": "BD-40",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Narayanganj"
+    }
+  },
+  {
+    "code": "BD-41",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Netrakona"
+    }
+  },
+  {
+    "code": "BD-42",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Narsingdi"
+    }
+  },
+  {
+    "code": "BD-43",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Narail"
+    }
+  },
+  {
+    "code": "BD-44",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Natore"
+    }
+  },
+  {
+    "code": "BD-45",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Chapai Nawabganj"
+    }
+  },
+  {
+    "code": "BD-46",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Nilphamari"
+    }
+  },
+  {
+    "code": "BD-47",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Noakhali"
+    }
+  },
+  {
+    "code": "BD-48",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Naogaon"
+    }
+  },
+  {
+    "code": "BD-49",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Pabna"
+    }
+  },
+  {
+    "code": "BD-50",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Pirojpur"
+    }
+  },
+  {
+    "code": "BD-51",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Patuakhali"
+    }
+  },
+  {
+    "code": "BD-52",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Panchagarh"
+    }
+  },
+  {
+    "code": "BD-53",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Rajbari"
+    }
+  },
+  {
+    "code": "BD-54",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Rajshahi"
+    }
+  },
+  {
+    "code": "BD-55",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Rangpur"
+    }
+  },
+  {
+    "code": "BD-56",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Rangamati"
+    }
+  },
+  {
+    "code": "BD-57",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Sherpur"
+    }
+  },
+  {
+    "code": "BD-58",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Satkhira"
+    }
+  },
+  {
+    "code": "BD-59",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Sirajganj"
+    }
+  },
+  {
+    "code": "BD-60",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Sylhet"
+    }
+  },
+  {
+    "code": "BD-61",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Sunamganj"
+    }
+  },
+  {
+    "code": "BD-62",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Shariatpur"
+    }
+  },
+  {
+    "code": "BD-63",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Tangail"
+    }
+  },
+  {
+    "code": "BD-64",
+    "type": {
+      "en": "district",
+      "fr": "district",
+      "bn": "zila"
+    },
+    "names": {
+      "bn": "Thakurgaon"
+    }
+  }
 ]

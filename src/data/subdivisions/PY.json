@@ -1,20 +1,200 @@
 [
-  { "code": "PY-1", "type": "department", "names": { "es": "Concepción" } },
-  { "code": "PY-2", "type": "department", "names": { "es": "San Pedro" } },
-  { "code": "PY-3", "type": "department", "names": { "es": "Cordillera" } },
-  { "code": "PY-4", "type": "department", "names": { "es": "Guairá" } },
-  { "code": "PY-5", "type": "department", "names": { "es": "Caaguazú" } },
-  { "code": "PY-6", "type": "department", "names": { "es": "Caazapá" } },
-  { "code": "PY-7", "type": "department", "names": { "es": "Itapúa" } },
-  { "code": "PY-8", "type": "department", "names": { "es": "Misiones" } },
-  { "code": "PY-9", "type": "department", "names": { "es": "Paraguarí" } },
-  { "code": "PY-10", "type": "department", "names": { "es": "Alto Paraná" } },
-  { "code": "PY-11", "type": "department", "names": { "es": "Central" } },
-  { "code": "PY-12", "type": "department", "names": { "es": "Ñeembucú" } },
-  { "code": "PY-13", "type": "department", "names": { "es": "Amambay" } },
-  { "code": "PY-14", "type": "department", "names": { "es": "Canindeyú" } },
-  { "code": "PY-15", "type": "department", "names": { "es": "Presidente Hayes" } },
-  { "code": "PY-16", "type": "department", "names": { "es": "Alto Paraguay" } },
-  { "code": "PY-19", "type": "department", "names": { "es": "Boquerón" } },
-  { "code": "PY-ASU", "type": "capital", "names": { "es": "Asunción" } }
+  {
+    "code": "PY-1",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Concepción"
+    }
+  },
+  {
+    "code": "PY-2",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "San Pedro"
+    }
+  },
+  {
+    "code": "PY-3",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Cordillera"
+    }
+  },
+  {
+    "code": "PY-4",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Guairá"
+    }
+  },
+  {
+    "code": "PY-5",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Caaguazú"
+    }
+  },
+  {
+    "code": "PY-6",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Caazapá"
+    }
+  },
+  {
+    "code": "PY-7",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Itapúa"
+    }
+  },
+  {
+    "code": "PY-8",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Misiones"
+    }
+  },
+  {
+    "code": "PY-9",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Paraguarí"
+    }
+  },
+  {
+    "code": "PY-10",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Alto Paraná"
+    }
+  },
+  {
+    "code": "PY-11",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Central"
+    }
+  },
+  {
+    "code": "PY-12",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Ñeembucú"
+    }
+  },
+  {
+    "code": "PY-13",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Amambay"
+    }
+  },
+  {
+    "code": "PY-14",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Canindeyú"
+    }
+  },
+  {
+    "code": "PY-15",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Presidente Hayes"
+    }
+  },
+  {
+    "code": "PY-16",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Alto Paraguay"
+    }
+  },
+  {
+    "code": "PY-19",
+    "type": {
+      "en": "department",
+      "fr": "département",
+      "es": "departamento"
+    },
+    "names": {
+      "es": "Boquerón"
+    }
+  },
+  {
+    "code": "PY-ASU",
+    "type": {
+      "en": "capital",
+      "fr": "capitale",
+      "es": "capital"
+    },
+    "names": {
+      "es": "Asunción"
+    }
+  }
 ]

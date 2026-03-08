@@ -1,406 +1,576 @@
 [
   {
-    "code": "US-AK",
-    "type": "state",
-    "names": {
-      "en": "Alaska"
-    }
-  },
-  {
     "code": "US-AL",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Alabama"
     }
   },
   {
-    "code": "US-AR",
-    "type": "state",
+    "code": "US-AK",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
-      "en": "Arkansas"
+      "en": "Alaska"
     }
   },
   {
     "code": "US-AS",
-    "type": "outlying area",
+    "type": {
+      "en": "outlying area",
+      "fr": "zone éloignée"
+    },
+    "iso1": "AS",
     "names": {
       "en": "American Samoa"
-    },
-    "iso1": "AS"
+    }
   },
   {
     "code": "US-AZ",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Arizona"
     }
   },
   {
+    "code": "US-AR",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Arkansas"
+    }
+  },
+  {
     "code": "US-CA",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "California"
     }
   },
   {
     "code": "US-CO",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Colorado"
     }
   },
   {
     "code": "US-CT",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Connecticut"
     }
   },
   {
-    "code": "US-DC",
-    "type": "district",
-    "names": {
-      "en": "District of Columbia"
-    }
-  },
-  {
     "code": "US-DE",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Delaware"
     }
   },
   {
+    "code": "US-DC",
+    "type": {
+      "en": "district",
+      "fr": "district fédéral"
+    },
+    "names": {
+      "en": "District of Columbia"
+    }
+  },
+  {
     "code": "US-FL",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Florida"
     }
   },
   {
     "code": "US-GA",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Georgia"
     }
   },
   {
     "code": "US-GU",
-    "type": "outlying area",
+    "type": {
+      "en": "outlying area",
+      "fr": "zone éloignée"
+    },
+    "iso1": "GU",
     "names": {
       "en": "Guam"
-    },
-    "iso1": "GU"
+    }
   },
   {
     "code": "US-HI",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Hawaii"
     }
   },
   {
-    "code": "US-IA",
-    "type": "state",
-    "names": {
-      "en": "Iowa"
-    }
-  },
-  {
     "code": "US-ID",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Idaho"
     }
   },
   {
     "code": "US-IL",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Illinois"
     }
   },
   {
     "code": "US-IN",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Indiana"
     }
   },
   {
+    "code": "US-IA",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Iowa"
+    }
+  },
+  {
     "code": "US-KS",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Kansas"
     }
   },
   {
     "code": "US-KY",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Kentucky"
     }
   },
   {
     "code": "US-LA",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Louisiana"
     }
   },
   {
-    "code": "US-MA",
-    "type": "state",
-    "names": {
-      "en": "Massachusetts"
-    }
-  },
-  {
-    "code": "US-MD",
-    "type": "state",
-    "names": {
-      "en": "Maryland"
-    }
-  },
-  {
     "code": "US-ME",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Maine"
     }
   },
   {
+    "code": "US-MD",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Maryland"
+    }
+  },
+  {
+    "code": "US-MA",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Massachusetts"
+    }
+  },
+  {
     "code": "US-MI",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Michigan"
     }
   },
   {
     "code": "US-MN",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Minnesota"
     }
   },
   {
-    "code": "US-MO",
-    "type": "state",
-    "names": {
-      "en": "Missouri"
-    }
-  },
-  {
-    "code": "US-MP",
-    "type": "outlying area",
-    "names": {
-      "en": "Northern Mariana Islands"
-    },
-    "iso1": "MP"
-  },
-  {
     "code": "US-MS",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Mississippi"
     }
   },
   {
+    "code": "US-MO",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Missouri"
+    }
+  },
+  {
     "code": "US-MT",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Montana"
     }
   },
   {
-    "code": "US-NC",
-    "type": "state",
-    "names": {
-      "en": "North Carolina"
-    }
-  },
-  {
-    "code": "US-ND",
-    "type": "state",
-    "names": {
-      "en": "North Dakota"
-    }
-  },
-  {
     "code": "US-NE",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Nebraska"
     }
   },
   {
+    "code": "US-NV",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Nevada"
+    }
+  },
+  {
     "code": "US-NH",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "New Hampshire"
     }
   },
   {
     "code": "US-NJ",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "New Jersey"
     }
   },
   {
     "code": "US-NM",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "New Mexico"
     }
   },
   {
-    "code": "US-NV",
-    "type": "state",
-    "names": {
-      "en": "Nevada"
-    }
-  },
-  {
     "code": "US-NY",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "New York"
     }
   },
   {
+    "code": "US-NC",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "North Carolina"
+    }
+  },
+  {
+    "code": "US-ND",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "North Dakota"
+    }
+  },
+  {
+    "code": "US-MP",
+    "type": {
+      "en": "outlying area",
+      "fr": "zone éloignée"
+    },
+    "iso1": "MP",
+    "names": {
+      "en": "Northern Mariana Islands"
+    }
+  },
+  {
     "code": "US-OH",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Ohio"
     }
   },
   {
     "code": "US-OK",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Oklahoma"
     }
   },
   {
     "code": "US-OR",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Oregon"
     }
   },
   {
     "code": "US-PA",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Pennsylvania"
     }
   },
   {
     "code": "US-PR",
-    "type": "outlying area",
-    "names": {
-      "en": "Puerto Rico",
-      "es": "Puerto Rico"
+    "type": {
+      "en": "outlying area",
+      "fr": "zone éloignée"
     },
-    "iso1": "PR"
+    "iso1": "PR",
+    "names": {
+      "en": "Puerto Rico"
+    }
   },
   {
     "code": "US-RI",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Rhode Island"
     }
   },
   {
     "code": "US-SC",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "South Carolina"
     }
   },
   {
     "code": "US-SD",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "South Dakota"
     }
   },
   {
     "code": "US-TN",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Tennessee"
     }
   },
   {
     "code": "US-TX",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Texas"
     }
   },
   {
     "code": "US-UM",
-    "type": "outlying area",
+    "type": {
+      "en": "outlying area",
+      "fr": "zone éloignée"
+    },
+    "iso1": "UM",
     "names": {
       "en": "United States Minor Outlying Islands"
-    },
-    "iso1": "UM"
+    }
   },
   {
     "code": "US-UT",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Utah"
     }
   },
   {
-    "code": "US-VA",
-    "type": "state",
-    "names": {
-      "en": "Virginia"
-    }
-  },
-  {
-    "code": "US-VI",
-    "type": "outlying area",
-    "names": {
-      "en": "United States Virgin Islands"
-    },
-    "iso1": "VI"
-  },
-  {
     "code": "US-VT",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Vermont"
     }
   },
   {
+    "code": "US-VI",
+    "type": {
+      "en": "outlying area",
+      "fr": "zone éloignée"
+    },
+    "iso1": "VI",
+    "names": {
+      "en": "Virgin Islands, U.S."
+    }
+  },
+  {
+    "code": "US-VA",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Virginia"
+    }
+  },
+  {
     "code": "US-WA",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Washington"
     }
   },
   {
-    "code": "US-WI",
-    "type": "state",
-    "names": {
-      "en": "Wisconsin"
-    }
-  },
-  {
     "code": "US-WV",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "West Virginia"
     }
   },
   {
+    "code": "US-WI",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Wisconsin"
+    }
+  },
+  {
     "code": "US-WY",
-    "type": "state",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
     "names": {
       "en": "Wyoming"
     }

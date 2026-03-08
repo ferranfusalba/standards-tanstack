@@ -35,12 +35,6 @@ interface ApiResponse {
   [countryCode: string]: ApiCountryData
 }
 
-async function fetchApiData(codes: string[]): Promise<ApiResponse> {
-  const url = `${API_BASE}/${codes.join(',')}`
-  const res = await fetch(url)
-  if (!res.ok) throw new Error(`API error ${res.status} for ${codes.join(',')}`)
-  return res.json()
-}
 
 function loadLocalData(countryCode: string): LocalEntry[] {
   const filePath = join(SUBDIVISIONS_DIR, `${countryCode}.json`)

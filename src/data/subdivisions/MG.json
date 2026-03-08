@@ -1,8 +1,68 @@
 [
-  { "code": "MG-A", "type": "province", "names": { "mg": "Antsiranana", "fr": "Antsiranana" } },
-  { "code": "MG-D", "type": "province", "names": { "mg": "Antananarivo", "fr": "Antananarivo" } },
-  { "code": "MG-F", "type": "province", "names": { "mg": "Fianarantsoa", "fr": "Fianarantsoa" } },
-  { "code": "MG-M", "type": "province", "names": { "mg": "Mahajanga", "fr": "Mahajanga" } },
-  { "code": "MG-T", "type": "province", "names": { "mg": "Toamasina", "fr": "Toamasina" } },
-  { "code": "MG-U", "type": "province", "names": { "mg": "Toliara", "fr": "Toliara" } }
+  {
+    "code": "MG-A",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mg": "faritany"
+    },
+    "names": {
+      "mg": "Toamasina"
+    }
+  },
+  {
+    "code": "MG-D",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mg": "faritany"
+    },
+    "names": {
+      "mg": "Antsiranana"
+    }
+  },
+  {
+    "code": "MG-F",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mg": "faritany"
+    },
+    "names": {
+      "mg": "Fianarantsoa"
+    }
+  },
+  {
+    "code": "MG-M",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mg": "faritany"
+    },
+    "names": {
+      "mg": "Mahajanga"
+    }
+  },
+  {
+    "code": "MG-T",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mg": "faritany"
+    },
+    "names": {
+      "mg": "Antananarivo"
+    }
+  },
+  {
+    "code": "MG-U",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "mg": "faritany"
+    },
+    "names": {
+      "mg": "Toliara"
+    }
+  }
 ]

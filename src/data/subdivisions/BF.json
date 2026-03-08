@@ -1,60 +1,582 @@
 [
-  { "code": "BF-01", "type": { "en": "region", "fr": "région" }, "names": { "fr": "Boucle du Mouhoun" } },
-  { "code": "BF-02", "type": { "en": "region", "fr": "région" }, "names": { "fr": "Cascades" } },
-  { "code": "BF-03", "type": { "en": "region", "fr": "région" }, "names": { "fr": "Centre" } },
-  { "code": "BF-04", "type": { "en": "region", "fr": "région" }, "names": { "fr": "Centre-Est" } },
-  { "code": "BF-05", "type": { "en": "region", "fr": "région" }, "names": { "fr": "Centre-Nord" } },
-  { "code": "BF-06", "type": { "en": "region", "fr": "région" }, "names": { "fr": "Centre-Ouest" } },
-  { "code": "BF-07", "type": { "en": "region", "fr": "région" }, "names": { "fr": "Centre-Sud" } },
-  { "code": "BF-08", "type": { "en": "region", "fr": "région" }, "names": { "fr": "Est" } },
-  { "code": "BF-09", "type": { "en": "region", "fr": "région" }, "names": { "fr": "Hauts-Bassins" } },
-  { "code": "BF-10", "type": { "en": "region", "fr": "région" }, "names": { "fr": "Nord" } },
-  { "code": "BF-11", "type": { "en": "region", "fr": "région" }, "names": { "fr": "Plateau-Central" } },
-  { "code": "BF-12", "type": { "en": "region", "fr": "région" }, "names": { "fr": "Sahel" } },
-  { "code": "BF-13", "type": { "en": "region", "fr": "région" }, "names": { "fr": "Sud-Ouest" } },
-  { "code": "BF-BAL", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Balé" } },
-  { "code": "BF-BAM", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Bam" } },
-  { "code": "BF-BAN", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Banwa" } },
-  { "code": "BF-BAZ", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Bazèga" } },
-  { "code": "BF-BGR", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Bougouriba" } },
-  { "code": "BF-BLG", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Boulgou" } },
-  { "code": "BF-BLK", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Boulkiemdé" } },
-  { "code": "BF-COM", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Comoé" } },
-  { "code": "BF-GAN", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Ganzourgou" } },
-  { "code": "BF-GNA", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Gnagna" } },
-  { "code": "BF-GOU", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Gourma" } },
-  { "code": "BF-HOU", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Houet" } },
-  { "code": "BF-IOB", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Ioba" } },
-  { "code": "BF-KAD", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Kadiogo" } },
-  { "code": "BF-KEN", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Kénédougou" } },
-  { "code": "BF-KMD", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Komondjari" } },
-  { "code": "BF-KMP", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Kompienga" } },
-  { "code": "BF-KOP", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Koulpélogo" } },
-  { "code": "BF-KOS", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Kossi" } },
-  { "code": "BF-KOT", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Kouritenga" } },
-  { "code": "BF-KOW", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Kourwéogo" } },
-  { "code": "BF-LER", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Léraba" } },
-  { "code": "BF-LOR", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Loroum" } },
-  { "code": "BF-MOU", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Mouhoun" } },
-  { "code": "BF-NAM", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Namentenga" } },
-  { "code": "BF-NAO", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Nahouri" } },
-  { "code": "BF-NAY", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Nayala" } },
-  { "code": "BF-NOU", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Noumbiel" } },
-  { "code": "BF-OUB", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Oubritenga" } },
-  { "code": "BF-OUD", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Oudalan" } },
-  { "code": "BF-PAS", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Passoré" } },
-  { "code": "BF-PON", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Poni" } },
-  { "code": "BF-SEN", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Séno" } },
-  { "code": "BF-SIS", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Sissili" } },
-  { "code": "BF-SMT", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Sanmatenga" } },
-  { "code": "BF-SNG", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Sanguié" } },
-  { "code": "BF-SOM", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Soum" } },
-  { "code": "BF-SOR", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Sourou" } },
-  { "code": "BF-TAP", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Tapoa" } },
-  { "code": "BF-TUI", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Tuy" } },
-  { "code": "BF-YAG", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Yagha" } },
-  { "code": "BF-YAT", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Yatenga" } },
-  { "code": "BF-ZIR", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Ziro" } },
-  { "code": "BF-ZON", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Zondoma" } },
-  { "code": "BF-ZOU", "type": { "en": "province", "fr": "province" }, "names": { "fr": "Zoundwéogo" } }
+  {
+    "code": "BF-01",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Boucle du Mouhoun"
+    }
+  },
+  {
+    "code": "BF-02",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Cascades"
+    }
+  },
+  {
+    "code": "BF-03",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Centre"
+    }
+  },
+  {
+    "code": "BF-04",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Centre-Est"
+    }
+  },
+  {
+    "code": "BF-05",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Centre-Nord"
+    }
+  },
+  {
+    "code": "BF-06",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Centre-Ouest"
+    }
+  },
+  {
+    "code": "BF-07",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Centre-Sud"
+    }
+  },
+  {
+    "code": "BF-08",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Est"
+    }
+  },
+  {
+    "code": "BF-09",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Hauts-Bassins"
+    }
+  },
+  {
+    "code": "BF-10",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Nord"
+    }
+  },
+  {
+    "code": "BF-11",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Plateau-Central"
+    }
+  },
+  {
+    "code": "BF-12",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Sahel"
+    }
+  },
+  {
+    "code": "BF-13",
+    "type": {
+      "en": "region",
+      "fr": "région"
+    },
+    "names": {
+      "fr": "Sud-Ouest"
+    }
+  },
+  {
+    "code": "BF-BAL",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Balé"
+    }
+  },
+  {
+    "code": "BF-BAM",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Bam"
+    }
+  },
+  {
+    "code": "BF-BAN",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Banwa"
+    }
+  },
+  {
+    "code": "BF-BAZ",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Bazèga"
+    }
+  },
+  {
+    "code": "BF-BGR",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Bougouriba"
+    }
+  },
+  {
+    "code": "BF-BLG",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Boulgou"
+    }
+  },
+  {
+    "code": "BF-BLK",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Boulkiemdé"
+    }
+  },
+  {
+    "code": "BF-COM",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Comoé"
+    }
+  },
+  {
+    "code": "BF-GAN",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Ganzourgou"
+    }
+  },
+  {
+    "code": "BF-GNA",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Gnagna"
+    }
+  },
+  {
+    "code": "BF-GOU",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Gourma"
+    }
+  },
+  {
+    "code": "BF-HOU",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Houet"
+    }
+  },
+  {
+    "code": "BF-IOB",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Ioba"
+    }
+  },
+  {
+    "code": "BF-KAD",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Kadiogo"
+    }
+  },
+  {
+    "code": "BF-KEN",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Kénédougou"
+    }
+  },
+  {
+    "code": "BF-KMD",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Komondjari"
+    }
+  },
+  {
+    "code": "BF-KMP",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Kompienga"
+    }
+  },
+  {
+    "code": "BF-KOP",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Koulpélogo"
+    }
+  },
+  {
+    "code": "BF-KOS",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Kossi"
+    }
+  },
+  {
+    "code": "BF-KOT",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Kouritenga"
+    }
+  },
+  {
+    "code": "BF-KOW",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Kourwéogo"
+    }
+  },
+  {
+    "code": "BF-LER",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Léraba"
+    }
+  },
+  {
+    "code": "BF-LOR",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Loroum"
+    }
+  },
+  {
+    "code": "BF-MOU",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Mouhoun"
+    }
+  },
+  {
+    "code": "BF-NAM",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Namentenga"
+    }
+  },
+  {
+    "code": "BF-NAO",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Nahouri"
+    }
+  },
+  {
+    "code": "BF-NAY",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Nayala"
+    }
+  },
+  {
+    "code": "BF-NOU",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Noumbiel"
+    }
+  },
+  {
+    "code": "BF-OUB",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Oubritenga"
+    }
+  },
+  {
+    "code": "BF-OUD",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Oudalan"
+    }
+  },
+  {
+    "code": "BF-PAS",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Passoré"
+    }
+  },
+  {
+    "code": "BF-PON",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Poni"
+    }
+  },
+  {
+    "code": "BF-SEN",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Séno"
+    }
+  },
+  {
+    "code": "BF-SIS",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Sissili"
+    }
+  },
+  {
+    "code": "BF-SMT",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Sanmatenga"
+    }
+  },
+  {
+    "code": "BF-SNG",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Sanguié"
+    }
+  },
+  {
+    "code": "BF-SOM",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Soum"
+    }
+  },
+  {
+    "code": "BF-SOR",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Sourou"
+    }
+  },
+  {
+    "code": "BF-TAP",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Tapoa"
+    }
+  },
+  {
+    "code": "BF-TUI",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Tuy"
+    }
+  },
+  {
+    "code": "BF-YAG",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Yagha"
+    }
+  },
+  {
+    "code": "BF-YAT",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Yatenga"
+    }
+  },
+  {
+    "code": "BF-ZIR",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Ziro"
+    }
+  },
+  {
+    "code": "BF-ZON",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Zondoma"
+    }
+  },
+  {
+    "code": "BF-ZOU",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "fr": "Zoundwéogo"
+    }
+  }
 ]

@@ -1,19 +1,1162 @@
 [
-  { "code": "PH-00", "type": "region", "names": { "en": "National Capital Region" } },
-  { "code": "PH-01", "type": "region", "names": { "en": "Ilocos" } },
-  { "code": "PH-02", "type": "region", "names": { "en": "Cagayan Valley" } },
-  { "code": "PH-03", "type": "region", "names": { "en": "Central Luzon" } },
-  { "code": "PH-05", "type": "region", "names": { "en": "Bicol" } },
-  { "code": "PH-06", "type": "region", "names": { "en": "Western Visayas" } },
-  { "code": "PH-07", "type": "region", "names": { "en": "Central Visayas" } },
-  { "code": "PH-08", "type": "region", "names": { "en": "Eastern Visayas" } },
-  { "code": "PH-09", "type": "region", "names": { "en": "Zamboanga Peninsula" } },
-  { "code": "PH-10", "type": "region", "names": { "en": "Northern Mindanao" } },
-  { "code": "PH-11", "type": "region", "names": { "en": "Davao" } },
-  { "code": "PH-12", "type": "region", "names": { "en": "Soccsksargen" } },
-  { "code": "PH-13", "type": "region", "names": { "en": "Caraga" } },
-  { "code": "PH-14", "type": "autonomous region", "names": { "en": "Bangsamoro" } },
-  { "code": "PH-15", "type": "region", "names": { "en": "Cordillera Administrative Region" } },
-  { "code": "PH-40", "type": "region", "names": { "en": "Calabarzon" } },
-  { "code": "PH-41", "type": "region", "names": { "en": "Mimaropa" } }
+  {
+    "code": "PH-00",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tl": "rehiyon"
+    },
+    "names": {
+      "en": "National Capital Region",
+      "tl": "Pambansang Punong Rehiyon"
+    }
+  },
+  {
+    "code": "PH-01",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tl": "rehiyon"
+    },
+    "names": {
+      "en": "Ilocos (Region I)",
+      "tl": "Rehiyon ng Iloko"
+    }
+  },
+  {
+    "code": "PH-02",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tl": "rehiyon"
+    },
+    "names": {
+      "en": "Cagayan Valley (Region II)",
+      "tl": "Rehiyon ng Lambak ng Kagayan"
+    }
+  },
+  {
+    "code": "PH-03",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tl": "rehiyon"
+    },
+    "names": {
+      "en": "Central Luzon (Region III)",
+      "tl": "Rehiyon ng Gitnang Luson"
+    }
+  },
+  {
+    "code": "PH-05",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tl": "rehiyon"
+    },
+    "names": {
+      "en": "Bicol (Region V)",
+      "tl": "Rehiyon ng Bikol"
+    }
+  },
+  {
+    "code": "PH-06",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tl": "rehiyon"
+    },
+    "names": {
+      "en": "Western Visayas (Region VI)",
+      "tl": "Rehiyon ng Kanlurang Bisaya"
+    }
+  },
+  {
+    "code": "PH-07",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tl": "rehiyon"
+    },
+    "names": {
+      "en": "Central Visayas (Region VII)",
+      "tl": "Rehiyon ng Gitnang Bisaya"
+    }
+  },
+  {
+    "code": "PH-08",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tl": "rehiyon"
+    },
+    "names": {
+      "en": "Eastern Visayas (Region VIII)",
+      "tl": "Rehiyon ng Silangang Bisaya"
+    }
+  },
+  {
+    "code": "PH-09",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tl": "rehiyon"
+    },
+    "names": {
+      "en": "Zamboanga Peninsula (Region IX)",
+      "tl": "Rehiyon ng Tangway ng Sambuwangga"
+    }
+  },
+  {
+    "code": "PH-10",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tl": "rehiyon"
+    },
+    "names": {
+      "en": "Northern Mindanao (Region X)",
+      "tl": "Rehiyon ng Hilagang Mindanaw"
+    }
+  },
+  {
+    "code": "PH-11",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tl": "rehiyon"
+    },
+    "names": {
+      "en": "Davao (Region XI)",
+      "tl": "Rehiyon ng Dabaw"
+    }
+  },
+  {
+    "code": "PH-12",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tl": "rehiyon"
+    },
+    "names": {
+      "en": "Soccsksargen (Region XII)",
+      "tl": "Rehiyon ng Soccsksargen"
+    }
+  },
+  {
+    "code": "PH-13",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tl": "rehiyon"
+    },
+    "names": {
+      "en": "Caraga (Region XIII)",
+      "tl": "Rehiyon ng Karaga"
+    }
+  },
+  {
+    "code": "PH-14",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tl": "rehiyon"
+    },
+    "names": {
+      "en": "Autonomous Region in Muslim Mindanao (ARMM)",
+      "tl": "Nagsasariling Rehiyon ng Muslim sa Mindanaw"
+    }
+  },
+  {
+    "code": "PH-15",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tl": "rehiyon"
+    },
+    "names": {
+      "en": "Cordillera Administrative Region (CAR)",
+      "tl": "Rehiyon ng Administratibo ng Kordilyera"
+    }
+  },
+  {
+    "code": "PH-40",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tl": "rehiyon"
+    },
+    "names": {
+      "en": "Calabarzon (Region IV-A)",
+      "tl": "Rehiyon ng Calabarzon"
+    }
+  },
+  {
+    "code": "PH-41",
+    "type": {
+      "en": "region",
+      "fr": "région",
+      "tl": "rehiyon"
+    },
+    "names": {
+      "en": "Mimaropa (Region IV-B)",
+      "tl": "Rehiyon ng Mimaropa"
+    }
+  },
+  {
+    "code": "PH-ABR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Abra"
+    }
+  },
+  {
+    "code": "PH-AGN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Agusan del Norte",
+      "tl": "Hilagang Agusan"
+    }
+  },
+  {
+    "code": "PH-AGS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Agusan del Sur",
+      "tl": "Timog Agusan"
+    }
+  },
+  {
+    "code": "PH-AKL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Aklan"
+    }
+  },
+  {
+    "code": "PH-ALB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Albay"
+    }
+  },
+  {
+    "code": "PH-ANT",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Antique",
+      "tl": "Antike"
+    }
+  },
+  {
+    "code": "PH-APA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Apayao",
+      "tl": "Apayaw"
+    }
+  },
+  {
+    "code": "PH-AUR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Aurora"
+    }
+  },
+  {
+    "code": "PH-BAN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Bataan"
+    }
+  },
+  {
+    "code": "PH-BAS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Basilan"
+    }
+  },
+  {
+    "code": "PH-BEN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Benguet",
+      "tl": "Benget"
+    }
+  },
+  {
+    "code": "PH-BIL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Biliran"
+    }
+  },
+  {
+    "code": "PH-BOH",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Bohol"
+    }
+  },
+  {
+    "code": "PH-BTG",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Batangas"
+    }
+  },
+  {
+    "code": "PH-BTN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Batanes"
+    }
+  },
+  {
+    "code": "PH-BUK",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Bukidnon"
+    }
+  },
+  {
+    "code": "PH-BUL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Bulacan",
+      "tl": "Bulakan"
+    }
+  },
+  {
+    "code": "PH-CAG",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Cagayan",
+      "tl": "Kagayan"
+    }
+  },
+  {
+    "code": "PH-CAM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Camiguin",
+      "tl": "Kamigin"
+    }
+  },
+  {
+    "code": "PH-CAN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Camarines Norte",
+      "tl": "Hilagang Kamarines"
+    }
+  },
+  {
+    "code": "PH-CAP",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Capiz",
+      "tl": "Kapis"
+    }
+  },
+  {
+    "code": "PH-CAS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Camarines Sur",
+      "tl": "Timog Kamarines"
+    }
+  },
+  {
+    "code": "PH-CAT",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Catanduanes",
+      "tl": "Katanduwanes"
+    }
+  },
+  {
+    "code": "PH-CAV",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Cavite",
+      "tl": "Kabite"
+    }
+  },
+  {
+    "code": "PH-CEB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Cebu",
+      "tl": "Sebu"
+    }
+  },
+  {
+    "code": "PH-COM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Davao de Oro"
+    }
+  },
+  {
+    "code": "PH-DAO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Davao Oriental",
+      "tl": "Silangang Dabaw"
+    }
+  },
+  {
+    "code": "PH-DAS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Davao del Sur",
+      "tl": "Timog Dabaw"
+    }
+  },
+  {
+    "code": "PH-DAV",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Davao del Norte",
+      "tl": "Hilagang Dabaw"
+    }
+  },
+  {
+    "code": "PH-DIN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Dinagat Islands",
+      "tl": "Pulo ng Dinagat"
+    }
+  },
+  {
+    "code": "PH-DVO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Davao Occidental",
+      "tl": "Kanlurang Dabaw"
+    }
+  },
+  {
+    "code": "PH-EAS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Eastern Samar",
+      "tl": "Silangang Samar"
+    }
+  },
+  {
+    "code": "PH-GUI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Guimaras",
+      "tl": "Gimaras"
+    }
+  },
+  {
+    "code": "PH-IFU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Ifugao",
+      "tl": "Ipugaw"
+    }
+  },
+  {
+    "code": "PH-ILI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Iloilo"
+    }
+  },
+  {
+    "code": "PH-ILN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Ilocos Norte",
+      "tl": "Hilagang Iloko"
+    }
+  },
+  {
+    "code": "PH-ILS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Ilocos Sur",
+      "tl": "Timog Iloko"
+    }
+  },
+  {
+    "code": "PH-ISA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Isabela"
+    }
+  },
+  {
+    "code": "PH-KAL",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Kalinga"
+    }
+  },
+  {
+    "code": "PH-LAG",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Laguna"
+    }
+  },
+  {
+    "code": "PH-LAN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Lanao del Norte",
+      "tl": "Hilagang Lanaw"
+    }
+  },
+  {
+    "code": "PH-LAS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Lanao del Sur",
+      "tl": "Timog Lanaw"
+    }
+  },
+  {
+    "code": "PH-LEY",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Leyte"
+    }
+  },
+  {
+    "code": "PH-LUN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "La Union",
+      "tl": "La Unyon"
+    }
+  },
+  {
+    "code": "PH-MAD",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Marinduque",
+      "tl": "Marinduke"
+    }
+  },
+  {
+    "code": "PH-MAS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Masbate"
+    }
+  },
+  {
+    "code": "PH-MDC",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Mindoro Occidental",
+      "tl": "Kanlurang Mindoro"
+    }
+  },
+  {
+    "code": "PH-MDR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Mindoro Oriental",
+      "tl": "Silangang Mindoro"
+    }
+  },
+  {
+    "code": "PH-MGN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Maguindanao del Norte",
+      "tl": "Hilagang Magindanaw"
+    }
+  },
+  {
+    "code": "PH-MGS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Maguindanao del Sur",
+      "tl": "Timog Magindanaw"
+    }
+  },
+  {
+    "code": "PH-MOU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Mountain Province",
+      "tl": "Lalawigang Bulubundukin"
+    }
+  },
+  {
+    "code": "PH-MSC",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Misamis Occidental",
+      "tl": "Kanlurang Misamis"
+    }
+  },
+  {
+    "code": "PH-MSR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Misamis Oriental",
+      "tl": "Silangang Misamis"
+    }
+  },
+  {
+    "code": "PH-NCO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Cotabato",
+      "tl": "Kotabato"
+    }
+  },
+  {
+    "code": "PH-NEC",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Negros Occidental",
+      "tl": "Kanlurang Negros"
+    }
+  },
+  {
+    "code": "PH-NER",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Negros Oriental",
+      "tl": "Silangang Negros"
+    }
+  },
+  {
+    "code": "PH-NSA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Northern Samar",
+      "tl": "Hilagang Samar"
+    }
+  },
+  {
+    "code": "PH-NUE",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Nueva Ecija",
+      "tl": "Nuweva Esiha"
+    }
+  },
+  {
+    "code": "PH-NUV",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Nueva Vizcaya",
+      "tl": "Nuweva Biskaya"
+    }
+  },
+  {
+    "code": "PH-PAM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Pampanga"
+    }
+  },
+  {
+    "code": "PH-PAN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Pangasinan"
+    }
+  },
+  {
+    "code": "PH-PLW",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Palawan"
+    }
+  },
+  {
+    "code": "PH-QUE",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Quezon",
+      "tl": "Keson"
+    }
+  },
+  {
+    "code": "PH-QUI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Quirino",
+      "tl": "Kirino"
+    }
+  },
+  {
+    "code": "PH-RIZ",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Rizal",
+      "tl": "Risal"
+    }
+  },
+  {
+    "code": "PH-ROM",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Romblon"
+    }
+  },
+  {
+    "code": "PH-SAR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Sarangani"
+    }
+  },
+  {
+    "code": "PH-SCO",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "South Cotabato",
+      "tl": "Timog Kotabato"
+    }
+  },
+  {
+    "code": "PH-SIG",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Siquijor",
+      "tl": "Sikihor"
+    }
+  },
+  {
+    "code": "PH-SLE",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Southern Leyte",
+      "tl": "Katimogang Leyte"
+    }
+  },
+  {
+    "code": "PH-SLU",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Sulu"
+    }
+  },
+  {
+    "code": "PH-SOR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Sorsogon"
+    }
+  },
+  {
+    "code": "PH-SUK",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Sultan Kudarat"
+    }
+  },
+  {
+    "code": "PH-SUN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Surigao del Norte",
+      "tl": "Hilagang Surigaw"
+    }
+  },
+  {
+    "code": "PH-SUR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Surigao del Sur",
+      "tl": "Timog Surigaw"
+    }
+  },
+  {
+    "code": "PH-TAR",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Tarlac",
+      "tl": "Tarlak"
+    }
+  },
+  {
+    "code": "PH-TAW",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Tawi-Tawi"
+    }
+  },
+  {
+    "code": "PH-WSA",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Samar"
+    }
+  },
+  {
+    "code": "PH-ZAN",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Zamboanga del Norte",
+      "tl": "Hilagang Sambuwangga"
+    }
+  },
+  {
+    "code": "PH-ZAS",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Zamboanga del Sur",
+      "tl": "Timog Sambuwangga"
+    }
+  },
+  {
+    "code": "PH-ZMB",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Zambales",
+      "tl": "Sambales"
+    }
+  },
+  {
+    "code": "PH-ZSI",
+    "type": {
+      "en": "province",
+      "fr": "province",
+      "tl": "lalawigan"
+    },
+    "names": {
+      "en": "Zamboanga Sibugay",
+      "tl": "Sambuwangga Sibugay"
+    }
+  }
 ]

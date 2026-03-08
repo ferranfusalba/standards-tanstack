@@ -1,8 +1,62 @@
 [
-  { "code": "VU-MAP", "type": "province", "names": { "en": "Malampa", "fr": "Malampa" } },
-  { "code": "VU-PAM", "type": "province", "names": { "en": "Penama", "fr": "Pénama" } },
-  { "code": "VU-SAM", "type": "province", "names": { "en": "Sanma", "fr": "Sanma" } },
-  { "code": "VU-SEE", "type": "province", "names": { "en": "Shefa", "fr": "Shéfa" } },
-  { "code": "VU-TAE", "type": "province", "names": { "en": "Tafea", "fr": "Taféa" } },
-  { "code": "VU-TOB", "type": "province", "names": { "en": "Torba", "fr": "Torba" } }
+  {
+    "code": "VU-MAP",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Malampa"
+    }
+  },
+  {
+    "code": "VU-PAM",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Pénama"
+    }
+  },
+  {
+    "code": "VU-SAM",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Sanma"
+    }
+  },
+  {
+    "code": "VU-SEE",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Shéfa"
+    }
+  },
+  {
+    "code": "VU-TAE",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Taféa"
+    }
+  },
+  {
+    "code": "VU-TOB",
+    "type": {
+      "en": "province",
+      "fr": "province"
+    },
+    "names": {
+      "en": "Torba"
+    }
+  }
 ]

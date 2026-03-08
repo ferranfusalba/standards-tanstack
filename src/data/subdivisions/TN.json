@@ -1,26 +1,266 @@
 [
-  { "code": "TN-11", "type": "governorate", "names": { "ar": "تونس" } },
-  { "code": "TN-12", "type": "governorate", "names": { "ar": "أريانة" } },
-  { "code": "TN-13", "type": "governorate", "names": { "ar": "بن عروس" } },
-  { "code": "TN-14", "type": "governorate", "names": { "ar": "منوبة" } },
-  { "code": "TN-21", "type": "governorate", "names": { "ar": "نابل" } },
-  { "code": "TN-22", "type": "governorate", "names": { "ar": "زغوان" } },
-  { "code": "TN-23", "type": "governorate", "names": { "ar": "بنزرت" } },
-  { "code": "TN-31", "type": "governorate", "names": { "ar": "باجة" } },
-  { "code": "TN-32", "type": "governorate", "names": { "ar": "جندوبة" } },
-  { "code": "TN-33", "type": "governorate", "names": { "ar": "الكاف" } },
-  { "code": "TN-34", "type": "governorate", "names": { "ar": "سليانة" } },
-  { "code": "TN-41", "type": "governorate", "names": { "ar": "القيروان" } },
-  { "code": "TN-42", "type": "governorate", "names": { "ar": "القصرين" } },
-  { "code": "TN-43", "type": "governorate", "names": { "ar": "سيدي بوزيد" } },
-  { "code": "TN-51", "type": "governorate", "names": { "ar": "سوسة" } },
-  { "code": "TN-52", "type": "governorate", "names": { "ar": "المنستير" } },
-  { "code": "TN-53", "type": "governorate", "names": { "ar": "المهدية" } },
-  { "code": "TN-61", "type": "governorate", "names": { "ar": "صفاقس" } },
-  { "code": "TN-71", "type": "governorate", "names": { "ar": "قفصة" } },
-  { "code": "TN-72", "type": "governorate", "names": { "ar": "توزر" } },
-  { "code": "TN-73", "type": "governorate", "names": { "ar": "قبلي" } },
-  { "code": "TN-81", "type": "governorate", "names": { "ar": "قابس" } },
-  { "code": "TN-82", "type": "governorate", "names": { "ar": "مدنين" } },
-  { "code": "TN-83", "type": "governorate", "names": { "ar": "تطاوين" } }
+  {
+    "code": "TN-11",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Tunis"
+    }
+  },
+  {
+    "code": "TN-12",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "L'Ariana"
+    }
+  },
+  {
+    "code": "TN-13",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Ben Arous"
+    }
+  },
+  {
+    "code": "TN-14",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "La Manouba"
+    }
+  },
+  {
+    "code": "TN-21",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Nabeul"
+    }
+  },
+  {
+    "code": "TN-22",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Zaghouan"
+    }
+  },
+  {
+    "code": "TN-23",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Bizerte"
+    }
+  },
+  {
+    "code": "TN-31",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Béja"
+    }
+  },
+  {
+    "code": "TN-32",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Jendouba"
+    }
+  },
+  {
+    "code": "TN-33",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Le Kef"
+    }
+  },
+  {
+    "code": "TN-34",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Siliana"
+    }
+  },
+  {
+    "code": "TN-41",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Kairouan"
+    }
+  },
+  {
+    "code": "TN-42",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Kasserine"
+    }
+  },
+  {
+    "code": "TN-43",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Sidi Bouzid"
+    }
+  },
+  {
+    "code": "TN-51",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Sousse"
+    }
+  },
+  {
+    "code": "TN-52",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Monastir"
+    }
+  },
+  {
+    "code": "TN-53",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Mahdia"
+    }
+  },
+  {
+    "code": "TN-61",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Sfax"
+    }
+  },
+  {
+    "code": "TN-71",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Gafsa"
+    }
+  },
+  {
+    "code": "TN-72",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Tozeur"
+    }
+  },
+  {
+    "code": "TN-73",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Kébili"
+    }
+  },
+  {
+    "code": "TN-81",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Gabès"
+    }
+  },
+  {
+    "code": "TN-82",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Médenine"
+    }
+  },
+  {
+    "code": "TN-83",
+    "type": {
+      "en": "governorate",
+      "fr": "gouvernorat",
+      "ar": "wilaya"
+    },
+    "names": {
+      "ar": "Tataouine"
+    }
+  }
 ]

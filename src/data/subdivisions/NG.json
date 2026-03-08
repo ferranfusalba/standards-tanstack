@@ -1,39 +1,372 @@
 [
-  { "code": "NG-AB", "type": "state", "names": { "en": "Abia" } },
-  { "code": "NG-AD", "type": "state", "names": { "en": "Adamawa" } },
-  { "code": "NG-AK", "type": "state", "names": { "en": "Akwa Ibom" } },
-  { "code": "NG-AN", "type": "state", "names": { "en": "Anambra" } },
-  { "code": "NG-BA", "type": "state", "names": { "en": "Bauchi" } },
-  { "code": "NG-BE", "type": "state", "names": { "en": "Benue" } },
-  { "code": "NG-BO", "type": "state", "names": { "en": "Borno" } },
-  { "code": "NG-BY", "type": "state", "names": { "en": "Bayelsa" } },
-  { "code": "NG-CR", "type": "state", "names": { "en": "Cross River" } },
-  { "code": "NG-DE", "type": "state", "names": { "en": "Delta" } },
-  { "code": "NG-EB", "type": "state", "names": { "en": "Ebonyi" } },
-  { "code": "NG-ED", "type": "state", "names": { "en": "Edo" } },
-  { "code": "NG-EK", "type": "state", "names": { "en": "Ekiti" } },
-  { "code": "NG-EN", "type": "state", "names": { "en": "Enugu" } },
-  { "code": "NG-FC", "type": "capital territory", "names": { "en": "Federal Capital Territory" } },
-  { "code": "NG-GO", "type": "state", "names": { "en": "Gombe" } },
-  { "code": "NG-IM", "type": "state", "names": { "en": "Imo" } },
-  { "code": "NG-JI", "type": "state", "names": { "en": "Jigawa" } },
-  { "code": "NG-KD", "type": "state", "names": { "en": "Kaduna" } },
-  { "code": "NG-KE", "type": "state", "names": { "en": "Kebbi" } },
-  { "code": "NG-KN", "type": "state", "names": { "en": "Kano" } },
-  { "code": "NG-KO", "type": "state", "names": { "en": "Kogi" } },
-  { "code": "NG-KT", "type": "state", "names": { "en": "Katsina" } },
-  { "code": "NG-KW", "type": "state", "names": { "en": "Kwara" } },
-  { "code": "NG-LA", "type": "state", "names": { "en": "Lagos" } },
-  { "code": "NG-NA", "type": "state", "names": { "en": "Nasarawa" } },
-  { "code": "NG-NI", "type": "state", "names": { "en": "Niger" } },
-  { "code": "NG-OG", "type": "state", "names": { "en": "Ogun" } },
-  { "code": "NG-ON", "type": "state", "names": { "en": "Ondo" } },
-  { "code": "NG-OS", "type": "state", "names": { "en": "Osun" } },
-  { "code": "NG-OY", "type": "state", "names": { "en": "Oyo" } },
-  { "code": "NG-PL", "type": "state", "names": { "en": "Plateau" } },
-  { "code": "NG-RI", "type": "state", "names": { "en": "Rivers" } },
-  { "code": "NG-SO", "type": "state", "names": { "en": "Sokoto" } },
-  { "code": "NG-TA", "type": "state", "names": { "en": "Taraba" } },
-  { "code": "NG-YO", "type": "state", "names": { "en": "Yobe" } },
-  { "code": "NG-ZA", "type": "state", "names": { "en": "Zamfara" } }
+  {
+    "code": "NG-AB",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Abia"
+    }
+  },
+  {
+    "code": "NG-AD",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Adamawa"
+    }
+  },
+  {
+    "code": "NG-AK",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Akwa Ibom"
+    }
+  },
+  {
+    "code": "NG-AN",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Anambra"
+    }
+  },
+  {
+    "code": "NG-BA",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Bauchi"
+    }
+  },
+  {
+    "code": "NG-BY",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Bayelsa"
+    }
+  },
+  {
+    "code": "NG-BE",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Benue"
+    }
+  },
+  {
+    "code": "NG-BO",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Borno"
+    }
+  },
+  {
+    "code": "NG-CR",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Cross River"
+    }
+  },
+  {
+    "code": "NG-DE",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Delta"
+    }
+  },
+  {
+    "code": "NG-EB",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Ebonyi"
+    }
+  },
+  {
+    "code": "NG-ED",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Edo"
+    }
+  },
+  {
+    "code": "NG-EK",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Ekiti"
+    }
+  },
+  {
+    "code": "NG-EN",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Enugu"
+    }
+  },
+  {
+    "code": "NG-FC",
+    "type": {
+      "en": "capital territory",
+      "fr": "territoire de la capitale"
+    },
+    "names": {
+      "en": "Abuja Federal Capital Territory"
+    }
+  },
+  {
+    "code": "NG-GO",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Gombe"
+    }
+  },
+  {
+    "code": "NG-IM",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Imo"
+    }
+  },
+  {
+    "code": "NG-JI",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Jigawa"
+    }
+  },
+  {
+    "code": "NG-KD",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Kaduna"
+    }
+  },
+  {
+    "code": "NG-KN",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Kano"
+    }
+  },
+  {
+    "code": "NG-KT",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Katsina"
+    }
+  },
+  {
+    "code": "NG-KE",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Kebbi"
+    }
+  },
+  {
+    "code": "NG-KO",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Kogi"
+    }
+  },
+  {
+    "code": "NG-KW",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Kwara"
+    }
+  },
+  {
+    "code": "NG-LA",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Lagos"
+    }
+  },
+  {
+    "code": "NG-NA",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Nasarawa"
+    }
+  },
+  {
+    "code": "NG-NI",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Niger"
+    }
+  },
+  {
+    "code": "NG-OG",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Ogun"
+    }
+  },
+  {
+    "code": "NG-ON",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Ondo"
+    }
+  },
+  {
+    "code": "NG-OS",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Osun"
+    }
+  },
+  {
+    "code": "NG-OY",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Oyo"
+    }
+  },
+  {
+    "code": "NG-PL",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Plateau"
+    }
+  },
+  {
+    "code": "NG-RI",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Rivers"
+    }
+  },
+  {
+    "code": "NG-SO",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Sokoto"
+    }
+  },
+  {
+    "code": "NG-TA",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Taraba"
+    }
+  },
+  {
+    "code": "NG-YO",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Yobe"
+    }
+  },
+  {
+    "code": "NG-ZA",
+    "type": {
+      "en": "state",
+      "fr": "État"
+    },
+    "names": {
+      "en": "Zamfara"
+    }
+  }
 ]

@@ -51,16 +51,20 @@ function Timezones() {
 	const columns = React.useMemo<ColumnDef<Timezone>[]>(
 		() => [
 			{
+				accessorKey: "offset",
+				header: "Offset",
+				size: 110,
+				maxSize: 110,
+				enableHiding: false,
+			},
+			{
 				accessorKey: "id",
 				header: "ID",
+				enableHiding: false,
 			},
 			{
 				accessorKey: "name",
 				header: "Name",
-			},
-			{
-				accessorKey: "offset",
-				header: "Offset",
 			},
 			{
 				accessorKey: "region",

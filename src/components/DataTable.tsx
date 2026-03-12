@@ -4,6 +4,7 @@ import {
 	type Table as TanStackTable,
 } from "@tanstack/react-table";
 import React from "react";
+import { ColumnFilter } from "@/components/ColumnFilter";
 
 interface DataTableProps<TData> {
 	table: TanStackTable<TData>;
@@ -11,6 +12,9 @@ interface DataTableProps<TData> {
 	headerClassName?: (columnId: string) => string;
 	renderExpandedRow?: (row: Row<TData>) => React.ReactNode;
 }
+
+const stickyFirstCol =
+	"sticky left-0 z-10 after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-border";
 
 export function DataTable<TData>({
 	table,
@@ -24,60 +28,73 @@ export function DataTable<TData>({
 				<thead className="bg-secondary text-secondary-foreground">
 					{table.getHeaderGroups().map((headerGroup) => (
 						<tr key={headerGroup.id}>
-							{headerGroup.headers.map((header) => (
-								<th
-									key={header.id}
-									className={`px-4 py-3 text-left ${headerClassName?.(header.column.id) ?? ""}`}
-									style={{
-										width: header.column.getSize(),
-										minWidth: header.column.getSize(),
-										maxWidth: header.column.getSize(),
-									}}
-								>
-									{header.isPlaceholder ? null : (
-										// biome-ignore lint/a11y/noStaticElementInteractions: role is conditionally set for sortable columns
-										<div
-											className={
-												header.column.getCanSort()
-													? "cursor-pointer select-none flex items-center gap-2"
-													: ""
-											}
-											role={header.column.getCanSort() ? "button" : undefined}
-											tabIndex={header.column.getCanSort() ? 0 : undefined}
-											onClick={header.column.getToggleSortingHandler()}
-											onKeyDown={(e) => {
-												if (
-													header.column.getCanSort() &&
-													(e.key === "Enter" || e.key === " ")
-												) {
-													e.preventDefault();
-													header.column.getToggleSortingHandler()?.(e);
-												}
-											}}
-										>
-											{flexRender(
-												header.column.columnDef.header,
-												header.getContext(),
-											)}
-											{{
-												asc: " \u{1F53C}",
-												desc: " \u{1F53D}",
-											}[header.column.getIsSorted() as string] ?? null}
-										</div>
-									)}
-								</th>
-							))}
+							{headerGroup.headers.map((header, index) => {
+								const filterable =
+									(
+										header.column.columnDef.meta as
+											| { filterable?: boolean }
+											| undefined
+									)?.filterable === true;
+								return (
+									<th
+										key={header.id}
+										className={`px-2 py-2 md:px-4 md:py-3 text-left ${index === 0 ? `${stickyFirstCol} bg-secondary` : ""} ${headerClassName?.(header.column.id) ?? ""}`}
+										style={{
+											width: header.column.getSize(),
+											minWidth: header.column.getSize(),
+											maxWidth: header.column.getSize(),
+										}}
+									>
+										{header.isPlaceholder ? null : (
+											<div className="flex items-center gap-1">
+												{/* biome-ignore lint/a11y/noStaticElementInteractions: role is conditionally set for sortable columns */}
+												<div
+													className={
+														header.column.getCanSort()
+															? "cursor-pointer select-none flex items-center gap-2"
+															: ""
+													}
+													role={
+														header.column.getCanSort() ? "button" : undefined
+													}
+													tabIndex={header.column.getCanSort() ? 0 : undefined}
+													onClick={header.column.getToggleSortingHandler()}
+													onKeyDown={(e) => {
+														if (
+															header.column.getCanSort() &&
+															(e.key === "Enter" || e.key === " ")
+														) {
+															e.preventDefault();
+															header.column.getToggleSortingHandler()?.(e);
+														}
+													}}
+												>
+													{flexRender(
+														header.column.columnDef.header,
+														header.getContext(),
+													)}
+													{{
+														asc: " \u{1F53C}",
+														desc: " \u{1F53D}",
+													}[header.column.getIsSorted() as string] ?? null}
+												</div>
+												{filterable && <ColumnFilter column={header.column} />}
+											</div>
+										)}
+									</th>
+								);
+							})}
 						</tr>
 					))}
 				</thead>
 				<tbody className="divide-y divide-border">
 					{table.getRowModel().rows.map((row) => (
 						<React.Fragment key={row.id}>
-							<tr className="hover:bg-accent transition-colors">
-								{row.getVisibleCells().map((cell) => (
+							<tr className="group/row hover:bg-accent transition-colors">
+								{row.getVisibleCells().map((cell, index) => (
 									<td
 										key={cell.id}
-										className={`px-4 py-3 whitespace-nowrap ${cellClassName?.(cell.column.id, cell.row) ?? ""}`}
+										className={`px-2 py-2 md:px-4 md:py-3 ${index === 0 ? `${stickyFirstCol} bg-background group-hover/row:bg-accent` : ""} ${cellClassName?.(cell.column.id, cell.row) ?? ""}`}
 										style={{
 											width: cell.column.getSize(),
 											minWidth: cell.column.getSize(),

@@ -1,26 +1,42 @@
-import React from "react"
-import { createFileRoute } from "@tanstack/react-router"
+import { createFileRoute } from "@tanstack/react-router";
+import type { ColumnDef, FilterFn } from "@tanstack/react-table";
 import {
 	getCoreRowModel,
 	getExpandedRowModel,
+	getFacetedRowModel,
+	getFacetedUniqueValues,
 	getFilteredRowModel,
 	getPaginationRowModel,
 	getSortedRowModel,
 	useReactTable,
-} from "@tanstack/react-table"
-import type { ColumnDef } from "@tanstack/react-table"
+} from "@tanstack/react-table";
+import React from "react";
+import { ColumnVisibility } from "@/components/ColumnVisibility";
+import { DataTable } from "@/components/DataTable";
+import { Pagination } from "@/components/Pagination";
 import {
+	type Country,
 	getCountries,
 	getCountriesFromUN,
 	getMissingCountries,
 	getSubdivisions,
-	type Country,
 	type SubdivisionData,
-} from "@/data/countries"
-import { fuzzyFilter } from "@/lib/fuzzy-filter"
-import { DataTable } from "@/components/DataTable"
-import { Pagination } from "@/components/Pagination"
-import { ColumnVisibility } from "@/components/ColumnVisibility"
+} from "@/data/countries";
+import { fuzzyFilter } from "@/lib/fuzzy-filter";
+
+const facetedFilter: FilterFn<Country> = (row, columnId, filterValue) => {
+	if (!Array.isArray(filterValue) || filterValue.length === 0) return true;
+	return filterValue.includes(row.getValue(columnId));
+};
+
+const presenceFilter: FilterFn<Country> = (row, columnId, filterValue) => {
+	if (!Array.isArray(filterValue) || filterValue.length === 0) return true;
+	const val = row.getValue(columnId);
+	const isEmpty = val === null || val === undefined || val === "";
+	if (filterValue.includes("has-value") && !isEmpty) return true;
+	if (filterValue.includes("empty") && isEmpty) return true;
+	return false;
+};
 
 export const Route = createFileRoute("/countries/")({
 	component: Countries,
@@ -29,12 +45,12 @@ export const Route = createFileRoute("/countries/")({
 			getCountries(),
 			getCountriesFromUN(),
 			getMissingCountries(),
-		])
+		]);
 		return {
 			countriesIntl,
 			countriesUN,
 			countriesMissing,
-		}
+		};
 	},
 	head: () => ({
 		meta: [
@@ -48,27 +64,25 @@ export const Route = createFileRoute("/countries/")({
 			},
 		],
 	}),
-})
+});
 
-type Subdivision = NonNullable<Country["subdivisions"]>[number]
+type Subdivision = NonNullable<Country["subdivisions"]>[number];
 
 function toFlag(alpha2: string): string {
 	return [...alpha2.toUpperCase()]
 		.map((c) => String.fromCodePoint(0x1f1e6 + c.charCodeAt(0) - 65))
-		.join("")
+		.join("");
 }
 
 function SubdivisionsExpandedRow({
 	subs,
 	colSpan,
 }: {
-	subs: Subdivision[]
-	colSpan: number
+	subs: Subdivision[];
+	colSpan: number;
 }) {
-	const langCodes = [
-		...new Set(subs.flatMap((sub) => Object.keys(sub.names))),
-	]
-	const hasType = subs.some((sub) => sub.type !== undefined)
+	const langCodes = [...new Set(subs.flatMap((sub) => Object.keys(sub.names)))];
+	const hasType = subs.some((sub) => sub.type !== undefined);
 	return (
 		<tr className="bg-accent/50">
 			<td colSpan={colSpan} className="px-6 py-3">
@@ -90,7 +104,7 @@ function SubdivisionsExpandedRow({
 					<tbody>
 						{subs.map((sub) => {
 							const flag =
-								sub.flag ?? (sub.iso1 ? toFlag(sub.iso1) : undefined)
+								sub.flag ?? (sub.iso1 ? toFlag(sub.iso1) : undefined);
 							return (
 								<tr key={sub.code}>
 									<td className="pr-4 py-0.5">{flag ?? ""}</td>
@@ -117,13 +131,13 @@ function SubdivisionsExpandedRow({
 										</td>
 									))}
 								</tr>
-							)
+							);
 						})}
 					</tbody>
 				</table>
 			</td>
 		</tr>
-	)
+	);
 }
 
 function getCellHighlight(colId: string, original: Country): string {
@@ -132,68 +146,68 @@ function getCellHighlight(colId: string, original: Country): string {
 		original.icaoCode &&
 		original.icaoCode !== original.alpha3Code
 	)
-		return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300"
+		return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300";
 	if (
 		colId === "dsitCode" &&
 		original.dsitCode &&
 		original.dsitCode !== original.alpha2Code &&
 		original.dsitCode !== original.alpha3Code
 	)
-		return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300"
+		return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300";
 	if (
 		colId === "iocCode" &&
 		original.iocCode &&
 		original.iocCode !== original.alpha3Code
 	)
-		return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300"
+		return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300";
 	if (colId === "unMembership") {
 		if (original.unMembership === "member")
-			return "bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300"
+			return "bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300";
 		if (original.unMembership === "observer")
-			return "bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300"
+			return "bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300";
 		if (original.unMembership === "non-member")
-			return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300"
-		if (original.sovereignState) return "bg-secondary text-muted-foreground"
+			return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300";
+		if (original.sovereignState) return "bg-secondary text-muted-foreground";
 	}
 	if (colId === "independent") {
 		if (original.independent === true)
-			return "bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300"
+			return "bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300";
 		if (original.independent === false)
-			return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300"
+			return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300";
 	}
 	if (colId === "euMember" && original.euMember)
-		return "bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300"
-	return ""
+		return "bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300";
+	return "";
 }
 
-const borderLeftCols = new Set(["icaoCode", "independent", "name"])
+const borderLeftCols = new Set(["icaoCode", "independent", "name"]);
 function getColumnBorder(colId: string) {
-	return borderLeftCols.has(colId) ? "border-l border-border" : ""
+	return borderLeftCols.has(colId) ? "border-l border-border" : "";
 }
 
 function LazySubdivisionsRow({
 	alpha2Code,
 	colSpan,
 }: {
-	alpha2Code: string
-	colSpan: number
+	alpha2Code: string;
+	colSpan: number;
 }) {
-	const [subs, setSubs] = React.useState<SubdivisionData[] | null>(null)
-	const [loading, setLoading] = React.useState(true)
+	const [subs, setSubs] = React.useState<SubdivisionData[] | null>(null);
+	const [loading, setLoading] = React.useState(true);
 
 	React.useEffect(() => {
-		let cancelled = false
-		setLoading(true)
+		let cancelled = false;
+		setLoading(true);
 		getSubdivisions({ data: { code: alpha2Code } }).then((data) => {
 			if (!cancelled) {
-				setSubs(data)
-				setLoading(false)
+				setSubs(data);
+				setLoading(false);
 			}
-		})
+		});
 		return () => {
-			cancelled = true
-		}
-	}, [alpha2Code])
+			cancelled = true;
+		};
+	}, [alpha2Code]);
 
 	if (loading) {
 		return (
@@ -205,18 +219,64 @@ function LazySubdivisionsRow({
 					Loading subdivisions...
 				</td>
 			</tr>
-		)
+		);
 	}
 
-	if (!subs?.length) return null
+	if (!subs?.length) return null;
 
-	return <SubdivisionsExpandedRow subs={subs} colSpan={colSpan} />
+	return <SubdivisionsExpandedRow subs={subs} colSpan={colSpan} />;
+}
+
+function formatFilterValue(value: unknown): string {
+	if (value === "has-value") return "Has value";
+	if (value === "empty") return "Empty";
+	if (value === null || value === undefined || value === "") return "(empty)";
+	if (value === true) return "Yes";
+	if (value === false) return "No";
+	return String(value);
+}
+
+function ActiveFilters<TData>({
+	table,
+}: {
+	table: ReturnType<typeof useReactTable<TData>>;
+}) {
+	const columnFilters = table.getState().columnFilters;
+	if (columnFilters.length === 0) return null;
+
+	const tags: { label: string; values: string }[] = [];
+	for (const filter of columnFilters) {
+		const col = table.getColumn(filter.id);
+		if (!col) continue;
+		const header = col.columnDef.header;
+		const headerStr = typeof header === "string" ? header : filter.id;
+		const vals = Array.isArray(filter.value)
+			? (filter.value as unknown[]).map(formatFilterValue).join(", ")
+			: formatFilterValue(filter.value);
+		tags.push({ label: headerStr, values: vals });
+	}
+
+	if (tags.length === 0) return null;
+
+	return (
+		<span className="text-xs">
+			{" "}
+			({tags.map((t) => `${t.label}: ${t.values}`).join(" · ")})
+			<button
+				type="button"
+				onClick={() => table.resetColumnFilters()}
+				className="ml-2 px-1.5 py-0.5 rounded text-xs bg-secondary hover:bg-accent text-muted-foreground"
+			>
+				Clear all
+			</button>
+		</span>
+	);
 }
 
 function Countries() {
 	const { countriesIntl, countriesUN, countriesMissing } =
-		Route.useLoaderData()
-	const [globalFilter, setGlobalFilter] = React.useState("")
+		Route.useLoaderData();
+	const [globalFilter, setGlobalFilter] = React.useState("");
 
 	const columnsIntl = React.useMemo<ColumnDef<Country>[]>(
 		() => [
@@ -226,8 +286,9 @@ function Countries() {
 				cell: (info) => (
 					<span className="text-2xl">{info.getValue<string>()}</span>
 				),
-				size: 60,
-				maxSize: 60,
+				size: 50,
+				maxSize: 50,
+				enableHiding: false,
 				enableGlobalFilter: false,
 			},
 			{
@@ -235,14 +296,16 @@ function Countries() {
 				header: "Alpha-2",
 				size: 80,
 				maxSize: 80,
+				enableHiding: false,
 			},
 			{
 				accessorKey: "name",
 				header: "Name",
+				enableHiding: false,
 			},
 		],
 		[],
-	)
+	);
 
 	const columnsUN = React.useMemo<ColumnDef<Country>[]>(
 		() => [
@@ -252,8 +315,9 @@ function Countries() {
 				cell: (info) => (
 					<span className="text-2xl">{info.getValue<string>()}</span>
 				),
-				size: 60,
-				maxSize: 60,
+				size: 50,
+				maxSize: 50,
+				enableHiding: false,
 				enableGlobalFilter: false,
 			},
 			{
@@ -261,12 +325,14 @@ function Countries() {
 				header: "Alpha-2",
 				size: 80,
 				maxSize: 80,
+				enableHiding: false,
 			},
 			{
 				accessorKey: "alpha3Code",
 				header: "Alpha-3",
 				size: 80,
 				maxSize: 80,
+				enableHiding: false,
 			},
 			{
 				accessorKey: "subdivisionCount",
@@ -274,14 +340,14 @@ function Countries() {
 				size: 70,
 				maxSize: 70,
 				cell: ({ row }) => {
-					const count = row.original.subdivisionCount
-					if (!count) return <span className="text-muted-foreground">-</span>
+					const count = row.original.subdivisionCount;
+					if (!count) return <span className="text-muted-foreground">-</span>;
 					return (
 						<button
 							type="button"
 							onClick={(e) => {
-								e.stopPropagation()
-								row.toggleExpanded()
+								e.stopPropagation();
+								row.toggleExpanded();
 							}}
 							className="cursor-pointer hover:bg-accent px-2 py-1 rounded flex items-center gap-1"
 						>
@@ -290,7 +356,7 @@ function Countries() {
 								{row.getIsExpanded() ? "\u25B2" : "\u25BC"}
 							</span>
 						</button>
-					)
+					);
 				},
 				enableGlobalFilter: false,
 			},
@@ -300,6 +366,8 @@ function Countries() {
 				size: 90,
 				maxSize: 90,
 				cell: (info) => info.getValue<string>() ?? "-",
+				filterFn: presenceFilter,
+				meta: { filterable: true, filterMode: "presence" },
 			},
 			{
 				accessorKey: "dsitCode",
@@ -307,6 +375,8 @@ function Countries() {
 				size: 80,
 				maxSize: 80,
 				cell: (info) => info.getValue<string>() ?? "-",
+				filterFn: presenceFilter,
+				meta: { filterable: true, filterMode: "presence" },
 			},
 			{
 				accessorKey: "iocCode",
@@ -314,6 +384,8 @@ function Countries() {
 				size: 70,
 				maxSize: 70,
 				cell: (info) => info.getValue<string>() ?? "-",
+				filterFn: presenceFilter,
+				meta: { filterable: true, filterMode: "presence" },
 			},
 			{
 				accessorKey: "independent",
@@ -322,6 +394,8 @@ function Countries() {
 				maxSize: 60,
 				cell: () => "",
 				enableGlobalFilter: false,
+				filterFn: facetedFilter,
+				meta: { filterable: true },
 			},
 			{
 				accessorKey: "unMembership",
@@ -330,6 +404,8 @@ function Countries() {
 				maxSize: 50,
 				cell: (info) => info.row.original.sovereignState ?? "",
 				enableGlobalFilter: false,
+				filterFn: facetedFilter,
+				meta: { filterable: true },
 			},
 			{
 				accessorKey: "euMember",
@@ -338,16 +414,21 @@ function Countries() {
 				maxSize: 50,
 				cell: () => "",
 				enableGlobalFilter: false,
+				filterFn: facetedFilter,
+				meta: { filterable: true },
 			},
 			{
 				accessorKey: "region",
 				header: "Region",
 				size: 100,
 				maxSize: 100,
+				filterFn: facetedFilter,
+				meta: { filterable: true },
 			},
 			{
 				accessorKey: "name",
 				header: "Name",
+				enableHiding: false,
 			},
 			{
 				accessorKey: "fullName",
@@ -356,7 +437,7 @@ function Countries() {
 			},
 		],
 		[],
-	)
+	);
 
 	const tableIntl = useReactTable({
 		data: countriesIntl,
@@ -374,13 +455,15 @@ function Countries() {
 			},
 		},
 		filterFns: { fuzzy: fuzzyFilter },
-	})
+	});
 
 	const tableUN = useReactTable({
 		data: countriesUN,
 		columns: columnsUN,
 		getCoreRowModel: getCoreRowModel(),
 		getExpandedRowModel: getExpandedRowModel(),
+		getFacetedRowModel: getFacetedRowModel(),
+		getFacetedUniqueValues: getFacetedUniqueValues(),
 		getFilteredRowModel: getFilteredRowModel(),
 		getPaginationRowModel: getPaginationRowModel(),
 		getSortedRowModel: getSortedRowModel(),
@@ -394,7 +477,7 @@ function Countries() {
 			},
 		},
 		filterFns: { fuzzy: fuzzyFilter },
-	})
+	});
 
 	const columnsMissing = React.useMemo<ColumnDef<Country>[]>(
 		() => [
@@ -404,8 +487,9 @@ function Countries() {
 				cell: (info) => (
 					<span className="text-2xl">{info.getValue<string>()}</span>
 				),
-				size: 60,
-				maxSize: 60,
+				size: 50,
+				maxSize: 50,
+				enableHiding: false,
 				enableGlobalFilter: false,
 			},
 			{
@@ -413,12 +497,14 @@ function Countries() {
 				header: "Alpha-2",
 				size: 80,
 				maxSize: 80,
+				enableHiding: false,
 			},
 			{
 				accessorKey: "alpha3Code",
 				header: "Alpha-3",
 				size: 80,
 				maxSize: 80,
+				enableHiding: false,
 			},
 			{
 				accessorKey: "icaoCode",
@@ -466,6 +552,7 @@ function Countries() {
 			{
 				accessorKey: "name",
 				header: "Name",
+				enableHiding: false,
 			},
 			{
 				accessorKey: "notes",
@@ -474,7 +561,7 @@ function Countries() {
 			},
 		],
 		[],
-	)
+	);
 
 	const tableMissing = useReactTable({
 		data: countriesMissing,
@@ -492,7 +579,7 @@ function Countries() {
 			},
 		},
 		filterFns: { fuzzy: fuzzyFilter },
-	})
+	});
 
 	return (
 		<div className="min-h-screen p-6">
@@ -522,6 +609,13 @@ function Countries() {
 					</ul>
 					<p className="text-sm text-muted-foreground mb-4">
 						Total: {countriesIntl.length} countries
+						{tableIntl.getFilteredRowModel().rows.length !==
+							countriesIntl.length && (
+							<span>
+								{" "}
+								| Filtered: {tableIntl.getFilteredRowModel().rows.length}
+							</span>
+						)}
 					</p>
 					<DataTable table={tableIntl} />
 					<Pagination table={tableIntl} totalItems={countriesIntl.length} />
@@ -551,6 +645,14 @@ function Countries() {
 					</ul>
 					<p className="text-sm text-muted-foreground mb-4">
 						Total: {countriesUN.length} countries
+						{tableUN.getFilteredRowModel().rows.length !==
+							countriesUN.length && (
+							<span>
+								{" "}
+								| Filtered: {tableUN.getFilteredRowModel().rows.length}
+								<ActiveFilters table={tableUN} />
+							</span>
+						)}
 					</p>
 					<DataTable
 						table={tableUN}
@@ -582,6 +684,13 @@ function Countries() {
 						</div>
 						<p className="text-sm text-muted-foreground mb-4">
 							Total: {countriesMissing.length} countries
+							{tableMissing.getFilteredRowModel().rows.length !==
+								countriesMissing.length && (
+								<span>
+									{" "}
+									| Filtered: {tableMissing.getFilteredRowModel().rows.length}
+								</span>
+							)}
 						</p>
 						<DataTable
 							table={tableMissing}
@@ -593,5 +702,5 @@ function Countries() {
 				</div>
 			</div>
 		</div>
-	)
+	);
 }

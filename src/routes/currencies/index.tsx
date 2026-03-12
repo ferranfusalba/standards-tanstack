@@ -1,24 +1,24 @@
-import React from "react"
-import { createFileRoute } from "@tanstack/react-router"
+import { createFileRoute } from "@tanstack/react-router";
+import type { ColumnDef } from "@tanstack/react-table";
 import {
 	getCoreRowModel,
 	getFilteredRowModel,
 	getPaginationRowModel,
 	getSortedRowModel,
 	useReactTable,
-} from "@tanstack/react-table"
-import type { ColumnDef } from "@tanstack/react-table"
-import { getCurrencies, type Currency } from "@/data/currencies"
-import { fuzzyFilter } from "@/lib/fuzzy-filter"
-import { DataTable } from "@/components/DataTable"
-import { Pagination } from "@/components/Pagination"
-import { ColumnVisibility } from "@/components/ColumnVisibility"
+} from "@tanstack/react-table";
+import React from "react";
+import { ColumnVisibility } from "@/components/ColumnVisibility";
+import { DataTable } from "@/components/DataTable";
+import { Pagination } from "@/components/Pagination";
+import { type Currency, getCurrencies } from "@/data/currencies";
+import { fuzzyFilter } from "@/lib/fuzzy-filter";
 
 export const Route = createFileRoute("/currencies/")({
 	component: Currencies,
 	loader: async () => {
-		const currencies = await getCurrencies()
-		return { currencies }
+		const currencies = await getCurrencies();
+		return { currencies };
 	},
 	head: () => ({
 		meta: [
@@ -32,14 +32,21 @@ export const Route = createFileRoute("/currencies/")({
 			},
 		],
 	}),
-})
+});
 
 function Currencies() {
-	const { currencies } = Route.useLoaderData()
-	const [globalFilter, setGlobalFilter] = React.useState("")
+	const { currencies } = Route.useLoaderData();
+	const [globalFilter, setGlobalFilter] = React.useState("");
 
 	const columns = React.useMemo<ColumnDef<Currency>[]>(
 		() => [
+			{
+				accessorKey: "code",
+				header: "Code",
+				size: 80,
+				maxSize: 80,
+				enableHiding: false,
+			},
 			{
 				accessorKey: "symbolUnicode",
 				header: "Symbol (Unicode)",
@@ -47,10 +54,6 @@ function Currencies() {
 			{
 				accessorKey: "symbolIntl",
 				header: "Symbol (Intl)",
-			},
-			{
-				accessorKey: "code",
-				header: "Code",
 			},
 			{
 				accessorKey: "numericCode",
@@ -63,6 +66,7 @@ function Currencies() {
 			{
 				accessorKey: "name",
 				header: "Name",
+				enableHiding: false,
 			},
 			{
 				accessorKey: "minorUnit",
@@ -95,7 +99,7 @@ function Currencies() {
 			},
 		],
 		[],
-	)
+	);
 
 	const table = useReactTable({
 		data: currencies,
@@ -115,7 +119,7 @@ function Currencies() {
 		filterFns: {
 			fuzzy: fuzzyFilter,
 		},
-	})
+	});
 
 	return (
 		<div className="min-h-screen p-6">
@@ -149,5 +153,5 @@ function Currencies() {
 				<Pagination table={table} totalItems={currencies.length} />
 			</div>
 		</div>
-	)
+	);
 }

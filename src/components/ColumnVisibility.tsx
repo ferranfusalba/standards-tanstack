@@ -27,6 +27,10 @@ export function ColumnVisibility<TData>({
 		.getAllLeafColumns()
 		.filter((col) => col.getCanHide());
 
+	const hasHiddenColumns = toggleableColumns.some(
+		(col) => !col.getIsVisible(),
+	);
+
 	if (toggleableColumns.length === 0) return null;
 
 	return (
@@ -40,7 +44,7 @@ export function ColumnVisibility<TData>({
 			</button>
 			{open && (
 				<div className="absolute right-0 z-10 mt-1 w-48 rounded-lg border border-border bg-background shadow-lg">
-					<div className="p-2 space-y-1 max-h-64 overflow-y-auto">
+					<div className="p-2 space-y-1 max-h-[calc(100vh-8rem)] overflow-y-auto">
 						{toggleableColumns.map((column) => (
 							<label
 								key={column.id}
@@ -59,6 +63,28 @@ export function ColumnVisibility<TData>({
 								</span>
 							</label>
 						))}
+						<div className="flex gap-1 mt-1 pt-1 border-t border-border">
+							<button
+								type="button"
+								onClick={() => {
+									for (const col of toggleableColumns) {
+										col.toggleVisibility(false);
+									}
+								}}
+								className="flex-1 px-2 py-1 text-xs rounded hover:bg-accent text-muted-foreground text-left"
+							>
+								Hide all
+							</button>
+							{hasHiddenColumns && (
+								<button
+									type="button"
+									onClick={() => table.resetColumnVisibility()}
+									className="flex-1 px-2 py-1 text-xs rounded hover:bg-accent text-muted-foreground text-left"
+								>
+									Reset
+								</button>
+							)}
+						</div>
 					</div>
 				</div>
 			)}

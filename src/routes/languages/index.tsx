@@ -1,5 +1,5 @@
-import React from "react"
-import { createFileRoute } from "@tanstack/react-router"
+import { createFileRoute } from "@tanstack/react-router";
+import type { ColumnDef, Row } from "@tanstack/react-table";
 import {
 	getCoreRowModel,
 	getExpandedRowModel,
@@ -7,19 +7,19 @@ import {
 	getPaginationRowModel,
 	getSortedRowModel,
 	useReactTable,
-} from "@tanstack/react-table"
-import type { ColumnDef, Row } from "@tanstack/react-table"
-import { getLanguages, type Language } from "@/data/languages"
-import { fuzzyFilterAcronym } from "@/lib/fuzzy-filter"
-import { DataTable } from "@/components/DataTable"
-import { Pagination } from "@/components/Pagination"
-import { ColumnVisibility } from "@/components/ColumnVisibility"
+} from "@tanstack/react-table";
+import React from "react";
+import { ColumnVisibility } from "@/components/ColumnVisibility";
+import { DataTable } from "@/components/DataTable";
+import { Pagination } from "@/components/Pagination";
+import { getLanguages, type Language } from "@/data/languages";
+import { fuzzyFilterAcronym } from "@/lib/fuzzy-filter";
 
 export const Route = createFileRoute("/languages/")({
 	component: Languages,
 	loader: async () => {
-		const languages = await getLanguages()
-		return { languages }
+		const languages = await getLanguages();
+		return { languages };
 	},
 	head: () => ({
 		meta: [
@@ -33,13 +33,11 @@ export const Route = createFileRoute("/languages/")({
 			},
 		],
 	}),
-})
+});
 
 function LanguageExpandedRow({ row }: { row: Row<Language> }) {
 	return (
 		<tr className="bg-accent/50">
-			{/* Expander column - empty */}
-			<td className="px-4 py-3" />
 			{/* Code column - empty */}
 			<td className="px-4 py-3" />
 			{/* Name column - empty */}
@@ -106,71 +104,53 @@ function LanguageExpandedRow({ row }: { row: Row<Language> }) {
 					)}
 				</div>
 			</td>
+
+			{/* Expander column - empty */}
+			<td className="px-4 py-3" />
 		</tr>
-	)
+	);
 }
 
 function Languages() {
-	const { languages } = Route.useLoaderData()
-	const [displayLocale, setDisplayLocale] = React.useState("ca")
-	const [globalFilter, setGlobalFilter] = React.useState("")
+	const { languages } = Route.useLoaderData();
+	const [displayLocale, setDisplayLocale] = React.useState("ca");
+	const [globalFilter, setGlobalFilter] = React.useState("");
 
 	const languagesWithLocalizedNames = React.useMemo(() => {
 		const displayNames = new Intl.DisplayNames([displayLocale], {
 			type: "language",
-		})
+		});
 		return languages.map((lang) => {
 			try {
-				const localized = displayNames.of(lang.code)
+				const localized = displayNames.of(lang.code);
 				return {
 					...lang,
 					localizedName:
 						localized && localized !== lang.code ? localized : undefined,
-				}
+				};
 			} catch {
 				return {
 					...lang,
 					localizedName: undefined,
-				}
+				};
 			}
-		})
-	}, [languages, displayLocale])
+		});
+	}, [languages, displayLocale]);
 
 	const columns = React.useMemo<ColumnDef<Language>[]>(
 		() => [
 			{
-				id: "expander",
-				header: () => null,
-				cell: ({ row }) => {
-					const hasVariants =
-						row.original.cldrVariants && row.original.cldrVariants.length > 0
-					return hasVariants ? (
-						<button
-							onClick={(e) => {
-								e.stopPropagation()
-								row.toggleExpanded()
-							}}
-							className="cursor-pointer hover:bg-accent px-2 py-1 rounded"
-							type="button"
-						>
-							{row.getIsExpanded() ? "\u25BC" : "\u25B6"}
-						</button>
-					) : null
-				},
-				size: 40,
-				maxSize: 40,
-				enableHiding: false,
-			},
-			{
 				accessorKey: "code",
 				header: "Code",
-				size: 70,
-				maxSize: 70,
+				size: 50,
+				maxSize: 50,
+				enableHiding: false,
 			},
 			{
 				accessorKey: "name",
 				header: "Name",
 				size: 150,
+				enableHiding: false,
 			},
 			{
 				accessorKey: "nativeName",
@@ -186,14 +166,14 @@ function Languages() {
 				accessorKey: "bcp47Variants",
 				header: "BCP 47 Variants",
 				cell: (info) => {
-					const variants = info.getValue<string[] | undefined>()
+					const variants = info.getValue<string[] | undefined>();
 					return variants ? (
 						<span className="text-xs">
 							{variants.length} variant{variants.length > 1 ? "s" : ""}
 						</span>
 					) : (
 						<span className="text-muted-foreground">-</span>
-					)
+					);
 				},
 				size: 120,
 			},
@@ -201,14 +181,14 @@ function Languages() {
 				accessorKey: "cldrVariants",
 				header: "CLDR",
 				cell: (info) => {
-					const variants = info.getValue<string[] | undefined>()
+					const variants = info.getValue<string[] | undefined>();
 					return variants ? (
 						<span className="text-xs">
 							{variants.length} variant{variants.length > 1 ? "s" : ""}
 						</span>
 					) : (
 						<span className="text-muted-foreground">-</span>
-					)
+					);
 				},
 				size: 100,
 			},
@@ -216,20 +196,49 @@ function Languages() {
 				accessorKey: "intlVariants",
 				header: "Intl Supported",
 				cell: (info) => {
-					const variants = info.getValue<string[] | undefined>()
+					const variants = info.getValue<string[] | undefined>();
 					return variants ? (
 						<span className="text-xs">
 							{variants.length} variant{variants.length > 1 ? "s" : ""}
 						</span>
 					) : (
 						<span className="text-muted-foreground">-</span>
-					)
+					);
 				},
 				size: 120,
 			},
+			{
+				id: "expander",
+				header: () => null,
+				cell: ({ row, table: t }) => {
+					const variantColsVisible =
+						t.getColumn("bcp47Variants")?.getIsVisible() ||
+						t.getColumn("cldrVariants")?.getIsVisible() ||
+						t.getColumn("intlVariants")?.getIsVisible();
+					const hasVariants =
+						variantColsVisible &&
+						row.original.cldrVariants &&
+						row.original.cldrVariants.length > 0;
+					return hasVariants ? (
+						<button
+							onClick={(e) => {
+								e.stopPropagation();
+								row.toggleExpanded();
+							}}
+							className="cursor-pointer hover:bg-accent px-2 py-1 rounded"
+							type="button"
+						>
+							{row.getIsExpanded() ? "\u25B2" : "\u25BC"}
+						</button>
+					) : null;
+				},
+				size: 40,
+				maxSize: 40,
+				enableHiding: false,
+			},
 		],
 		[],
-	)
+	);
 
 	const table = useReactTable({
 		data: languagesWithLocalizedNames,
@@ -242,7 +251,7 @@ function Languages() {
 		getRowCanExpand: (row) => {
 			return !!(
 				row.original.cldrVariants && row.original.cldrVariants.length > 0
-			)
+			);
 		},
 		globalFilterFn: "fuzzy",
 		state: { globalFilter },
@@ -255,7 +264,7 @@ function Languages() {
 		filterFns: {
 			fuzzy: fuzzyFilterAcronym,
 		},
-	})
+	});
 
 	return (
 		<div className="min-h-screen p-6">
@@ -272,9 +281,7 @@ function Languages() {
 			<div className="grid grid-cols-1 gap-6">
 				<div>
 					<div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2 mb-4">
-						<h2 className="text-xl font-semibold">
-							ISO 639-1 Language Codes
-						</h2>
+						<h2 className="text-xl font-semibold">ISO 639-1 Language Codes</h2>
 						<div className="flex items-center gap-2">
 							<label
 								htmlFor="displayLocale"
@@ -305,9 +312,7 @@ function Languages() {
 						</div>
 					</div>
 					<ul className="text-xs text-muted-foreground mb-3 space-y-1">
-						<li>
-							• Source: IANA Language Subtag Registry + Unicode CLDR 48
-						</li>
+						<li>• Source: IANA Language Subtag Registry + Unicode CLDR 48</li>
 						<li>• Standard: ISO 639-1 (2-letter codes)</li>
 						<li>• Coverage: 184 major languages</li>
 						<li>
@@ -348,5 +353,5 @@ function Languages() {
 				</div>
 			</div>
 		</div>
-	)
+	);
 }

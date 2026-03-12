@@ -3,6 +3,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import {
   flexRender,
   getCoreRowModel,
+  getFilteredRowModel,
   getPaginationRowModel,
   getSortedRowModel,
   useReactTable,
@@ -34,6 +35,7 @@ export const Route = createFileRoute('/timezones/')({
 
 function Timezones() {
   const { timezonesIntl, timezonesIANA } = Route.useLoaderData()
+  const [globalFilter, setGlobalFilter] = React.useState('')
 
   const columns = React.useMemo<ColumnDef<Timezone>[]>(
     () => [
@@ -61,8 +63,12 @@ function Timezones() {
     data: timezonesIntl,
     columns,
     getCoreRowModel: getCoreRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
+    globalFilterFn: 'fuzzy',
+    state: { globalFilter },
+    onGlobalFilterChange: setGlobalFilter,
     initialState: {
       pagination: {
         pageSize: 20,
@@ -77,8 +83,12 @@ function Timezones() {
     data: timezonesIANA,
     columns,
     getCoreRowModel: getCoreRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
+    globalFilterFn: 'fuzzy',
+    state: { globalFilter },
+    onGlobalFilterChange: setGlobalFilter,
     initialState: {
       pagination: {
         pageSize: 20,
@@ -92,6 +102,13 @@ function Timezones() {
   return (
     <div className="min-h-screen bg-gray-900 p-6">
       <h1 className="text-3xl font-bold text-white mb-6">Timezones</h1>
+      <input
+        type="text"
+        value={globalFilter}
+        onChange={(e) => setGlobalFilter(e.target.value)}
+        placeholder="Search by name, ID or region…"
+        className="w-full px-3 py-2 mb-6 bg-gray-800 border border-gray-600 rounded text-white text-sm placeholder-gray-500 focus:outline-none focus:border-gray-400"
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Left: Intl API (Option A) */}

@@ -4,13 +4,14 @@ import {
   flexRender,
   getCoreRowModel,
   getExpandedRowModel,
+  getFilteredRowModel,
   getPaginationRowModel,
   getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table'
 import type { ColumnDef } from '@tanstack/react-table'
 import { getLanguages, type Language } from '@/data/languages'
-import { fuzzyFilter } from '@/lib/fuzzy-filter'
+import { fuzzyFilterAcronym } from '@/lib/fuzzy-filter'
 
 export const Route = createFileRoute('/languages/')({
   component: Languages,
@@ -30,6 +31,7 @@ export const Route = createFileRoute('/languages/')({
 function Languages() {
   const { languages } = Route.useLoaderData()
   const [displayLocale, setDisplayLocale] = React.useState('ca')
+  const [globalFilter, setGlobalFilter] = React.useState('')
 
   // Update localized names when display locale changes
   const languagesWithLocalizedNames = React.useMemo(() => {
@@ -136,24 +138,35 @@ function Languages() {
     columns,
     getCoreRowModel: getCoreRowModel(),
     getExpandedRowModel: getExpandedRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getRowCanExpand: (row) => {
       return !!(row.original.cldrVariants && row.original.cldrVariants.length > 0)
     },
+    globalFilterFn: 'fuzzy',
+    state: { globalFilter },
+    onGlobalFilterChange: setGlobalFilter,
     initialState: {
       pagination: {
         pageSize: 20,
       },
     },
     filterFns: {
-      fuzzy: fuzzyFilter,
+      fuzzy: fuzzyFilterAcronym,
     },
   })
 
   return (
     <div className="min-h-screen bg-gray-900 p-6">
       <h1 className="text-3xl font-bold text-white mb-6">Languages</h1>
+      <input
+        type="text"
+        value={globalFilter}
+        onChange={(e) => setGlobalFilter(e.target.value)}
+        placeholder="Search by name or code…"
+        className="w-full px-3 py-2 mb-6 bg-gray-800 border border-gray-600 rounded text-white text-sm placeholder-gray-500 focus:outline-none focus:border-gray-400"
+      />
 
       <div className="grid grid-cols-1 gap-6">
         <div>

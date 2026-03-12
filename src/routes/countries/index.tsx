@@ -161,8 +161,7 @@ function getColumnBorder(colId: string) {
 function Countries() {
   const { countriesIntl, countriesUN, countriesMissing } =
     Route.useLoaderData();
-  const [intlGlobalFilter, setIntlGlobalFilter] = React.useState("");
-  const [unGlobalFilter, setUnGlobalFilter] = React.useState("");
+  const [globalFilter, setGlobalFilter] = React.useState("");
 
   const columnsIntl = React.useMemo<ColumnDef<Country>[]>(
     () => [
@@ -309,9 +308,9 @@ function Countries() {
     getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
-    globalFilterFn: "includesString",
-    state: { globalFilter: intlGlobalFilter },
-    onGlobalFilterChange: setIntlGlobalFilter,
+    globalFilterFn: "fuzzy",
+    state: { globalFilter },
+    onGlobalFilterChange: setGlobalFilter,
     initialState: {
       pagination: {
         pageSize: 20,
@@ -329,9 +328,9 @@ function Countries() {
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getRowCanExpand: (row) => !!row.original.subdivisions?.length,
-    globalFilterFn: "includesString",
-    state: { globalFilter: unGlobalFilter },
-    onGlobalFilterChange: setUnGlobalFilter,
+    globalFilterFn: "fuzzy",
+    state: { globalFilter },
+    onGlobalFilterChange: setGlobalFilter,
     initialState: {
       pagination: {
         pageSize: 20,
@@ -424,8 +423,12 @@ function Countries() {
     data: countriesMissing,
     columns: columnsMissing,
     getCoreRowModel: getCoreRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
+    globalFilterFn: "fuzzy",
+    state: { globalFilter },
+    onGlobalFilterChange: setGlobalFilter,
     initialState: {
       pagination: {
         pageSize: 20,
@@ -437,6 +440,13 @@ function Countries() {
   return (
     <div className="min-h-screen bg-gray-900 p-6">
       <h1 className="text-3xl font-bold text-white mb-6">Countries</h1>
+      <input
+        type="text"
+        value={globalFilter}
+        onChange={(e) => setGlobalFilter(e.target.value)}
+        placeholder="Search by name, code, region…"
+        className="w-full px-3 py-2 mb-6 bg-gray-800 border border-gray-600 rounded text-white text-sm placeholder-gray-500 focus:outline-none focus:border-gray-400"
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {/* Left: Intl API */}
@@ -451,13 +461,6 @@ function Countries() {
             <li>• Coverage: All ISO country codes</li>
             <li>• Addons: None</li>
           </ul>
-          <input
-            type="text"
-            value={intlGlobalFilter}
-            onChange={(e) => setIntlGlobalFilter(e.target.value)}
-            placeholder="Search by name or code…"
-            className="w-full px-3 py-2 mb-3 bg-gray-800 border border-gray-600 rounded text-white text-sm placeholder-gray-500 focus:outline-none focus:border-gray-400"
-          />
           <p className="text-sm text-gray-400 mb-4">
             Total: {countriesIntl.length} countries
           </p>
@@ -601,13 +604,6 @@ function Countries() {
               Olympic codes, UN &amp; EU membership
             </li>
           </ul>
-          <input
-            type="text"
-            value={unGlobalFilter}
-            onChange={(e) => setUnGlobalFilter(e.target.value)}
-            placeholder="Search by name or code…"
-            className="w-full px-3 py-2 mb-3 bg-gray-800 border border-gray-600 rounded text-white text-sm placeholder-gray-500 focus:outline-none focus:border-gray-400"
-          />
           <p className="text-sm text-gray-400 mb-4">
             Total: {countriesUN.length} countries
           </p>

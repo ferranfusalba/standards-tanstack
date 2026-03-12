@@ -3,6 +3,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import {
   flexRender,
   getCoreRowModel,
+  getFilteredRowModel,
   getPaginationRowModel,
   getSortedRowModel,
   useReactTable,
@@ -28,6 +29,7 @@ export const Route = createFileRoute('/currencies/')({
 
 function Currencies() {
   const { currencies } = Route.useLoaderData()
+  const [globalFilter, setGlobalFilter] = React.useState('')
 
   const columns = React.useMemo<ColumnDef<Currency>[]>(
     () => [
@@ -92,8 +94,12 @@ function Currencies() {
     data: currencies,
     columns,
     getCoreRowModel: getCoreRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
+    globalFilterFn: 'fuzzy',
+    state: { globalFilter },
+    onGlobalFilterChange: setGlobalFilter,
     initialState: {
       pagination: {
         pageSize: 20,
@@ -107,6 +113,13 @@ function Currencies() {
   return (
     <div className="min-h-screen bg-gray-900 p-6">
       <h1 className="text-3xl font-bold text-white mb-6">Currencies</h1>
+      <input
+        type="text"
+        value={globalFilter}
+        onChange={(e) => setGlobalFilter(e.target.value)}
+        placeholder="Search by name, code or symbol…"
+        className="w-full px-3 py-2 mb-6 bg-gray-800 border border-gray-600 rounded text-white text-sm placeholder-gray-500 focus:outline-none focus:border-gray-400"
+      />
 
       <div>
         <h2 className="text-xl font-semibold text-white mb-2">ISO 4217 (SIX Group List One)</h2>

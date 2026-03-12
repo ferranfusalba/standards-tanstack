@@ -214,6 +214,7 @@ export interface Country {
   region?: string // UN M49 macro-geographic region
   unCode?: string // UN M49 numeric code
   notes?: string // Additional notes, used for non-standard entries
+  subdivisionCount?: number // Number of ISO 3166-2 subdivisions (lazy-loaded on demand)
   subdivisions?: Array<{ code: string; type?: Record<string, string>; iso1?: string; flag?: string; parent?: string; names: Record<string, string> }> // ISO 3166-2 subdivisions; type = ISO subdivision category keyed by language (e.g. { en: "parish", fr: "paroisse", ca: "parròquia" }); iso1 = ISO 3166-1 alpha-2 if subdivision has one; flag = emoji for non-standard sequences; parent = ISO 3166-2 code of parent subdivision; names = official names keyed by ISO 639-1 language code
 }
 
@@ -989,7 +990,7 @@ export const getCountriesFromUN = createServerFn({
       euMember: euMembers.has(country.code) || undefined,
       region: regionMap[country.code],
       unCode: country.unCode,
-      subdivisions: subdivisionsData[country.code],
+      subdivisionCount: subdivisionsData[country.code]?.length,
       name: country.name,
       fullName: country.fullName,
       independent: country.independent,
@@ -1026,3 +1027,13 @@ export const getMissingCountries = createServerFn({
 
   return countries
 })
+
+export type SubdivisionData = NonNullable<Country['subdivisions']>[number]
+
+export const getSubdivisions = createServerFn({
+  method: 'GET',
+}).inputValidator((data: { code: string }) => data)
+  .handler(async ({ data }) => {
+    const subs = subdivisionsData[data.code]
+    return (subs ?? []) as SubdivisionData[]
+  })

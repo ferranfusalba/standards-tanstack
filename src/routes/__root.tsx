@@ -3,6 +3,7 @@ import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 
 import Header from '../components/Header'
+import { ThemeProvider } from '../lib/theme'
 
 import StoreDevtools from '../lib/demo-store-devtools'
 
@@ -21,24 +22,56 @@ export const Route = createRootRoute({
       {
         title: 'Standards',
       },
+      {
+        name: 'description',
+        content: 'Browse and compare international standards: currencies, countries, languages, and timezones.',
+      },
+      {
+        name: 'theme-color',
+        content: '#0e1525',
+      },
+      {
+        property: 'og:type',
+        content: 'website',
+      },
+      {
+        property: 'og:title',
+        content: 'Standards',
+      },
+      {
+        property: 'og:description',
+        content: 'Browse and compare international standards: currencies, countries, languages, and timezones.',
+      },
+      {
+        property: 'og:image',
+        content: '/logo512.png',
+      },
     ],
     links: [
       {
         rel: 'stylesheet',
         href: appCss,
       },
+      {
+        rel: 'manifest',
+        href: '/manifest.json',
+      },
+      {
+        rel: 'apple-touch-icon',
+        href: '/logo192.png',
+      },
     ],
   }),
 
   notFoundComponent: () => {
     return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center p-6">
+      <div className="min-h-screen flex items-center justify-center p-6">
         <div className="text-center">
-          <h1 className="text-6xl font-bold text-white mb-4">404</h1>
-          <p className="text-xl text-gray-400 mb-6">Page not found</p>
+          <h1 className="text-6xl font-bold mb-4">404</h1>
+          <p className="text-xl text-muted-foreground mb-6">Page not found</p>
           <a
             href="/"
-            className="text-blue-400 hover:text-blue-300 underline"
+            className="text-cyan-600 dark:text-cyan-400 hover:underline"
           >
             Go back home
           </a>
@@ -52,13 +85,15 @@ export const Route = createRootRoute({
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <HeadContent />
       </head>
       <body>
-        <Header />
-        {children}
+        <ThemeProvider>
+          <Header />
+          {children}
+        </ThemeProvider>
         <TanStackDevtools
           config={{
             position: 'bottom-right',
@@ -72,6 +107,17 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           ]}
         />
         <Scripts />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js');
+                });
+              }
+            `,
+          }}
+        />
       </body>
     </html>
   )

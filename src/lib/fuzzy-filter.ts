@@ -2,7 +2,7 @@ import { rankItem, rankings } from '@tanstack/match-sorter-utils'
 import type { Ranking } from '@tanstack/match-sorter-utils'
 import type { FilterFn } from '@tanstack/react-table'
 
-export function createFuzzyFilter(threshold: Ranking): FilterFn<any> {
+export function createFuzzyFilter(threshold: Ranking): FilterFn<Record<string, unknown>> {
   return (row, columnId, value, addMeta) => {
     const itemRank = rankItem(row.getValue(columnId), value, { threshold })
     addMeta({ itemRank })

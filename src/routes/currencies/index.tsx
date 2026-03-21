@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import type { ColumnDef } from "@tanstack/react-table";
 import {
 	getCoreRowModel,
@@ -16,6 +16,9 @@ import { fuzzyFilter } from "@/lib/fuzzy-filter";
 
 export const Route = createFileRoute("/currencies/")({
 	component: Currencies,
+	validateSearch: (search: Record<string, unknown>): { highlight?: string } => ({
+		highlight: (search.highlight as string) || undefined,
+	}),
 	loader: async () => {
 		const currencies = await getCurrencies();
 		return { currencies };
@@ -36,6 +39,7 @@ export const Route = createFileRoute("/currencies/")({
 
 function Currencies() {
 	const { currencies } = Route.useLoaderData();
+	const { highlight } = Route.useSearch();
 	const [globalFilter, setGlobalFilter] = React.useState("");
 
 	const columns = React.useMemo<ColumnDef<Currency>[]>(
@@ -75,7 +79,31 @@ function Currencies() {
 			{
 				accessorKey: "countries",
 				header: "Countries",
-				cell: (info) => info.getValue<string[]>()?.join(", ") || "-",
+				cell: (info) => {
+					const codes = info.getValue<string[]>();
+					if (!codes?.length) return "-";
+					return (
+						<span className="flex flex-wrap gap-1">
+							{codes.map((code) => (
+								<Link
+									key={code}
+									to="/countries"
+									search={{ highlight: code, expandCcy: true }}
+									title={code}
+									className="cursor-pointer hover:opacity-70 transition-opacity"
+								>
+									{code
+										.toUpperCase()
+										.split("")
+										.map((c) =>
+											String.fromCodePoint(0x1f1e6 + c.charCodeAt(0) - 65),
+										)
+										.join("")}
+								</Link>
+							))}
+						</span>
+					);
+				},
 			},
 			{
 				accessorKey: "status",
@@ -121,6 +149,25 @@ function Currencies() {
 		},
 	});
 
+	// Navigate to the correct page and scroll to highlighted currency
+	React.useEffect(() => {
+		if (!highlight) return;
+		const rows = table.getFilteredRowModel().rows;
+		const idx = rows.findIndex((r) => r.original.code === highlight);
+		if (idx >= 0) {
+			const pageSize = table.getState().pagination.pageSize;
+			table.setPageIndex(Math.floor(idx / pageSize));
+		}
+		const timer = setTimeout(() => {
+			const el = document.querySelector(".bg-blue-100");
+			if (el) {
+				el.scrollIntoView({ behavior: "smooth", block: "center" });
+			}
+		}, 100);
+		return () => clearTimeout(timer);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
+
 	return (
 		<div className="min-h-screen p-6">
 			<h1 className="text-3xl font-bold mb-6">Currencies</h1>
@@ -149,7 +196,14 @@ function Currencies() {
 				<p className="text-sm text-muted-foreground mb-4">
 					Total: {currencies.length} currencies
 				</p>
-				<DataTable table={table} />
+				<DataTable
+					table={table}
+					cellClassName={(_col, row) =>
+						highlight === row.original.code
+							? "bg-blue-100 dark:bg-blue-950"
+							: ""
+					}
+				/>
 				<Pagination table={table} totalItems={currencies.length} />
 			</div>
 		</div>

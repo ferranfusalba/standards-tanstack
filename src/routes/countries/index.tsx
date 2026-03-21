@@ -22,6 +22,10 @@ import {
   getSubdivisions,
   type SubdivisionData,
 } from "@/data/countries";
+import {
+  type CountryCurrency,
+  getCurrenciesByCountry,
+} from "@/data/currencies";
 import { type CountryTimezone, getTimezonesByCountry } from "@/data/timezones";
 import { fuzzyFilter } from "@/lib/fuzzy-filter";
 
@@ -43,27 +47,32 @@ export const Route = createFileRoute("/countries/")({
   component: Countries,
   validateSearch: (
     search: Record<string, unknown>,
-  ): { highlight?: string } => ({
+  ): { highlight?: string; expandTz?: boolean; expandCcy?: boolean } => ({
     highlight: (search.highlight as string) || undefined,
+    expandTz: search.expandTz === true || search.expandTz === "true" || undefined,
+    expandCcy: search.expandCcy === true || search.expandCcy === "true" || undefined,
   }),
   loader: async () => {
-    const [countriesIntl, countriesUN, countriesMissing, timezoneMap] =
+    const [countriesIntl, countriesUN, countriesMissing, timezoneMap, currencyMap] =
       await Promise.all([
         getCountries(),
         getCountriesFromUN(),
         getMissingCountries(),
         getTimezonesByCountry(),
+        getCurrenciesByCountry(),
       ]);
-    // Enrich UN countries with timezone counts
+    // Enrich UN countries with timezone and currency counts
     const countriesUNWithTz = countriesUN.map((c) => ({
       ...c,
       timezoneCount: timezoneMap[c.alpha2Code]?.length ?? 0,
+      currencyCount: currencyMap[c.alpha2Code]?.length ?? 0,
     }));
     return {
       countriesIntl,
       countriesUN: countriesUNWithTz,
       countriesMissing,
       timezoneMap,
+      currencyMap,
     };
   },
   head: () => ({
@@ -203,11 +212,13 @@ function ExpandedCountryRow({
   alpha2Code,
   colSpan,
   timezones,
+  currencies,
   hasSubdivisions,
 }: {
   alpha2Code: string;
   colSpan: number;
   timezones: CountryTimezone[];
+  currencies: CountryCurrency[];
   hasSubdivisions: boolean;
 }) {
   const [subs, setSubs] = React.useState<SubdivisionData[] | null>(null);
@@ -229,9 +240,10 @@ function ExpandedCountryRow({
   }, [alpha2Code, hasSubdivisions]);
 
   const showTimezones = timezones.length > 0;
+  const showCurrencies = currencies.length > 0;
   const showSubdivisions = subs && subs.length > 0;
 
-  if (loading && !showTimezones) {
+  if (loading && !showTimezones && !showCurrencies) {
     return (
       <tr className="bg-accent/50">
         <td
@@ -244,7 +256,7 @@ function ExpandedCountryRow({
     );
   }
 
-  if (!showTimezones && !showSubdivisions && !loading) return null;
+  if (!showTimezones && !showCurrencies && !showSubdivisions && !loading) return null;
 
   return (
     <>
@@ -292,6 +304,56 @@ function ExpandedCountryRow({
                     <td className="py-1 pr-4">{tz.name}</td>
                     <td className="py-1 text-muted-foreground">
                       {tz.comment ?? ""}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      )}
+      {showCurrencies && (
+        <tr className="bg-accent/50">
+          <td colSpan={colSpan} className="px-6 py-3">
+            <div className="text-xs font-semibold mb-2">
+              Currencies ({currencies.length})
+            </div>
+            <table className="w-full text-xs">
+              <thead>
+                <tr className="text-muted-foreground">
+                  <th className="text-left py-1 pr-4">Code</th>
+                  <th className="text-left py-1 pr-4">Symbol</th>
+                  <th className="text-left py-1 pr-4">Name</th>
+                  <th className="text-left py-1">Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                {currencies.map((ccy) => (
+                  <tr key={ccy.code}>
+                    <td className="py-1 pr-4 font-mono">
+                      <Link
+                        to="/currencies"
+                        search={{ highlight: ccy.code }}
+                        className="flex items-center gap-1 hover:text-blue-400 transition-colors"
+                      >
+                        {ccy.code}
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          className="text-muted-foreground"
+                        >
+                          <path d="M6 3H3v10h10v-3M9 2h5v5M14 2L7 9" />
+                        </svg>
+                      </Link>
+                    </td>
+                    <td className="py-1 pr-4">{ccy.symbol ?? "-"}</td>
+                    <td className="py-1 pr-4">{ccy.name}</td>
+                    <td className="py-1 text-muted-foreground">
+                      {ccy.type ?? "currency"}
                     </td>
                   </tr>
                 ))}
@@ -364,12 +426,12 @@ function ActiveFilters<TData>({
 }
 
 function Countries() {
-  const { countriesIntl, countriesUN, countriesMissing, timezoneMap } =
+  const { countriesIntl, countriesUN, countriesMissing, timezoneMap, currencyMap } =
     Route.useLoaderData();
-  const { highlight } = Route.useSearch();
+  const { highlight, expandTz, expandCcy } = Route.useSearch();
   const [globalFilter, setGlobalFilter] = React.useState("");
   const [expandedSection, setExpandedSection] = React.useState<
-    Record<string, "subdivisions" | "timezones">
+    Record<string, "subdivisions" | "timezones" | "currencies">
   >({});
   const [expandedRows, setExpandedRows] = React.useState<
     Record<string, boolean>
@@ -378,7 +440,7 @@ function Countries() {
   const toggleSection = (
     alpha2Code: string,
     rowIndex: string,
-    section: "subdivisions" | "timezones",
+    section: "subdivisions" | "timezones" | "currencies",
   ) => {
     setExpandedSection((prev) => {
       if (prev[alpha2Code] === section) {
@@ -590,6 +652,33 @@ function Countries() {
         },
         enableGlobalFilter: false,
       },
+      {
+        accessorKey: "currencyCount",
+        header: "CCY",
+        size: 80,
+        maxSize: 80,
+        cell: ({ row }) => {
+          const count = (row.original as Country & { currencyCount?: number })
+            .currencyCount;
+          if (!count) return <span className="text-muted-foreground">-</span>;
+          const isOpen =
+            expandedSection[row.original.alpha2Code] === "currencies";
+          return (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleSection(row.original.alpha2Code, row.id, "currencies");
+              }}
+              className="cursor-pointer hover:bg-accent px-2 py-1 rounded flex items-center gap-1"
+            >
+              <span>{count}</span>
+              <span className="text-xs">{isOpen ? "\u25B2" : "\u25BC"}</span>
+            </button>
+          );
+        },
+        enableGlobalFilter: false,
+      },
     ],
     [],
   );
@@ -755,10 +844,12 @@ function Countries() {
     if (idx >= 0) {
       const pageSize = tableUN.getState().pagination.pageSize;
       tableUN.setPageIndex(Math.floor(idx / pageSize));
-      // Auto-expand timezones section for the highlighted country
-      const rowId = String(idx);
-      setExpandedSection((prev) => ({ ...prev, [highlight]: "timezones" }));
-      setExpandedRows((prev) => ({ ...prev, [rowId]: true }));
+      if (expandTz || expandCcy) {
+        const rowId = String(idx);
+        const section = expandTz ? "timezones" : "currencies";
+        setExpandedSection((prev) => ({ ...prev, [highlight]: section }));
+        setExpandedRows((prev) => ({ ...prev, [rowId]: true }));
+      }
     }
     const timer = setTimeout(() => {
       const el = document.querySelector(".bg-blue-100");
@@ -859,6 +950,11 @@ function Countries() {
                   timezones={
                     section === "timezones"
                       ? (timezoneMap[row.original.alpha2Code] ?? [])
+                      : []
+                  }
+                  currencies={
+                    section === "currencies"
+                      ? (currencyMap[row.original.alpha2Code] ?? [])
                       : []
                   }
                   hasSubdivisions={

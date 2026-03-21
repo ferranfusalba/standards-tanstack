@@ -293,7 +293,7 @@ function Timezones() {
                 <Link
                   key={code}
                   to="/countries"
-                  search={{ highlight: code }}
+                  search={{ highlight: code, expandTz: true }}
                   title={code}
                   className="cursor-pointer hover:opacity-70 transition-opacity"
                 >

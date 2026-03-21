@@ -91,25 +91,28 @@ export function ColumnFilter<TData>({ column }: ColumnFilterProps<TData>) {
       </PopoverTrigger>
       <PopoverContent
         align="start"
-        className="w-48 p-0"
+        className="w-48 p-0 z-100"
         onClick={(e) => e.stopPropagation()}
         onKeyDown={(e) => e.stopPropagation()}
       >
         <div className="p-2 space-y-1 max-h-[calc(100vh-8rem)] overflow-y-auto">
           {options.map((opt) => (
-            <label
+            <button
               key={String(opt.value)}
-              className="flex items-center gap-2 px-2 py-1 rounded hover:bg-accent cursor-pointer text-xs"
+              type="button"
+              onClick={() => toggleValue(opt.value)}
+              className="flex items-center gap-2 px-2 py-1 rounded hover:bg-accent cursor-pointer text-xs w-full text-left"
             >
-              <input
-                type="checkbox"
-                checked={filterValue.includes(opt.value)}
-                onChange={() => toggleValue(opt.value)}
-                className="rounded"
-              />
+              <span className={`inline-flex items-center justify-center w-3.5 h-3.5 rounded border ${filterValue.includes(opt.value) ? "bg-foreground border-foreground text-background" : "border-muted-foreground"}`}>
+                {filterValue.includes(opt.value) && (
+                  <svg width="10" height="10" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <path d="M3 8l3.5 3.5L13 5" />
+                  </svg>
+                )}
+              </span>
               <span className="truncate">{opt.label}</span>
               <span className="ml-auto text-muted-foreground">{opt.count}</span>
-            </label>
+            </button>
           ))}
           {isFiltered && (
             <button

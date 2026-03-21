@@ -7,38 +7,86 @@ export interface Timezone {
   region: string
 }
 
+export interface TimezoneIANA extends Timezone {
+  countryCodes: string[]
+  coordinates: string
+  comment: string | null
+}
+
+export interface TimezoneIntl extends Timezone {
+  longName: string
+  shortName: string
+  longGeneric: string
+  shortGeneric: string
+  isDST: boolean
+  dstOffset: string | null
+  standardOffset: string
+}
+
+function formatOffset(date: Date, timeZone: string): string {
+  const formatter = new Intl.DateTimeFormat('en-US', {
+    timeZone,
+    timeZoneName: 'longOffset',
+  })
+  const match = formatter.format(date).match(/GMT([+-]\d{1,2}):?(\d{2})?/)
+  if (!match) return 'UTC+0'
+  const hours = match[1]
+  const minutes = match[2] || '00'
+  return minutes === '00' ? `UTC${hours}` : `UTC${hours}:${minutes}`
+}
+
+function getTimezoneName(date: Date, timeZone: string, style: 'long' | 'short' | 'longGeneric' | 'shortGeneric'): string {
+  try {
+    const formatter = new Intl.DateTimeFormat('en-US', {
+      timeZone,
+      timeZoneName: style,
+    })
+    const parts = formatter.formatToParts(date)
+    return parts.find(p => p.type === 'timeZoneName')?.value ?? ''
+  } catch {
+    return ''
+  }
+}
+
 // Option A: Get timezones from JavaScript Intl API (built-in, always up-to-date)
 export const getTimezonesFromIntl = createServerFn({
   method: 'GET',
 }).handler(async () => {
   const tzIds = Intl.supportedValuesOf('timeZone')
 
-  const timezones: Timezone[] = tzIds.map(id => {
-    // Extract region from timezone ID (e.g., "America/New_York" -> "America")
+  // Use January and July to detect DST
+  const now = new Date()
+  const jan = new Date(now.getFullYear(), 0, 15)
+  const jul = new Date(now.getFullYear(), 6, 15)
+
+  const timezones: TimezoneIntl[] = tzIds.map(id => {
     const parts = id.split('/')
     const region = parts.length > 1 ? parts[0] : 'UTC'
     const name = parts.length > 1 ? parts.slice(1).join('/').replace(/_/g, ' ') : id
 
-    // Get current offset for this timezone
-    const now = new Date()
-    const formatter = new Intl.DateTimeFormat('en-US', {
-      timeZone: id,
-      timeZoneName: 'longOffset'
-    })
-
-    const offsetMatch = formatter.format(now).match(/GMT([+-]\d{1,2}):?(\d{2})?/)
-    let offset = 'UTC+0'
-    if (offsetMatch) {
-      const hours = offsetMatch[1]
-      const minutes = offsetMatch[2] || '00'
-      offset = minutes === '00' ? `UTC${hours}` : `UTC${hours}:${minutes}`
-    }
+    const offset = formatOffset(now, id)
+    const janOffset = formatOffset(jan, id)
+    const julOffset = formatOffset(jul, id)
+    const isDST = janOffset !== julOffset
+    const standardOffset = isDST
+      ? (janOffset < julOffset ? janOffset : julOffset)
+      : offset
+    const dstOffset = isDST
+      ? (janOffset < julOffset ? julOffset : janOffset)
+      : null
 
     return {
       id,
       name,
       offset,
-      region
+      region,
+      longName: getTimezoneName(now, id, 'long'),
+      shortName: getTimezoneName(now, id, 'short'),
+      longGeneric: getTimezoneName(now, id, 'longGeneric'),
+      shortGeneric: getTimezoneName(now, id, 'shortGeneric'),
+      isDST,
+      dstOffset,
+      standardOffset,
     }
   })
 
@@ -60,17 +108,20 @@ export const getTimezonesFromIANA = createServerFn({
     const data = await response.text()
     const lines = data.split('\n')
 
-    const timezones: Timezone[] = []
+    const timezones: TimezoneIANA[] = []
 
     for (const line of lines) {
       // Skip comments and empty lines
       if (line.startsWith('#') || !line.trim()) continue
 
-      // Parse tab-separated values
+      // Parse tab-separated values: countries, coordinates, id, comment
       const parts = line.split('\t')
       if (parts.length < 3) continue
 
-      const id = parts[2] // Timezone ID (e.g., "America/New_York")
+      const countryCodes = parts[0].split(',')
+      const coordinates = parts[1]
+      const id = parts[2]
+      const comment = parts[3] || null
 
       // Extract region from timezone ID
       const idParts = id.split('/')
@@ -97,7 +148,10 @@ export const getTimezonesFromIANA = createServerFn({
           id,
           name,
           offset,
-          region
+          region,
+          countryCodes,
+          coordinates,
+          comment,
         })
       } catch (error) {
         // Skip timezones not supported by this Node.js version

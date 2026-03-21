@@ -166,3 +166,32 @@ export const getTimezonesFromIANA = createServerFn({
     return []
   }
 })
+
+export interface CountryTimezone {
+  id: string
+  name: string
+  offset: string
+  comment: string | null
+}
+
+// Returns a map of country code → timezones for that country
+export const getTimezonesByCountry = createServerFn({
+  method: 'GET',
+}).handler(async () => {
+  const timezones = await getTimezonesFromIANA()
+  const map: Record<string, CountryTimezone[]> = {}
+
+  for (const tz of timezones) {
+    for (const code of tz.countryCodes) {
+      if (!map[code]) map[code] = []
+      map[code].push({
+        id: tz.id,
+        name: tz.name,
+        offset: tz.offset,
+        comment: tz.comment,
+      })
+    }
+  }
+
+  return map
+})

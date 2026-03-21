@@ -1,5 +1,5 @@
 import React from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import {
   getCoreRowModel,
   getFacetedRowModel,
@@ -32,27 +32,48 @@ function downloadFile(content: string, filename: string, mimeType: string) {
   URL.revokeObjectURL(url);
 }
 
-function exportCSV(rows: TimezoneIANA[], filename: string) {
-  const header = "id,name,offset,region,countries,coordinates,comment";
-  const lines = rows.map(
-    (tz) =>
-      `"${tz.id}","${tz.name}","${tz.offset}","${tz.region}","${tz.countryCodes.join(",")}","${tz.coordinates}","${tz.comment ?? ""}"`,
+function getVisibleKeys<TData>(
+  table: { getVisibleLeafColumns: () => { id: string }[] },
+  rows: TData[],
+): string[] {
+  const cols = table.getVisibleLeafColumns().map((c) => c.id);
+  if (rows.length === 0) return cols;
+  const dataKeys = new Set(Object.keys(rows[0] as Record<string, unknown>));
+  return cols.filter((c) => dataKeys.has(c));
+}
+
+function exportTableCSV<TData extends Record<string, unknown>>(
+  table: { getVisibleLeafColumns: () => { id: string }[] },
+  rows: TData[],
+  filename: string,
+) {
+  const keys = getVisibleKeys(table, rows);
+  const header = keys.join(",");
+  const lines = rows.map((row) =>
+    keys
+      .map((k) => {
+        const val = row[k];
+        if (Array.isArray(val)) return `"${val.join(",")}"`;
+        if (val === null || val === undefined) return '""';
+        return `"${String(val)}"`;
+      })
+      .join(","),
   );
   downloadFile([header, ...lines].join("\n"), filename, "text/csv");
 }
 
-function exportCSVIntl(rows: TimezoneIntl[], filename: string) {
-  const header =
-    "id,name,offset,region,longName,abbreviation,genericName,genericShort,isDST,standardOffset,dstOffset";
-  const lines = rows.map(
-    (tz) =>
-      `"${tz.id}","${tz.name}","${tz.offset}","${tz.region}","${tz.longName}","${tz.shortName}","${tz.longGeneric}","${tz.shortGeneric}",${tz.isDST},"${tz.standardOffset}","${tz.dstOffset ?? ""}"`,
-  );
-  downloadFile([header, ...lines].join("\n"), filename, "text/csv");
-}
-
-function exportJSON(rows: Timezone[] | TimezoneIntl[] | TimezoneIANA[], filename: string) {
-  downloadFile(JSON.stringify(rows, null, 2), filename, "application/json");
+function exportTableJSON<TData extends Record<string, unknown>>(
+  table: { getVisibleLeafColumns: () => { id: string }[] },
+  rows: TData[],
+  filename: string,
+) {
+  const keys = getVisibleKeys(table, rows);
+  const filtered = rows.map((row) => {
+    const obj: Record<string, unknown> = {};
+    for (const k of keys) obj[k] = row[k];
+    return obj;
+  });
+  downloadFile(JSON.stringify(filtered, null, 2), filename, "application/json");
 }
 
 // biome-ignore lint/suspicious/noExplicitAny: FilterFn generics are contravariant, making typed versions incompatible across table types
@@ -75,6 +96,9 @@ const offsetSortingFn: SortingFn<any> = (rowA, rowB, columnId) => {
 
 export const Route = createFileRoute("/timezones/")({
   component: Timezones,
+  validateSearch: (search: Record<string, unknown>): { highlight?: string } => ({
+    highlight: (search.highlight as string) || undefined,
+  }),
   loader: async () => {
     const [timezonesIntl, timezonesIANA] = await Promise.all([
       getTimezonesFromIntl(),
@@ -101,7 +125,9 @@ export const Route = createFileRoute("/timezones/")({
 
 function Timezones() {
   const { timezonesIntl, timezonesIANA } = Route.useLoaderData();
+  const { highlight } = Route.useSearch();
   const [globalFilter, setGlobalFilter] = React.useState("");
+
   const [selectedRegions, setSelectedRegions] = React.useState<string[]>([]);
 
   const allRegions = React.useMemo(() => {
@@ -264,13 +290,19 @@ function Timezones() {
           return (
             <span className="flex flex-wrap gap-1">
               {codes.map((code) => (
-                <span key={code} title={code} className="cursor-help">
+                <Link
+                  key={code}
+                  to="/countries"
+                  search={{ highlight: code }}
+                  title={code}
+                  className="cursor-pointer hover:opacity-70 transition-opacity"
+                >
                   {code
                     .toUpperCase()
                     .split("")
                     .map((c) => String.fromCodePoint(0x1f1e6 + c.charCodeAt(0) - 65))
                     .join("")}
-                </span>
+                </Link>
               ))}
             </span>
           );
@@ -338,6 +370,29 @@ function Timezones() {
     },
   });
 
+  // Navigate to the correct page and scroll to highlighted row
+  React.useEffect(() => {
+    if (!highlight) return;
+    // Jump each table to the page containing the highlighted timezone
+    for (const table of [tableIANA, tableIntl]) {
+      const rows = table.getFilteredRowModel().rows;
+      const idx = rows.findIndex((r) => (r.original as Timezone).id === highlight);
+      if (idx >= 0) {
+        const pageSize = table.getState().pagination.pageSize;
+        table.setPageIndex(Math.floor(idx / pageSize));
+      }
+    }
+    const timer = setTimeout(() => {
+      const el = document.querySelector(".bg-blue-100");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }, 100);
+    return () => clearTimeout(timer);
+    // Only run on mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className="min-h-screen p-6">
       <h1 className="text-3xl font-bold mb-6">Timezones</h1>
@@ -383,9 +438,17 @@ function Timezones() {
       )}
 
       <h3 className="text-sm font-semibold mb-2">Cross-check data</h3>
-      <div className="flex items-center gap-2 mb-4 text-xs text-muted-foreground">
-        <span className="inline-block w-8 h-3 rounded bg-yellow-100 dark:bg-yellow-950" />
-        <span>Not present in the other table</span>
+      <div className="flex items-center gap-4 mb-4 text-xs text-muted-foreground">
+        <span className="flex items-center gap-2">
+          <span className="inline-block w-8 h-3 rounded bg-yellow-100 dark:bg-yellow-950" />
+          Not present in the other table
+        </span>
+        {highlight && (
+          <span className="flex items-center gap-2">
+            <span className="inline-block w-8 h-3 rounded bg-blue-100 dark:bg-blue-950" />
+            Linked timezone
+          </span>
+        )}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -419,10 +482,9 @@ function Timezones() {
               <button
                 type="button"
                 onClick={() =>
-                  exportCSVIntl(
-                    tableIntl
-                      .getFilteredRowModel()
-                      .rows.map((r) => r.original as TimezoneIntl),
+                  exportTableCSV(
+                    tableIntl,
+                    tableIntl.getFilteredRowModel().rows.map((r) => r.original as unknown as Record<string, unknown>),
                     "timezones-intl.csv",
                   )
                 }
@@ -433,10 +495,9 @@ function Timezones() {
               <button
                 type="button"
                 onClick={() =>
-                  exportJSON(
-                    tableIntl
-                      .getFilteredRowModel()
-                      .rows.map((r) => r.original as TimezoneIntl),
+                  exportTableJSON(
+                    tableIntl,
+                    tableIntl.getFilteredRowModel().rows.map((r) => r.original as unknown as Record<string, unknown>),
                     "timezones-intl.json",
                   )
                 }
@@ -448,18 +509,24 @@ function Timezones() {
           </div>
           <DataTable
             table={tableIntl}
-            cellClassName={(_col, row) =>
-              !ianaIds.has((row.original as Timezone).id)
-                ? "bg-yellow-100 dark:bg-yellow-950"
-                : ""
-            }
+            cellClassName={(_col, row) => {
+              const id = (row.original as Timezone).id;
+              if (highlight === id)
+                return "bg-blue-100 dark:bg-blue-950";
+              if (!ianaIds.has(id))
+                return "bg-yellow-100 dark:bg-yellow-950";
+              return "";
+            }}
           />
           <Pagination table={tableIntl} totalItems={timezonesIntl.length} />
         </div>
 
         {/* Right: IANA Official */}
         <div>
-          <h2 className="text-xl font-semibold mb-2">IANA Official Data</h2>
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-xl font-semibold">IANA Official Data</h2>
+            <ColumnVisibility table={tableIANA} />
+          </div>
           <ul className="text-xs text-muted-foreground mb-3 space-y-1">
             <li>• Source: Official IANA tzdata repository</li>
             <li>• Updates: Real-time from authoritative source</li>
@@ -484,10 +551,9 @@ function Timezones() {
               <button
                 type="button"
                 onClick={() =>
-                  exportCSV(
-                    tableIANA
-                      .getFilteredRowModel()
-                      .rows.map((r) => r.original as TimezoneIANA),
+                  exportTableCSV(
+                    tableIANA,
+                    tableIANA.getFilteredRowModel().rows.map((r) => r.original as unknown as Record<string, unknown>),
                     "timezones-iana.csv",
                   )
                 }
@@ -498,10 +564,9 @@ function Timezones() {
               <button
                 type="button"
                 onClick={() =>
-                  exportJSON(
-                    tableIANA
-                      .getFilteredRowModel()
-                      .rows.map((r) => r.original as TimezoneIANA),
+                  exportTableJSON(
+                    tableIANA,
+                    tableIANA.getFilteredRowModel().rows.map((r) => r.original as unknown as Record<string, unknown>),
                     "timezones-iana.json",
                   )
                 }
@@ -513,11 +578,14 @@ function Timezones() {
           </div>
           <DataTable
             table={tableIANA}
-            cellClassName={(_col, row) =>
-              !intlIds.has((row.original as Timezone).id)
-                ? "bg-yellow-100 dark:bg-yellow-950"
-                : ""
-            }
+            cellClassName={(_col, row) => {
+              const id = (row.original as Timezone).id;
+              if (highlight === id)
+                return "bg-blue-100 dark:bg-blue-950";
+              if (!intlIds.has(id))
+                return "bg-yellow-100 dark:bg-yellow-950";
+              return "";
+            }}
           />
           <Pagination table={tableIANA} totalItems={timezonesIANA.length} />
         </div>

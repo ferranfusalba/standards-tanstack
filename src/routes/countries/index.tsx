@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import type { ColumnDef, FilterFn } from "@tanstack/react-table";
 import {
   getCoreRowModel,
@@ -22,6 +22,7 @@ import {
   getSubdivisions,
   type SubdivisionData,
 } from "@/data/countries";
+import { type CountryTimezone, getTimezonesByCountry } from "@/data/timezones";
 import { fuzzyFilter } from "@/lib/fuzzy-filter";
 
 const facetedFilter: FilterFn<Country> = (row, columnId, filterValue) => {
@@ -40,16 +41,29 @@ const presenceFilter: FilterFn<Country> = (row, columnId, filterValue) => {
 
 export const Route = createFileRoute("/countries/")({
   component: Countries,
+  validateSearch: (
+    search: Record<string, unknown>,
+  ): { highlight?: string } => ({
+    highlight: (search.highlight as string) || undefined,
+  }),
   loader: async () => {
-    const [countriesIntl, countriesUN, countriesMissing] = await Promise.all([
-      getCountries(),
-      getCountriesFromUN(),
-      getMissingCountries(),
-    ]);
+    const [countriesIntl, countriesUN, countriesMissing, timezoneMap] =
+      await Promise.all([
+        getCountries(),
+        getCountriesFromUN(),
+        getMissingCountries(),
+        getTimezonesByCountry(),
+      ]);
+    // Enrich UN countries with timezone counts
+    const countriesUNWithTz = countriesUN.map((c) => ({
+      ...c,
+      timezoneCount: timezoneMap[c.alpha2Code]?.length ?? 0,
+    }));
     return {
       countriesIntl,
-      countriesUN,
+      countriesUN: countriesUNWithTz,
       countriesMissing,
+      timezoneMap,
     };
   },
   head: () => ({
@@ -185,17 +199,22 @@ function getColumnBorder(colId: string) {
   return borderLeftCols.has(colId) ? "border-l border-border" : "";
 }
 
-function LazySubdivisionsRow({
+function ExpandedCountryRow({
   alpha2Code,
   colSpan,
+  timezones,
+  hasSubdivisions,
 }: {
   alpha2Code: string;
   colSpan: number;
+  timezones: CountryTimezone[];
+  hasSubdivisions: boolean;
 }) {
   const [subs, setSubs] = React.useState<SubdivisionData[] | null>(null);
-  const [loading, setLoading] = React.useState(true);
+  const [loading, setLoading] = React.useState(hasSubdivisions);
 
   React.useEffect(() => {
+    if (!hasSubdivisions) return;
     let cancelled = false;
     setLoading(true);
     getSubdivisions({ data: { code: alpha2Code } }).then((data) => {
@@ -207,24 +226,95 @@ function LazySubdivisionsRow({
     return () => {
       cancelled = true;
     };
-  }, [alpha2Code]);
+  }, [alpha2Code, hasSubdivisions]);
 
-  if (loading) {
+  const showTimezones = timezones.length > 0;
+  const showSubdivisions = subs && subs.length > 0;
+
+  if (loading && !showTimezones) {
     return (
       <tr className="bg-accent/50">
         <td
           colSpan={colSpan}
           className="px-6 py-3 text-sm text-muted-foreground"
         >
-          Loading subdivisions...
+          Loading...
         </td>
       </tr>
     );
   }
 
-  if (!subs?.length) return null;
+  if (!showTimezones && !showSubdivisions && !loading) return null;
 
-  return <SubdivisionsExpandedRow subs={subs} colSpan={colSpan} />;
+  return (
+    <>
+      {showTimezones && (
+        <tr className="bg-accent/50">
+          <td colSpan={colSpan} className="px-6 py-3">
+            <div className="text-xs font-semibold mb-2">
+              Timezones ({timezones.length})
+            </div>
+            <table className="w-full text-xs">
+              <thead>
+                <tr className="text-muted-foreground">
+                  <th className="text-left py-1 pr-4">Offset</th>
+                  <th className="text-left py-1 pr-4">ID</th>
+                  <th className="text-left py-1 pr-4">Name</th>
+                  <th className="text-left py-1">Comment</th>
+                </tr>
+              </thead>
+              <tbody>
+                {timezones.map((tz) => (
+                  <tr key={tz.id}>
+                    <td className="py-1 pr-4 text-muted-foreground">
+                      {tz.offset}
+                    </td>
+                    <td className="py-1 pr-4 font-mono">
+                      <Link
+                        to="/timezones"
+                        search={{ highlight: tz.id }}
+                        className="flex items-center gap-1 hover:text-blue-400 transition-colors"
+                      >
+                        {tz.id}
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          className="text-muted-foreground"
+                        >
+                          <path d="M6 3H3v10h10v-3M9 2h5v5M14 2L7 9" />
+                        </svg>
+                      </Link>
+                    </td>
+                    <td className="py-1 pr-4">{tz.name}</td>
+                    <td className="py-1 text-muted-foreground">
+                      {tz.comment ?? ""}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      )}
+      {loading && (
+        <tr className="bg-accent/50">
+          <td
+            colSpan={colSpan}
+            className="px-6 py-3 text-sm text-muted-foreground"
+          >
+            Loading subdivisions...
+          </td>
+        </tr>
+      )}
+      {showSubdivisions && (
+        <SubdivisionsExpandedRow subs={subs} colSpan={colSpan} />
+      )}
+    </>
+  );
 }
 
 function formatFilterValue(value: unknown): string {
@@ -274,9 +364,37 @@ function ActiveFilters<TData>({
 }
 
 function Countries() {
-  const { countriesIntl, countriesUN, countriesMissing } =
+  const { countriesIntl, countriesUN, countriesMissing, timezoneMap } =
     Route.useLoaderData();
+  const { highlight } = Route.useSearch();
   const [globalFilter, setGlobalFilter] = React.useState("");
+  const [expandedSection, setExpandedSection] = React.useState<
+    Record<string, "subdivisions" | "timezones">
+  >({});
+  const [expandedRows, setExpandedRows] = React.useState<
+    Record<string, boolean>
+  >({});
+
+  const toggleSection = (
+    alpha2Code: string,
+    rowIndex: string,
+    section: "subdivisions" | "timezones",
+  ) => {
+    setExpandedSection((prev) => {
+      if (prev[alpha2Code] === section) {
+        const next = { ...prev };
+        delete next[alpha2Code];
+        setExpandedRows((er) => {
+          const n = { ...er };
+          delete n[rowIndex];
+          return n;
+        });
+        return next;
+      }
+      setExpandedRows((er) => ({ ...er, [rowIndex]: true }));
+      return { ...prev, [alpha2Code]: section };
+    });
+  };
 
   const columnsIntl = React.useMemo<ColumnDef<Country>[]>(
     () => [
@@ -348,19 +466,19 @@ function Countries() {
         cell: ({ row }) => {
           const count = row.original.subdivisionCount;
           if (!count) return <span className="text-muted-foreground">-</span>;
+          const isOpen =
+            expandedSection[row.original.alpha2Code] === "subdivisions";
           return (
             <button
               type="button"
               onClick={(e) => {
                 e.stopPropagation();
-                row.toggleExpanded();
+                toggleSection(row.original.alpha2Code, row.id, "subdivisions");
               }}
               className="cursor-pointer hover:bg-accent px-2 py-1 rounded flex items-center gap-1"
             >
               <span>{count}</span>
-              <span className="text-xs">
-                {row.getIsExpanded() ? "\u25B2" : "\u25BC"}
-              </span>
+              <span className="text-xs">{isOpen ? "\u25B2" : "\u25BC"}</span>
             </button>
           );
         },
@@ -445,6 +563,33 @@ function Countries() {
         maxSize: 300,
         cell: (info) => info.getValue<string>() ?? "",
       },
+      {
+        accessorKey: "timezoneCount",
+        header: "TZ",
+        size: 80,
+        maxSize: 80,
+        cell: ({ row }) => {
+          const count = (row.original as Country & { timezoneCount?: number })
+            .timezoneCount;
+          if (!count) return <span className="text-muted-foreground">-</span>;
+          const isOpen =
+            expandedSection[row.original.alpha2Code] === "timezones";
+          return (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleSection(row.original.alpha2Code, row.id, "timezones");
+              }}
+              className="cursor-pointer hover:bg-accent px-2 py-1 rounded flex items-center gap-1"
+            >
+              <span>{count}</span>
+              <span className="text-xs">{isOpen ? "\u25B2" : "\u25BC"}</span>
+            </button>
+          );
+        },
+        enableGlobalFilter: false,
+      },
     ],
     [],
   );
@@ -477,9 +622,16 @@ function Countries() {
     getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
-    getRowCanExpand: (row) => !!row.original.subdivisionCount,
+    getRowCanExpand: () => true,
     globalFilterFn: "fuzzy",
-    state: { globalFilter },
+    state: { globalFilter, expanded: expandedRows },
+    onExpandedChange: (updater) => {
+      setExpandedRows((prev) => {
+        const next = typeof updater === "function" ? updater(prev) : updater;
+        if (typeof next === "boolean") return {};
+        return next;
+      });
+    },
     onGlobalFilterChange: setGlobalFilter,
     initialState: {
       pagination: {
@@ -595,6 +747,29 @@ function Countries() {
     filterFns: { fuzzy: fuzzyFilter },
   });
 
+  // Navigate to the correct page and scroll to highlighted country
+  React.useEffect(() => {
+    if (!highlight) return;
+    const rows = tableUN.getFilteredRowModel().rows;
+    const idx = rows.findIndex((r) => r.original.alpha2Code === highlight);
+    if (idx >= 0) {
+      const pageSize = tableUN.getState().pagination.pageSize;
+      tableUN.setPageIndex(Math.floor(idx / pageSize));
+      // Auto-expand timezones section for the highlighted country
+      const rowId = String(idx);
+      setExpandedSection((prev) => ({ ...prev, [highlight]: "timezones" }));
+      setExpandedRows((prev) => ({ ...prev, [rowId]: true }));
+    }
+    const timer = setTimeout(() => {
+      const el = document.querySelector(".bg-blue-100");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }, 100);
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className="min-h-screen p-6">
       <h1 className="text-3xl font-bold mb-6">Countries</h1>
@@ -671,15 +846,28 @@ function Countries() {
           <DataTable
             table={tableUN}
             cellClassName={(colId, row) =>
-              `${getCellHighlight(colId, row.original)} ${getColumnBorder(colId)}`
+              `${highlight === row.original.alpha2Code ? "bg-blue-100 dark:bg-blue-950" : getCellHighlight(colId, row.original)} ${getColumnBorder(colId)}`
             }
             headerClassName={(colId) => getColumnBorder(colId)}
-            renderExpandedRow={(row) => (
-              <LazySubdivisionsRow
-                alpha2Code={row.original.alpha2Code}
-                colSpan={row.getVisibleCells().length}
-              />
-            )}
+            renderExpandedRow={(row) => {
+              const section = expandedSection[row.original.alpha2Code];
+              if (!section) return null;
+              return (
+                <ExpandedCountryRow
+                  alpha2Code={row.original.alpha2Code}
+                  colSpan={row.getVisibleCells().length}
+                  timezones={
+                    section === "timezones"
+                      ? (timezoneMap[row.original.alpha2Code] ?? [])
+                      : []
+                  }
+                  hasSubdivisions={
+                    section === "subdivisions" &&
+                    !!row.original.subdivisionCount
+                  }
+                />
+              );
+            }}
           />
           <Pagination table={tableUN} totalItems={countriesUN.length} />
         </div>

@@ -17,10 +17,6 @@ export interface Currency {
   name: string;
   minorUnit: number | null;
   countries?: string[];
-  status?: "active" | "historic" | "withdrawn";
-  introducedDate?: string;
-  withdrawnDate?: string;
-  namePlural?: string;
   definitions?: string;
 }
 
@@ -50,7 +46,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "UAE Dirham",
 			countries: ["AE"],
-			status: "active",
 		},
     {
       symbolUnicode: "؋",
@@ -59,7 +54,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Afghani",
 			countries: ["AF"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -68,7 +62,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Lek",
 			countries: ["AL"],
-			status: "active",
 		},
     {
       symbolUnicode: "֏",
@@ -77,7 +70,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Armenian Dram",
 			countries: ["AM"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -86,7 +78,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Kwanza",
 			countries: ["AO"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -95,7 +86,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Argentine Peso",
 			countries: ["AR"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -104,7 +94,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Australian Dollar",
 			countries: ["AU","CX","CC","HM","KI","NR","NF","TV"],
-			status: "active",
 		},
     {
       symbolUnicode: "ƒ",
@@ -113,7 +102,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Aruban Florin",
 			countries: ["AW"],
-			status: "active",
 		},
     {
       symbolUnicode: "₼",
@@ -122,7 +110,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Azerbaijan Manat",
 			countries: ["AZ"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -131,7 +118,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Convertible Mark",
 			countries: ["BA"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -140,7 +126,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Barbados Dollar",
 			countries: ["BB"],
-			status: "active",
 		},
     {
       symbolUnicode: "৳",
@@ -149,7 +134,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Taka",
 			countries: ["BD"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -158,18 +142,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 3,
       name: "Bahraini Dinar",
 			countries: ["BH"],
-			status: "active",
-		},
-		{
-			symbolUnicode: "лв",
-			code: "BGN",
-			numericCode: "975",
-			minorUnit: 2,
-			name: "Bulgarian Lev",
-			countries: ["BG"],
-			status: "withdrawn",
-			withdrawnDate: "2026-01-01",
-			definitions: "Replaced by EUR on 2026-01-01. Fixed exchange rate: EUR 1 = BGN 1.95583.",
 		},
     {
       symbolUnicode: null,
@@ -178,7 +150,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 0,
       name: "Burundi Franc",
 			countries: ["BI"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -187,7 +158,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Bermudian Dollar",
 			countries: ["BM"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -196,7 +166,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Brunei Dollar",
 			countries: ["BN"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -205,7 +174,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Boliviano",
 			countries: ["BO"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -217,7 +185,6 @@ export const getCurrencies = createServerFn({
       definitions:
         "For indexation purposes and denomination of certain financial instruments (e.g. treasury bills). The Mvdol is set daily by the Central Bank of Bolivia based on the official USD/BOB rate.",
 			countries: ["BO"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -226,7 +193,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Brazilian Real",
 			countries: ["BR"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -235,7 +201,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Bahamian Dollar",
 			countries: ["BS"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -244,7 +209,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Ngultrum",
 			countries: ["BT"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -253,7 +217,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Pula",
 			countries: ["BW"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -262,7 +225,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Belarusian Ruble",
 			countries: ["BY"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -271,7 +233,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Belize Dollar",
 			countries: ["BZ"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -280,7 +241,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Canadian Dollar",
 			countries: ["CA"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -289,7 +249,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Congolese Franc",
 			countries: ["CD"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -301,7 +260,6 @@ export const getCurrencies = createServerFn({
       definitions:
         "WIR Euro – WIR Bank for use with the EFTPOS system with their own WIR-card and the Electronic Banking Services",
 			countries: ["CH"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -310,7 +268,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Swiss Franc",
 			countries: ["LI","CH"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -322,7 +279,6 @@ export const getCurrencies = createServerFn({
       definitions:
         "WIR Franc – WIR Bank for use with the EFTPOS system with their own WIR-card and the Electronic Banking Services.",
 			countries: ["CH"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -334,7 +290,6 @@ export const getCurrencies = createServerFn({
       definitions:
         "The CLF is a daily economically-financial unit calculated by the Central Bank of Chile according to inflation (as measured by the Chilean Consumer Price Index of the previous month). The value of the CLF is expressed in terms of Chilean Pesos per CLF. The use of CLF has been widely extended to all types of bank loans, financial investments (time deposits, mortgages and other public or private indexed instruments), contracts and fees in some cases.",
 			countries: ["CL"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -343,7 +298,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 0,
       name: "Chilean Peso",
 			countries: ["CL"],
-			status: "active",
 		},
     {
       symbolUnicode: "¥",
@@ -352,7 +306,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Yuan Renminbi",
 			countries: ["CN"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -361,7 +314,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Colombian Peso",
 			countries: ["CO"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -373,7 +325,6 @@ export const getCurrencies = createServerFn({
       definitions:
         "The UVR is a daily account unit set by the Central Bank of Colombia according to the variation in the Consumer Price Index of Colombia. The value of UVR is expressed in terms of Colombian Pesos per UVR. It is used to denominate and update mortgage loans and some public debt bonds.",
 			countries: ["CO"],
-			status: "active",
 		},
     {
       symbolUnicode: "₡",
@@ -382,7 +333,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Costa Rican Colon",
 			countries: ["CR"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -391,7 +341,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Cuban Peso",
 			countries: ["CU"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -400,7 +349,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Cabo Verde Escudo",
 			countries: ["CV"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -409,7 +357,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Czech Koruna",
 			countries: ["CZ"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -418,7 +365,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 0,
       name: "Djibouti Franc",
 			countries: ["DJ"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -427,7 +373,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Danish Krone",
 			countries: ["DK","FO","GL"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -436,7 +381,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Dominican Peso",
 			countries: ["DO"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -445,7 +389,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Algerian Dinar",
 			countries: ["DZ"],
-			status: "active",
 		},
     {
       symbolUnicode: "£",
@@ -454,7 +397,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Egyptian Pound",
 			countries: ["EG"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -463,7 +405,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Nakfa",
 			countries: ["ER"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -472,7 +413,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Ethiopian Birr",
 			countries: ["ET"],
-			status: "active",
 		},
     {
       symbolUnicode: "€",
@@ -481,7 +421,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Euro",
 			countries: ["AD","AT","BE","BG","HR","CY","EE","EU","FI","FR","GF","TF","DE","GR","GP","VA","IE","IT","LV","LT","LU","MT","MQ","YT","MC","ME","NL","PT","RE","BL","MF","PM","SM","SK","SI","ES","AX"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -490,7 +429,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Fiji Dollar",
 			countries: ["FJ"],
-			status: "active",
 		},
     {
       symbolUnicode: "£",
@@ -499,7 +437,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Falkland Islands Pound",
 			countries: ["FK"],
-			status: "active",
 		},
     {
       symbolUnicode: "£",
@@ -508,7 +445,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Pound Sterling",
 			countries: ["GG","IM","JE","GB"],
-			status: "active",
 		},
     {
       symbolUnicode: "₾",
@@ -517,7 +453,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Lari",
 			countries: ["GE"],
-			status: "active",
 		},
     {
       symbolUnicode: "₵",
@@ -526,7 +461,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Ghana Cedi",
 			countries: ["GH"],
-			status: "active",
 		},
     {
       symbolUnicode: "£",
@@ -535,7 +469,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Gibraltar Pound",
 			countries: ["GI"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -544,7 +477,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Dalasi",
 			countries: ["GM"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -553,7 +485,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 0,
       name: "Guinean Franc",
 			countries: ["GN"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -562,7 +493,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Quetzal",
 			countries: ["GT"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -571,7 +501,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Guyana Dollar",
 			countries: ["GY"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -580,7 +509,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Hong Kong Dollar",
 			countries: ["HK"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -589,7 +517,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Lempira",
 			countries: ["HN"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -598,7 +525,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Gourde",
 			countries: ["HT"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -607,7 +533,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Forint",
 			countries: ["HU"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -616,7 +541,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Rupiah",
 			countries: ["ID"],
-			status: "active",
 		},
     {
       symbolUnicode: "₪",
@@ -625,7 +549,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "New Israeli Sheqel",
 			countries: ["IL"],
-			status: "active",
 		},
     {
       symbolUnicode: "₹",
@@ -634,7 +557,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Indian Rupee",
 			countries: ["BT","IN"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -643,7 +565,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 3,
       name: "Iraqi Dinar",
 			countries: ["IQ"],
-			status: "active",
 		},
     {
       symbolUnicode: "﷼",
@@ -652,7 +573,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Iranian Rial",
 			countries: ["IR"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -661,7 +581,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 0,
       name: "Iceland Krona",
 			countries: ["IS"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -670,7 +589,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Jamaican Dollar",
 			countries: ["JM"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -679,7 +597,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 3,
       name: "Jordanian Dinar",
 			countries: ["JO"],
-			status: "active",
 		},
     {
       symbolUnicode: "¥",
@@ -688,7 +605,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 0,
       name: "Yen",
 			countries: ["JP"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -697,7 +613,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Kenyan Shilling",
 			countries: ["KE"],
-			status: "active",
 		},
     {
       symbolUnicode: "⃀",
@@ -706,7 +621,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Som",
 			countries: ["KG"],
-			status: "active",
 		},
     {
       symbolUnicode: "៛",
@@ -715,7 +629,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Riel",
 			countries: ["KH"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -724,7 +637,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 0,
       name: "Comorian Franc ",
 			countries: ["KM"],
-			status: "active",
 		},
     {
       symbolUnicode: "₩",
@@ -733,7 +645,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "North Korean Won",
 			countries: ["KP"],
-			status: "active",
 		},
     {
       symbolUnicode: "₩",
@@ -742,7 +653,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 0,
       name: "Won",
 			countries: ["KR"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -751,7 +661,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 3,
       name: "Kuwaiti Dinar",
 			countries: ["KW"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -760,7 +669,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Cayman Islands Dollar",
 			countries: ["KY"],
-			status: "active",
 		},
     {
       symbolUnicode: "₸",
@@ -769,7 +677,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Tenge",
 			countries: ["KZ"],
-			status: "active",
 		},
     {
       symbolUnicode: "₭",
@@ -778,7 +685,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Lao Kip",
 			countries: ["LA"],
-			status: "active",
 		},
     {
       symbolUnicode: "£",
@@ -787,7 +693,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Lebanese Pound",
 			countries: ["LB"],
-			status: "active",
 		},
     {
       symbolUnicode: "₨",
@@ -796,7 +701,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Sri Lanka Rupee",
 			countries: ["LK"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -805,7 +709,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Liberian Dollar",
 			countries: ["LR"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -814,7 +717,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Loti",
 			countries: ["LS"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -823,7 +725,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 3,
       name: "Libyan Dinar",
 			countries: ["LY"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -832,7 +733,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Moroccan Dirham",
 			countries: ["MA","EH"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -841,7 +741,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Moldovan Leu",
 			countries: ["MD"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -850,7 +749,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Malagasy Ariary",
 			countries: ["MG"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -859,7 +757,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Denar",
 			countries: ["MK"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -868,7 +765,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Kyat",
 			countries: ["MM"],
-			status: "active",
 		},
     {
       symbolUnicode: "₮",
@@ -877,7 +773,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Tugrik",
 			countries: ["MN"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -886,7 +781,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Pataca",
 			countries: ["MO"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -895,7 +789,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Ouguiya",
 			countries: ["MR"],
-			status: "active",
 		},
     {
       symbolUnicode: "₨",
@@ -904,7 +797,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Mauritius Rupee",
 			countries: ["MU"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -913,7 +805,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Rufiyaa",
 			countries: ["MV"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -922,7 +813,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Malawi Kwacha",
 			countries: ["MW"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -931,7 +821,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Mexican Peso",
 			countries: ["MX"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -943,7 +832,6 @@ export const getCurrencies = createServerFn({
       definitions:
         "The UDI is an inflation adjusted mechanism set by the Central Bank of Mexico according to the variation in the Mexican Consumer Price Index. The value of the UDI is expressed in terms of Mexican Pesos per UDI. It is used to denominate mortgage loans, some bank deposits with maturities of 3 month or more and Government bonds (UDIBONOS).",
 			countries: ["MX"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -952,7 +840,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Malaysian Ringgit",
 			countries: ["MY"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -961,7 +848,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Mozambique Metical",
 			countries: ["MZ"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -970,7 +856,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Namibia Dollar",
 			countries: ["NA"],
-			status: "active",
 		},
     {
       symbolUnicode: "₦",
@@ -979,7 +864,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Naira",
 			countries: ["NG"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -988,7 +872,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Cordoba Oro",
 			countries: ["NI"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -997,7 +880,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Norwegian Krone",
 			countries: ["BV","NO","SJ"],
-			status: "active",
 		},
     {
       symbolUnicode: "₨",
@@ -1006,7 +888,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Nepalese Rupee",
 			countries: ["NP"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -1015,7 +896,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "New Zealand Dollar",
 			countries: ["CK","NZ","NU","PN","TK"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1024,7 +904,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 3,
       name: "Rial Omani",
 			countries: ["OM"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1033,7 +912,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Balboa",
 			countries: ["PA"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1042,7 +920,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Sol",
 			countries: ["PE"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1051,7 +928,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Kina",
 			countries: ["PG"],
-			status: "active",
 		},
     {
       symbolUnicode: "₱",
@@ -1060,7 +936,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Philippine Peso",
 			countries: ["PH"],
-			status: "active",
 		},
     {
       symbolUnicode: "₨",
@@ -1069,7 +944,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Pakistan Rupee",
 			countries: ["PK"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1078,7 +952,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Zloty",
 			countries: ["PL"],
-			status: "active",
 		},
     {
       symbolUnicode: "₲",
@@ -1087,7 +960,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 0,
       name: "Guarani",
 			countries: ["PY"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1096,7 +968,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Qatari Rial",
 			countries: ["QA"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1105,7 +976,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Romanian Leu",
 			countries: ["RO"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1114,7 +984,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Serbian Dinar",
 			countries: ["RS"],
-			status: "active",
 		},
     {
       symbolUnicode: "₽",
@@ -1123,7 +992,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Russian Ruble",
 			countries: ["RU"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1132,7 +1000,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 0,
       name: "Rwanda Franc",
 			countries: ["RW"],
-			status: "active",
 		},
     {
       symbolUnicode: "⃁",
@@ -1141,7 +1008,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Saudi Riyal",
 			countries: ["SA"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -1150,7 +1016,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Solomon Islands Dollar",
 			countries: ["SB"],
-			status: "active",
 		},
     {
       symbolUnicode: "₨",
@@ -1159,7 +1024,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Seychelles Rupee",
 			countries: ["SC"],
-			status: "active",
 		},
     {
       symbolUnicode: "£",
@@ -1168,7 +1032,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Sudanese Pound",
 			countries: ["SD"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1177,7 +1040,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Swedish Krona",
 			countries: ["SE"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -1186,7 +1048,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Singapore Dollar",
 			countries: ["SG"],
-			status: "active",
 		},
     {
       symbolUnicode: "£",
@@ -1195,7 +1056,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Saint Helena Pound",
 			countries: ["SH"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1204,7 +1064,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Leone",
 			countries: ["SL"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1213,7 +1072,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Somali Shilling",
 			countries: ["SO"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -1222,7 +1080,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Surinam Dollar",
 			countries: ["SR"],
-			status: "active",
 		},
     {
       symbolUnicode: "£",
@@ -1231,7 +1088,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "South Sudanese Pound",
 			countries: ["SS"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1240,7 +1096,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Dobra",
 			countries: ["ST"],
-			status: "active",
 		},
     {
       symbolUnicode: "₡",
@@ -1249,7 +1104,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "El Salvador Colon",
 			countries: ["SV"],
-			status: "active",
 		},
     {
       symbolUnicode: "£",
@@ -1258,7 +1112,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Syrian Pound",
 			countries: ["SY"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1267,7 +1120,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Lilangeni",
 			countries: ["SZ"],
-			status: "active",
 		},
     {
       symbolUnicode: "฿",
@@ -1276,7 +1128,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Baht",
 			countries: ["TH"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1285,7 +1136,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Somoni",
 			countries: ["TJ"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1294,7 +1144,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Turkmenistan New Manat",
 			countries: ["TM"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1303,7 +1152,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 3,
       name: "Tunisian Dinar",
 			countries: ["TN"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1312,7 +1160,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Pa’anga",
 			countries: ["TO"],
-			status: "active",
 		},
     {
       symbolUnicode: "₺",
@@ -1321,7 +1168,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Turkish Lira",
 			countries: ["TR"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -1330,7 +1176,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Trinidad and Tobago Dollar",
 			countries: ["TT"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -1339,7 +1184,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "New Taiwan Dollar",
 			countries: ["TW"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1348,7 +1192,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Tanzanian Shilling",
 			countries: ["TZ"],
-			status: "active",
 		},
     {
       symbolUnicode: "₴",
@@ -1357,7 +1200,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Hryvnia",
 			countries: ["UA"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1366,7 +1208,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 0,
       name: "Uganda Shilling",
 			countries: ["UG"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -1375,7 +1216,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "US Dollar",
 			countries: ["AS","BQ","IO","EC","SV","GU","HT","MH","FM","MP","PW","PA","PR","TL","TC","UM","US","VG","VI"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1387,7 +1227,6 @@ export const getCurrencies = createServerFn({
       definitions:
         " ”Next day“ funds are immediately available for transfer in like funds, and, subject to settlement, available the next business day for same day funds transfer or withdrawal in cash.",
 			countries: ["US"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1399,7 +1238,6 @@ export const getCurrencies = createServerFn({
       definitions:
         "The UYI (URUIURUI) is used for issuance of debt instruments by the Uruguayan government in the international global bond market.  It is calculated based on an established methodology using underlying inflationary statistics in the Uruguayan market. (Introduced in 2002).",
 			countries: ["UY"],
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -1408,7 +1246,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Peso Uruguayo",
 			countries: ["UY"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1420,7 +1257,6 @@ export const getCurrencies = createServerFn({
       definitions:
         "The Unidad Previsional  (UP) is a daily accounting unit that tracks changes to the nominal wage index. The value of UP is expressed in terms of Uruguayan Pesos per UP, with the initial value of one peso (UYU 1.00) on 04/30/2018. The institution responsible for the calculation and publication is the Instituto Nacional de Estadística (National Bureau of Statistics) according to Law 19,608.",
 			countries: ["UY"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1429,7 +1265,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Uzbekistan Sum",
 			countries: ["UZ"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1438,7 +1273,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Bolívar Soberano",
 			countries: ["VE"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1447,7 +1281,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Bolívar Soberano",
 			countries: ["VE"],
-			status: "active",
 		},
     {
       symbolUnicode: "₫",
@@ -1456,7 +1289,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 0,
       name: "Dong",
 			countries: ["VN"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1465,7 +1297,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 0,
       name: "Vatu",
 			countries: ["VU"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1474,7 +1305,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Tala",
 			countries: ["WS"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1485,7 +1315,6 @@ export const getCurrencies = createServerFn({
       name: "Arab Accounting Dinar",
       definitions:
         "The Arab Accounting Dinar is the official and reporting currency of the Arab Monetary Fund Reserve Asset. The decimal for the currency is set to 1.00, which corresponds to a Minor Unit of 2.",
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1495,7 +1324,6 @@ export const getCurrencies = createServerFn({
       type: "supranational",
       name: "CFA Franc BEAC",
 			countries: ["CM","CF","TD","CG","GQ","GA"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1504,7 +1332,6 @@ export const getCurrencies = createServerFn({
       type: "precious metal",
       minorUnit: null,
       name: "Silver",
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1513,7 +1340,6 @@ export const getCurrencies = createServerFn({
       type: "precious metal",
       minorUnit: null,
       name: "Gold",
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1522,7 +1348,6 @@ export const getCurrencies = createServerFn({
       type: "bond market unit",
       minorUnit: null,
       name: "Bond Markets Unit European Composite Unit (EURCO)",
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1531,7 +1356,6 @@ export const getCurrencies = createServerFn({
       type: "bond market unit",
       minorUnit: null,
       name: "Bond Markets Unit European Monetary Unit (E.M.U.-6)",
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1540,7 +1364,6 @@ export const getCurrencies = createServerFn({
       type: "bond market unit",
       minorUnit: null,
       name: "Bond Markets Unit European Unit of Account 9 (E.U.A.-9)",
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1549,7 +1372,6 @@ export const getCurrencies = createServerFn({
       type: "bond market unit",
       minorUnit: null,
       name: "Bond Markets Unit European Unit of Account 17 (E.U.A.-17)",
-			status: "active",
 		},
     {
       symbolUnicode: "$",
@@ -1559,7 +1381,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "East Caribbean Dollar",
 			countries: ["AI","AG","DM","GD","MS","KN","LC","VC"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1569,7 +1390,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Caribbean Guilder",
 			countries: ["CW","SX"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1578,7 +1398,6 @@ export const getCurrencies = createServerFn({
       type: "special drawing right",
       minorUnit: null,
       name: "SDR (Special Drawing Right)",
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1588,7 +1407,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 0,
       name: "CFA Franc BCEAO",
 			countries: ["BJ","BF","CI","GW","ML","NE","SN","TG"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1597,7 +1415,6 @@ export const getCurrencies = createServerFn({
       type: "precious metal",
       minorUnit: null,
       name: "Palladium",
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1607,7 +1424,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 0,
       name: "CFP Franc",
 			countries: ["PF","NC","WF"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1616,7 +1432,6 @@ export const getCurrencies = createServerFn({
       type: "precious metal",
       minorUnit: null,
       name: "Platinum",
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1625,7 +1440,6 @@ export const getCurrencies = createServerFn({
       type: "supranational",
       minorUnit: null,
       name: "Sucre",
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1634,7 +1448,6 @@ export const getCurrencies = createServerFn({
       type: "testing",
       minorUnit: null,
       name: "Codes specifically reserved for testing purposes",
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1643,7 +1456,6 @@ export const getCurrencies = createServerFn({
       type: "supranational",
       minorUnit: null,
       name: "ADB Unit of Account",
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1652,7 +1464,6 @@ export const getCurrencies = createServerFn({
       type: "no-currency",
       minorUnit: null,
       name: "The codes assigned for transactions where no currency is involved",
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1661,7 +1472,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Yemeni Rial",
 			countries: ["YE"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1670,7 +1480,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Rand",
 			countries: ["LS","NA","ZA"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1679,7 +1488,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Zambian Kwacha",
 			countries: ["ZM"],
-			status: "active",
 		},
     {
       symbolUnicode: null,
@@ -1688,7 +1496,6 @@ export const getCurrencies = createServerFn({
       minorUnit: 2,
       name: "Zimbabwe Gold",
 			countries: ["ZW"],
-			status: "active",
 		},
   ];
 

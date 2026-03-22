@@ -27,6 +27,7 @@ import {
   getCurrenciesByCountry,
 } from "@/data/currencies";
 import { type CountryTimezone, getTimezonesByCountry } from "@/data/timezones";
+import { ExportButtons } from "@/components/ExportButtons";
 import { fuzzyFilter } from "@/lib/fuzzy-filter";
 
 const facetedFilter: FilterFn<Country> = (row, columnId, filterValue) => {
@@ -49,18 +50,25 @@ export const Route = createFileRoute("/countries/")({
     search: Record<string, unknown>,
   ): { highlight?: string; expandTz?: boolean; expandCcy?: boolean } => ({
     highlight: (search.highlight as string) || undefined,
-    expandTz: search.expandTz === true || search.expandTz === "true" || undefined,
-    expandCcy: search.expandCcy === true || search.expandCcy === "true" || undefined,
+    expandTz:
+      search.expandTz === true || search.expandTz === "true" || undefined,
+    expandCcy:
+      search.expandCcy === true || search.expandCcy === "true" || undefined,
   }),
   loader: async () => {
-    const [countriesIntl, countriesUN, countriesMissing, timezoneMap, currencyMap] =
-      await Promise.all([
-        getCountries(),
-        getCountriesFromUN(),
-        getMissingCountries(),
-        getTimezonesByCountry(),
-        getCurrenciesByCountry(),
-      ]);
+    const [
+      countriesIntl,
+      countriesUN,
+      countriesMissing,
+      timezoneMap,
+      currencyMap,
+    ] = await Promise.all([
+      getCountries(),
+      getCountriesFromUN(),
+      getMissingCountries(),
+      getTimezonesByCountry(),
+      getCurrenciesByCountry(),
+    ]);
     // Enrich UN countries with timezone and currency counts
     const countriesUNWithTz = countriesUN.map((c) => ({
       ...c,
@@ -256,7 +264,8 @@ function ExpandedCountryRow({
     );
   }
 
-  if (!showTimezones && !showCurrencies && !showSubdivisions && !loading) return null;
+  if (!showTimezones && !showCurrencies && !showSubdivisions && !loading)
+    return null;
 
   return (
     <>
@@ -426,8 +435,13 @@ function ActiveFilters<TData>({
 }
 
 function Countries() {
-  const { countriesIntl, countriesUN, countriesMissing, timezoneMap, currencyMap } =
-    Route.useLoaderData();
+  const {
+    countriesIntl,
+    countriesUN,
+    countriesMissing,
+    timezoneMap,
+    currencyMap,
+  } = Route.useLoaderData();
   const { highlight, expandTz, expandCcy } = Route.useSearch();
   const [globalFilter, setGlobalFilter] = React.useState("");
   const [expandedSection, setExpandedSection] = React.useState<
@@ -627,7 +641,7 @@ function Countries() {
       },
       {
         accessorKey: "timezoneCount",
-        header: "TZ",
+        header: "Timezones",
         size: 80,
         maxSize: 80,
         cell: ({ row }) => {
@@ -654,7 +668,7 @@ function Countries() {
       },
       {
         accessorKey: "currencyCount",
-        header: "CCY",
+        header: "Currencies",
         size: 80,
         maxSize: 80,
         cell: ({ row }) => {
@@ -923,17 +937,20 @@ function Countries() {
               Olympic codes, UN &amp; EU membership
             </li>
           </ul>
-          <p className="text-sm text-muted-foreground mb-4">
-            Total: {countriesUN.length} countries
-            {tableUN.getFilteredRowModel().rows.length !==
-              countriesUN.length && (
-              <span>
-                {" "}
-                | Filtered: {tableUN.getFilteredRowModel().rows.length}
-                <ActiveFilters table={tableUN} />
-              </span>
-            )}
-          </p>
+          <div className="flex items-center justify-between mb-4">
+            <p className="text-sm text-muted-foreground">
+              Total: {countriesUN.length} countries
+              {tableUN.getFilteredRowModel().rows.length !==
+                countriesUN.length && (
+                <span>
+                  {" "}
+                  | Filtered: {tableUN.getFilteredRowModel().rows.length}
+                  <ActiveFilters table={tableUN} />
+                </span>
+              )}
+            </p>
+            <ExportButtons table={tableUN} filename="countries-un" />
+          </div>
           <DataTable
             table={tableUN}
             cellClassName={(colId, row) =>
@@ -980,16 +997,19 @@ function Countries() {
               </h2>
               <ColumnVisibility table={tableMissing} />
             </div>
-            <p className="text-sm text-muted-foreground mb-4">
-              Total: {countriesMissing.length} countries
-              {tableMissing.getFilteredRowModel().rows.length !==
-                countriesMissing.length && (
-                <span>
-                  {" "}
-                  | Filtered: {tableMissing.getFilteredRowModel().rows.length}
-                </span>
-              )}
-            </p>
+            <div className="flex items-center justify-between mb-4">
+              <p className="text-sm text-muted-foreground">
+                Total: {countriesMissing.length} countries
+                {tableMissing.getFilteredRowModel().rows.length !==
+                  countriesMissing.length && (
+                  <span>
+                    {" "}
+                    | Filtered: {tableMissing.getFilteredRowModel().rows.length}
+                  </span>
+                )}
+              </p>
+              <ExportButtons table={tableMissing} filename="countries-missing" />
+            </div>
             <DataTable
               table={tableMissing}
               cellClassName={(colId, row) =>

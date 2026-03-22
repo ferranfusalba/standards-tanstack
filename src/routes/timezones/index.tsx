@@ -22,59 +22,7 @@ import { DataTable } from "@/components/DataTable";
 import { Pagination } from "@/components/Pagination";
 import { ColumnVisibility } from "@/components/ColumnVisibility";
 
-function downloadFile(content: string, filename: string, mimeType: string) {
-  const blob = new Blob([content], { type: mimeType });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = filename;
-  a.click();
-  URL.revokeObjectURL(url);
-}
-
-function getVisibleKeys<TData>(
-  table: { getVisibleLeafColumns: () => { id: string }[] },
-  rows: TData[],
-): string[] {
-  const cols = table.getVisibleLeafColumns().map((c) => c.id);
-  if (rows.length === 0) return cols;
-  const dataKeys = new Set(Object.keys(rows[0] as Record<string, unknown>));
-  return cols.filter((c) => dataKeys.has(c));
-}
-
-function exportTableCSV<TData extends Record<string, unknown>>(
-  table: { getVisibleLeafColumns: () => { id: string }[] },
-  rows: TData[],
-  filename: string,
-) {
-  const keys = getVisibleKeys(table, rows);
-  const header = keys.join(",");
-  const lines = rows.map((row) =>
-    keys
-      .map((k) => {
-        const val = row[k];
-        if (Array.isArray(val)) return `"${val.join(",")}"`;
-        if (val === null || val === undefined) return '""';
-        return `"${String(val)}"`;
-      })
-      .join(","),
-  );
-  downloadFile([header, ...lines].join("\n"), filename, "text/csv");
-}
-
-function exportTableJSON<TData extends Record<string, unknown>>(
-  table: { getVisibleLeafColumns: () => { id: string }[] },
-  rows: TData[],
-  filename: string,
-) {
-  const keys = getVisibleKeys(table, rows);
-  const filtered = rows.map((row) => {
-    const obj: Record<string, unknown> = {};
-    for (const k of keys) obj[k] = row[k];
-    return obj;
-  });
-  downloadFile(JSON.stringify(filtered, null, 2), filename, "application/json");
-}
+import { ExportButtons } from "@/components/ExportButtons";
 
 // biome-ignore lint/suspicious/noExplicitAny: FilterFn generics are contravariant, making typed versions incompatible across table types
 const facetedFilter: FilterFn<any> = (row, columnId, filterValue) => {
@@ -478,34 +426,7 @@ function Timezones() {
                 </span>
               )}
             </p>
-            <div className="flex gap-1">
-              <button
-                type="button"
-                onClick={() =>
-                  exportTableCSV(
-                    tableIntl,
-                    tableIntl.getFilteredRowModel().rows.map((r) => r.original as unknown as Record<string, unknown>),
-                    "timezones-intl.csv",
-                  )
-                }
-                className="px-2 py-1 text-xs bg-secondary text-secondary-foreground border border-border rounded hover:bg-accent"
-              >
-                CSV
-              </button>
-              <button
-                type="button"
-                onClick={() =>
-                  exportTableJSON(
-                    tableIntl,
-                    tableIntl.getFilteredRowModel().rows.map((r) => r.original as unknown as Record<string, unknown>),
-                    "timezones-intl.json",
-                  )
-                }
-                className="px-2 py-1 text-xs bg-secondary text-secondary-foreground border border-border rounded hover:bg-accent"
-              >
-                JSON
-              </button>
-            </div>
+            <ExportButtons table={tableIntl} filename="timezones-intl" />
           </div>
           <DataTable
             table={tableIntl}
@@ -547,34 +468,7 @@ function Timezones() {
                 </span>
               )}
             </p>
-            <div className="flex gap-1">
-              <button
-                type="button"
-                onClick={() =>
-                  exportTableCSV(
-                    tableIANA,
-                    tableIANA.getFilteredRowModel().rows.map((r) => r.original as unknown as Record<string, unknown>),
-                    "timezones-iana.csv",
-                  )
-                }
-                className="px-2 py-1 text-xs bg-secondary text-secondary-foreground border border-border rounded hover:bg-accent"
-              >
-                CSV
-              </button>
-              <button
-                type="button"
-                onClick={() =>
-                  exportTableJSON(
-                    tableIANA,
-                    tableIANA.getFilteredRowModel().rows.map((r) => r.original as unknown as Record<string, unknown>),
-                    "timezones-iana.json",
-                  )
-                }
-                className="px-2 py-1 text-xs bg-secondary text-secondary-foreground border border-border rounded hover:bg-accent"
-              >
-                JSON
-              </button>
-            </div>
+            <ExportButtons table={tableIANA} filename="timezones-iana" />
           </div>
           <DataTable
             table={tableIANA}

@@ -8,46 +8,30 @@ function downloadFile(content: string, filename: string, mimeType: string) {
 	URL.revokeObjectURL(url);
 }
 
-function getVisibleKeys<TData>(
-	table: { getVisibleLeafColumns: () => { id: string }[] },
-	rows: TData[],
-): string[] {
-	const cols = table.getVisibleLeafColumns().map((c) => c.id);
-	if (rows.length === 0) return cols;
-	const dataKeys = new Set(Object.keys(rows[0] as Record<string, unknown>));
-	return cols.filter((c) => dataKeys.has(c));
-}
-
-export function exportTableCSV<TData extends Record<string, unknown>>(
-	table: { getVisibleLeafColumns: () => { id: string }[] },
-	rows: TData[],
+export function exportRowsCSV(
+	rows: Record<string, unknown>[],
 	filename: string,
 ) {
-	const keys = getVisibleKeys(table, rows);
+	if (rows.length === 0) return;
+	const keys = Object.keys(rows[0]);
 	const header = keys.join(",");
 	const lines = rows.map((row) =>
 		keys
 			.map((k) => {
 				const val = row[k];
-				if (Array.isArray(val)) return `"${val.join(",")}"`;
 				if (val === null || val === undefined) return '""';
-				return `"${String(val)}"`;
+				if (typeof val === "object")
+					return `"${JSON.stringify(val).replace(/"/g, '""')}"`;
+				return `"${String(val).replace(/"/g, '""')}"`;
 			})
 			.join(","),
 	);
 	downloadFile([header, ...lines].join("\n"), filename, "text/csv");
 }
 
-export function exportTableJSON<TData extends Record<string, unknown>>(
-	table: { getVisibleLeafColumns: () => { id: string }[] },
-	rows: TData[],
+export function exportRowsJSON(
+	rows: Record<string, unknown>[],
 	filename: string,
 ) {
-	const keys = getVisibleKeys(table, rows);
-	const filtered = rows.map((row) => {
-		const obj: Record<string, unknown> = {};
-		for (const k of keys) obj[k] = row[k];
-		return obj;
-	});
-	downloadFile(JSON.stringify(filtered, null, 2), filename, "application/json");
+	downloadFile(JSON.stringify(rows, null, 2), filename, "application/json");
 }

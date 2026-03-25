@@ -20,6 +20,7 @@ import {
   getCountriesFromUN,
   getMissingCountries,
   getSubdivisions,
+  getSubdivisionsByCountry,
   type SubdivisionData,
 } from "@/data/countries";
 import {
@@ -62,12 +63,14 @@ export const Route = createFileRoute("/countries/")({
       countriesMissing,
       timezoneMap,
       currencyMap,
+      subdivisionMap,
     ] = await Promise.all([
       getCountries(),
       getCountriesFromUN(),
       getMissingCountries(),
       getTimezonesByCountry(),
       getCurrenciesByCountry(),
+      getSubdivisionsByCountry(),
     ]);
     // Enrich UN countries with timezone and currency counts
     const countriesUNWithTz = countriesUN.map((c) => ({
@@ -81,6 +84,7 @@ export const Route = createFileRoute("/countries/")({
       countriesMissing,
       timezoneMap,
       currencyMap,
+      subdivisionMap,
     };
   },
   head: () => ({
@@ -441,6 +445,7 @@ function Countries() {
     countriesMissing,
     timezoneMap,
     currencyMap,
+    subdivisionMap,
   } = Route.useLoaderData();
   const { highlight, expandTz, expandCcy } = Route.useSearch();
   const [globalFilter, setGlobalFilter] = React.useState("");
@@ -973,7 +978,45 @@ function Countries() {
                 </span>
               )}
             </p>
-            <ExportButtons table={tableUN} filename="countries-un" />
+            <ExportButtons
+              table={tableUN}
+              filename="countries-un"
+              transformRows={(rows) =>
+                rows.map((row) => {
+                  const {
+                    timezoneCount,
+                    currencyCount,
+                    subdivisionCount,
+                    ...rest
+                  } = row;
+                  const alpha2 = rest.alpha2Code as string;
+                  return {
+                    ...rest,
+                    ...("subdivisionCount" in row && {
+                      subdivisions: (subdivisionMap[alpha2] ?? []).map(
+                        ({ code, flag, type, names }) => ({
+                          code,
+                          ...(flag ? { flag } : {}),
+                          ...(type ? { type } : {}),
+                          ...names,
+                        }),
+                      ),
+                    }),
+                    ...("timezoneCount" in row && {
+                      timezones: (timezoneMap[alpha2] ?? []).map(
+                        ({ comment, ...tz }) =>
+                          comment ? { ...tz, comment } : tz,
+                      ),
+                    }),
+                    ...("currencyCount" in row && {
+                      currencies: (currencyMap[alpha2] ?? []).map(
+                        ({ type, ...ccy }) => (type ? { ...ccy, type } : ccy),
+                      ),
+                    }),
+                  };
+                })
+              }
+            />
           </div>
           <DataTable
             table={tableUN}

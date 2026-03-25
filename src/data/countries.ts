@@ -3520,3 +3520,9 @@ export const getSubdivisions = createServerFn({
 		const subs = subdivisionsData[data.code];
 		return (subs ?? []) as SubdivisionData[];
 	});
+
+export const getSubdivisionsByCountry = createServerFn({
+	method: "GET",
+}).handler(async () => {
+	return subdivisionsData as Record<string, SubdivisionData[]>;
+});

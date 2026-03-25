@@ -588,6 +588,19 @@ function Countries() {
         meta: { filterable: true, filterMode: "presence" },
       },
       {
+        accessorKey: "aircraftRegPrefixes",
+        header: "Aircraft",
+        size: 110,
+        maxSize: 110,
+        cell: (info) => {
+          const prefixes = info.getValue<string[]>();
+          return prefixes ? prefixes.join(", ") : "-";
+        },
+        filterFn: presenceFilter,
+        meta: { filterable: true, filterMode: "presence" },
+        enableGlobalFilter: false,
+      },
+      {
         accessorKey: "independent",
         header: "Ind.",
         size: 80,
@@ -793,6 +806,17 @@ function Countries() {
         size: 70,
         maxSize: 70,
         cell: (info) => info.getValue<string>() ?? "-",
+      },
+      {
+        accessorKey: "aircraftRegPrefixes",
+        header: "Aircraft",
+        size: 100,
+        maxSize: 100,
+        cell: (info) => {
+          const prefixes = info.getValue<string[]>();
+          return prefixes ? prefixes.join(", ") : "-";
+        },
+        enableGlobalFilter: false,
       },
       {
         accessorKey: "unMembership",

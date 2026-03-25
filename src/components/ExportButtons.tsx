@@ -12,7 +12,7 @@ export function ExportButtons<TData>({
 }: ExportButtonsProps<TData>) {
 	const getRows = () =>
 		table
-			.getFilteredRowModel()
+			.getSortedRowModel()
 			.rows.map((r) => r.original as unknown as Record<string, unknown>);
 
 	return (

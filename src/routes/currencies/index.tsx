@@ -1,5 +1,4 @@
-import { Link, createFileRoute } from "@tanstack/react-router";
-import { ExportButtons } from "@/components/ExportButtons";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import type { ColumnDef } from "@tanstack/react-table";
 import {
   getCoreRowModel,
@@ -11,8 +10,14 @@ import {
 import React from "react";
 import { ColumnVisibility } from "@/components/ColumnVisibility";
 import { DataTable } from "@/components/DataTable";
+import { ExportButtons } from "@/components/ExportButtons";
 import { Pagination } from "@/components/Pagination";
-import { type Currency, getCurrencies } from "@/data/currencies";
+import {
+  type Currency,
+  getCurrencies,
+  getHistoricalCurrencies,
+  type HistoricalCurrency,
+} from "@/data/currencies";
 import { fuzzyFilter } from "@/lib/fuzzy-filter";
 
 export const Route = createFileRoute("/currencies/")({
@@ -23,8 +28,11 @@ export const Route = createFileRoute("/currencies/")({
     highlight: (search.highlight as string) || undefined,
   }),
   loader: async () => {
-    const currencies = await getCurrencies();
-    return { currencies };
+    const [currencies, historicalCurrencies] = await Promise.all([
+      getCurrencies(),
+      getHistoricalCurrencies(),
+    ]);
+    return { currencies, historicalCurrencies };
   },
   head: () => ({
     meta: [
@@ -34,14 +42,14 @@ export const Route = createFileRoute("/currencies/")({
       {
         name: "description",
         content:
-          "ISO 4217 currency codes, symbols, numeric codes, and minor units. Browse active currencies worldwide from the SIX Group List One.",
+          "ISO 4217 currency codes, symbols, numeric codes, and minor units. Browse active and historical currencies worldwide from the SIX Group.",
       },
     ],
   }),
 });
 
 function Currencies() {
-  const { currencies } = Route.useLoaderData();
+  const { currencies, historicalCurrencies } = Route.useLoaderData();
   const { highlight } = Route.useSearch();
   const [globalFilter, setGlobalFilter] = React.useState("");
 
@@ -152,14 +160,115 @@ function Currencies() {
     },
   });
 
+  const historicalColumns = React.useMemo<ColumnDef<HistoricalCurrency>[]>(
+    () => [
+      {
+        accessorKey: "code",
+        header: "Alphabetic Code",
+        size: 80,
+        maxSize: 80,
+        enableHiding: false,
+      },
+      {
+        accessorKey: "numericCode",
+        header: "Numeric Code",
+        size: 80,
+        maxSize: 80,
+      },
+      {
+        accessorKey: "name",
+        header: "Historic currency",
+        enableHiding: false,
+        size: 200,
+        maxSize: 200,
+      },
+      {
+        accessorKey: "country",
+        header: "Entity",
+        size: 200,
+        maxSize: 200,
+        cell: (info) => {
+          const row = info.row.original;
+          if (row.countryCode) {
+            return (
+              <span className="flex items-center gap-1.5">
+                <Link
+                  to="/countries"
+                  search={{ highlight: row.countryCode }}
+                  title={row.countryCode}
+                  className="cursor-pointer hover:opacity-70 transition-opacity"
+                >
+                  {row.countryCode
+                    .toUpperCase()
+                    .split("")
+                    .map((c) =>
+                      String.fromCodePoint(0x1f1e6 + c.charCodeAt(0) - 65),
+                    )
+                    .join("")}
+                </Link>
+                <span className="text-muted-foreground">{row.country}</span>
+              </span>
+            );
+          }
+          return <span className="text-muted-foreground">{row.country}</span>;
+        },
+      },
+      {
+        accessorKey: "withdrawalDate",
+        header: "Withdrawal Date",
+        size: 120,
+        maxSize: 120,
+      },
+      {
+        accessorKey: "isFund",
+        header: "Funds",
+        size: 60,
+        maxSize: 60,
+        cell: (info) =>
+          info.getValue() ? (
+            <span className="text-xs text-muted-foreground">WAHR</span>
+          ) : null,
+      },
+    ],
+    [],
+  );
+
+  const historicalTable = useReactTable({
+    data: historicalCurrencies,
+    columns: historicalColumns,
+    getCoreRowModel: getCoreRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+    globalFilterFn: "fuzzy",
+    state: { globalFilter },
+    onGlobalFilterChange: setGlobalFilter,
+    initialState: {
+      pagination: {
+        pageSize: 20,
+      },
+    },
+    filterFns: {
+      fuzzy: fuzzyFilter,
+    },
+  });
+
   // Navigate to the correct page and scroll to highlighted currency
   React.useEffect(() => {
     if (!highlight) return;
-    const rows = table.getFilteredRowModel().rows;
-    const idx = rows.findIndex((r) => r.original.code === highlight);
-    if (idx >= 0) {
+    // Try active table first, then historical
+    const activeRows = table.getFilteredRowModel().rows;
+    const activeIdx = activeRows.findIndex((r) => r.original.code === highlight);
+    if (activeIdx >= 0) {
       const pageSize = table.getState().pagination.pageSize;
-      table.setPageIndex(Math.floor(idx / pageSize));
+      table.setPageIndex(Math.floor(activeIdx / pageSize));
+    } else {
+      const histRows = historicalTable.getFilteredRowModel().rows;
+      const histIdx = histRows.findIndex((r) => r.original.code === highlight);
+      if (histIdx >= 0) {
+        const pageSize = historicalTable.getState().pagination.pageSize;
+        historicalTable.setPageIndex(Math.floor(histIdx / pageSize));
+      }
     }
     const timer = setTimeout(() => {
       const el = document.querySelector(".bg-blue-100");
@@ -183,34 +292,74 @@ function Currencies() {
         className="w-full px-3 py-2 mb-6 bg-secondary border border-border rounded text-foreground text-sm placeholder-muted-foreground focus:outline-none focus:border-ring"
       />
 
-      <div>
-        <div className="flex items-center justify-between mb-2">
-          <h2 className="text-xl font-semibold">
-            ISO 4217 (SIX Group List One)
-          </h2>
-          <ColumnVisibility table={table} />
+      <div className="grid gap-8">
+        <div>
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-xl font-semibold">
+              ISO 4217 (SIX Group List One)
+            </h2>
+            <ColumnVisibility table={table} />
+          </div>
+          <ul className="text-xs text-muted-foreground mb-3 space-y-1">
+            <li>• Source: SIX Group on behalf of ISO</li>
+            <li>• Standard: ISO 4217 currency codes</li>
+            <li>• Includes: Alphabetic codes, numeric codes, minor units</li>
+            <li>• Coverage: Active currencies worldwide</li>
+          </ul>
+          <div className="flex items-center justify-between mb-4">
+            <p className="text-sm text-muted-foreground">
+              Total: {currencies.length} currencies
+            </p>
+            <ExportButtons table={table} filename="currencies" />
+          </div>
+          <DataTable
+            table={table}
+            cellClassName={(_col, row) =>
+              highlight === row.original.code
+                ? "bg-blue-100 dark:bg-blue-950"
+                : ""
+            }
+          />
+          <Pagination table={table} totalItems={currencies.length} />
         </div>
-        <ul className="text-xs text-muted-foreground mb-3 space-y-1">
-          <li>• Source: SIX Group on behalf of ISO</li>
-          <li>• Standard: ISO 4217 currency codes</li>
-          <li>• Includes: Alphabetic codes, numeric codes, minor units</li>
-          <li>• Coverage: Active currencies worldwide</li>
-        </ul>
-        <div className="flex items-center justify-between mb-4">
-          <p className="text-sm text-muted-foreground">
-            Total: {currencies.length} currencies
-          </p>
-          <ExportButtons table={table} filename="currencies" />
+
+        <div>
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-xl font-semibold">
+              ISO 4217 (SIX Group List Three — Historical)
+            </h2>
+            <ColumnVisibility table={historicalTable} />
+          </div>
+          <ul className="text-xs text-muted-foreground mb-3 space-y-1">
+            <li>• Source: SIX Group on behalf of ISO</li>
+            <li>• Standard: ISO 4217 historical currency codes</li>
+            <li>
+              • Includes: Withdrawn alphabetic codes with withdrawal dates
+            </li>
+            <li>• Coverage: Currencies no longer in active use</li>
+          </ul>
+          <div className="flex items-center justify-between mb-4">
+            <p className="text-sm text-muted-foreground">
+              Total: {historicalCurrencies.length} historical currencies
+            </p>
+            <ExportButtons
+              table={historicalTable}
+              filename="currencies-historical"
+            />
+          </div>
+          <DataTable
+            table={historicalTable}
+            cellClassName={(_col, row) =>
+              highlight === row.original.code
+                ? "bg-blue-100 dark:bg-blue-950"
+                : ""
+            }
+          />
+          <Pagination
+            table={historicalTable}
+            totalItems={historicalCurrencies.length}
+          />
         </div>
-        <DataTable
-          table={table}
-          cellClassName={(_col, row) =>
-            highlight === row.original.code
-              ? "bg-blue-100 dark:bg-blue-950"
-              : ""
-          }
-        />
-        <Pagination table={table} totalItems={currencies.length} />
       </div>
     </div>
   );

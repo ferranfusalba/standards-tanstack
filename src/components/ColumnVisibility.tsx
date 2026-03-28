@@ -3,10 +3,13 @@ import React from "react";
 
 interface ColumnVisibilityProps<TData> {
 	table: TanStackTable<TData>;
+	/** Render extra content after a specific column ID (e.g. sub-checkboxes) */
+	extraItems?: { afterColumnId: string; render: () => React.ReactNode }[];
 }
 
 export function ColumnVisibility<TData>({
 	table,
+	extraItems,
 }: ColumnVisibilityProps<TData>) {
 	const [open, setOpen] = React.useState(false);
 	const ref = React.useRef<HTMLDivElement>(null);
@@ -46,22 +49,24 @@ export function ColumnVisibility<TData>({
 				<div className="absolute right-0 z-10 mt-1 w-48 rounded-lg border border-border bg-background shadow-lg">
 					<div className="p-2 space-y-1 max-h-[calc(100vh-8rem)] overflow-y-auto">
 						{toggleableColumns.map((column) => (
-							<label
-								key={column.id}
-								className="flex items-center gap-2 px-2 py-1 rounded hover:bg-accent cursor-pointer text-sm"
-							>
-								<input
-									type="checkbox"
-									checked={column.getIsVisible()}
-									onChange={column.getToggleVisibilityHandler()}
-									className="rounded"
-								/>
-								<span className="truncate">
-									{typeof column.columnDef.header === "string"
-										? column.columnDef.header
-										: column.id}
-								</span>
-							</label>
+							<React.Fragment key={column.id}>
+								<label className="flex items-center gap-2 px-2 py-1 rounded hover:bg-accent cursor-pointer text-sm">
+									<input
+										type="checkbox"
+										checked={column.getIsVisible()}
+										onChange={column.getToggleVisibilityHandler()}
+										className="rounded"
+									/>
+									<span className="truncate">
+										{typeof column.columnDef.header === "string"
+											? column.columnDef.header
+											: column.id}
+									</span>
+								</label>
+								{extraItems
+									?.filter((item) => item.afterColumnId === column.id)
+									.map((item) => item.render())}
+							</React.Fragment>
 						))}
 						<div className="flex gap-1 mt-1 pt-1 border-t border-border">
 							<button

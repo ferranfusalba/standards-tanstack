@@ -12,7 +12,14 @@ vi.mock("@tanstack/react-start", () => ({
 	}),
 }));
 
-import { type Currency, getCurrencies } from "../currencies";
+import {
+	type Currency,
+	getCurrencies,
+	getHistoricalCurrencies,
+	getHistoricalCurrenciesByCountry,
+	type HistoricalCountryCurrency,
+	type HistoricalCurrency,
+} from "../currencies";
 
 describe("getCurrencies", () => {
 	let currencies: Currency[];
@@ -62,6 +69,98 @@ describe("getCurrencies", () => {
 		for (const f of funds) {
 			expect(f.definitions).toBeDefined();
 			expect(typeof f.definitions).toBe("string");
+		}
+	});
+});
+
+describe("getHistoricalCurrencies", () => {
+	let historical: HistoricalCurrency[];
+
+	beforeAll(async () => {
+		historical = await (getHistoricalCurrencies as unknown as HandlerFn)({
+			data: undefined,
+			context: {},
+			signal: new AbortController().signal,
+		});
+	});
+
+	it("returns an array of historical currencies", () => {
+		expect(Array.isArray(historical)).toBe(true);
+		expect(historical.length).toBeGreaterThan(100);
+	});
+
+	it("each historical currency has required fields", () => {
+		for (const c of historical) {
+			expect(typeof c.code).toBe("string");
+			expect(c.code.length).toBe(3);
+			expect(typeof c.name).toBe("string");
+			expect(typeof c.country).toBe("string");
+			expect(typeof c.withdrawalDate).toBe("string");
+			expect(typeof c.isFund).toBe("boolean");
+		}
+	});
+
+	it("includes well-known historical currencies", () => {
+		const codes = historical.map((c) => c.code);
+		expect(codes).toContain("DEM"); // Deutsche Mark
+		expect(codes).toContain("FRF"); // French Franc
+		expect(codes).toContain("ITL"); // Italian Lira
+		expect(codes).toContain("ESP"); // Spanish Peseta
+	});
+
+	it("maps country codes where possible", () => {
+		const germany = historical.find(
+			(c) => c.code === "DEM" && c.country === "GERMANY",
+		);
+		expect(germany?.countryCode).toBe("DE");
+
+		const france = historical.find(
+			(c) => c.code === "FRF" && c.country === "FRANCE",
+		);
+		expect(france?.countryCode).toBe("FR");
+	});
+
+	it("leaves countryCode undefined for unmappable entities", () => {
+		const ussr = historical.find(
+			(c) => c.country === "UNION OF SOVIET SOCIALIST REPUBLICS",
+		);
+		expect(ussr).toBeDefined();
+		expect(ussr?.countryCode).toBeUndefined();
+	});
+});
+
+describe("getHistoricalCurrenciesByCountry", () => {
+	let map: Record<string, HistoricalCountryCurrency[]>;
+
+	beforeAll(async () => {
+		map = await (getHistoricalCurrenciesByCountry as unknown as HandlerFn)({
+			data: undefined,
+			context: {},
+			signal: new AbortController().signal,
+		});
+	});
+
+	it("returns a record keyed by alpha-2 codes", () => {
+		expect(typeof map).toBe("object");
+		for (const key of Object.keys(map)) {
+			expect(key.length).toBeLessThanOrEqual(2);
+		}
+	});
+
+	it("contains historical currencies for Bulgaria", () => {
+		expect(map.BG).toBeDefined();
+		expect(map.BG.length).toBeGreaterThan(0);
+		const codes = map.BG.map((c) => c.code);
+		expect(codes).toContain("BGN");
+	});
+
+	it("each entry has required fields", () => {
+		for (const entries of Object.values(map)) {
+			for (const c of entries) {
+				expect(typeof c.code).toBe("string");
+				expect(typeof c.name).toBe("string");
+				expect(typeof c.withdrawalDate).toBe("string");
+			}
 		}
 	});
 });

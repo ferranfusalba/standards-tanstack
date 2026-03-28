@@ -1,4 +1,5 @@
 import type { Column } from "@tanstack/react-table";
+import { Check, Filter } from "lucide-react";
 import React from "react";
 
 interface FilterOption {
@@ -103,18 +104,11 @@ export function ColumnFilter<TData>({ column }: ColumnFilterProps<TData>) {
         onClick={handleToggle}
         className={`text-xs hover:bg-accent ${isFiltered ? "text-blue-400" : "text-muted-foreground"}`}
       >
-        <svg
-          width="12"
-          height="12"
-          viewBox="0 0 16 16"
+        <Filter
+          className="size-3"
           fill={isFiltered ? "currentColor" : "none"}
-          stroke="currentColor"
-          strokeWidth="1.5"
           aria-hidden="true"
-        >
-          <title>Filter</title>
-          <path d="M1.5 3h13L9.5 9.5V14l-3 1.5V9.5z" />
-        </svg>
+        />
       </button>
       <div
         ref={popoverRef}
@@ -136,18 +130,7 @@ export function ColumnFilter<TData>({ column }: ColumnFilterProps<TData>) {
                   className={`inline-flex items-center justify-center w-3.5 h-3.5 rounded-sm border ${selected ? "bg-foreground border-foreground text-background" : "border-muted-foreground bg-transparent"}`}
                 >
                   {selected ? (
-                    <svg
-                      width="10"
-                      height="10"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      aria-hidden="true"
-                    >
-                      <title>Selected</title>
-                      <path d="M3 8l3.5 3.5L13 5" />
-                    </svg>
+                    <Check className="size-2.5" strokeWidth={3} aria-hidden="true" />
                   ) : (
                     <span className="w-full h-full" />
                   )}

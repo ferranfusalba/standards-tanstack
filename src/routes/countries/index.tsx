@@ -10,6 +10,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
+import { SquareArrowOutUpRight } from "lucide-react";
 import React from "react";
 import { ColumnVisibility } from "@/components/ColumnVisibility";
 import { DataTable } from "@/components/DataTable";
@@ -301,17 +302,7 @@ function ExpandedCountryRow({
                         className="flex items-center gap-1 hover:text-blue-400 transition-colors"
                       >
                         {tz.id}
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                          className="text-muted-foreground"
-                        >
-                          <path d="M6 3H3v10h10v-3M9 2h5v5M14 2L7 9" />
-                        </svg>
+                        <SquareArrowOutUpRight className="size-3 text-muted-foreground" />
                       </Link>
                     </td>
                     <td className="py-1 pr-4">{tz.name}</td>
@@ -350,17 +341,7 @@ function ExpandedCountryRow({
                         className="flex items-center gap-1 hover:text-blue-400 transition-colors"
                       >
                         {ccy.code}
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                          className="text-muted-foreground"
-                        >
-                          <path d="M6 3H3v10h10v-3M9 2h5v5M14 2L7 9" />
-                        </svg>
+                        <SquareArrowOutUpRight className="size-3 text-muted-foreground" />
                       </Link>
                     </td>
                     <td className="py-1 pr-4">{ccy.symbol ?? "-"}</td>
@@ -531,6 +512,21 @@ function Countries() {
         size: 100,
         maxSize: 100,
         enableHiding: false,
+        cell: (info) => {
+          const code = info.getValue<string>();
+          return (
+            <span className="inline-flex items-center gap-1">
+              {code}
+              <a
+                href={`https://www.iso.org/obp/ui/en/#iso:code:3166:${code}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SquareArrowOutUpRight className="size-3 text-muted-foreground hover:text-foreground transition-colors" />
+              </a>
+            </span>
+          );
+        },
       },
       {
         accessorKey: "alpha3Code",
@@ -660,8 +656,8 @@ function Countries() {
       {
         accessorKey: "timezoneCount",
         header: "Timezones",
-        size: 80,
-        maxSize: 80,
+        size: 120,
+        maxSize: 120,
         cell: ({ row }) => {
           const count = (row.original as Country & { timezoneCount?: number })
             .timezoneCount;
@@ -687,8 +683,8 @@ function Countries() {
       {
         accessorKey: "currencyCount",
         header: "Currencies",
-        size: 80,
-        maxSize: 80,
+        size: 120,
+        maxSize: 120,
         cell: ({ row }) => {
           const count = (row.original as Country & { currencyCount?: number })
             .currencyCount;
@@ -1075,7 +1071,10 @@ function Countries() {
                   </span>
                 )}
               </p>
-              <ExportButtons table={tableMissing} filename="countries-missing" />
+              <ExportButtons
+                table={tableMissing}
+                filename="countries-missing"
+              />
             </div>
             <DataTable
               table={tableMissing}

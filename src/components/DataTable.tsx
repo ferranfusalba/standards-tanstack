@@ -94,7 +94,7 @@ export function DataTable<TData>({
                 {row.getVisibleCells().map((cell, index) => (
                   <td
                     key={cell.id}
-                    className={`px-2 py-1 md:px-4 md:py-1 h-12 align-middle ${index === 0 ? `${stickyFirstCol} bg-background group-hover/row:bg-accent` : ""} ${cellClassName?.(cell.column.id, cell.row) ?? ""}`}
+                    className={`px-2 py-1 md:px-4 md:py-1 h-12 align-middle ${index === 0 ? `${stickyFirstCol} bg-background group-hover/row:bg-accent transition-colors` : ""} ${cellClassName?.(cell.column.id, cell.row) ?? ""}`}
                     style={{
                       width: cell.column.getSize(),
                       minWidth: cell.column.getSize(),

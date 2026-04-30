@@ -2,7 +2,9 @@ import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 
+import { DataFreshness } from '../components/DataFreshness'
 import Header from '../components/Header'
+import { getDataVersions } from '../data/versions'
 import { ThemeProvider } from '../lib/theme'
 
 import StoreDevtools from '../lib/demo-store-devtools'
@@ -10,6 +12,7 @@ import StoreDevtools from '../lib/demo-store-devtools'
 import appCss from '../styles.css?url'
 
 export const Route = createRootRoute({
+  loader: async () => ({ versions: await getDataVersions() }),
   head: () => ({
     meta: [
       {
@@ -95,6 +98,11 @@ export const Route = createRootRoute({
   shellComponent: RootDocument,
 })
 
+function RootFooter() {
+  const { versions } = Route.useLoaderData()
+  return <DataFreshness versions={versions} />
+}
+
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark">
@@ -105,6 +113,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <ThemeProvider>
           <Header />
           {children}
+          <RootFooter />
         </ThemeProvider>
         <TanStackDevtools
           config={{

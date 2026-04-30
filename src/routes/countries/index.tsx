@@ -183,7 +183,7 @@ function SubdivisionsExpandedRow({
 									<td className="pr-6 py-0.5 font-mono">
 										{sub.code}
 										{sub.iso1 && (
-											<span className="ml-2 px-1.5 py-0.5 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 rounded">
+											<span className="ml-2 px-1.5 py-0.5 bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 rounded">
 												{sub.iso1}
 											</span>
 										)}
@@ -337,7 +337,7 @@ function ExpandedCountryRow({
 											<Link
 												to="/timezones"
 												search={{ highlight: tz.id }}
-												className="flex items-center gap-1 hover:text-blue-400 transition-colors"
+												className="flex items-center gap-1 hover:text-cyan-400 transition-colors"
 											>
 												{tz.id}
 												<SquareArrowOutUpRight className="size-3 text-muted-foreground" />
@@ -376,7 +376,7 @@ function ExpandedCountryRow({
 											<Link
 												to="/currencies"
 												search={{ highlight: ccy.code }}
-												className="flex items-center gap-1 hover:text-blue-400 transition-colors"
+												className="flex items-center gap-1 hover:text-cyan-400 transition-colors"
 											>
 												{ccy.code}
 												<SquareArrowOutUpRight className="size-3 text-muted-foreground" />
@@ -411,7 +411,7 @@ function ExpandedCountryRow({
 													<Link
 														to="/currencies"
 														search={{ highlight: ccy.code }}
-														className="flex items-center gap-1 hover:text-blue-400 transition-colors"
+														className="flex items-center gap-1 hover:text-cyan-400 transition-colors"
 													>
 														{ccy.code}
 														<SquareArrowOutUpRight className="size-3 text-muted-foreground" />
@@ -1006,7 +1006,7 @@ function Countries() {
 
 	return (
 		<div className="min-h-screen p-6">
-			<h1 className="text-3xl font-bold mb-6">Countries</h1>
+			<h1 className="text-3xl font-bold mb-6" data-view-title="Countries">Countries</h1>
 			<input
 				type="text"
 				value={globalFilter}
@@ -1087,7 +1087,7 @@ function Countries() {
 						</li>
 						<li>
 							• Addons: ICAO 9303 passport codes, DSIT vehicle codes, IOC
-							Olympic codes, UN &amp; EU membership
+							Olympic codes, ITU aircraft registration prefixes, UN &amp; EU membership
 						</li>
 					</ul>
 					<div className="flex items-center justify-between mb-4">

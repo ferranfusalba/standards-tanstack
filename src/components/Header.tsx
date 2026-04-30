@@ -1,6 +1,6 @@
-import { Link } from '@tanstack/react-router'
+import { Link, useLocation } from '@tanstack/react-router'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
   Coins,
   Globe,
@@ -16,11 +16,47 @@ import { useTheme } from '@/lib/theme'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [viewTitle, setViewTitle] = useState<string | null>(null)
   const { theme, toggleTheme } = useTheme()
+  const location = useLocation()
+
+  useEffect(() => {
+    setViewTitle(null)
+    let observer: IntersectionObserver | null = null
+    let frame = 0
+    let cancelled = false
+    let attempts = 0
+
+    function attach() {
+      if (cancelled) return
+      const el = document.querySelector<HTMLElement>('[data-view-title]')
+      if (el) {
+        observer = new IntersectionObserver(
+          ([entry]) => {
+            setViewTitle(
+              entry.isIntersecting ? null : (el.dataset.viewTitle ?? null),
+            )
+          },
+          { rootMargin: '-64px 0px 0px 0px' },
+        )
+        observer.observe(el)
+        return
+      }
+      if (++attempts > 30) return
+      frame = requestAnimationFrame(attach)
+    }
+
+    frame = requestAnimationFrame(attach)
+    return () => {
+      cancelled = true
+      cancelAnimationFrame(frame)
+      observer?.disconnect()
+    }
+  }, [location.pathname])
 
   return (
     <>
-      <header className="p-4 flex items-center bg-secondary text-secondary-foreground shadow-lg">
+      <header className="sticky top-0 z-40 p-4 flex items-center bg-secondary text-secondary-foreground shadow-lg">
         <button
           onClick={() => setIsOpen(true)}
           className="p-2 hover:bg-accent rounded-lg transition-colors"
@@ -28,8 +64,16 @@ export default function Header() {
         >
           <Menu size={24} />
         </button>
-        <h1 className="ml-4 text-xl font-semibold flex-1">
+        <h1 className="ml-4 text-xl font-semibold flex-1 flex items-baseline gap-2">
           <Link to="/">Standards</Link>
+          <span
+            className={`text-muted-foreground font-normal transition-all duration-300 ${
+              viewTitle ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-1 pointer-events-none'
+            }`}
+            aria-hidden={!viewTitle}
+          >
+            / {viewTitle ?? ''}
+          </span>
         </h1>
         <button
           onClick={toggleTheme}

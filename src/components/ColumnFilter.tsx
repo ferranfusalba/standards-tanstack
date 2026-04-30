@@ -102,7 +102,7 @@ export function ColumnFilter<TData>({ column }: ColumnFilterProps<TData>) {
         ref={triggerRef}
         type="button"
         onClick={handleToggle}
-        className={`text-xs hover:bg-accent ${isFiltered ? "text-blue-400" : "text-muted-foreground"}`}
+        className={`text-xs hover:bg-accent ${isFiltered ? "text-blue-600 dark:text-blue-400" : "text-muted-foreground"}`}
       >
         <Filter
           className="size-3"

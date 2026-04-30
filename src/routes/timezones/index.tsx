@@ -413,7 +413,7 @@ function Timezones() {
 
 	return (
 		<div className="min-h-screen p-6">
-			<h1 className="text-3xl font-bold mb-6">Timezones</h1>
+			<h1 className="text-3xl font-bold mb-6" data-view-title="Timezones">Timezones</h1>
 			<input
 				type="text"
 				value={globalFilter}
@@ -435,7 +435,7 @@ function Timezones() {
 								onClick={() => toggleRegion(region)}
 								className={`px-2 py-1 text-xs rounded border transition-colors ${
 									selectedRegions.includes(region)
-										? "bg-white text-gray-900 border-white"
+										? "bg-foreground text-background border-foreground"
 										: "bg-secondary text-secondary-foreground border-border hover:bg-accent"
 								}`}
 							>

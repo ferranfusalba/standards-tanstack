@@ -26,49 +26,63 @@ function App() {
     {
       icon: <Coins className="w-12 h-12 text-cyan-500 dark:text-cyan-400" />,
       title: 'Currencies',
-      description:
-        'Browse international currency codes, symbols, and numeric identifiers.',
+      standards: [
+        'JS Intl.NumberFormat (symbols)',
+        'ISO 4217 List One (active)',
+        'ISO 4217 List Three (historical)',
+      ],
       path: '/currencies',
     },
     {
       icon: <Map className="w-12 h-12 text-cyan-500 dark:text-cyan-400" />,
       title: 'Timezones',
-      description:
-        'Explore timezone identifiers, offsets, and regional information.',
+      standards: [
+        'JS Intl API',
+        'IANA tzdata',
+      ],
       path: '/timezones',
     },
     {
       icon: <Globe className="w-12 h-12 text-cyan-500 dark:text-cyan-400" />,
       title: 'Countries',
-      description:
-        'View country codes, capitals, continents, and population data.',
+      standards: [
+        'JS Intl API',
+        'ISO 3166-1 (Alpha-2/3, numeric)',
+        'ISO 3166-2 (subdivisions)',
+        'UN M49 (regions, membership)',
+        'ICAO 9303 (passport codes)',
+        'DSIT (vehicle codes)',
+        'IOC (Olympic codes)',
+        'ITU (aircraft registration prefixes)',
+      ],
       path: '/countries',
     },
     {
       icon: <Languages className="w-12 h-12 text-cyan-500 dark:text-cyan-400" />,
       title: 'Languages',
-      description:
-        'Discover language codes, native names, families, and speaker counts.',
+      standards: [
+        'JS Intl.DisplayNames',
+        'ISO 639-1',
+        'IANA BCP 47 Subtag Registry',
+        'Unicode CLDR',
+      ],
       path: '/languages',
     },
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-100 via-slate-50 to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-      <section className="relative py-20 px-6 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
-        <div className="relative max-w-5xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-black mb-6">
-            <span className="bg-gradient-to-r from-cyan-500 to-blue-500 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent">
-              Standards
-            </span>
+    <div className="min-h-screen bg-background">
+      <section className="bg-cyan-400 dark:bg-cyan-500 py-24 px-6 text-center">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-6xl md:text-8xl font-black mb-6 text-slate-900">
+            Standards
           </h1>
-          <p className="text-2xl md:text-3xl text-muted-foreground mb-4 font-light">
+          <p className="text-2xl md:text-3xl text-slate-900/80 mb-4 font-light">
             Explore international standards data
           </p>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-            Browse and compare currencies, timezones, countries, and languages using
-            TanStack Table and custom implementations.
+          <p className="text-lg text-slate-900/70 max-w-3xl mx-auto">
+            Side-by-side views of what your JavaScript runtime knows versus
+            official sources.
           </p>
         </div>
       </section>
@@ -79,15 +93,20 @@ function App() {
             <Link
               key={index}
               to={page.path}
-              className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm border border-slate-200 dark:border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 block"
+              className="bg-card border border-border rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 block"
             >
               <div className="mb-4">{page.icon}</div>
               <h3 className="text-xl font-semibold mb-3">
                 {page.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {page.description}
-              </p>
+              <ul className="text-sm text-muted-foreground space-y-1">
+                {page.standards.map((s) => (
+                  <li key={s} className="flex gap-2">
+                    <span aria-hidden="true">•</span>
+                    <span>{s}</span>
+                  </li>
+                ))}
+              </ul>
             </Link>
           ))}
         </div>

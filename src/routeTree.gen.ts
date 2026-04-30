@@ -14,7 +14,6 @@ import { Route as TimezonesIndexRouteImport } from './routes/timezones/index'
 import { Route as LanguagesIndexRouteImport } from './routes/languages/index'
 import { Route as CurrenciesIndexRouteImport } from './routes/currencies/index'
 import { Route as CountriesIndexRouteImport } from './routes/countries/index'
-import { Route as DemoTableRouteImport } from './routes/demo/table'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -41,15 +40,9 @@ const CountriesIndexRoute = CountriesIndexRouteImport.update({
   path: '/countries/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DemoTableRoute = DemoTableRouteImport.update({
-  id: '/demo/table',
-  path: '/demo/table',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/demo/table': typeof DemoTableRoute
   '/countries': typeof CountriesIndexRoute
   '/currencies': typeof CurrenciesIndexRoute
   '/languages': typeof LanguagesIndexRoute
@@ -57,7 +50,6 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/demo/table': typeof DemoTableRoute
   '/countries': typeof CountriesIndexRoute
   '/currencies': typeof CurrenciesIndexRoute
   '/languages': typeof LanguagesIndexRoute
@@ -66,7 +58,6 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/demo/table': typeof DemoTableRoute
   '/countries/': typeof CountriesIndexRoute
   '/currencies/': typeof CurrenciesIndexRoute
   '/languages/': typeof LanguagesIndexRoute
@@ -74,25 +65,12 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/demo/table'
-    | '/countries'
-    | '/currencies'
-    | '/languages'
-    | '/timezones'
+  fullPaths: '/' | '/countries' | '/currencies' | '/languages' | '/timezones'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/demo/table'
-    | '/countries'
-    | '/currencies'
-    | '/languages'
-    | '/timezones'
+  to: '/' | '/countries' | '/currencies' | '/languages' | '/timezones'
   id:
     | '__root__'
     | '/'
-    | '/demo/table'
     | '/countries/'
     | '/currencies/'
     | '/languages/'
@@ -101,7 +79,6 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  DemoTableRoute: typeof DemoTableRoute
   CountriesIndexRoute: typeof CountriesIndexRoute
   CurrenciesIndexRoute: typeof CurrenciesIndexRoute
   LanguagesIndexRoute: typeof LanguagesIndexRoute
@@ -145,19 +122,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CountriesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/demo/table': {
-      id: '/demo/table'
-      path: '/demo/table'
-      fullPath: '/demo/table'
-      preLoaderRoute: typeof DemoTableRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  DemoTableRoute: DemoTableRoute,
   CountriesIndexRoute: CountriesIndexRoute,
   CurrenciesIndexRoute: CurrenciesIndexRoute,
   LanguagesIndexRoute: LanguagesIndexRoute,

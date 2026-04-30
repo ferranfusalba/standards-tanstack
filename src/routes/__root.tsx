@@ -31,6 +31,18 @@ export const Route = createRootRoute({
         content: '#0e1525',
       },
       {
+        name: 'apple-mobile-web-app-capable',
+        content: 'yes',
+      },
+      {
+        name: 'apple-mobile-web-app-status-bar-style',
+        content: 'black-translucent',
+      },
+      {
+        name: 'apple-mobile-web-app-title',
+        content: 'Standards',
+      },
+      {
         property: 'og:type',
         content: 'website',
       },
@@ -107,17 +119,19 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           ]}
         />
         <Scripts />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+        {import.meta.env.PROD && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
               if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function() {
                   navigator.serviceWorker.register('/sw.js');
                 });
               }
             `,
-          }}
-        />
+            }}
+          />
+        )}
       </body>
     </html>
   )

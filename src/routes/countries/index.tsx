@@ -33,6 +33,11 @@ import {
 } from "@/data/currencies";
 import { type CountryTimezone, getTimezonesByCountry } from "@/data/timezones";
 import { fuzzyFilter } from "@/lib/fuzzy-filter";
+import { asNumber, asString } from "@/lib/url-state";
+import {
+	useGlobalFilterSync,
+	useTableUrlState,
+} from "@/lib/use-table-url-state";
 
 const facetedFilter: FilterFn<Country> = (row, columnId, filterValue) => {
 	if (!Array.isArray(filterValue) || filterValue.length === 0) return true;
@@ -48,16 +53,42 @@ const presenceFilter: FilterFn<Country> = (row, columnId, filterValue) => {
 	return false;
 };
 
+interface CountriesSearch {
+	highlight?: string;
+	expandTz?: boolean;
+	expandCcy?: boolean;
+	q?: string;
+	intl_sort?: string;
+	intl_page?: number;
+	intl_size?: number;
+	un_sort?: string;
+	un_page?: number;
+	un_size?: number;
+	un_f?: string;
+	missing_sort?: string;
+	missing_page?: number;
+	missing_size?: number;
+}
+
 export const Route = createFileRoute("/countries/")({
 	component: Countries,
-	validateSearch: (
-		search: Record<string, unknown>,
-	): { highlight?: string; expandTz?: boolean; expandCcy?: boolean } => ({
-		highlight: (search.highlight as string) || undefined,
+	validateSearch: (search: Record<string, unknown>): CountriesSearch => ({
+		highlight: asString(search.highlight),
 		expandTz:
 			search.expandTz === true || search.expandTz === "true" || undefined,
 		expandCcy:
 			search.expandCcy === true || search.expandCcy === "true" || undefined,
+		q: asString(search.q),
+		intl_sort: asString(search.intl_sort),
+		intl_page: asNumber(search.intl_page),
+		intl_size: asNumber(search.intl_size),
+		un_sort: asString(search.un_sort),
+		un_page: asNumber(search.un_page),
+		un_size: asNumber(search.un_size),
+		un_f: asString(search.un_f),
+		missing_sort: asString(search.missing_sort),
+		missing_page: asNumber(search.missing_page),
+		missing_size: asNumber(search.missing_size),
 	}),
 	loader: async () => {
 		const [
@@ -377,15 +408,15 @@ function ExpandedCountryRow({
 										{historicalCurrencies.map((ccy, i) => (
 											<tr key={`${ccy.code}-${ccy.withdrawalDate}-${i}`}>
 												<td className="py-1 pr-4 font-mono">
-									<Link
-										to="/currencies"
-										search={{ highlight: ccy.code }}
-										className="flex items-center gap-1 hover:text-blue-400 transition-colors"
-									>
-										{ccy.code}
-										<SquareArrowOutUpRight className="size-3 text-muted-foreground" />
-									</Link>
-								</td>
+													<Link
+														to="/currencies"
+														search={{ highlight: ccy.code }}
+														className="flex items-center gap-1 hover:text-blue-400 transition-colors"
+													>
+														{ccy.code}
+														<SquareArrowOutUpRight className="size-3 text-muted-foreground" />
+													</Link>
+												</td>
 												<td className="py-1 pr-4">{ccy.name}</td>
 												<td className="py-1 text-muted-foreground">
 													{ccy.withdrawalDate}
@@ -472,8 +503,29 @@ function Countries() {
 		historicalCurrencyMap,
 		subdivisionMap,
 	} = Route.useLoaderData();
-	const { highlight, expandTz, expandCcy } = Route.useSearch();
-	const [globalFilter, setGlobalFilter] = React.useState("");
+	const search = Route.useSearch();
+	const navigate = Route.useNavigate();
+	const { highlight, expandTz, expandCcy } = search;
+	const [globalFilter, setGlobalFilter] = useGlobalFilterSync({
+		search,
+		navigate,
+	});
+	const intlUrl = useTableUrlState({
+		prefix: "intl",
+		search,
+		navigate,
+	});
+	const unUrl = useTableUrlState({
+		prefix: "un",
+		search,
+		navigate,
+		includeColumnFilters: true,
+	});
+	const missingUrl = useTableUrlState({
+		prefix: "missing",
+		search,
+		navigate,
+	});
 	const [expandedSection, setExpandedSection] = React.useState<
 		Record<string, "subdivisions" | "timezones" | "currencies">
 	>({});
@@ -765,13 +817,14 @@ function Countries() {
 		getPaginationRowModel: getPaginationRowModel(),
 		getSortedRowModel: getSortedRowModel(),
 		globalFilterFn: "fuzzy",
-		state: { globalFilter },
-		onGlobalFilterChange: setGlobalFilter,
-		initialState: {
-			pagination: {
-				pageSize: 20,
-			},
+		state: {
+			globalFilter,
+			sorting: intlUrl.sorting,
+			pagination: intlUrl.pagination,
 		},
+		onGlobalFilterChange: setGlobalFilter,
+		onSortingChange: intlUrl.onSortingChange,
+		onPaginationChange: intlUrl.onPaginationChange,
 		filterFns: { fuzzy: fuzzyFilter },
 	});
 
@@ -787,7 +840,13 @@ function Countries() {
 		getSortedRowModel: getSortedRowModel(),
 		getRowCanExpand: () => true,
 		globalFilterFn: "fuzzy",
-		state: { globalFilter, expanded: expandedRows },
+		state: {
+			globalFilter,
+			expanded: expandedRows,
+			sorting: unUrl.sorting,
+			pagination: unUrl.pagination,
+			columnFilters: unUrl.columnFilters,
+		},
 		onExpandedChange: (updater) => {
 			setExpandedRows((prev) => {
 				const next = typeof updater === "function" ? updater(prev) : updater;
@@ -796,11 +855,9 @@ function Countries() {
 			});
 		},
 		onGlobalFilterChange: setGlobalFilter,
-		initialState: {
-			pagination: {
-				pageSize: 20,
-			},
-		},
+		onSortingChange: unUrl.onSortingChange,
+		onPaginationChange: unUrl.onPaginationChange,
+		onColumnFiltersChange: unUrl.onColumnFiltersChange,
 		filterFns: { fuzzy: fuzzyFilter },
 	});
 
@@ -911,13 +968,14 @@ function Countries() {
 		getPaginationRowModel: getPaginationRowModel(),
 		getSortedRowModel: getSortedRowModel(),
 		globalFilterFn: "fuzzy",
-		state: { globalFilter },
-		onGlobalFilterChange: setGlobalFilter,
-		initialState: {
-			pagination: {
-				pageSize: 20,
-			},
+		state: {
+			globalFilter,
+			sorting: missingUrl.sorting,
+			pagination: missingUrl.pagination,
 		},
+		onGlobalFilterChange: setGlobalFilter,
+		onSortingChange: missingUrl.onSortingChange,
+		onPaginationChange: missingUrl.onPaginationChange,
 		filterFns: { fuzzy: fuzzyFilter },
 	});
 
@@ -1008,9 +1066,7 @@ function Countries() {
 											<input
 												type="checkbox"
 												checked={showHistoricalCurrencies}
-												onChange={() =>
-													setShowHistoricalCurrencies((v) => !v)
-												}
+												onChange={() => setShowHistoricalCurrencies((v) => !v)}
 												className="rounded"
 											/>
 											<span className="truncate">Withdrawn</span>

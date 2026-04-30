@@ -14,9 +14,29 @@ import { DataTable } from "@/components/DataTable";
 import { Pagination } from "@/components/Pagination";
 import { getLanguages, type Language } from "@/data/languages";
 import { fuzzyFilterAcronym } from "@/lib/fuzzy-filter";
+import { asNumber, asString } from "@/lib/url-state";
+import {
+	useGlobalFilterSync,
+	useTableUrlState,
+} from "@/lib/use-table-url-state";
+
+interface LanguagesSearch {
+	q?: string;
+	sort?: string;
+	page?: number;
+	size?: number;
+	locale?: string;
+}
 
 export const Route = createFileRoute("/languages/")({
 	component: Languages,
+	validateSearch: (search: Record<string, unknown>): LanguagesSearch => ({
+		q: asString(search.q),
+		sort: asString(search.sort),
+		page: asNumber(search.page),
+		size: asNumber(search.size),
+		locale: asString(search.locale),
+	}),
 	loader: async () => {
 		const languages = await getLanguages();
 		return { languages };
@@ -113,8 +133,23 @@ function LanguageExpandedRow({ row }: { row: Row<Language> }) {
 
 function Languages() {
 	const { languages } = Route.useLoaderData();
-	const [displayLocale, setDisplayLocale] = React.useState("ca");
-	const [globalFilter, setGlobalFilter] = React.useState("");
+	const search = Route.useSearch();
+	const navigate = Route.useNavigate();
+	const displayLocale = search.locale ?? "ca";
+	const setDisplayLocale = (next: string) => {
+		navigate({
+			search: (prev) => ({
+				...prev,
+				locale: next === "ca" ? undefined : next,
+			}),
+			replace: true,
+		});
+	};
+	const [globalFilter, setGlobalFilter] = useGlobalFilterSync({
+		search,
+		navigate,
+	});
+	const tableUrl = useTableUrlState({ prefix: "", search, navigate });
 
 	const languagesWithLocalizedNames = React.useMemo(() => {
 		const displayNames = new Intl.DisplayNames([displayLocale], {
@@ -254,13 +289,14 @@ function Languages() {
 			);
 		},
 		globalFilterFn: "fuzzy",
-		state: { globalFilter },
-		onGlobalFilterChange: setGlobalFilter,
-		initialState: {
-			pagination: {
-				pageSize: 20,
-			},
+		state: {
+			globalFilter,
+			sorting: tableUrl.sorting,
+			pagination: tableUrl.pagination,
 		},
+		onGlobalFilterChange: setGlobalFilter,
+		onSortingChange: tableUrl.onSortingChange,
+		onPaginationChange: tableUrl.onPaginationChange,
 		filterFns: {
 			fuzzy: fuzzyFilterAcronym,
 		},

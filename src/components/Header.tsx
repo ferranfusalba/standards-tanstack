@@ -10,7 +10,6 @@ import {
   Menu,
   Moon,
   Sun,
-  Table,
   X,
 } from 'lucide-react'
 import { useTheme } from '@/lib/theme'
@@ -121,19 +120,6 @@ export default function Header() {
           >
             <Languages size={20} />
             <span className="font-medium">Languages</span>
-          </Link>
-
-          <Link
-            to="/demo/table"
-            onClick={() => setIsOpen(false)}
-            className="flex items-center gap-3 p-3 rounded-lg hover:bg-accent transition-colors mb-2"
-            activeProps={{
-              className:
-                'flex items-center gap-3 p-3 rounded-lg bg-cyan-600 text-white hover:bg-cyan-700 transition-colors mb-2',
-            }}
-          >
-            <Table size={20} />
-            <span className="font-medium">TanStack Table Demo</span>
           </Link>
         </nav>
       </aside>

@@ -62,17 +62,21 @@ export function useTableUrlState({
 	const sizeKey = key(prefix, "size");
 	const filterKey = key(prefix, "f");
 
+	const sortValue = search[sortKey];
+	const pageValue = search[pageKey];
+	const sizeValue = search[sizeKey];
+	const filterValue = search[filterKey];
 	const sorting = React.useMemo(
-		() => parseSorting(search[sortKey] as string | undefined),
-		[search, sortKey],
+		() => parseSorting(sortValue as string | undefined),
+		[sortValue],
 	);
 	const pagination = React.useMemo(
-		() => parsePagination(search[pageKey], search[sizeKey], defaultPageSize),
-		[search, pageKey, sizeKey, defaultPageSize],
+		() => parsePagination(pageValue, sizeValue, defaultPageSize),
+		[pageValue, sizeValue, defaultPageSize],
 	);
 	const columnFilters = React.useMemo(
-		() => (includeColumnFilters ? parseColumnFilters(search[filterKey]) : []),
-		[search, filterKey, includeColumnFilters],
+		() => (includeColumnFilters ? parseColumnFilters(filterValue) : []),
+		[filterValue, includeColumnFilters],
 	);
 
 	const onSortingChange: OnChangeFn<SortingState> = (updater) => {

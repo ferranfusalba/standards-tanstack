@@ -1,147 +1,148 @@
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
-import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
-import { TanStackDevtools } from '@tanstack/react-devtools'
+import { TanStackDevtools } from "@tanstack/react-devtools";
+import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
-import { DataFreshness } from '../components/DataFreshness'
-import Header from '../components/Header'
-import { getDataVersions } from '../data/versions'
-import { ThemeProvider } from '../lib/theme'
+import { DataFreshness } from "../components/DataFreshness";
+import Header from "../components/Header";
+import { getDataVersions } from "../data/versions";
+import StoreDevtools from "../lib/demo-store-devtools";
+import { ThemeProvider } from "../lib/theme";
 
-import StoreDevtools from '../lib/demo-store-devtools'
-
-import appCss from '../styles.css?url'
+import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
-  loader: async () => ({ versions: await getDataVersions() }),
-  head: () => ({
-    meta: [
-      {
-        charSet: 'utf-8',
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1',
-      },
-      {
-        title: 'Standards',
-      },
-      {
-        name: 'description',
-        content: 'Browse and compare international standards: currencies, countries, languages, and timezones.',
-      },
-      {
-        name: 'theme-color',
-        content: '#0e1525',
-      },
-      {
-        name: 'apple-mobile-web-app-capable',
-        content: 'yes',
-      },
-      {
-        name: 'apple-mobile-web-app-status-bar-style',
-        content: 'black-translucent',
-      },
-      {
-        name: 'apple-mobile-web-app-title',
-        content: 'Standards',
-      },
-      {
-        property: 'og:type',
-        content: 'website',
-      },
-      {
-        property: 'og:title',
-        content: 'Standards',
-      },
-      {
-        property: 'og:description',
-        content: 'Browse and compare international standards: currencies, countries, languages, and timezones.',
-      },
-      {
-        property: 'og:image',
-        content: '/logo512.png',
-      },
-    ],
-    links: [
-      {
-        rel: 'stylesheet',
-        href: appCss,
-      },
-      {
-        rel: 'manifest',
-        href: '/manifest.json',
-      },
-      {
-        rel: 'apple-touch-icon',
-        href: '/logo192.png',
-      },
-    ],
-  }),
+	loader: async () => ({ versions: await getDataVersions() }),
+	head: () => ({
+		meta: [
+			{
+				charSet: "utf-8",
+			},
+			{
+				name: "viewport",
+				content: "width=device-width, initial-scale=1",
+			},
+			{
+				title: "Standards",
+			},
+			{
+				name: "description",
+				content:
+					"Browse and compare international standards: currencies, countries, languages, and timezones.",
+			},
+			{
+				name: "theme-color",
+				content: "#0e1525",
+			},
+			{
+				name: "apple-mobile-web-app-capable",
+				content: "yes",
+			},
+			{
+				name: "apple-mobile-web-app-status-bar-style",
+				content: "black-translucent",
+			},
+			{
+				name: "apple-mobile-web-app-title",
+				content: "Standards",
+			},
+			{
+				property: "og:type",
+				content: "website",
+			},
+			{
+				property: "og:title",
+				content: "Standards",
+			},
+			{
+				property: "og:description",
+				content:
+					"Browse and compare international standards: currencies, countries, languages, and timezones.",
+			},
+			{
+				property: "og:image",
+				content: "/logo512.png",
+			},
+		],
+		links: [
+			{
+				rel: "stylesheet",
+				href: appCss,
+			},
+			{
+				rel: "manifest",
+				href: "/manifest.json",
+			},
+			{
+				rel: "apple-touch-icon",
+				href: "/logo192.png",
+			},
+		],
+	}),
 
-  notFoundComponent: () => {
-    return (
-      <div className="min-h-screen flex items-center justify-center p-6">
-        <div className="text-center">
-          <h1 className="text-6xl font-bold mb-4">404</h1>
-          <p className="text-xl text-muted-foreground mb-6">Page not found</p>
-          <a
-            href="/"
-            className="text-cyan-600 dark:text-cyan-400 hover:underline"
-          >
-            Go back home
-          </a>
-        </div>
-      </div>
-    )
-  },
+	notFoundComponent: () => {
+		return (
+			<div className="min-h-screen flex items-center justify-center p-6">
+				<div className="text-center">
+					<h1 className="text-6xl font-bold mb-4">404</h1>
+					<p className="text-xl text-muted-foreground mb-6">Page not found</p>
+					<a
+						href="/"
+						className="text-cyan-600 dark:text-cyan-400 hover:underline"
+					>
+						Go back home
+					</a>
+				</div>
+			</div>
+		);
+	},
 
-  shellComponent: RootDocument,
-})
+	shellComponent: RootDocument,
+});
 
 function RootFooter() {
-  const { versions } = Route.useLoaderData()
-  return <DataFreshness versions={versions} />
+	const { versions } = Route.useLoaderData();
+	return <DataFreshness versions={versions} />;
 }
 
 function RootDocument({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en" className="dark">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        <ThemeProvider>
-          <Header />
-          {children}
-          <RootFooter />
-        </ThemeProvider>
-        <TanStackDevtools
-          config={{
-            position: 'bottom-right',
-          }}
-          plugins={[
-            {
-              name: 'Tanstack Router',
-              render: <TanStackRouterDevtoolsPanel />,
-            },
-            StoreDevtools,
-          ]}
-        />
-        <Scripts />
-        {import.meta.env.PROD && (
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
+	return (
+		<html lang="en" className="dark">
+			<head>
+				<HeadContent />
+			</head>
+			<body>
+				<ThemeProvider>
+					<Header />
+					{children}
+					<RootFooter />
+				</ThemeProvider>
+				<TanStackDevtools
+					config={{
+						position: "bottom-right",
+					}}
+					plugins={[
+						{
+							name: "Tanstack Router",
+							render: <TanStackRouterDevtoolsPanel />,
+						},
+						StoreDevtools,
+					]}
+				/>
+				<Scripts />
+				{import.meta.env.PROD && (
+					<script
+						dangerouslySetInnerHTML={{
+							__html: `
               if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function() {
                   navigator.serviceWorker.register('/sw.js');
                 });
               }
             `,
-            }}
-          />
-        )}
-      </body>
-    </html>
-  )
+						}}
+					/>
+				)}
+			</body>
+		</html>
+	);
 }

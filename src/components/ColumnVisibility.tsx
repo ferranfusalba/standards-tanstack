@@ -30,9 +30,7 @@ export function ColumnVisibility<TData>({
 		.getAllLeafColumns()
 		.filter((col) => col.getCanHide());
 
-	const hasHiddenColumns = toggleableColumns.some(
-		(col) => !col.getIsVisible(),
-	);
+	const hasHiddenColumns = toggleableColumns.some((col) => !col.getIsVisible());
 
 	if (toggleableColumns.length === 0) return null;
 

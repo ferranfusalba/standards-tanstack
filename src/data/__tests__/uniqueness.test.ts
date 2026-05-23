@@ -12,8 +12,12 @@ vi.mock("@tanstack/react-start", () => ({
 	}),
 }));
 
-import { type Currency, getHistoricalCurrencies, getCurrencies } from "../currencies";
 import { getCountries } from "../countries";
+import {
+	type Currency,
+	getCurrencies,
+	getHistoricalCurrencies,
+} from "../currencies";
 
 const callServerFn = (fn: unknown) =>
 	(fn as HandlerFn)({
@@ -40,9 +44,7 @@ describe("data uniqueness", () => {
 
 	it("active currency codes are unique", () => {
 		const codes = currencies.map((c) => c.code);
-		const duplicates = codes.filter(
-			(code, i) => codes.indexOf(code) !== i,
-		);
+		const duplicates = codes.filter((code, i) => codes.indexOf(code) !== i);
 		expect(
 			duplicates,
 			`Duplicate active currency codes: ${[...new Set(duplicates)].join(", ")}`,
@@ -51,9 +53,7 @@ describe("data uniqueness", () => {
 
 	it("country alpha-2 codes are unique", () => {
 		const codes = countries.map((c) => c.alpha2Code);
-		const duplicates = codes.filter(
-			(code, i) => codes.indexOf(code) !== i,
-		);
+		const duplicates = codes.filter((code, i) => codes.indexOf(code) !== i);
 		expect(
 			duplicates,
 			`Duplicate country codes: ${[...new Set(duplicates)].join(", ")}`,
@@ -78,10 +78,7 @@ describe("data uniqueness", () => {
 
 	it("active currency numeric codes are unique (excluding funds and special types)", () => {
 		const regular = currencies.filter(
-			(c) =>
-				!c.type ||
-				c.type === "currency" ||
-				c.type === "supranational",
+			(c) => !c.type || c.type === "currency" || c.type === "supranational",
 		);
 		const numCodes = regular.map((c) => c.numericCode);
 		const duplicates = numCodes.filter(

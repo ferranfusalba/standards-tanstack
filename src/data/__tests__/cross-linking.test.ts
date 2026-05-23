@@ -12,8 +12,12 @@ vi.mock("@tanstack/react-start", () => ({
 	}),
 }));
 
-import { type Currency, getCurrencies, getHistoricalCurrencies } from "../currencies";
 import { getCountries } from "../countries";
+import {
+	type Currency,
+	getCurrencies,
+	getHistoricalCurrencies,
+} from "../currencies";
 
 const callServerFn = (fn: unknown) =>
 	(fn as HandlerFn)({

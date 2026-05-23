@@ -1,5 +1,5 @@
-import React from "react";
-import { Link, createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import type { ColumnDef, SortingFn } from "@tanstack/react-table";
 import {
 	getCoreRowModel,
 	getFacetedRowModel,
@@ -9,31 +9,25 @@ import {
 	getSortedRowModel,
 	useReactTable,
 } from "@tanstack/react-table";
-import type { ColumnDef, FilterFn, SortingFn } from "@tanstack/react-table";
+import React from "react";
+import { ColumnVisibility } from "@/components/ColumnVisibility";
+import { DataTable } from "@/components/DataTable";
+import { ExportButtons } from "@/components/ExportButtons";
+import { Pagination } from "@/components/Pagination";
 import {
-	getTimezonesFromIntl,
 	getTimezonesFromIANA,
+	getTimezonesFromIntl,
 	type Timezone,
 	type TimezoneIANA,
 	type TimezoneIntl,
 } from "@/data/timezones";
 import { fuzzyFilter } from "@/lib/fuzzy-filter";
-import { DataTable } from "@/components/DataTable";
-import { Pagination } from "@/components/Pagination";
-import { ColumnVisibility } from "@/components/ColumnVisibility";
-
-import { ExportButtons } from "@/components/ExportButtons";
+import { facetedFilter } from "@/lib/table-filters";
 import { asNumber, asString, asStringArray } from "@/lib/url-state";
 import {
 	useGlobalFilterSync,
 	useTableUrlState,
 } from "@/lib/use-table-url-state";
-
-// biome-ignore lint/suspicious/noExplicitAny: FilterFn generics are contravariant, making typed versions incompatible across table types
-const facetedFilter: FilterFn<any> = (row, columnId, filterValue) => {
-	if (!Array.isArray(filterValue) || filterValue.length === 0) return true;
-	return filterValue.includes(row.getValue(columnId));
-};
 
 function parseOffset(offset: string): number {
 	const match = offset.match(/UTC([+-]?\d+)(?::(\d+))?/);
@@ -413,7 +407,9 @@ function Timezones() {
 
 	return (
 		<div className="min-h-screen p-6">
-			<h1 className="text-3xl font-bold mb-6" data-view-title="Timezones">Timezones</h1>
+			<h1 className="text-3xl font-bold mb-6" data-view-title="Timezones">
+				Timezones
+			</h1>
 			<input
 				type="text"
 				value={globalFilter}

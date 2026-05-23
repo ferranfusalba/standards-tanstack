@@ -11,8 +11,15 @@ import {
 import React from "react";
 import { ColumnVisibility } from "@/components/ColumnVisibility";
 import { DataTable } from "@/components/DataTable";
+import { LocaleSelect } from "@/components/LocaleSelect";
 import { Pagination } from "@/components/Pagination";
-import { getLanguages, type Language } from "@/data/languages";
+import { getRegionNameLocales } from "@/data/countries";
+import {
+	getLanguageNamesByLocale,
+	getLanguages,
+	type Language,
+} from "@/data/languages";
+import { getDetectedLocales, getPreferredLocale } from "@/data/locale";
 import { fuzzyFilterAcronym } from "@/lib/fuzzy-filter";
 import { asNumber, asString } from "@/lib/url-state";
 import {
@@ -37,9 +44,28 @@ export const Route = createFileRoute("/languages/")({
 		size: asNumber(search.size),
 		locale: asString(search.locale),
 	}),
-	loader: async () => {
-		const languages = await getLanguages();
-		return { languages };
+	loaderDeps: ({ search }) => ({ locale: search.locale }),
+	loader: async ({ deps }) => {
+		// No explicit picker choice → fall back to the visitor's detected locale.
+		const displayLocale = deps.locale ?? (await getPreferredLocale());
+		const [languages, localeOptions, localizedNames, detectedLocales] =
+			await Promise.all([
+				getLanguages(),
+				getRegionNameLocales(),
+				getLanguageNamesByLocale({ data: { locale: displayLocale } }),
+				getDetectedLocales(),
+			]);
+		// Localized name comes server-side (single CLDR source), matching countries.
+		const languagesLocalized = languages.map((l) => ({
+			...l,
+			localizedName: localizedNames[l.code],
+		}));
+		return {
+			languages: languagesLocalized,
+			displayLocale,
+			localeOptions,
+			detectedLocales,
+		};
 	},
 	head: () => ({
 		meta: [
@@ -132,16 +158,15 @@ function LanguageExpandedRow({ row }: { row: Row<Language> }) {
 }
 
 function Languages() {
-	const { languages } = Route.useLoaderData();
+	const { languages, displayLocale, localeOptions, detectedLocales } =
+		Route.useLoaderData();
 	const search = Route.useSearch();
 	const navigate = Route.useNavigate();
-	const displayLocale = search.locale ?? "ca";
+	// `displayLocale` comes resolved from the loader (URL value, else detected),
+	// and each row's `localizedName` is already server-computed from one CLDR source.
 	const setDisplayLocale = (next: string) => {
 		navigate({
-			search: (prev) => ({
-				...prev,
-				locale: next === "ca" ? undefined : next,
-			}),
+			search: (prev) => ({ ...prev, locale: next }),
 			replace: true,
 		});
 	};
@@ -150,27 +175,6 @@ function Languages() {
 		navigate,
 	});
 	const tableUrl = useTableUrlState({ prefix: "", search, navigate });
-
-	const languagesWithLocalizedNames = React.useMemo(() => {
-		const displayNames = new Intl.DisplayNames([displayLocale], {
-			type: "language",
-		});
-		return languages.map((lang) => {
-			try {
-				const localized = displayNames.of(lang.code);
-				return {
-					...lang,
-					localizedName:
-						localized && localized !== lang.code ? localized : undefined,
-				};
-			} catch {
-				return {
-					...lang,
-					localizedName: undefined,
-				};
-			}
-		});
-	}, [languages, displayLocale]);
 
 	const columns = React.useMemo<ColumnDef<Language>[]>(
 		() => [
@@ -276,7 +280,7 @@ function Languages() {
 	);
 
 	const table = useReactTable({
-		data: languagesWithLocalizedNames,
+		data: languages,
 		columns,
 		getCoreRowModel: getCoreRowModel(),
 		getExpandedRowModel: getExpandedRowModel(),
@@ -304,7 +308,9 @@ function Languages() {
 
 	return (
 		<div className="min-h-screen p-6">
-			<h1 className="text-3xl font-bold mb-6" data-view-title="Languages">Languages</h1>
+			<h1 className="text-3xl font-bold mb-6" data-view-title="Languages">
+				Languages
+			</h1>
 			<input
 				type="text"
 				value={globalFilter}
@@ -319,31 +325,13 @@ function Languages() {
 					<div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2 mb-4">
 						<h2 className="text-xl font-semibold">ISO 639-1 Language Codes</h2>
 						<div className="flex items-center gap-2">
-							<label
-								htmlFor="displayLocale"
-								className="text-sm text-muted-foreground"
-							>
-								Show names in:
-							</label>
-							<select
+							<LocaleSelect
 								id="displayLocale"
 								value={displayLocale}
-								onChange={(e) => setDisplayLocale(e.target.value)}
-								className="px-3 py-1 bg-secondary text-secondary-foreground rounded border border-border"
-							>
-								<option value="ca">Catalan</option>
-								<option value="en">English</option>
-								<option value="es">Spanish</option>
-								<option value="fr">French</option>
-								<option value="de">German</option>
-								<option value="it">Italian</option>
-								<option value="pt">Portuguese</option>
-								<option value="ru">Russian</option>
-								<option value="zh">Chinese</option>
-								<option value="ja">Japanese</option>
-								<option value="ko">Korean</option>
-								<option value="ar">Arabic</option>
-							</select>
+								onChange={setDisplayLocale}
+								options={localeOptions}
+								detectedLocales={detectedLocales}
+							/>
 							<ColumnVisibility table={table} />
 						</div>
 					</div>

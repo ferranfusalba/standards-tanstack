@@ -12,7 +12,11 @@ vi.mock("@tanstack/react-start", () => ({
 	}),
 }));
 
-import { getLanguages, type Language } from "../languages";
+import {
+	getLanguageNamesByLocale,
+	getLanguages,
+	type Language,
+} from "../languages";
 
 describe("getLanguages", () => {
 	let languages: Language[];
@@ -76,5 +80,29 @@ describe("getLanguages", () => {
 	it("codes are unique", () => {
 		const codes = languages.map((l) => l.code);
 		expect(new Set(codes).size).toBe(codes.length);
+	});
+});
+
+describe("getLanguageNamesByLocale", () => {
+	const call = (locale: string): Promise<Record<string, string>> =>
+		(getLanguageNamesByLocale as unknown as HandlerFn)({
+			data: { locale },
+			context: {},
+			signal: new AbortController().signal,
+		});
+
+	it("returns language names in the requested locale", async () => {
+		const es = await call("es");
+		expect(es.de).toBe("alemán");
+		expect(es.en).toBe("inglés");
+		expect(es.fr).toBe("francés");
+		expect(Object.keys(es).length).toBeGreaterThan(100);
+	});
+
+	it("omits bare-code echoes", async () => {
+		const es = await call("es");
+		for (const [code, name] of Object.entries(es)) {
+			expect(name).not.toBe(code);
+		}
 	});
 });

@@ -247,7 +247,7 @@ const cldrVariantsByLanguage: Record<string, string[]> = {
 // ISO 639-1 Language Codes
 // Official Source: IANA Language Subtag Registry
 // https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
-const iso639_1Codes: Array<{ code: string; name: string }> = [
+export const iso639_1Codes: Array<{ code: string; name: string }> = [
   { code: 'aa', name: 'Afar' },
   { code: 'ab', name: 'Abkhazian' },
   { code: 'ae', name: 'Avestan' },
@@ -480,3 +480,28 @@ export const getLanguages = createServerFn({
 
   return languages
 })
+
+/**
+ * Every ISO 639-1 language's name in a single locale, as `{ code: name }`.
+ * Server-computed (single CLDR source) so the "Localized Name" column matches
+ * the rest of the app instead of relying on the browser's own CLDR data.
+ */
+export const getLanguageNamesByLocale = createServerFn({
+  method: 'GET',
+})
+  .inputValidator((data: { locale: string }) => data)
+  .handler(async ({ data }): Promise<Record<string, string>> => {
+    const displayNames = new Intl.DisplayNames([data.locale], {
+      type: 'language',
+    })
+    const names: Record<string, string> = {}
+    for (const { code } of iso639_1Codes) {
+      try {
+        const localized = displayNames.of(code)
+        if (localized && localized !== code) names[code] = localized
+      } catch {
+        // Not renderable in this locale — skip.
+      }
+    }
+    return names
+  })

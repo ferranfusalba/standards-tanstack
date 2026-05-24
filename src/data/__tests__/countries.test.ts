@@ -15,6 +15,7 @@ vi.mock("@tanstack/react-start", () => ({
 import {
 	type Country,
 	getCountries,
+	getCountriesFromUN,
 	getCountryNames,
 	getCountryNamesByLocale,
 	getLocalizedNameCountsByCountry,
@@ -70,6 +71,62 @@ describe("getCountries (Intl)", () => {
 	it("alpha2 codes are uppercase", () => {
 		for (const c of countries) {
 			expect(c.alpha2Code).toBe(c.alpha2Code.toUpperCase());
+		}
+	});
+});
+
+describe("getCountriesFromUN (ccTLD + phone prefix)", () => {
+	let countries: Country[];
+	let byCode: Record<string, Country>;
+
+	beforeAll(async () => {
+		countries = await (getCountriesFromUN as unknown as HandlerFn)({
+			data: undefined,
+			context: {},
+			signal: new AbortController().signal,
+		});
+		byCode = Object.fromEntries(countries.map((c) => [c.alpha2Code, c]));
+	});
+
+	it("derives ccTLDs as lowercase alpha-2 with the .uk override", () => {
+		expect(byCode.ES.ccTLD).toBe(".es");
+		expect(byCode.DE.ccTLD).toBe(".de");
+		expect(byCode.JP.ccTLD).toBe(".jp");
+		// GB uses .uk, not .gb
+		expect(byCode.GB.ccTLD).toBe(".uk");
+	});
+
+	it("omits ccTLDs for reserved-but-undelegated codes", () => {
+		for (const code of ["EH", "BL", "MF", "BQ", "UM"]) {
+			expect(byCode[code]?.ccTLD).toBeUndefined();
+		}
+	});
+
+	it("assigns ITU E.164 dialing codes", () => {
+		expect(byCode.ES.phonePrefix).toBe("+34");
+		expect(byCode.GB.phonePrefix).toBe("+44");
+		expect(byCode.FR.phonePrefix).toBe("+33");
+		// NANP members share country code +1
+		expect(byCode.US.phonePrefix).toBe("+1");
+		expect(byCode.CA.phonePrefix).toBe("+1");
+		expect(byCode.BB.phonePrefix).toBe("+1");
+		// Russia and Kazakhstan share +7
+		expect(byCode.RU.phonePrefix).toBe("+7");
+		expect(byCode.KZ.phonePrefix).toBe("+7");
+	});
+
+	it("leaves uninhabited territories without a phone prefix", () => {
+		// Antarctica, Bouvet Island, Heard & McDonald Islands have no E.164 code
+		for (const code of ["AQ", "BV", "HM"]) {
+			expect(byCode[code]?.phonePrefix).toBeUndefined();
+		}
+	});
+
+	it("formats every assigned phone prefix as +<digits>", () => {
+		for (const c of countries) {
+			if (c.phonePrefix !== undefined) {
+				expect(c.phonePrefix).toMatch(/^\+\d+$/);
+			}
 		}
 	});
 });

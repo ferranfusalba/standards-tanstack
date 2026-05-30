@@ -10,13 +10,18 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { SquareArrowOutUpRight } from "lucide-react";
+import { Info, SquareArrowOutUpRight } from "lucide-react";
 import React from "react";
 import { ColumnVisibility } from "@/components/ColumnVisibility";
 import { DataTable } from "@/components/DataTable";
 import { ExportButtons } from "@/components/ExportButtons";
 import { LocaleSelect } from "@/components/LocaleSelect";
 import { Pagination } from "@/components/Pagination";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import {
   type Country,
   getCountries,
@@ -194,7 +199,7 @@ function Code({ children }: { children: React.ReactNode }) {
 // with normalizeTypography above.
 function NotCountedNote() {
   return (
-    <span className="text-muted-foreground/60">
+    <span className="text-muted-foreground">
       Not counted: Unicode NFC (composed vs decomposed accents treated as equal
       — e.g. <Code>é</Code> as one codepoint vs <Code>e</Code> + combining
       accent); apostrophe-likes <Code>‘</Code> (U+2018), <Code>’</Code>{" "}
@@ -352,14 +357,20 @@ function LocalizedNamesExpandedRow({
   );
 }
 
-function getCellHighlight(colId: string, original: Country): string {
+function getCellHighlight(
+  colId: string,
+  original: Country,
+  showCodeMismatch = true,
+): string {
   if (
+    showCodeMismatch &&
     colId === "icaoCode" &&
     original.icaoCode &&
     original.icaoCode !== original.alpha3Code
   )
     return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300";
   if (
+    showCodeMismatch &&
     colId === "dsitCode" &&
     original.dsitCode &&
     original.dsitCode !== original.alpha2Code &&
@@ -367,6 +378,7 @@ function getCellHighlight(colId: string, original: Country): string {
   )
     return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300";
   if (
+    showCodeMismatch &&
     colId === "iocCode" &&
     original.iocCode &&
     original.iocCode !== original.alpha3Code
@@ -723,6 +735,7 @@ function Countries() {
     React.useState(true);
   const [showCrossCheck, setShowCrossCheck] = React.useState(true);
   const [showLocalizedDiff, setShowLocalizedDiff] = React.useState(true);
+  const [showCodeMismatch, setShowCodeMismatch] = React.useState(true);
 
   // Cross-check: names present in one source table but not the other
   const intlNames = React.useMemo(
@@ -1291,28 +1304,53 @@ function Countries() {
 
       <div className="mb-6">
         <h3 className="text-sm font-semibold mb-2">Cross-check data</h3>
-        <label className="flex items-center gap-2 w-fit text-xs text-muted-foreground cursor-pointer">
-          <input
-            type="checkbox"
-            checked={showCrossCheck}
-            onChange={() => setShowCrossCheck((v) => !v)}
-            className="rounded"
-          />
-          <span className="inline-block w-8 h-3 rounded bg-yellow-100 dark:bg-yellow-950" />
-          Name not present in the other table
-        </label>
-        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1 text-xs text-muted-foreground">
+        <div className="flex flex-col gap-1 w-fit text-xs text-muted-foreground">
           <label className="flex items-center gap-2 cursor-pointer">
             <input
               type="checkbox"
-              checked={showLocalizedDiff}
-              onChange={() => setShowLocalizedDiff((v) => !v)}
+              checked={showCrossCheck}
+              onChange={() => setShowCrossCheck((v) => !v)}
               className="rounded"
             />
-            <span className="inline-block w-8 h-3 rounded bg-purple-100 dark:bg-purple-950" />
-            Localized name differs from name
+            <span className="inline-block w-8 h-3 rounded bg-yellow-100 dark:bg-yellow-950" />
+            Name not present in the other table
           </label>
-          <NotCountedNote />
+          <div className="flex items-center gap-1.5">
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={showLocalizedDiff}
+                onChange={() => setShowLocalizedDiff((v) => !v)}
+                className="rounded"
+              />
+              <span className="inline-block w-8 h-3 rounded bg-purple-100 dark:bg-purple-950" />
+              Localized name differs from name
+            </label>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button
+                  type="button"
+                  aria-label="What name normalization is ignored"
+                  className="text-muted-foreground/60 hover:text-foreground focus-visible:text-foreground focus-visible:outline-none"
+                >
+                  <Info className="w-3.5 h-3.5" />
+                </button>
+              </TooltipTrigger>
+              <TooltipContent className="max-w-sm text-xs">
+                <NotCountedNote />
+              </TooltipContent>
+            </Tooltip>
+          </div>
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={showCodeMismatch}
+              onChange={() => setShowCodeMismatch((v) => !v)}
+              className="rounded"
+            />
+            <span className="inline-block w-8 h-3 rounded bg-red-100 dark:bg-red-950" />
+            Code differs from ISO 3166-1 standard
+          </label>
         </div>
       </div>
 
@@ -1520,7 +1558,11 @@ function Countries() {
               ) {
                 base = "bg-purple-100 dark:bg-purple-950";
               } else {
-                base = getCellHighlight(colId, row.original);
+                base = getCellHighlight(
+                  colId,
+                  row.original,
+                  showCodeMismatch,
+                );
               }
               return `${base} ${getColumnBorder(colId)}`;
             }}
@@ -1597,7 +1639,7 @@ function Countries() {
             <DataTable
               table={tableMissing}
               cellClassName={(colId, row) =>
-                getCellHighlight(colId, row.original)
+                getCellHighlight(colId, row.original, showCodeMismatch)
               }
             />
           </div>

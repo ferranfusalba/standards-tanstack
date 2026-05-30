@@ -29,6 +29,7 @@ interface UseTableUrlStateOptions {
 	navigate: Navigate;
 	defaultPageSize?: number;
 	includeColumnFilters?: boolean;
+	sizeKey?: string;
 }
 
 interface TableUrlState {
@@ -56,10 +57,11 @@ export function useTableUrlState({
 	navigate,
 	defaultPageSize = DEFAULT_PAGE_SIZE,
 	includeColumnFilters = false,
+	sizeKey: sharedSizeKey,
 }: UseTableUrlStateOptions): TableUrlState {
 	const sortKey = key(prefix, "sort");
 	const pageKey = key(prefix, "page");
-	const sizeKey = key(prefix, "size");
+	const sizeKey = sharedSizeKey ?? key(prefix, "size");
 	const filterKey = key(prefix, "f");
 
 	const sortValue = search[sortKey];

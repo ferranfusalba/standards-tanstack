@@ -58,16 +58,14 @@ interface CountriesSearch {
   expandCcy?: boolean;
   q?: string;
   nameLocale?: string;
+  size?: number;
   intl_sort?: string;
   intl_page?: number;
-  intl_size?: number;
   un_sort?: string;
   un_page?: number;
-  un_size?: number;
   un_f?: string;
   missing_sort?: string;
   missing_page?: number;
-  missing_size?: number;
 }
 
 export const Route = createFileRoute("/countries/")({
@@ -80,16 +78,14 @@ export const Route = createFileRoute("/countries/")({
       search.expandCcy === true || search.expandCcy === "true" || undefined,
     q: asString(search.q),
     nameLocale: asString(search.nameLocale),
+    size: asNumber(search.size),
     intl_sort: asString(search.intl_sort),
     intl_page: asNumber(search.intl_page),
-    intl_size: asNumber(search.intl_size),
     un_sort: asString(search.un_sort),
     un_page: asNumber(search.un_page),
-    un_size: asNumber(search.un_size),
     un_f: asString(search.un_f),
     missing_sort: asString(search.missing_sort),
     missing_page: asNumber(search.missing_page),
-    missing_size: asNumber(search.missing_size),
   }),
   // `nameLocale` is intentionally NOT a loaderDep: switching the picker should
   // refetch only the small per-locale name map (done in the component), not this
@@ -702,17 +698,20 @@ function Countries() {
     prefix: "intl",
     search,
     navigate,
+    sizeKey: "size",
   });
   const unUrl = useTableUrlState({
     prefix: "un",
     search,
     navigate,
     includeColumnFilters: true,
+    sizeKey: "size",
   });
   const missingUrl = useTableUrlState({
     prefix: "missing",
     search,
     navigate,
+    sizeKey: "size",
   });
   const [expandedSection, setExpandedSection] = React.useState<
     Record<string, ExpandSection>

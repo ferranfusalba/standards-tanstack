@@ -4,6 +4,7 @@ import {
 	Globe,
 	Home,
 	Languages,
+	type LucideIcon,
 	Map,
 	Menu,
 	Moon,
@@ -13,14 +14,53 @@ import {
 import { useEffect, useState } from "react";
 import { useTheme } from "@/lib/theme";
 
+interface NavItem {
+	to: string;
+	label: string;
+	icon: LucideIcon;
+	// Home isn't a "view", so it never shows in the "Standards / …" breadcrumb.
+	crumb?: boolean;
+}
+
+// Single source of truth for the app's navigation. Adding a view here wires up
+// BOTH the drawer link and the header breadcrumb — no second list to keep in
+// sync. (The route still owns its own `head()` title and `data-view-title`.)
+const NAV_ITEMS: NavItem[] = [
+	{ to: "/", label: "Home", icon: Home, crumb: false },
+	{ to: "/currencies", label: "Currencies", icon: Coins },
+	{ to: "/timezones", label: "Timezones", icon: Map },
+	{ to: "/countries", label: "Countries", icon: Globe },
+	{ to: "/languages", label: "Languages", icon: Languages },
+];
+
+function getViewTitle(pathname: string): string | null {
+	// Match the section by its first path segment so nested/child routes
+	// (and trailing slashes) still resolve to the correct view name. The
+	// home route ("/") and any unmapped path return null -> no breadcrumb.
+	const segment = `/${pathname.split("/").filter(Boolean)[0] ?? ""}`;
+	const item = NAV_ITEMS.find((i) => i.to === segment);
+	return item && item.crumb !== false ? item.label : null;
+}
+
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
-	const [viewTitle, setViewTitle] = useState<string | null>(null);
+	const [scrolledPast, setScrolledPast] = useState(false);
 	const { theme, toggleTheme } = useTheme();
 	const location = useLocation();
 
+	// Derive the view name synchronously from router state. This is correct on
+	// first render (including SSR), updates on every navigation, and can never
+	// go stale the way the previous DOM query / IntersectionObserver could.
+	const viewTitle = getViewTitle(location.pathname);
+
+	// Scroll-aware reveal: the breadcrumb only appears once the page's in-page
+	// heading scrolls up under the sticky 64px header. We still observe that
+	// heading, but it now only toggles a boolean — the displayed name comes
+	// from router state, not from the observed element's dataset.
 	useEffect(() => {
-		setViewTitle(null);
+		setScrolledPast(false);
+		if (!viewTitle) return;
+
 		let observer: IntersectionObserver | null = null;
 		let frame = 0;
 		let cancelled = false;
@@ -32,9 +72,7 @@ export default function Header() {
 			if (el) {
 				observer = new IntersectionObserver(
 					([entry]) => {
-						setViewTitle(
-							entry.isIntersecting ? null : (el.dataset.viewTitle ?? null),
-						);
+						setScrolledPast(!entry.isIntersecting);
 					},
 					{ rootMargin: "-64px 0px 0px 0px" },
 				);
@@ -51,7 +89,9 @@ export default function Header() {
 			cancelAnimationFrame(frame);
 			observer?.disconnect();
 		};
-	}, [location.pathname]);
+	}, [viewTitle]);
+
+	const showViewTitle = viewTitle !== null && scrolledPast;
 
 	return (
 		<>
@@ -67,11 +107,11 @@ export default function Header() {
 					<Link to="/">Standards</Link>
 					<span
 						className={`text-muted-foreground font-normal transition-all duration-300 ${
-							viewTitle
+							showViewTitle
 								? "opacity-100 translate-x-0"
 								: "opacity-0 -translate-x-1 pointer-events-none"
 						}`}
-						aria-hidden={!viewTitle}
+						aria-hidden={!showViewTitle}
 					>
 						/ {viewTitle ?? ""}
 					</span>
@@ -104,70 +144,23 @@ export default function Header() {
 				</div>
 
 				<nav className="flex-1 p-4 overflow-y-auto">
-					<Link
-						to="/"
-						onClick={() => setIsOpen(false)}
-						className="flex items-center gap-3 p-3 rounded-lg hover:bg-accent transition-colors mb-2"
-						activeProps={{
-							className:
-								"flex items-center gap-3 p-3 rounded-lg bg-cyan-600 text-white hover:bg-cyan-700 transition-colors mb-2",
-						}}
-					>
-						<Home size={20} />
-						<span className="font-medium">Home</span>
-					</Link>
-
-					<Link
-						to="/currencies"
-						onClick={() => setIsOpen(false)}
-						className="flex items-center gap-3 p-3 rounded-lg hover:bg-accent transition-colors mb-2"
-						activeProps={{
-							className:
-								"flex items-center gap-3 p-3 rounded-lg bg-cyan-600 text-white hover:bg-cyan-700 transition-colors mb-2",
-						}}
-					>
-						<Coins size={20} />
-						<span className="font-medium">Currencies</span>
-					</Link>
-
-					<Link
-						to="/timezones"
-						onClick={() => setIsOpen(false)}
-						className="flex items-center gap-3 p-3 rounded-lg hover:bg-accent transition-colors mb-2"
-						activeProps={{
-							className:
-								"flex items-center gap-3 p-3 rounded-lg bg-cyan-600 text-white hover:bg-cyan-700 transition-colors mb-2",
-						}}
-					>
-						<Map size={20} />
-						<span className="font-medium">Timezones</span>
-					</Link>
-
-					<Link
-						to="/countries"
-						onClick={() => setIsOpen(false)}
-						className="flex items-center gap-3 p-3 rounded-lg hover:bg-accent transition-colors mb-2"
-						activeProps={{
-							className:
-								"flex items-center gap-3 p-3 rounded-lg bg-cyan-600 text-white hover:bg-cyan-700 transition-colors mb-2",
-						}}
-					>
-						<Globe size={20} />
-						<span className="font-medium">Countries</span>
-					</Link>
-
-					<Link
-						to="/languages"
-						onClick={() => setIsOpen(false)}
-						className="flex items-center gap-3 p-3 rounded-lg hover:bg-accent transition-colors mb-2"
-						activeProps={{
-							className:
-								"flex items-center gap-3 p-3 rounded-lg bg-cyan-600 text-white hover:bg-cyan-700 transition-colors mb-2",
-						}}
-					>
-						<Languages size={20} />
-						<span className="font-medium">Languages</span>
-					</Link>
+					{NAV_ITEMS.map(({ to, label, icon: Icon }) => (
+						<Link
+							key={to}
+							to={to}
+							onClick={() => setIsOpen(false)}
+							className="flex items-center gap-3 p-3 rounded-lg hover:bg-accent transition-colors mb-2"
+							activeProps={{
+								className:
+									"flex items-center gap-3 p-3 rounded-lg bg-cyan-600 text-white hover:bg-cyan-700 transition-colors mb-2",
+							}}
+							// Home matches "/" exactly; section links match their subtree.
+							activeOptions={{ exact: to === "/" }}
+						>
+							<Icon size={20} />
+							<span className="font-medium">{label}</span>
+						</Link>
+					))}
 				</nav>
 			</aside>
 		</>

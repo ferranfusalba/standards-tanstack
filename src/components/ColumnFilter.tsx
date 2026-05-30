@@ -65,6 +65,16 @@ export function ColumnFilter<TData>({ column }: ColumnFilterProps<TData>) {
 
 	const filterValue = (column.getFilterValue() as unknown[] | undefined) ?? [];
 	const isFiltered = filterValue.length > 0;
+	const allSelected =
+		options.length > 0 &&
+		options.every((opt) => filterValue.includes(opt.value));
+	// Bulk actions only earn their keep on longer lists; short lists (e.g. the
+	// 2-option presence filter) are quicker to toggle directly.
+	const showBulkActions = options.length >= 4;
+
+	function selectAll() {
+		column.setFilterValue(options.map((opt) => opt.value));
+	}
 
 	function toggleValue(val: unknown) {
 		const current = [...filterValue];
@@ -123,46 +133,59 @@ export function ColumnFilter<TData>({ column }: ColumnFilterProps<TData>) {
 				ref={popoverRef}
 				popover="auto"
 				role="listbox"
-				className="fixed m-0 w-48 rounded-md border border-border bg-background text-foreground shadow-lg h-fit max-h-96"
+				className="fixed m-0 w-48 overflow-hidden rounded-md border border-border bg-background text-foreground shadow-lg h-fit font-normal"
 			>
-				<div className="p-2 space-y-1 h-fit max-h-96 overflow-y-auto">
-					{options.map((opt) => {
-						const selected = filterValue.includes(opt.value);
-						return (
-							<button
-								key={String(opt.value)}
-								type="button"
-								onClick={() => toggleValue(opt.value)}
-								className="flex items-center gap-2 px-2 py-1 rounded hover:bg-accent cursor-pointer text-xs w-full text-left"
-							>
-								<span
-									className={`inline-flex items-center justify-center w-3.5 h-3.5 rounded-sm border ${selected ? "bg-foreground border-foreground text-background" : "border-muted-foreground bg-transparent"}`}
+				<div className="flex max-h-96 flex-col">
+					<div className="p-2 space-y-1 min-h-0 overflow-y-auto">
+						{options.map((opt) => {
+							const selected = filterValue.includes(opt.value);
+							return (
+								<button
+									key={String(opt.value)}
+									type="button"
+									onClick={() => toggleValue(opt.value)}
+									className="flex items-center gap-2 px-2 py-1 rounded hover:bg-accent cursor-pointer text-xs w-full text-left"
 								>
-									{selected ? (
-										<Check
-											className="size-2.5"
-											strokeWidth={3}
-											aria-hidden="true"
-										/>
-									) : (
-										<span className="w-full h-full" />
-									)}
-								</span>
-								<span className="truncate">{opt.label}</span>
-								<span className="ml-auto text-muted-foreground">
-									{opt.count}
-								</span>
+									<span
+										className={`inline-flex items-center justify-center w-3.5 h-3.5 rounded-sm border ${selected ? "bg-foreground border-foreground text-background" : "border-muted-foreground bg-transparent"}`}
+									>
+										{selected ? (
+											<Check
+												className="size-2.5"
+												strokeWidth={3}
+												aria-hidden="true"
+											/>
+										) : (
+											<span className="w-full h-full" />
+										)}
+									</span>
+									<span className="truncate">{opt.label}</span>
+									<span className="ml-auto text-muted-foreground">
+										{opt.count}
+									</span>
+								</button>
+							);
+						})}
+					</div>
+					{showBulkActions && (
+						<div className="flex border-t border-border text-xs">
+							<button
+								type="button"
+								onClick={selectAll}
+								disabled={allSelected}
+								className="flex-1 px-2 py-1.5 text-center text-muted-foreground hover:bg-accent disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent"
+							>
+								Select all
 							</button>
-						);
-					})}
-					{isFiltered && (
-						<button
-							type="button"
-							onClick={() => column.setFilterValue(undefined)}
-							className="w-full px-2 py-1 mt-1 pt-1 border-t border-border text-xs rounded hover:bg-accent text-muted-foreground text-left"
-						>
-							Clear filter
-						</button>
+							<button
+								type="button"
+								onClick={() => column.setFilterValue(undefined)}
+								disabled={!isFiltered}
+								className="flex-1 border-l border-border px-2 py-1.5 text-center text-muted-foreground hover:bg-accent disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent"
+							>
+								Reset values
+							</button>
+						</div>
 					)}
 				</div>
 			</div>

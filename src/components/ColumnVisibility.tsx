@@ -31,6 +31,9 @@ export function ColumnVisibility<TData>({
 		.filter((col) => col.getCanHide());
 
 	const hasHiddenColumns = toggleableColumns.some((col) => !col.getIsVisible());
+	const hasVisibleColumns = toggleableColumns.some((col) => col.getIsVisible());
+	// Bulk actions only earn their keep on longer lists.
+	const showBulkActions = toggleableColumns.length >= 4;
 
 	if (toggleableColumns.length === 0) return null;
 
@@ -44,8 +47,8 @@ export function ColumnVisibility<TData>({
 				Columns
 			</button>
 			{open && (
-				<div className="absolute right-0 z-10 mt-1 w-48 rounded-lg border border-border bg-background shadow-lg">
-					<div className="p-2 space-y-1 max-h-[calc(100vh-8rem)] overflow-y-auto">
+				<div className="absolute right-0 z-10 mt-1 flex max-h-[calc(100vh-8rem)] w-48 flex-col overflow-hidden rounded-lg border border-border bg-background shadow-lg">
+					<div className="p-2 space-y-1 min-h-0 overflow-y-auto">
 						{toggleableColumns.map((column) => (
 							<React.Fragment key={column.id}>
 								<label className="flex items-center gap-2 px-2 py-1 rounded hover:bg-accent cursor-pointer text-sm">
@@ -66,7 +69,21 @@ export function ColumnVisibility<TData>({
 									.map((item) => item.render())}
 							</React.Fragment>
 						))}
-						<div className="flex gap-1 mt-1 pt-1 border-t border-border">
+					</div>
+					{showBulkActions && (
+						<div className="flex border-t border-border text-xs">
+							<button
+								type="button"
+								onClick={() => {
+									for (const col of toggleableColumns) {
+										col.toggleVisibility(true);
+									}
+								}}
+								disabled={!hasHiddenColumns}
+								className="flex-1 px-2 py-1.5 text-center text-muted-foreground hover:bg-accent disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent"
+							>
+								Select all
+							</button>
 							<button
 								type="button"
 								onClick={() => {
@@ -74,21 +91,13 @@ export function ColumnVisibility<TData>({
 										col.toggleVisibility(false);
 									}
 								}}
-								className="flex-1 px-2 py-1 text-xs rounded hover:bg-accent text-muted-foreground text-left"
+								disabled={!hasVisibleColumns}
+								className="flex-1 border-l border-border px-2 py-1.5 text-center text-muted-foreground hover:bg-accent disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent"
 							>
-								Hide all
+								Reset values
 							</button>
-							{hasHiddenColumns && (
-								<button
-									type="button"
-									onClick={() => table.resetColumnVisibility()}
-									className="flex-1 px-2 py-1 text-xs rounded hover:bg-accent text-muted-foreground text-left"
-								>
-									Reset
-								</button>
-							)}
 						</div>
-					</div>
+					)}
 				</div>
 			)}
 		</div>

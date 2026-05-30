@@ -1,4 +1,5 @@
 import {
+	type Column,
 	flexRender,
 	type Row,
 	type Table as TanStackTable,
@@ -15,6 +16,14 @@ interface DataTableProps<TData> {
 
 const stickyFirstCol =
 	"sticky left-0 z-10 after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-border";
+
+/** Extra width reserved on sortable columns so the sort indicator (🔼/🔽) sits
+ *  on the header's line instead of wrapping below the label. */
+const SORT_INDICATOR_WIDTH = 28;
+
+function columnWidth<TData>(column: Column<TData, unknown>): number {
+	return column.getSize() + (column.getCanSort() ? SORT_INDICATOR_WIDTH : 0);
+}
 
 export function DataTable<TData>({
 	table,
@@ -35,14 +44,15 @@ export function DataTable<TData>({
 											| { filterable?: boolean }
 											| undefined
 									)?.filterable === true;
+								const width = columnWidth(header.column);
 								return (
 									<th
 										key={header.id}
 										className={`px-2 py-2 md:px-4 md:py-3 text-left border-r border-black/20 dark:border-white/20 last:border-r-0 ${index === 0 ? `${stickyFirstCol} bg-secondary` : ""} ${headerClassName?.(header.column.id) ?? ""}`}
 										style={{
-											width: header.column.getSize(),
-											minWidth: header.column.getSize(),
-											maxWidth: header.column.getSize(),
+											width,
+											minWidth: width,
+											maxWidth: width,
 										}}
 									>
 										{header.isPlaceholder ? null : (
@@ -51,7 +61,7 @@ export function DataTable<TData>({
 												<div
 													className={
 														header.column.getCanSort()
-															? "cursor-pointer select-none flex items-center gap-2"
+															? "cursor-pointer select-none flex items-center gap-2 whitespace-nowrap"
 															: ""
 													}
 													role={
@@ -74,8 +84,8 @@ export function DataTable<TData>({
 														header.getContext(),
 													)}
 													{{
-														asc: " \u{1F53C}",
-														desc: " \u{1F53D}",
+														asc: <span>{"\u{1F53C}"}</span>,
+														desc: <span>{"\u{1F53D}"}</span>,
 													}[header.column.getIsSorted() as string] ?? null}
 												</div>
 												{filterable && <ColumnFilter column={header.column} />}
@@ -91,19 +101,25 @@ export function DataTable<TData>({
 					{table.getRowModel().rows.map((row) => (
 						<React.Fragment key={row.id}>
 							<tr className="group/row hover:bg-accent transition-colors h-12">
-								{row.getVisibleCells().map((cell, index) => (
-									<td
-										key={cell.id}
-										className={`px-2 py-1 md:px-4 md:py-1 h-12 align-middle ${index === 0 ? `${stickyFirstCol} bg-background group-hover/row:bg-accent transition-colors` : ""} ${cellClassName?.(cell.column.id, cell.row) ?? ""}`}
-										style={{
-											width: cell.column.getSize(),
-											minWidth: cell.column.getSize(),
-											maxWidth: cell.column.getSize(),
-										}}
-									>
-										{flexRender(cell.column.columnDef.cell, cell.getContext())}
-									</td>
-								))}
+								{row.getVisibleCells().map((cell, index) => {
+									const width = columnWidth(cell.column);
+									return (
+										<td
+											key={cell.id}
+											className={`px-2 py-1 md:px-4 md:py-1 h-12 align-middle ${index === 0 ? `${stickyFirstCol} bg-background group-hover/row:bg-accent transition-colors` : ""} ${cellClassName?.(cell.column.id, cell.row) ?? ""}`}
+											style={{
+												width,
+												minWidth: width,
+												maxWidth: width,
+											}}
+										>
+											{flexRender(
+												cell.column.columnDef.cell,
+												cell.getContext(),
+											)}
+										</td>
+									);
+								})}
 							</tr>
 							{row.getIsExpanded() && renderExpandedRow?.(row)}
 						</React.Fragment>

@@ -410,6 +410,16 @@ function getColumnBorder(colId: string) {
 	return borderLeftCols.has(colId) ? "border-l border-border" : "";
 }
 
+// Maps each count column to the section its toggle opens, so the cell that
+// opened the active subrow can be painted — anchoring the expanded panel to the
+// value it came from.
+const sectionByColumn: Record<string, ExpandSection> = {
+	subdivisionCount: "subdivisions",
+	localizedNameCount: "names",
+	timezoneCount: "timezones",
+	currencyCount: "currencies",
+};
+
 function ExpandedCountryRow({
 	alpha2Code,
 	colSpan,
@@ -1521,6 +1531,14 @@ function Countries() {
 							let base: string;
 							if (highlight === row.original.alpha2Code) {
 								base = "bg-blue-100 dark:bg-blue-950";
+							} else if (
+								sectionByColumn[colId] !== undefined &&
+								expandedSection[row.original.alpha2Code] ===
+									sectionByColumn[colId]
+							) {
+								// The count cell whose toggle opened the current subrow —
+								// painted to match the bg-accent/50 panel it anchors.
+								base = "bg-accent";
 							} else if (
 								showCrossCheck &&
 								colId === "name" &&

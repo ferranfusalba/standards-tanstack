@@ -36,7 +36,7 @@ export function DataTable<TData>({
 			<table className="w-full text-sm">
 				<thead className="bg-secondary text-secondary-foreground">
 					{table.getHeaderGroups().map((headerGroup) => (
-						<tr key={headerGroup.id} className="h-12">
+						<tr key={headerGroup.id} className="h-12.5">
 							{headerGroup.headers.map((header, index) => {
 								const filterable =
 									(
@@ -100,13 +100,13 @@ export function DataTable<TData>({
 				<tbody className="divide-y divide-border">
 					{table.getRowModel().rows.map((row) => (
 						<React.Fragment key={row.id}>
-							<tr className="group/row hover:bg-accent transition-colors h-12">
+							<tr className="group/row hover:bg-accent transition-colors h-12.5">
 								{row.getVisibleCells().map((cell, index) => {
 									const width = columnWidth(cell.column);
 									return (
 										<td
 											key={cell.id}
-											className={`px-2 py-1 md:px-4 md:py-1 h-12 align-middle ${index === 0 ? `${stickyFirstCol} bg-background group-hover/row:bg-accent transition-colors` : ""} ${cellClassName?.(cell.column.id, cell.row) ?? ""}`}
+											className={`px-2 py-1 md:px-4 md:py-1 h-12.5 align-middle ${index === 0 ? `${stickyFirstCol} bg-background group-hover/row:bg-accent transition-colors` : ""} ${cellClassName?.(cell.column.id, cell.row) ?? ""}`}
 											style={{
 												width,
 												minWidth: width,

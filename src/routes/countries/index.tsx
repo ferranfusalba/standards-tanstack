@@ -200,6 +200,27 @@ function NotCountedNote() {
 	);
 }
 
+// Expanded-row shell. The cell spans the full (often wider-than-viewport) table,
+// so its content is wrapped in a `sticky left-0` panel that stays pinned to the
+// visible left edge during horizontal scroll — otherwise the left of the panel
+// (e.g. the timezone Offset column) scrolls out of view. Same sticky mechanism
+// as DataTable's pinned first column.
+function ExpandedRow({
+	colSpan,
+	children,
+}: {
+	colSpan: number;
+	children: React.ReactNode;
+}) {
+	return (
+		<tr className="bg-accent/50">
+			<td colSpan={colSpan} className="p-0">
+				<div className="sticky left-0 w-fit px-6 py-3">{children}</div>
+			</td>
+		</tr>
+	);
+}
+
 function SubdivisionsExpandedRow({
 	subs,
 	colSpan,
@@ -210,59 +231,56 @@ function SubdivisionsExpandedRow({
 	const langCodes = [...new Set(subs.flatMap((sub) => Object.keys(sub.names)))];
 	const hasType = subs.some((sub) => sub.type !== undefined);
 	return (
-		<tr className="bg-accent/50">
-			<td colSpan={colSpan} className="px-6 py-3">
-				<table className="text-xs w-auto">
-					<thead>
-						<tr className="text-muted-foreground">
-							<th className="pr-4 pb-1 text-left font-normal">Flag</th>
-							<th className="pr-6 pb-1 text-left font-normal">Code</th>
-							{hasType && (
-								<th className="pr-6 pb-1 text-left font-normal">Type</th>
-							)}
-							{langCodes.map((lang) => (
-								<th key={lang} className="pr-6 pb-1 text-left font-normal">
-									{lang}
-								</th>
-							))}
-						</tr>
-					</thead>
-					<tbody>
-						{subs.map((sub) => {
-							const flag =
-								sub.flag ?? (sub.iso1 ? toFlag(sub.iso1) : undefined);
-							return (
-								<tr key={sub.code}>
-									<td className="pr-4 py-0.5">{flag ?? ""}</td>
-									<td className="pr-6 py-0.5 font-mono">
-										{sub.code}
-										{sub.iso1 && (
-											<span className="ml-2 px-1.5 py-0.5 bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 rounded">
-												{sub.iso1}
-											</span>
-										)}
-									</td>
-									{hasType && (
-										<td className="pr-6 py-0.5 text-muted-foreground">
-											{sub.type
-												? Object.entries(sub.type)
-														.map(([lang, name]) => `${name} (${lang})`)
-														.join(", ")
-												: ""}
-										</td>
+		<ExpandedRow colSpan={colSpan}>
+			<table className="text-xs w-auto">
+				<thead>
+					<tr className="text-muted-foreground">
+						<th className="pr-4 pb-1 text-left font-normal">Flag</th>
+						<th className="pr-6 pb-1 text-left font-normal">Code</th>
+						{hasType && (
+							<th className="pr-6 pb-1 text-left font-normal">Type</th>
+						)}
+						{langCodes.map((lang) => (
+							<th key={lang} className="pr-6 pb-1 text-left font-normal">
+								{lang}
+							</th>
+						))}
+					</tr>
+				</thead>
+				<tbody>
+					{subs.map((sub) => {
+						const flag = sub.flag ?? (sub.iso1 ? toFlag(sub.iso1) : undefined);
+						return (
+							<tr key={sub.code}>
+								<td className="pr-4 py-0.5">{flag ?? ""}</td>
+								<td className="pr-6 py-0.5 font-mono">
+									{sub.code}
+									{sub.iso1 && (
+										<span className="ml-2 px-1.5 py-0.5 bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 rounded">
+											{sub.iso1}
+										</span>
 									)}
-									{langCodes.map((lang) => (
-										<td key={lang} className="pr-6 py-0.5">
-											{sub.names[lang] ?? ""}
-										</td>
-									))}
-								</tr>
-							);
-						})}
-					</tbody>
-				</table>
-			</td>
-		</tr>
+								</td>
+								{hasType && (
+									<td className="pr-6 py-0.5 text-muted-foreground">
+										{sub.type
+											? Object.entries(sub.type)
+													.map(([lang, name]) => `${name} (${lang})`)
+													.join(", ")
+											: ""}
+									</td>
+								)}
+								{langCodes.map((lang) => (
+									<td key={lang} className="pr-6 py-0.5">
+										{sub.names[lang] ?? ""}
+									</td>
+								))}
+							</tr>
+						);
+					})}
+				</tbody>
+			</table>
+		</ExpandedRow>
 	);
 }
 
@@ -288,14 +306,9 @@ function LocalizedNamesExpandedRow({
 
 	if (!names) {
 		return (
-			<tr className="bg-accent/50">
-				<td
-					colSpan={colSpan}
-					className="px-6 py-3 text-sm text-muted-foreground"
-				>
-					Loading names...
-				</td>
-			</tr>
+			<ExpandedRow colSpan={colSpan}>
+				<div className="text-sm text-muted-foreground">Loading names...</div>
+			</ExpandedRow>
 		);
 	}
 
@@ -308,42 +321,40 @@ function LocalizedNamesExpandedRow({
 	);
 
 	return (
-		<tr className="bg-accent/50">
-			<td colSpan={colSpan} className="px-6 py-3">
-				<div className="text-xs font-semibold mb-2">
-					Localized names ({names.length})
-				</div>
-				<table className="text-xs border-collapse">
-					<tbody>
-						{grid.map((cells) => {
-							const real = cells.filter((n): n is LocalizedName => n != null);
-							// Pad the ragged last row with one spanning cell so columns align.
-							const padCols = (COLUMNS - real.length) * 3;
-							return (
-								<tr key={real[0].locale}>
-									{real.map((n, c) => (
-										<React.Fragment key={n.locale}>
-											<td
-												className={`py-0.5 pr-3 font-mono text-muted-foreground ${c > 0 ? "pl-16" : ""}`}
-											>
-												{n.locale}
-											</td>
-											<td className="py-0.5 pr-8 text-muted-foreground">
-												{n.language}
-											</td>
-											<td className="py-0.5 pl-4 border-l border-border">
-												{n.name}
-											</td>
-										</React.Fragment>
-									))}
-									{padCols > 0 && <td colSpan={padCols} />}
-								</tr>
-							);
-						})}
-					</tbody>
-				</table>
-			</td>
-		</tr>
+		<ExpandedRow colSpan={colSpan}>
+			<div className="text-xs font-semibold mb-2">
+				Localized names ({names.length})
+			</div>
+			<table className="text-xs border-collapse">
+				<tbody>
+					{grid.map((cells) => {
+						const real = cells.filter((n): n is LocalizedName => n != null);
+						// Pad the ragged last row with one spanning cell so columns align.
+						const padCols = (COLUMNS - real.length) * 3;
+						return (
+							<tr key={real[0].locale}>
+								{real.map((n, c) => (
+									<React.Fragment key={n.locale}>
+										<td
+											className={`py-0.5 pr-3 font-mono text-muted-foreground ${c > 0 ? "pl-16" : ""}`}
+										>
+											{n.locale}
+										</td>
+										<td className="py-0.5 pr-8 text-muted-foreground">
+											{n.language}
+										</td>
+										<td className="py-0.5 pl-4 border-l border-border">
+											{n.name}
+										</td>
+									</React.Fragment>
+								))}
+								{padCols > 0 && <td colSpan={padCols} />}
+							</tr>
+						);
+					})}
+				</tbody>
+			</table>
+		</ExpandedRow>
 	);
 }
 
@@ -438,14 +449,9 @@ function ExpandedCountryRow({
 
 	if (loading && !showTimezones && !showCurrencies) {
 		return (
-			<tr className="bg-accent/50">
-				<td
-					colSpan={colSpan}
-					className="px-6 py-3 text-sm text-muted-foreground"
-				>
-					Loading...
-				</td>
-			</tr>
+			<ExpandedRow colSpan={colSpan}>
+				<div className="text-sm text-muted-foreground">Loading...</div>
+			</ExpandedRow>
 		);
 	}
 
@@ -455,132 +461,125 @@ function ExpandedCountryRow({
 	return (
 		<>
 			{showTimezones && (
-				<tr className="bg-accent/50">
-					<td colSpan={colSpan} className="px-6 py-3">
-						<div className="text-xs font-semibold mb-2">
-							Timezones ({timezones.length})
-						</div>
-						<table className="w-full text-xs">
-							<thead>
-								<tr className="text-muted-foreground">
-									<th className="text-left py-1 pr-4">Offset</th>
-									<th className="text-left py-1 pr-4">ID</th>
-									<th className="text-left py-1 pr-4">Name</th>
-									<th className="text-left py-1">Comment</th>
+				<ExpandedRow colSpan={colSpan}>
+					<div className="text-xs font-semibold mb-2">
+						Timezones ({timezones.length})
+					</div>
+					<table className="w-auto text-xs">
+						<thead>
+							<tr className="text-muted-foreground">
+								<th className="text-left py-1 pr-4">Offset</th>
+								<th className="text-left py-1 pr-4">ID</th>
+								<th className="text-left py-1 pr-4">Name</th>
+								<th className="text-left py-1">Comment</th>
+							</tr>
+						</thead>
+						<tbody>
+							{timezones.map((tz) => (
+								<tr key={tz.id}>
+									<td className="py-1 pr-4 text-muted-foreground">
+										{tz.offset}
+									</td>
+									<td className="py-1 pr-4 font-mono">
+										<Link
+											to="/timezones"
+											search={{ highlight: tz.id }}
+											className="flex items-center gap-1 hover:text-cyan-400 transition-colors"
+										>
+											{tz.id}
+											<SquareArrowOutUpRight className="size-3 text-muted-foreground" />
+										</Link>
+									</td>
+									<td className="py-1 pr-4">{tz.name}</td>
+									<td className="py-1 text-muted-foreground">
+										{tz.comment ?? ""}
+									</td>
 								</tr>
-							</thead>
-							<tbody>
-								{timezones.map((tz) => (
-									<tr key={tz.id}>
-										<td className="py-1 pr-4 text-muted-foreground">
-											{tz.offset}
-										</td>
-										<td className="py-1 pr-4 font-mono">
-											<Link
-												to="/timezones"
-												search={{ highlight: tz.id }}
-												className="flex items-center gap-1 hover:text-cyan-400 transition-colors"
-											>
-												{tz.id}
-												<SquareArrowOutUpRight className="size-3 text-muted-foreground" />
-											</Link>
-										</td>
-										<td className="py-1 pr-4">{tz.name}</td>
-										<td className="py-1 text-muted-foreground">
-											{tz.comment ?? ""}
-										</td>
-									</tr>
-								))}
-							</tbody>
-						</table>
-					</td>
-				</tr>
+							))}
+						</tbody>
+					</table>
+				</ExpandedRow>
 			)}
 			{showCurrencies && (
-				<tr className="bg-accent/50">
-					<td colSpan={colSpan} className="px-6 py-3">
-						<div className="text-xs font-semibold mb-2">
-							Currencies ({currencies.length})
-						</div>
-						<table className="w-full text-xs">
-							<thead>
-								<tr className="text-muted-foreground">
-									<th className="text-left py-1 pr-4">Code</th>
-									<th className="text-left py-1 pr-4">Symbol</th>
-									<th className="text-left py-1 pr-4">Name</th>
-									<th className="text-left py-1">Type</th>
+				<ExpandedRow colSpan={colSpan}>
+					<div className="text-xs font-semibold mb-2">
+						Currencies ({currencies.length})
+					</div>
+					<table className="w-auto text-xs">
+						<thead>
+							<tr className="text-muted-foreground">
+								<th className="text-left py-1 pr-4">Code</th>
+								<th className="text-left py-1 pr-4">Symbol</th>
+								<th className="text-left py-1 pr-4">Name</th>
+								<th className="text-left py-1">Type</th>
+							</tr>
+						</thead>
+						<tbody>
+							{currencies.map((ccy) => (
+								<tr key={ccy.code}>
+									<td className="py-1 pr-4 font-mono">
+										<Link
+											to="/currencies"
+											search={{ highlight: ccy.code }}
+											className="flex items-center gap-1 hover:text-cyan-400 transition-colors"
+										>
+											{ccy.code}
+											<SquareArrowOutUpRight className="size-3 text-muted-foreground" />
+										</Link>
+									</td>
+									<td className="py-1 pr-4">{ccy.symbol ?? "-"}</td>
+									<td className="py-1 pr-4">{ccy.name}</td>
+									<td className="py-1 text-muted-foreground">
+										{ccy.type ?? "currency"}
+									</td>
 								</tr>
-							</thead>
-							<tbody>
-								{currencies.map((ccy) => (
-									<tr key={ccy.code}>
-										<td className="py-1 pr-4 font-mono">
-											<Link
-												to="/currencies"
-												search={{ highlight: ccy.code }}
-												className="flex items-center gap-1 hover:text-cyan-400 transition-colors"
-											>
-												{ccy.code}
-												<SquareArrowOutUpRight className="size-3 text-muted-foreground" />
-											</Link>
-										</td>
-										<td className="py-1 pr-4">{ccy.symbol ?? "-"}</td>
-										<td className="py-1 pr-4">{ccy.name}</td>
-										<td className="py-1 text-muted-foreground">
-											{ccy.type ?? "currency"}
-										</td>
-									</tr>
-								))}
-							</tbody>
-						</table>
-						{historicalCurrencies.length > 0 && (
-							<div className="mt-3 pt-3 border-t border-dashed border-border">
-								<div className="text-xs font-semibold mb-2 text-muted-foreground">
-									Historical Currencies ({historicalCurrencies.length})
-								</div>
-								<table className="w-full text-xs opacity-70">
-									<thead>
-										<tr className="text-muted-foreground">
-											<th className="text-left py-1 pr-4">Code</th>
-											<th className="text-left py-1 pr-4">Name</th>
-											<th className="text-left py-1">Withdrawal Date</th>
-										</tr>
-									</thead>
-									<tbody>
-										{historicalCurrencies.map((ccy, i) => (
-											<tr key={`${ccy.code}-${ccy.withdrawalDate}-${i}`}>
-												<td className="py-1 pr-4 font-mono">
-													<Link
-														to="/currencies"
-														search={{ highlight: ccy.code }}
-														className="flex items-center gap-1 hover:text-cyan-400 transition-colors"
-													>
-														{ccy.code}
-														<SquareArrowOutUpRight className="size-3 text-muted-foreground" />
-													</Link>
-												</td>
-												<td className="py-1 pr-4">{ccy.name}</td>
-												<td className="py-1 text-muted-foreground">
-													{ccy.withdrawalDate}
-												</td>
-											</tr>
-										))}
-									</tbody>
-								</table>
+							))}
+						</tbody>
+					</table>
+					{historicalCurrencies.length > 0 && (
+						<div className="mt-3 pt-3 border-t border-dashed border-border">
+							<div className="text-xs font-semibold mb-2 text-muted-foreground">
+								Historical Currencies ({historicalCurrencies.length})
 							</div>
-						)}
-					</td>
-				</tr>
+							<table className="w-auto text-xs opacity-70">
+								<thead>
+									<tr className="text-muted-foreground">
+										<th className="text-left py-1 pr-4">Code</th>
+										<th className="text-left py-1 pr-4">Name</th>
+										<th className="text-left py-1">Withdrawal Date</th>
+									</tr>
+								</thead>
+								<tbody>
+									{historicalCurrencies.map((ccy, i) => (
+										<tr key={`${ccy.code}-${ccy.withdrawalDate}-${i}`}>
+											<td className="py-1 pr-4 font-mono">
+												<Link
+													to="/currencies"
+													search={{ highlight: ccy.code }}
+													className="flex items-center gap-1 hover:text-cyan-400 transition-colors"
+												>
+													{ccy.code}
+													<SquareArrowOutUpRight className="size-3 text-muted-foreground" />
+												</Link>
+											</td>
+											<td className="py-1 pr-4">{ccy.name}</td>
+											<td className="py-1 text-muted-foreground">
+												{ccy.withdrawalDate}
+											</td>
+										</tr>
+									))}
+								</tbody>
+							</table>
+						</div>
+					)}
+				</ExpandedRow>
 			)}
 			{loading && (
-				<tr className="bg-accent/50">
-					<td
-						colSpan={colSpan}
-						className="px-6 py-3 text-sm text-muted-foreground"
-					>
+				<ExpandedRow colSpan={colSpan}>
+					<div className="text-sm text-muted-foreground">
 						Loading subdivisions...
-					</td>
-				</tr>
+					</div>
+				</ExpandedRow>
 			)}
 			{showSubdivisions && (
 				<SubdivisionsExpandedRow subs={subs} colSpan={colSpan} />

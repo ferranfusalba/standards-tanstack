@@ -184,6 +184,7 @@ function Timezones() {
       {
         accessorKey: "offset",
         header: "Offset",
+        enableHiding: false,
         size: 110,
         maxSize: 110,
         sortingFn: offsetSortingFn,
@@ -191,6 +192,7 @@ function Timezones() {
       {
         accessorKey: "id",
         header: "ID",
+        enableHiding: false,
         size: 250,
         maxSize: 250,
       },
@@ -262,6 +264,7 @@ function Timezones() {
       {
         accessorKey: "offset",
         header: "Offset",
+        enableHiding: false,
         size: 110,
         maxSize: 110,
         sortingFn: offsetSortingFn,
@@ -269,6 +272,7 @@ function Timezones() {
       {
         accessorKey: "id",
         header: "ID",
+        enableHiding: false,
         size: 250,
         maxSize: 250,
       },

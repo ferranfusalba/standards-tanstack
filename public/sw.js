@@ -1,10 +1,12 @@
-const CACHE_NAME = 'standards-v2'
+const CACHE_NAME = 'standards-v3'
 const STATIC_ASSETS = [
   '/',
   '/manifest.json',
   '/favicon.ico',
-  '/logo192.png',
-  '/logo512.png',
+  '/StandardsLogo.svg',
+  '/apple-touch-icon.png',
+  '/icon-192.png',
+  '/icon-512.png',
 ]
 
 self.addEventListener('install', (event) => {

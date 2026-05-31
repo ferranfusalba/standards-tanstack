@@ -60,7 +60,7 @@ export const Route = createRootRoute({
 			},
 			{
 				property: "og:image",
-				content: "/logo512.png",
+				content: "/icon-512.png",
 			},
 		],
 		links: [
@@ -73,8 +73,32 @@ export const Route = createRootRoute({
 				href: "/manifest.json",
 			},
 			{
+				rel: "icon",
+				href: "/favicon.ico",
+				sizes: "48x48",
+			},
+			{
+				rel: "icon",
+				type: "image/svg+xml",
+				href: "/StandardsLogo.svg",
+				sizes: "any",
+			},
+			{
+				rel: "icon",
+				type: "image/png",
+				sizes: "32x32",
+				href: "/favicon-32x32.png",
+			},
+			{
+				rel: "icon",
+				type: "image/png",
+				sizes: "16x16",
+				href: "/favicon-16x16.png",
+			},
+			{
 				rel: "apple-touch-icon",
-				href: "/logo192.png",
+				sizes: "180x180",
+				href: "/apple-touch-icon.png",
 			},
 		],
 	}),

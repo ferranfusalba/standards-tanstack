@@ -13,7 +13,10 @@ export function exportRowsCSV(
 	filename: string,
 ) {
 	if (rows.length === 0) return;
-	const keys = Object.keys(rows[0]);
+	// Union the keys across all rows, not just the first: rows can have a ragged
+	// shape (e.g. only some countries carry a `subdivisions`/`currencies` key), and
+	// keying off `rows[0]` alone would silently drop those columns from the export.
+	const keys = [...new Set(rows.flatMap((row) => Object.keys(row)))];
 	const header = keys.join(",");
 	const lines = rows.map((row) =>
 		keys

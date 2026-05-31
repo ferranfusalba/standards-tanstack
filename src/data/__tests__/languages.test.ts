@@ -59,6 +59,30 @@ describe("getLanguages", () => {
 		expect(typeof en?.nativeName).toBe("string");
 	});
 
+	it("uses the real native form, not the English name", () => {
+		const byCode = new Map(languages.map((l) => [l.code, l]));
+		expect(byCode.get("de")?.nativeName).toBe("Deutsch");
+		expect(byCode.get("es")?.nativeName).toBe("español");
+		expect(byCode.get("fr")?.nativeName).toBe("français");
+		expect(byCode.get("nl")?.nativeName).toBe("Nederlands");
+	});
+
+	it("never falls back to the English name for an unrenderable locale", () => {
+		// If Intl can't actually render a language in its own locale, the field must
+		// be undefined rather than silently echo the English name (e.g. "Latin").
+		for (const lang of languages) {
+			const resolved = new Intl.DisplayNames([lang.code], {
+				type: "language",
+				fallback: "none",
+			})
+				.resolvedOptions()
+				.locale.split("-")[0];
+			if (resolved !== lang.code) {
+				expect(lang.nativeName).toBeUndefined();
+			}
+		}
+	});
+
 	it("BCP 47 variants are arrays when present", () => {
 		const withVariants = languages.filter((l) => l.bcp47Variants);
 		expect(withVariants.length).toBeGreaterThan(0);

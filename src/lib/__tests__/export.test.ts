@@ -73,6 +73,21 @@ describe("exportRowsCSV", () => {
 		expect(lines[1]).toBe('"","","ok"');
 	});
 
+	it("includes columns present in later rows, not just the first", () => {
+		// Ragged rows: the first row lacks the `currency` key that a later one has.
+		const rows = [
+			{ code: "US", name: "United States" },
+			{ code: "FR", name: "France", currency: "EUR" },
+		];
+		exportRowsCSV(rows, "test.csv");
+
+		const lines = lastContent.split("\n");
+		expect(lines[0]).toBe("code,name,currency");
+		// The first row gets an empty cell for the missing column, not a dropped one.
+		expect(lines[1]).toBe('"US","United States",""');
+		expect(lines[2]).toBe('"FR","France","EUR"');
+	});
+
 	it("serializes object values as JSON", () => {
 		const rows = [{ data: { nested: true } }];
 		exportRowsCSV(rows, "test.csv");

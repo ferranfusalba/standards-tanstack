@@ -808,10 +808,18 @@ export const getLanguages = createServerFn({
 		const intlVariants: string[] = [];
 
 		try {
-			// Get native name using the language's own code as locale
-			const nativeNames = new Intl.DisplayNames([code], { type: "language" });
-			nativeName = nativeNames.of(code);
-		} catch (error) {
+			// Native name = the language's name in its own locale. Require Intl to
+			// actually have data for that locale (fallback: "none" + a resolved-locale
+			// base-match) — otherwise it silently echoes the English name (e.g. "la"
+			// would read "Latin" rather than a real native form).
+			const nativeNames = new Intl.DisplayNames([code], {
+				type: "language",
+				fallback: "none",
+			});
+			if (nativeNames.resolvedOptions().locale.split("-")[0] === code) {
+				nativeName = nativeNames.of(code);
+			}
+		} catch {
 			// Some language codes might not be supported by Intl.DisplayNames
 			nativeName = undefined;
 		}

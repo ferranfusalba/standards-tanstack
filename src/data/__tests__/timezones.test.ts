@@ -12,7 +12,11 @@ vi.mock("@tanstack/react-start", () => ({
 	}),
 }));
 
-import { getTimezonesFromIntl, type Timezone } from "../timezones";
+import {
+	getTimezonesFromIntl,
+	type Timezone,
+	type TimezoneIntl,
+} from "../timezones";
 
 describe("getTimezonesFromIntl", () => {
 	let timezones: Timezone[];
@@ -59,5 +63,40 @@ describe("getTimezonesFromIntl", () => {
 		const ny = timezones.find((tz) => tz.id === "America/New_York");
 		expect(ny?.region).toBe("America");
 		expect(ny?.name).toBe("New York");
+	});
+});
+
+describe("getTimezonesFromIntl — standard/DST offsets", () => {
+	let byId: Map<string, TimezoneIntl>;
+
+	beforeAll(async () => {
+		const all = (await (getTimezonesFromIntl as unknown as HandlerFn)({
+			data: undefined,
+			context: {},
+			signal: new AbortController().signal,
+		})) as TimezoneIntl[];
+		byId = new Map(all.map((tz) => [tz.id, tz]));
+	});
+
+	// Standard time is the smaller (more negative) offset; DST the larger one.
+	// Regression: a string compare of "UTC-05"/"UTC-04" swapped these for the
+	// Americas.
+	it.each([
+		["America/New_York", "UTC-05", "UTC-04"], // northern, negative
+		["Europe/Paris", "UTC+01", "UTC+02"], // northern, positive
+		["Australia/Sydney", "UTC+10", "UTC+11"], // southern, positive
+		["America/Santiago", "UTC-04", "UTC-03"], // southern, negative
+	])("%s → standard %s / DST %s", (id, standard, dst) => {
+		const tz = byId.get(id);
+		expect(tz?.isDST).toBe(true);
+		expect(tz?.standardOffset).toBe(standard);
+		expect(tz?.dstOffset).toBe(dst);
+	});
+
+	it("leaves standardOffset = offset and dstOffset = null for non-DST zones", () => {
+		const tokyo = byId.get("Asia/Tokyo");
+		expect(tokyo?.isDST).toBe(false);
+		expect(tokyo?.dstOffset).toBeNull();
+		expect(tokyo?.standardOffset).toBe(tokyo?.offset);
 	});
 });

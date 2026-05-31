@@ -1,4 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
+import { parseUtcOffsetMinutes } from "@/lib/offset";
 
 export interface Timezone {
 	id: string;
@@ -73,16 +74,18 @@ export const getTimezonesFromIntl = createServerFn({
 		const janOffset = formatOffset(jan, id);
 		const julOffset = formatOffset(jul, id);
 		const isDST = janOffset !== julOffset;
+		// Standard time sits at the smaller (more negative) UTC offset; DST springs
+		// forward to the larger one. Compare parsed minutes, not the raw strings —
+		// a string compare wrongly orders negative offsets ("UTC-05" > "UTC-04"),
+		// which would swap standard/DST for every Americas zone.
+		const janIsStandard =
+			parseUtcOffsetMinutes(janOffset) <= parseUtcOffsetMinutes(julOffset);
 		const standardOffset = isDST
-			? janOffset < julOffset
+			? janIsStandard
 				? janOffset
 				: julOffset
 			: offset;
-		const dstOffset = isDST
-			? janOffset < julOffset
-				? julOffset
-				: janOffset
-			: null;
+		const dstOffset = isDST ? (janIsStandard ? julOffset : janOffset) : null;
 
 		return {
 			id,

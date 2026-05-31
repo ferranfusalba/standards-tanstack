@@ -4,9 +4,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev --port 3001",
-    "build": "vitest run && vite build",
+    "build": "biome check && tsc --noEmit && vitest run && vite build",
     "preview": "vite preview",
     "test": "vitest run",
+    "typecheck": "tsc --noEmit",
     "format": "biome format",
     "lint": "biome lint",
     "check": "biome check"

@@ -292,6 +292,7 @@ function Currencies() {
 	});
 
 	// Navigate to the correct page and scroll to highlighted currency
+	// biome-ignore lint/correctness/useExhaustiveDependencies: deep-link highlight applies once on mount; re-running on table/param changes would fight the user's paging
 	React.useEffect(() => {
 		if (!highlight) return;
 		// Try active table first, then historical

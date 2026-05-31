@@ -170,7 +170,7 @@ export const getTimezonesFromIANA = createServerFn({
 					coordinates,
 					comment,
 				});
-			} catch (error) {
+			} catch {
 				// Skip timezones not supported by this Node.js version
 				console.warn(`Skipping timezone ${id}: not supported by this runtime`);
 			}

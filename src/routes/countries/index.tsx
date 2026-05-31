@@ -1247,6 +1247,7 @@ function Countries() {
 	});
 
 	// Navigate to the correct page and scroll to highlighted country
+	// biome-ignore lint/correctness/useExhaustiveDependencies: deep-link highlight/expand applies once on mount; re-running on table/param changes would fight the user's paging
 	React.useEffect(() => {
 		if (!highlight) return;
 		const rows = tableUN.getFilteredRowModel().rows;

@@ -173,19 +173,10 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 					]}
 				/>
 				<Scripts />
-				{import.meta.env.PROD && (
-					<script
-						dangerouslySetInnerHTML={{
-							__html: `
-              if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function() {
-                  navigator.serviceWorker.register('/sw.js');
-                });
-              }
-            `,
-						}}
-					/>
-				)}
+				{/* Service-worker registration lives in a static file (public/) rather
+				    than an inline script, so there's no dangerouslySetInnerHTML and the
+				    page stays compatible with a strict Content-Security-Policy. */}
+				{import.meta.env.PROD && <script src="/sw-register.js" defer />}
 			</body>
 		</html>
 	);

@@ -52,7 +52,8 @@ describe("createFuzzyFilter", () => {
 			savedMeta = m as unknown as Record<string, unknown>;
 		});
 		expect(savedMeta).not.toBeNull();
-		const itemRank = savedMeta!.itemRank as RankingInfo;
+		const itemRank = (savedMeta as unknown as Record<string, unknown>)
+			.itemRank as RankingInfo;
 		expect(itemRank).toBeDefined();
 		expect(itemRank.passed).toBe(true);
 	});

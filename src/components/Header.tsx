@@ -5,7 +5,7 @@ import {
 	Home,
 	Languages,
 	type LucideIcon,
-	Map,
+	Map as MapIcon,
 	Menu,
 	Moon,
 	Sun,
@@ -30,7 +30,7 @@ interface NavItem {
 const NAV_ITEMS: NavItem[] = [
 	{ to: "/", label: "Home", icon: Home, crumb: false },
 	{ to: "/currencies", label: "Currencies", icon: Coins },
-	{ to: "/timezones", label: "Timezones", icon: Map },
+	{ to: "/timezones", label: "Timezones", icon: MapIcon },
 	{ to: "/countries", label: "Countries", icon: Globe },
 	{ to: "/languages", label: "Languages", icon: Languages },
 ];
@@ -114,6 +114,7 @@ export default function Header() {
 		<>
 			<header className="sticky top-0 z-40 p-4 flex items-center bg-secondary text-secondary-foreground shadow-lg">
 				<button
+					type="button"
 					onClick={() => setIsOpen(true)}
 					className="p-2 hover:bg-accent rounded-lg transition-colors"
 					aria-label="Open menu"
@@ -147,6 +148,7 @@ export default function Header() {
 					</div>
 				)}
 				<button
+					type="button"
 					onClick={toggleTheme}
 					className="p-2 hover:bg-accent rounded-lg transition-colors"
 					aria-label={
@@ -165,6 +167,7 @@ export default function Header() {
 				<div className="flex items-center justify-between p-4 border-b border-border">
 					<h2 className="text-xl font-bold">Navigation</h2>
 					<button
+						type="button"
 						onClick={() => setIsOpen(false)}
 						className="p-2 hover:bg-accent rounded-lg transition-colors"
 						aria-label="Close menu"

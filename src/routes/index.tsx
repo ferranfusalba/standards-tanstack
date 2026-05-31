@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Coins, Globe, Languages, Map } from "lucide-react";
+import { Coins, Globe, Languages, Map as MapIcon } from "lucide-react";
 
 export const Route = createFileRoute("/")({
 	component: App,
@@ -30,7 +30,7 @@ function App() {
 			path: "/currencies",
 		},
 		{
-			icon: <Map className="w-12 h-12 text-cyan-500 dark:text-cyan-400" />,
+			icon: <MapIcon className="w-12 h-12 text-cyan-500 dark:text-cyan-400" />,
 			title: "Timezones",
 			standards: ["JS Intl API", "IANA tzdata"],
 			path: "/timezones",
@@ -84,9 +84,9 @@ function App() {
 
 			<section className="py-16 px-6 max-w-7xl mx-auto">
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-					{pages.map((page, index) => (
+					{pages.map((page) => (
 						<Link
-							key={index}
+							key={page.path}
 							to={page.path}
 							className="bg-card border border-border rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 block"
 						>

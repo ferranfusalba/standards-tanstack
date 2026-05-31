@@ -22,6 +22,7 @@ import {
 	type TimezoneIntl,
 } from "@/data/timezones";
 import { fuzzyFilter } from "@/lib/fuzzy-filter";
+import { parseUtcOffsetMinutes } from "@/lib/offset";
 import { facetedFilter } from "@/lib/table-filters";
 import { asNumber, asString, asStringArray } from "@/lib/url-state";
 import {
@@ -29,19 +30,10 @@ import {
 	useTableUrlState,
 } from "@/lib/use-table-url-state";
 
-function parseOffset(offset: string): number {
-	const match = offset.match(/UTC([+-]?\d+)(?::(\d+))?/);
-	if (!match) return 0;
-	const hours = Number.parseInt(match[1], 10);
-	const minutes = Number.parseInt(match[2] || "0", 10);
-	return hours * 60 + (hours < 0 ? -minutes : minutes);
-}
-
-const offsetSortingFn: SortingFn<any> = (rowA, rowB, columnId) => {
-	return (
-		parseOffset(rowA.getValue(columnId)) - parseOffset(rowB.getValue(columnId))
-	);
-};
+// biome-ignore lint/suspicious/noExplicitAny: SortingFn generics are contravariant, so a single typed version can't serve both timezone tables
+const offsetSortingFn: SortingFn<any> = (rowA, rowB, columnId) =>
+	parseUtcOffsetMinutes(rowA.getValue(columnId)) -
+	parseUtcOffsetMinutes(rowB.getValue(columnId));
 
 interface TimezonesSearch {
 	highlight?: string;
@@ -383,6 +375,7 @@ function Timezones() {
 	});
 
 	// Navigate to the correct page and scroll to highlighted row
+	// biome-ignore lint/correctness/useExhaustiveDependencies: deep-link highlight applies once on mount; re-running on table/param changes would fight the user's paging
 	React.useEffect(() => {
 		if (!highlight) return;
 		// Jump each table to the page containing the highlighted timezone

@@ -21,6 +21,7 @@ import {
 	getLocalizedNameCountsByCountry,
 	getLocalizedNamesAllByCountry,
 	getLocalizedSearchByCountry,
+	getMissingCountries,
 	getRegionNameLocales,
 	type LocalizedName,
 	type RegionNameLocale,
@@ -242,6 +243,34 @@ describe("getRegionNameLocales", () => {
 	});
 });
 
+describe("getMissingCountries", () => {
+	it("enriches user-assigned codes with CLDR names (e.g. Kosovo)", async () => {
+		const missing = (await (getMissingCountries as unknown as HandlerFn)({
+			data: undefined,
+			context: {},
+			signal: new AbortController().signal,
+		})) as Array<
+			Country & {
+				cldrName?: string;
+				localizedNameCount?: number;
+				cellNotes?: Record<string, string>;
+				phonePrefix?: string;
+			}
+		>;
+		const kosovo = missing.find((c) => c.alpha2Code === "XK");
+		expect(kosovo).toBeDefined();
+		// No ISO 3166-1 name (Kosovo isn't in ISO); the CLDR name carries it.
+		expect(kosovo?.name).toBe("");
+		expect(kosovo?.cldrName).toBe("Kosovo");
+		expect(kosovo?.localizedNameCount).toBeGreaterThan(0);
+		// ITU-assigned dialing code; only the alpha-2/alpha-3 cells carry a tooltip
+		// note (the ISO mismatch) — the ICAO/IOC/ITU values stand on their own.
+		expect(kosovo?.phonePrefix).toBe("+383");
+		expect(kosovo?.cellNotes?.alpha2Code).toContain("user-assigned");
+		expect(kosovo?.cellNotes?.icaoCode).toBeUndefined();
+	});
+});
+
 describe("getCountryNamesByLocale", () => {
 	const namesByLocale = (locale: string): Promise<Record<string, string>> =>
 		(getCountryNamesByLocale as unknown as HandlerFn)({
@@ -261,6 +290,11 @@ describe("getCountryNamesByLocale", () => {
 		expect(es.DE).toBe("Alemania");
 		expect(es.ES).toBe("España");
 		expect(Object.keys(es).length).toBeGreaterThan(200);
+	});
+
+	it("includes user-assigned missing codes (e.g. Kosovo / XK)", async () => {
+		const es = await namesByLocale("es");
+		expect(es.XK).toBe("Kosovo");
 	});
 
 	it("returns an empty map for an unsupported locale", async () => {

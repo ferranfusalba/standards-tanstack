@@ -98,11 +98,15 @@ function Timezones() {
 		search,
 		navigate,
 		includeColumnFilters: true,
+		// Page size is shared across both tables via a single `size` param.
+		sizeKey: "size",
 	});
 	const ianaUrl = useTableUrlState({
 		prefix: "iana",
 		search,
 		navigate,
+		// Page size is shared across both tables via a single `size` param.
+		sizeKey: "size",
 	});
 
 	const selectedRegions = React.useMemo(

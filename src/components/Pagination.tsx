@@ -5,7 +5,10 @@ interface PaginationProps<TData> {
 	totalItems: number;
 }
 
-export const SHOW_ALL_SIZE = 100_000;
+// "Show All" page size — a sentinel that must stay larger than the biggest
+// table's row count (the largest, IANA timezones, is ~450). Bump it if any
+// dataset ever grows past 500.
+export const SHOW_ALL_SIZE = 500;
 
 export function getPageSizeOptions(pageSize: number, totalItems: number) {
 	const showingAll = pageSize >= totalItems;

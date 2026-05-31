@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import type { ColumnDef, SortingFn } from "@tanstack/react-table";
+import type { CellContext, ColumnDef, SortingFn } from "@tanstack/react-table";
 import {
 	getCoreRowModel,
 	getExpandedRowModel,
@@ -10,7 +10,12 @@ import {
 	getSortedRowModel,
 	useReactTable,
 } from "@tanstack/react-table";
-import { Info, SquareArrowOutUpRight } from "lucide-react";
+import {
+	Coins,
+	Info,
+	Map as MapIcon,
+	SquareArrowOutUpRight,
+} from "lucide-react";
 import React from "react";
 import { ColumnVisibility } from "@/components/ColumnVisibility";
 import { DataTable } from "@/components/DataTable";
@@ -62,8 +67,6 @@ interface CountriesSearch {
 	expandCcy?: boolean;
 	q?: string;
 	size?: number;
-	intl_sort?: string;
-	intl_page?: number;
 	un_sort?: string;
 	un_page?: number;
 	un_f?: string;
@@ -81,8 +84,6 @@ export const Route = createFileRoute("/countries/")({
 			search.expandCcy === true || search.expandCcy === "true" || undefined,
 		q: asString(search.q),
 		size: asNumber(search.size),
-		intl_sort: asString(search.intl_sort),
-		intl_page: asNumber(search.intl_page),
 		un_sort: asString(search.un_sort),
 		un_page: asNumber(search.un_page),
 		un_f: asString(search.un_f),
@@ -120,14 +121,20 @@ export const Route = createFileRoute("/countries/")({
 		]);
 		// Locale-independent enrichments (counts). The picked-locale name and the
 		// search blob are applied in the component so the loader needn't re-run.
+		// English CLDR name per code (from Intl.DisplayNames), kept only to flag
+		// where the runtime's name diverges from the official ISO/UN name.
+		const cldrNameByCode: Record<string, string> = {};
+		for (const c of countriesIntl) {
+			cldrNameByCode[c.alpha2Code] = c.name;
+		}
 		const countriesUNWithTz = countriesUN.map((c) => ({
 			...c,
 			timezoneCount: timezoneMap[c.alpha2Code]?.length ?? 0,
 			currencyCount: currencyMap[c.alpha2Code]?.length ?? 0,
 			localizedNameCount: localizedNameCounts[c.alpha2Code] ?? 0,
+			cldrName: cldrNameByCode[c.alpha2Code],
 		}));
 		return {
-			countriesIntl,
 			countriesUN: countriesUNWithTz,
 			countriesMissing,
 			timezoneMap,
@@ -147,7 +154,7 @@ export const Route = createFileRoute("/countries/")({
 			{
 				name: "description",
 				content:
-					"ISO 3166-1 country codes, UN M49 regions, ICAO passport codes, IOC Olympic codes, and ISO 3166-2 subdivisions. Compare Intl API data with official UN sources.",
+					"ISO 3166-1 country codes, UN M49 regions, ICAO passport codes, IOC Olympic codes, and ISO 3166-2 subdivisions, with runtime CLDR names flagged where they diverge from the official names.",
 			},
 		],
 	}),
@@ -420,6 +427,70 @@ const sectionByColumn: Record<string, ExpandSection> = {
 	currencyCount: "currencies",
 };
 
+// Data source (issuing standard / organization) for each column in the UN M49
+// table, keyed by column id. Rendered as a second header row by <DataTable>.
+// The column title above says *what* the value is; this says *where it comes from*
+// — which is why the two ICAO columns are disambiguated by their document.
+const countrySources: Record<string, string> = {
+	flag: "Unicode",
+	alpha2Code: "ISO 3166-1",
+	alpha3Code: "ISO 3166-1",
+	subdivisionCount: "ISO 3166-2",
+	icaoCode: "ICAO · Doc 9303",
+	dsitCode: "UNECE · DSIT",
+	iocCode: "IOC",
+	aircraftRegPrefixes: "ICAO · Annex 7",
+	ccTLD: "IANA · Root Zone",
+	phonePrefix: "ITU-T · E.164",
+	independent: "ISO 3166-1",
+	unMembership: "UN",
+	euMember: "EU",
+	region: "UN M49",
+	name: "ISO 3166-1",
+	cldrName: "Unicode CLDR",
+	fullName: "ISO 3166-1",
+	localizedName: "Unicode CLDR",
+	localizedNameCount: "Unicode CLDR",
+	timezoneCount: "IANA · tzdata",
+	currencyCount: "ISO 4217",
+};
+
+// Authoritative reference per source label (from `countrySources`). `href` makes
+// the label a link in the source header row; `note` adds an info-tooltip beside
+// it. Keyed by label so a standard shared by several columns is defined once;
+// labels not listed here stay plain text.
+// Deliberately NOT linked: ICAO · Annex 7 (aircraft marks) — that document isn't
+// officially/freely published online, so there's no canonical public URL to point
+// at. Leave it as plain text.
+const countrySourceMeta: Record<string, { href?: string; note?: string }> = {
+	Unicode: {
+		href: "https://unicode.org/emoji/charts/full-emoji-list.html#country-flag",
+	},
+	"ISO 3166-1": { href: "https://www.iso.org/obp/ui/#iso:pub:PUB500001:en" },
+	"ISO 3166-2": { href: "https://www.iso.org/obp/ui/#iso:pub:PUB500001:en" },
+	"ICAO · Doc 9303": {
+		href: "https://www.icao.int/publications/doc-series/doc-9303",
+		note: "Country codes are listed in Doc 9303 Part 3, page 21.",
+	},
+	"IANA · Root Zone": { href: "https://www.iana.org/domains/root/db" },
+	"ITU-T · E.164": {
+		href: "https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-11-2011-PDF-E.pdf",
+	},
+	UN: { href: "https://www.un.org/en/about-us/member-states" },
+	EU: {
+		href: "https://european-union.europa.eu/principles-countries-history/eu-countries_en",
+	},
+	"UN M49": { href: "https://unstats.un.org/unsd/methodology/m49/" },
+	IOC: { href: "https://www.olympics.com/ioc/national-olympic-committees" },
+	"UNECE · DSIT": {
+		href: "https://unece.org/DAM/trans/conventn/Distsigns.pdf",
+	},
+	"Unicode CLDR": {
+		href: "https://cldr.unicode.org/translation/displaynames/countryregion-territory-names",
+		note: "Resolved at runtime via Intl.DisplayNames.",
+	},
+};
+
 function ExpandedCountryRow({
 	alpha2Code,
 	colSpan,
@@ -646,7 +717,6 @@ function ActiveFilters<TData>({
 
 function Countries() {
 	const {
-		countriesIntl,
 		countriesUN,
 		countriesMissing,
 		timezoneMap,
@@ -694,15 +764,19 @@ function Countries() {
 			})),
 		[countriesUN, localizedNames, localizedSearch],
 	);
+	// Missing countries carry cldrName + localizedNameCount from the loader; add the
+	// picked-locale name here so their localized-name column matches the main table.
+	const countriesMissingLocalized = React.useMemo(
+		() =>
+			countriesMissing.map((c) => ({
+				...c,
+				localizedName: localizedNames[c.alpha2Code],
+			})),
+		[countriesMissing, localizedNames],
+	);
 	const [globalFilter, setGlobalFilter] = useGlobalFilterSync({
 		search,
 		navigate,
-	});
-	const intlUrl = useTableUrlState({
-		prefix: "intl",
-		search,
-		navigate,
-		sizeKey: "size",
 	});
 	const unUrl = useTableUrlState({
 		prefix: "un",
@@ -729,16 +803,6 @@ function Countries() {
 	const [showLocalizedDiff, setShowLocalizedDiff] = React.useState(true);
 	const [showCodeMismatch, setShowCodeMismatch] = React.useState(true);
 
-	// Cross-check: names present in one source table but not the other
-	const intlNames = React.useMemo(
-		() => new Set(countriesIntl.map((c) => normalizeName(c.name))),
-		[countriesIntl],
-	);
-	const unNames = React.useMemo(
-		() => new Set(countriesUN.map((c) => normalizeName(c.name))),
-		[countriesUN],
-	);
-
 	const toggleSection = React.useCallback(
 		(alpha2Code: string, rowIndex: string, section: ExpandSection) => {
 			setExpandedSection((prev) => {
@@ -756,39 +820,6 @@ function Countries() {
 				return { ...prev, [alpha2Code]: section };
 			});
 		},
-		[],
-	);
-
-	const columnsIntl = React.useMemo<ColumnDef<Country>[]>(
-		() => [
-			{
-				accessorKey: "flag",
-				header: "Flag",
-				cell: (info) => (
-					<span className="text-2xl leading-none">
-						{info.getValue<string>()}
-					</span>
-				),
-				size: 60,
-				maxSize: 60,
-				enableHiding: false,
-				enableGlobalFilter: false,
-			},
-			{
-				accessorKey: "alpha2Code",
-				header: "Alpha-2",
-				size: 80,
-				maxSize: 80,
-				enableHiding: false,
-			},
-			{
-				accessorKey: "name",
-				header: "Name",
-				size: 200,
-				maxSize: 200,
-				enableHiding: false,
-			},
-		],
 		[],
 	);
 
@@ -838,9 +869,9 @@ function Countries() {
 			},
 			{
 				accessorKey: "subdivisionCount",
-				header: "3166-2",
-				size: 100,
-				maxSize: 100,
+				header: "Subdivisions",
+				size: 110,
+				maxSize: 110,
 				cell: ({ row }) => {
 					const count = row.original.subdivisionCount;
 					if (!count) return <span className="text-muted-foreground">-</span>;
@@ -864,25 +895,25 @@ function Countries() {
 			},
 			{
 				accessorKey: "icaoCode",
-				header: "ICAO",
-				size: 90,
-				maxSize: 90,
+				header: "Passport",
+				size: 120,
+				maxSize: 120,
 				cell: (info) => info.getValue<string>() ?? "-",
 				filterFn: presenceFilter,
 				meta: { filterable: true, filterMode: "presence" },
 			},
 			{
 				accessorKey: "dsitCode",
-				header: "DSIT",
-				size: 90,
-				maxSize: 90,
+				header: "Vehicle plate",
+				size: 130,
+				maxSize: 130,
 				cell: (info) => info.getValue<string>() ?? "-",
 				filterFn: presenceFilter,
 				meta: { filterable: true, filterMode: "presence" },
 			},
 			{
 				accessorKey: "iocCode",
-				header: "IOC",
+				header: "Olympic",
 				size: 90,
 				maxSize: 90,
 				cell: (info) => info.getValue<string>() ?? "-",
@@ -923,9 +954,9 @@ function Countries() {
 			},
 			{
 				accessorKey: "independent",
-				header: "Ind.",
-				size: 80,
-				maxSize: 80,
+				header: "Independent",
+				size: 130,
+				maxSize: 130,
 				cell: () => "",
 				enableGlobalFilter: false,
 				filterFn: facetedFilter,
@@ -933,9 +964,9 @@ function Countries() {
 			},
 			{
 				accessorKey: "unMembership",
-				header: "\u{1F1FA}\u{1F1F3}",
-				size: 80,
-				maxSize: 80,
+				header: "UN member",
+				size: 120,
+				maxSize: 120,
 				cell: (info) => info.row.original.sovereignState ?? "",
 				enableGlobalFilter: false,
 				filterFn: facetedFilter,
@@ -943,9 +974,9 @@ function Countries() {
 			},
 			{
 				accessorKey: "euMember",
-				header: "\u{1F1EA}\u{1F1FA}",
-				size: 80,
-				maxSize: 80,
+				header: "EU member",
+				size: 120,
+				maxSize: 120,
 				cell: () => "",
 				enableGlobalFilter: false,
 				filterFn: facetedFilter,
@@ -967,15 +998,29 @@ function Countries() {
 				enableHiding: false,
 			},
 			{
+				accessorKey: "cldrName",
+				header: "CLDR name",
+				size: 200,
+				maxSize: 200,
+				cell: (info) => {
+					const value = info.getValue<string | undefined>();
+					return value ? (
+						value
+					) : (
+						<span className="text-muted-foreground">-</span>
+					);
+				},
+			},
+			{
 				accessorKey: "fullName",
-				header: "Full Name",
+				header: "Full name",
 				size: 300,
 				maxSize: 300,
 				cell: (info) => info.getValue<string>() ?? "",
 			},
 			{
 				accessorKey: "localizedName",
-				header: "Localized Name",
+				header: "Localized name",
 				size: 200,
 				maxSize: 200,
 				cell: (info) => {
@@ -990,8 +1035,8 @@ function Countries() {
 			{
 				accessorKey: "localizedNameCount",
 				header: "Names",
-				size: 90,
-				maxSize: 90,
+				size: 120,
+				maxSize: 120,
 				enableGlobalFilter: false,
 				cell: ({ row }) => {
 					const count = (
@@ -1017,7 +1062,19 @@ function Countries() {
 			},
 			{
 				accessorKey: "timezoneCount",
-				header: "Timezones",
+				header: () => (
+					<span className="inline-flex items-center gap-1.5">
+						Timezones
+						<Link
+							to="/timezones"
+							onClick={(e) => e.stopPropagation()}
+							aria-label="Open Timezones view"
+							className="text-muted-foreground hover:text-foreground transition-colors"
+						>
+							<MapIcon className="size-3.5" />
+						</Link>
+					</span>
+				),
 				size: 120,
 				maxSize: 120,
 				cell: ({ row }) => {
@@ -1044,7 +1101,19 @@ function Countries() {
 			},
 			{
 				accessorKey: "currencyCount",
-				header: "Currencies",
+				header: () => (
+					<span className="inline-flex items-center gap-1.5">
+						Currencies
+						<Link
+							to="/currencies"
+							onClick={(e) => e.stopPropagation()}
+							aria-label="Open Currencies view"
+							className="text-muted-foreground hover:text-foreground transition-colors"
+						>
+							<Coins className="size-3.5" />
+						</Link>
+					</span>
+				),
 				size: 120,
 				maxSize: 120,
 				cell: ({ row }) => {
@@ -1083,25 +1152,6 @@ function Countries() {
 		[expandedSection, toggleSection],
 	);
 
-	const tableIntl = useReactTable({
-		data: countriesIntl,
-		columns: columnsIntl,
-		getCoreRowModel: getCoreRowModel(),
-		getFilteredRowModel: getFilteredRowModel(),
-		getPaginationRowModel: getPaginationRowModel(),
-		getSortedRowModel: getSortedRowModel(),
-		globalFilterFn: "fuzzy",
-		state: {
-			globalFilter,
-			sorting: intlUrl.sorting,
-			pagination: intlUrl.pagination,
-		},
-		onGlobalFilterChange: setGlobalFilter,
-		onSortingChange: intlUrl.onSortingChange,
-		onPaginationChange: intlUrl.onPaginationChange,
-		filterFns: { fuzzy: fuzzyFilter },
-	});
-
 	const tableUN = useReactTable({
 		data: countriesUNLocalized,
 		columns: columnsUN,
@@ -1137,109 +1187,115 @@ function Countries() {
 		filterFns: { fuzzy: fuzzyFilter },
 	});
 
-	const columnsMissing = React.useMemo<ColumnDef<Country>[]>(
-		() => [
-			{
-				accessorKey: "flag",
-				header: "Flag",
-				cell: (info) => (
-					<span className="text-2xl leading-none">
-						{info.getValue<string>()}
-					</span>
-				),
-				size: 50,
-				maxSize: 50,
-				enableHiding: false,
-				enableGlobalFilter: false,
-			},
-			{
-				accessorKey: "alpha2Code",
-				header: "Alpha-2",
-				size: 80,
-				maxSize: 80,
-				enableHiding: false,
-			},
-			{
-				accessorKey: "alpha3Code",
-				header: "Alpha-3",
-				size: 80,
-				maxSize: 80,
-				enableHiding: false,
-			},
-			{
-				accessorKey: "icaoCode",
-				header: "ICAO",
-				size: 90,
-				maxSize: 90,
-				cell: (info) => info.getValue<string>() ?? "-",
-			},
-			{
-				accessorKey: "dsitCode",
-				header: "DSIT",
-				size: 80,
-				maxSize: 80,
-				cell: (info) => info.getValue<string>() ?? "-",
-			},
-			{
-				accessorKey: "iocCode",
-				header: "IOC",
-				size: 70,
-				maxSize: 70,
-				cell: (info) => info.getValue<string>() ?? "-",
-			},
-			{
-				accessorKey: "aircraftRegPrefixes",
-				header: "Aircraft",
-				size: 100,
-				maxSize: 100,
-				cell: (info) => {
-					const prefixes = info.getValue<string[]>();
-					return prefixes ? prefixes.join(", ") : "-";
-				},
-				enableGlobalFilter: false,
-			},
-			{
-				accessorKey: "unMembership",
-				header: "\u{1F1FA}\u{1F1F3}",
-				size: 50,
-				maxSize: 50,
-				cell: (info) => info.row.original.sovereignState ?? "",
-				enableGlobalFilter: false,
-			},
-			{
-				accessorKey: "euMember",
-				header: "\u{1F1EA}\u{1F1FA}",
-				size: 50,
-				maxSize: 50,
-				cell: () => "",
-				enableGlobalFilter: false,
-			},
-			{
-				accessorKey: "region",
-				header: "Region",
-				size: 100,
-				maxSize: 100,
-			},
-			{
-				accessorKey: "name",
-				header: "Name",
-				size: 200,
-				maxSize: 200,
-				enableHiding: false,
-			},
+	// Mirror the ISO 3166 table's columns (same order, headers, sizes) so the two
+	// stacked tables line up. Most cells render the value or "-"; the flag keeps its
+	// glyph, the membership / independent columns stay blank to match the main table,
+	// and the Names count opens a localized-names subrow. Notes is appended.
+	const columnsMissing = React.useMemo<ColumnDef<Country>[]>(() => {
+		const valueOrDash = (info: CellContext<Country, unknown>) => {
+			const value = info.getValue();
+			let rendered: React.ReactNode;
+			if (Array.isArray(value)) {
+				rendered = value.length ? (
+					value.join(", ")
+				) : (
+					<span className="text-muted-foreground">-</span>
+				);
+			} else if (value == null || value === "") {
+				rendered = <span className="text-muted-foreground">-</span>;
+			} else {
+				rendered = String(value);
+			}
+			// A per-cell note (e.g. "ICAO assigns KS/RKS independently") renders as an
+			// info tooltip beside the value, explaining a de-facto / non-ISO assignment.
+			const note = (
+				info.row.original as Country & { cellNotes?: Record<string, string> }
+			).cellNotes?.[info.column.id];
+			if (!note) return rendered;
+			return (
+				<span className="inline-flex items-center gap-1">
+					{rendered}
+					<Tooltip>
+						<TooltipTrigger asChild>
+							<button
+								type="button"
+								aria-label="Source note"
+								className="text-muted-foreground/60 hover:text-foreground focus-visible:text-foreground focus-visible:outline-none"
+							>
+								<Info className="size-3" />
+							</button>
+						</TooltipTrigger>
+						<TooltipContent className="max-w-xs text-xs">{note}</TooltipContent>
+					</Tooltip>
+				</span>
+			);
+		};
+		// The Names count opens a localized-names subrow — the only expandable
+		// section here, since the other counts are absent for missing countries.
+		const namesCell = ({ row }: CellContext<Country, unknown>) => {
+			const count = (row.original as Country & { localizedNameCount?: number })
+				.localizedNameCount;
+			if (!count) return <span className="text-muted-foreground">-</span>;
+			const isOpen = row.getIsExpanded();
+			return (
+				<button
+					type="button"
+					onClick={(e) => {
+						e.stopPropagation();
+						row.toggleExpanded();
+					}}
+					className="cursor-pointer hover:bg-accent px-2 py-1 rounded flex items-center gap-1"
+					aria-label="Show localized names"
+				>
+					<span>{count}</span>
+					<span className="text-xs">{isOpen ? "▲" : "▼"}</span>
+				</button>
+			);
+		};
+		// Columns whose main-table cell renders something other than a plain value
+		// (the large flag glyph; the filter-only blank membership/independent cells).
+		const keepCell = new Set([
+			"flag",
+			"unMembership",
+			"euMember",
+			"independent",
+		]);
+		const mirrored = columnsUN
+			.filter(
+				(c): c is ColumnDef<Country> & { accessorKey: string } =>
+					"accessorKey" in c && c.accessorKey !== "localizedSearch",
+			)
+			.map((c): ColumnDef<Country> => {
+				let cell: ColumnDef<Country>["cell"];
+				if (c.accessorKey === "localizedNameCount") cell = namesCell;
+				else if (keepCell.has(c.accessorKey)) cell = c.cell;
+				else cell = valueOrDash;
+				return {
+					accessorKey: c.accessorKey,
+					header: c.header,
+					size: c.size,
+					maxSize: c.maxSize,
+					enableHiding: c.enableHiding,
+					enableGlobalFilter: c.enableGlobalFilter,
+					cell,
+				};
+			});
+		return [
+			...mirrored,
 			{
 				accessorKey: "notes",
 				header: "Notes",
 				cell: (info) => info.getValue<string>() ?? "",
 			},
-		],
-		[],
-	);
+		];
+	}, [columnsUN]);
 
 	const tableMissing = useReactTable({
-		data: countriesMissing,
+		data: countriesMissingLocalized,
 		columns: columnsMissing,
 		getCoreRowModel: getCoreRowModel(),
+		getExpandedRowModel: getExpandedRowModel(),
+		getRowCanExpand: () => true,
 		getFilteredRowModel: getFilteredRowModel(),
 		getPaginationRowModel: getPaginationRowModel(),
 		getSortedRowModel: getSortedRowModel(),
@@ -1283,9 +1339,40 @@ function Countries() {
 
 	return (
 		<div className="min-h-screen p-6">
-			<h1 className="text-3xl font-bold mb-6" data-view-title="Countries">
-				Countries
-			</h1>
+			<div className="flex flex-col gap-3 mb-6 md:flex-row md:items-center md:justify-between">
+				<h1 className="text-3xl font-bold" data-view-title="Countries">
+					Countries (ISO 3166)
+				</h1>
+				<ColumnVisibility
+					table={tableUN}
+					extraItems={[
+						{
+							afterColumnId: "currencyCount",
+							render: () => {
+								// Withdrawn is a sub-option of Currencies: only active
+								// (and exported) when the Currencies column is shown.
+								const currenciesVisible =
+									tableUN.getColumn("currencyCount")?.getIsVisible() ?? false;
+								return (
+									<label
+										key="historicalCurrencies"
+										className={`flex items-center gap-2 pl-6 pr-2 py-1 rounded text-sm text-muted-foreground ${currenciesVisible ? "hover:bg-accent cursor-pointer" : "opacity-50 cursor-not-allowed"}`}
+									>
+										<input
+											type="checkbox"
+											checked={showHistoricalCurrencies && currenciesVisible}
+											disabled={!currenciesVisible}
+											onChange={() => setShowHistoricalCurrencies((v) => !v)}
+											className="rounded"
+										/>
+										<span className="truncate">Withdrawn</span>
+									</label>
+								);
+							},
+						},
+					]}
+				/>
+			</div>
 			<input
 				type="text"
 				value={globalFilter}
@@ -1306,7 +1393,7 @@ function Countries() {
 							className="rounded"
 						/>
 						<span className="inline-block w-8 h-3 rounded bg-yellow-100 dark:bg-yellow-950" />
-						Name not present in the other table
+						CLDR name differs from the official name
 					</label>
 					<div className="flex items-center gap-1.5">
 						<label className="flex items-center gap-2 cursor-pointer">
@@ -1347,293 +1434,194 @@ function Countries() {
 				</div>
 			</div>
 
-			<div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-				{/* Left: Intl API */}
-				<div className="md:col-span-1">
-					<div className="flex items-center justify-between mb-2 h-8">
-						<h2 className="text-xl font-semibold">Intl API (Built-in)</h2>
-						<ColumnVisibility table={tableIntl} />
-					</div>
-					<ul className="text-xs text-muted-foreground mb-3 space-y-1 min-h-28">
-						<li>• Source: JavaScript runtime's built-in database</li>
-						<li>• Standard: ISO 3166-1 Alpha-2 codes</li>
-						<li>• Updates: Tied to Node.js version updates</li>
-						<li>• Coverage: All ISO country codes</li>
-						<li>• Addons: None</li>
-					</ul>
-					<div className="flex items-center justify-between mb-4">
-						<p className="text-sm text-muted-foreground">
-							Total: {countriesIntl.length} countries
-							{tableIntl.getFilteredRowModel().rows.length !==
-								countriesIntl.length && (
-								<span>
-									{" "}
-									| Filtered: {tableIntl.getFilteredRowModel().rows.length}
-								</span>
-							)}
-						</p>
-						<ExportButtons table={tableIntl} filename="countries-intl" />
-					</div>
-					<DataTable
-						table={tableIntl}
-						cellClassName={(colId, row) =>
-							showCrossCheck &&
-							colId === "name" &&
-							!unNames.has(normalizeName(row.original.name))
-								? "bg-yellow-100 dark:bg-yellow-950"
-								: ""
-						}
-					/>
-					<Pagination table={tableIntl} totalItems={countriesIntl.length} />
-				</div>
-
-				{/* Right: UN M49 */}
-				<div className="md:col-span-3">
-					<div className="flex flex-col gap-2 mb-2 md:h-8 md:flex-row md:items-center md:justify-between">
-						<h2 className="text-xl font-semibold">
-							UN M49 Standard (Official)
-						</h2>
-						<div className="flex flex-col items-start gap-2 md:flex-row md:items-center">
-							<ColumnVisibility
-								table={tableUN}
-								extraItems={[
-									{
-										afterColumnId: "currencyCount",
-										render: () => {
-											// Withdrawn is a sub-option of Currencies: only active
-											// (and exported) when the Currencies column is shown.
-											const currenciesVisible =
-												tableUN.getColumn("currencyCount")?.getIsVisible() ??
-												false;
-											return (
-												<label
-													key="historicalCurrencies"
-													className={`flex items-center gap-2 pl-6 pr-2 py-1 rounded text-sm text-muted-foreground ${currenciesVisible ? "hover:bg-accent cursor-pointer" : "opacity-50 cursor-not-allowed"}`}
-												>
-													<input
-														type="checkbox"
-														checked={
-															showHistoricalCurrencies && currenciesVisible
-														}
-														disabled={!currenciesVisible}
-														onChange={() =>
-															setShowHistoricalCurrencies((v) => !v)
-														}
-														className="rounded"
-													/>
-													<span className="truncate">Withdrawn</span>
-												</label>
-											);
-										},
-									},
-								]}
-							/>
-						</div>
-					</div>
-					<ul className="text-xs text-muted-foreground mb-3 space-y-1 min-h-28">
-						<li>• Source: United Nations Statistics Division</li>
-						<li>
-							• Standard: ISO 3166-1 Alpha-2/Alpha-3 + UN M49 numeric codes
-						</li>
-						<li>• Updates: Manually updated from official UN source</li>
-						<li>
-							• Coverage: All 249 officially assigned countries and territories
-						</li>
-						<li>
-							• Addons: ICAO 9303 passport codes, DSIT vehicle codes, IOC
-							Olympic codes, ITU aircraft registration prefixes, IANA ccTLDs,
-							ITU E.164 dialing codes, UN &amp; EU membership
-						</li>
-					</ul>
-					<div className="flex items-center justify-between mb-4">
-						<p className="text-sm text-muted-foreground">
-							Total: {countriesUN.length} countries
-							{tableUN.getFilteredRowModel().rows.length !==
-								countriesUN.length && (
-								<span>
-									{" "}
-									| Filtered: {tableUN.getFilteredRowModel().rows.length}
-									<ActiveFilters table={tableUN} />
-								</span>
-							)}
-						</p>
-						<ExportButtons
-							table={tableUN}
-							filename="countries-un"
-							transformRows={async (rows) => {
-								// Only when the "Names" column is shown — and fetched only then,
-								// not shipped with every page load.
-								const wantNames =
-									tableUN.getColumn("localizedNameCount")?.getIsVisible() ??
-									false;
-								const allNames: Record<
-									string,
-									Record<string, string>
-								> = wantNames ? await getLocalizedNamesAllByCountry() : {};
-								return rows.map((row) => {
-									const { localizedName, ...rest } = row;
-									// Drop the display-only counts; their data is added below.
-									for (const k of [
-										"timezoneCount",
-										"currencyCount",
-										"subdivisionCount",
-										"localizedNameCount",
-									]) {
-										delete rest[k];
-									}
-									const alpha2 = rest.alpha2Code as string;
-									return {
-										...rest,
-										// Picked-locale name, keyed by its locale.
-										...(typeof localizedName === "string" && {
-											localizedName: { [locale]: localizedName },
-										}),
-										// Every locale's name for this country.
-										...(allNames[alpha2] && {
-											localizedNames: allNames[alpha2],
-										}),
-										...("subdivisionCount" in row && {
-											subdivisions: (subdivisionMap[alpha2] ?? []).map(
-												({ code, flag, type, names }) => ({
-													code,
-													...(flag ? { flag } : {}),
-													...(type ? { type } : {}),
-													...names,
-												}),
-											),
-										}),
-										...("timezoneCount" in row && {
-											timezones: (timezoneMap[alpha2] ?? []).map(
-												({ comment, ...tz }) =>
-													comment ? { ...tz, comment } : tz,
-											),
-										}),
-										...("currencyCount" in row && {
-											currencies: (currencyMap[alpha2] ?? []).map(
-												({ type, ...ccy }) => (type ? { ...ccy, type } : ccy),
-											),
-											...(showHistoricalCurrencies &&
-												(historicalCurrencyMap[alpha2] ?? []).length > 0 && {
-													historicalCurrencies: historicalCurrencyMap[alpha2],
-												}),
-										}),
-									};
-								});
-							}}
-						/>
-					</div>
-					<DataTable
-						table={tableUN}
-						cellClassName={(colId, row) => {
-							const localizedName = (
-								row.original as Country & { localizedName?: string }
-							).localizedName;
-							let base: string;
-							if (highlight === row.original.alpha2Code) {
-								base = "bg-blue-100 dark:bg-blue-950";
-							} else if (
-								sectionByColumn[colId] !== undefined &&
-								expandedSection[row.original.alpha2Code] ===
-									sectionByColumn[colId]
-							) {
-								// The count cell whose toggle opened the current subrow —
-								// painted to match the bg-accent/50 panel it anchors.
-								base = "bg-accent";
-							} else if (
-								showCrossCheck &&
-								colId === "name" &&
-								!intlNames.has(normalizeName(row.original.name))
-							) {
-								base = "bg-yellow-100 dark:bg-yellow-950";
-							} else if (
-								showLocalizedDiff &&
-								colId === "localizedName" &&
-								localizedNameDiffers(row.original.name, localizedName)
-							) {
-								base = "bg-purple-100 dark:bg-purple-950";
-							} else {
-								base = getCellHighlight(colId, row.original, showCodeMismatch);
+			<div className="flex items-center justify-between mb-4">
+				<p className="text-sm text-muted-foreground">
+					Total: {countriesUN.length} countries
+					{tableUN.getFilteredRowModel().rows.length !== countriesUN.length && (
+						<span>
+							{" "}
+							| Filtered: {tableUN.getFilteredRowModel().rows.length}
+							<ActiveFilters table={tableUN} />
+						</span>
+					)}
+				</p>
+				<ExportButtons
+					table={tableUN}
+					filename="countries-un"
+					transformRows={async (rows) => {
+						// Only when the "Names" column is shown — and fetched only then,
+						// not shipped with every page load.
+						const wantNames =
+							tableUN.getColumn("localizedNameCount")?.getIsVisible() ?? false;
+						const allNames: Record<string, Record<string, string>> = wantNames
+							? await getLocalizedNamesAllByCountry()
+							: {};
+						return rows.map((row) => {
+							const { localizedName, ...rest } = row;
+							// Drop the display-only counts; their data is added below.
+							for (const k of [
+								"timezoneCount",
+								"currencyCount",
+								"subdivisionCount",
+								"localizedNameCount",
+							]) {
+								delete rest[k];
 							}
-							return `${base} ${getColumnBorder(colId)}`;
-						}}
-						headerClassName={(colId) => getColumnBorder(colId)}
-						renderExpandedRow={(row) => {
-							const section = expandedSection[row.original.alpha2Code];
-							if (!section) return null;
-							if (section === "names") {
-								return (
-									<LocalizedNamesExpandedRow
-										alpha2Code={row.original.alpha2Code}
-										colSpan={row.getVisibleCells().length}
-									/>
-								);
-							}
-							return (
-								<ExpandedCountryRow
-									alpha2Code={row.original.alpha2Code}
-									colSpan={row.getVisibleCells().length}
-									timezones={
-										section === "timezones"
-											? (timezoneMap[row.original.alpha2Code] ?? [])
-											: []
-									}
-									currencies={
-										section === "currencies"
-											? (currencyMap[row.original.alpha2Code] ?? [])
-											: []
-									}
-									historicalCurrencies={
-										section === "currencies" && showHistoricalCurrencies
-											? (historicalCurrencyMap[row.original.alpha2Code] ?? [])
-											: []
-									}
-									hasSubdivisions={
-										section === "subdivisions" &&
-										!!row.original.subdivisionCount
-									}
-								/>
-							);
-						}}
-					/>
-					<Pagination table={tableUN} totalItems={countriesUN.length} />
-				</div>
+							const alpha2 = rest.alpha2Code as string;
+							return {
+								...rest,
+								// Picked-locale name, keyed by its locale.
+								...(typeof localizedName === "string" && {
+									localizedName: { [locale]: localizedName },
+								}),
+								// Every locale's name for this country.
+								...(allNames[alpha2] && {
+									localizedNames: allNames[alpha2],
+								}),
+								...("subdivisionCount" in row && {
+									subdivisions: (subdivisionMap[alpha2] ?? []).map(
+										({ code, flag, type, names }) => ({
+											code,
+											...(flag ? { flag } : {}),
+											...(type ? { type } : {}),
+											...names,
+										}),
+									),
+								}),
+								...("timezoneCount" in row && {
+									timezones: (timezoneMap[alpha2] ?? []).map(
+										({ comment, ...tz }) => (comment ? { ...tz, comment } : tz),
+									),
+								}),
+								...("currencyCount" in row && {
+									currencies: (currencyMap[alpha2] ?? []).map(
+										({ type, ...ccy }) => (type ? { ...ccy, type } : ccy),
+									),
+									...(showHistoricalCurrencies &&
+										(historicalCurrencyMap[alpha2] ?? []).length > 0 && {
+											historicalCurrencies: historicalCurrencyMap[alpha2],
+										}),
+								}),
+							};
+						});
+					}}
+				/>
 			</div>
+			<DataTable
+				table={tableUN}
+				columnSources={countrySources}
+				sourceMeta={countrySourceMeta}
+				cellClassName={(colId, row) => {
+					const localizedName = (
+						row.original as Country & { localizedName?: string }
+					).localizedName;
+					const cldrName = (row.original as Country & { cldrName?: string })
+						.cldrName;
+					let base: string;
+					if (highlight === row.original.alpha2Code) {
+						base = "bg-blue-100 dark:bg-blue-950";
+					} else if (
+						sectionByColumn[colId] !== undefined &&
+						expandedSection[row.original.alpha2Code] === sectionByColumn[colId]
+					) {
+						// The count cell whose toggle opened the current subrow —
+						// painted the same dark grey as the bg-accent/50 panel it anchors,
+						// rather than the row's full-opacity bg-accent hover color.
+						base = "bg-accent/50";
+					} else if (
+						showCrossCheck &&
+						colId === "cldrName" &&
+						!!cldrName &&
+						normalizeName(cldrName) !== normalizeName(row.original.name)
+					) {
+						base = "bg-yellow-100 dark:bg-yellow-950";
+					} else if (
+						showLocalizedDiff &&
+						colId === "localizedName" &&
+						localizedNameDiffers(row.original.name, localizedName)
+					) {
+						base = "bg-purple-100 dark:bg-purple-950";
+					} else {
+						base = getCellHighlight(colId, row.original, showCodeMismatch);
+					}
+					return `${base} ${getColumnBorder(colId)}`;
+				}}
+				headerClassName={(colId) => getColumnBorder(colId)}
+				renderExpandedRow={(row) => {
+					const section = expandedSection[row.original.alpha2Code];
+					if (!section) return null;
+					if (section === "names") {
+						return (
+							<LocalizedNamesExpandedRow
+								alpha2Code={row.original.alpha2Code}
+								colSpan={row.getVisibleCells().length}
+							/>
+						);
+					}
+					return (
+						<ExpandedCountryRow
+							alpha2Code={row.original.alpha2Code}
+							colSpan={row.getVisibleCells().length}
+							timezones={
+								section === "timezones"
+									? (timezoneMap[row.original.alpha2Code] ?? [])
+									: []
+							}
+							currencies={
+								section === "currencies"
+									? (currencyMap[row.original.alpha2Code] ?? [])
+									: []
+							}
+							historicalCurrencies={
+								section === "currencies" && showHistoricalCurrencies
+									? (historicalCurrencyMap[row.original.alpha2Code] ?? [])
+									: []
+							}
+							hasSubdivisions={
+								section === "subdivisions" && !!row.original.subdivisionCount
+							}
+						/>
+					);
+				}}
+			/>
+			<Pagination table={tableUN} totalItems={countriesUN.length} />
 
 			{/* Missing Countries Section */}
 			<div className="mt-6">
-				<div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-					<div className="md:col-span-1" />
-					<div className="md:col-span-3">
-						<div className="flex items-center justify-between mb-2 h-8">
-							<h2 className="text-xl font-semibold">
-								Missing Countries (Not in Official Standards)
-							</h2>
-							<ColumnVisibility table={tableMissing} />
-						</div>
-						<div className="flex items-center justify-between mb-4">
-							<p className="text-sm text-muted-foreground">
-								Total: {countriesMissing.length} countries
-								{tableMissing.getFilteredRowModel().rows.length !==
-									countriesMissing.length && (
-									<span>
-										{" "}
-										| Filtered: {tableMissing.getFilteredRowModel().rows.length}
-									</span>
-								)}
-							</p>
-							<ExportButtons
-								table={tableMissing}
-								filename="countries-missing"
-							/>
-						</div>
-						<DataTable
-							table={tableMissing}
-							cellClassName={(colId, row) =>
-								getCellHighlight(colId, row.original, showCodeMismatch)
-							}
-						/>
-					</div>
+				<div className="flex items-center justify-between mb-2 h-8">
+					<h2 className="text-xl font-semibold">
+						Missing Countries (Not in Official Standards)
+					</h2>
+					<ColumnVisibility table={tableMissing} />
 				</div>
+				<div className="flex items-center justify-between mb-4">
+					<p className="text-sm text-muted-foreground">
+						Total: {countriesMissing.length} countries
+						{tableMissing.getFilteredRowModel().rows.length !==
+							countriesMissing.length && (
+							<span>
+								{" "}
+								| Filtered: {tableMissing.getFilteredRowModel().rows.length}
+							</span>
+						)}
+					</p>
+					<ExportButtons table={tableMissing} filename="countries-missing" />
+				</div>
+				<DataTable
+					table={tableMissing}
+					columnSources={countrySources}
+					sourceMeta={countrySourceMeta}
+					cellClassName={(colId, row) =>
+						`${getCellHighlight(colId, row.original, showCodeMismatch)} ${getColumnBorder(colId)}`
+					}
+					headerClassName={(colId) => getColumnBorder(colId)}
+					renderExpandedRow={(row) => (
+						<LocalizedNamesExpandedRow
+							alpha2Code={row.original.alpha2Code}
+							colSpan={row.getVisibleCells().length}
+						/>
+					)}
+				/>
 			</div>
 		</div>
 	);

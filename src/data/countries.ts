@@ -1337,6 +1337,9 @@ const phonePrefixes: Record<string, string> = {
 	VU: "+678",
 	WF: "+681",
 	WS: "+685",
+	// Kosovo: ITU assigned +383 in 2016 — a real E.164 code, even though Kosovo
+	// isn't in ISO 3166-1. Only consumed by the missing-countries table.
+	XK: "+383",
 	YE: "+967",
 	YT: "+262",
 	ZA: "+27",
@@ -3754,22 +3757,40 @@ export const getCountriesFromUN = createServerFn({
 const missingCountries: Array<{
 	code: string;
 	code3?: string;
-	name: string;
+	// No ISO 3166-1 name (these aren't in ISO) — the displayed name comes from CLDR.
+	name?: string;
 	notes?: string;
+	// Per-column tooltip notes for the missing table, keyed by column id (e.g. why
+	// XK isn't in ISO, or that ICAO / IOC / ITU assign their own codes for it).
+	cellNotes?: Record<string, string>;
 }> = [
 	{
 		code: "XK",
 		code3: "XKX",
-		name: "Kosovo",
-		notes:
-			"Partially recognised state; ISO has not assigned a code due to political dispute. XK/XKX are user-assigned de facto codes used by the EU, IMF, and SWIFT. ICAO assigns KS/RKS independently; IOC assigns KOS.",
+		notes: "Partially recognised state.",
+		cellNotes: {
+			alpha2Code:
+				"ISO has not assigned a code due to political dispute. XK/XKX are user-assigned de facto codes used by the EU, IMF, and SWIFT.",
+			alpha3Code:
+				"ISO has not assigned a code due to political dispute. XK/XKX are user-assigned de facto codes used by the EU, IMF, and SWIFT.",
+		},
 	},
 ];
 
 export const getMissingCountries = createServerFn({
 	method: "GET",
 }).handler(async () => {
-	const countries: Country[] = missingCountries.map((country) => {
+	// CLDR carries display names for these user-assigned codes (e.g. XK → "Kosovo")
+	// even though they're absent from unM49Data, so derive them the same way as the
+	// official table: English name + localized-name count via Intl.DisplayNames.
+	const enRegionNames = new Intl.DisplayNames(["en"], { type: "region" });
+	const countries: Array<
+		Country & {
+			cldrName?: string;
+			localizedNameCount?: number;
+			cellNotes?: Record<string, string>;
+		}
+	> = missingCountries.map((country) => {
 		const vc = vehicleCodes[country.code];
 		return {
 			flag: getEmojiFlag(country.code),
@@ -3779,11 +3800,17 @@ export const getMissingCountries = createServerFn({
 			dsitCode: vc,
 			iocCode: iocCodes[country.code],
 			aircraftRegPrefixes: aircraftRegistrationPrefixes[country.code],
+			phonePrefix: phonePrefixes[country.code],
 			unMembership: getUnMembership(country.code),
 			euMember: euMembers.has(country.code) || undefined,
 			region: regionMap[country.code],
 			notes: country.notes,
-			name: country.name,
+			cellNotes: country.cellNotes,
+			// ISO has no name for these codes, so the Name column shows "-"; the
+			// CLDR name (below) carries the display name (e.g. "Kosovo").
+			name: country.name ?? "",
+			cldrName: enRegionNames.of(country.code) || undefined,
+			localizedNameCount: localizedNamesFor(country.code).length,
 		};
 	});
 
@@ -3982,7 +4009,9 @@ export const getCountryNamesByLocale = createServerFn({
 		const entry = regionNameLocales.find((l) => l.locale === data.locale);
 		const names: Record<string, string> = {};
 		if (!entry) return names;
-		for (const { code } of unM49Data) {
+		// Include the user-assigned "missing" codes (e.g. XK) — CLDR has names
+		// for them too, so the Missing table's localized-name column isn't empty.
+		for (const { code } of [...unM49Data, ...missingCountries]) {
 			const localized = entry.displayNames.of(code);
 			if (localized && localized !== code) names[code] = localized;
 		}

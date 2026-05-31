@@ -11,8 +11,10 @@ import {
 	Sun,
 	X,
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useId, useState } from "react";
+import { useLocale } from "@/lib/locale";
 import { useTheme } from "@/lib/theme";
+import { LocaleSelect } from "./LocaleSelect";
 
 interface NavItem {
 	to: string;
@@ -33,6 +35,15 @@ const NAV_ITEMS: NavItem[] = [
 	{ to: "/languages", label: "Languages", icon: Languages },
 ];
 
+// Views whose tables render localized names, so the shared "Show localized names in:"
+// picker belongs in the header there (and nowhere else, where it'd be a no-op).
+const LOCALE_PICKER_SEGMENTS = new Set(["/countries", "/languages"]);
+
+function usesLocalePicker(pathname: string): boolean {
+	const segment = `/${pathname.split("/").filter(Boolean)[0] ?? ""}`;
+	return LOCALE_PICKER_SEGMENTS.has(segment);
+}
+
 function getViewTitle(pathname: string): string | null {
 	// Match the section by its first path segment so nested/child routes
 	// (and trailing slashes) still resolve to the correct view name. The
@@ -46,7 +57,13 @@ export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [scrolledPast, setScrolledPast] = useState(false);
 	const { theme, toggleTheme } = useTheme();
+	const { locale, setLocale, options, detectedLocales } = useLocale();
 	const location = useLocation();
+	const showLocalePicker = usesLocalePicker(location.pathname);
+	// Distinct, stable ids so the header and drawer pickers (both in the DOM, one
+	// hidden per breakpoint) never collide and each label stays associated.
+	const headerLocaleId = useId();
+	const drawerLocaleId = useId();
 
 	// Derive the view name synchronously from router state. This is correct on
 	// first render (including SSR), updates on every navigation, and can never
@@ -116,6 +133,19 @@ export default function Header() {
 						/ {viewTitle ?? ""}
 					</span>
 				</h1>
+				{/* On md+ the picker sits inline in the header; below md it moves to
+				    the bottom of the nav drawer (rendered there) to save space. */}
+				{showLocalePicker && (
+					<div className="mr-2 hidden md:block">
+						<LocaleSelect
+							id={headerLocaleId}
+							value={locale}
+							onChange={setLocale}
+							options={options}
+							detectedLocales={detectedLocales}
+						/>
+					</div>
+				)}
 				<button
 					onClick={toggleTheme}
 					className="p-2 hover:bg-accent rounded-lg transition-colors"
@@ -162,6 +192,21 @@ export default function Header() {
 						</Link>
 					))}
 				</nav>
+
+				{/* Small-screen home for the locale picker (hidden in the header below
+				    md). `flex-1` on the nav above pins this to the drawer's bottom. */}
+				{showLocalePicker && (
+					<div className="md:hidden border-t border-border p-4">
+						<LocaleSelect
+							id={drawerLocaleId}
+							value={locale}
+							onChange={setLocale}
+							options={options}
+							detectedLocales={detectedLocales}
+							containerClassName="flex flex-col items-start gap-2"
+						/>
+					</div>
+				)}
 			</aside>
 		</>
 	);

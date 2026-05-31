@@ -3865,7 +3865,7 @@ const regionNameLocaleList: RegionNameLocale[] = regionNameLocales
 /**
  * The language locales that carry CLDR region-name data in this runtime — the
  * full set used by the localized-names subrow. Exposed so the UI can offer them
- * in a "Show names in" picker.
+ * in a "Show localized names in" picker.
  */
 export const getRegionNameLocales = createServerFn({
 	method: "GET",

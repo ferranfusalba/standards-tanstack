@@ -11,16 +11,15 @@ import {
 import React from "react";
 import { ColumnVisibility } from "@/components/ColumnVisibility";
 import { DataTable } from "@/components/DataTable";
-import { LocaleSelect } from "@/components/LocaleSelect";
 import { Pagination } from "@/components/Pagination";
-import { getRegionNameLocales } from "@/data/countries";
 import {
 	getLanguageNamesByLocale,
 	getLanguages,
 	type Language,
 } from "@/data/languages";
-import { getDetectedLocales, getPreferredLocale } from "@/data/locale";
+import { getPreferredLocale } from "@/data/locale";
 import { fuzzyFilterAcronym } from "@/lib/fuzzy-filter";
+import { useLocale } from "@/lib/locale";
 import { asNumber, asString } from "@/lib/url-state";
 import {
 	useGlobalFilterSync,
@@ -32,7 +31,6 @@ interface LanguagesSearch {
 	sort?: string;
 	page?: number;
 	size?: number;
-	locale?: string;
 }
 
 export const Route = createFileRoute("/languages/")({
@@ -42,30 +40,17 @@ export const Route = createFileRoute("/languages/")({
 		sort: asString(search.sort),
 		page: asNumber(search.page),
 		size: asNumber(search.size),
-		locale: asString(search.locale),
 	}),
-	loaderDeps: ({ search }) => ({ locale: search.locale }),
-	loader: async ({ deps }) => {
-		// No explicit picker choice → fall back to the visitor's detected locale.
-		const displayLocale = deps.locale ?? (await getPreferredLocale());
-		const [languages, localeOptions, localizedNames, detectedLocales] =
-			await Promise.all([
-				getLanguages(),
-				getRegionNameLocales(),
-				getLanguageNamesByLocale({ data: { locale: displayLocale } }),
-				getDetectedLocales(),
-			]);
-		// Localized name comes server-side (single CLDR source), matching countries.
-		const languagesLocalized = languages.map((l) => ({
-			...l,
-			localizedName: localizedNames[l.code],
-		}));
-		return {
-			languages: languagesLocalized,
-			displayLocale,
-			localeOptions,
-			detectedLocales,
-		};
+	loader: async () => {
+		// The global locale picker lives in the header (localStorage-backed), so we
+		// SSR names in the visitor's detected locale; the component swaps in the
+		// stored locale's name map on mount, matching the countries view.
+		const displayLocale = await getPreferredLocale();
+		const [languages, localizedNames] = await Promise.all([
+			getLanguages(),
+			getLanguageNamesByLocale({ data: { locale: displayLocale } }),
+		]);
+		return { languages, localizedNames, displayLocale };
 	},
 	head: () => ({
 		meta: [
@@ -158,18 +143,43 @@ function LanguageExpandedRow({ row }: { row: Row<Language> }) {
 }
 
 function Languages() {
-	const { languages, displayLocale, localeOptions, detectedLocales } =
-		Route.useLoaderData();
+	const {
+		languages,
+		localizedNames: initialLocalizedNames,
+		displayLocale: initialLocale,
+	} = Route.useLoaderData();
 	const search = Route.useSearch();
 	const navigate = Route.useNavigate();
-	// `displayLocale` comes resolved from the loader (URL value, else detected),
-	// and each row's `localizedName` is already server-computed from one CLDR source.
-	const setDisplayLocale = (next: string) => {
-		navigate({
-			search: (prev) => ({ ...prev, locale: next }),
-			replace: true,
+	// Display locale is the app-wide choice from the header picker (shared with the
+	// countries view, persisted in localStorage). Each row's localized name comes
+	// server-side (single CLDR source): seeded from the loader for the detected
+	// locale, then refetched when the chosen locale changes.
+	const { locale } = useLocale();
+	const [localizedNames, setLocalizedNames] = React.useState(
+		initialLocalizedNames,
+	);
+	const loadedLocale = React.useRef(initialLocale);
+	React.useEffect(() => {
+		if (locale === loadedLocale.current) return;
+		let cancelled = false;
+		getLanguageNamesByLocale({ data: { locale } }).then((map) => {
+			if (!cancelled) {
+				setLocalizedNames(map);
+				loadedLocale.current = locale;
+			}
 		});
-	};
+		return () => {
+			cancelled = true;
+		};
+	}, [locale]);
+	const languagesLocalized = React.useMemo(
+		() =>
+			languages.map((l) => ({
+				...l,
+				localizedName: localizedNames[l.code],
+			})),
+		[languages, localizedNames],
+	);
 	const [globalFilter, setGlobalFilter] = useGlobalFilterSync({
 		search,
 		navigate,
@@ -280,7 +290,7 @@ function Languages() {
 	);
 
 	const table = useReactTable({
-		data: languages,
+		data: languagesLocalized,
 		columns,
 		getCoreRowModel: getCoreRowModel(),
 		getExpandedRowModel: getExpandedRowModel(),
@@ -324,16 +334,7 @@ function Languages() {
 				<div>
 					<div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2 mb-4">
 						<h2 className="text-xl font-semibold">ISO 639-1 Language Codes</h2>
-						<div className="flex items-center gap-2">
-							<LocaleSelect
-								id="displayLocale"
-								value={displayLocale}
-								onChange={setDisplayLocale}
-								options={localeOptions}
-								detectedLocales={detectedLocales}
-							/>
-							<ColumnVisibility table={table} />
-						</div>
+						<ColumnVisibility table={table} />
 					</div>
 					<ul className="text-xs text-muted-foreground mb-3 space-y-1">
 						<li>• Source: IANA Language Subtag Registry + Unicode CLDR 48</li>

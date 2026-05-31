@@ -11,10 +11,14 @@ interface LocaleSelectProps {
 	options: RegionNameLocale[];
 	/** Visitor's detected locales, surfaced in a "Detected" group on top. */
 	detectedLocales: string[];
+	/** Override the label classes (e.g. to visually hide it in tight layouts). */
+	labelClassName?: string;
+	/** Override the wrapper classes (e.g. to stack label over select in a drawer). */
+	containerClassName?: string;
 }
 
 /**
- * Shared "Show names in:" locale picker. Detected locales are grouped on top,
+ * Shared "Show localized names in:" locale picker. Detected locales are grouped on top,
  * the rest below — identical behavior across the countries and languages views.
  */
 export function LocaleSelect({
@@ -23,6 +27,8 @@ export function LocaleSelect({
 	onChange,
 	options,
 	detectedLocales,
+	labelClassName = "text-sm text-muted-foreground whitespace-nowrap",
+	containerClassName = "flex items-center gap-2",
 }: LocaleSelectProps) {
 	const { detected, rest } = groupLocaleOptions(options, detectedLocales);
 	const renderOption = (o: RegionNameLocale) => (
@@ -31,12 +37,9 @@ export function LocaleSelect({
 		</option>
 	);
 	return (
-		<div className="flex items-center gap-2">
-			<label
-				htmlFor={id}
-				className="text-sm text-muted-foreground whitespace-nowrap"
-			>
-				Show names in:
+		<div className={containerClassName}>
+			<label htmlFor={id} className={labelClassName}>
+				Show localized names in:
 			</label>
 			<select
 				id={id}

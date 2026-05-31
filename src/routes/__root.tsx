@@ -4,14 +4,26 @@ import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
 import { DataFreshness } from "../components/DataFreshness";
 import Header from "../components/Header";
+import { getRegionNameLocales } from "../data/countries";
+import { getDetectedLocales, getPreferredLocale } from "../data/locale";
 import { getDataVersions } from "../data/versions";
 import StoreDevtools from "../lib/demo-store-devtools";
+import { LocaleProvider } from "../lib/locale";
 import { ThemeProvider } from "../lib/theme";
 
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
-	loader: async () => ({ versions: await getDataVersions() }),
+	loader: async () => {
+		const [versions, localeOptions, detectedLocales, preferredLocale] =
+			await Promise.all([
+				getDataVersions(),
+				getRegionNameLocales(),
+				getDetectedLocales(),
+				getPreferredLocale(),
+			]);
+		return { versions, localeOptions, detectedLocales, preferredLocale };
+	},
 	head: () => ({
 		meta: [
 			{
@@ -129,6 +141,8 @@ function RootFooter() {
 }
 
 function RootDocument({ children }: { children: React.ReactNode }) {
+	const { localeOptions, detectedLocales, preferredLocale } =
+		Route.useLoaderData();
 	return (
 		<html lang="en" className="dark">
 			<head>
@@ -136,9 +150,15 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			</head>
 			<body>
 				<ThemeProvider>
-					<Header />
-					{children}
-					<RootFooter />
+					<LocaleProvider
+						preferredLocale={preferredLocale}
+						options={localeOptions}
+						detectedLocales={detectedLocales}
+					>
+						<Header />
+						{children}
+						<RootFooter />
+					</LocaleProvider>
 				</ThemeProvider>
 				<TanStackDevtools
 					config={{

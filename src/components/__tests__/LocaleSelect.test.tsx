@@ -86,7 +86,7 @@ describe("LocaleSelect", () => {
 		expect(onChange).toHaveBeenCalledWith("ca");
 	});
 
-	it("associates the 'Show names in:' label with the select via id", () => {
+	it("associates the 'Show localized names in:' label with the select via id", () => {
 		render(
 			<LocaleSelect
 				id="my-picker"
@@ -96,6 +96,8 @@ describe("LocaleSelect", () => {
 				detectedLocales={[]}
 			/>,
 		);
-		expect(screen.getByLabelText("Show names in:").id).toBe("my-picker");
+		expect(screen.getByLabelText("Show localized names in:").id).toBe(
+			"my-picker",
+		);
 	});
 });

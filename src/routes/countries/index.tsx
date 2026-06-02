@@ -1078,7 +1078,7 @@ function Countries() {
 			},
 			{
 				accessorKey: "unMembership",
-				header: "UN member",
+				header: "UN member 🇺🇳",
 				size: 120,
 				maxSize: 120,
 				cell: (info) => info.row.original.sovereignState ?? "",
@@ -1088,7 +1088,7 @@ function Countries() {
 			},
 			{
 				accessorKey: "euMember",
-				header: "EU member",
+				header: "EU member 🇪🇺",
 				size: 120,
 				maxSize: 120,
 				cell: () => "",

@@ -236,56 +236,121 @@ function SubdivisionsExpandedRow({
 	subs: Subdivision[];
 	colSpan: number;
 }) {
-	const langCodes = [...new Set(subs.flatMap((sub) => Object.keys(sub.names)))];
-	const hasType = subs.some((sub) => sub.type !== undefined);
-	return (
-		<ExpandedRow colSpan={colSpan}>
-			<table className="text-xs w-auto">
-				<thead>
-					<tr className="text-muted-foreground">
-						<th className="pr-4 pb-1 text-left font-normal">Flag</th>
-						<th className="pr-6 pb-1 text-left font-normal">Code</th>
-						{hasType && (
-							<th className="pr-6 pb-1 text-left font-normal">Type</th>
-						)}
-						{langCodes.map((lang) => (
-							<th key={lang} className="pr-6 pb-1 text-left font-normal">
-								{lang}
-							</th>
-						))}
-					</tr>
-				</thead>
-				<tbody>
-					{subs.map((sub) => {
-						const flag = sub.flag ?? (sub.iso1 ? toFlag(sub.iso1) : undefined);
-						return (
+	const nameLangs = [...new Set(subs.flatMap((sub) => Object.keys(sub.names)))];
+	const typeLangs = [
+		...new Set(subs.flatMap((sub) => Object.keys(sub.type ?? {}))),
+	];
+	// Union of every language in either `names` or `type`, names-first so the
+	// columns that carry an actual localized value sit next to Code and the
+	// type-only languages (commonly en/fr) trail at the right.
+	const langCodes = [
+		...nameLangs,
+		...typeLangs.filter((lang) => !nameLangs.includes(lang)),
+	];
+	const hasType = typeLangs.length > 0;
+
+	const flagOf = (sub: Subdivision) =>
+		sub.flag ?? (sub.iso1 ? toFlag(sub.iso1) : undefined);
+	const renderCode = (sub: Subdivision) => (
+		<>
+			{sub.code}
+			{sub.iso1 && (
+				<span className="ml-2 px-1.5 py-0.5 bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 rounded">
+					{sub.iso1}
+				</span>
+			)}
+		</>
+	);
+
+	// No type data anywhere → one plain column per language (the localized name).
+	if (!hasType) {
+		return (
+			<ExpandedRow colSpan={colSpan}>
+				<table className="text-xs w-auto">
+					<thead>
+						<tr className="text-muted-foreground">
+							<th className="pr-4 pb-1 text-left font-normal">Flag</th>
+							<th className="pr-6 pb-1 text-left font-normal">Code</th>
+							{langCodes.map((lang) => (
+								<th key={lang} className="pr-6 pb-1 text-left font-normal">
+									{lang}
+								</th>
+							))}
+						</tr>
+					</thead>
+					<tbody>
+						{subs.map((sub) => (
 							<tr key={sub.code}>
-								<td className="pr-4 py-0.5">{flag ?? ""}</td>
-								<td className="pr-6 py-0.5 font-mono">
-									{sub.code}
-									{sub.iso1 && (
-										<span className="ml-2 px-1.5 py-0.5 bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 rounded">
-											{sub.iso1}
-										</span>
-									)}
-								</td>
-								{hasType && (
-									<td className="pr-6 py-0.5 text-muted-foreground">
-										{sub.type
-											? Object.entries(sub.type)
-													.map(([lang, name]) => `${name} (${lang})`)
-													.join(", ")
-											: ""}
-									</td>
-								)}
+								<td className="pr-4 py-0.5">{flagOf(sub) ?? ""}</td>
+								<td className="pr-6 py-0.5 font-mono">{renderCode(sub)}</td>
 								{langCodes.map((lang) => (
 									<td key={lang} className="pr-6 py-0.5">
 										{sub.names[lang] ?? ""}
 									</td>
 								))}
 							</tr>
-						);
-					})}
+						))}
+					</tbody>
+				</table>
+			</ExpandedRow>
+		);
+	}
+
+	// Grouped layout: two header rows. Flag/Code span both; each language is a
+	// `colspan=2` group header over its own (type | value) pair.
+	return (
+		<ExpandedRow colSpan={colSpan}>
+			<table className="text-xs w-auto">
+				<thead className="text-muted-foreground">
+					<tr>
+						<th
+							rowSpan={2}
+							className="pr-4 pb-1 align-bottom text-left font-normal"
+						>
+							Flag
+						</th>
+						<th
+							rowSpan={2}
+							className="pr-6 pb-1 align-bottom text-left font-normal"
+						>
+							Code
+						</th>
+						{langCodes.map((lang) => (
+							<th
+								key={lang}
+								colSpan={2}
+								className="border-l border-border pb-1 pl-4 pr-4 text-center font-medium text-foreground"
+							>
+								{lang}
+							</th>
+						))}
+					</tr>
+					<tr>
+						{langCodes.map((lang) => (
+							<React.Fragment key={lang}>
+								<th className="border-l border-border pb-1 pl-4 pr-3 text-left font-normal">
+									type
+								</th>
+								<th className="pr-4 pb-1 text-left font-normal">value</th>
+							</React.Fragment>
+						))}
+					</tr>
+				</thead>
+				<tbody>
+					{subs.map((sub) => (
+						<tr key={sub.code}>
+							<td className="pr-4 py-0.5">{flagOf(sub) ?? ""}</td>
+							<td className="pr-6 py-0.5 font-mono">{renderCode(sub)}</td>
+							{langCodes.map((lang) => (
+								<React.Fragment key={lang}>
+									<td className="border-l border-border pl-4 pr-3 py-0.5 text-muted-foreground">
+										{sub.type?.[lang] ?? ""}
+									</td>
+									<td className="pr-4 py-0.5">{sub.names[lang] ?? ""}</td>
+								</React.Fragment>
+							))}
+						</tr>
+					))}
 				</tbody>
 			</table>
 		</ExpandedRow>

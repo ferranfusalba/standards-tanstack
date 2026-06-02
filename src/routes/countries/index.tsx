@@ -1453,10 +1453,71 @@ function Countries() {
 
 	return (
 		<div className="min-h-screen p-6">
-			<div className="flex flex-col gap-3 mb-6 md:flex-row md:items-center md:justify-between">
-				<h1 className="text-3xl font-bold" data-view-title="Countries">
-					Countries (ISO 3166)
-				</h1>
+			<h1 className="text-3xl font-bold mb-4" data-view-title="Countries">
+				Countries
+			</h1>
+			<input
+				type="text"
+				value={globalFilter}
+				onChange={(e) => setGlobalFilter(e.target.value)}
+				placeholder="Search by name, code, region…"
+				aria-label="Search countries"
+				className="w-full px-3 py-2 mb-6 bg-secondary border border-border rounded text-foreground text-sm placeholder-muted-foreground focus:outline-none focus:border-ring"
+			/>
+			<div className="mb-6">
+				<h3 className="text-sm font-semibold mb-2">Cross-check data</h3>
+				<div className="flex flex-col gap-1 w-fit text-xs text-muted-foreground">
+					<label className="flex items-center gap-2 cursor-pointer">
+						<input
+							type="checkbox"
+							checked={showCrossCheck}
+							onChange={() => setShowCrossCheck((v) => !v)}
+							className="rounded"
+						/>
+						<span className="inline-block w-8 h-3 rounded bg-yellow-100 dark:bg-yellow-950" />
+						CLDR name differs from the official name
+					</label>
+					<div className="flex items-center gap-1.5">
+						<label className="flex items-center gap-2 cursor-pointer">
+							<input
+								type="checkbox"
+								checked={showLocalizedDiff}
+								onChange={() => setShowLocalizedDiff((v) => !v)}
+								className="rounded"
+							/>
+							<span className="inline-block w-8 h-3 rounded bg-purple-100 dark:bg-purple-950" />
+							Localized name differs from name
+						</label>
+						<Tooltip>
+							<TooltipTrigger asChild>
+								<button
+									type="button"
+									aria-label="What name normalization is ignored"
+									className="text-muted-foreground/60 hover:text-foreground focus-visible:text-foreground focus-visible:outline-none"
+								>
+									<Info className="w-3.5 h-3.5" />
+								</button>
+							</TooltipTrigger>
+							<TooltipContent className="max-w-sm text-xs">
+								<NotCountedNote />
+							</TooltipContent>
+						</Tooltip>
+					</div>
+					<label className="flex items-center gap-2 cursor-pointer">
+						<input
+							type="checkbox"
+							checked={showCodeMismatch}
+							onChange={() => setShowCodeMismatch((v) => !v)}
+							className="rounded"
+						/>
+						<span className="inline-block w-8 h-3 rounded bg-red-100 dark:bg-red-950" />
+						Code differs from ISO 3166-1 standard
+					</label>
+				</div>
+			</div>
+
+			<div className="flex items-center justify-between mb-2 h-8">
+				<h2 className="text-xl font-semibold">ISO 3166</h2>
 				<ColumnVisibility
 					table={tableUN}
 					extraItems={[
@@ -1510,66 +1571,6 @@ function Countries() {
 						},
 					]}
 				/>
-			</div>
-			<input
-				type="text"
-				value={globalFilter}
-				onChange={(e) => setGlobalFilter(e.target.value)}
-				placeholder="Search by name, code, region…"
-				aria-label="Search countries"
-				className="w-full px-3 py-2 mb-6 bg-secondary border border-border rounded text-foreground text-sm placeholder-muted-foreground focus:outline-none focus:border-ring"
-			/>
-
-			<div className="mb-6">
-				<h3 className="text-sm font-semibold mb-2">Cross-check data</h3>
-				<div className="flex flex-col gap-1 w-fit text-xs text-muted-foreground">
-					<label className="flex items-center gap-2 cursor-pointer">
-						<input
-							type="checkbox"
-							checked={showCrossCheck}
-							onChange={() => setShowCrossCheck((v) => !v)}
-							className="rounded"
-						/>
-						<span className="inline-block w-8 h-3 rounded bg-yellow-100 dark:bg-yellow-950" />
-						CLDR name differs from the official name
-					</label>
-					<div className="flex items-center gap-1.5">
-						<label className="flex items-center gap-2 cursor-pointer">
-							<input
-								type="checkbox"
-								checked={showLocalizedDiff}
-								onChange={() => setShowLocalizedDiff((v) => !v)}
-								className="rounded"
-							/>
-							<span className="inline-block w-8 h-3 rounded bg-purple-100 dark:bg-purple-950" />
-							Localized name differs from name
-						</label>
-						<Tooltip>
-							<TooltipTrigger asChild>
-								<button
-									type="button"
-									aria-label="What name normalization is ignored"
-									className="text-muted-foreground/60 hover:text-foreground focus-visible:text-foreground focus-visible:outline-none"
-								>
-									<Info className="w-3.5 h-3.5" />
-								</button>
-							</TooltipTrigger>
-							<TooltipContent className="max-w-sm text-xs">
-								<NotCountedNote />
-							</TooltipContent>
-						</Tooltip>
-					</div>
-					<label className="flex items-center gap-2 cursor-pointer">
-						<input
-							type="checkbox"
-							checked={showCodeMismatch}
-							onChange={() => setShowCodeMismatch((v) => !v)}
-							className="rounded"
-						/>
-						<span className="inline-block w-8 h-3 rounded bg-red-100 dark:bg-red-950" />
-						Code differs from ISO 3166-1 standard
-					</label>
-				</div>
 			</div>
 
 			<div className="flex items-center justify-between mb-4">
@@ -1735,7 +1736,7 @@ function Countries() {
 			<div className="mt-6">
 				<div className="flex items-center justify-between mb-2 h-8">
 					<h2 className="text-xl font-semibold">
-						Missing Countries (Not in Official Standards)
+						Missing Countries (Not in ISO 3166)
 					</h2>
 					<ColumnVisibility table={tableMissing} />
 				</div>

@@ -505,10 +505,10 @@ function Timezones() {
 					<Pagination table={tableIntl} totalItems={timezonesIntl.length} />
 				</div>
 
-				{/* Right: IANA Official */}
+				{/* Right: IANA tz database */}
 				<div>
 					<div className="flex items-center justify-between mb-2">
-						<h2 className="text-xl font-semibold">IANA Official Data</h2>
+						<h2 className="text-xl font-semibold">IANA tz database</h2>
 						<ColumnVisibility table={tableIANA} />
 					</div>
 					<ul className="text-xs text-muted-foreground mb-3 space-y-1">

@@ -52,6 +52,7 @@ import { type CountryTimezone, getTimezonesByCountry } from "@/data/timezones";
 import { fuzzyFilter } from "@/lib/fuzzy-filter";
 import { useLocale } from "@/lib/locale";
 import { localizedNameDiffers } from "@/lib/localized-names";
+import { collapseSharedPhoneCodes } from "@/lib/phone-codes";
 import { facetedFilter, presenceFilter } from "@/lib/table-filters";
 import { asNumber, asString } from "@/lib/url-state";
 import {
@@ -799,6 +800,8 @@ function Countries() {
 	>({});
 	const [showHistoricalCurrencies, setShowHistoricalCurrencies] =
 		React.useState(true);
+	// Export-only: fold shared calling codes (e.g. +1) down to one primary entry.
+	const [collapseSharedCodes, setCollapseSharedCodes] = React.useState(false);
 	const [showCrossCheck, setShowCrossCheck] = React.useState(true);
 	const [showLocalizedDiff, setShowLocalizedDiff] = React.useState(true);
 	const [showCodeMismatch, setShowCodeMismatch] = React.useState(true);
@@ -1347,6 +1350,30 @@ function Countries() {
 					table={tableUN}
 					extraItems={[
 						{
+							afterColumnId: "phonePrefix",
+							render: () => {
+								// Shared-code collapsing is a sub-option of Phone: only
+								// active (and applied on export) when the Phone column is shown.
+								const phoneVisible =
+									tableUN.getColumn("phonePrefix")?.getIsVisible() ?? false;
+								return (
+									<label
+										key="collapseSharedCodes"
+										className={`flex items-center gap-2 pl-6 pr-2 py-1 rounded text-sm text-muted-foreground ${phoneVisible ? "hover:bg-accent cursor-pointer" : "opacity-50 cursor-not-allowed"}`}
+									>
+										<input
+											type="checkbox"
+											checked={collapseSharedCodes && phoneVisible}
+											disabled={!phoneVisible}
+											onChange={() => setCollapseSharedCodes((v) => !v)}
+											className="rounded"
+										/>
+										<span className="truncate">Collapse shared codes</span>
+									</label>
+								);
+							},
+						},
+						{
 							afterColumnId: "currencyCount",
 							render: () => {
 								// Withdrawn is a sub-option of Currencies: only active
@@ -1456,7 +1483,7 @@ function Countries() {
 						const allNames: Record<string, Record<string, string>> = wantNames
 							? await getLocalizedNamesAllByCountry()
 							: {};
-						return rows.map((row) => {
+						const enriched = rows.map((row) => {
 							const { localizedName, ...rest } = row;
 							// Drop the display-only counts; their data is added below.
 							for (const k of [
@@ -1504,6 +1531,13 @@ function Countries() {
 								}),
 							};
 						});
+						// Fold shared calling codes (e.g. +1) into one primary entry,
+						// only when the Phone column is shown and the option is enabled.
+						const phoneVisible =
+							tableUN.getColumn("phonePrefix")?.getIsVisible() ?? false;
+						return phoneVisible && collapseSharedCodes
+							? collapseSharedPhoneCodes(enriched)
+							: enriched;
 					}}
 				/>
 			</div>

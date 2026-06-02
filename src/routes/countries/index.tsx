@@ -75,6 +75,22 @@ interface CountriesSearch {
 	missing_page?: number;
 }
 
+/** Unwrap a settled result, or log and fall back. Lets the countries loader
+ *  fetch its data with `Promise.allSettled` so one flaky, non-critical call
+ *  degrades a column instead of erroring the whole route. */
+function settledOr<T>(
+	result: PromiseSettledResult<T>,
+	fallback: NoInfer<T>,
+	label: string,
+): T {
+	if (result.status === "fulfilled") return result.value;
+	console.error(
+		`countries loader: ${label} unavailable, using fallback`,
+		result.reason,
+	);
+	return fallback;
+}
+
 export const Route = createFileRoute("/countries/")({
 	component: Countries,
 	validateSearch: (search: Record<string, unknown>): CountriesSearch => ({
@@ -96,19 +112,24 @@ export const Route = createFileRoute("/countries/")({
 	// detected locale; the component swaps in the stored locale's (small) name map
 	// on mount without re-running this whole heavy loader.
 	loader: async () => {
-		const nameLocale = await getPreferredLocale();
+		// Detected locale drives the SSR'd names; fall back to English if the
+		// lookup itself flakes rather than failing the whole route.
+		const nameLocale = await getPreferredLocale().catch(() => "en");
+		// Non-critical enrichments fail soft (Promise.allSettled): one flaky
+		// call degrades its column(s) instead of erroring the page. Only the
+		// main UN country list is treated as required.
 		const [
-			countriesIntl,
-			countriesUN,
-			countriesMissing,
-			timezoneMap,
-			currencyMap,
-			historicalCurrencyMap,
-			subdivisionMap,
-			localizedNameCounts,
-			localizedNames,
-			localizedSearch,
-		] = await Promise.all([
+			countriesIntlR,
+			countriesUNR,
+			countriesMissingR,
+			timezoneMapR,
+			currencyMapR,
+			historicalCurrencyMapR,
+			subdivisionMapR,
+			localizedNameCountsR,
+			localizedNamesR,
+			localizedSearchR,
+		] = await Promise.allSettled([
 			getCountries(),
 			getCountriesFromUN(),
 			getMissingCountries(),
@@ -120,6 +141,31 @@ export const Route = createFileRoute("/countries/")({
 			getCountryNamesByLocale({ data: { locale: nameLocale } }),
 			getLocalizedSearchByCountry(),
 		]);
+		// The main country list is the page's reason for existing — if it can't
+		// load, surface the error rather than render an empty table.
+		if (countriesUNR.status === "rejected") throw countriesUNR.reason;
+		const countriesUN = countriesUNR.value;
+		const countriesIntl = settledOr(countriesIntlR, [], "CLDR names");
+		const countriesMissing = settledOr(
+			countriesMissingR,
+			[],
+			"missing countries",
+		);
+		const timezoneMap = settledOr(timezoneMapR, {}, "timezones");
+		const currencyMap = settledOr(currencyMapR, {}, "currencies");
+		const historicalCurrencyMap = settledOr(
+			historicalCurrencyMapR,
+			{},
+			"historical currencies",
+		);
+		const subdivisionMap = settledOr(subdivisionMapR, {}, "subdivisions");
+		const localizedNameCounts = settledOr(
+			localizedNameCountsR,
+			{},
+			"localized name counts",
+		);
+		const localizedNames = settledOr(localizedNamesR, {}, "localized names");
+		const localizedSearch = settledOr(localizedSearchR, {}, "localized search");
 		// Locale-independent enrichments (counts). The picked-locale name and the
 		// search blob are applied in the component so the loader needn't re-run.
 		// English CLDR name per code (from Intl.DisplayNames), kept only to flag

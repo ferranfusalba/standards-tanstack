@@ -1,5 +1,6 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import {
+	ArrowLeftRight,
 	Coins,
 	Globe,
 	Home,
@@ -33,6 +34,7 @@ const NAV_ITEMS: NavItem[] = [
 	{ to: "/timezones", label: "Timezones", icon: MapIcon },
 	{ to: "/countries", label: "Countries", icon: Globe },
 	{ to: "/languages", label: "Languages", icon: Languages },
+	{ to: "/compare", label: "Compare your data", icon: ArrowLeftRight },
 ];
 
 // Views whose tables render localized names, so the shared "Show localized names in:"

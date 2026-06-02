@@ -14,6 +14,7 @@ import { Route as TimezonesIndexRouteImport } from './routes/timezones/index'
 import { Route as LanguagesIndexRouteImport } from './routes/languages/index'
 import { Route as CurrenciesIndexRouteImport } from './routes/currencies/index'
 import { Route as CountriesIndexRouteImport } from './routes/countries/index'
+import { Route as CompareIndexRouteImport } from './routes/compare/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -40,9 +41,15 @@ const CountriesIndexRoute = CountriesIndexRouteImport.update({
   path: '/countries/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CompareIndexRoute = CompareIndexRouteImport.update({
+  id: '/compare/',
+  path: '/compare/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/compare': typeof CompareIndexRoute
   '/countries': typeof CountriesIndexRoute
   '/currencies': typeof CurrenciesIndexRoute
   '/languages': typeof LanguagesIndexRoute
@@ -50,6 +57,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/compare': typeof CompareIndexRoute
   '/countries': typeof CountriesIndexRoute
   '/currencies': typeof CurrenciesIndexRoute
   '/languages': typeof LanguagesIndexRoute
@@ -58,6 +66,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/compare/': typeof CompareIndexRoute
   '/countries/': typeof CountriesIndexRoute
   '/currencies/': typeof CurrenciesIndexRoute
   '/languages/': typeof LanguagesIndexRoute
@@ -65,12 +74,25 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/countries' | '/currencies' | '/languages' | '/timezones'
+  fullPaths:
+    | '/'
+    | '/compare'
+    | '/countries'
+    | '/currencies'
+    | '/languages'
+    | '/timezones'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/countries' | '/currencies' | '/languages' | '/timezones'
+  to:
+    | '/'
+    | '/compare'
+    | '/countries'
+    | '/currencies'
+    | '/languages'
+    | '/timezones'
   id:
     | '__root__'
     | '/'
+    | '/compare/'
     | '/countries/'
     | '/currencies/'
     | '/languages/'
@@ -79,6 +101,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CompareIndexRoute: typeof CompareIndexRoute
   CountriesIndexRoute: typeof CountriesIndexRoute
   CurrenciesIndexRoute: typeof CurrenciesIndexRoute
   LanguagesIndexRoute: typeof LanguagesIndexRoute
@@ -122,11 +145,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CountriesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/compare/': {
+      id: '/compare/'
+      path: '/compare'
+      fullPath: '/compare'
+      preLoaderRoute: typeof CompareIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CompareIndexRoute: CompareIndexRoute,
   CountriesIndexRoute: CountriesIndexRoute,
   CurrenciesIndexRoute: CurrenciesIndexRoute,
   LanguagesIndexRoute: LanguagesIndexRoute,

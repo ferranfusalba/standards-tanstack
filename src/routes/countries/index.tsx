@@ -53,6 +53,11 @@ import { fuzzyFilter } from "@/lib/fuzzy-filter";
 import { useLocale } from "@/lib/locale";
 import { localizedNameDiffers } from "@/lib/localized-names";
 import { collapseSharedPhoneCodes } from "@/lib/phone-codes";
+import {
+	nextSubSort,
+	type SubSort,
+	sortSubdivisions,
+} from "@/lib/subdivision-sort";
 import { facetedFilter, presenceFilter } from "@/lib/table-filters";
 import { asNumber, asString } from "@/lib/url-state";
 import {
@@ -275,6 +280,38 @@ function ExpandedRow({
 	);
 }
 
+/** Clickable sort header for the hand-rolled subdivisions table. Mirrors the
+ *  🔼/🔽 indicators DataTable uses; the button inherits the surrounding <th>
+ *  font/color via Tailwind preflight. */
+function SubSortHeader({
+	label,
+	sortKey,
+	sort,
+	onSort,
+}: {
+	label: React.ReactNode;
+	sortKey: string;
+	sort: SubSort;
+	onSort: (key: string) => void;
+}) {
+	const indicator =
+		sort && sort.key === sortKey
+			? sort.dir === "asc"
+				? "\u{1F53C}"
+				: "\u{1F53D}"
+			: null;
+	return (
+		<button
+			type="button"
+			onClick={() => onSort(sortKey)}
+			className="inline-flex items-center gap-1 cursor-pointer select-none whitespace-nowrap hover:text-foreground"
+		>
+			{label}
+			{indicator && <span>{indicator}</span>}
+		</button>
+	);
+}
+
 function SubdivisionsExpandedRow({
 	subs,
 	colSpan,
@@ -308,6 +345,25 @@ function SubdivisionsExpandedRow({
 		</>
 	);
 
+	const [sort, setSort] = React.useState<SubSort>(null);
+	const onSort = (key: string) =>
+		setSort((current) => nextSubSort(current, key));
+	const ariaSort = (key: string): "ascending" | "descending" | "none" => {
+		if (!sort || sort.key !== key) return "none";
+		return sort.dir === "asc" ? "ascending" : "descending";
+	};
+
+	// Sort by the clicked column's accessor; unsorted falls back to source order.
+	const sortedSubs = React.useMemo(
+		() =>
+			sortSubdivisions(
+				subs,
+				sort,
+				(s) => s.flag ?? (s.iso1 ? toFlag(s.iso1) : ""),
+			),
+		[subs, sort],
+	);
+
 	// No type data anywhere → one plain column per language (the localized name).
 	if (!hasType) {
 		return (
@@ -315,17 +371,46 @@ function SubdivisionsExpandedRow({
 				<table className="text-xs w-auto">
 					<thead>
 						<tr className="text-muted-foreground">
-							<th className="pr-4 pb-1 text-left font-normal">Flag</th>
-							<th className="pr-6 pb-1 text-left font-normal">Code</th>
+							<th
+								aria-sort={ariaSort("flag")}
+								className="pr-4 pb-1 text-left font-normal"
+							>
+								<SubSortHeader
+									label="Flag"
+									sortKey="flag"
+									sort={sort}
+									onSort={onSort}
+								/>
+							</th>
+							<th
+								aria-sort={ariaSort("code")}
+								className="pr-6 pb-1 text-left font-normal"
+							>
+								<SubSortHeader
+									label="Code"
+									sortKey="code"
+									sort={sort}
+									onSort={onSort}
+								/>
+							</th>
 							{langCodes.map((lang) => (
-								<th key={lang} className="pr-6 pb-1 text-left font-normal">
-									{lang}
+								<th
+									key={lang}
+									aria-sort={ariaSort(`name:${lang}`)}
+									className="pr-6 pb-1 text-left font-normal"
+								>
+									<SubSortHeader
+										label={lang}
+										sortKey={`name:${lang}`}
+										sort={sort}
+										onSort={onSort}
+									/>
 								</th>
 							))}
 						</tr>
 					</thead>
 					<tbody>
-						{subs.map((sub) => (
+						{sortedSubs.map((sub) => (
 							<tr key={sub.code}>
 								<td className="pr-4 py-0.5">{flagOf(sub) ?? ""}</td>
 								<td className="pr-6 py-0.5 font-mono">{renderCode(sub)}</td>
@@ -351,15 +436,27 @@ function SubdivisionsExpandedRow({
 					<tr>
 						<th
 							rowSpan={2}
+							aria-sort={ariaSort("flag")}
 							className="pr-4 pb-1 align-bottom text-left font-normal"
 						>
-							Flag
+							<SubSortHeader
+								label="Flag"
+								sortKey="flag"
+								sort={sort}
+								onSort={onSort}
+							/>
 						</th>
 						<th
 							rowSpan={2}
+							aria-sort={ariaSort("code")}
 							className="pr-6 pb-1 align-bottom text-left font-normal"
 						>
-							Code
+							<SubSortHeader
+								label="Code"
+								sortKey="code"
+								sort={sort}
+								onSort={onSort}
+							/>
 						</th>
 						{langCodes.map((lang) => (
 							<th
@@ -374,16 +471,34 @@ function SubdivisionsExpandedRow({
 					<tr>
 						{langCodes.map((lang) => (
 							<React.Fragment key={lang}>
-								<th className="border-l border-border pb-1 pl-4 pr-3 text-left font-normal">
-									type
+								<th
+									aria-sort={ariaSort(`type:${lang}`)}
+									className="border-l border-border pb-1 pl-4 pr-3 text-left font-normal"
+								>
+									<SubSortHeader
+										label="type"
+										sortKey={`type:${lang}`}
+										sort={sort}
+										onSort={onSort}
+									/>
 								</th>
-								<th className="pr-4 pb-1 text-left font-normal">value</th>
+								<th
+									aria-sort={ariaSort(`name:${lang}`)}
+									className="pr-4 pb-1 text-left font-normal"
+								>
+									<SubSortHeader
+										label="value"
+										sortKey={`name:${lang}`}
+										sort={sort}
+										onSort={onSort}
+									/>
+								</th>
 							</React.Fragment>
 						))}
 					</tr>
 				</thead>
 				<tbody>
-					{subs.map((sub) => (
+					{sortedSubs.map((sub) => (
 						<tr key={sub.code}>
 							<td className="pr-4 py-0.5">{flagOf(sub) ?? ""}</td>
 							<td className="pr-6 py-0.5 font-mono">{renderCode(sub)}</td>

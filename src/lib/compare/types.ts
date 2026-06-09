@@ -11,7 +11,7 @@ export type RowStatus =
 	| "extra"; // in their file, with no match in our data
 
 /** How a their-row was reconciled to one of ours. */
-export type MatchedBy = "key" | "name" | null;
+export type MatchedBy = "key" | "name" | "semantic" | null;
 
 /** A single field that differs between a matched pair. */
 export interface FieldDiff {

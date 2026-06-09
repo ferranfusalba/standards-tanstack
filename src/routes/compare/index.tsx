@@ -12,13 +12,14 @@ import React from "react";
 import { ColumnVisibility } from "@/components/ColumnVisibility";
 import { DataTable } from "@/components/DataTable";
 import { Pagination } from "@/components/Pagination";
-import { getCountriesFromUN } from "@/data/countries";
+import { getCountriesFromUN, getMissingCountries } from "@/data/countries";
 import { getCurrencies } from "@/data/currencies";
 import { getLanguages } from "@/data/languages";
 import { getTimezonesFromIntl } from "@/data/timezones";
 import { DATASET_CONFIGS, DATASET_ORDER } from "@/lib/compare/dataset-config";
 import { compareDataset, proposeSpec, uploadHeaders } from "@/lib/compare/diff";
 import { CompareParseError, parseUpload } from "@/lib/compare/parse";
+import { reconcileSemantically } from "@/lib/compare/semantic";
 import type {
 	CompareResult,
 	CompareSpec,
@@ -35,12 +36,26 @@ type AnyRecord = Record<string, unknown>;
 export const Route = createFileRoute("/compare/")({
 	component: Compare,
 	loader: async () => {
-		const [countries, currencies, languages, timezones] = await Promise.all([
-			getCountriesFromUN(),
-			getCurrencies(),
-			getLanguages(),
-			getTimezonesFromIntl(),
-		]);
+		const [base, missing, currencies, languages, timezones] = await Promise.all(
+			[
+				getCountriesFromUN(),
+				getMissingCountries(),
+				getCurrencies(),
+				getLanguages(),
+				getTimezonesFromIntl(),
+			],
+		);
+		// Include the app's non-ISO "missing countries" (e.g. Kosovo/XK) so an
+		// upload that uses those user-assigned codes matches instead of showing as
+		// Extra. Flag them `nonStandard` so the table marks them as a category.
+		const countries = [
+			...base,
+			...missing.map((c) => ({
+				...c,
+				name: c.name || c.cldrName || c.alpha2Code,
+				nonStandard: true as const,
+			})),
+		];
 		return { countries, currencies, languages, timezones };
 	},
 	head: () => ({
@@ -129,6 +144,12 @@ function Compare() {
 		pageIndex: 0,
 		pageSize: DEFAULT_PAGE_SIZE,
 	});
+	const [semantic, setSemantic] = React.useState(false);
+	const [semanticResult, setSemanticResult] =
+		React.useState<CompareResult | null>(null);
+	const [semanticState, setSemanticState] = React.useState<
+		"idle" | "loading" | "ready" | "error"
+	>("idle");
 
 	const config = DATASET_CONFIGS[dataset];
 
@@ -137,13 +158,10 @@ function Compare() {
 		[rawRecords],
 	);
 
-	// A pretty-printed peek at the upload's shape, shown beside the mapping so the
-	// user can see the columns and example values they're mapping against.
+	// A pretty-printed view of the whole upload, shown (scrollable) beside the
+	// mapping so the user can see every column and value they're mapping against.
 	const preview = React.useMemo(
-		() =>
-			rawRecords && rawRecords.length > 0
-				? JSON.stringify(rawRecords[0], null, 2)
-				: "",
+		() => (rawRecords ? JSON.stringify(rawRecords, null, 2) : ""),
 		[rawRecords],
 	);
 
@@ -166,16 +184,65 @@ function Compare() {
 		return compareDataset(config, ours, rawRecords, spec);
 	}, [config, dataset, rawRecords, spec, canonical]);
 
+	// Progressive enhancement: once the instant deterministic result is in, if the
+	// user opted into semantic matching, reconcile the leftover Extra ↔ Missing
+	// rows with in-browser embeddings. Falls back to the deterministic result on
+	// error, and aborts in-flight work when inputs change.
+	React.useEffect(() => {
+		if (!semantic || !result || !spec) {
+			setSemanticResult(null);
+			setSemanticState("idle");
+			return;
+		}
+		// Embeddings work on names; without a mapped name column there's nothing to
+		// compare, so skip the (heavy) model load entirely.
+		if (!spec.mapping[config.nameField]) {
+			setSemanticResult(null);
+			setSemanticState("idle");
+			return;
+		}
+		if (result.summary.missing === 0 || result.summary.extra === 0) {
+			setSemanticResult(result);
+			setSemanticState("ready");
+			return;
+		}
+		let cancelled = false;
+		const controller = new AbortController();
+		setSemanticResult(null);
+		setSemanticState("loading");
+		reconcileSemantically(result, config, spec, { signal: controller.signal })
+			.then((r) => {
+				if (!cancelled) {
+					setSemanticResult(r);
+					setSemanticState("ready");
+				}
+			})
+			.catch(() => {
+				if (!cancelled) {
+					setSemanticResult(null);
+					setSemanticState("error");
+				}
+			});
+		return () => {
+			cancelled = true;
+			controller.abort();
+		};
+	}, [semantic, result, config, spec]);
+
+	// What the table actually renders: the semantic result when it's ready, else
+	// the deterministic one (also shown while the model loads).
+	const displayResult = semantic && semanticResult ? semanticResult : result;
+
 	const visibleRows = React.useMemo(
-		() => result?.rows.filter((r) => activeStatuses.has(r.status)) ?? [],
-		[result, activeStatuses],
+		() => displayResult?.rows.filter((r) => activeStatuses.has(r.status)) ?? [],
+		[displayResult, activeStatuses],
 	);
 
 	// Return to the first page whenever the underlying view changes.
 	// biome-ignore lint/correctness/useExhaustiveDependencies: intentionally re-pages on any view change
 	React.useEffect(() => {
 		setPagination((p) => ({ ...p, pageIndex: 0 }));
-	}, [dataset, rawRecords, spec, globalFilter, activeStatuses]);
+	}, [dataset, rawRecords, spec, globalFilter, activeStatuses, semanticResult]);
 
 	const handleFile = React.useCallback(async (file: File) => {
 		setFileName(file.name);
@@ -273,8 +340,24 @@ function Compare() {
 			{
 				accessorKey: "name",
 				header: "Name",
-				size: 180,
-				maxSize: 180,
+				size: 200,
+				maxSize: 200,
+				cell: (info) => {
+					const nonStandard = info.row.original.ourRow?.nonStandard === true;
+					return (
+						<span className="flex items-center gap-1.5">
+							<span className="truncate">{info.getValue<string>()}</span>
+							{nonStandard && (
+								<span
+									className="shrink-0 text-[10px] px-1.5 py-0.5 rounded-full bg-violet-100 text-violet-700 dark:bg-violet-950 dark:text-violet-300"
+									title="In our data only as a non-ISO, user-assigned code (e.g. Kosovo/XK)"
+								>
+									non-standard
+								</span>
+							)}
+						</span>
+					);
+				},
 			},
 			{
 				id: "matchedBy",
@@ -282,11 +365,13 @@ function Compare() {
 				size: 110,
 				maxSize: 110,
 				accessorFn: (row) =>
-					row.matchedBy === "name"
-						? "by name"
-						: row.matchedBy === "key"
-							? `by ${row.matchedField}`
-							: "",
+					row.matchedBy === "semantic"
+						? "semantic"
+						: row.matchedBy === "name"
+							? "by name"
+							: row.matchedBy === "key"
+								? `by ${row.matchedField}`
+								: "",
 				cell: (info) => {
 					const v = info.getValue<string>();
 					return v ? (
@@ -355,9 +440,12 @@ function Compare() {
 		filterFns: { fuzzy: fuzzyFilter },
 	});
 
-	const matchedCount = result
-		? result.summary.identical + result.summary.changed
+	const matchedCount = displayResult
+		? displayResult.summary.identical + displayResult.summary.changed
 		: 0;
+	const semanticCount =
+		displayResult?.rows.filter((r) => r.matchedBy === "semantic").length ?? 0;
+	const nameMapped = !!spec && !!spec.mapping[config.nameField];
 
 	return (
 		<div className="min-h-screen p-6">
@@ -463,7 +551,7 @@ function Compare() {
 				</div>
 			)}
 
-			{spec && result && (
+			{spec && displayResult && (
 				<>
 					{/* Column mapping & match key — seeded by analysis, fully editable */}
 					<details className="mb-4 rounded-lg border border-border" open>
@@ -477,17 +565,22 @@ function Compare() {
 								results update instantly.
 							</p>
 							<div className="grid gap-4 lg:grid-cols-4">
-								{/* Left: a peek at the uploaded structure to map against */}
-								<div className="lg:col-span-1 min-w-0">
+								{/* Left: the uploaded file to map against. The card stretches to
+								    the height of the mapping controls (ending at "Match rows on");
+								    the absolutely-positioned <pre> scrolls inside without letting
+								    the file's length enlarge the grid row. */}
+								<div className="lg:col-span-1 min-w-0 flex flex-col">
 									<div className="text-xs font-medium text-muted-foreground mb-1">
 										Your file{" "}
 										<span className="font-normal">
-											(first of {result.summary.theirCount})
+											({displayResult.summary.theirCount} records)
 										</span>
 									</div>
-									<pre className="rounded-md border border-border bg-secondary/50 p-3 text-xs font-mono leading-relaxed overflow-auto max-h-72 text-foreground">
-										<code>{preview}</code>
-									</pre>
+									<div className="relative h-72 lg:h-auto lg:flex-1 lg:min-h-0">
+										<pre className="absolute inset-0 overflow-auto rounded-md border border-border bg-secondary/50 p-3 text-xs font-mono leading-relaxed text-foreground">
+											<code>{preview}</code>
+										</pre>
+									</div>
 								</div>
 
 								{/* Right: the editable mapping + match key */}
@@ -545,6 +638,29 @@ function Compare() {
 											/>
 											fuzzy (match by similarity)
 										</label>
+										<label className="flex items-center gap-1.5 text-muted-foreground">
+											<input
+												type="checkbox"
+												checked={semantic}
+												onChange={(e) => setSemantic(e.target.checked)}
+											/>
+											semantic (AI, in your browser)
+										</label>
+										{semantic && (
+											<span className="text-xs text-muted-foreground">
+												{!nameMapped
+													? "Map a Name column to enable semantic matching."
+													: semanticState === "loading"
+														? "Loading model & matching… (first run downloads ~25 MB)"
+														: semanticState === "error"
+															? "Semantic matching unavailable — showing exact results."
+															: semanticState === "ready" && semanticCount > 0
+																? `Reconciled ${semanticCount} more by meaning.`
+																: semanticState === "ready"
+																	? "No further matches found by meaning."
+																	: null}
+											</span>
+										)}
 									</div>
 								</div>
 							</div>
@@ -579,7 +695,7 @@ function Compare() {
 									}`}
 								>
 									<span className="font-semibold">
-										{result.summary[status]}
+										{displayResult.summary[status]}
 									</span>{" "}
 									{STATUS_META[status].label}
 								</button>
@@ -587,9 +703,9 @@ function Compare() {
 						})}
 					</div>
 
-					{result.columns.unmapped.length > 0 && (
+					{displayResult.columns.unmapped.length > 0 && (
 						<p className="text-xs text-muted-foreground mb-4">
-							Ignored columns: {result.columns.unmapped.join(", ")}
+							Ignored columns: {displayResult.columns.unmapped.join(", ")}
 						</p>
 					)}
 
@@ -604,7 +720,7 @@ function Compare() {
 
 					<div className="flex items-center justify-between mb-2">
 						<p className="text-sm text-muted-foreground">
-							Showing {visibleRows.length} of {result.summary.total} rows
+							Showing {visibleRows.length} of {displayResult.summary.total} rows
 						</p>
 						<div className="flex items-center gap-2">
 							<ColumnVisibility table={table} />
@@ -613,7 +729,7 @@ function Compare() {
 									type="button"
 									onClick={() =>
 										exportRowsCSV(
-											flattenForExport(result.rows),
+											flattenForExport(displayResult.rows),
 											`compare-${dataset}.csv`,
 										)
 									}
@@ -625,7 +741,7 @@ function Compare() {
 									type="button"
 									onClick={() =>
 										exportRowsJSON(
-											flattenForExport(result.rows),
+											flattenForExport(displayResult.rows),
 											`compare-${dataset}.json`,
 										)
 									}

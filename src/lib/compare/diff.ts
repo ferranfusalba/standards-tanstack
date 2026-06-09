@@ -115,6 +115,17 @@ function diffPair(
 	return diffs;
 }
 
+/** Field-level diff for a matched pair under a given spec. Exported so the
+ *  semantic pass can recompute diffs for rows it newly reconciles. */
+export function rowDiffs(
+	ourRow: Record_,
+	theirRow: Record_,
+	spec: CompareSpec,
+	config: DatasetConfig,
+): FieldDiff[] {
+	return diffPair(ourRow, theirRow, spec.mapping, config);
+}
+
 const FUZZY_THRESHOLD = rankings.CONTAINS;
 
 /** Best symmetric match-sorter rank between two names (either may contain the

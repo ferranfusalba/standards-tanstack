@@ -18,6 +18,16 @@ const config = defineConfig({
     tanstackStart(),
     viteReact(),
   ],
+  // transformers.js (semantic matching) is browser-only and lazy-loaded on the
+  // client. Keep it out of the SSR/Nitro server bundle — it pulls in onnxruntime
+  // and balloons (or kills) the server build, and its code path never runs on the
+  // server. The client build still bundles it as an on-demand chunk.
+  ssr: {
+    external: ['@huggingface/transformers'],
+  },
+  optimizeDeps: {
+    exclude: ['@huggingface/transformers'],
+  },
 })
 
 export default config

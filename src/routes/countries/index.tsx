@@ -50,6 +50,11 @@ import {
 } from "@/data/currencies";
 import { getPreferredLocale } from "@/data/locale";
 import { type CountryTimezone, getTimezonesByCountry } from "@/data/timezones";
+import {
+	codeChecks,
+	codeDiverges,
+	hasCodeDivergence,
+} from "@/lib/country-codes";
 import { fuzzyFilter } from "@/lib/fuzzy-filter";
 import { useLocale } from "@/lib/locale";
 import { localizedNameDiffers } from "@/lib/localized-names";
@@ -66,7 +71,12 @@ import {
 	useTableUrlState,
 } from "@/lib/use-table-url-state";
 
-type ExpandSection = "subdivisions" | "timezones" | "currencies" | "names";
+type ExpandSection =
+	| "subdivisions"
+	| "timezones"
+	| "currencies"
+	| "names"
+	| "details";
 
 interface CountriesSearch {
 	highlight?: string;
@@ -598,34 +608,8 @@ function getCellHighlight(
 	original: Country,
 	showCodeMismatch = true,
 ): string {
-	if (
-		showCodeMismatch &&
-		colId === "icaoCode" &&
-		original.icaoCode &&
-		original.icaoCode !== original.alpha3Code
-	)
-		return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300";
-	if (
-		showCodeMismatch &&
-		colId === "dsitCode" &&
-		original.dsitCode &&
-		original.dsitCode !== original.alpha2Code &&
-		original.dsitCode !== original.alpha3Code
-	)
-		return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300";
-	if (
-		showCodeMismatch &&
-		colId === "iocCode" &&
-		original.iocCode &&
-		original.iocCode !== original.alpha3Code
-	)
-		return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300";
-	if (
-		showCodeMismatch &&
-		colId === "fifaCode" &&
-		original.fifaCode &&
-		original.fifaCode !== original.alpha3Code
-	)
+	const codeCheck = codeChecks.find((ck) => ck.colId === colId);
+	if (showCodeMismatch && codeCheck && codeDiverges(codeCheck, original))
 		return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300";
 	if (colId === "unMembership") {
 		if (original.unMembership === "member")
@@ -652,10 +636,11 @@ function getColumnBorder(colId: string) {
 	return borderLeftCols.has(colId) ? "border-l border-border" : "";
 }
 
-// Maps each count column to the section its toggle opens, so the cell that
-// opened the active subrow can be painted — anchoring the expanded panel to the
-// value it came from.
+// Maps each opener cell to the section it toggles, so the cell that opened the active
+// subrow can be painted — anchoring the expanded panel to the value (or, for the full
+// detail panel, the flag) it came from.
 const sectionByColumn: Record<string, ExpandSection> = {
+	flag: "details",
 	subdivisionCount: "subdivisions",
 	localizedNameCount: "names",
 	timezoneCount: "timezones",
@@ -727,6 +712,194 @@ const countrySourceMeta: Record<string, { href?: string; note?: string }> = {
 		note: "Resolved at runtime via Intl.DisplayNames.",
 	},
 };
+
+function DetailField({
+	label,
+	source,
+	children,
+}: {
+	label: string;
+	source?: string;
+	children: React.ReactNode;
+}) {
+	return (
+		<div className="flex flex-col gap-0.5">
+			<dt className="text-xs text-muted-foreground">
+				{label}
+				{source && (
+					<span className="ml-1 text-muted-foreground/60">· {source}</span>
+				)}
+			</dt>
+			<dd className="text-sm">{children}</dd>
+		</div>
+	);
+}
+
+function DetailGroup({
+	title,
+	children,
+}: {
+	title: string;
+	children: React.ReactNode;
+}) {
+	return (
+		<section className="flex flex-col gap-2">
+			<h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground/80">
+				{title}
+			</h4>
+			<dl className="grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-3">
+				{children}
+			</dl>
+		</section>
+	);
+}
+
+// Full vertical breakdown of one country's standards — every code, status and count
+// in one readable place, so you don't have to scroll a wide table. Display-only; the
+// code rows reuse codeChecks to flag where a value diverges from ISO 3166-1.
+function CountryDetailPanel({
+	country,
+	colSpan,
+}: {
+	country: Country & {
+		cldrName?: string;
+		localizedName?: string;
+		timezoneCount?: number;
+		currencyCount?: number;
+		localizedNameCount?: number;
+	};
+	colSpan: number;
+}) {
+	const c = country;
+	const dash = <span className="text-muted-foreground">—</span>;
+	const text = (v?: string | number | null) =>
+		v === undefined || v === null || v === "" ? dash : <span>{v}</span>;
+	const yesNo = (v?: boolean) => (v === undefined ? dash : v ? "Yes" : "No");
+	const src = (colId: string) => countrySources[colId];
+
+	// A code value that flags divergence from ISO 3166-1 (and lists the UK's four
+	// home-nation associations, since GB itself has no single FIFA code).
+	const code = (colId: string) => {
+		if (colId === "fifaCode" && c.alpha2Code === "GB") {
+			return (
+				<span className="font-mono">
+					{fifaHomeNations.map((n) => n.code).join(", ")}
+				</span>
+			);
+		}
+		const check = codeChecks.find((ck) => ck.colId === colId);
+		const value = check?.get(c);
+		if (!value) return dash;
+		const diverges = check ? codeDiverges(check, c) : false;
+		return (
+			<span className={diverges ? "text-red-700 dark:text-red-300" : undefined}>
+				<span className="font-mono">{value}</span>
+				{diverges && <span className="ml-1 text-xs">≠ ISO 3166-1</span>}
+			</span>
+		);
+	};
+
+	return (
+		<ExpandedRow colSpan={colSpan}>
+			<div className="flex max-w-3xl flex-col gap-5">
+				<div className="flex items-center gap-3">
+					<span className="text-3xl leading-none">{c.flag}</span>
+					<div>
+						<div className="text-base font-semibold">
+							{c.name || c.cldrName || c.alpha2Code}
+						</div>
+						{c.fullName && (
+							<div className="text-xs text-muted-foreground">{c.fullName}</div>
+						)}
+					</div>
+				</div>
+
+				<DetailGroup title="ISO 3166-1">
+					<DetailField label="Alpha-2" source={src("alpha2Code")}>
+						<span className="font-mono">{c.alpha2Code}</span>
+					</DetailField>
+					<DetailField label="Alpha-3" source={src("alpha3Code")}>
+						{c.alpha3Code ? (
+							<span className="font-mono">{c.alpha3Code}</span>
+						) : (
+							dash
+						)}
+					</DetailField>
+					<DetailField label="Numeric" source="UN M49">
+						{text(c.unCode)}
+					</DetailField>
+					<DetailField label="Independent" source={src("independent")}>
+						{yesNo(c.independent)}
+					</DetailField>
+				</DetailGroup>
+
+				<DetailGroup title="Codes cross-checked against ISO 3166-1">
+					<DetailField label="Passport" source={src("icaoCode")}>
+						{code("icaoCode")}
+					</DetailField>
+					<DetailField label="Vehicle plate" source={src("dsitCode")}>
+						{code("dsitCode")}
+					</DetailField>
+					<DetailField label="Olympic" source={src("iocCode")}>
+						{code("iocCode")}
+					</DetailField>
+					<DetailField label="FIFA" source={src("fifaCode")}>
+						{code("fifaCode")}
+					</DetailField>
+				</DetailGroup>
+
+				<DetailGroup title="Identifiers">
+					<DetailField label="Aircraft" source={src("aircraftRegPrefixes")}>
+						{c.aircraftRegPrefixes?.length
+							? c.aircraftRegPrefixes.join(", ")
+							: dash}
+					</DetailField>
+					<DetailField label="Domain" source={src("ccTLD")}>
+						{text(c.ccTLD)}
+					</DetailField>
+					<DetailField label="Phone" source={src("phonePrefix")}>
+						{text(c.phonePrefix)}
+					</DetailField>
+				</DetailGroup>
+
+				<DetailGroup title="Status & geography">
+					<DetailField label="UN membership" source={src("unMembership")}>
+						{text(c.unMembership)}
+					</DetailField>
+					<DetailField label="EU member" source={src("euMember")}>
+						{yesNo(c.euMember)}
+					</DetailField>
+					<DetailField label="Region" source={src("region")}>
+						{text(c.region)}
+					</DetailField>
+					{c.sovereignState && (
+						<DetailField label="Sovereign state" source="ISO 3166-1">
+							<span className="font-mono">{c.sovereignState}</span>
+						</DetailField>
+					)}
+				</DetailGroup>
+
+				<DetailGroup title="Counts">
+					<DetailField label="Subdivisions" source={src("subdivisionCount")}>
+						{text(c.subdivisionCount ?? 0)}
+					</DetailField>
+					<DetailField label="Currencies" source={src("currencyCount")}>
+						{text(c.currencyCount ?? 0)}
+					</DetailField>
+					<DetailField label="Timezones" source={src("timezoneCount")}>
+						{text(c.timezoneCount ?? 0)}
+					</DetailField>
+					<DetailField
+						label="Localized names"
+						source={src("localizedNameCount")}
+					>
+						{text(c.localizedNameCount ?? 0)}
+					</DetailField>
+				</DetailGroup>
+			</div>
+		</ExpandedRow>
+	);
+}
 
 function ExpandedCountryRow({
 	alpha2Code,
@@ -1041,6 +1214,21 @@ function Countries() {
 	const [showCrossCheck, setShowCrossCheck] = React.useState(true);
 	const [showLocalizedDiff, setShowLocalizedDiff] = React.useState(true);
 	const [showCodeMismatch, setShowCodeMismatch] = React.useState(true);
+	// Row filter (not a highlight): narrow the ISO 3166 table to only the countries
+	// whose passport / vehicle / Olympic / FIFA code differs from ISO 3166-1.
+	const [showOnlyMismatches, setShowOnlyMismatches] = React.useState(false);
+	// Count over the full table, not the filtered view ("134 of 249 diverge").
+	const codeMismatchCount = React.useMemo(
+		() => countriesUN.filter(hasCodeDivergence).length,
+		[countriesUN],
+	);
+	const countriesUNRows = React.useMemo(
+		() =>
+			showOnlyMismatches
+				? countriesUNLocalized.filter(hasCodeDivergence)
+				: countriesUNLocalized,
+		[countriesUNLocalized, showOnlyMismatches],
+	);
 
 	const toggleSection = React.useCallback(
 		(alpha2Code: string, rowIndex: string, section: ExpandSection) => {
@@ -1067,11 +1255,23 @@ function Countries() {
 			{
 				accessorKey: "flag",
 				header: "Flag",
-				cell: (info) => (
-					<span className="text-2xl leading-none">
-						{info.getValue<string>()}
-					</span>
-				),
+				cell: ({ row, getValue }) => {
+					const isOpen = expandedSection[row.original.alpha2Code] === "details";
+					return (
+						<button
+							type="button"
+							onClick={(e) => {
+								e.stopPropagation();
+								toggleSection(row.original.alpha2Code, row.id, "details");
+							}}
+							aria-label={`Show all codes for ${row.original.name || row.original.alpha2Code}`}
+							aria-expanded={isOpen}
+							className="cursor-pointer rounded px-1 text-2xl leading-none hover:bg-accent"
+						>
+							{getValue<string>()}
+						</button>
+					);
+				},
 				size: 60,
 				maxSize: 60,
 				enableHiding: false,
@@ -1146,7 +1346,35 @@ function Countries() {
 				header: "Vehicle plate",
 				size: 130,
 				maxSize: 130,
-				cell: (info) => info.getValue<string>() ?? "-",
+				cell: (info) => {
+					const value = info.getValue<string>();
+					if (!value) return "-";
+					// The UK's distinguishing sign changed from "GB" to "UK" on
+					// 28 Sep 2021; an info tooltip explains the change (cf. FIFA cell).
+					if (info.row.original.alpha2Code === "GB") {
+						return (
+							<span className="inline-flex items-center gap-1">
+								{value}
+								<Tooltip>
+									<TooltipTrigger asChild>
+										<button
+											type="button"
+											aria-label="UK vehicle code changed from GB to UK in 2021"
+											className="opacity-60 hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
+										>
+											<Info className="size-3" />
+										</button>
+									</TooltipTrigger>
+									<TooltipContent className="max-w-xs text-xs">
+										Changed from <span className="font-mono">GB</span> to{" "}
+										<span className="font-mono">UK</span> on 28 September 2021.
+									</TooltipContent>
+								</Tooltip>
+							</span>
+						);
+					}
+					return value;
+				},
 				filterFn: presenceFilter,
 				meta: { filterable: true, filterMode: "presence" },
 			},
@@ -1431,7 +1659,7 @@ function Countries() {
 	);
 
 	const tableUN = useReactTable({
-		data: countriesUNLocalized,
+		data: countriesUNRows,
 		columns: columnsUN,
 		getCoreRowModel: getCoreRowModel(),
 		getExpandedRowModel: getExpandedRowModel(),
@@ -1532,12 +1760,7 @@ function Countries() {
 		};
 		// Columns whose main-table cell renders something other than a plain value
 		// (the large flag glyph; the filter-only blank membership/independent cells).
-		const keepCell = new Set([
-			"flag",
-			"unMembership",
-			"euMember",
-			"independent",
-		]);
+		const keepCell = new Set(["unMembership", "euMember", "independent"]);
 		const mirrored = columnsUN
 			.filter(
 				(c): c is ColumnDef<Country> & { accessorKey: string } =>
@@ -1546,6 +1769,14 @@ function Countries() {
 			.map((c): ColumnDef<Country> => {
 				let cell: ColumnDef<Country>["cell"];
 				if (c.accessorKey === "localizedNameCount") cell = namesCell;
+				// The missing table keeps a plain glyph flag — the main table's flag is a
+				// "details" trigger that drives shared expansion state this table doesn't use.
+				else if (c.accessorKey === "flag")
+					cell = (info) => (
+						<span className="text-2xl leading-none">
+							{info.getValue<string>()}
+						</span>
+					);
 				else if (keepCell.has(c.accessorKey)) cell = c.cell;
 				else cell = valueOrDash;
 				return {
@@ -1676,6 +1907,18 @@ function Countries() {
 						/>
 						<span className="inline-block w-8 h-3 rounded bg-red-100 dark:bg-red-950" />
 						Code differs from ISO 3166-1 standard
+						<span className="text-muted-foreground/70">
+							({codeMismatchCount})
+						</span>
+					</label>
+					<label className="flex items-center gap-2 cursor-pointer pl-10">
+						<input
+							type="checkbox"
+							checked={showOnlyMismatches}
+							onChange={() => setShowOnlyMismatches((v) => !v)}
+							className="rounded"
+						/>
+						Show only the {codeMismatchCount} countries with a code mismatch
 					</label>
 				</div>
 			</div>
@@ -1867,6 +2110,14 @@ function Countries() {
 				renderExpandedRow={(row) => {
 					const section = expandedSection[row.original.alpha2Code];
 					if (!section) return null;
+					if (section === "details") {
+						return (
+							<CountryDetailPanel
+								country={row.original}
+								colSpan={row.getVisibleCells().length}
+							/>
+						);
+					}
 					if (section === "names") {
 						return (
 							<LocalizedNamesExpandedRow

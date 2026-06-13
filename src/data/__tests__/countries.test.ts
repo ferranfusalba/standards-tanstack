@@ -97,6 +97,13 @@ describe("getCountriesFromUN (ccTLD + phone prefix)", () => {
 		expect(byCode.GB.ccTLD).toBe(".uk");
 	});
 
+	it("uses the UNECE vehicle distinguishing signs (dsitCode)", () => {
+		expect(byCode.ES.dsitCode).toBe("E");
+		expect(byCode.US.dsitCode).toBe("USA");
+		// UK changed its sign from "GB" to "UK" on 28 Sep 2021
+		expect(byCode.GB.dsitCode).toBe("UK");
+	});
+
 	it("omits ccTLDs for reserved-but-undelegated codes", () => {
 		for (const code of ["EH", "BL", "MF", "BQ", "UM"]) {
 			expect(byCode[code]?.ccTLD).toBeUndefined();

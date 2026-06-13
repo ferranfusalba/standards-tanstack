@@ -1016,7 +1016,7 @@ const vehicleCodes: Record<string, string> = {
 	TM: "TM",
 	UG: "EAU",
 	UA: "UA",
-	GB: "GB",
+	GB: "UK",
 	US: "USA",
 	UY: "ROU",
 	UZ: "UZ",

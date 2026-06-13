@@ -87,6 +87,7 @@ interface CountriesSearch {
 	un_sort?: string;
 	un_page?: number;
 	un_f?: string;
+	un_mismatch?: boolean;
 	missing_sort?: string;
 	missing_page?: number;
 }
@@ -120,6 +121,8 @@ export const Route = createFileRoute("/countries/")({
 		un_sort: asString(search.un_sort),
 		un_page: asNumber(search.un_page),
 		un_f: asString(search.un_f),
+		un_mismatch:
+			search.un_mismatch === true || search.un_mismatch === "true" || undefined,
 		missing_sort: asString(search.missing_sort),
 		missing_page: asNumber(search.missing_page),
 	}),
@@ -1207,6 +1210,14 @@ function Countries() {
 	const [expandedRows, setExpandedRows] = React.useState<
 		Record<string, boolean>
 	>({});
+	// The missing-countries table keeps its own expansion state so its flag / Names
+	// triggers never collide with the main table's (both use index-based row ids).
+	const [missingSection, setMissingSection] = React.useState<
+		Record<string, ExpandSection>
+	>({});
+	const [missingExpanded, setMissingExpanded] = React.useState<
+		Record<string, boolean>
+	>({});
 	const [showHistoricalCurrencies, setShowHistoricalCurrencies] =
 		React.useState(true);
 	// Export-only: fold shared calling codes (e.g. +1) down to one primary entry.
@@ -1215,8 +1226,17 @@ function Countries() {
 	const [showLocalizedDiff, setShowLocalizedDiff] = React.useState(true);
 	const [showCodeMismatch, setShowCodeMismatch] = React.useState(true);
 	// Row filter (not a highlight): narrow the ISO 3166 table to only the countries
-	// whose passport / vehicle / Olympic / FIFA code differs from ISO 3166-1.
-	const [showOnlyMismatches, setShowOnlyMismatches] = React.useState(false);
+	// whose passport / vehicle / Olympic / FIFA code differs from ISO 3166-1. Synced
+	// to the URL so the filtered view survives a refresh and is shareable.
+	const showOnlyMismatches = search.un_mismatch === true;
+	const setShowOnlyMismatches = React.useCallback(
+		(next: boolean) =>
+			navigate({
+				search: (prev) => ({ ...prev, un_mismatch: next || undefined }),
+				replace: true,
+			}),
+		[navigate],
+	);
 	// Count over the full table, not the filtered view ("134 of 249 diverge").
 	const codeMismatchCount = React.useMemo(
 		() => countriesUN.filter(hasCodeDivergence).length,
@@ -1250,6 +1270,27 @@ function Countries() {
 		[],
 	);
 
+	// Same toggle behaviour as the main table, on the missing table's own state.
+	const toggleMissingSection = React.useCallback(
+		(alpha2Code: string, rowIndex: string, section: ExpandSection) => {
+			setMissingSection((prev) => {
+				if (prev[alpha2Code] === section) {
+					const next = { ...prev };
+					delete next[alpha2Code];
+					setMissingExpanded((er) => {
+						const n = { ...er };
+						delete n[rowIndex];
+						return n;
+					});
+					return next;
+				}
+				setMissingExpanded((er) => ({ ...er, [rowIndex]: true }));
+				return { ...prev, [alpha2Code]: section };
+			});
+		},
+		[],
+	);
+
 	const columnsUN = React.useMemo<ColumnDef<Country>[]>(
 		() => [
 			{
@@ -1266,6 +1307,7 @@ function Countries() {
 							}}
 							aria-label={`Show all codes for ${row.original.name || row.original.alpha2Code}`}
 							aria-expanded={isOpen}
+							title="Show all codes"
 							className="cursor-pointer rounded px-1 text-2xl leading-none hover:bg-accent"
 						>
 							{getValue<string>()}
@@ -1742,13 +1784,13 @@ function Countries() {
 			const count = (row.original as Country & { localizedNameCount?: number })
 				.localizedNameCount;
 			if (!count) return <span className="text-muted-foreground">-</span>;
-			const isOpen = row.getIsExpanded();
+			const isOpen = missingSection[row.original.alpha2Code] === "names";
 			return (
 				<button
 					type="button"
 					onClick={(e) => {
 						e.stopPropagation();
-						row.toggleExpanded();
+						toggleMissingSection(row.original.alpha2Code, row.id, "names");
 					}}
 					className="cursor-pointer hover:bg-accent px-2 py-1 rounded flex items-center gap-1"
 					aria-label="Show localized names"
@@ -1769,14 +1811,32 @@ function Countries() {
 			.map((c): ColumnDef<Country> => {
 				let cell: ColumnDef<Country>["cell"];
 				if (c.accessorKey === "localizedNameCount") cell = namesCell;
-				// The missing table keeps a plain glyph flag — the main table's flag is a
-				// "details" trigger that drives shared expansion state this table doesn't use.
+				// Mirror the main table's flag → "details" trigger, on this table's own
+				// expansion state (so it never collides with the main table's rows).
 				else if (c.accessorKey === "flag")
-					cell = (info) => (
-						<span className="text-2xl leading-none">
-							{info.getValue<string>()}
-						</span>
-					);
+					cell = ({ row, getValue }) => {
+						const isOpen =
+							missingSection[row.original.alpha2Code] === "details";
+						return (
+							<button
+								type="button"
+								onClick={(e) => {
+									e.stopPropagation();
+									toggleMissingSection(
+										row.original.alpha2Code,
+										row.id,
+										"details",
+									);
+								}}
+								aria-label={`Show all codes for ${row.original.name || row.original.alpha2Code}`}
+								aria-expanded={isOpen}
+								title="Show all codes"
+								className="cursor-pointer rounded px-1 text-2xl leading-none hover:bg-accent"
+							>
+								{getValue<string>()}
+							</button>
+						);
+					};
 				else if (keepCell.has(c.accessorKey)) cell = c.cell;
 				else cell = valueOrDash;
 				return {
@@ -1797,7 +1857,7 @@ function Countries() {
 				cell: (info) => info.getValue<string>() ?? "",
 			},
 		];
-	}, [columnsUN]);
+	}, [columnsUN, missingSection, toggleMissingSection]);
 
 	const tableMissing = useReactTable({
 		data: countriesMissingLocalized,
@@ -1811,8 +1871,16 @@ function Countries() {
 		globalFilterFn: "fuzzy",
 		state: {
 			globalFilter,
+			expanded: missingExpanded,
 			sorting: missingUrl.sorting,
 			pagination: missingUrl.pagination,
+		},
+		onExpandedChange: (updater) => {
+			setMissingExpanded((prev) => {
+				const next = typeof updater === "function" ? updater(prev) : updater;
+				if (typeof next === "boolean") return {};
+				return next;
+			});
 		},
 		onGlobalFilterChange: setGlobalFilter,
 		onSortingChange: missingUrl.onSortingChange,
@@ -1915,7 +1983,7 @@ function Countries() {
 						<input
 							type="checkbox"
 							checked={showOnlyMismatches}
-							onChange={() => setShowOnlyMismatches((v) => !v)}
+							onChange={() => setShowOnlyMismatches(!showOnlyMismatches)}
 							className="rounded"
 						/>
 						Show only the {codeMismatchCount} countries with a code mismatch
@@ -2183,12 +2251,22 @@ function Countries() {
 						`${getCellHighlight(colId, row.original, showCodeMismatch)} ${getColumnBorder(colId)}`
 					}
 					headerClassName={(colId) => getColumnBorder(colId)}
-					renderExpandedRow={(row) => (
-						<LocalizedNamesExpandedRow
-							alpha2Code={row.original.alpha2Code}
-							colSpan={row.getVisibleCells().length}
-						/>
-					)}
+					renderExpandedRow={(row) => {
+						if (missingSection[row.original.alpha2Code] === "details") {
+							return (
+								<CountryDetailPanel
+									country={row.original}
+									colSpan={row.getVisibleCells().length}
+								/>
+							);
+						}
+						return (
+							<LocalizedNamesExpandedRow
+								alpha2Code={row.original.alpha2Code}
+								colSpan={row.getVisibleCells().length}
+							/>
+						);
+					}}
 				/>
 			</div>
 		</div>

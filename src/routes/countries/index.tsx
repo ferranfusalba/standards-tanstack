@@ -28,6 +28,7 @@ import {
 } from "@/components/ui/tooltip";
 import {
 	type Country,
+	fifaHomeNations,
 	getCountries,
 	getCountriesFromUN,
 	getCountryNames,
@@ -619,6 +620,13 @@ function getCellHighlight(
 		original.iocCode !== original.alpha3Code
 	)
 		return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300";
+	if (
+		showCodeMismatch &&
+		colId === "fifaCode" &&
+		original.fifaCode &&
+		original.fifaCode !== original.alpha3Code
+	)
+		return "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300";
 	if (colId === "unMembership") {
 		if (original.unMembership === "member")
 			return "bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300";
@@ -666,6 +674,7 @@ const countrySources: Record<string, string> = {
 	icaoCode: "ICAO · Doc 9303",
 	dsitCode: "UNECE · DSIT",
 	iocCode: "IOC",
+	fifaCode: "FIFA",
 	aircraftRegPrefixes: "ICAO · Annex 7",
 	ccTLD: "IANA · Root Zone",
 	phonePrefix: "ITU-T · E.164",
@@ -709,6 +718,7 @@ const countrySourceMeta: Record<string, { href?: string; note?: string }> = {
 	},
 	"UN M49": { href: "https://unstats.un.org/unsd/methodology/m49/" },
 	IOC: { href: "https://www.olympics.com/ioc/national-olympic-committees" },
+	FIFA: { href: "https://inside.fifa.com/associations" },
 	"UNECE · DSIT": {
 		href: "https://unece.org/DAM/trans/conventn/Distsigns.pdf",
 	},
@@ -1146,6 +1156,45 @@ function Countries() {
 				size: 90,
 				maxSize: 90,
 				cell: (info) => info.getValue<string>() ?? "-",
+				filterFn: presenceFilter,
+				meta: { filterable: true, filterMode: "presence" },
+			},
+			{
+				accessorKey: "fifaCode",
+				header: "FIFA",
+				size: 90,
+				maxSize: 90,
+				cell: (info) => {
+					const value = info.getValue<string>();
+					if (value) return value;
+					// The UK (GB) has no single FIFA code; its four home-nation
+					// associations are shown in a tooltip instead of a bare "-".
+					if (info.row.original.alpha2Code === "GB") {
+						return (
+							<Tooltip>
+								<TooltipTrigger asChild>
+									<button
+										type="button"
+										aria-label="FIFA codes for the UK home nations"
+										className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground focus-visible:text-foreground focus-visible:outline-none"
+									>
+										4<Info className="size-3" />
+									</button>
+								</TooltipTrigger>
+								<TooltipContent className="text-xs">
+									<ul className="space-y-0.5">
+										{fifaHomeNations.map((n) => (
+											<li key={n.code}>
+												<span className="font-mono">{n.code}</span> {n.name}
+											</li>
+										))}
+									</ul>
+								</TooltipContent>
+							</Tooltip>
+						);
+					}
+					return "-";
+				},
 				filterFn: presenceFilter,
 				meta: { filterable: true, filterMode: "presence" },
 			},
@@ -1724,6 +1773,13 @@ function Countries() {
 							const alpha2 = rest.alpha2Code as string;
 							return {
 								...rest,
+								// The UK has no single FIFA code; surface its four home-nation
+								// associations so the export carries them (display-only in the
+								// table — see the FIFA column cell). Only when FIFA is visible.
+								...(alpha2 === "GB" &&
+									"fifaCode" in rest && {
+										fifaCode: fifaHomeNations.map((n) => n.code).join(", "),
+									}),
 								// Picked-locale name, keyed by its locale.
 								...(typeof localizedName === "string" && {
 									localizedName: { [locale]: localizedName },

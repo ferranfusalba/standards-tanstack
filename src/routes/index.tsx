@@ -48,6 +48,7 @@ function App() {
 				"ICAO Annex 7 (aircraft marks)",
 				"UNECE (vehicle codes)",
 				"IOC (Olympic codes)",
+				"FIFA (country codes)",
 				"IANA (ccTLDs)",
 				"ITU-T E.164 (dialing codes)",
 			],

@@ -130,6 +130,50 @@ describe("getCountriesFromUN (ccTLD + phone prefix)", () => {
 			}
 		}
 	});
+
+	it("assigns FIFA codes, validated against FIFA's official association list", () => {
+		// Codes identical to the ISO 3166-1 alpha-3.
+		expect(byCode.BR.fifaCode).toBe("BRA");
+		expect(byCode.ES.fifaCode).toBe("ESP");
+		expect(byCode.US.fifaCode).toBe("USA");
+		// Codes that differ from alpha-3 (these get the ISO-mismatch highlight).
+		expect(byCode.DE.fifaCode).toBe("GER");
+		expect(byCode.CH.fifaCode).toBe("SUI");
+		expect(byCode.NL.fifaCode).toBe("NED");
+		// Non-sovereign territories that field their own FIFA side.
+		expect(byCode.FO.fifaCode).toBe("FRO"); // Faroe Islands
+		expect(byCode.TW.fifaCode).toBe("TPE"); // Chinese Taipei
+		expect(byCode.PF.fifaCode).toBe("TAH"); // Tahiti / French Polynesia
+	});
+
+	it("uses FIFA's current code where the sources disagreed", () => {
+		// footballsquads.co.uk still lists pre-rename codes; FIFA, Wikipedia and RSSSF
+		// agree on the current ones, confirmed against inside.fifa.com/associations.
+		expect(byCode.LB.fifaCode).toBe("LBN"); // not LIB
+		expect(byCode.MN.fifaCode).toBe("MNG"); // not MGL
+		expect(byCode.SG.fifaCode).toBe("SGP"); // not SIN
+		expect(byCode.SD.fifaCode).toBe("SDN"); // not SUD
+		expect(byCode.PS.fifaCode).toBe("PLE"); // not RSSSF's PAL
+	});
+
+	it("omits FIFA codes for non-members", () => {
+		// Great Britain fields four home nations, so GB itself has no FIFA code.
+		expect(byCode.GB.fifaCode).toBeUndefined();
+		// IOC members that are not (yet) FIFA members.
+		for (const code of ["FM", "MC", "NR", "PW", "MH", "VA", "KI", "TV"]) {
+			expect(byCode[code]?.fifaCode).toBeUndefined();
+		}
+	});
+
+	it("covers the 206 FIFA members that have an ISO alpha-2", () => {
+		// 211 FIFA members − 4 UK home nations (no alpha-2) − Kosovo (XK, in the
+		// missing-countries table) = 206 in the UN M49 table.
+		const withFifa = countries.filter((c) => c.fifaCode);
+		expect(withFifa.length).toBe(206);
+		for (const c of withFifa) {
+			expect(c.fifaCode).toMatch(/^[A-Z]{3}$/);
+		}
+	});
 });
 
 describe("getCountryNames (localized)", () => {
@@ -266,6 +310,9 @@ describe("getMissingCountries", () => {
 		// ITU-assigned dialing code; only the alpha-2/alpha-3 cells carry a tooltip
 		// note (the ISO mismatch) — the ICAO/IOC/ITU values stand on their own.
 		expect(kosovo?.phonePrefix).toBe("+383");
+		// FIFA's official code for Kosovo is KOS (inside.fifa.com/associations/KOS),
+		// not the KVX used by some football-stats sources.
+		expect(kosovo?.fifaCode).toBe("KOS");
 		expect(kosovo?.cellNotes?.alpha2Code).toContain("user-assigned");
 		expect(kosovo?.cellNotes?.icaoCode).toBeUndefined();
 	});

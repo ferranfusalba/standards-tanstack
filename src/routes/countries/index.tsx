@@ -69,6 +69,7 @@ import {
 import { facetedFilter, presenceFilter } from "@/lib/table-filters";
 import { asNumber, asString } from "@/lib/url-state";
 import {
+	useDeepLinkPage,
 	useGlobalFilterSync,
 	useTableUrlState,
 } from "@/lib/use-table-url-state";
@@ -1412,6 +1413,17 @@ function Countries() {
 				: countriesUNLocalized,
 		[countriesUNLocalized, showOnlyMismatches],
 	);
+	// Deep link (e.g. from currencies/timezones): when the URL targets a row but
+	// doesn't pin a page, open the main table on that row's page. Derived, not an
+	// imperative setPageIndex, so the URL round-trip can't clobber the jump.
+	const unDeepLinkIndex = React.useMemo(
+		() =>
+			highlight != null && search.un_page == null && !globalFilter
+				? countriesUNRows.findIndex((c) => c.alpha2Code === highlight)
+				: -1,
+		[highlight, search.un_page, countriesUNRows, globalFilter],
+	);
+	const unState = useDeepLinkPage(unUrl, unDeepLinkIndex);
 
 	const toggleSection = React.useCallback(
 		(alpha2Code: string, rowIndex: string, section: ExpandSection) => {
@@ -1969,6 +1981,13 @@ function Countries() {
 		getPaginationRowModel: getPaginationRowModel(),
 		getSortedRowModel: getSortedRowModel(),
 		getRowCanExpand: () => true,
+		// While a deep-link override is forcing a page, disable TanStack's
+		// autoReset: the expand/locale effects recompute the row model on mount,
+		// which would otherwise resetPageIndex() → onPaginationChange(0) and snap us
+		// back to page 1 before the user sees the linked row. Restored to default
+		// (undefined) the moment the override yields, so the normal reset-to-page-1
+		// on search/filter keeps working.
+		autoResetPageIndex: unState !== unUrl ? false : undefined,
 		// Hidden, search-only column that indexes every localized spelling.
 		initialState: { columnVisibility: { localizedSearch: false } },
 		globalFilterFn: "fuzzy",
@@ -1976,7 +1995,7 @@ function Countries() {
 			globalFilter,
 			expanded: expandedRows,
 			sorting: unUrl.sorting,
-			pagination: unUrl.pagination,
+			pagination: unState.pagination,
 			columnFilters: unUrl.columnFilters,
 		},
 		onExpandedChange: (updater) => {
@@ -1988,7 +2007,7 @@ function Countries() {
 		},
 		onGlobalFilterChange: setGlobalFilter,
 		onSortingChange: unUrl.onSortingChange,
-		onPaginationChange: unUrl.onPaginationChange,
+		onPaginationChange: unState.onPaginationChange,
 		onColumnFiltersChange: unUrl.onColumnFiltersChange,
 		filterFns: { fuzzy: fuzzyFilter },
 	});
@@ -1996,7 +2015,9 @@ function Countries() {
 	// Mirror the ISO 3166 table's columns (same order, headers, sizes) so the two
 	// stacked tables line up. Most cells render the value or "-"; the flag keeps its
 	// glyph, the membership / independent columns stay blank to match the main table,
-	// and the Names count opens a localized-names subrow. Notes is appended.
+	// and the Names count opens a localized-names subrow. localShortName is an
+	// id/accessorFn column (no accessorKey) and always empty here, but is kept for
+	// column parity, rendering "-".
 	const columnsMissing = React.useMemo<ColumnDef<Country>[]>(() => {
 		const valueOrDash = (info: CellContext<Country, unknown>) => {
 			const value = info.getValue();
@@ -2061,17 +2082,19 @@ function Countries() {
 		// Columns whose main-table cell renders something other than a plain value
 		// (the large flag glyph; the filter-only blank membership/independent cells).
 		const keepCell = new Set(["unMembership", "euMember", "independent"]);
+		// Key by accessorKey, or fall back to id (localShortName). Skip only the
+		// hidden localizedSearch helper.
+		const colKey = (c: ColumnDef<Country>): string | undefined =>
+			"accessorKey" in c ? (c.accessorKey as string) : c.id;
 		const mirrored = columnsUN
-			.filter(
-				(c): c is ColumnDef<Country> & { accessorKey: string } =>
-					"accessorKey" in c && c.accessorKey !== "localizedSearch",
-			)
+			.filter((c) => colKey(c) !== "localizedSearch")
 			.map((c): ColumnDef<Country> => {
+				const key = colKey(c);
 				let cell: ColumnDef<Country>["cell"];
-				if (c.accessorKey === "localizedNameCount") cell = namesCell;
+				if (key === "localizedNameCount") cell = namesCell;
 				// Mirror the main table's flag → "details" trigger, on this table's own
 				// expansion state (so it never collides with the main table's rows).
-				else if (c.accessorKey === "flag")
+				else if (key === "flag")
 					cell = ({ row, getValue }) => {
 						const isOpen =
 							missingSection[row.original.alpha2Code] === "details";
@@ -2095,10 +2118,9 @@ function Countries() {
 							</button>
 						);
 					};
-				else if (keepCell.has(c.accessorKey)) cell = c.cell;
+				else if (key && keepCell.has(key)) cell = c.cell;
 				else cell = valueOrDash;
-				return {
-					accessorKey: c.accessorKey,
+				const common = {
 					header: c.header,
 					size: c.size,
 					maxSize: c.maxSize,
@@ -2106,15 +2128,13 @@ function Countries() {
 					enableGlobalFilter: c.enableGlobalFilter,
 					cell,
 				};
+				// Accessor columns key off the data; localShortName has no value for
+				// missing countries, so an empty accessorFn drives valueOrDash to "-".
+				return "accessorKey" in c
+					? { accessorKey: c.accessorKey as string, ...common }
+					: { id: c.id as string, accessorFn: (): string => "", ...common };
 			});
-		return [
-			...mirrored,
-			{
-				accessorKey: "notes",
-				header: "Notes",
-				cell: (info) => info.getValue<string>() ?? "",
-			},
-		];
+		return mirrored;
 	}, [columnsUN, missingSection, toggleMissingSection]);
 
 	const tableMissing = useReactTable({
@@ -2146,20 +2166,21 @@ function Countries() {
 		filterFns: { fuzzy: fuzzyFilter },
 	});
 
-	// Navigate to the correct page and scroll to highlighted country
+	// The deep-linked row's page is handled declaratively (see unState). Here we
+	// just open the requested expansion (timezones/currencies) on the right row and
+	// scroll the highlight into view. The expansion is keyed by the row's real id —
+	// looked up from the pre-pagination model so it's correct on any page.
 	// biome-ignore lint/correctness/useExhaustiveDependencies: deep-link highlight/expand applies once on mount; re-running on table/param changes would fight the user's paging
 	React.useEffect(() => {
 		if (!highlight) return;
-		const rows = tableUN.getFilteredRowModel().rows;
-		const idx = rows.findIndex((r) => r.original.alpha2Code === highlight);
-		if (idx >= 0) {
-			const pageSize = tableUN.getState().pagination.pageSize;
-			tableUN.setPageIndex(Math.floor(idx / pageSize));
-			if (expandTz || expandCcy) {
-				const rowId = String(idx);
+		if (expandTz || expandCcy) {
+			const row = tableUN
+				.getPrePaginationRowModel()
+				.rows.find((r) => r.original.alpha2Code === highlight);
+			if (row) {
 				const section = expandTz ? "timezones" : "currencies";
 				setExpandedSection((prev) => ({ ...prev, [highlight]: section }));
-				setExpandedRows((prev) => ({ ...prev, [rowId]: true }));
+				setExpandedRows((prev) => ({ ...prev, [row.id]: true }));
 			}
 		}
 		const timer = setTimeout(() => {
@@ -2250,7 +2271,7 @@ function Countries() {
 			</div>
 
 			<div className="flex items-center justify-between mb-2 h-8">
-				<h2 className="text-xl font-semibold">ISO 3166</h2>
+				<h2 className="text-xl font-semibold">ISO 3166 + related standards</h2>
 				<ColumnVisibility
 					table={tableUN}
 					extraItems={[

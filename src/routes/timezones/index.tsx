@@ -26,6 +26,7 @@ import { parseUtcOffsetMinutes } from "@/lib/offset";
 import { facetedFilter } from "@/lib/table-filters";
 import { asNumber, asString, asStringArray } from "@/lib/url-state";
 import {
+	useDeepLinkPage,
 	useGlobalFilterSync,
 	useTableUrlState,
 } from "@/lib/use-table-url-state";
@@ -108,6 +109,25 @@ function Timezones() {
 		// Page size is shared across both tables via a single `size` param.
 		sizeKey: "size",
 	});
+	// Deep link (e.g. from countries): open each table on the page holding the
+	// highlighted timezone. Derived state, so the page jump survives the URL
+	// round-trip instead of racing an imperative setPageIndex.
+	const intlDeepLinkIndex = React.useMemo(
+		() =>
+			highlight != null && search.intl_page == null && !globalFilter
+				? timezonesIntl.findIndex((t) => t.id === highlight)
+				: -1,
+		[highlight, search.intl_page, timezonesIntl, globalFilter],
+	);
+	const intlState = useDeepLinkPage(intlUrl, intlDeepLinkIndex);
+	const ianaDeepLinkIndex = React.useMemo(
+		() =>
+			highlight != null && search.iana_page == null && !globalFilter
+				? timezonesIANA.findIndex((t) => t.id === highlight)
+				: -1,
+		[highlight, search.iana_page, timezonesIANA, globalFilter],
+	);
+	const ianaState = useDeepLinkPage(ianaUrl, ianaDeepLinkIndex);
 
 	const selectedRegions = React.useMemo(
 		() => search.regions ?? [],
@@ -333,16 +353,20 @@ function Timezones() {
 		getFilteredRowModel: getFilteredRowModel(),
 		getPaginationRowModel: getPaginationRowModel(),
 		getSortedRowModel: getSortedRowModel(),
+		// autoReset off only while a deep-link override forces a page, so a
+		// mount-time row-model recompute can't snap us back to page 1. Restored to
+		// default once the override yields. See countries route for the full note.
+		autoResetPageIndex: intlState !== intlUrl ? false : undefined,
 		globalFilterFn: "fuzzy",
 		state: {
 			globalFilter,
 			columnFilters: columnFiltersIntl,
 			sorting: intlUrl.sorting,
-			pagination: intlUrl.pagination,
+			pagination: intlState.pagination,
 		},
 		onGlobalFilterChange: setGlobalFilter,
 		onSortingChange: intlUrl.onSortingChange,
-		onPaginationChange: intlUrl.onPaginationChange,
+		onPaginationChange: intlState.onPaginationChange,
 		onColumnFiltersChange: (updater) => {
 			const next =
 				typeof updater === "function" ? updater(columnFiltersIntl) : updater;
@@ -363,36 +387,29 @@ function Timezones() {
 		getFilteredRowModel: getFilteredRowModel(),
 		getPaginationRowModel: getPaginationRowModel(),
 		getSortedRowModel: getSortedRowModel(),
+		// See the Intl table above — autoReset off only while the deep-link
+		// override is forcing a page.
+		autoResetPageIndex: ianaState !== ianaUrl ? false : undefined,
 		globalFilterFn: "fuzzy",
 		state: {
 			globalFilter,
 			columnFilters: columnFiltersIANA,
 			sorting: ianaUrl.sorting,
-			pagination: ianaUrl.pagination,
+			pagination: ianaState.pagination,
 		},
 		onGlobalFilterChange: setGlobalFilter,
 		onSortingChange: ianaUrl.onSortingChange,
-		onPaginationChange: ianaUrl.onPaginationChange,
+		onPaginationChange: ianaState.onPaginationChange,
 		filterFns: {
 			fuzzy: fuzzyFilter,
 		},
 	});
 
-	// Navigate to the correct page and scroll to highlighted row
+	// The highlighted timezone's page is handled declaratively (see intlState /
+	// ianaState); here we just scroll it into view once on mount.
 	// biome-ignore lint/correctness/useExhaustiveDependencies: deep-link highlight applies once on mount; re-running on table/param changes would fight the user's paging
 	React.useEffect(() => {
 		if (!highlight) return;
-		// Jump each table to the page containing the highlighted timezone
-		for (const table of [tableIANA, tableIntl]) {
-			const rows = table.getFilteredRowModel().rows;
-			const idx = rows.findIndex(
-				(r) => (r.original as Timezone).id === highlight,
-			);
-			if (idx >= 0) {
-				const pageSize = table.getState().pagination.pageSize;
-				table.setPageIndex(Math.floor(idx / pageSize));
-			}
-		}
 		const timer = setTimeout(() => {
 			const el = document.querySelector(".bg-blue-100");
 			if (el) {

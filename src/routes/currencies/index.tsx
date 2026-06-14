@@ -21,6 +21,7 @@ import {
 import { fuzzyFilter } from "@/lib/fuzzy-filter";
 import { asNumber, asString } from "@/lib/url-state";
 import {
+	useDeepLinkPage,
 	useGlobalFilterSync,
 	useTableUrlState,
 } from "@/lib/use-table-url-state";
@@ -88,6 +89,35 @@ function Currencies() {
 		navigate,
 		sizeKey: "size",
 	});
+	// Deep link (e.g. from countries): open whichever table holds the highlighted
+	// currency on that row's page. Derived state, so the page jump can't be undone
+	// by the URL round-trip. The historical table only jumps if the active one
+	// doesn't carry the code.
+	const intlDeepLinkIndex = React.useMemo(
+		() =>
+			highlight != null && search.intl_page == null && !globalFilter
+				? currencies.findIndex((c) => c.code === highlight)
+				: -1,
+		[highlight, search.intl_page, currencies, globalFilter],
+	);
+	const intlState = useDeepLinkPage(intlUrl, intlDeepLinkIndex);
+	const histDeepLinkIndex = React.useMemo(
+		() =>
+			highlight != null &&
+			search.hist_page == null &&
+			!globalFilter &&
+			!currencies.some((c) => c.code === highlight)
+				? historicalCurrencies.findIndex((c) => c.code === highlight)
+				: -1,
+		[
+			highlight,
+			search.hist_page,
+			currencies,
+			historicalCurrencies,
+			globalFilter,
+		],
+	);
+	const histState = useDeepLinkPage(histUrl, histDeepLinkIndex);
 
 	const columns = React.useMemo<ColumnDef<Currency>[]>(
 		() => [
@@ -101,26 +131,26 @@ function Currencies() {
 			{
 				accessorKey: "symbolUnicode",
 				header: "Symbol (Unicode)",
-				size: 60,
-				maxSize: 60,
+				size: 140,
+				maxSize: 140,
 			},
 			{
 				accessorKey: "symbolIntl",
 				header: "Symbol (Intl)",
-				size: 60,
-				maxSize: 60,
+				size: 120,
+				maxSize: 120,
 			},
 			{
 				accessorKey: "numericCode",
 				header: "Numeric Code",
-				size: 60,
-				maxSize: 60,
+				size: 120,
+				maxSize: 120,
 			},
 			{
 				accessorKey: "type",
 				header: "Type",
-				size: 60,
-				maxSize: 60,
+				size: 70,
+				maxSize: 70,
 			},
 			{
 				accessorKey: "name",
@@ -132,8 +162,8 @@ function Currencies() {
 			{
 				accessorKey: "minorUnit",
 				header: "Minor Unit",
-				size: 60,
-				maxSize: 60,
+				size: 100,
+				maxSize: 100,
 			},
 			{
 				accessorKey: "countries",
@@ -183,15 +213,19 @@ function Currencies() {
 		getFilteredRowModel: getFilteredRowModel(),
 		getPaginationRowModel: getPaginationRowModel(),
 		getSortedRowModel: getSortedRowModel(),
+		// Disable autoReset only while a deep-link override forces a page, so a
+		// mount-time row-model recompute can't snap us back to page 1. Restored to
+		// default once the override yields. See countries route for the full note.
+		autoResetPageIndex: intlState !== intlUrl ? false : undefined,
 		globalFilterFn: "fuzzy",
 		state: {
 			globalFilter,
 			sorting: intlUrl.sorting,
-			pagination: intlUrl.pagination,
+			pagination: intlState.pagination,
 		},
 		onGlobalFilterChange: setGlobalFilter,
 		onSortingChange: intlUrl.onSortingChange,
-		onPaginationChange: intlUrl.onPaginationChange,
+		onPaginationChange: intlState.onPaginationChange,
 		filterFns: {
 			fuzzy: fuzzyFilter,
 		},
@@ -202,15 +236,15 @@ function Currencies() {
 			{
 				accessorKey: "code",
 				header: "Alphabetic Code",
-				size: 80,
-				maxSize: 80,
+				size: 120,
+				maxSize: 120,
 				enableHiding: false,
 			},
 			{
 				accessorKey: "numericCode",
 				header: "Numeric Code",
-				size: 80,
-				maxSize: 80,
+				size: 120,
+				maxSize: 120,
 			},
 			{
 				accessorKey: "name",
@@ -277,40 +311,28 @@ function Currencies() {
 		getFilteredRowModel: getFilteredRowModel(),
 		getPaginationRowModel: getPaginationRowModel(),
 		getSortedRowModel: getSortedRowModel(),
+		// See the active table above — autoReset off only while the deep-link
+		// override is forcing a page.
+		autoResetPageIndex: histState !== histUrl ? false : undefined,
 		globalFilterFn: "fuzzy",
 		state: {
 			globalFilter,
 			sorting: histUrl.sorting,
-			pagination: histUrl.pagination,
+			pagination: histState.pagination,
 		},
 		onGlobalFilterChange: setGlobalFilter,
 		onSortingChange: histUrl.onSortingChange,
-		onPaginationChange: histUrl.onPaginationChange,
+		onPaginationChange: histState.onPaginationChange,
 		filterFns: {
 			fuzzy: fuzzyFilter,
 		},
 	});
 
-	// Navigate to the correct page and scroll to highlighted currency
+	// The highlighted currency's page is handled declaratively (see intlState /
+	// histState); here we just scroll it into view once on mount.
 	// biome-ignore lint/correctness/useExhaustiveDependencies: deep-link highlight applies once on mount; re-running on table/param changes would fight the user's paging
 	React.useEffect(() => {
 		if (!highlight) return;
-		// Try active table first, then historical
-		const activeRows = table.getFilteredRowModel().rows;
-		const activeIdx = activeRows.findIndex(
-			(r) => r.original.code === highlight,
-		);
-		if (activeIdx >= 0) {
-			const pageSize = table.getState().pagination.pageSize;
-			table.setPageIndex(Math.floor(activeIdx / pageSize));
-		} else {
-			const histRows = historicalTable.getFilteredRowModel().rows;
-			const histIdx = histRows.findIndex((r) => r.original.code === highlight);
-			if (histIdx >= 0) {
-				const pageSize = historicalTable.getState().pagination.pageSize;
-				historicalTable.setPageIndex(Math.floor(histIdx / pageSize));
-			}
-		}
 		const timer = setTimeout(() => {
 			const el = document.querySelector(".bg-blue-100");
 			if (el) {

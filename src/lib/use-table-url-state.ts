@@ -125,6 +125,59 @@ export function useTableUrlState({
 	};
 }
 
+/**
+ * Open a paginated table directly on the page that holds a deep-linked row.
+ *
+ * When a cross-view link arrives with a `highlight` (and no explicit page in the
+ * URL), the destination should land on the row's page instead of page 1. We do
+ * this as *derived* state rather than an imperative `table.setPageIndex()` in a
+ * mount effect: navigating from a mount effect races the URL-controlled pagination
+ * round-trip and gets dropped/clobbered for pages 2+. Feeding the page straight
+ * into the table's controlled state can't be undone that way.
+ *
+ * Pass the highlighted row's index within the table's (unsorted) data, or a
+ * negative/nullish value when there's nothing to jump to. The returned state
+ * overrides `pagination` and rebases `onPaginationChange` so a subsequent page
+ * click still computes from the page the user is actually viewing. `onUserPaginate`
+ * fires on that first click — callers use it to stop overriding (see
+ * {@link useDeepLinkPage}), otherwise the always-present `highlight` would bounce
+ * the user back to the row's page every time they returned to page 1.
+ */
+export function withDeepLinkPage(
+	state: TableUrlState,
+	rowIndex: number | null | undefined,
+	onUserPaginate?: () => void,
+): TableUrlState {
+	if (rowIndex == null || rowIndex < 0) return state;
+	const pageIndex = Math.floor(rowIndex / state.pagination.pageSize);
+	if (pageIndex === state.pagination.pageIndex) return state;
+	const pagination: PaginationState = { ...state.pagination, pageIndex };
+	const onPaginationChange: OnChangeFn<PaginationState> = (updater) => {
+		onUserPaginate?.();
+		state.onPaginationChange(applyUpdater(updater, pagination));
+	};
+	return { ...state, pagination, onPaginationChange };
+}
+
+/**
+ * Stateful wrapper around {@link withDeepLinkPage} that applies the deep-link page
+ * exactly once: the override holds until the user first touches pagination, then
+ * yields permanently so they can page freely (including back to page 1) even while
+ * the `highlight` stays in the URL for its styling.
+ *
+ * `rowIndex` is the highlighted row's index in the table's data (memoize it in the
+ * caller, returning a negative value when there's nothing to jump to).
+ */
+export function useDeepLinkPage(
+	state: TableUrlState,
+	rowIndex: number,
+): TableUrlState {
+	const [tookOver, setTookOver] = React.useState(false);
+	return withDeepLinkPage(state, tookOver ? -1 : rowIndex, () =>
+		setTookOver(true),
+	);
+}
+
 interface UseGlobalFilterSyncOptions {
 	search: SearchRecord;
 	navigate: Navigate;

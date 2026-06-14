@@ -22,6 +22,7 @@ import { fuzzyFilterAcronym } from "@/lib/fuzzy-filter";
 import { useLocale } from "@/lib/locale";
 import { asNumber, asString } from "@/lib/url-state";
 import {
+	useDeepLinkPage,
 	useGlobalFilterSync,
 	useTableUrlState,
 } from "@/lib/use-table-url-state";
@@ -187,6 +188,20 @@ function Languages() {
 		navigate,
 	});
 	const tableUrl = useTableUrlState({ prefix: "", search, navigate });
+	// Deep link (e.g. from countries): open the table on the page holding the
+	// highlighted language (matched by 639-1 or, for 639-3-only entries, 639-3).
+	// Derived state, so the page jump survives the URL round-trip.
+	const deepLinkIndex = React.useMemo(
+		() =>
+			search.highlight != null && search.page == null && !globalFilter
+				? languagesLocalized.findIndex(
+						(l) =>
+							l.code === search.highlight || l.iso639_3 === search.highlight,
+					)
+				: -1,
+		[search.highlight, search.page, languagesLocalized, globalFilter],
+	);
+	const tableState = useDeepLinkPage(tableUrl, deepLinkIndex);
 
 	const columns = React.useMemo<ColumnDef<Language>[]>(
 		() => [
@@ -318,35 +333,30 @@ function Languages() {
 				row.original.cldrVariants && row.original.cldrVariants.length > 0
 			);
 		},
+		// autoReset off only while a deep-link override forces a page, so a
+		// mount-time row-model recompute can't snap us back to page 1. Restored to
+		// default once the override yields. See countries route for the full note.
+		autoResetPageIndex: tableState !== tableUrl ? false : undefined,
 		globalFilterFn: "fuzzy",
 		state: {
 			globalFilter,
 			sorting: tableUrl.sorting,
-			pagination: tableUrl.pagination,
+			pagination: tableState.pagination,
 		},
 		onGlobalFilterChange: setGlobalFilter,
 		onSortingChange: tableUrl.onSortingChange,
-		onPaginationChange: tableUrl.onPaginationChange,
+		onPaginationChange: tableState.onPaginationChange,
 		filterFns: {
 			fuzzy: fuzzyFilterAcronym,
 		},
 	});
 
-	// Deep-link (e.g. from the countries view): jump to the page holding the
-	// highlighted language and scroll it into view. A language is matched by its
-	// 639-1 code or, for the 639-3-only entries, its 639-3 code.
+	// Deep-link (e.g. from the countries view): the highlighted language's page is
+	// handled declaratively (see tableState); here we just scroll it into view.
 	const highlight = search.highlight;
 	// biome-ignore lint/correctness/useExhaustiveDependencies: highlight applies once on mount; re-running would fight the user's paging
 	React.useEffect(() => {
 		if (!highlight) return;
-		const rows = table.getFilteredRowModel().rows;
-		const idx = rows.findIndex(
-			(r) => r.original.code === highlight || r.original.iso639_3 === highlight,
-		);
-		if (idx >= 0) {
-			const pageSize = table.getState().pagination.pageSize;
-			table.setPageIndex(Math.floor(idx / pageSize));
-		}
 		const timer = setTimeout(() => {
 			document
 				.querySelector(".bg-blue-100")

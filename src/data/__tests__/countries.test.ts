@@ -104,20 +104,23 @@ describe("getCountriesFromUN (ccTLD + phone prefix)", () => {
 		expect(byCode.GB.dsitCode).toBe("UK");
 	});
 
-	it("carries ISO 3166-1 local short names per administrative language", () => {
-		// Single-language country: one entry.
-		expect(byCode.ES.localShortNames).toEqual([{ lang: "es", name: "España" }]);
+	it("carries ISO 3166-1 admin languages (alpha-2/alpha-3) + local short names", () => {
+		// Single-language country: one entry with both ISO code forms.
+		expect(byCode.ES.localShortNames).toEqual([
+			{ a2: "es", a3: "spa", name: "España" },
+		]);
 		// Multi-language country: one entry per admin language, in ISO order.
 		expect(byCode.CH.localShortNames).toEqual([
-			{ lang: "de", name: "Schweiz (die)" },
-			{ lang: "fr", name: "Suisse (la)" },
-			{ lang: "it", name: "Svizzera (la)" },
-			{ lang: "rm", name: "Svizra (la)" },
+			{ a2: "de", a3: "deu", name: "Schweiz (die)" },
+			{ a2: "fr", a3: "fra", name: "Suisse (la)" },
+			{ a2: "it", a3: "ita", name: "Svizzera (la)" },
+			{ a2: "rm", a3: "roh", name: "Svizra (la)" },
 		]);
-		// Languages without an ISO 639-1 alpha-2 fall back to their 639-3 code.
+		// A language with no ISO 639-1 code has an empty a2 but keeps its 639-2 a3.
 		expect(byCode.ZA.localShortNames).toHaveLength(11);
 		expect(byCode.ZA.localShortNames).toContainEqual({
-			lang: "nso",
+			a2: "",
+			a3: "nso",
 			name: "Afrika-Borwa",
 		});
 		// Antarctica has no administrative language → no local short name.

@@ -31,6 +31,7 @@ interface LanguagesSearch {
 	sort?: string;
 	page?: number;
 	size?: number;
+	highlight?: string; // deep-link a language row (by 639-1 or 639-3 code), e.g. from the countries view
 }
 
 export const Route = createFileRoute("/languages/")({
@@ -40,6 +41,7 @@ export const Route = createFileRoute("/languages/")({
 		sort: asString(search.sort),
 		page: asNumber(search.page),
 		size: asNumber(search.size),
+		highlight: asString(search.highlight),
 	}),
 	loader: async () => {
 		// The global locale picker lives in the header (localStorage-backed), so we
@@ -60,7 +62,7 @@ export const Route = createFileRoute("/languages/")({
 			{
 				name: "description",
 				content:
-					"ISO 639-1 language codes, native names, BCP 47 variants, and Unicode CLDR locale data. Browse 184 languages with localized names via Intl.DisplayNames.",
+					"ISO 639 language codes (639-1 and 639-3), native names, BCP 47 variants, and Unicode CLDR locale data. Browse 247 languages with localized names via Intl.DisplayNames.",
 			},
 		],
 	}),
@@ -190,10 +192,24 @@ function Languages() {
 		() => [
 			{
 				accessorKey: "code",
-				header: "Code",
-				size: 50,
-				maxSize: 50,
+				header: "639-1",
+				size: 60,
+				maxSize: 60,
 				enableHiding: false,
+				cell: (info) =>
+					info.getValue<string>() || (
+						<span className="text-muted-foreground">-</span>
+					),
+			},
+			{
+				accessorKey: "iso639_3",
+				header: "639-3",
+				size: 60,
+				maxSize: 60,
+				cell: (info) =>
+					info.getValue<string | undefined>() ?? (
+						<span className="text-muted-foreground">-</span>
+					),
 			},
 			{
 				accessorKey: "name",
@@ -316,6 +332,29 @@ function Languages() {
 		},
 	});
 
+	// Deep-link (e.g. from the countries view): jump to the page holding the
+	// highlighted language and scroll it into view. A language is matched by its
+	// 639-1 code or, for the 639-3-only entries, its 639-3 code.
+	const highlight = search.highlight;
+	// biome-ignore lint/correctness/useExhaustiveDependencies: highlight applies once on mount; re-running would fight the user's paging
+	React.useEffect(() => {
+		if (!highlight) return;
+		const rows = table.getFilteredRowModel().rows;
+		const idx = rows.findIndex(
+			(r) => r.original.code === highlight || r.original.iso639_3 === highlight,
+		);
+		if (idx >= 0) {
+			const pageSize = table.getState().pagination.pageSize;
+			table.setPageIndex(Math.floor(idx / pageSize));
+		}
+		const timer = setTimeout(() => {
+			document
+				.querySelector(".bg-blue-100")
+				?.scrollIntoView({ behavior: "smooth", block: "center" });
+		}, 100);
+		return () => clearTimeout(timer);
+	}, []);
+
 	return (
 		<div className="min-h-screen p-6">
 			<h1 className="text-3xl font-bold mb-6" data-view-title="Languages">
@@ -333,13 +372,16 @@ function Languages() {
 			<div className="grid grid-cols-1 gap-6">
 				<div>
 					<div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2 mb-4">
-						<h2 className="text-xl font-semibold">ISO 639-1 Language Codes</h2>
+						<h2 className="text-xl font-semibold">ISO 639 Language Codes</h2>
 						<ColumnVisibility table={table} />
 					</div>
 					<ul className="text-xs text-muted-foreground mb-3 space-y-1">
 						<li>• Source: IANA Language Subtag Registry + Unicode CLDR 48</li>
-						<li>• Standard: ISO 639-1 (2-letter codes)</li>
-						<li>• Coverage: 184 major languages</li>
+						<li>• Standard: ISO 639-1 (2-letter) + ISO 639-3 (3-letter)</li>
+						<li>
+							• Coverage: 184 ISO 639-1 languages + 63 that are official
+							somewhere but have no 639-1 code (e.g. Swiss German, Filipino)
+						</li>
 						<li>
 							• Native names & Localized names: Generated via Intl.DisplayNames
 							(use dropdown to change display language)
@@ -372,6 +414,13 @@ function Languages() {
 					</p>
 					<DataTable
 						table={table}
+						cellClassName={(_colId, row) =>
+							highlight &&
+							(row.original.code === highlight ||
+								row.original.iso639_3 === highlight)
+								? "bg-blue-100 dark:bg-blue-950"
+								: ""
+						}
 						renderExpandedRow={(row) => <LanguageExpandedRow row={row} />}
 					/>
 					<Pagination table={table} totalItems={languages.length} />

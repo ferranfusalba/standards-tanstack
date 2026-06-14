@@ -13,8 +13,10 @@ vi.mock("@tanstack/react-start", () => ({
 }));
 
 import {
+	type CountryLanguage,
 	getLanguageNamesByLocale,
 	getLanguages,
+	getLanguagesByCountry,
 	type Language,
 } from "../languages";
 
@@ -29,19 +31,37 @@ describe("getLanguages", () => {
 		});
 	});
 
-	it("returns all 184 ISO 639-1 languages", () => {
+	it("returns the 184 ISO 639-1 languages plus 63 with only a 639-3 code", () => {
 		expect(Array.isArray(languages)).toBe(true);
-		expect(languages.length).toBe(184);
+		expect(languages.length).toBe(247);
+		expect(languages.filter((l) => l.code).length).toBe(184);
+		expect(languages.filter((l) => !l.code).length).toBe(63);
 	});
 
-	it("each language has code and name", () => {
+	it("each language has a name and either a 639-1 or 639-3 code", () => {
 		for (const lang of languages) {
-			expect(lang.code).toBeDefined();
-			expect(typeof lang.code).toBe("string");
-			expect(lang.code.length).toBe(2);
-			expect(lang.name).toBeDefined();
 			expect(typeof lang.name).toBe("string");
+			expect(lang.name.length).toBeGreaterThan(0);
+			if (lang.code) {
+				expect(lang.code.length).toBe(2);
+			} else {
+				// 639-3-only languages carry a 3-letter code instead of a 639-1 one
+				expect(lang.iso639_3?.length).toBe(3);
+			}
 		}
+	});
+
+	it("carries ISO 639-3 codes (and omits it only for the 'bh' collective)", () => {
+		const byCode = new Map(languages.map((l) => [l.code, l]));
+		expect(byCode.get("en")?.iso639_3).toBe("eng");
+		expect(byCode.get("de")?.iso639_3).toBe("deu");
+		expect(byCode.get("ca")?.iso639_3).toBe("cat");
+		// "bh" (Bihari languages) is a 639-2 collective with no single 639-3 code
+		expect(byCode.get("bh")?.iso639_3).toBeUndefined();
+		// 639-3-only language: no 639-1 code, name resolved from the 639-3 dataset
+		const gsw = languages.find((l) => l.iso639_3 === "gsw");
+		expect(gsw?.code).toBe("");
+		expect(gsw?.name).toBe("Swiss German");
 	});
 
 	it("includes well-known languages", () => {
@@ -71,13 +91,15 @@ describe("getLanguages", () => {
 		// If Intl can't actually render a language in its own locale, the field must
 		// be undefined rather than silently echo the English name (e.g. "Latin").
 		for (const lang of languages) {
-			const resolved = new Intl.DisplayNames([lang.code], {
+			const code = lang.code || lang.iso639_3;
+			if (!code) continue;
+			const resolved = new Intl.DisplayNames([code], {
 				type: "language",
 				fallback: "none",
 			})
 				.resolvedOptions()
 				.locale.split("-")[0];
-			if (resolved !== lang.code) {
+			if (resolved !== code) {
 				expect(lang.nativeName).toBeUndefined();
 			}
 		}
@@ -101,9 +123,13 @@ describe("getLanguages", () => {
 		}
 	});
 
-	it("codes are unique", () => {
-		const codes = languages.map((l) => l.code);
-		expect(new Set(codes).size).toBe(codes.length);
+	it("639-1 and 639-3 codes are each unique", () => {
+		const codes1 = languages.map((l) => l.code).filter(Boolean);
+		expect(new Set(codes1).size).toBe(codes1.length);
+		const codes3 = languages
+			.map((l) => l.iso639_3)
+			.filter((c): c is string => Boolean(c));
+		expect(new Set(codes3).size).toBe(codes3.length);
 	});
 });
 
@@ -127,6 +153,43 @@ describe("getLanguageNamesByLocale", () => {
 		const es = await call("es");
 		for (const [code, name] of Object.entries(es)) {
 			expect(name).not.toBe(code);
+		}
+	});
+});
+
+describe("getLanguagesByCountry", () => {
+	let map: Record<string, CountryLanguage[]>;
+
+	beforeAll(async () => {
+		map = await (getLanguagesByCountry as unknown as HandlerFn)({
+			data: undefined,
+			context: {},
+			signal: new AbortController().signal,
+		});
+	});
+
+	it("captures regional co-official languages ISO omits (Spain)", () => {
+		const codes = map.ES.map((l) => l.lang);
+		// es official + ca/gl/eu regional — none of which ISO 3166 records for ES
+		expect(codes).toEqual(expect.arrayContaining(["es", "ca", "gl", "eu"]));
+		expect(map.ES.find((l) => l.lang === "es")?.status).toBe("official");
+		expect(map.ES.find((l) => l.lang === "ca")?.status).toBe("regional");
+	});
+
+	it("resolves names, including 639-3-only languages", () => {
+		// Switzerland's de-facto Swiss German has only a 639-3 code
+		const gsw = map.CH.find((l) => l.lang === "gsw");
+		expect(gsw?.name).toBe("Swiss German");
+		expect(gsw?.status).toBe("de_facto");
+		expect(map.CH.find((l) => l.lang === "de")?.name).toBe("German");
+	});
+
+	it("every referenced language code resolves to a name", () => {
+		for (const langs of Object.values(map)) {
+			for (const l of langs) {
+				expect(l.name).toBeTruthy();
+				expect(l.name).not.toBe(l.lang); // not just echoing the code
+			}
 		}
 	});
 });

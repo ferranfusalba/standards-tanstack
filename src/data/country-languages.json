@@ -1,0 +1,2890 @@
+{
+	"AD": [
+		{
+			"lang": "ca",
+			"status": "official",
+			"pct": 51
+		}
+	],
+	"AE": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 78
+		}
+	],
+	"AF": [
+		{
+			"lang": "fa",
+			"status": "official",
+			"pct": 50
+		},
+		{
+			"lang": "ps",
+			"status": "official",
+			"pct": 43
+		},
+		{
+			"lang": "uz",
+			"status": "regional",
+			"pct": 4.7
+		},
+		{
+			"lang": "tk",
+			"status": "regional",
+			"pct": 1.7
+		}
+	],
+	"AG": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 86
+		}
+	],
+	"AI": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 95
+		}
+	],
+	"AL": [
+		{
+			"lang": "sq",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"AM": [
+		{
+			"lang": "hy",
+			"status": "official",
+			"pct": 98
+		}
+	],
+	"AO": [
+		{
+			"lang": "pt",
+			"status": "official",
+			"pct": 67
+		}
+	],
+	"AR": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"AS": [
+		{
+			"lang": "sm",
+			"status": "official",
+			"pct": 99
+		},
+		{
+			"lang": "en",
+			"status": "de_facto",
+			"pct": 97
+		}
+	],
+	"AT": [
+		{
+			"lang": "de",
+			"status": "official",
+			"pct": 97
+		},
+		{
+			"lang": "hr",
+			"status": "regional",
+			"pct": 1.2
+		},
+		{
+			"lang": "sl",
+			"status": "regional",
+			"pct": 0.37
+		},
+		{
+			"lang": "hu",
+			"status": "regional",
+			"pct": 0.26
+		}
+	],
+	"AU": [
+		{
+			"lang": "en",
+			"status": "de_facto",
+			"pct": 96
+		}
+	],
+	"AW": [
+		{
+			"lang": "nl",
+			"status": "official",
+			"pct": 97
+		},
+		{
+			"lang": "pap",
+			"status": "official",
+			"pct": 61
+		}
+	],
+	"AX": [
+		{
+			"lang": "sv",
+			"status": "official",
+			"pct": 99
+		}
+	],
+	"AZ": [
+		{
+			"lang": "az",
+			"status": "official",
+			"pct": 89
+		}
+	],
+	"BA": [
+		{
+			"lang": "bs",
+			"status": "official",
+			"pct": 99
+		},
+		{
+			"lang": "hr",
+			"status": "official",
+			"pct": 12
+		},
+		{
+			"lang": "sr",
+			"status": "official",
+			"pct": 10
+		}
+	],
+	"BB": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"BD": [
+		{
+			"lang": "bn",
+			"status": "official",
+			"pct": 98
+		}
+	],
+	"BE": [
+		{
+			"lang": "nl",
+			"status": "official",
+			"pct": 55
+		},
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 38
+		},
+		{
+			"lang": "de",
+			"status": "official",
+			"pct": 22
+		}
+	],
+	"BF": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 22
+		}
+	],
+	"BG": [
+		{
+			"lang": "bg",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"BH": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 87
+		}
+	],
+	"BI": [
+		{
+			"lang": "rn",
+			"status": "official",
+			"pct": 63
+		},
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 59
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 0.046
+		}
+	],
+	"BJ": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 35
+		}
+	],
+	"BL": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 97
+		}
+	],
+	"BM": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 92
+		}
+	],
+	"BN": [
+		{
+			"lang": "ms",
+			"status": "official",
+			"pct": 93
+		}
+	],
+	"BO": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 61
+		},
+		{
+			"lang": "qu",
+			"status": "official",
+			"pct": 32
+		},
+		{
+			"lang": "ay",
+			"status": "official",
+			"pct": 20
+		}
+	],
+	"BQ": [
+		{
+			"lang": "nl",
+			"status": "official",
+			"pct": 8
+		}
+	],
+	"BR": [
+		{
+			"lang": "pt",
+			"status": "official",
+			"pct": 91
+		},
+		{
+			"lang": "vec",
+			"status": "regional",
+			"pct": 0.24
+		}
+	],
+	"BS": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"BT": [
+		{
+			"lang": "dz",
+			"status": "official",
+			"pct": 47
+		}
+	],
+	"BW": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 81
+		},
+		{
+			"lang": "tn",
+			"status": "official",
+			"pct": 62
+		}
+	],
+	"BY": [
+		{
+			"lang": "be",
+			"status": "official",
+			"pct": 100
+		},
+		{
+			"lang": "ru",
+			"status": "official",
+			"pct": 12
+		}
+	],
+	"BZ": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"CA": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 86
+		},
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 30
+		},
+		{
+			"lang": "iu",
+			"status": "regional",
+			"pct": 0.12
+		},
+		{
+			"lang": "chp",
+			"status": "regional",
+			"pct": 0.034
+		},
+		{
+			"lang": "cr",
+			"status": "regional",
+			"pct": 0.023
+		},
+		{
+			"lang": "den",
+			"status": "regional",
+			"pct": 0.0059
+		},
+		{
+			"lang": "dgr",
+			"status": "regional",
+			"pct": 0.0055
+		},
+		{
+			"lang": "gwi",
+			"status": "regional",
+			"pct": 0.0007
+		}
+	],
+	"CC": [
+		{
+			"lang": "en",
+			"status": "de_facto",
+			"pct": 17
+		}
+	],
+	"CD": [
+		{
+			"lang": "sw",
+			"status": "regional",
+			"pct": 50
+		},
+		{
+			"lang": "lua",
+			"status": "regional",
+			"pct": 9.6
+		},
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 3.8
+		},
+		{
+			"lang": "ln",
+			"status": "regional",
+			"pct": 3.1
+		},
+		{
+			"lang": "kg",
+			"status": "regional",
+			"pct": 1.5
+		}
+	],
+	"CF": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 49
+		},
+		{
+			"lang": "sg",
+			"status": "official",
+			"pct": 49
+		}
+	],
+	"CG": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 84
+		}
+	],
+	"CH": [
+		{
+			"lang": "de",
+			"status": "official",
+			"pct": 73
+		},
+		{
+			"lang": "gsw",
+			"status": "de_facto",
+			"pct": 65
+		},
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 21
+		},
+		{
+			"lang": "it",
+			"status": "official",
+			"pct": 4.3
+		},
+		{
+			"lang": "rm",
+			"status": "regional",
+			"pct": 0.5
+		}
+	],
+	"CI": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 49
+		}
+	],
+	"CK": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"CL": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 98
+		}
+	],
+	"CM": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 68
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 38
+		}
+	],
+	"CN": [
+		{
+			"lang": "zh",
+			"status": "official",
+			"pct": 90
+		},
+		{
+			"lang": "ug",
+			"status": "regional",
+			"pct": 0.55
+		},
+		{
+			"lang": "za",
+			"status": "regional",
+			"pct": 0.31
+		},
+		{
+			"lang": "mn",
+			"status": "regional",
+			"pct": 0.26
+		},
+		{
+			"lang": "bo",
+			"status": "regional",
+			"pct": 0.2
+		},
+		{
+			"lang": "ko",
+			"status": "regional",
+			"pct": 0.15
+		}
+	],
+	"CO": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 93
+		}
+	],
+	"CQ": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 98
+		}
+	],
+	"CR": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 95
+		}
+	],
+	"CU": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"CV": [
+		{
+			"lang": "pt",
+			"status": "official",
+			"pct": 76
+		}
+	],
+	"CW": [
+		{
+			"lang": "pap",
+			"status": "de_facto",
+			"pct": 81
+		},
+		{
+			"lang": "nl",
+			"status": "official",
+			"pct": 8
+		}
+	],
+	"CX": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 83
+		}
+	],
+	"CY": [
+		{
+			"lang": "el",
+			"status": "official",
+			"pct": 95
+		},
+		{
+			"lang": "tr",
+			"status": "official",
+			"pct": 23
+		}
+	],
+	"CZ": [
+		{
+			"lang": "cs",
+			"status": "official",
+			"pct": 98
+		}
+	],
+	"DE": [
+		{
+			"lang": "de",
+			"status": "official",
+			"pct": 91
+		},
+		{
+			"lang": "frr",
+			"status": "regional",
+			"pct": 0.012
+		}
+	],
+	"DG": [
+		{
+			"lang": "en",
+			"status": "de_facto",
+			"pct": 99
+		}
+	],
+	"DJ": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 7.3
+		},
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 2.1
+		}
+	],
+	"DK": [
+		{
+			"lang": "da",
+			"status": "official",
+			"pct": 93
+		},
+		{
+			"lang": "de",
+			"status": "regional",
+			"pct": 47
+		},
+		{
+			"lang": "kl",
+			"status": "regional",
+			"pct": 0.12
+		}
+	],
+	"DM": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 94
+		}
+	],
+	"DO": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 78
+		}
+	],
+	"DZ": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 74
+		},
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 20
+		}
+	],
+	"EA": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 98
+		}
+	],
+	"EC": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 96
+		},
+		{
+			"lang": "qu",
+			"status": "official",
+			"pct": 17
+		}
+	],
+	"EE": [
+		{
+			"lang": "et",
+			"status": "official",
+			"pct": 71
+		}
+	],
+	"EG": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 94
+		}
+	],
+	"EH": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"ER": [
+		{
+			"lang": "ti",
+			"status": "de_facto",
+			"pct": 60
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 59
+		},
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 4.9
+		}
+	],
+	"ES": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 99
+		},
+		{
+			"lang": "ca",
+			"status": "regional",
+			"pct": 17
+		},
+		{
+			"lang": "gl",
+			"status": "regional",
+			"pct": 7
+		},
+		{
+			"lang": "eu",
+			"status": "regional",
+			"pct": 2
+		},
+		{
+			"lang": "ast",
+			"status": "regional",
+			"pct": 1.3
+		},
+		{
+			"lang": "oc",
+			"status": "regional",
+			"pct": 0.01
+		}
+	],
+	"ET": [
+		{
+			"lang": "am",
+			"status": "official",
+			"pct": 33
+		}
+	],
+	"FI": [
+		{
+			"lang": "fi",
+			"status": "official",
+			"pct": 94
+		},
+		{
+			"lang": "sv",
+			"status": "official",
+			"pct": 44
+		},
+		{
+			"lang": "sms",
+			"status": "regional",
+			"pct": 0.011
+		}
+	],
+	"FJ": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 94
+		},
+		{
+			"lang": "hif",
+			"status": "official",
+			"pct": 41
+		},
+		{
+			"lang": "fj",
+			"status": "official",
+			"pct": 39
+		}
+	],
+	"FK": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 77
+		}
+	],
+	"FM": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 57
+		}
+	],
+	"FO": [
+		{
+			"lang": "fo",
+			"status": "official",
+			"pct": 95
+		}
+	],
+	"FR": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 99
+		}
+	],
+	"GA": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 63
+		}
+	],
+	"GB": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 98
+		},
+		{
+			"lang": "cy",
+			"status": "regional",
+			"pct": 1.3
+		},
+		{
+			"lang": "ga",
+			"status": "regional",
+			"pct": 0.15
+		},
+		{
+			"lang": "gd",
+			"status": "regional",
+			"pct": 0.11
+		}
+	],
+	"GD": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 96
+		}
+	],
+	"GE": [
+		{
+			"lang": "ka",
+			"status": "official",
+			"pct": 86
+		},
+		{
+			"lang": "ab",
+			"status": "regional",
+			"pct": 2.2
+		},
+		{
+			"lang": "os",
+			"status": "regional",
+			"pct": 2.2
+		}
+	],
+	"GF": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 77
+		}
+	],
+	"GG": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"GH": [
+		{
+			"lang": "ak",
+			"status": "regional",
+			"pct": 39
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 21
+		},
+		{
+			"lang": "ee",
+			"status": "regional",
+			"pct": 11
+		},
+		{
+			"lang": "gaa",
+			"status": "regional",
+			"pct": 2.8
+		}
+	],
+	"GI": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 80
+		}
+	],
+	"GL": [
+		{
+			"lang": "kl",
+			"status": "official",
+			"pct": 84
+		}
+	],
+	"GM": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 40
+		}
+	],
+	"GN": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 29
+		}
+	],
+	"GP": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 90
+		}
+	],
+	"GQ": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 87
+		},
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 8.8
+		},
+		{
+			"lang": "pt",
+			"status": "official",
+			"pct": 0.0001
+		}
+	],
+	"GR": [
+		{
+			"lang": "el",
+			"status": "official",
+			"pct": 99
+		}
+	],
+	"GT": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 93
+		},
+		{
+			"lang": "quc",
+			"status": "regional",
+			"pct": 7
+		}
+	],
+	"GU": [
+		{
+			"lang": "en",
+			"status": "de_facto",
+			"pct": 91
+		},
+		{
+			"lang": "ch",
+			"status": "official",
+			"pct": 22
+		}
+	],
+	"GW": [
+		{
+			"lang": "pt",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"GY": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"HK": [
+		{
+			"lang": "zh",
+			"status": "official",
+			"pct": 95
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 51
+		}
+	],
+	"HN": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 78
+		}
+	],
+	"HR": [
+		{
+			"lang": "hr",
+			"status": "official",
+			"pct": 99
+		},
+		{
+			"lang": "it",
+			"status": "regional",
+			"pct": 1.6
+		},
+		{
+			"lang": "vec",
+			"status": "regional",
+			"pct": 0.7
+		}
+	],
+	"HT": [
+		{
+			"lang": "ht",
+			"status": "official",
+			"pct": 81
+		},
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 4.7
+		}
+	],
+	"HU": [
+		{
+			"lang": "hu",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"IC": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 98
+		}
+	],
+	"ID": [
+		{
+			"lang": "id",
+			"status": "official",
+			"pct": 64
+		}
+	],
+	"IE": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 98
+		},
+		{
+			"lang": "ga",
+			"status": "official",
+			"pct": 22
+		}
+	],
+	"IL": [
+		{
+			"lang": "he",
+			"status": "official",
+			"pct": 100
+		},
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 20
+		}
+	],
+	"IM": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 100
+		},
+		{
+			"lang": "gv",
+			"status": "official",
+			"pct": 1.8
+		}
+	],
+	"IN": [
+		{
+			"lang": "hi",
+			"status": "official",
+			"pct": 41
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 19
+		},
+		{
+			"lang": "bn",
+			"status": "regional",
+			"pct": 8.1
+		},
+		{
+			"lang": "te",
+			"status": "regional",
+			"pct": 7.2
+		},
+		{
+			"lang": "mr",
+			"status": "regional",
+			"pct": 7
+		},
+		{
+			"lang": "ta",
+			"status": "regional",
+			"pct": 5.9
+		},
+		{
+			"lang": "ur",
+			"status": "regional",
+			"pct": 5
+		},
+		{
+			"lang": "gu",
+			"status": "regional",
+			"pct": 4.5
+		},
+		{
+			"lang": "kn",
+			"status": "regional",
+			"pct": 3.7
+		},
+		{
+			"lang": "ml",
+			"status": "regional",
+			"pct": 3.2
+		},
+		{
+			"lang": "or",
+			"status": "regional",
+			"pct": 3.2
+		},
+		{
+			"lang": "pa",
+			"status": "regional",
+			"pct": 2.8
+		},
+		{
+			"lang": "as",
+			"status": "regional",
+			"pct": 1.3
+		},
+		{
+			"lang": "mai",
+			"status": "regional",
+			"pct": 1.2
+		},
+		{
+			"lang": "ne",
+			"status": "regional",
+			"pct": 0.56
+		},
+		{
+			"lang": "sat",
+			"status": "regional",
+			"pct": 0.55
+		},
+		{
+			"lang": "ks",
+			"status": "regional",
+			"pct": 0.41
+		},
+		{
+			"lang": "kok",
+			"status": "regional",
+			"pct": 0.32
+		},
+		{
+			"lang": "sd",
+			"status": "regional",
+			"pct": 0.26
+		},
+		{
+			"lang": "kha",
+			"status": "regional",
+			"pct": 0.08
+		},
+		{
+			"lang": "sa",
+			"status": "regional",
+			"pct": 0.0012
+		}
+	],
+	"IO": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"IQ": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 68
+		},
+		{
+			"lang": "ckb",
+			"status": "regional",
+			"pct": 20
+		},
+		{
+			"lang": "az",
+			"status": "regional",
+			"pct": 1.8
+		}
+	],
+	"IR": [
+		{
+			"lang": "fa",
+			"status": "official",
+			"pct": 75
+		}
+	],
+	"IS": [
+		{
+			"lang": "is",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"IT": [
+		{
+			"lang": "it",
+			"status": "official",
+			"pct": 95
+		},
+		{
+			"lang": "fr",
+			"status": "regional",
+			"pct": 6.3
+		},
+		{
+			"lang": "vec",
+			"status": "regional",
+			"pct": 1.3
+		}
+	],
+	"JE": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 95
+		}
+	],
+	"JM": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 98
+		}
+	],
+	"JO": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"JP": [
+		{
+			"lang": "ja",
+			"status": "official",
+			"pct": 95
+		}
+	],
+	"KE": [
+		{
+			"lang": "sw",
+			"status": "official",
+			"pct": 66
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 19
+		}
+	],
+	"KG": [
+		{
+			"lang": "ky",
+			"status": "official",
+			"pct": 48
+		},
+		{
+			"lang": "ru",
+			"status": "official",
+			"pct": 36
+		}
+	],
+	"KH": [
+		{
+			"lang": "km",
+			"status": "official",
+			"pct": 89
+		}
+	],
+	"KI": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 100
+		},
+		{
+			"lang": "gil",
+			"status": "official",
+			"pct": 60
+		}
+	],
+	"KM": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 66
+		},
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 56
+		},
+		{
+			"lang": "zdj",
+			"status": "official",
+			"pct": 37
+		},
+		{
+			"lang": "wni",
+			"status": "official",
+			"pct": 34
+		}
+	],
+	"KN": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 98
+		}
+	],
+	"KP": [
+		{
+			"lang": "ko",
+			"status": "official",
+			"pct": 88
+		}
+	],
+	"KR": [
+		{
+			"lang": "ko",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"KW": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"KY": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 98
+		}
+	],
+	"KZ": [
+		{
+			"lang": "ru",
+			"status": "official",
+			"pct": 72
+		},
+		{
+			"lang": "kk",
+			"status": "official",
+			"pct": 64
+		}
+	],
+	"LA": [
+		{
+			"lang": "lo",
+			"status": "official",
+			"pct": 69
+		}
+	],
+	"LB": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 86
+		}
+	],
+	"LC": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 90
+		}
+	],
+	"LI": [
+		{
+			"lang": "de",
+			"status": "official",
+			"pct": 100
+		},
+		{
+			"lang": "gsw",
+			"status": "de_facto",
+			"pct": 85
+		}
+	],
+	"LK": [
+		{
+			"lang": "si",
+			"status": "official",
+			"pct": 68
+		},
+		{
+			"lang": "ta",
+			"status": "official",
+			"pct": 15
+		}
+	],
+	"LR": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 83
+		}
+	],
+	"LS": [
+		{
+			"lang": "st",
+			"status": "official",
+			"pct": 98
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 27
+		}
+	],
+	"LT": [
+		{
+			"lang": "lt",
+			"status": "official",
+			"pct": 86
+		}
+	],
+	"LU": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 87
+		},
+		{
+			"lang": "lb",
+			"status": "official",
+			"pct": 67
+		},
+		{
+			"lang": "de",
+			"status": "official",
+			"pct": 63
+		}
+	],
+	"LV": [
+		{
+			"lang": "lv",
+			"status": "official",
+			"pct": 61
+		}
+	],
+	"LY": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 74
+		}
+	],
+	"MA": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 62
+		},
+		{
+			"lang": "fr",
+			"status": "de_facto",
+			"pct": 20
+		},
+		{
+			"lang": "tzm",
+			"status": "official",
+			"pct": 9.8
+		}
+	],
+	"MC": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 99
+		}
+	],
+	"MD": [
+		{
+			"lang": "ro",
+			"status": "official",
+			"pct": 63
+		}
+	],
+	"ME": [
+		{
+			"lang": "sr",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"MF": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"MG": [
+		{
+			"lang": "mg",
+			"status": "official",
+			"pct": 90
+		},
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 69
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 18
+		}
+	],
+	"MH": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 93
+		},
+		{
+			"lang": "mh",
+			"status": "official",
+			"pct": 73
+		}
+	],
+	"MK": [
+		{
+			"lang": "mk",
+			"status": "official",
+			"pct": 67
+		},
+		{
+			"lang": "sq",
+			"status": "regional",
+			"pct": 25
+		}
+	],
+	"ML": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 46
+		}
+	],
+	"MM": [
+		{
+			"lang": "my",
+			"status": "official",
+			"pct": 64
+		}
+	],
+	"MN": [
+		{
+			"lang": "mn",
+			"status": "official",
+			"pct": 93
+		}
+	],
+	"MO": [
+		{
+			"lang": "zh",
+			"status": "official",
+			"pct": 98
+		},
+		{
+			"lang": "pt",
+			"status": "official",
+			"pct": 5
+		}
+	],
+	"MP": [
+		{
+			"lang": "en",
+			"status": "de_facto",
+			"pct": 97
+		}
+	],
+	"MQ": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 98
+		}
+	],
+	"MR": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 85
+		}
+	],
+	"MS": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 64
+		}
+	],
+	"MT": [
+		{
+			"lang": "mt",
+			"status": "official",
+			"pct": 100
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 88
+		}
+	],
+	"MU": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 72
+		},
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 3
+		}
+	],
+	"MV": [
+		{
+			"lang": "dv",
+			"status": "official",
+			"pct": 98
+		}
+	],
+	"MW": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 63
+		},
+		{
+			"lang": "ny",
+			"status": "official",
+			"pct": 63
+		}
+	],
+	"MX": [
+		{
+			"lang": "es",
+			"status": "de_facto",
+			"pct": 83
+		},
+		{
+			"lang": "vec",
+			"status": "regional",
+			"pct": 0.0019
+		}
+	],
+	"MY": [
+		{
+			"lang": "ms",
+			"status": "official",
+			"pct": 75
+		}
+	],
+	"MZ": [
+		{
+			"lang": "pt",
+			"status": "official",
+			"pct": 27
+		}
+	],
+	"NA": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 7
+		}
+	],
+	"NC": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 96
+		}
+	],
+	"NE": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 29
+		}
+	],
+	"NF": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 96
+		}
+	],
+	"NG": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 53
+		},
+		{
+			"lang": "yo",
+			"status": "official",
+			"pct": 13
+		}
+	],
+	"NI": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 78
+		}
+	],
+	"NL": [
+		{
+			"lang": "nl",
+			"status": "official",
+			"pct": 100
+		},
+		{
+			"lang": "fy",
+			"status": "regional",
+			"pct": 4.3
+		}
+	],
+	"NO": [
+		{
+			"lang": "nb",
+			"status": "official",
+			"pct": 100
+		},
+		{
+			"lang": "no",
+			"status": "official",
+			"pct": 100
+		},
+		{
+			"lang": "nn",
+			"status": "official",
+			"pct": 25
+		},
+		{
+			"lang": "se",
+			"status": "regional",
+			"pct": 0.29
+		}
+	],
+	"NP": [
+		{
+			"lang": "ne",
+			"status": "official",
+			"pct": 44
+		}
+	],
+	"NR": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 95
+		},
+		{
+			"lang": "na",
+			"status": "official",
+			"pct": 70
+		}
+	],
+	"NU": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 56
+		},
+		{
+			"lang": "niu",
+			"status": "official",
+			"pct": 56
+		}
+	],
+	"NZ": [
+		{
+			"lang": "en",
+			"status": "de_facto",
+			"pct": 98
+		},
+		{
+			"lang": "mi",
+			"status": "official",
+			"pct": 2.8
+		}
+	],
+	"OM": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 81
+		}
+	],
+	"PA": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 69
+		}
+	],
+	"PE": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 73
+		},
+		{
+			"lang": "qu",
+			"status": "official",
+			"pct": 15
+		}
+	],
+	"PF": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 61
+		},
+		{
+			"lang": "ty",
+			"status": "official",
+			"pct": 31
+		}
+	],
+	"PG": [
+		{
+			"lang": "tpi",
+			"status": "official",
+			"pct": 71
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 50
+		},
+		{
+			"lang": "ho",
+			"status": "official",
+			"pct": 2.1
+		}
+	],
+	"PH": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 64
+		},
+		{
+			"lang": "fil",
+			"status": "official",
+			"pct": 60
+		},
+		{
+			"lang": "ceb",
+			"status": "regional",
+			"pct": 24
+		},
+		{
+			"lang": "ilo",
+			"status": "regional",
+			"pct": 9.6
+		},
+		{
+			"lang": "hil",
+			"status": "regional",
+			"pct": 8.4
+		},
+		{
+			"lang": "war",
+			"status": "regional",
+			"pct": 2.9
+		},
+		{
+			"lang": "pag",
+			"status": "regional",
+			"pct": 1.4
+		},
+		{
+			"lang": "mdh",
+			"status": "regional",
+			"pct": 1.2
+		},
+		{
+			"lang": "tsg",
+			"status": "regional",
+			"pct": 1.1
+		}
+	],
+	"PK": [
+		{
+			"lang": "ur",
+			"status": "official",
+			"pct": 95
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 50
+		}
+	],
+	"PL": [
+		{
+			"lang": "pl",
+			"status": "official",
+			"pct": 96
+		},
+		{
+			"lang": "de",
+			"status": "regional",
+			"pct": 19
+		},
+		{
+			"lang": "csb",
+			"status": "regional",
+			"pct": 0.13
+		},
+		{
+			"lang": "lt",
+			"status": "regional",
+			"pct": 0.021
+		}
+	],
+	"PM": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"PN": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 92
+		}
+	],
+	"PR": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 87
+		},
+		{
+			"lang": "en",
+			"status": "de_facto",
+			"pct": 49
+		}
+	],
+	"PS": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"PT": [
+		{
+			"lang": "pt",
+			"status": "official",
+			"pct": 96
+		}
+	],
+	"PW": [
+		{
+			"lang": "pau",
+			"status": "official",
+			"pct": 74
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 8.6
+		}
+	],
+	"PY": [
+		{
+			"lang": "gn",
+			"status": "official",
+			"pct": 80
+		},
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 3.2
+		}
+	],
+	"QA": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 89
+		}
+	],
+	"RE": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 89
+		}
+	],
+	"RO": [
+		{
+			"lang": "ro",
+			"status": "official",
+			"pct": 90
+		}
+	],
+	"RS": [
+		{
+			"lang": "sr",
+			"status": "official",
+			"pct": 99
+		},
+		{
+			"lang": "hu",
+			"status": "regional",
+			"pct": 4.8
+		},
+		{
+			"lang": "ro",
+			"status": "regional",
+			"pct": 2.1
+		},
+		{
+			"lang": "hr",
+			"status": "regional",
+			"pct": 0.93
+		},
+		{
+			"lang": "sk",
+			"status": "regional",
+			"pct": 0.85
+		},
+		{
+			"lang": "uk",
+			"status": "regional",
+			"pct": 0
+		}
+	],
+	"RU": [
+		{
+			"lang": "ru",
+			"status": "official",
+			"pct": 94
+		},
+		{
+			"lang": "tt",
+			"status": "regional",
+			"pct": 1.4
+		},
+		{
+			"lang": "ba",
+			"status": "regional",
+			"pct": 1.3
+		},
+		{
+			"lang": "ce",
+			"status": "regional",
+			"pct": 0.66
+		},
+		{
+			"lang": "av",
+			"status": "regional",
+			"pct": 0.39
+		},
+		{
+			"lang": "udm",
+			"status": "regional",
+			"pct": 0.38
+		},
+		{
+			"lang": "sah",
+			"status": "regional",
+			"pct": 0.32
+		},
+		{
+			"lang": "kbd",
+			"status": "regional",
+			"pct": 0.31
+		},
+		{
+			"lang": "myv",
+			"status": "regional",
+			"pct": 0.31
+		},
+		{
+			"lang": "mdf",
+			"status": "regional",
+			"pct": 0.21
+		},
+		{
+			"lang": "kum",
+			"status": "regional",
+			"pct": 0.2
+		},
+		{
+			"lang": "kv",
+			"status": "regional",
+			"pct": 0.18
+		},
+		{
+			"lang": "lez",
+			"status": "regional",
+			"pct": 0.18
+		},
+		{
+			"lang": "krc",
+			"status": "regional",
+			"pct": 0.17
+		},
+		{
+			"lang": "inh",
+			"status": "regional",
+			"pct": 0.16
+		},
+		{
+			"lang": "tyv",
+			"status": "regional",
+			"pct": 0.13
+		},
+		{
+			"lang": "az",
+			"status": "regional",
+			"pct": 0.093
+		},
+		{
+			"lang": "ady",
+			"status": "regional",
+			"pct": 0.088
+		},
+		{
+			"lang": "lbe",
+			"status": "regional",
+			"pct": 0.078
+		},
+		{
+			"lang": "koi",
+			"status": "regional",
+			"pct": 0.045
+		}
+	],
+	"RW": [
+		{
+			"lang": "rw",
+			"status": "official",
+			"pct": 77
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 15
+		},
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 0.017
+		}
+	],
+	"SA": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"SB": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"SC": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 60
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 38
+		}
+	],
+	"SD": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 61
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 61
+		}
+	],
+	"SE": [
+		{
+			"lang": "sv",
+			"status": "official",
+			"pct": 95
+		},
+		{
+			"lang": "fi",
+			"status": "regional",
+			"pct": 2.2
+		}
+	],
+	"SG": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 93
+		},
+		{
+			"lang": "zh",
+			"status": "official",
+			"pct": 77
+		},
+		{
+			"lang": "ms",
+			"status": "official",
+			"pct": 14
+		},
+		{
+			"lang": "ta",
+			"status": "official",
+			"pct": 2.1
+		}
+	],
+	"SH": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 68
+		}
+	],
+	"SI": [
+		{
+			"lang": "sl",
+			"status": "official",
+			"pct": 87
+		},
+		{
+			"lang": "vec",
+			"status": "regional",
+			"pct": 1.4
+		}
+	],
+	"SJ": [
+		{
+			"lang": "nb",
+			"status": "official",
+			"pct": 51
+		}
+	],
+	"SK": [
+		{
+			"lang": "sk",
+			"status": "official",
+			"pct": 90
+		}
+	],
+	"SL": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 35
+		}
+	],
+	"SM": [
+		{
+			"lang": "it",
+			"status": "official",
+			"pct": 89
+		}
+	],
+	"SN": [
+		{
+			"lang": "wo",
+			"status": "de_facto",
+			"pct": 70
+		},
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 39
+		},
+		{
+			"lang": "ff",
+			"status": "regional",
+			"pct": 21
+		},
+		{
+			"lang": "srr",
+			"status": "regional",
+			"pct": 11
+		},
+		{
+			"lang": "dyo",
+			"status": "regional",
+			"pct": 2.6
+		},
+		{
+			"lang": "sav",
+			"status": "regional",
+			"pct": 1.5
+		},
+		{
+			"lang": "mfv",
+			"status": "regional",
+			"pct": 0.77
+		},
+		{
+			"lang": "bjt",
+			"status": "regional",
+			"pct": 0.61
+		},
+		{
+			"lang": "snf",
+			"status": "regional",
+			"pct": 0.24
+		},
+		{
+			"lang": "knf",
+			"status": "regional",
+			"pct": 0.21
+		},
+		{
+			"lang": "bsc",
+			"status": "regional",
+			"pct": 0.097
+		},
+		{
+			"lang": "mey",
+			"status": "regional",
+			"pct": 0.038
+		},
+		{
+			"lang": "tnr",
+			"status": "regional",
+			"pct": 0.018
+		}
+	],
+	"SO": [
+		{
+			"lang": "so",
+			"status": "official",
+			"pct": 78
+		},
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 34
+		}
+	],
+	"SR": [
+		{
+			"lang": "nl",
+			"status": "official",
+			"pct": 90
+		}
+	],
+	"SS": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 27
+		}
+	],
+	"ST": [
+		{
+			"lang": "pt",
+			"status": "official",
+			"pct": 85
+		}
+	],
+	"SV": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 89
+		}
+	],
+	"SX": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 68
+		},
+		{
+			"lang": "nl",
+			"status": "official",
+			"pct": 3.4
+		}
+	],
+	"SY": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 80
+		},
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 5.9
+		}
+	],
+	"SZ": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 80
+		},
+		{
+			"lang": "ss",
+			"status": "official",
+			"pct": 58
+		}
+	],
+	"TC": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 98
+		}
+	],
+	"TD": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 26
+		},
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 17
+		}
+	],
+	"TG": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 61
+		}
+	],
+	"TH": [
+		{
+			"lang": "th",
+			"status": "official",
+			"pct": 80
+		}
+	],
+	"TJ": [
+		{
+			"lang": "tg",
+			"status": "official",
+			"pct": 100
+		}
+	],
+	"TK": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 78
+		},
+		{
+			"lang": "tkl",
+			"status": "official",
+			"pct": 78
+		}
+	],
+	"TL": [
+		{
+			"lang": "pt",
+			"status": "official",
+			"pct": 59
+		},
+		{
+			"lang": "tet",
+			"status": "official",
+			"pct": 59
+		}
+	],
+	"TM": [
+		{
+			"lang": "tk",
+			"status": "official",
+			"pct": 70
+		}
+	],
+	"TN": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 90
+		},
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 74
+		}
+	],
+	"TO": [
+		{
+			"lang": "to",
+			"status": "official",
+			"pct": 95
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 28
+		}
+	],
+	"TR": [
+		{
+			"lang": "tr",
+			"status": "official",
+			"pct": 93
+		}
+	],
+	"TT": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 88
+		}
+	],
+	"TV": [
+		{
+			"lang": "tvl",
+			"status": "official",
+			"pct": 85
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 9.1
+		}
+	],
+	"TW": [
+		{
+			"lang": "zh",
+			"status": "official",
+			"pct": 95
+		}
+	],
+	"TZ": [
+		{
+			"lang": "sw",
+			"status": "official",
+			"pct": 90
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 69
+		}
+	],
+	"UA": [
+		{
+			"lang": "uk",
+			"status": "official",
+			"pct": 65
+		},
+		{
+			"lang": "ru",
+			"status": "de_facto",
+			"pct": 46
+		}
+	],
+	"UG": [
+		{
+			"lang": "sw",
+			"status": "official",
+			"pct": 75
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 3.9
+		}
+	],
+	"UM": [
+		{
+			"lang": "en",
+			"status": "de_facto",
+			"pct": 100
+		}
+	],
+	"US": [
+		{
+			"lang": "en",
+			"status": "de_facto",
+			"pct": 96
+		},
+		{
+			"lang": "es",
+			"status": "regional",
+			"pct": 9.6
+		},
+		{
+			"lang": "haw",
+			"status": "regional",
+			"pct": 0.0089
+		}
+	],
+	"UY": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 88
+		}
+	],
+	"UZ": [
+		{
+			"lang": "uz",
+			"status": "official",
+			"pct": 85
+		}
+	],
+	"VA": [
+		{
+			"lang": "it",
+			"status": "de_facto",
+			"pct": 82
+		}
+	],
+	"VC": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 96
+		}
+	],
+	"VE": [
+		{
+			"lang": "es",
+			"status": "official",
+			"pct": 82
+		}
+	],
+	"VG": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 98
+		}
+	],
+	"VI": [
+		{
+			"lang": "en",
+			"status": "de_facto",
+			"pct": 75
+		}
+	],
+	"VN": [
+		{
+			"lang": "vi",
+			"status": "official",
+			"pct": 86
+		}
+	],
+	"VU": [
+		{
+			"lang": "bi",
+			"status": "official",
+			"pct": 90
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 83
+		},
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 50
+		}
+	],
+	"WF": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 48
+		}
+	],
+	"WS": [
+		{
+			"lang": "sm",
+			"status": "official",
+			"pct": 100
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 2.1
+		}
+	],
+	"XK": [
+		{
+			"lang": "sq",
+			"status": "official",
+			"pct": 92
+		},
+		{
+			"lang": "sr",
+			"status": "official",
+			"pct": 5
+		}
+	],
+	"YE": [
+		{
+			"lang": "ar",
+			"status": "official",
+			"pct": 74
+		}
+	],
+	"YT": [
+		{
+			"lang": "fr",
+			"status": "official",
+			"pct": 57
+		}
+	],
+	"ZA": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 31
+		},
+		{
+			"lang": "zu",
+			"status": "regional",
+			"pct": 24
+		},
+		{
+			"lang": "xh",
+			"status": "regional",
+			"pct": 18
+		},
+		{
+			"lang": "af",
+			"status": "regional",
+			"pct": 13
+		},
+		{
+			"lang": "nso",
+			"status": "regional",
+			"pct": 9.4
+		},
+		{
+			"lang": "tn",
+			"status": "regional",
+			"pct": 8.2
+		},
+		{
+			"lang": "st",
+			"status": "regional",
+			"pct": 7.9
+		},
+		{
+			"lang": "ts",
+			"status": "regional",
+			"pct": 4.4
+		},
+		{
+			"lang": "ss",
+			"status": "regional",
+			"pct": 2.7
+		},
+		{
+			"lang": "ve",
+			"status": "regional",
+			"pct": 2.3
+		},
+		{
+			"lang": "nr",
+			"status": "regional",
+			"pct": 1.6
+		}
+	],
+	"ZM": [
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 16
+		}
+	],
+	"ZW": [
+		{
+			"lang": "sn",
+			"status": "official",
+			"pct": 81
+		},
+		{
+			"lang": "en",
+			"status": "official",
+			"pct": 42
+		},
+		{
+			"lang": "nd",
+			"status": "official",
+			"pct": 12
+		}
+	]
+}

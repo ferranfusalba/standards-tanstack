@@ -204,7 +204,7 @@ export interface Country {
 	alpha2Code: string;
 	name: string;
 	fullName?: string; // ISO 3166 full name (e.g. "the Principality of Andorra")
-	localShortNames?: Array<{ lang: string; name: string }>; // ISO 3166-1 local short name(s) per administrative language (e.g. CH → de/fr/it/rm); lang = ISO 639-1 (or 639-3 if no alpha-2)
+	localShortNames?: Array<{ a2: string; a3: string; name: string }>; // ISO 3166-1 administrative language(s) + the country's local short name in each (e.g. CH → de/deu "Schweiz", fr/fra "Suisse", …). a2 = ISO 639-1 ("" when none), a3 = ISO 639-2
 	alpha3Code?: string; // Alpha-3 code (optional, only from UN/World Bank)
 	icaoCode?: string; // ICAO 9303 MRZ code; undefined = territory or no passport-issuing authority
 	dsitCode?: string; // Distinguishing Sign in International Traffic (DSIT), only set when differs from Alpha-3

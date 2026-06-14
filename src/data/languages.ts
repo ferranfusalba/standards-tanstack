@@ -1,7 +1,9 @@
 import { createServerFn } from "@tanstack/react-start";
+import countryLanguagesJson from "./country-languages.json";
 
 export interface Language {
-	code: string; // ISO 639-1 (2-letter code)
+	code: string; // ISO 639-1 (2-letter code); empty for languages that only have a 639-3 code
+	iso639_3?: string; // ISO 639-3 (3-letter code); undefined only for "bh" (639-2 collective)
 	name: string; // English name from ISO standard
 	nativeName?: string; // Native name from Intl.DisplayNames
 	localizedName?: string; // Name in selected locale (set dynamically)
@@ -798,31 +800,290 @@ export const iso639_1Codes: Array<{ code: string; name: string }> = [
 	{ code: "zu", name: "Zulu" },
 ];
 
+// ISO 639-3 (3-letter) code for each ISO 639-1 language. "bh" (Bihari
+// languages) is an ISO 639-2 collective with no single 639-3 code, so it is omitted.
+// Source: SIL ISO 639-3 code tables.
+const iso639_3ByCode: Record<string, string> = {
+	aa: "aar",
+	ab: "abk",
+	ae: "ave",
+	af: "afr",
+	ak: "aka",
+	am: "amh",
+	an: "arg",
+	ar: "ara",
+	as: "asm",
+	av: "ava",
+	ay: "aym",
+	az: "aze",
+	ba: "bak",
+	be: "bel",
+	bg: "bul",
+	bi: "bis",
+	bm: "bam",
+	bn: "ben",
+	bo: "bod",
+	br: "bre",
+	bs: "bos",
+	ca: "cat",
+	ce: "che",
+	ch: "cha",
+	co: "cos",
+	cr: "cre",
+	cs: "ces",
+	cu: "chu",
+	cv: "chv",
+	cy: "cym",
+	da: "dan",
+	de: "deu",
+	dv: "div",
+	dz: "dzo",
+	ee: "ewe",
+	el: "ell",
+	en: "eng",
+	eo: "epo",
+	es: "spa",
+	et: "est",
+	eu: "eus",
+	fa: "fas",
+	ff: "ful",
+	fi: "fin",
+	fj: "fij",
+	fo: "fao",
+	fr: "fra",
+	fy: "fry",
+	ga: "gle",
+	gd: "gla",
+	gl: "glg",
+	gn: "grn",
+	gu: "guj",
+	gv: "glv",
+	ha: "hau",
+	he: "heb",
+	hi: "hin",
+	ho: "hmo",
+	hr: "hrv",
+	ht: "hat",
+	hu: "hun",
+	hy: "hye",
+	hz: "her",
+	ia: "ina",
+	id: "ind",
+	ie: "ile",
+	ig: "ibo",
+	ii: "iii",
+	ik: "ipk",
+	io: "ido",
+	is: "isl",
+	it: "ita",
+	iu: "iku",
+	ja: "jpn",
+	jv: "jav",
+	ka: "kat",
+	kg: "kon",
+	ki: "kik",
+	kj: "kua",
+	kk: "kaz",
+	kl: "kal",
+	km: "khm",
+	kn: "kan",
+	ko: "kor",
+	kr: "kau",
+	ks: "kas",
+	ku: "kur",
+	kv: "kom",
+	kw: "cor",
+	ky: "kir",
+	la: "lat",
+	lb: "ltz",
+	lg: "lug",
+	li: "lim",
+	ln: "lin",
+	lo: "lao",
+	lt: "lit",
+	lu: "lub",
+	lv: "lav",
+	mg: "mlg",
+	mh: "mah",
+	mi: "mri",
+	mk: "mkd",
+	ml: "mal",
+	mn: "mon",
+	mr: "mar",
+	ms: "msa",
+	mt: "mlt",
+	my: "mya",
+	na: "nau",
+	nb: "nob",
+	nd: "nde",
+	ne: "nep",
+	ng: "ndo",
+	nl: "nld",
+	nn: "nno",
+	no: "nor",
+	nr: "nbl",
+	nv: "nav",
+	ny: "nya",
+	oc: "oci",
+	oj: "oji",
+	om: "orm",
+	or: "ori",
+	os: "oss",
+	pa: "pan",
+	pi: "pli",
+	pl: "pol",
+	ps: "pus",
+	pt: "por",
+	qu: "que",
+	rm: "roh",
+	rn: "run",
+	ro: "ron",
+	ru: "rus",
+	rw: "kin",
+	sa: "san",
+	sc: "srd",
+	sd: "snd",
+	se: "sme",
+	sg: "sag",
+	si: "sin",
+	sk: "slk",
+	sl: "slv",
+	sm: "smo",
+	sn: "sna",
+	so: "som",
+	sq: "sqi",
+	sr: "srp",
+	ss: "ssw",
+	st: "sot",
+	su: "sun",
+	sv: "swe",
+	sw: "swa",
+	ta: "tam",
+	te: "tel",
+	tg: "tgk",
+	th: "tha",
+	ti: "tir",
+	tk: "tuk",
+	tl: "tgl",
+	tn: "tsn",
+	to: "ton",
+	tr: "tur",
+	ts: "tso",
+	tt: "tat",
+	tw: "twi",
+	ty: "tah",
+	ug: "uig",
+	uk: "ukr",
+	ur: "urd",
+	uz: "uzb",
+	ve: "ven",
+	vi: "vie",
+	vo: "vol",
+	wa: "wln",
+	wo: "wol",
+	xh: "xho",
+	yi: "yid",
+	yo: "yor",
+	za: "zha",
+	zh: "zho",
+	zu: "zul",
+};
+
+// Languages that are official, regionally official, or de-facto official in some
+// country but have no ISO 639-1 code (so they cannot appear above). Listed by ISO
+// 639-3 code; sourced from Unicode CLDR territoryInfo. This is what lets the
+// country↔language cross-check resolve e.g. Swiss German (gsw) or Filipino (fil).
+const iso639_3OnlyLanguages: Array<{ code: string; name: string }> = [
+	{ code: "ady", name: "Adyghe" },
+	{ code: "ast", name: "Asturian" },
+	{ code: "bjt", name: "Balanta-Ganja" },
+	{ code: "bsc", name: "Bassari" },
+	{ code: "ceb", name: "Cebuano" },
+	{ code: "chp", name: "Chipewyan" },
+	{ code: "ckb", name: "Central Kurdish" },
+	{ code: "csb", name: "Kashubian" },
+	{ code: "den", name: "Slave (Athapascan)" },
+	{ code: "dgr", name: "Dogrib" },
+	{ code: "dyo", name: "Jola-Fonyi" },
+	{ code: "fil", name: "Filipino" },
+	{ code: "frr", name: "Northern Frisian" },
+	{ code: "gaa", name: "Ga" },
+	{ code: "gil", name: "Gilbertese" },
+	{ code: "gsw", name: "Swiss German" },
+	{ code: "gwi", name: "Gwichʼin" },
+	{ code: "haw", name: "Hawaiian" },
+	{ code: "hif", name: "Fiji Hindi" },
+	{ code: "hil", name: "Hiligaynon" },
+	{ code: "ilo", name: "Iloko" },
+	{ code: "inh", name: "Ingush" },
+	{ code: "kbd", name: "Kabardian" },
+	{ code: "kha", name: "Khasi" },
+	{ code: "knf", name: "Mankanya" },
+	{ code: "koi", name: "Komi-Permyak" },
+	{ code: "kok", name: "Konkani (macrolanguage)" },
+	{ code: "krc", name: "Karachay-Balkar" },
+	{ code: "kum", name: "Kumyk" },
+	{ code: "lbe", name: "Lak" },
+	{ code: "lez", name: "Lezghian" },
+	{ code: "lua", name: "Luba-Lulua" },
+	{ code: "mai", name: "Maithili" },
+	{ code: "mdf", name: "Moksha" },
+	{ code: "mdh", name: "Maguindanaon" },
+	{ code: "mey", name: "Hassaniyya" },
+	{ code: "mfv", name: "Mandjak" },
+	{ code: "myv", name: "Erzya" },
+	{ code: "niu", name: "Niuean" },
+	{ code: "nso", name: "Pedi" },
+	{ code: "pag", name: "Pangasinan" },
+	{ code: "pap", name: "Papiamento" },
+	{ code: "pau", name: "Palauan" },
+	{ code: "quc", name: "K'iche'" },
+	{ code: "sah", name: "Yakut" },
+	{ code: "sat", name: "Santali" },
+	{ code: "sav", name: "Saafi-Saafi" },
+	{ code: "sms", name: "Skolt Sami" },
+	{ code: "snf", name: "Noon" },
+	{ code: "srr", name: "Serer" },
+	{ code: "tet", name: "Tetum" },
+	{ code: "tkl", name: "Tokelau" },
+	{ code: "tnr", name: "Ménik" },
+	{ code: "tpi", name: "Tok Pisin" },
+	{ code: "tsg", name: "Tausug" },
+	{ code: "tvl", name: "Tuvalu" },
+	{ code: "tyv", name: "Tuvinian" },
+	{ code: "tzm", name: "Central Atlas Tamazight" },
+	{ code: "udm", name: "Udmurt" },
+	{ code: "vec", name: "Venetian" },
+	{ code: "war", name: "Waray (Philippines)" },
+	{ code: "wni", name: "Ndzwani Comorian" },
+	{ code: "zdj", name: "Ngazidja Comorian" },
+];
+
+// Native name = the language's name in its own locale. Require Intl to actually
+// have data for that locale (fallback "none" + a resolved-locale base match) —
+// otherwise it silently echoes the English name (e.g. "la" would read "Latin"
+// rather than a real native form).
+function nativeNameOf(code: string): string | undefined {
+	try {
+		const dn = new Intl.DisplayNames([code], {
+			type: "language",
+			fallback: "none",
+		});
+		if (dn.resolvedOptions().locale.split("-")[0] === code) return dn.of(code);
+	} catch {
+		// Intl.DisplayNames has no data for this code
+	}
+	return undefined;
+}
+
 export const getLanguages = createServerFn({
 	method: "GET",
 }).handler(async () => {
 	const languages: Language[] = iso639_1Codes.map(({ code, name }) => {
-		let nativeName: string | undefined;
+		const nativeName = nativeNameOf(code);
 		const bcp47Variants = bcp47VariantsByLanguage[code] || [];
 		const cldrVariants = cldrVariantsByLanguage[code] || [];
 		const intlVariants: string[] = [];
-
-		try {
-			// Native name = the language's name in its own locale. Require Intl to
-			// actually have data for that locale (fallback: "none" + a resolved-locale
-			// base-match) — otherwise it silently echoes the English name (e.g. "la"
-			// would read "Latin" rather than a real native form).
-			const nativeNames = new Intl.DisplayNames([code], {
-				type: "language",
-				fallback: "none",
-			});
-			if (nativeNames.resolvedOptions().locale.split("-")[0] === code) {
-				nativeName = nativeNames.of(code);
-			}
-		} catch {
-			// Some language codes might not be supported by Intl.DisplayNames
-			nativeName = undefined;
-		}
 
 		// Test which CLDR variants are supported by Intl.DisplayNames
 		if (cldrVariants.length > 0) {
@@ -842,6 +1103,7 @@ export const getLanguages = createServerFn({
 
 		return {
 			code,
+			iso639_3: iso639_3ByCode[code],
 			name,
 			nativeName,
 			bcp47Variants: bcp47Variants.length > 0 ? bcp47Variants : undefined,
@@ -850,7 +1112,56 @@ export const getLanguages = createServerFn({
 		};
 	});
 
+	// Languages with no ISO 639-1 code (official, regionally, or de-facto official
+	// somewhere per CLDR). They carry only a 639-3 code and an English name; the
+	// 639-1-keyed variant tables don't apply to them.
+	for (const { code, name } of iso639_3OnlyLanguages) {
+		languages.push({
+			code: "",
+			iso639_3: code,
+			name,
+			nativeName: nativeNameOf(code),
+		});
+	}
+
 	return languages;
+});
+
+export interface CountryLanguage {
+	lang: string; // ISO 639-1 code, or ISO 639-3 if the language has no 639-1 code
+	name: string; // English language name
+	status: "official" | "regional" | "de_facto"; // CLDR official status in the country
+	pct: number; // CLDR-estimated share of the population (%)
+}
+
+// English name for any code referenced by country-languages.json: ISO 639-1 names
+// from iso639_1Codes, plus the 63 non-639-1 official languages.
+const languageNameByCode = new Map<string, string>([
+	...iso639_1Codes.map(({ code, name }) => [code, name] as const),
+	...iso639_3OnlyLanguages.map(({ code, name }) => [code, name] as const),
+]);
+
+/**
+ * Official, regionally-official, and de-facto-official languages per country, from
+ * Unicode CLDR territoryInfo. Unlike the single ISO 3166 administrative language,
+ * this captures regional co-official languages — e.g. Catalan/Galician/Basque for
+ * Spain — which ISO does not record. Keyed by alpha-2.
+ */
+export const getLanguagesByCountry = createServerFn({
+	method: "GET",
+}).handler(async () => {
+	const raw = countryLanguagesJson as Record<
+		string,
+		Array<{ lang: string; status: CountryLanguage["status"]; pct: number }>
+	>;
+	const map: Record<string, CountryLanguage[]> = {};
+	for (const [code, langs] of Object.entries(raw)) {
+		map[code] = langs.map((l) => ({
+			...l,
+			name: languageNameByCode.get(l.lang) ?? l.lang,
+		}));
+	}
+	return map;
 });
 
 /**

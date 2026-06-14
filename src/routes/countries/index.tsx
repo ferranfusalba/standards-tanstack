@@ -13,6 +13,7 @@ import {
 import {
 	Coins,
 	Info,
+	Languages as LanguagesIcon,
 	Map as MapIcon,
 	SquareArrowOutUpRight,
 } from "lucide-react";
@@ -48,6 +49,7 @@ import {
 	getHistoricalCurrenciesByCountry,
 	type HistoricalCountryCurrency,
 } from "@/data/currencies";
+import { type CountryLanguage, getLanguagesByCountry } from "@/data/languages";
 import { getPreferredLocale } from "@/data/locale";
 import { type CountryTimezone, getTimezonesByCountry } from "@/data/timezones";
 import {
@@ -75,6 +77,7 @@ type ExpandSection =
 	| "subdivisions"
 	| "timezones"
 	| "currencies"
+	| "languages"
 	| "names"
 	| "localShortNames"
 	| "details";
@@ -146,6 +149,7 @@ export const Route = createFileRoute("/countries/")({
 			currencyMapR,
 			historicalCurrencyMapR,
 			subdivisionMapR,
+			languageMapR,
 			localizedNameCountsR,
 			localizedNamesR,
 			localizedSearchR,
@@ -157,6 +161,7 @@ export const Route = createFileRoute("/countries/")({
 			getCurrenciesByCountry(),
 			getHistoricalCurrenciesByCountry(),
 			getSubdivisionsByCountry(),
+			getLanguagesByCountry(),
 			getLocalizedNameCountsByCountry(),
 			getCountryNamesByLocale({ data: { locale: nameLocale } }),
 			getLocalizedSearchByCountry(),
@@ -179,6 +184,7 @@ export const Route = createFileRoute("/countries/")({
 			"historical currencies",
 		);
 		const subdivisionMap = settledOr(subdivisionMapR, {}, "subdivisions");
+		const languageMap = settledOr(languageMapR, {}, "languages");
 		const localizedNameCounts = settledOr(
 			localizedNameCountsR,
 			{},
@@ -198,6 +204,7 @@ export const Route = createFileRoute("/countries/")({
 			...c,
 			timezoneCount: timezoneMap[c.alpha2Code]?.length ?? 0,
 			currencyCount: currencyMap[c.alpha2Code]?.length ?? 0,
+			languageCount: languageMap[c.alpha2Code]?.length ?? 0,
 			localizedNameCount: localizedNameCounts[c.alpha2Code] ?? 0,
 			cldrName: cldrNameByCode[c.alpha2Code],
 		}));
@@ -208,6 +215,7 @@ export const Route = createFileRoute("/countries/")({
 			currencyMap,
 			historicalCurrencyMap,
 			subdivisionMap,
+			languageMap,
 			nameLocale,
 			localizedNames,
 			localizedSearch,
@@ -607,29 +615,29 @@ function LocalizedNamesExpandedRow({
 	);
 }
 
+// Resolve a language code (639-1 or 639-3) to its English name; undefined when
+// Intl has no data (rare 639-3-only codes) or the code is empty.
+const enLanguageNames = new Intl.DisplayNames(["en"], {
+	type: "language",
+	fallback: "none",
+});
+function languageName(code: string): string | undefined {
+	if (!code) return undefined;
+	try {
+		const name = enLanguageNames.of(code);
+		return name && name !== code ? name : undefined;
+	} catch {
+		return undefined;
+	}
+}
+
 function LocalShortNamesExpandedRow({
 	names,
 	colSpan,
 }: {
-	names: Array<{ lang: string; name: string }>;
+	names: Array<{ a2: string; a3: string; name: string }>;
 	colSpan: number;
 }) {
-	// Resolve the admin-language code to an English name (e.g. de → German). Falls
-	// back to nothing for codes Intl doesn't know (rare ISO 639-3-only languages).
-	const langName = React.useMemo(() => {
-		const dn = new Intl.DisplayNames(["en"], {
-			type: "language",
-			fallback: "none",
-		});
-		return (lang: string) => {
-			try {
-				return dn.of(lang);
-			} catch {
-				return undefined;
-			}
-		};
-	}, []);
-
 	return (
 		<ExpandedRow colSpan={colSpan}>
 			<div className="text-xs font-semibold mb-2">
@@ -638,14 +646,14 @@ function LocalShortNamesExpandedRow({
 			<table className="text-xs border-collapse">
 				<tbody>
 					{names.map((n) => {
-						const ln = langName(n.lang);
+						const ln = languageName(n.a2 || n.a3);
 						return (
-							<tr key={n.lang}>
+							<tr key={n.a2 || n.a3}>
 								<td className="py-0.5 pr-3 font-mono text-muted-foreground">
-									{n.lang}
+									{n.a2 || n.a3}
 								</td>
 								<td className="py-0.5 pr-8 text-muted-foreground">
-									{ln && ln !== n.lang ? ln : ""}
+									{ln ?? ""}
 								</td>
 								<td className="py-0.5 pl-4 border-l border-border">{n.name}</td>
 							</tr>
@@ -653,6 +661,105 @@ function LocalShortNamesExpandedRow({
 					})}
 				</tbody>
 			</table>
+		</ExpandedRow>
+	);
+}
+
+const LANGUAGE_STATUS_LABEL: Record<CountryLanguage["status"], string> = {
+	official: "official",
+	regional: "regional",
+	de_facto: "de facto",
+};
+
+function LanguageCodeLink({ code }: { code: string }) {
+	return (
+		<Link
+			to="/languages"
+			search={{ highlight: code }}
+			className="hover:text-cyan-400 transition-colors"
+		>
+			{code}
+		</Link>
+	);
+}
+
+function LanguagesExpandedRow({
+	adminLanguages,
+	languages,
+	colSpan,
+}: {
+	adminLanguages: Array<{ a2: string; a3: string; name: string }>;
+	languages: CountryLanguage[];
+	colSpan: number;
+}) {
+	return (
+		<ExpandedRow colSpan={colSpan}>
+			<div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
+				{adminLanguages.length > 0 && (
+					<div>
+						<div className="text-xs font-semibold mb-2">
+							ISO 3166 administrative languages ({adminLanguages.length})
+						</div>
+						<table className="w-auto text-xs">
+							<thead>
+								<tr className="text-muted-foreground">
+									<th className="text-left py-1 pr-4">Alpha-2</th>
+									<th className="text-left py-1 pr-4">Alpha-3</th>
+									<th className="text-left py-1">Name</th>
+								</tr>
+							</thead>
+							<tbody>
+								{adminLanguages.map((l) => (
+									<tr key={l.a3 || l.a2}>
+										<td className="py-1 pr-4 font-mono">
+											{l.a2 ? (
+												<LanguageCodeLink code={l.a2} />
+											) : (
+												<span className="text-muted-foreground">-</span>
+											)}
+										</td>
+										<td className="py-1 pr-4 font-mono text-muted-foreground">
+											{l.a3 || "-"}
+										</td>
+										<td className="py-1">
+											{languageName(l.a2 || l.a3) ?? "-"}
+										</td>
+									</tr>
+								))}
+							</tbody>
+						</table>
+					</div>
+				)}
+				{languages.length > 0 && (
+					<div>
+						<div className="text-xs font-semibold mb-2">
+							CLDR languages ({languages.length})
+						</div>
+						<table className="w-auto text-xs">
+							<thead>
+								<tr className="text-muted-foreground">
+									<th className="text-left py-1 pr-4">Code</th>
+									<th className="text-left py-1 pr-4">Name</th>
+									<th className="text-left py-1">Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								{languages.map((l) => (
+									<tr key={l.lang}>
+										<td className="py-1 pr-4 font-mono">
+											<LanguageCodeLink code={l.lang} />
+										</td>
+										<td className="py-1 pr-4">{l.name}</td>
+										<td className="py-1 text-muted-foreground">
+											{LANGUAGE_STATUS_LABEL[l.status]}
+										</td>
+									</tr>
+								))}
+							</tbody>
+						</table>
+					</div>
+				)}
+			</div>
 		</ExpandedRow>
 	);
 }
@@ -700,6 +807,7 @@ const sectionByColumn: Record<string, ExpandSection> = {
 	localizedNameCount: "names",
 	timezoneCount: "timezones",
 	currencyCount: "currencies",
+	languageCount: "languages",
 };
 
 // Data source (issuing standard / organization) for each column in the UN M49
@@ -730,6 +838,7 @@ const countrySources: Record<string, string> = {
 	localizedNameCount: "Unicode CLDR",
 	timezoneCount: "IANA · tzdata",
 	currencyCount: "ISO 4217",
+	languageCount: "ISO 3166 · CLDR",
 };
 
 // Authoritative reference per source label (from `countrySources`). `href` makes
@@ -1189,6 +1298,7 @@ function Countries() {
 		currencyMap,
 		historicalCurrencyMap,
 		subdivisionMap,
+		languageMap,
 		nameLocale: initialNameLocale,
 		localizedNames: initialLocalizedNames,
 		localizedSearch,
@@ -1637,7 +1747,7 @@ function Countries() {
 						return (
 							<span className="inline-flex items-center gap-2">
 								<span className="font-mono text-muted-foreground">
-									{names[0].lang}
+									{names[0].a2 || names[0].a3}
 								</span>
 								{names[0].name}
 							</span>
@@ -1780,6 +1890,55 @@ function Countries() {
 						>
 							<span>{count}</span>
 							<span className="text-xs">{isOpen ? "\u25B2" : "\u25BC"}</span>
+						</button>
+					);
+				},
+				enableGlobalFilter: false,
+			},
+			{
+				accessorKey: "languageCount",
+				header: () => (
+					<span className="inline-flex items-center gap-1.5">
+						Languages
+						<Link
+							to="/languages"
+							onClick={(e) => e.stopPropagation()}
+							aria-label="Open Languages view"
+							className="text-muted-foreground hover:text-foreground transition-colors"
+						>
+							<LanguagesIcon className="size-3.5" />
+						</Link>
+					</span>
+				),
+				size: 120,
+				maxSize: 120,
+				cell: ({ row }) => {
+					// ISO 3166 administrative-language count vs Unicode CLDR count. Show
+					// one number when they agree, "iso/cldr" when they differ (e.g. CH 4/5).
+					const isoCount = row.original.localShortNames?.length ?? 0;
+					const cldrCount =
+						(row.original as Country & { languageCount?: number })
+							.languageCount ?? 0;
+					if (!isoCount && !cldrCount)
+						return <span className="text-muted-foreground">-</span>;
+					const label =
+						isoCount === cldrCount
+							? `${cldrCount}`
+							: `${isoCount}/${cldrCount}`;
+					const isOpen =
+						expandedSection[row.original.alpha2Code] === "languages";
+					return (
+						<button
+							type="button"
+							onClick={(e) => {
+								e.stopPropagation();
+								toggleSection(row.original.alpha2Code, row.id, "languages");
+							}}
+							className="cursor-pointer hover:bg-accent px-2 py-1 rounded flex items-center gap-1"
+							aria-label="Show languages"
+						>
+							<span>{label}</span>
+							<span className="text-xs">{isOpen ? "▲" : "▼"}</span>
 						</button>
 					);
 				},
@@ -2297,6 +2456,15 @@ function Countries() {
 						return (
 							<LocalShortNamesExpandedRow
 								names={row.original.localShortNames ?? []}
+								colSpan={row.getVisibleCells().length}
+							/>
+						);
+					}
+					if (section === "languages") {
+						return (
+							<LanguagesExpandedRow
+								adminLanguages={row.original.localShortNames ?? []}
+								languages={languageMap[row.original.alpha2Code] ?? []}
 								colSpan={row.getVisibleCells().length}
 							/>
 						);

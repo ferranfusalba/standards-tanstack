@@ -76,6 +76,7 @@ type ExpandSection =
 	| "timezones"
 	| "currencies"
 	| "names"
+	| "localShortNames"
 	| "details";
 
 interface CountriesSearch {
@@ -606,6 +607,56 @@ function LocalizedNamesExpandedRow({
 	);
 }
 
+function LocalShortNamesExpandedRow({
+	names,
+	colSpan,
+}: {
+	names: Array<{ lang: string; name: string }>;
+	colSpan: number;
+}) {
+	// Resolve the admin-language code to an English name (e.g. de → German). Falls
+	// back to nothing for codes Intl doesn't know (rare ISO 639-3-only languages).
+	const langName = React.useMemo(() => {
+		const dn = new Intl.DisplayNames(["en"], {
+			type: "language",
+			fallback: "none",
+		});
+		return (lang: string) => {
+			try {
+				return dn.of(lang);
+			} catch {
+				return undefined;
+			}
+		};
+	}, []);
+
+	return (
+		<ExpandedRow colSpan={colSpan}>
+			<div className="text-xs font-semibold mb-2">
+				Local short names ({names.length})
+			</div>
+			<table className="text-xs border-collapse">
+				<tbody>
+					{names.map((n) => {
+						const ln = langName(n.lang);
+						return (
+							<tr key={n.lang}>
+								<td className="py-0.5 pr-3 font-mono text-muted-foreground">
+									{n.lang}
+								</td>
+								<td className="py-0.5 pr-8 text-muted-foreground">
+									{ln && ln !== n.lang ? ln : ""}
+								</td>
+								<td className="py-0.5 pl-4 border-l border-border">{n.name}</td>
+							</tr>
+						);
+					})}
+				</tbody>
+			</table>
+		</ExpandedRow>
+	);
+}
+
 function getCellHighlight(
 	colId: string,
 	original: Country,
@@ -645,6 +696,7 @@ function getColumnBorder(colId: string) {
 const sectionByColumn: Record<string, ExpandSection> = {
 	flag: "details",
 	subdivisionCount: "subdivisions",
+	localShortName: "localShortNames",
 	localizedNameCount: "names",
 	timezoneCount: "timezones",
 	currencyCount: "currencies",
@@ -673,6 +725,7 @@ const countrySources: Record<string, string> = {
 	name: "ISO 3166-1",
 	cldrName: "Unicode CLDR",
 	fullName: "ISO 3166-1",
+	localShortName: "ISO 3166-1",
 	localizedName: "Unicode CLDR",
 	localizedNameCount: "Unicode CLDR",
 	timezoneCount: "IANA · tzdata",
@@ -750,7 +803,7 @@ function DetailGroup({
 			<h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground/80">
 				{title}
 			</h4>
-			<dl className="grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-3">
+			<dl className="grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-3 lg:grid-cols-4">
 				{children}
 			</dl>
 		</section>
@@ -1540,7 +1593,7 @@ function Countries() {
 			},
 			{
 				accessorKey: "name",
-				header: "Name",
+				header: "Short name",
 				size: 200,
 				maxSize: 200,
 				enableHiding: false,
@@ -1565,6 +1618,52 @@ function Countries() {
 				size: 300,
 				maxSize: 300,
 				cell: (info) => info.getValue<string>() ?? "",
+			},
+			{
+				id: "localShortName",
+				header: "Local short name",
+				size: 200,
+				maxSize: 200,
+				// Joined for global search so a country matches by any local spelling.
+				accessorFn: (row) =>
+					(row.localShortNames ?? []).map((l) => l.name).join(" "),
+				cell: ({ row }) => {
+					const names = row.original.localShortNames;
+					if (!names || names.length === 0)
+						return <span className="text-muted-foreground">-</span>;
+					// Single language: show its locale (font-mono, like the expanded
+					// subrow) followed by the value (e.g. Spain → "es España").
+					if (names.length === 1)
+						return (
+							<span className="inline-flex items-center gap-2">
+								<span className="font-mono text-muted-foreground">
+									{names[0].lang}
+								</span>
+								{names[0].name}
+							</span>
+						);
+					// Multiple: show the count with a chevron that opens the subrow.
+					const isOpen =
+						expandedSection[row.original.alpha2Code] === "localShortNames";
+					return (
+						<button
+							type="button"
+							onClick={(e) => {
+								e.stopPropagation();
+								toggleSection(
+									row.original.alpha2Code,
+									row.id,
+									"localShortNames",
+								);
+							}}
+							className="cursor-pointer hover:bg-accent px-2 py-1 rounded flex items-center gap-1"
+							aria-label="Show local short names"
+						>
+							<span>{names.length}</span>
+							<span className="text-xs">{isOpen ? "▲" : "▼"}</span>
+						</button>
+					);
+				},
 			},
 			{
 				accessorKey: "localizedName",
@@ -2190,6 +2289,14 @@ function Countries() {
 						return (
 							<LocalizedNamesExpandedRow
 								alpha2Code={row.original.alpha2Code}
+								colSpan={row.getVisibleCells().length}
+							/>
+						);
+					}
+					if (section === "localShortNames") {
+						return (
+							<LocalShortNamesExpandedRow
+								names={row.original.localShortNames ?? []}
 								colSpan={row.getVisibleCells().length}
 							/>
 						);

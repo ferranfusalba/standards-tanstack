@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { aircraftRegistrationPrefixes } from "./aircraft-registration-prefixes";
 import { iso639_1Codes } from "./languages";
+import localShortNamesJson from "./local-short-names.json";
 import adSubdivisions from "./subdivisions/AD.json";
 import aeSubdivisions from "./subdivisions/AE.json";
 import afSubdivisions from "./subdivisions/AF.json";
@@ -74,7 +75,6 @@ import grSubdivisions from "./subdivisions/GR.json";
 import gtSubdivisions from "./subdivisions/GT.json";
 import gwSubdivisions from "./subdivisions/GW.json";
 import gySubdivisions from "./subdivisions/GY.json";
-import hkSubdivisions from "./subdivisions/HK.json";
 import hnSubdivisions from "./subdivisions/HN.json";
 import hrSubdivisions from "./subdivisions/HR.json";
 import htSubdivisions from "./subdivisions/HT.json";
@@ -129,7 +129,6 @@ import mxSubdivisions from "./subdivisions/MX.json";
 import mySubdivisions from "./subdivisions/MY.json";
 import mzSubdivisions from "./subdivisions/MZ.json";
 import naSubdivisions from "./subdivisions/NA.json";
-import ncSubdivisions from "./subdivisions/NC.json";
 import neSubdivisions from "./subdivisions/NE.json";
 import ngSubdivisions from "./subdivisions/NG.json";
 import niSubdivisions from "./subdivisions/NI.json";
@@ -205,6 +204,7 @@ export interface Country {
 	alpha2Code: string;
 	name: string;
 	fullName?: string; // ISO 3166 full name (e.g. "the Principality of Andorra")
+	localShortNames?: Array<{ lang: string; name: string }>; // ISO 3166-1 local short name(s) per administrative language (e.g. CH → de/fr/it/rm); lang = ISO 639-1 (or 639-3 if no alpha-2)
 	alpha3Code?: string; // Alpha-3 code (optional, only from UN/World Bank)
 	icaoCode?: string; // ICAO 9303 MRZ code; undefined = territory or no passport-issuing authority
 	dsitCode?: string; // Distinguishing Sign in International Traffic (DSIT), only set when differs from Alpha-3
@@ -1866,7 +1866,7 @@ const unM49Data: Array<{
 		code: "AE",
 		code3: "ARE",
 		unCode: "784",
-		name: "United Arab Emirates",
+		name: "United Arab Emirates (the)",
 		fullName: "the United Arab Emirates",
 		independent: true,
 	},
@@ -2069,7 +2069,7 @@ const unM49Data: Array<{
 		code: "BO",
 		code3: "BOL",
 		unCode: "068",
-		name: "Bolivia",
+		name: "Bolivia (Plurinational State of)",
 		fullName: "the Plurinational State of Bolivia",
 		independent: true,
 	},
@@ -2092,7 +2092,7 @@ const unM49Data: Array<{
 		code: "BS",
 		code3: "BHS",
 		unCode: "044",
-		name: "Bahamas",
+		name: "Bahamas (The)",
 		fullName: "the Commonwealth of The Bahamas",
 		independent: true,
 	},
@@ -2145,14 +2145,14 @@ const unM49Data: Array<{
 		code: "CC",
 		code3: "CCK",
 		unCode: "166",
-		name: "Cocos (Keeling) Islands",
+		name: "Cocos (Keeling) Islands (the)",
 		independent: false,
 	},
 	{
 		code: "CD",
 		code3: "COD",
 		unCode: "180",
-		name: "Congo (Democratic Republic)",
+		name: "Congo (the Democratic Republic of the)",
 		fullName: "the Democratic Republic of the Congo",
 		independent: true,
 	},
@@ -2160,7 +2160,7 @@ const unM49Data: Array<{
 		code: "CF",
 		code3: "CAF",
 		unCode: "140",
-		name: "Central African Republic",
+		name: "Central African Republic (the)",
 		fullName: "the Central African Republic",
 		independent: true,
 	},
@@ -2168,7 +2168,7 @@ const unM49Data: Array<{
 		code: "CG",
 		code3: "COG",
 		unCode: "178",
-		name: "Congo",
+		name: "Congo (the)",
 		fullName: "the Republic of the Congo",
 		independent: true,
 	},
@@ -2192,7 +2192,7 @@ const unM49Data: Array<{
 		code: "CK",
 		code3: "COK",
 		unCode: "184",
-		name: "Cook Islands",
+		name: "Cook Islands (the)",
 		independent: false,
 	},
 	{
@@ -2317,7 +2317,7 @@ const unM49Data: Array<{
 		code: "DO",
 		code3: "DOM",
 		unCode: "214",
-		name: "Dominican Republic",
+		name: "Dominican Republic (the)",
 		fullName: "the Dominican Republic",
 		independent: true,
 	},
@@ -2353,7 +2353,7 @@ const unM49Data: Array<{
 		fullName: "the Arab Republic of Egypt",
 		independent: true,
 	},
-	{ code: "EH", code3: "ESH", unCode: "732", name: "Western Sahara" },
+	{ code: "EH", code3: "ESH", unCode: "732", name: "Western Sahara*" },
 	{
 		code: "ER",
 		code3: "ERI",
@@ -2398,14 +2398,14 @@ const unM49Data: Array<{
 		code: "FK",
 		code3: "FLK",
 		unCode: "238",
-		name: "Falkland Islands",
+		name: "Falkland Islands (the) [Malvinas]",
 		independent: false,
 	},
 	{
 		code: "FM",
 		code3: "FSM",
 		unCode: "583",
-		name: "Micronesia",
+		name: "Micronesia (Federated States of)",
 		fullName: "the Federated States of Micronesia",
 		independent: true,
 	},
@@ -2413,7 +2413,7 @@ const unM49Data: Array<{
 		code: "FO",
 		code3: "FRO",
 		unCode: "234",
-		name: "Faroe Islands",
+		name: "Faroe Islands (the)",
 		independent: false,
 	},
 	{
@@ -2436,7 +2436,7 @@ const unM49Data: Array<{
 		code: "GB",
 		code3: "GBR",
 		unCode: "826",
-		name: "United Kingdom",
+		name: "United Kingdom of Great Britain and Northern Ireland (the)",
 		fullName: "the United Kingdom of Great Britain and Northern Ireland",
 		independent: true,
 	},
@@ -2494,7 +2494,7 @@ const unM49Data: Array<{
 		code: "GM",
 		code3: "GMB",
 		unCode: "270",
-		name: "Gambia",
+		name: "Gambia (the)",
 		fullName: "the Republic of the Gambia",
 		independent: true,
 	},
@@ -2533,7 +2533,7 @@ const unM49Data: Array<{
 		code: "GS",
 		code3: "SGS",
 		unCode: "239",
-		name: "South Georgia and South Sandwich Islands",
+		name: "South Georgia and the South Sandwich Islands",
 		independent: false,
 	},
 	{
@@ -2649,7 +2649,7 @@ const unM49Data: Array<{
 		code: "IO",
 		code3: "IOT",
 		unCode: "086",
-		name: "British Indian Ocean Territory",
+		name: "British Indian Ocean Territory (the)",
 		independent: false,
 	},
 	{
@@ -2664,7 +2664,7 @@ const unM49Data: Array<{
 		code: "IR",
 		code3: "IRN",
 		unCode: "364",
-		name: "Iran",
+		name: "Iran (Islamic Republic of)",
 		fullName: "the Islamic Republic of Iran",
 		independent: true,
 	},
@@ -2742,7 +2742,7 @@ const unM49Data: Array<{
 		code: "KM",
 		code3: "COM",
 		unCode: "174",
-		name: "Comoros",
+		name: "Comoros (the)",
 		fullName: "the Union of the Comoros",
 		independent: true,
 	},
@@ -2757,7 +2757,7 @@ const unM49Data: Array<{
 		code: "KP",
 		code3: "PRK",
 		unCode: "408",
-		name: "North Korea",
+		name: "Korea (the Democratic People's Republic of)",
 		fullName: "the Democratic People's Republic of Korea",
 		independent: true,
 	},
@@ -2765,7 +2765,7 @@ const unM49Data: Array<{
 		code: "KR",
 		code3: "KOR",
 		unCode: "410",
-		name: "South Korea",
+		name: "Korea (the Republic of)",
 		fullName: "the Republic of Korea",
 		independent: true,
 	},
@@ -2781,7 +2781,7 @@ const unM49Data: Array<{
 		code: "KY",
 		code3: "CYM",
 		unCode: "136",
-		name: "Cayman Islands",
+		name: "Cayman Islands (the)",
 		independent: false,
 	},
 	{
@@ -2796,7 +2796,7 @@ const unM49Data: Array<{
 		code: "LA",
 		code3: "LAO",
 		unCode: "418",
-		name: "Laos",
+		name: "Lao People's Democratic Republic (the)",
 		fullName: "the Lao People's Democratic Republic",
 		independent: true,
 	},
@@ -2899,7 +2899,7 @@ const unM49Data: Array<{
 		code: "MD",
 		code3: "MDA",
 		unCode: "498",
-		name: "Moldova",
+		name: "Moldova (the Republic of)",
 		fullName: "the Republic of Moldova",
 		independent: true,
 	},
@@ -2914,7 +2914,7 @@ const unM49Data: Array<{
 		code: "MF",
 		code3: "MAF",
 		unCode: "663",
-		name: "Saint Martin",
+		name: "Saint Martin (French part)",
 		independent: false,
 	},
 	{
@@ -2929,7 +2929,7 @@ const unM49Data: Array<{
 		code: "MH",
 		code3: "MHL",
 		unCode: "584",
-		name: "Marshall Islands",
+		name: "Marshall Islands (the)",
 		fullName: "the Republic of the Marshall Islands",
 		independent: true,
 	},
@@ -2976,7 +2976,7 @@ const unM49Data: Array<{
 		code: "MP",
 		code3: "MNP",
 		unCode: "580",
-		name: "Northern Mariana Islands",
+		name: "Northern Mariana Islands (the)",
 		fullName: "the Commonwealth of the Northern Mariana Islands",
 		independent: false,
 	},
@@ -3076,7 +3076,7 @@ const unM49Data: Array<{
 		code: "NE",
 		code3: "NER",
 		unCode: "562",
-		name: "Niger",
+		name: "Niger (the)",
 		fullName: "the Republic of the Niger",
 		independent: true,
 	},
@@ -3107,7 +3107,7 @@ const unM49Data: Array<{
 		code: "NL",
 		code3: "NLD",
 		unCode: "528",
-		name: "Netherlands",
+		name: "Netherlands (Kingdom of the)",
 		fullName: "the Kingdom of the Netherlands",
 		independent: true,
 	},
@@ -3179,7 +3179,7 @@ const unM49Data: Array<{
 		code: "PH",
 		code3: "PHL",
 		unCode: "608",
-		name: "Philippines",
+		name: "Philippines (the)",
 		fullName: "the Republic of the Philippines",
 		independent: true,
 	},
@@ -3224,7 +3224,7 @@ const unM49Data: Array<{
 		code: "PS",
 		code3: "PSE",
 		unCode: "275",
-		name: "Palestine",
+		name: "Palestine, State of",
 		fullName: "the State of Palestine",
 		independent: false,
 	},
@@ -3286,7 +3286,7 @@ const unM49Data: Array<{
 		code: "RU",
 		code3: "RUS",
 		unCode: "643",
-		name: "Russia",
+		name: "Russian Federation (the)",
 		fullName: "the Russian Federation",
 		independent: true,
 	},
@@ -3325,7 +3325,7 @@ const unM49Data: Array<{
 		code: "SD",
 		code3: "SDN",
 		unCode: "729",
-		name: "Sudan",
+		name: "Sudan (the)",
 		fullName: "the Republic of the Sudan",
 		independent: true,
 	},
@@ -3443,14 +3443,14 @@ const unM49Data: Array<{
 		code: "SX",
 		code3: "SXM",
 		unCode: "534",
-		name: "Sint Maarten",
+		name: "Sint Maarten (Dutch part)",
 		independent: false,
 	},
 	{
 		code: "SY",
 		code3: "SYR",
 		unCode: "760",
-		name: "Syria",
+		name: "Syrian Arab Republic (the)",
 		fullName: "the Syrian Arab Republic",
 		independent: true,
 	},
@@ -3466,7 +3466,7 @@ const unM49Data: Array<{
 		code: "TC",
 		code3: "TCA",
 		unCode: "796",
-		name: "Turks and Caicos Islands",
+		name: "Turks and Caicos Islands (the)",
 		independent: false,
 	},
 	{
@@ -3481,7 +3481,7 @@ const unM49Data: Array<{
 		code: "TF",
 		code3: "ATF",
 		unCode: "260",
-		name: "French Southern Territories",
+		name: "French Southern Territories (the)",
 		independent: false,
 	},
 	{
@@ -3573,14 +3573,14 @@ const unM49Data: Array<{
 		code: "TW",
 		code3: "TWN",
 		unCode: "158",
-		name: "Taiwan",
+		name: "Taiwan (Province of China)",
 		independent: false,
 	},
 	{
 		code: "TZ",
 		code3: "TZA",
 		unCode: "834",
-		name: "Tanzania",
+		name: "Tanzania, the United Republic of",
 		fullName: "the United Republic of Tanzania",
 		independent: true,
 	},
@@ -3603,14 +3603,14 @@ const unM49Data: Array<{
 		code: "UM",
 		code3: "UMI",
 		unCode: "581",
-		name: "United States Minor Outlying Islands",
+		name: "United States Minor Outlying Islands (the)",
 		independent: false,
 	},
 	{
 		code: "US",
 		code3: "USA",
 		unCode: "840",
-		name: "United States",
+		name: "United States of America (the)",
 		fullName: "the United States of America",
 		independent: true,
 	},
@@ -3619,7 +3619,7 @@ const unM49Data: Array<{
 		code3: "URY",
 		unCode: "858",
 		name: "Uruguay",
-		fullName: "the Eastern Republic of Uruguay",
+		fullName: "the Oriental Republic of Uruguay",
 		independent: true,
 	},
 	{
@@ -3634,7 +3634,7 @@ const unM49Data: Array<{
 		code: "VA",
 		code3: "VAT",
 		unCode: "336",
-		name: "Holy See",
+		name: "Holy See (the)",
 		independent: true,
 	},
 	{
@@ -3648,7 +3648,7 @@ const unM49Data: Array<{
 		code: "VE",
 		code3: "VEN",
 		unCode: "862",
-		name: "Venezuela",
+		name: "Venezuela (Bolivarian Republic of)",
 		fullName: "the Bolivarian Republic of Venezuela",
 		independent: true,
 	},
@@ -3656,21 +3656,23 @@ const unM49Data: Array<{
 		code: "VG",
 		code3: "VGB",
 		unCode: "092",
-		name: "British Virgin Islands",
+		name: "Virgin Islands (British)",
+		fullName: "British Virgin Islands (the)",
 		independent: false,
 	},
 	{
 		code: "VI",
 		code3: "VIR",
 		unCode: "850",
-		name: "U.S. Virgin Islands",
+		name: "Virgin Islands (U.S.)",
+		fullName: "the Virgin Islands of the United States",
 		independent: false,
 	},
 	{
 		code: "VN",
 		code3: "VNM",
 		unCode: "704",
-		name: "Vietnam",
+		name: "Viet Nam",
 		fullName: "the Socialist Republic of Viet Nam",
 		independent: true,
 	},
@@ -3746,6 +3748,12 @@ const unM49Data: Array<{
 type SubdivisionEntry = NonNullable<Country["subdivisions"]>[number];
 type JsonObject = Record<string, unknown>;
 const toSubs = (data: JsonObject[]) => data as SubdivisionEntry[];
+// ISO 3166-1 "Local short name" per administrative language, sourced from the OBP
+// "Additional information" table. Keyed by alpha-2; absent for codes with none.
+const localShortNames = localShortNamesJson as Record<
+	string,
+	NonNullable<Country["localShortNames"]>
+>;
 const subdivisionsData: Record<string, SubdivisionEntry[]> = {
 	AD: toSubs(adSubdivisions),
 	AT: toSubs(atSubdivisions),
@@ -3941,8 +3949,6 @@ const subdivisionsData: Record<string, SubdivisionEntry[]> = {
 	VU: toSubs(vuSubdivisions),
 	WS: toSubs(wsSubdivisions),
 	GL: toSubs(glSubdivisions),
-	HK: toSubs(hkSubdivisions),
-	NC: toSubs(ncSubdivisions),
 	SH: toSubs(shSubdivisions),
 	BQ: toSubs(bqSubdivisions),
 };
@@ -3976,6 +3982,7 @@ export const getCountriesFromUN = createServerFn({
 			subdivisionCount: subdivisionsData[country.code]?.length,
 			name: country.name,
 			fullName: country.fullName,
+			localShortNames: localShortNames[country.code],
 			independent: country.independent,
 		};
 	});

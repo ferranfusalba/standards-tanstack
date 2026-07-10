@@ -19,7 +19,7 @@ import {
 	getHistoricalCurrenciesByCountry,
 	type HistoricalCountryCurrency,
 	type HistoricalCurrency,
-} from "../currencies";
+} from "..";
 
 describe("getCurrencies", () => {
 	let currencies: Currency[];

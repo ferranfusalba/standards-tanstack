@@ -25,7 +25,7 @@ import {
 	getRegionNameLocales,
 	type LocalizedName,
 	type RegionNameLocale,
-} from "../countries";
+} from "..";
 
 describe("getCountries (Intl)", () => {
 	let countries: Country[];

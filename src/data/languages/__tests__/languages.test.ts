@@ -18,7 +18,7 @@ import {
 	getLanguages,
 	getLanguagesByCountry,
 	type Language,
-} from "../languages";
+} from "..";
 
 describe("getLanguages", () => {
 	let languages: Language[];

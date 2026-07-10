@@ -12,11 +12,7 @@ vi.mock("@tanstack/react-start", () => ({
 	}),
 }));
 
-import {
-	getTimezonesFromIntl,
-	type Timezone,
-	type TimezoneIntl,
-} from "../timezones";
+import { getTimezonesFromIntl, type Timezone, type TimezoneIntl } from "..";
 
 describe("getTimezonesFromIntl", () => {
 	let timezones: Timezone[];

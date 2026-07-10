@@ -100,6 +100,13 @@ Inside `countries/`, the two concerns are kept apart: [`reference/`](src/data/co
 
 Heavy nested data (ISO 3166-2 subdivisions, per-country timezones/currencies) is lazy-loaded on row expand to keep the initial payload small.
 
+## Recent improvements
+
+Several capabilities were added while working through Master.dev's [TanStack Start & TanStack Query course](https://master.dev/courses/tanstack/), applying its patterns to this real codebase rather than a toy app:
+
+- **Public JSON API** ([`src/routes/api/`](src/routes/api/)) — read-only server routes exposing every dataset as cacheable JSON (`/api/countries`, `/api/currencies`, `/api/languages`, `/api/timezones`, plus a self-documenting `/api` index) with permissive CORS. Handlers reuse the same server functions that power the UI, so the API and views never drift.
+- **TanStack Query** for the on-demand, per-row fetches (subdivisions, localized names, locale switching) — replacing hand-rolled `useEffect` + cancellation with cached queries wired into SSR, so re-expanding a row is instant.
+
 ## Testing
 
 Tests live in `__tests__/` directories next to the code they cover — one per domain folder, with cross-domain tests in `src/data/__tests__/`. The data-layer suite validates the **data itself**, not just the code:

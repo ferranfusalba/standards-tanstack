@@ -15,6 +15,11 @@ import { Route as LanguagesIndexRouteImport } from './routes/languages/index'
 import { Route as CurrenciesIndexRouteImport } from './routes/currencies/index'
 import { Route as CountriesIndexRouteImport } from './routes/countries/index'
 import { Route as CompareIndexRouteImport } from './routes/compare/index'
+import { Route as ApiIndexRouteImport } from './routes/api/index'
+import { Route as ApiTimezonesRouteImport } from './routes/api/timezones'
+import { Route as ApiLanguagesRouteImport } from './routes/api/languages'
+import { Route as ApiCurrenciesRouteImport } from './routes/api/currencies'
+import { Route as ApiCountriesRouteImport } from './routes/api/countries'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,9 +51,39 @@ const CompareIndexRoute = CompareIndexRouteImport.update({
   path: '/compare/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiIndexRoute = ApiIndexRouteImport.update({
+  id: '/api/',
+  path: '/api/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiTimezonesRoute = ApiTimezonesRouteImport.update({
+  id: '/api/timezones',
+  path: '/api/timezones',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiLanguagesRoute = ApiLanguagesRouteImport.update({
+  id: '/api/languages',
+  path: '/api/languages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiCurrenciesRoute = ApiCurrenciesRouteImport.update({
+  id: '/api/currencies',
+  path: '/api/currencies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiCountriesRoute = ApiCountriesRouteImport.update({
+  id: '/api/countries',
+  path: '/api/countries',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/api/countries': typeof ApiCountriesRoute
+  '/api/currencies': typeof ApiCurrenciesRoute
+  '/api/languages': typeof ApiLanguagesRoute
+  '/api/timezones': typeof ApiTimezonesRoute
+  '/api': typeof ApiIndexRoute
   '/compare': typeof CompareIndexRoute
   '/countries': typeof CountriesIndexRoute
   '/currencies': typeof CurrenciesIndexRoute
@@ -57,6 +92,11 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/api/countries': typeof ApiCountriesRoute
+  '/api/currencies': typeof ApiCurrenciesRoute
+  '/api/languages': typeof ApiLanguagesRoute
+  '/api/timezones': typeof ApiTimezonesRoute
+  '/api': typeof ApiIndexRoute
   '/compare': typeof CompareIndexRoute
   '/countries': typeof CountriesIndexRoute
   '/currencies': typeof CurrenciesIndexRoute
@@ -66,6 +106,11 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/api/countries': typeof ApiCountriesRoute
+  '/api/currencies': typeof ApiCurrenciesRoute
+  '/api/languages': typeof ApiLanguagesRoute
+  '/api/timezones': typeof ApiTimezonesRoute
+  '/api/': typeof ApiIndexRoute
   '/compare/': typeof CompareIndexRoute
   '/countries/': typeof CountriesIndexRoute
   '/currencies/': typeof CurrenciesIndexRoute
@@ -76,6 +121,11 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/api/countries'
+    | '/api/currencies'
+    | '/api/languages'
+    | '/api/timezones'
+    | '/api'
     | '/compare'
     | '/countries'
     | '/currencies'
@@ -84,6 +134,11 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/api/countries'
+    | '/api/currencies'
+    | '/api/languages'
+    | '/api/timezones'
+    | '/api'
     | '/compare'
     | '/countries'
     | '/currencies'
@@ -92,6 +147,11 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/api/countries'
+    | '/api/currencies'
+    | '/api/languages'
+    | '/api/timezones'
+    | '/api/'
     | '/compare/'
     | '/countries/'
     | '/currencies/'
@@ -101,6 +161,11 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ApiCountriesRoute: typeof ApiCountriesRoute
+  ApiCurrenciesRoute: typeof ApiCurrenciesRoute
+  ApiLanguagesRoute: typeof ApiLanguagesRoute
+  ApiTimezonesRoute: typeof ApiTimezonesRoute
+  ApiIndexRoute: typeof ApiIndexRoute
   CompareIndexRoute: typeof CompareIndexRoute
   CountriesIndexRoute: typeof CountriesIndexRoute
   CurrenciesIndexRoute: typeof CurrenciesIndexRoute
@@ -152,11 +217,51 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CompareIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/': {
+      id: '/api/'
+      path: '/api'
+      fullPath: '/api'
+      preLoaderRoute: typeof ApiIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/timezones': {
+      id: '/api/timezones'
+      path: '/api/timezones'
+      fullPath: '/api/timezones'
+      preLoaderRoute: typeof ApiTimezonesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/languages': {
+      id: '/api/languages'
+      path: '/api/languages'
+      fullPath: '/api/languages'
+      preLoaderRoute: typeof ApiLanguagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/currencies': {
+      id: '/api/currencies'
+      path: '/api/currencies'
+      fullPath: '/api/currencies'
+      preLoaderRoute: typeof ApiCurrenciesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/countries': {
+      id: '/api/countries'
+      path: '/api/countries'
+      fullPath: '/api/countries'
+      preLoaderRoute: typeof ApiCountriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ApiCountriesRoute: ApiCountriesRoute,
+  ApiCurrenciesRoute: ApiCurrenciesRoute,
+  ApiLanguagesRoute: ApiLanguagesRoute,
+  ApiTimezonesRoute: ApiTimezonesRoute,
+  ApiIndexRoute: ApiIndexRoute,
   CompareIndexRoute: CompareIndexRoute,
   CountriesIndexRoute: CountriesIndexRoute,
   CurrenciesIndexRoute: CurrenciesIndexRoute,

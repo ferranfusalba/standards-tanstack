@@ -58,17 +58,15 @@ const config = defineConfig({
 		// every route is reachable from the home cards + the always-in-DOM drawer
 		// nav — so no explicit page list is needed.
 		//
-		// BLOCKED (2026-07-10): enabling this makes `vite build` fail — the
-		// prerenderer's Vite-preview server (start-plugin-core startPreviewServer →
-		// vite.preview(), proxied to a spawned Nitro server) returns 500 for every
-		// crawled page. The production server (`node .output/server/index.mjs`) and
-		// all route loaders are healthy — verified 200 on every route, warm and
-		// under the same concurrent/cold/TSS_PRERENDERING=true conditions; the root
-		// loader never throws. The 500 is in the Nitro 3.0.1-alpha.1 preview layer,
-		// not app code. Re-enable once the toolchain is upgraded past the alpha.
+		// Enabled on nitro 3.0.260610-beta (2026-07-10). Previously BLOCKED on nitro
+		// 3.0.1-alpha.1, whose preview layer (start-plugin-core startPreviewServer →
+		// vite.preview() → spawned Nitro server) returned 500 for every crawled page
+		// while app code stayed healthy (prod server 200 on every route). The beta
+		// upgrade fixed it: `vite build` now prerenders every page (route HTML +
+		// deep-link variants) to static HTML with no failures.
 		tanstackStart({
 			prerender: {
-				enabled: false,
+				enabled: true,
 				crawlLinks: true,
 			},
 		}),

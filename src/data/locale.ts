@@ -14,6 +14,20 @@ function isSupportedRegionLocale(code: string): boolean {
 	}
 }
 
+/** The visitor's raw Accept-Language header, or undefined when there's no active
+ *  request context. During static prerendering the loaders run at build time with
+ *  no request, and `getRequestHeader` throws ("No StartEvent found in
+ *  AsyncLocalStorage") rather than returning nothing — so swallow that and let
+ *  callers fall back to their defaults (English). The client re-detects/re-applies
+ *  the stored locale on mount regardless, so the prerendered HTML just defaults. */
+function acceptLanguageHeader(): string | undefined {
+	try {
+		return getRequestHeader("accept-language");
+	} catch {
+		return undefined;
+	}
+}
+
 /** Base language codes from an Accept-Language header, highest q-value first. */
 export function parseAcceptLanguage(header: string | undefined): string[] {
 	if (!header) return [];
@@ -53,7 +67,7 @@ function detectedSupportedLocales(header: string | undefined): string[] {
  */
 export const getPreferredLocale = createServerFn({ method: "GET" }).handler(
 	async (): Promise<string> =>
-		detectedSupportedLocales(getRequestHeader("accept-language"))[0] ?? "en",
+		detectedSupportedLocales(acceptLanguageHeader())[0] ?? "en",
 );
 
 /**
@@ -62,5 +76,5 @@ export const getPreferredLocale = createServerFn({ method: "GET" }).handler(
  */
 export const getDetectedLocales = createServerFn({ method: "GET" }).handler(
 	async (): Promise<string[]> =>
-		detectedSupportedLocales(getRequestHeader("accept-language")),
+		detectedSupportedLocales(acceptLanguageHeader()),
 );

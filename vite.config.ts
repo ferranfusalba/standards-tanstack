@@ -51,7 +51,27 @@ const config = defineConfig({
 			projects: ["./tsconfig.json"],
 		}),
 		tailwindcss(),
-		tanstackStart(),
+		// The whole site is static reference data (ISO/UN/IANA tables baked into TS
+		// files, no per-user state), so prerendering every page to HTML at build
+		// time is the goal: the SEO-critical initial load served from the CDN with
+		// no serverless cold start. The crawler starts at "/" and follows links —
+		// every route is reachable from the home cards + the always-in-DOM drawer
+		// nav — so no explicit page list is needed.
+		//
+		// BLOCKED (2026-07-10): enabling this makes `vite build` fail — the
+		// prerenderer's Vite-preview server (start-plugin-core startPreviewServer →
+		// vite.preview(), proxied to a spawned Nitro server) returns 500 for every
+		// crawled page. The production server (`node .output/server/index.mjs`) and
+		// all route loaders are healthy — verified 200 on every route, warm and
+		// under the same concurrent/cold/TSS_PRERENDERING=true conditions; the root
+		// loader never throws. The 500 is in the Nitro 3.0.1-alpha.1 preview layer,
+		// not app code. Re-enable once the toolchain is upgraded past the alpha.
+		tanstackStart({
+			prerender: {
+				enabled: false,
+				crawlLinks: true,
+			},
+		}),
 		viteReact(),
 	],
 	optimizeDeps: {

@@ -155,9 +155,11 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 						options={localeOptions}
 						detectedLocales={detectedLocales}
 					>
-						<Header />
-						{children}
-						<RootFooter />
+						<div className="flex min-h-screen flex-col bg-background">
+							<Header />
+							<main className="flex-1">{children}</main>
+							<RootFooter />
+						</div>
 					</LocaleProvider>
 				</ThemeProvider>
 				<TanStackDevtools

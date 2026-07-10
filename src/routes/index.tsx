@@ -70,7 +70,7 @@ function App() {
 	];
 
 	return (
-		<div className="min-h-screen bg-background">
+		<div className="bg-background">
 			<section className="bg-cyan-400 dark:bg-cyan-500 py-24 px-6 text-center">
 				<div className="max-w-5xl mx-auto">
 					<h1 className="text-6xl md:text-8xl font-black mb-6 text-slate-900">

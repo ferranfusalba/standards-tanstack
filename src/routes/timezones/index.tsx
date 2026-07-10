@@ -422,7 +422,7 @@ function Timezones() {
 	}, []);
 
 	return (
-		<div className="min-h-screen p-6">
+		<div className="p-6">
 			<h1 className="text-3xl font-bold mb-6" data-view-title="Timezones">
 				Timezones
 			</h1>

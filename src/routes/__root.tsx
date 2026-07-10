@@ -46,6 +46,10 @@ export const Route = createRootRoute({
 				content: "#0e1525",
 			},
 			{
+				name: "mobile-web-app-capable",
+				content: "yes",
+			},
+			{
 				name: "apple-mobile-web-app-capable",
 				content: "yes",
 			},
@@ -83,6 +87,7 @@ export const Route = createRootRoute({
 			{
 				rel: "manifest",
 				href: "/manifest.json",
+				crossOrigin: "use-credentials",
 			},
 			{
 				rel: "icon",

@@ -1,3 +1,4 @@
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import type { CellContext, ColumnDef, SortingFn } from "@tanstack/react-table";
 import {
@@ -41,7 +42,6 @@ import {
 	getSubdivisions,
 	getSubdivisionsByCountry,
 	type LocalizedName,
-	type SubdivisionData,
 } from "@/data/countries";
 import {
 	type CountryCurrency,
@@ -549,18 +549,12 @@ function LocalizedNamesExpandedRow({
 	alpha2Code: string;
 	colSpan: number;
 }) {
-	const [names, setNames] = React.useState<LocalizedName[] | null>(null);
-
-	React.useEffect(() => {
-		let cancelled = false;
-		setNames(null);
-		getCountryNames({ data: { code: alpha2Code } }).then((data) => {
-			if (!cancelled) setNames(data);
-		});
-		return () => {
-			cancelled = true;
-		};
-	}, [alpha2Code]);
+	// On-demand, per-country, never-changing data — React Query caches it by code
+	// and handles cancellation, so opening the same country again is instant.
+	const { data: names } = useQuery({
+		queryKey: ["countryNames", alpha2Code],
+		queryFn: () => getCountryNames({ data: { code: alpha2Code } }),
+	});
 
 	if (!names) {
 		return (
@@ -1082,23 +1076,15 @@ function ExpandedCountryRow({
 	historicalCurrencies: HistoricalCountryCurrency[];
 	hasSubdivisions: boolean;
 }) {
-	const [subs, setSubs] = React.useState<SubdivisionData[] | null>(null);
-	const [loading, setLoading] = React.useState(hasSubdivisions);
-
-	React.useEffect(() => {
-		if (!hasSubdivisions) return;
-		let cancelled = false;
-		setLoading(true);
-		getSubdivisions({ data: { code: alpha2Code } }).then((data) => {
-			if (!cancelled) {
-				setSubs(data);
-				setLoading(false);
-			}
-		});
-		return () => {
-			cancelled = true;
-		};
-	}, [alpha2Code, hasSubdivisions]);
+	// Subdivisions are lazy-loaded on expand (heavy, per-country). React Query
+	// fetches them only when the country actually has some (`enabled`), caches by
+	// code, and cancels in-flight fetches for us. `isLoading` is false while
+	// disabled, matching the old "only spin when there's something to load".
+	const { data: subs = null, isLoading: loading } = useQuery({
+		queryKey: ["subdivisions", alpha2Code],
+		queryFn: () => getSubdivisions({ data: { code: alpha2Code } }),
+		enabled: hasSubdivisions,
+	});
 
 	const showTimezones = timezones.length > 0;
 	const showCurrencies = currencies.length > 0;
@@ -1311,26 +1297,18 @@ function Countries() {
 	// the languages view, persisted in localStorage).
 	const { locale } = useLocale();
 	// Localized-name map for the chosen locale. Seeded from the loader (SSR for the
-	// detected locale), then refetched on its own (small) when the locale changes —
-	// without re-running the heavy loader. Always server-sourced, so it stays in
-	// sync with the subrow.
-	const [localizedNames, setLocalizedNames] = React.useState(
-		initialLocalizedNames,
-	);
-	const loadedNameLocale = React.useRef(initialNameLocale);
-	React.useEffect(() => {
-		if (locale === loadedNameLocale.current) return;
-		let cancelled = false;
-		getCountryNamesByLocale({ data: { locale } }).then((map) => {
-			if (!cancelled) {
-				setLocalizedNames(map);
-				loadedNameLocale.current = locale;
-			}
-		});
-		return () => {
-			cancelled = true;
-		};
-	}, [locale]);
+	// detected locale) via initialData, then refetched by React Query when the
+	// locale changes — without re-running the heavy loader. keepPreviousData holds
+	// the old locale's names on screen while the new ones load (no flash), matching
+	// the previous "swap only on success" behaviour. Always server-sourced, so it
+	// stays in sync with the subrow.
+	const { data: localizedNames = initialLocalizedNames } = useQuery({
+		queryKey: ["countryNamesByLocale", locale],
+		queryFn: () => getCountryNamesByLocale({ data: { locale } }),
+		initialData:
+			locale === initialNameLocale ? initialLocalizedNames : undefined,
+		placeholderData: keepPreviousData,
+	});
 	// Merge the picked-locale name + the (shipped) search blob onto the rows.
 	const countriesUNLocalized = React.useMemo(
 		() =>

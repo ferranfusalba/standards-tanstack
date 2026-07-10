@@ -1,10 +1,24 @@
+import { QueryClient } from "@tanstack/react-query";
 import { createRouter } from "@tanstack/react-router";
+import { setupRouterSsrQueryIntegration } from "@tanstack/react-router-ssr-query";
 
 // Import the generated route tree
 import { routeTree } from "./routeTree.gen";
 
 // Create a new router instance
 export const getRouter = () => {
+	// Everything React Query fetches here is static reference data (the same data
+	// behind /api), so it never goes stale within a session — cache it forever and
+	// keep it around for half an hour after a query goes unused.
+	const queryClient = new QueryClient({
+		defaultOptions: {
+			queries: {
+				staleTime: Number.POSITIVE_INFINITY,
+				gcTime: 30 * 60_000,
+			},
+		},
+	});
+
 	const router = createRouter({
 		routeTree,
 		context: {},
@@ -40,6 +54,15 @@ export const getRouter = () => {
 				</div>
 			</div>
 		),
+	});
+
+	// Bridge React Query with the router's SSR (hydrates server-fetched query data
+	// on the client) and inject the QueryClientProvider via wrapQueryClient, so
+	// useQuery works throughout the tree without a manual provider in the root.
+	setupRouterSsrQueryIntegration({
+		router,
+		queryClient,
+		wrapQueryClient: true,
 	});
 
 	return router;

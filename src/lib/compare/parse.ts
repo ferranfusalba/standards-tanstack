@@ -92,14 +92,16 @@ function tokenizeCSV(text: string): string[][] {
 
 export function parseCSV(text: string): Record<string, string>[] {
 	const rows = tokenizeCSV(text);
-	if (rows.length === 0) return [];
-	const headers = rows[0].map((h) => h.trim());
+	const headerRow = rows[0];
+	if (!headerRow) return [];
+	const headers = headerRow.map((h) => h.trim());
 	if (headers.every((h) => h === "")) {
 		throw new CompareParseError("CSV is missing a header row.");
 	}
 	const records: Record<string, string>[] = [];
 	for (let r = 1; r < rows.length; r++) {
 		const cells = rows[r];
+		if (!cells) continue;
 		if (cells.every((c) => c.trim() === "")) continue; // skip blank lines
 		const record: Record<string, string> = {};
 		headers.forEach((header, idx) => {
@@ -137,8 +139,9 @@ function findRecordArray(root: unknown): unknown[] | null {
 		if (Array.isArray(root[key])) return root[key] as unknown[];
 	}
 	const keys = Object.keys(root);
-	if (keys.length === 1 && Array.isArray(root[keys[0]])) {
-		return root[keys[0]] as unknown[];
+	const firstKey = keys[0];
+	if (keys.length === 1 && firstKey && Array.isArray(root[firstKey])) {
+		return root[firstKey] as unknown[];
 	}
 	return null;
 }

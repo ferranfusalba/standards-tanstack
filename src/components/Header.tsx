@@ -91,7 +91,7 @@ export default function Header() {
 			if (el) {
 				observer = new IntersectionObserver(
 					([entry]) => {
-						setScrolledPast(!entry.isIntersecting);
+						if (entry) setScrolledPast(!entry.isIntersecting);
 					},
 					{ rootMargin: "-64px 0px 0px 0px" },
 				);

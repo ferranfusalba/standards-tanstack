@@ -12,6 +12,7 @@ vi.mock("@tanstack/react-start", () => ({
 	}),
 }));
 
+import { nonNull } from "@/lib/test-utils";
 import {
 	type Currency,
 	getCurrencies,
@@ -149,8 +150,8 @@ describe("getHistoricalCurrenciesByCountry", () => {
 
 	it("contains historical currencies for Bulgaria", () => {
 		expect(map.BG).toBeDefined();
-		expect(map.BG.length).toBeGreaterThan(0);
-		const codes = map.BG.map((c) => c.code);
+		expect(nonNull(map.BG, "map.BG").length).toBeGreaterThan(0);
+		const codes = nonNull(map.BG, "map.BG").map((c) => c.code);
 		expect(codes).toContain("BGN");
 	});
 

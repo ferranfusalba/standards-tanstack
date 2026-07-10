@@ -152,6 +152,7 @@ function detectKeyColumn(
 	for (const header of unmapped) {
 		for (const field of config.keyFields) {
 			const index = indexes[field];
+			if (!index) continue;
 			let hits = 0;
 			for (const rec of theirRecords) {
 				const k = normalizeKey(rec[header]);

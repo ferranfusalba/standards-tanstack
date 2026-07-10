@@ -96,6 +96,7 @@ async function main() {
       for (const apiCode of apiCodes) {
         if (!localCodes.has(apiCode)) {
           const sub = apiCountry[apiCode]
+          if (!sub) continue
           issues.push(`[MISSING LOCAL] ${code}: ${apiCode} "${sub.name}" (${sub.type}) — exists in API but not in our data`)
         }
       }

@@ -28,11 +28,11 @@ import {
 } from "@/lib/use-table-url-state";
 
 interface LanguagesSearch {
-	q?: string;
-	sort?: string;
-	page?: number;
-	size?: number;
-	highlight?: string; // deep-link a language row (by 639-1 or 639-3 code), e.g. from the countries view
+	q?: string | undefined;
+	sort?: string | undefined;
+	page?: number | undefined;
+	size?: number | undefined;
+	highlight?: string | undefined; // deep-link a language row (by 639-1 or 639-3 code), e.g. from the countries view
 }
 
 export const Route = createFileRoute("/languages/")({
@@ -336,7 +336,7 @@ function Languages() {
 		// autoReset off only while a deep-link override forces a page, so a
 		// mount-time row-model recompute can't snap us back to page 1. Restored to
 		// default once the override yields. See countries route for the full note.
-		autoResetPageIndex: tableState !== tableUrl ? false : undefined,
+		...(tableState !== tableUrl && { autoResetPageIndex: false }),
 		globalFilterFn: "fuzzy",
 		state: {
 			globalFilter,

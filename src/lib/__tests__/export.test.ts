@@ -1,4 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
+import { nonNull } from "@/lib/test-utils";
 import { exportRowsCSV, exportRowsJSON } from "../export";
 
 // Mock DOM APIs used by downloadFile
@@ -96,7 +97,7 @@ describe("exportRowsCSV", () => {
 		const lines = text.split("\n");
 		// Inner quotes in JSON get escaped
 		expect(lines[1]).toContain("nested");
-		expect(lines[1][0]).toBe('"');
+		expect(nonNull(lines[1], "lines[1]")[0]).toBe('"');
 	});
 });
 

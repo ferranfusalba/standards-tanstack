@@ -1,4 +1,5 @@
 import { beforeAll, describe, expect, it, vi } from "vitest";
+import { nonNull } from "@/lib/test-utils";
 
 // biome-ignore lint/suspicious/noExplicitAny: mock factory for createServerFn
 type HandlerFn = (...args: any[]) => any;
@@ -90,41 +91,41 @@ describe("getCountriesFromUN (ccTLD + phone prefix)", () => {
 	});
 
 	it("derives ccTLDs as lowercase alpha-2 with the .uk override", () => {
-		expect(byCode.ES.ccTLD).toBe(".es");
-		expect(byCode.DE.ccTLD).toBe(".de");
-		expect(byCode.JP.ccTLD).toBe(".jp");
+		expect(nonNull(byCode.ES, "byCode.ES").ccTLD).toBe(".es");
+		expect(nonNull(byCode.DE, "byCode.DE").ccTLD).toBe(".de");
+		expect(nonNull(byCode.JP, "byCode.JP").ccTLD).toBe(".jp");
 		// GB uses .uk, not .gb
-		expect(byCode.GB.ccTLD).toBe(".uk");
+		expect(nonNull(byCode.GB, "byCode.GB").ccTLD).toBe(".uk");
 	});
 
 	it("uses the UNECE vehicle distinguishing signs (dsitCode)", () => {
-		expect(byCode.ES.dsitCode).toBe("E");
-		expect(byCode.US.dsitCode).toBe("USA");
+		expect(nonNull(byCode.ES, "byCode.ES").dsitCode).toBe("E");
+		expect(nonNull(byCode.US, "byCode.US").dsitCode).toBe("USA");
 		// UK changed its sign from "GB" to "UK" on 28 Sep 2021
-		expect(byCode.GB.dsitCode).toBe("UK");
+		expect(nonNull(byCode.GB, "byCode.GB").dsitCode).toBe("UK");
 	});
 
 	it("carries ISO 3166-1 admin languages (alpha-2/alpha-3) + local short names", () => {
 		// Single-language country: one entry with both ISO code forms.
-		expect(byCode.ES.localShortNames).toEqual([
+		expect(nonNull(byCode.ES, "byCode.ES").localShortNames).toEqual([
 			{ a2: "es", a3: "spa", name: "España" },
 		]);
 		// Multi-language country: one entry per admin language, in ISO order.
-		expect(byCode.CH.localShortNames).toEqual([
+		expect(nonNull(byCode.CH, "byCode.CH").localShortNames).toEqual([
 			{ a2: "de", a3: "deu", name: "Schweiz (die)" },
 			{ a2: "fr", a3: "fra", name: "Suisse (la)" },
 			{ a2: "it", a3: "ita", name: "Svizzera (la)" },
 			{ a2: "rm", a3: "roh", name: "Svizra (la)" },
 		]);
 		// A language with no ISO 639-1 code has an empty a2 but keeps its 639-2 a3.
-		expect(byCode.ZA.localShortNames).toHaveLength(11);
-		expect(byCode.ZA.localShortNames).toContainEqual({
+		expect(nonNull(byCode.ZA, "byCode.ZA").localShortNames).toHaveLength(11);
+		expect(nonNull(byCode.ZA, "byCode.ZA").localShortNames).toContainEqual({
 			a2: "",
 			a3: "nso",
 			name: "Afrika-Borwa",
 		});
 		// Antarctica has no administrative language → no local short name.
-		expect(byCode.AQ.localShortNames).toBeUndefined();
+		expect(nonNull(byCode.AQ, "byCode.AQ").localShortNames).toBeUndefined();
 	});
 
 	it("omits ccTLDs for reserved-but-undelegated codes", () => {
@@ -134,16 +135,16 @@ describe("getCountriesFromUN (ccTLD + phone prefix)", () => {
 	});
 
 	it("assigns ITU E.164 dialing codes", () => {
-		expect(byCode.ES.phonePrefix).toBe("+34");
-		expect(byCode.GB.phonePrefix).toBe("+44");
-		expect(byCode.FR.phonePrefix).toBe("+33");
+		expect(nonNull(byCode.ES, "byCode.ES").phonePrefix).toBe("+34");
+		expect(nonNull(byCode.GB, "byCode.GB").phonePrefix).toBe("+44");
+		expect(nonNull(byCode.FR, "byCode.FR").phonePrefix).toBe("+33");
 		// NANP members share country code +1
-		expect(byCode.US.phonePrefix).toBe("+1");
-		expect(byCode.CA.phonePrefix).toBe("+1");
-		expect(byCode.BB.phonePrefix).toBe("+1");
+		expect(nonNull(byCode.US, "byCode.US").phonePrefix).toBe("+1");
+		expect(nonNull(byCode.CA, "byCode.CA").phonePrefix).toBe("+1");
+		expect(nonNull(byCode.BB, "byCode.BB").phonePrefix).toBe("+1");
 		// Russia and Kazakhstan share +7
-		expect(byCode.RU.phonePrefix).toBe("+7");
-		expect(byCode.KZ.phonePrefix).toBe("+7");
+		expect(nonNull(byCode.RU, "byCode.RU").phonePrefix).toBe("+7");
+		expect(nonNull(byCode.KZ, "byCode.KZ").phonePrefix).toBe("+7");
 	});
 
 	it("leaves uninhabited territories without a phone prefix", () => {
@@ -163,32 +164,32 @@ describe("getCountriesFromUN (ccTLD + phone prefix)", () => {
 
 	it("assigns FIFA codes, validated against FIFA's official association list", () => {
 		// Codes identical to the ISO 3166-1 alpha-3.
-		expect(byCode.BR.fifaCode).toBe("BRA");
-		expect(byCode.ES.fifaCode).toBe("ESP");
-		expect(byCode.US.fifaCode).toBe("USA");
+		expect(nonNull(byCode.BR, "byCode.BR").fifaCode).toBe("BRA");
+		expect(nonNull(byCode.ES, "byCode.ES").fifaCode).toBe("ESP");
+		expect(nonNull(byCode.US, "byCode.US").fifaCode).toBe("USA");
 		// Codes that differ from alpha-3 (these get the ISO-mismatch highlight).
-		expect(byCode.DE.fifaCode).toBe("GER");
-		expect(byCode.CH.fifaCode).toBe("SUI");
-		expect(byCode.NL.fifaCode).toBe("NED");
+		expect(nonNull(byCode.DE, "byCode.DE").fifaCode).toBe("GER");
+		expect(nonNull(byCode.CH, "byCode.CH").fifaCode).toBe("SUI");
+		expect(nonNull(byCode.NL, "byCode.NL").fifaCode).toBe("NED");
 		// Non-sovereign territories that field their own FIFA side.
-		expect(byCode.FO.fifaCode).toBe("FRO"); // Faroe Islands
-		expect(byCode.TW.fifaCode).toBe("TPE"); // Chinese Taipei
-		expect(byCode.PF.fifaCode).toBe("TAH"); // Tahiti / French Polynesia
+		expect(nonNull(byCode.FO, "byCode.FO").fifaCode).toBe("FRO"); // Faroe Islands
+		expect(nonNull(byCode.TW, "byCode.TW").fifaCode).toBe("TPE"); // Chinese Taipei
+		expect(nonNull(byCode.PF, "byCode.PF").fifaCode).toBe("TAH"); // Tahiti / French Polynesia
 	});
 
 	it("uses FIFA's current code where the sources disagreed", () => {
 		// footballsquads.co.uk still lists pre-rename codes; FIFA, Wikipedia and RSSSF
 		// agree on the current ones, confirmed against inside.fifa.com/associations.
-		expect(byCode.LB.fifaCode).toBe("LBN"); // not LIB
-		expect(byCode.MN.fifaCode).toBe("MNG"); // not MGL
-		expect(byCode.SG.fifaCode).toBe("SGP"); // not SIN
-		expect(byCode.SD.fifaCode).toBe("SDN"); // not SUD
-		expect(byCode.PS.fifaCode).toBe("PLE"); // not RSSSF's PAL
+		expect(nonNull(byCode.LB, "byCode.LB").fifaCode).toBe("LBN"); // not LIB
+		expect(nonNull(byCode.MN, "byCode.MN").fifaCode).toBe("MNG"); // not MGL
+		expect(nonNull(byCode.SG, "byCode.SG").fifaCode).toBe("SGP"); // not SIN
+		expect(nonNull(byCode.SD, "byCode.SD").fifaCode).toBe("SDN"); // not SUD
+		expect(nonNull(byCode.PS, "byCode.PS").fifaCode).toBe("PLE"); // not RSSSF's PAL
 	});
 
 	it("omits FIFA codes for non-members", () => {
 		// Great Britain fields four home nations, so GB itself has no FIFA code.
-		expect(byCode.GB.fifaCode).toBeUndefined();
+		expect(nonNull(byCode.GB, "byCode.GB").fifaCode).toBeUndefined();
 		// IOC members that are not (yet) FIFA members.
 		for (const code of ["FM", "MC", "NR", "PW", "MH", "VA", "KI", "TV"]) {
 			expect(byCode[code]?.fifaCode).toBeUndefined();
@@ -284,7 +285,7 @@ describe("getLocalizedNameCountsByCountry", () => {
 
 	it("varies between countries (territories have CLDR gaps)", () => {
 		// Sparsely-covered territories carry fewer names than major countries.
-		expect(counts.IO).toBeLessThan(counts.DE);
+		expect(counts.IO).toBeLessThan(nonNull(counts.DE, "counts.DE"));
 	});
 });
 
@@ -383,9 +384,9 @@ describe("getCountryNamesByLocale", () => {
 			getLocalizedNamesAllByCountry as unknown as HandlerFn
 		)({ data: undefined, context: {}, signal: new AbortController().signal });
 		// Germany, keyed by locale.
-		expect(index.DE.en).toBe("Germany");
-		expect(index.DE.es).toBe("Alemania");
-		expect(index.DE.fr).toBe("Allemagne");
+		expect(nonNull(index.DE, "index.DE").en).toBe("Germany");
+		expect(nonNull(index.DE, "index.DE").es).toBe("Alemania");
+		expect(nonNull(index.DE, "index.DE").fr).toBe("Allemagne");
 		expect(Object.keys(index).length).toBeGreaterThan(200);
 	});
 

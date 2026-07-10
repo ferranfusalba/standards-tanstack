@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { nonNull } from "@/lib/test-utils";
 import type { Country } from "../../data/countries";
 import { codeChecks, codeDiverges, hasCodeDivergence } from "../country-codes";
 
@@ -24,13 +25,13 @@ describe("codeDiverges", () => {
 	it("flags a code that differs from alpha-3", () => {
 		expect(
 			codeDiverges(
-				byId.fifaCode,
+				nonNull(byId.fifaCode, "byId.fifaCode"),
 				country({ alpha3Code: "CHE", fifaCode: "SUI" }),
 			),
 		).toBe(true);
 		expect(
 			codeDiverges(
-				byId.iocCode,
+				nonNull(byId.iocCode, "byId.iocCode"),
 				country({ alpha3Code: "DEU", iocCode: "GER" }),
 			),
 		).toBe(true);
@@ -43,43 +44,46 @@ describe("codeDiverges", () => {
 			iocCode: "BRA",
 			fifaCode: "BRA",
 		});
-		expect(codeDiverges(byId.icaoCode, c)).toBe(false);
-		expect(codeDiverges(byId.iocCode, c)).toBe(false);
-		expect(codeDiverges(byId.fifaCode, c)).toBe(false);
+		expect(codeDiverges(nonNull(byId.icaoCode, "byId.icaoCode"), c)).toBe(
+			false,
+		);
+		expect(codeDiverges(nonNull(byId.iocCode, "byId.iocCode"), c)).toBe(false);
+		expect(codeDiverges(nonNull(byId.fifaCode, "byId.fifaCode"), c)).toBe(
+			false,
+		);
 	});
 
 	it("treats the vehicle sign as matching either alpha-2 or alpha-3", () => {
 		// Matches alpha-2 → not a divergence.
 		expect(
 			codeDiverges(
-				byId.dsitCode,
+				nonNull(byId.dsitCode, "byId.dsitCode"),
 				country({ alpha2Code: "BR", alpha3Code: "BRA", dsitCode: "BR" }),
 			),
 		).toBe(false);
 		// Matches alpha-3 → not a divergence.
 		expect(
 			codeDiverges(
-				byId.dsitCode,
+				nonNull(byId.dsitCode, "byId.dsitCode"),
 				country({ alpha2Code: "US", alpha3Code: "USA", dsitCode: "USA" }),
 			),
 		).toBe(false);
 		// Matches neither → divergence (e.g. Spain's "E").
 		expect(
 			codeDiverges(
-				byId.dsitCode,
+				nonNull(byId.dsitCode, "byId.dsitCode"),
 				country({ alpha2Code: "ES", alpha3Code: "ESP", dsitCode: "E" }),
 			),
 		).toBe(true);
 	});
 
 	it("never flags an absent code", () => {
-		const c = country({
-			alpha3Code: "GBR",
-			fifaCode: undefined,
-			iocCode: undefined,
-		});
-		expect(codeDiverges(byId.fifaCode, c)).toBe(false);
-		expect(codeDiverges(byId.iocCode, c)).toBe(false);
+		// fifaCode/iocCode absent — the "never flags an absent code" case.
+		const c = country({ alpha3Code: "GBR" });
+		expect(codeDiverges(nonNull(byId.fifaCode, "byId.fifaCode"), c)).toBe(
+			false,
+		);
+		expect(codeDiverges(nonNull(byId.iocCode, "byId.iocCode"), c)).toBe(false);
 	});
 });
 

@@ -1,6 +1,7 @@
 // biome-ignore-all lint/correctness/useUniqueElementIds: fixed ids are fine in isolated, cleaned-up component tests
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
+import { nonNull } from "@/lib/test-utils";
 import { LocaleSelect } from "../LocaleSelect";
 
 afterEach(cleanup);
@@ -33,8 +34,8 @@ describe("LocaleSelect", () => {
 			"Detected",
 			"All locales",
 		]);
-		expect(optionValues(groups[0])).toEqual(["ca", "es"]);
-		expect(optionValues(groups[1])).toEqual(["ar", "en"]);
+		expect(optionValues(nonNull(groups[0], "groups[0]"))).toEqual(["ca", "es"]);
+		expect(optionValues(nonNull(groups[1], "groups[1]"))).toEqual(["ar", "en"]);
 	});
 
 	it("renders a flat list when nothing is detected", () => {

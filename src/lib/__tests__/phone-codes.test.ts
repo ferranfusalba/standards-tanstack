@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { nonNull } from "@/lib/test-utils";
 import {
 	collapseSharedPhoneCodes,
 	PRIMARY_COUNTRY_BY_CODE,
@@ -8,7 +9,7 @@ type Row = {
 	flag: string;
 	alpha2Code: string;
 	name: string;
-	phonePrefix?: string;
+	phonePrefix?: string | undefined;
 };
 
 const row = (
@@ -27,8 +28,8 @@ describe("collapseSharedPhoneCodes", () => {
 		]);
 
 		expect(out).toHaveLength(1);
-		expect(out[0].alpha2Code).toBe("US"); // primary, not first
-		expect(out[0].otherCountries).toEqual([
+		expect(nonNull(out[0], "out[0]").alpha2Code).toBe("US"); // primary, not first
+		expect(nonNull(out[0], "out[0]").otherCountries).toEqual([
 			{ flag: "flag:CA", alpha2Code: "CA", name: "Canada" },
 			{ flag: "flag:JM", alpha2Code: "JM", name: "Jamaica" },
 		]);
@@ -69,8 +70,8 @@ describe("collapseSharedPhoneCodes", () => {
 			row("JM", "Jamaica", "+1"),
 		]);
 		expect(out).toHaveLength(1);
-		expect(out[0].alpha2Code).toBe("BB");
-		expect(out[0].otherCountries).toEqual([
+		expect(nonNull(out[0], "out[0]").alpha2Code).toBe("BB");
+		expect(nonNull(out[0], "out[0]").otherCountries).toEqual([
 			{ flag: "flag:JM", alpha2Code: "JM", name: "Jamaica" },
 		]);
 	});
@@ -81,7 +82,9 @@ describe("collapseSharedPhoneCodes", () => {
 			{ alpha2Code: "US", phonePrefix: "+1" },
 			{ alpha2Code: "CA", phonePrefix: "+1" },
 		]);
-		expect(out[0].otherCountries).toEqual([{ alpha2Code: "CA" }]);
+		expect(nonNull(out[0], "out[0]").otherCountries).toEqual([
+			{ alpha2Code: "CA" },
+		]);
 	});
 
 	it("has a primary defined for every currently shared code", () => {

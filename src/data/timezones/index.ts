@@ -66,7 +66,7 @@ export const getTimezonesFromIntl = createServerFn({
 
 	const timezones: TimezoneIntl[] = tzIds.map((id) => {
 		const parts = id.split("/");
-		const region = parts.length > 1 ? parts[0] : "UTC";
+		const region = parts.length > 1 ? (parts[0] ?? "UTC") : "UTC";
 		const name =
 			parts.length > 1 ? parts.slice(1).join("/").replace(/_/g, " ") : id;
 
@@ -130,16 +130,20 @@ export const getTimezonesFromIANA = createServerFn({
 
 			// Parse tab-separated values: countries, coordinates, id, comment
 			const parts = line.split("\t");
-			if (parts.length < 3) continue;
-
-			const countryCodes = parts[0].split(",");
-			const coordinates = parts[1];
-			const id = parts[2];
+			// Need countries, coordinates, and id; comment (parts[3]) is optional.
+			const [rawCountries, coordinates, id] = parts;
+			if (
+				rawCountries === undefined ||
+				coordinates === undefined ||
+				id === undefined
+			)
+				continue;
+			const countryCodes = rawCountries.split(",");
 			const comment = parts[3] || null;
 
 			// Extract region from timezone ID
 			const idParts = id.split("/");
-			const region = idParts.length > 1 ? idParts[0] : "UTC";
+			const region = idParts.length > 1 ? (idParts[0] ?? "UTC") : "UTC";
 			const name =
 				idParts.length > 1 ? idParts.slice(1).join("/").replace(/_/g, " ") : id;
 

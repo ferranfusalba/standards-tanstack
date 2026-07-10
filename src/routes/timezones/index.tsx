@@ -37,15 +37,15 @@ const offsetSortingFn: SortingFn<any> = (rowA, rowB, columnId) =>
 	parseUtcOffsetMinutes(rowB.getValue(columnId));
 
 interface TimezonesSearch {
-	highlight?: string;
-	q?: string;
-	regions?: string[];
-	size?: number;
-	intl_sort?: string;
-	intl_page?: number;
-	intl_f?: string;
-	iana_sort?: string;
-	iana_page?: number;
+	highlight?: string | undefined;
+	q?: string | undefined;
+	regions?: string[] | undefined;
+	size?: number | undefined;
+	intl_sort?: string | undefined;
+	intl_page?: number | undefined;
+	intl_f?: string | undefined;
+	iana_sort?: string | undefined;
+	iana_page?: number | undefined;
 }
 
 export const Route = createFileRoute("/timezones/")({
@@ -356,7 +356,7 @@ function Timezones() {
 		// autoReset off only while a deep-link override forces a page, so a
 		// mount-time row-model recompute can't snap us back to page 1. Restored to
 		// default once the override yields. See countries route for the full note.
-		autoResetPageIndex: intlState !== intlUrl ? false : undefined,
+		...(intlState !== intlUrl && { autoResetPageIndex: false }),
 		globalFilterFn: "fuzzy",
 		state: {
 			globalFilter,
@@ -389,7 +389,7 @@ function Timezones() {
 		getSortedRowModel: getSortedRowModel(),
 		// See the Intl table above — autoReset off only while the deep-link
 		// override is forcing a page.
-		autoResetPageIndex: ianaState !== ianaUrl ? false : undefined,
+		...(ianaState !== ianaUrl && { autoResetPageIndex: false }),
 		globalFilterFn: "fuzzy",
 		state: {
 			globalFilter,

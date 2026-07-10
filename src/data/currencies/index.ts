@@ -1569,8 +1569,8 @@ export const getCurrencies = createServerFn({
 export interface CountryCurrency {
 	code: string;
 	name: string;
-	symbol?: string;
-	type?: Currency["type"];
+	symbol?: string | undefined;
+	type?: Currency["type"] | undefined;
 }
 
 // Returns a map of country code → currencies for that country
@@ -1606,7 +1606,7 @@ export interface HistoricalCurrency {
 	numericCode?: string;
 	name: string;
 	country: string;
-	countryCode?: string;
+	countryCode?: string | undefined;
 	withdrawalDate: string;
 	isFund: boolean;
 }
@@ -3100,9 +3100,11 @@ export const getHistoricalCurrenciesByCountry = createServerFn({
 	const map: Record<string, HistoricalCountryCurrency[]> = {};
 
 	for (const ccy of currencies) {
-		if (!ccy.countryCode) continue;
-		if (!map[ccy.countryCode]) map[ccy.countryCode] = [];
-		map[ccy.countryCode].push({
+		const cc = ccy.countryCode;
+		if (!cc) continue;
+		const bucket = map[cc] ?? [];
+		map[cc] = bucket;
+		bucket.push({
 			code: ccy.code,
 			name: ccy.name,
 			withdrawalDate: ccy.withdrawalDate,

@@ -5,6 +5,7 @@ import {
 	type SubSort,
 	sortSubdivisions,
 } from "@/lib/subdivision-sort";
+import { nonNull } from "@/lib/test-utils";
 
 describe("nextSubSort", () => {
 	it("starts a fresh column ascending", () => {
@@ -106,6 +107,6 @@ describe("sortSubdivisions", () => {
 	it("sorts by the flag column via the supplied resolver", () => {
 		const byFlag = sortSubdivisions(subs, { key: "flag", dir: "desc" }, flagOf);
 		// Only Quebec has a flag, so it leads when sorting flags descending.
-		expect(byFlag[0].code).toBe("CA-QC");
+		expect(nonNull(byFlag[0], "byFlag[0]").code).toBe("CA-QC");
 	});
 });

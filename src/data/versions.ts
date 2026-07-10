@@ -2,11 +2,11 @@ import { createServerFn } from "@tanstack/react-start";
 
 export interface DataVersions {
 	node: string;
-	icu?: string;
-	unicode?: string;
-	cldrRuntime?: string;
+	icu?: string | undefined;
+	unicode?: string | undefined;
+	cldrRuntime?: string | undefined;
 	cldrCurated: string;
-	tz?: string;
+	tz?: string | undefined;
 	serverStarted: string;
 }
 

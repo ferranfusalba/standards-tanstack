@@ -27,13 +27,13 @@ import {
 } from "@/lib/use-table-url-state";
 
 interface CurrenciesSearch {
-	highlight?: string;
-	q?: string;
-	size?: number;
-	intl_sort?: string;
-	intl_page?: number;
-	hist_sort?: string;
-	hist_page?: number;
+	highlight?: string | undefined;
+	q?: string | undefined;
+	size?: number | undefined;
+	intl_sort?: string | undefined;
+	intl_page?: number | undefined;
+	hist_sort?: string | undefined;
+	hist_page?: number | undefined;
 }
 
 export const Route = createFileRoute("/currencies/")({
@@ -216,7 +216,7 @@ function Currencies() {
 		// Disable autoReset only while a deep-link override forces a page, so a
 		// mount-time row-model recompute can't snap us back to page 1. Restored to
 		// default once the override yields. See countries route for the full note.
-		autoResetPageIndex: intlState !== intlUrl ? false : undefined,
+		...(intlState !== intlUrl && { autoResetPageIndex: false }),
 		globalFilterFn: "fuzzy",
 		state: {
 			globalFilter,
@@ -313,7 +313,7 @@ function Currencies() {
 		getSortedRowModel: getSortedRowModel(),
 		// See the active table above — autoReset off only while the deep-link
 		// override is forcing a page.
-		autoResetPageIndex: histState !== histUrl ? false : undefined,
+		...(histState !== histUrl && { autoResetPageIndex: false }),
 		globalFilterFn: "fuzzy",
 		state: {
 			globalFilter,

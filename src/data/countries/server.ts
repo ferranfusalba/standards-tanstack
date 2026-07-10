@@ -90,9 +90,9 @@ export const getMissingCountries = createServerFn({
 	const enRegionNames = new Intl.DisplayNames(["en"], { type: "region" });
 	const countries: Array<
 		Country & {
-			cldrName?: string;
+			cldrName?: string | undefined;
 			localizedNameCount?: number;
-			cellNotes?: Record<string, string>;
+			cellNotes?: Record<string, string> | undefined;
 		}
 	> = missingCountries.map((country) => {
 		const vc = vehicleCodes[country.code];

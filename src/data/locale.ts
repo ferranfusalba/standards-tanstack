@@ -37,7 +37,7 @@ export function parseAcceptLanguage(header: string | undefined): string[] {
 			const [tag, ...params] = part.trim().split(";");
 			const q = params.map((p) => p.trim()).find((p) => p.startsWith("q="));
 			return {
-				code: tag.trim().toLowerCase().split("-")[0],
+				code: tag?.trim().toLowerCase().split("-")[0] ?? "",
 				q: q ? Number.parseFloat(q.slice(2)) : 1,
 			};
 		})

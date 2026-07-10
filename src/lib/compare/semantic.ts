@@ -58,7 +58,8 @@ export const embedTexts: Embedder = async (texts) => {
 export function cosine(a: number[], b: number[]): number {
 	let sum = 0;
 	const n = Math.min(a.length, b.length);
-	for (let i = 0; i < n; i++) sum += a[i] * b[i];
+	// i < n <= a.length and b.length, so the `?? 0` fallbacks never fire.
+	for (let i = 0; i < n; i++) sum += (a[i] ?? 0) * (b[i] ?? 0);
 	return sum;
 }
 
@@ -81,7 +82,11 @@ export function bestSemanticPairs(
 	const candidates: SemanticPair[] = [];
 	for (let t = 0; t < theirVecs.length; t++) {
 		for (let o = 0; o < ourVecs.length; o++) {
-			const score = cosine(theirVecs[t], ourVecs[o]);
+			// t and o are bounded by the loop conditions, so both lookups are present.
+			const theirVec = theirVecs[t];
+			const ourVec = ourVecs[o];
+			if (!theirVec || !ourVec) continue;
+			const score = cosine(theirVec, ourVec);
 			if (score >= threshold) candidates.push({ their: t, our: o, score });
 		}
 	}
@@ -142,6 +147,7 @@ export async function reconcileSemantically(
 	for (const { our, their } of pairs) {
 		const missingRow = missing[our];
 		const extraRow = extra[their];
+		if (!missingRow || !extraRow) continue;
 		const ourRow = missingRow.ourRow;
 		const theirRow = extraRow.theirRow;
 		if (!ourRow || !theirRow) continue;

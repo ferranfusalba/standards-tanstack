@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { nonNull } from "@/lib/test-utils";
 import {
 	CompareParseError,
 	detectFormat,
@@ -33,8 +34,8 @@ describe("parseCSV", () => {
 		const rows = parseCSV(
 			'code,name\nXAF,"Franc, Central African"\nQ,"a ""b"" c"',
 		);
-		expect(rows[0].name).toBe("Franc, Central African");
-		expect(rows[1].name).toBe('a "b" c');
+		expect(nonNull(rows[0], "rows[0]").name).toBe("Franc, Central African");
+		expect(nonNull(rows[1], "rows[1]").name).toBe('a "b" c');
 	});
 
 	it("handles quoted fields spanning newlines and CRLF endings", () => {

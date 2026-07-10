@@ -3,13 +3,13 @@ import countryLanguagesJson from "./country-languages.json";
 
 export interface Language {
 	code: string; // ISO 639-1 (2-letter code); empty for languages that only have a 639-3 code
-	iso639_3?: string; // ISO 639-3 (3-letter code); undefined only for "bh" (639-2 collective)
+	iso639_3?: string | undefined; // ISO 639-3 (3-letter code); undefined only for "bh" (639-2 collective)
 	name: string; // English name from ISO standard
-	nativeName?: string; // Native name from Intl.DisplayNames
-	localizedName?: string; // Name in selected locale (set dynamically)
-	bcp47Variants?: string[]; // Official BCP 47 variants from IANA
-	cldrVariants?: string[]; // All variants from Unicode CLDR
-	intlVariants?: string[]; // Variants supported by Intl.DisplayNames
+	nativeName?: string | undefined; // Native name from Intl.DisplayNames
+	localizedName?: string | undefined; // Name in selected locale (set dynamically)
+	bcp47Variants?: string[] | undefined; // Official BCP 47 variants from IANA
+	cldrVariants?: string[] | undefined; // All variants from Unicode CLDR
+	intlVariants?: string[] | undefined; // Variants supported by Intl.DisplayNames
 }
 
 // BCP 47 Variants - Official variants from IANA Language Subtag Registry

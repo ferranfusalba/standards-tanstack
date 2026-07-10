@@ -41,8 +41,8 @@ function Harness({
 	return (
 		<DataTable
 			table={table}
-			columnSources={columnSources}
-			sourceMeta={sourceMeta}
+			{...(columnSources !== undefined && { columnSources })}
+			{...(sourceMeta !== undefined && { sourceMeta })}
 		/>
 	);
 }

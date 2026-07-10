@@ -12,6 +12,7 @@ vi.mock("@tanstack/react-start", () => ({
 	}),
 }));
 
+import { nonNull } from "@/lib/test-utils";
 import {
 	type CountryLanguage,
 	getLanguageNamesByLocale,
@@ -169,19 +170,25 @@ describe("getLanguagesByCountry", () => {
 	});
 
 	it("captures regional co-official languages ISO omits (Spain)", () => {
-		const codes = map.ES.map((l) => l.lang);
+		const codes = nonNull(map.ES, "map.ES").map((l) => l.lang);
 		// es official + ca/gl/eu regional — none of which ISO 3166 records for ES
 		expect(codes).toEqual(expect.arrayContaining(["es", "ca", "gl", "eu"]));
-		expect(map.ES.find((l) => l.lang === "es")?.status).toBe("official");
-		expect(map.ES.find((l) => l.lang === "ca")?.status).toBe("regional");
+		expect(nonNull(map.ES, "map.ES").find((l) => l.lang === "es")?.status).toBe(
+			"official",
+		);
+		expect(nonNull(map.ES, "map.ES").find((l) => l.lang === "ca")?.status).toBe(
+			"regional",
+		);
 	});
 
 	it("resolves names, including 639-3-only languages", () => {
 		// Switzerland's de-facto Swiss German has only a 639-3 code
-		const gsw = map.CH.find((l) => l.lang === "gsw");
+		const gsw = nonNull(map.CH, "map.CH").find((l) => l.lang === "gsw");
 		expect(gsw?.name).toBe("Swiss German");
 		expect(gsw?.status).toBe("de_facto");
-		expect(map.CH.find((l) => l.lang === "de")?.name).toBe("German");
+		expect(nonNull(map.CH, "map.CH").find((l) => l.lang === "de")?.name).toBe(
+			"German",
+		);
 	});
 
 	it("every referenced language code resolves to a name", () => {

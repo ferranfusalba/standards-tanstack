@@ -36,7 +36,7 @@ export function parseSorting(value: string | undefined): SortingState {
 			const [id, dir] = part.split(":");
 			return { id, desc: dir === "desc" };
 		})
-		.filter((s) => !!s.id);
+		.filter((s): s is { id: string; desc: boolean } => !!s.id);
 }
 
 export function serializeSorting(sorting: SortingState): string | undefined {

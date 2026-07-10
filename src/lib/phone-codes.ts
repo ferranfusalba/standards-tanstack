@@ -78,7 +78,9 @@ export function collapseSharedPhoneCodes<T extends Record<string, unknown>>(
 		if (emitted.has(code as string)) continue;
 		emitted.add(code as string);
 		const primaryCode = PRIMARY_COUNTRY_BY_CODE[code as string];
+		// group.length > 1 here (unique/empty codes already continued), so group[0] exists.
 		const primary = group.find((g) => g.alpha2Code === primaryCode) ?? group[0];
+		if (!primary) continue;
 		const otherCountries = group.filter((g) => g !== primary).map(toRef);
 		out.push({ ...primary, otherCountries });
 	}

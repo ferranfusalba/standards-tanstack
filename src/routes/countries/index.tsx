@@ -84,17 +84,17 @@ type ExpandSection =
 	| "details";
 
 interface CountriesSearch {
-	highlight?: string;
-	expandTz?: boolean;
-	expandCcy?: boolean;
-	q?: string;
-	size?: number;
-	un_sort?: string;
-	un_page?: number;
-	un_f?: string;
-	un_mismatch?: boolean;
-	missing_sort?: string;
-	missing_page?: number;
+	highlight?: string | undefined;
+	expandTz?: boolean | undefined;
+	expandCcy?: boolean | undefined;
+	q?: string | undefined;
+	size?: number | undefined;
+	un_sort?: string | undefined;
+	un_page?: number | undefined;
+	un_f?: string | undefined;
+	un_mismatch?: boolean | undefined;
+	missing_sort?: string | undefined;
+	missing_page?: number | undefined;
 }
 
 /** Unwrap a settled result, or log and fall back. Lets the countries loader
@@ -583,8 +583,9 @@ function LocalizedNamesExpandedRow({
 						const real = cells.filter((n): n is LocalizedName => n != null);
 						// Pad the ragged last row with one spanning cell so columns align.
 						const padCols = (COLUMNS - real.length) * 3;
+						// real[0] is the c=0 cell (names[r]), always present since r < names.length.
 						return (
-							<tr key={real[0].locale}>
+							<tr key={real[0]?.locale}>
 								{real.map((n, c) => (
 									<React.Fragment key={n.locale}>
 										<td
@@ -879,7 +880,7 @@ function DetailField({
 	children,
 }: {
 	label: string;
-	source?: string;
+	source?: string | undefined;
 	children: React.ReactNode;
 }) {
 	return (
@@ -1733,13 +1734,14 @@ function Countries() {
 						return <span className="text-muted-foreground">-</span>;
 					// Single language: show its locale (font-mono, like the expanded
 					// subrow) followed by the value (e.g. Spain → "es España").
-					if (names.length === 1)
+					const [first] = names;
+					if (first && names.length === 1)
 						return (
 							<span className="inline-flex items-center gap-2">
 								<span className="font-mono text-muted-foreground">
-									{names[0].a2 || names[0].a3}
+									{first.a2 || first.a3}
 								</span>
-								{names[0].name}
+								{first.name}
 							</span>
 						);
 					// Multiple: show the count with a chevron that opens the subrow.
@@ -1964,8 +1966,9 @@ function Countries() {
 		// which would otherwise resetPageIndex() → onPaginationChange(0) and snap us
 		// back to page 1 before the user sees the linked row. Restored to default
 		// (undefined) the moment the override yields, so the normal reset-to-page-1
-		// on search/filter keeps working.
-		autoResetPageIndex: unState !== unUrl ? false : undefined,
+		// on search/filter keeps working. Omit the key entirely to restore the
+		// default rather than passing `undefined` (rejected under eOPT).
+		...(unState !== unUrl ? { autoResetPageIndex: false } : {}),
 		// Hidden, search-only column that indexes every localized spelling.
 		initialState: { columnVisibility: { localizedSearch: false } },
 		globalFilterFn: "fuzzy",
@@ -2098,13 +2101,17 @@ function Countries() {
 					};
 				else if (key && keepCell.has(key)) cell = c.cell;
 				else cell = valueOrDash;
+				// Spread only the keys that are actually set: TanStack's ColumnDef
+				// optionals reject an explicit `undefined` under eOPT.
 				const common = {
-					header: c.header,
-					size: c.size,
-					maxSize: c.maxSize,
-					enableHiding: c.enableHiding,
-					enableGlobalFilter: c.enableGlobalFilter,
-					cell,
+					...(cell !== undefined && { cell }),
+					...(c.header !== undefined && { header: c.header }),
+					...(c.size !== undefined && { size: c.size }),
+					...(c.maxSize !== undefined && { maxSize: c.maxSize }),
+					...(c.enableHiding !== undefined && { enableHiding: c.enableHiding }),
+					...(c.enableGlobalFilter !== undefined && {
+						enableGlobalFilter: c.enableGlobalFilter,
+					}),
 				};
 				// Accessor columns key off the data; localShortName has no value for
 				// missing countries, so an empty accessorFn drives valueOrDash to "-".

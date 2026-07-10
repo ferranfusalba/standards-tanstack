@@ -9,7 +9,7 @@ import { readFileSync, readdirSync } from 'fs'
 import { join } from 'path'
 
 const API_BASE = 'https://iso3166-2-api.vercel.app/api/alpha'
-const SUBDIVISIONS_DIR = join(import.meta.dirname, '../src/data/subdivisions')
+const SUBDIVISIONS_DIR = join(import.meta.dirname, '../src/data/countries/reference/subdivisions')
 
 interface LocalEntry {
   code: string

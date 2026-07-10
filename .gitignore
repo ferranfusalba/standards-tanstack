@@ -11,3 +11,6 @@ count.txt
 .output
 .vinxi
 todos.json
+
+# Local-only case study / notes (kept out of the repo)
+docs/

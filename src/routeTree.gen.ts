@@ -83,12 +83,12 @@ export interface FileRoutesByFullPath {
   '/api/currencies': typeof ApiCurrenciesRoute
   '/api/languages': typeof ApiLanguagesRoute
   '/api/timezones': typeof ApiTimezonesRoute
-  '/api': typeof ApiIndexRoute
-  '/compare': typeof CompareIndexRoute
-  '/countries': typeof CountriesIndexRoute
-  '/currencies': typeof CurrenciesIndexRoute
-  '/languages': typeof LanguagesIndexRoute
-  '/timezones': typeof TimezonesIndexRoute
+  '/api/': typeof ApiIndexRoute
+  '/compare/': typeof CompareIndexRoute
+  '/countries/': typeof CountriesIndexRoute
+  '/currencies/': typeof CurrenciesIndexRoute
+  '/languages/': typeof LanguagesIndexRoute
+  '/timezones/': typeof TimezonesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -125,12 +125,12 @@ export interface FileRouteTypes {
     | '/api/currencies'
     | '/api/languages'
     | '/api/timezones'
-    | '/api'
-    | '/compare'
-    | '/countries'
-    | '/currencies'
-    | '/languages'
-    | '/timezones'
+    | '/api/'
+    | '/compare/'
+    | '/countries/'
+    | '/currencies/'
+    | '/languages/'
+    | '/timezones/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -185,42 +185,42 @@ declare module '@tanstack/react-router' {
     '/timezones/': {
       id: '/timezones/'
       path: '/timezones'
-      fullPath: '/timezones'
+      fullPath: '/timezones/'
       preLoaderRoute: typeof TimezonesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/languages/': {
       id: '/languages/'
       path: '/languages'
-      fullPath: '/languages'
+      fullPath: '/languages/'
       preLoaderRoute: typeof LanguagesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/currencies/': {
       id: '/currencies/'
       path: '/currencies'
-      fullPath: '/currencies'
+      fullPath: '/currencies/'
       preLoaderRoute: typeof CurrenciesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/countries/': {
       id: '/countries/'
       path: '/countries'
-      fullPath: '/countries'
+      fullPath: '/countries/'
       preLoaderRoute: typeof CountriesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/compare/': {
       id: '/compare/'
       path: '/compare'
-      fullPath: '/compare'
+      fullPath: '/compare/'
       preLoaderRoute: typeof CompareIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/': {
       id: '/api/'
       path: '/api'
-      fullPath: '/api'
+      fullPath: '/api/'
       preLoaderRoute: typeof ApiIndexRouteImport
       parentRoute: typeof rootRouteImport
     }

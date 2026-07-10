@@ -125,7 +125,7 @@ export const getMissingCountries = createServerFn({
 export const getSubdivisions = createServerFn({
 	method: "GET",
 })
-	.inputValidator((data: { code: string }) => data)
+	.validator((data: { code: string }) => data)
 	.handler(async ({ data }) => {
 		const subs = subdivisionsData[data.code];
 		return (subs ?? []) as SubdivisionData[];

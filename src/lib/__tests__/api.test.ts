@@ -1,14 +1,14 @@
 import { describe, expect, it, vi } from "vitest";
 
 // Chainable createServerFn mock: the data modules define functions with both
-// `.handler()` and `.inputValidator().handler()`, so the builder must support
+// `.handler()` and `.validator().handler()`, so the builder must support
 // both and collapse to the handler fn. (See src/data/__tests__ for the pattern.)
 // biome-ignore lint/suspicious/noExplicitAny: mock factory for createServerFn
 type HandlerFn = (...args: any[]) => any;
 vi.mock("@tanstack/react-start", () => {
 	const makeBuilder = () => {
 		const b = {
-			inputValidator: () => b,
+			validator: () => b,
 			middleware: () => b,
 			handler: (fn: HandlerFn) => fn,
 		};

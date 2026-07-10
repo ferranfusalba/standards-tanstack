@@ -1172,7 +1172,7 @@ export const getLanguagesByCountry = createServerFn({
 export const getLanguageNamesByLocale = createServerFn({
 	method: "GET",
 })
-	.inputValidator((data: { locale: string }) => data)
+	.validator((data: { locale: string }) => data)
 	.handler(async ({ data }): Promise<Record<string, string>> => {
 		const displayNames = new Intl.DisplayNames([data.locale], {
 			type: "language",

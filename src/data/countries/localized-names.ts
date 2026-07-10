@@ -89,7 +89,7 @@ export function localizedNamesFor(alpha2: string): LocalizedName[] {
 export const getCountryNames = createServerFn({
 	method: "GET",
 })
-	.inputValidator((data: { code: string }) => data)
+	.validator((data: { code: string }) => data)
 	.handler(async ({ data }) => localizedNamesFor(data.code));
 
 // Counts are locale-independent and expensive (~all countries × all locales),
@@ -173,7 +173,7 @@ export const getLocalizedSearchByCountry = createServerFn({
 export const getCountryNamesByLocale = createServerFn({
 	method: "GET",
 })
-	.inputValidator((data: { locale: string }) => data)
+	.validator((data: { locale: string }) => data)
 	.handler(async ({ data }): Promise<Record<string, string>> => {
 		const entry = regionNameLocales.find((l) => l.locale === data.locale);
 		const names: Record<string, string> = {};

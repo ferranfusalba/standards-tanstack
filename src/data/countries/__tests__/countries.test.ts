@@ -7,7 +7,7 @@ type HandlerFn = (...args: any[]) => any;
 vi.mock("@tanstack/react-start", () => ({
 	createServerFn: () => ({
 		handler: (fn: HandlerFn) => fn,
-		inputValidator: (_validator: HandlerFn) => ({
+		validator: (_validator: HandlerFn) => ({
 			handler: (fn: HandlerFn) => fn,
 		}),
 	}),

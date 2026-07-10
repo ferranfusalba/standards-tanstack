@@ -39,7 +39,8 @@ International standards data browser built with TanStack Start (SSR), TanStack T
 - **TanStack Start** with Nitro for SSR — not a plain SPA.
 - File-based routing in `src/routes/`. Route tree is auto-generated (`src/routeTree.gen.ts` — do not edit).
 - Data loaders use `loader: async () => { ... }` in route definitions.
-- **Server functions**: Use `createServerFn({ method })`. For functions that accept input, chain `.inputValidator(fn)` before `.handler()`.
+- **Server functions**: Use `createServerFn({ method })`. For functions that accept input, chain `.validator(fn)` before `.handler()` (the older `.inputValidator()` is deprecated).
+- **TanStack version lockstep**: Keep every `@tanstack/*` Start + Router package (`react-router`, `react-router-devtools`, `react-router-ssr-query`, `react-start`, `router-plugin`) pinned to exact, coordinated versions — they ship as one release train. Caret ranges let them drift apart, which makes `getServerFnById` return `undefined` and 500s every server function at runtime (tests mock this, so they won't catch it).
 - **Caching**: Router sets `defaultStaleTime: 5min` and `defaultPreloadStaleTime: 30s`. No need to add per-route cache config unless overriding.
 - **Loading/error UI**: Router provides `defaultPendingComponent` (spinner) and `defaultErrorComponent`. Override per-route only when needed.
 - Path alias: `@/*` maps to `src/*`.

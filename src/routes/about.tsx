@@ -233,8 +233,8 @@ function About() {
 			<section className="mt-10 max-w-4xl">
 				<h2 className="text-xl font-semibold mb-2">Open source</h2>
 				<p className="text-sm text-muted-foreground">
-					The application source code is released under the MIT License. Built with TanStack Start,
-					TanStack Table, React 19 and Tailwind CSS.
+					The application source code is released under the MIT License. Built
+					with TanStack Start, TanStack Table, React 19 and Tailwind CSS.
 				</p>
 				<nav
 					aria-label="Project links"

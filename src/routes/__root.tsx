@@ -2,11 +2,9 @@ import { TanStackDevtools } from "@tanstack/react-devtools";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
-import { DataFreshness } from "../components/DataFreshness";
 import Header from "../components/Header";
 import { getRegionNameLocales } from "../data/countries";
 import { getDetectedLocales, getPreferredLocale } from "../data/locale";
-import { getDataVersions } from "../data/versions";
 import StoreDevtools from "../lib/demo-store-devtools";
 import { LocaleProvider } from "../lib/locale";
 import { ThemeProvider } from "../lib/theme";
@@ -15,14 +13,10 @@ import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
 	loader: async () => {
-		const [versions, localeOptions, detectedLocales, preferredLocale] =
-			await Promise.all([
-				getDataVersions(),
-				getRegionNameLocales(),
-				getDetectedLocales(),
-				getPreferredLocale(),
-			]);
-		return { versions, localeOptions, detectedLocales, preferredLocale };
+		const [localeOptions, detectedLocales, preferredLocale] = await Promise.all(
+			[getRegionNameLocales(), getDetectedLocales(), getPreferredLocale()],
+		);
+		return { localeOptions, detectedLocales, preferredLocale };
 	},
 	head: () => ({
 		meta: [
@@ -140,11 +134,6 @@ export const Route = createRootRoute({
 	shellComponent: RootDocument,
 });
 
-function RootFooter() {
-	const { versions } = Route.useLoaderData();
-	return <DataFreshness versions={versions} />;
-}
-
 function RootDocument({ children }: { children: React.ReactNode }) {
 	const { localeOptions, detectedLocales, preferredLocale } =
 		Route.useLoaderData();
@@ -163,7 +152,6 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 						<div className="flex min-h-screen flex-col bg-background">
 							<Header />
 							<main className="flex-1">{children}</main>
-							<RootFooter />
 						</div>
 					</LocaleProvider>
 				</ThemeProvider>

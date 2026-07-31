@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as TimezonesIndexRouteImport } from './routes/timezones/index'
 import { Route as LanguagesIndexRouteImport } from './routes/languages/index'
@@ -21,6 +22,11 @@ import { Route as ApiLanguagesRouteImport } from './routes/api/languages'
 import { Route as ApiCurrenciesRouteImport } from './routes/api/currencies'
 import { Route as ApiCountriesRouteImport } from './routes/api/countries'
 
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -79,6 +85,7 @@ const ApiCountriesRoute = ApiCountriesRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/api/countries': typeof ApiCountriesRoute
   '/api/currencies': typeof ApiCurrenciesRoute
   '/api/languages': typeof ApiLanguagesRoute
@@ -92,6 +99,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/api/countries': typeof ApiCountriesRoute
   '/api/currencies': typeof ApiCurrenciesRoute
   '/api/languages': typeof ApiLanguagesRoute
@@ -106,6 +114,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/api/countries': typeof ApiCountriesRoute
   '/api/currencies': typeof ApiCurrenciesRoute
   '/api/languages': typeof ApiLanguagesRoute
@@ -121,6 +130,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
     | '/api/countries'
     | '/api/currencies'
     | '/api/languages'
@@ -134,6 +144,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/api/countries'
     | '/api/currencies'
     | '/api/languages'
@@ -147,6 +158,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about'
     | '/api/countries'
     | '/api/currencies'
     | '/api/languages'
@@ -161,6 +173,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   ApiCountriesRoute: typeof ApiCountriesRoute
   ApiCurrenciesRoute: typeof ApiCurrenciesRoute
   ApiLanguagesRoute: typeof ApiLanguagesRoute
@@ -175,6 +188,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -257,6 +277,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   ApiCountriesRoute: ApiCountriesRoute,
   ApiCurrenciesRoute: ApiCurrenciesRoute,
   ApiLanguagesRoute: ApiLanguagesRoute,

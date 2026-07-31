@@ -126,8 +126,30 @@ To test server functions, mock `@tanstack/react-start` — see `src/data/countri
 
 See [CLAUDE.md](./CLAUDE.md) for project-specific guidelines — especially around semantic color tokens (no hardcoded `gray-*` classes), shared `<DataTable>` / `<Pagination>` / `<ColumnVisibility>` usage, and the fuzzy-filter threshold pattern.
 
+## Data sources & attribution
+
+This project reproduces **identifiers and factual data** (codes, names, offsets, memberships) — not the text, tables or layout of any published standard. No paywalled standards document was copied, scraped or redistributed.
+
+| Source | Used for | Terms |
+| --- | --- | --- |
+| **[Unicode CLDR](https://cldr.unicode.org/) / ICU**, via the JS runtime's `Intl` API | Country, language, currency and timezone display names; localized name variants | [Unicode License v3](https://www.unicode.org/license.txt) — © 1991–present Unicode, Inc. All rights reserved. |
+| **[IANA Time Zone Database](https://www.iana.org/time-zones)** | Timezone identifiers, UTC offsets, DST rules, country mappings | Public domain ([tz database](https://data.iana.org/time-zones/tz-link.html)) |
+| **[IANA Language Subtag Registry](https://www.iana.org/assignments/language-subtag-registry/)** | BCP 47 language subtags and variants | Public domain (IETF/[BCP 47](https://www.rfc-editor.org/info/bcp47)) |
+| **[UN Statistics Division — M49](https://unstats.un.org/unsd/methodology/m49/)** | Regional/subregional groupings, numeric codes, UN membership | UN SD, freely available for reference use |
+| **[SIX Group](https://www.six-group.com/en/products-services/financial-information/data-standards.html)** (ISO 4217 registrar) | Currency codes, numeric codes, minor units, List One / List Three | Published freely by the ISO 4217 maintenance agency |
+| **[Wikipedia](https://www.wikipedia.org/)** and other public references | Supplementary curated tables — IOC, FIFA, vehicle, aircraft and calling codes, ccTLDs, local short names, ISO 3166-2 subdivision names | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) where applicable |
+| **ISO** [Online Browsing Platform](https://www.iso.org/obp/ui/) | Cross-checking ISO 3166 / 3166-2 / 4217 / 639 code assignments | Codes consulted as facts; ISO's standards documents are **not** redistributed here |
+
+### Not affiliated
+
+This is an independent, non-commercial open-source project. It is **not affiliated with, endorsed by, or sponsored by** ISO (International Organization for Standardization), IANA, the IETF, the ITU, the United Nations, SIX Group, or the Unicode Consortium. "ISO" and the ISO standard designations are trademarks of their respective owners and are used here **descriptively only**, to identify which standard a dataset corresponds to.
+
+### Accuracy
+
+Reference data is provided **as-is, with no warranty of accuracy or fitness for any purpose**, and must not be treated as an authoritative substitute for the official publications. Standards change; curated tables can go stale. For anything legally or operationally binding, consult the issuing authority directly. Corrections are welcome — please [open an issue](https://github.com/ferranfusalba/standards-tanstack/issues).
+
 ## License
 
-The application source code is released under the [MIT License](./LICENSE).
+The application **source code** is released under the [MIT License](./LICENSE).
 
-The underlying standards data is sourced from the organizations listed in the table at the top of this file; their respective licenses and terms of use apply. ISO 4217 codes, ISO 3166 codes, and IANA tzdata are widely redistributable for reference purposes; consult each authority for the authoritative terms.
+The **standards data** is compiled from the sources in the table above, and each source's own terms apply to it — most notably the Unicode License for CLDR/ICU data and CC BY-SA 4.0 for Wikipedia-derived tables. The MIT grant covers this project's code and its original curation work, not the underlying third-party datasets.

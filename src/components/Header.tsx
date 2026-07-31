@@ -4,6 +4,7 @@ import {
 	Coins,
 	Globe,
 	Home,
+	Info,
 	Languages,
 	type LucideIcon,
 	Map as MapIcon,
@@ -35,6 +36,7 @@ const NAV_ITEMS: NavItem[] = [
 	{ to: "/countries", label: "Countries", icon: Globe },
 	{ to: "/languages", label: "Languages", icon: Languages },
 	{ to: "/compare", label: "Compare your data", icon: ArrowLeftRight },
+	{ to: "/about", label: "About", icon: Info },
 ];
 
 // Views whose tables render localized names, so the shared "Show localized names in:"

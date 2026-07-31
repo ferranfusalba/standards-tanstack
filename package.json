@@ -1,6 +1,18 @@
 {
   "name": "standards-tanstack",
   "private": true,
+  "version": "0.1.0",
+  "description": "Browse, cross-check and export the world's reference standards — ISO 3166 countries, ISO 4217 currencies, ISO 639 languages and IANA timezones.",
+  "license": "MIT",
+  "author": "Ferran Fusalba Roselló",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferranfusalba/standards-tanstack.git"
+  },
+  "homepage": "https://github.com/ferranfusalba/standards-tanstack#readme",
+  "bugs": {
+    "url": "https://github.com/ferranfusalba/standards-tanstack/issues"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite dev --port 3001",

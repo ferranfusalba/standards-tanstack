@@ -98,6 +98,19 @@ describe("getCountriesFromUN (ccTLD + phone prefix)", () => {
 		expect(nonNull(byCode.GB, "byCode.GB").ccTLD).toBe(".uk");
 	});
 
+	// The data layer feeds the table, the CSV/JSON download (column ids become the
+	// export headers) and the public API alike, so the numeric code has exactly one
+	// name everywhere: `numericCode`. Guards against the pre-rename `unCode` being
+	// reintroduced as an alias, which would surface as a duplicate export column.
+	it("exposes the ISO 3166-1 numeric as numericCode, with no unCode alias", () => {
+		expect(nonNull(byCode.ES, "byCode.ES").numericCode).toBe("724");
+		expect(nonNull(byCode.US, "byCode.US").numericCode).toBe("840");
+		const withoutNumeric = countries.filter((c) => !c.numericCode);
+		expect(withoutNumeric).toEqual([]);
+		const withAlias = countries.filter((c) => "unCode" in c);
+		expect(withAlias).toEqual([]);
+	});
+
 	it("uses the UNECE vehicle distinguishing signs (dsitCode)", () => {
 		expect(nonNull(byCode.ES, "byCode.ES").dsitCode).toBe("E");
 		expect(nonNull(byCode.US, "byCode.US").dsitCode).toBe("USA");

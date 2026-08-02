@@ -17,7 +17,7 @@ export interface Country {
 	sovereignState?: string | undefined; // Alpha-2 of administering country, only for territories
 	euMember?: boolean | undefined; // true = current EU member; undefined = not a member or N/A
 	region?: string | undefined; // UN M49 macro-geographic region
-	unCode?: string; // UN M49 numeric code
+	numericCode?: string; // ISO 3166-1 numeric, zero-padded to 3 digits (ISO adopted the UN M49 numeric codes verbatim, so this is also the M49 code)
 	notes?: string | undefined; // Additional notes, used for non-standard entries
 	subdivisionCount?: number | undefined; // Number of ISO 3166-2 subdivisions (lazy-loaded on demand)
 	subdivisions?: Array<{

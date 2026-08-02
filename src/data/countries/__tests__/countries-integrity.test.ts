@@ -52,6 +52,40 @@ describe("countries reference-data integrity", () => {
 		expect(new Set(codes).size).toBe(codes.length);
 	});
 
+	// The Numeric column renders `numericCode` directly and sorts it as a string,
+	// which only orders correctly while every code is zero-padded to the same width.
+	// These three checks were verified against the ISO OBP country pages (all 249
+	// numeric codes matched), so a future edit that drops the padding, duplicates a
+	// code, or leaves one blank is a regression, not new data.
+	it("every UN M49 country has a 3-digit numeric code", () => {
+		const bad = unM49Data
+			.filter((c) => !/^\d{3}$/.test(c.numericCode))
+			.map((c) => `${c.code}="${c.numericCode}"`);
+		expect(bad).toEqual([]);
+	});
+
+	it("UN M49 numeric codes are unique", () => {
+		const byNumeric = new Map<string, string>();
+		const dupes: string[] = [];
+		for (const c of unM49Data) {
+			const prev = byNumeric.get(c.numericCode);
+			if (prev) dupes.push(`${c.numericCode}: ${prev} / ${c.code}`);
+			byNumeric.set(c.numericCode, c.code);
+		}
+		expect(dupes).toEqual([]);
+	});
+
+	it("matches known ISO 3166-1 numeric assignments", () => {
+		const numericFor = (code: string) =>
+			unM49Data.find((c) => c.code === code)?.numericCode;
+		expect(numericFor("AD")).toBe("020");
+		expect(numericFor("AF")).toBe("004");
+		expect(numericFor("ES")).toBe("724");
+		expect(numericFor("GB")).toBe("826");
+		expect(numericFor("US")).toBe("840");
+		expect(numericFor("ZW")).toBe("716");
+	});
+
 	it("derives a ccTLD for a normal code and honours documented gaps", () => {
 		expect(getCcTLD("ES")).toBe(".es");
 		expect(getCcTLD("GB")).toBe(".uk");

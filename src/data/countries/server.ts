@@ -69,7 +69,7 @@ export const getCountriesFromUN = createServerFn({
 			sovereignState: sovereignStates[country.code],
 			euMember: euMembers.has(country.code) || undefined,
 			region: regionMap[country.code],
-			unCode: country.unCode,
+			numericCode: country.numericCode,
 			subdivisionCount: subdivisionsData[country.code]?.length,
 			name: country.name,
 			fullName: country.fullName,

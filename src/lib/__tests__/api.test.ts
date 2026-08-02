@@ -83,4 +83,27 @@ describe("api route handlers", () => {
 		expect(body.length).toBeGreaterThan(0);
 		expect(body[0]).toHaveProperty("alpha2Code");
 	});
+
+	// The ISO 3166-1 numeric code is exposed as `numericCode` and under no other
+	// name. It was `unCode` from the original country-data commit until 2026-08-02 —
+	// a name that read as "one of the UN codes" next to `unMembership` and the M49
+	// `region`, when it is in fact the ISO code (ISO adopted the M49 numbers
+	// verbatim). The old key was dropped outright rather than aliased, so this pins
+	// the public contract to exactly one spelling.
+	it("GET /api/countries exposes the numeric code as numericCode only", async () => {
+		const { Route } = await import("../../routes/api/countries");
+		const handler = (
+			Route.options as {
+				server: { handlers: { GET: (ctx: unknown) => Promise<Response> } };
+			}
+		).server.handlers.GET;
+		const res = await handler({
+			request: new Request("http://localhost/api/countries"),
+			params: {},
+		});
+		const body = (await res.json()) as Array<Record<string, unknown>>;
+		expect(body.find((c) => c.alpha2Code === "ES")?.numericCode).toBe("724");
+		expect(body.filter((c) => !c.numericCode)).toEqual([]);
+		expect(body.filter((c) => "unCode" in c)).toEqual([]);
+	});
 });

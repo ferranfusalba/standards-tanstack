@@ -236,7 +236,7 @@ describe("compareDataset — fuzzy name fallback", () => {
 		{
 			alpha2Code: "US",
 			alpha3Code: "USA",
-			unCode: "840",
+			numericCode: "840",
 			name: "United States",
 			euMember: false,
 			region: "Americas",

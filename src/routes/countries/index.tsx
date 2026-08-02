@@ -814,6 +814,7 @@ const countrySources: Record<string, string> = {
 	flag: "Unicode",
 	alpha2Code: "ISO 3166-1",
 	alpha3Code: "ISO 3166-1",
+	numericCode: "ISO 3166-1",
 	subdivisionCount: "ISO 3166-2",
 	icaoCode: "ICAO · Doc 9303",
 	dsitCode: "UNECE · DSIT",
@@ -986,8 +987,8 @@ function CountryDetailPanel({
 							dash
 						)}
 					</DetailField>
-					<DetailField label="Numeric" source="UN M49">
-						{text(c.unCode)}
+					<DetailField label="Numeric" source={src("numericCode")}>
+						{text(c.numericCode)}
 					</DetailField>
 					<DetailField label="Independent" source={src("independent")}>
 						{yesNo(c.independent)}
@@ -1501,6 +1502,17 @@ function Countries() {
 				size: 100,
 				maxSize: 100,
 				enableHiding: false,
+			},
+			{
+				// ISO 3166-1 numeric. ISO adopted the UN M49 numeric codes verbatim, so
+				// the value the M49 table carries *is* the ISO one (verified identical for
+				// all 249 entries against the ISO OBP country pages) — hence one field
+				// rather than two. The column id doubles as the CSV/JSON export header, so
+				// it's named for the standard, not for where we happen to source it.
+				accessorKey: "numericCode",
+				header: "Numeric",
+				size: 100,
+				maxSize: 100,
 			},
 			{
 				accessorKey: "subdivisionCount",

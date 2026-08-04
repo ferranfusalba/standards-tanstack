@@ -112,6 +112,16 @@ export const Route = createRootRoute({
 				href: "/apple-touch-icon.png",
 			},
 		],
+		// Opticks Sensor (traffic protection). `head().scripts` renders inside
+		// <head> via <HeadContent />, which is where the vendor requires it.
+		// Production only, so local dev traffic isn't reported.
+		scripts: import.meta.env.PROD
+			? [
+					{
+						src: "https://opticksprotection.com/o/230f978bc876d64a",
+					},
+				]
+			: [],
 	}),
 
 	notFoundComponent: () => {

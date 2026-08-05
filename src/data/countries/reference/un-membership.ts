@@ -62,8 +62,31 @@ const unTerritories = new Set([
 	"YT",
 ]);
 
-// Administering/sovereign state for each territory (alpha-2 of the sovereign country)
-// AQ (Antarctica) and EH (Western Sahara) intentionally excluded — no single sovereign
+// Administering/sovereign state for each territory (alpha-2 of the sovereign country).
+//
+// ISO 3166-1 publishes an independence flag but no parent code, so there is no one
+// table to copy this from. Two published sources corroborate 33 of the 51 entries:
+//   1. ISO 3166-2, where the territory is also a subdivision of its parent (e.g.
+//      FR-PF → PF, US-VI → VI) — 22 entries. The integrity test checks this table
+//      against `subdivisionsData`, so a wrong or missing parent fails there rather
+//      than shipping. https://www.iso.org/obp/ui/#search/code/
+//   2. The UN list of Non-Self-Governing Territories, which names an administering
+//      Power for 16 of these (EH, its 17th, has none and is left unparented) —
+//      11 of them not covered by (1), chiefly the UK's Caribbean and South
+//      Atlantic territories. https://www.un.org/dppa/decolonization/en/nsgt
+//
+// The remaining 18 are backed by neither and rest on the administering state's own
+// constitutional arrangements, which is a weaker footing — they are the Crown
+// Dependencies and other UK territories (GG, IM, JE, GS, IO), the Dutch Caribbean
+// (AW, BQ, CW, SX), the Australian external territories (CC, CX, HM, NF), the
+// Danish realm (FO, GL), BV, and the NZ freely associated states (CK, NU). None is
+// contested, but none is copied from a published parent table either.
+//
+// Deliberately absent:
+//   AQ (Antarctica), EH (Western Sahara) — no single sovereign.
+//   TW — ISO 3166-2 lists it under CN, but the mapping is contested, so the field
+//        stays blank and TW keeps its own ISO 3166-1 entry.
+//   PS — a non-member observer State, not an administered territory.
 export const sovereignStates: Record<string, string> = {
 	AX: "FI", // Åland Islands → Finland
 	AI: "GB",
@@ -97,6 +120,7 @@ export const sovereignStates: Record<string, string> = {
 	MF: "FR",
 	MQ: "FR",
 	NC: "FR",
+	PF: "FR", // French Polynesia → France (ISO 3166-2 FR-PF; UN NSGT since 2013)
 	PM: "FR",
 	RE: "FR",
 	TF: "FR",
@@ -112,7 +136,13 @@ export const sovereignStates: Record<string, string> = {
 	MO: "CN", // Chinese SARs
 	FO: "DK",
 	GL: "DK", // Danish territories
-	TK: "NZ", // Tokelau → New Zealand
+	// New Zealand realm. Tokelau is a dependent territory; CK and NU are
+	// self-governing states in free association, so NZ administers their external
+	// affairs on request rather than governing them. Their UN standing is a
+	// separate question from their parent code and is not recorded here.
+	TK: "NZ",
+	CK: "NZ",
+	NU: "NZ",
 };
 
 export function getUnMembership(code: string): Country["unMembership"] {

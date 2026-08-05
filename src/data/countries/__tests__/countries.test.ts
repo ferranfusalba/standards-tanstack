@@ -111,6 +111,22 @@ describe("getCountriesFromUN (ccTLD + phone prefix)", () => {
 		expect(withAlias).toEqual([]);
 	});
 
+	// The Passport column is blanked by "has a sovereign state", so the three
+	// entries added to `sovereignStates` to fill in the parent-code column would
+	// have taken CK's, NU's and PF's ICAO codes down with them. The handler
+	// excludes those three from that argument; this pins the result, because the
+	// coupling is invisible from either table on its own.
+	it("keeps the ICAO codes independent of the parent-code table", () => {
+		expect(nonNull(byCode.CK, "byCode.CK").icaoCode).toBe("COK");
+		expect(nonNull(byCode.NU, "byCode.NU").icaoCode).toBe("NIU");
+		expect(nonNull(byCode.PF, "byCode.PF").icaoCode).toBe("PYF");
+		// Unaffected either way: TK had a parent before that table grew, AQ has
+		// no passport authority, and DE takes the ICAO override over its alpha-3.
+		expect(nonNull(byCode.TK, "byCode.TK").icaoCode).toBeUndefined();
+		expect(nonNull(byCode.AQ, "byCode.AQ").icaoCode).toBeUndefined();
+		expect(nonNull(byCode.DE, "byCode.DE").icaoCode).toBe("D");
+	});
+
 	it("uses the UNECE vehicle distinguishing signs (dsitCode)", () => {
 		expect(nonNull(byCode.ES, "byCode.ES").dsitCode).toBe("E");
 		expect(nonNull(byCode.US, "byCode.US").dsitCode).toBe("USA");

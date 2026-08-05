@@ -2346,6 +2346,15 @@ function Countries() {
 						const allNames: Record<string, Record<string, string>> = wantNames
 							? await getLocalizedNamesAllByCountry()
 							: {};
+						// The UN member column is keyed on `unMembership` but its cell renders
+						// the administering country's alpha-2 (territories have no membership
+						// of their own), so the export has to pull that parent code in by hand
+						// — otherwise the exported row loses what the column actually shows.
+						const sovereignByCode: Record<string, string> = {};
+						for (const c of countriesUN) {
+							if (c.sovereignState)
+								sovereignByCode[c.alpha2Code] = c.sovereignState;
+						}
 						const enriched = rows.map((row) => {
 							const { localizedName, ...rest } = row;
 							// Drop the display-only counts; their data is added below.
@@ -2360,6 +2369,11 @@ function Countries() {
 							const alpha2 = rest.alpha2Code as string;
 							return {
 								...rest,
+								// Parent (administering) country of a territory, e.g. AI → GB.
+								...("unMembership" in row &&
+									sovereignByCode[alpha2] && {
+										sovereignState: sovereignByCode[alpha2],
+									}),
 								// The UK has no single FIFA code; surface its four home-nation
 								// associations so the export carries them (display-only in the
 								// table — see the FIFA column cell). Only when FIFA is visible.

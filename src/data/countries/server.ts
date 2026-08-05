@@ -20,6 +20,13 @@ import {
 import { vehicleCodes } from "./reference/vehicle";
 import type { Country, SubdivisionData } from "./types";
 
+// `sovereignStates` doubles as the "travels on the parent's passport" signal for
+// the ICAO column. CK, NU and PF were added to it to fill in the parent-code
+// column, which is a separate concern — listing them here keeps that addition
+// from silently blanking their Passport cell. Revisit if the ICAO column's rule
+// is ever reworked; it is the coupling, not these three codes, that is odd.
+const mrzUnaffectedBySovereign = new Set(["CK", "NU", "PF"]);
+
 // Helper function to convert country code to emoji flag
 function getEmojiFlag(countryCode: string): string {
 	const codePoints = countryCode
@@ -57,7 +64,12 @@ export const getCountriesFromUN = createServerFn({
 			icaoCode: getMrzCode(
 				country.code,
 				country.code3,
-				!!sovereignStates[country.code],
+				// The three entries added to `sovereignStates` for the parent-code
+				// column (CK, NU, PF) are excluded here: this argument is what blanks
+				// the Passport column, and giving those countries a parent was not
+				// meant to change their ICAO code.
+				!!sovereignStates[country.code] &&
+					!mrzUnaffectedBySovereign.has(country.code),
 			),
 			dsitCode: vc,
 			iocCode: iocCodes[country.code],

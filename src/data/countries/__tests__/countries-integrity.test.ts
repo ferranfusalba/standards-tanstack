@@ -42,6 +42,45 @@ describe("countries reference-data integrity", () => {
 		expect(orphans).toEqual([]);
 	});
 
+	// ISO 3166-2 marks the subdivisions that carry their own ISO 3166-1 alpha-2
+	// (FR-PF → PF), which makes the containing file an authoritative parent for
+	// those codes. This is the check that would have caught PF missing from the
+	// table, so it asserts coverage, not just agreement.
+	it("agrees with ISO 3166-2 on every parent it enumerates", () => {
+		// ISO 3166-2 lists TW under CN. That mapping is contested and we keep TW
+		// unparented on purpose, so it's exempt from the coverage half only —
+		// were the table to claim some *other* parent for it, that still fails.
+		const unparented = new Set(["TW"]);
+		const conflicts: string[] = [];
+		const missing: string[] = [];
+		for (const [parent, subs] of Object.entries(subdivisionsData)) {
+			for (const { iso1: child } of subs) {
+				if (!child) continue;
+				const ours = sovereignStates[child];
+				if (!ours) {
+					if (!unparented.has(child)) missing.push(`${child} (→ ${parent})`);
+				} else if (ours !== parent) {
+					conflicts.push(`${child}: ours=${ours}, ISO 3166-2=${parent}`);
+				}
+			}
+		}
+		expect(conflicts).toEqual([]);
+		expect(missing).toEqual([]);
+	});
+
+	// The countries export ships this as each territory's parent code (AI → GB),
+	// so a wrong value is a dangling reference in someone else's data, not just a
+	// blank cell. The check above covers the keys; this one covers the values.
+	it("every sovereign state is a known, independent country", () => {
+		const independentCodes = new Set(
+			unM49Data.filter((c) => c.independent).map((c) => c.code),
+		);
+		const bad = Object.entries(sovereignStates)
+			.filter(([, parent]) => !independentCodes.has(parent))
+			.map(([code, parent]) => `${code} → ${parent}`);
+		expect(bad).toEqual([]);
+	});
+
 	it("every EU member is a known country code", () => {
 		const orphans = [...euMembers].filter((code) => !knownCodes.has(code));
 		expect(orphans).toEqual([]);

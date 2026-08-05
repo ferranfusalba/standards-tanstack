@@ -1,6 +1,7 @@
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import { Analytics } from "@vercel/analytics/react";
 
 import Header from "../components/Header";
 import { getRegionNameLocales } from "../data/countries";
@@ -182,6 +183,10 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 				    than an inline script, so there's no dangerouslySetInnerHTML and the
 				    page stays compatible with a strict Content-Security-Policy. */}
 				{import.meta.env.PROD && <script src="/sw-register.js" defer />}
+				{/* Vercel Web Analytics. Uses the `/react` entrypoint (not `/next`) —
+				    the script tracks client-side route changes via the History API,
+				    so it works with TanStack Router navigation out of the box. */}
+				<Analytics />
 			</body>
 		</html>
 	);
